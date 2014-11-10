@@ -245,7 +245,7 @@ for (i = 0; i < 10; i++) { itemlist.push("{title: 'Item 1',picture: 'http://smil
 alert(itemlist);
 var myList = myApp.virtualList('.list-block.virtual-list', {
     // Array with items data
-    items: return itemlist,
+    items: function () {return itemlist},
     // Custom render function to render item's HTML
     renderItem: function (index, item) {
         return '<li class="item-content">' +
