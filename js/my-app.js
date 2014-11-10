@@ -239,10 +239,10 @@ $$("#loader-container").hide();
     // Array with items data
    for (i = 0; i < 100; i++) {        
 
-   item_list.push("{title: '"+ response[i][3]  +"', picture: 'http://smilesavers.net.au/images/cover.png'}");
+   item_list.push("{title: 'yo', picture: 'http://smilesavers.net.au/images/cover.png'}");
 
 }
-  
+  alert(item_list);
   var myList = myApp.virtualList('.list-block.virtual-list', { 
     items: item_list,
     // Custom render function to render item's HTML
