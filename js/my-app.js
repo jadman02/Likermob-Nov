@@ -228,7 +228,7 @@ $$( "#result li" ).removeClass( "disabled" );
 $$(".load_previous").attr("disabled", "disabled");
 var track_click = 0;
 
-var item_list = [];
+
 
 $$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', ''+ data_send +'',function(response){
 
@@ -238,7 +238,7 @@ $$("#loader-container").hide();
 
     // Array with items data
 
-  alert(item_list);
+
   var myList = myApp.virtualList('.list-block.virtual-list', { 
     items: [   for (i = 0; i < 100; i++) {        
 
