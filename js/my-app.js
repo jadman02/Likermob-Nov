@@ -230,7 +230,7 @@ var track_click = 0;
 
 
 
-$$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', ''+ data_send +'',function(response){
+
 
 // Store
 //localStorage.setItem("total_pages", response.length);
@@ -242,7 +242,7 @@ $$("#loader-container").hide();
 
 var myList = myApp.virtualList('.list-block.virtual-list', {
     // Array with items data
-    items: function() {
+    items: $$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', ''+ data_send +'',function(response){
         var itemlist = [];
         for (var i = 0; i < 10; i++) {
             // Check if title contains query string
@@ -250,7 +250,7 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
         }
         // Return array with indexes of matched items
         return itemlist; 
-},
+}),
     // Custom render function to render item's HTML
     renderItem: function (index, item) {
         return '<li class="item-content">' +
@@ -263,7 +263,7 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
 });    
   
 
-});
+
 
 
 
