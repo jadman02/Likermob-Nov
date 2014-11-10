@@ -234,21 +234,21 @@ var track_click = 0;
 
 // Store
 //localStorage.setItem("total_pages", response.length);
-$$("#loader-container").hide();
+
 
     // Array with items data
+
+  	
      
- 
-var myList = myApp.virtualList('.list-block.virtual-list', {
-    // Array with items data
-    items: function () {
-    	
-    	$$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', ''+ data_send +'',function(response){
-
+ 	$$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', ''+ data_send +'',function(response){
 var itemlist = [];
 for (i = 0; i < 10; i++) { itemlist.push("{title: 'Item 1',picture: 'http://smilesavers.net.au/images/cover.png'}");} 
-    	});alert(itemlist);    	
-    	return itemlist},
+alert(itemlist);  
+
+var myList = myApp.virtualList('.list-block.virtual-list', {
+    // Array with items data
+    alert(itemlist);
+    items: function () {return itemlist},
     // Custom render function to render item's HTML
     renderItem: function (index, item) {
         return '<li class="item-content">' +
@@ -260,10 +260,10 @@ for (i = 0; i < 10; i++) { itemlist.push("{title: 'Item 1',picture: 'http://smil
     }
 });            
   
-
+});
    
 
-
+$$("#loader-container").hide();
 
 
 
