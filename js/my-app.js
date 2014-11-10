@@ -228,34 +228,23 @@ $$( "#result li" ).removeClass( "disabled" );
 $$(".load_previous").attr("disabled", "disabled");
 var track_click = 0;
 
+var item_list = [];
+
 $$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', ''+ data_send +'',function(response){
 
 // Store
 localStorage.setItem("total_pages", response.length);
 $$("#loader-container").hide();
 
-
-
-   
-for (i = 0; i < 100; i++) {        
-
-var myList = myApp.virtualList('.list-block.virtual-list', {
     // Array with items data
-    items: [
-        {
-            title: 'Item 1',
-            picture: 'http://smilesavers.net.au/images/cover.png'
-        },
-        {
-            title: 'Item 2',
-            picture: 'http://smilesavers.net.au/images/cover.png'
-        },
-        // ...
-        {
-            title: 'Item 1000',
-            picture: 'http://smilesavers.net.au/images/cover.png'
-        },
-    ],
+   for (i = 0; i < 100; i++) {        
+
+   item_list.push("{title: '"+ response[i][3]  +"', picture: 'http://smilesavers.net.au/images/cover.png'}");
+
+}
+  
+  var myList = myApp.virtualList('.list-block.virtual-list', { 
+    items: item_list,
     // Custom render function to render item's HTML
     renderItem: function (index, item) {
         return '<li class="item-content">' +
@@ -265,13 +254,9 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
                   '</div>' +
                '</li>';
     }
-});       
+});    
 
-}
 
-track_click++;
-$$(".load_more").show();
-$$(".load_previous").show();
 
 });
 
