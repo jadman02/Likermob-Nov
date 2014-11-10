@@ -249,7 +249,7 @@ var itemlist = "[{title: 'Item 1',picture: 'path/to/picture1.jpg'},{title: 'Item
 alert(itemlist); 
 var myList = myApp.virtualList('.list-block.virtual-list', {
     // Array with items data
-    items: function () {return itemlist},
+    items: itemlist,
     // Custom render function to render item's HTML
     renderItem: function (index, item) {
         return '<li class="item-content">' +
