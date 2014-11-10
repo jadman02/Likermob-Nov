@@ -242,7 +242,7 @@ var track_click = 0;
      
 $$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', ''+ data_send +'',function(response){
 var itemlist = [];
-for (i = 0; i < response.length; i++) { itemlist.push({title: 'Item 1',picture: 'http://smilesavers.net.au/images/cover.png'});} 
+for (i = 0; i < 5; i++) { itemlist.push({title: 'Item 1',picture: 'http://smilesavers.net.au/images/cover.png'});} 
  
 
 
