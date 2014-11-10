@@ -249,6 +249,7 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
             itemlist.push("{title: 'Item 1',picture: 'http://smilesavers.net.au/images/cover.png'}");
         }
         // Return array with indexes of matched items
+        alert(itemlist);
         return itemlist; 
 }),
     // Custom render function to render item's HTML
