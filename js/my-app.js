@@ -237,14 +237,14 @@ localStorage.setItem("total_pages", response.length);
 $$("#loader-container").hide();
 
     // Array with items data
-   for (i = 0; i < 100; i++) {        
 
-   item_list.push("{title: 'yo', picture: 'http://smilesavers.net.au/images/cover.png'}");
-
-}
   alert(item_list);
   var myList = myApp.virtualList('.list-block.virtual-list', { 
-    items: [item_list],
+    items: [   for (i = 0; i < 100; i++) {        
+
+{title: 'yo', picture: 'http://smilesavers.net.au/images/cover.png'},
+
+}],
     // Custom render function to render item's HTML
     renderItem: function (index, item) {
         return '<li class="item-content">' +
