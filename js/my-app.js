@@ -244,7 +244,7 @@ $$("#loader-container").hide();
 }
   alert(item_list);
   var myList = myApp.virtualList('.list-block.virtual-list', { 
-    items: item_list,
+    items: [item_list],
     // Custom render function to render item's HTML
     renderItem: function (index, item) {
         return '<li class="item-content">' +
