@@ -241,12 +241,11 @@ var track_click = 0;
   	
      
 $$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', ''+ data_send +'',function(response){
-//var itemlist = [];
-//for (i = 0; i < 10; i++) { itemlist.push("{title: 'Item 1',picture: 'http://smilesavers.net.au/images/cover.png'}");} 
+var itemlist = [];
+for (i = 0; i < response.length; i++) { itemlist.push({title: 'Item 1',picture: 'http://smilesavers.net.au/images/cover.png'});} 
  
 
-var itemlist = [{title: 'Item 1',picture: 'http://smilesavers.net.au/images/cover.png'},{title:'Item 2',picture: 'http://smilesavers.net.au/images/cover.png'},{title: 'Item 1000',picture: 'http://smilesavers.net.au/images/cover.png'},];
-alert(itemlist); 
+
 var myList = myApp.virtualList('.list-block.virtual-list', {
     // Array with items data
     items: itemlist,
