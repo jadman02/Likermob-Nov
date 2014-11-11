@@ -13,7 +13,36 @@ document.getElementById("profilepic").innerHTML = '<img src="http://graph.facebo
 
     functionEmpty();
 
+var previousScrollPosition = 0;
+$$('.page-content').on('scroll', function (e) {
+    var pageContent = this;
+    var pageScroll = pageContent.scrollTop;
+    if (pageScroll > 44) {
+        if (pageScroll > previousScrollPosition) {
+            mainView.hideNavbar();
+            mainView.hideToolbar();
+        }
+        else {
+            mainView.showNavbar();
+            mainView.showToolbar();
+        }
 
+        if (pageScroll >= pageContent.scrollHeight - pageContent.offsetHeight - 44) {
+            mainView.showNavbar();
+            mainView.showToolbar();
+        }
+
+    }
+    else {
+        mainView.showNavbar();
+        mainView.showToolbar();
+    }
+    var scrollDiff = Math.abs(previousScrollPosition - pageScroll);
+    if (previousScrollPosition > pageScroll) previousScrollPosition = pageScroll;
+    else {
+        if (scrollDiff > 20) previousScrollPosition = pageScroll;
+    }
+});
 
 
 
@@ -199,60 +228,62 @@ $$( "#result li" ).removeClass( "disabled" );
 $$(".load_previous").attr("disabled", "disabled");
 var track_click = 0;
 
-
-
-
+$$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', ''+ data_send +'',function(response){
 
 // Store
-//localStorage.setItem("total_pages", response.length);
+localStorage.setItem("total_pages", response.length);
+$$("#loader-container").hide();
 
 
-    // Array with items data
 
-  	
-     
-$$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', ''+ data_send +'',function(response){
-var itemlist = [];
-for (i = 0; i < response.length; i++) {itemlist.push({marker: response[i][0],title: response[i][3],page_id: response[i][1],post_id: response[i][2],photo_created: response[i][21],like: response[i][17],dislike: response[i][18],expiry: response[i][6]}); 
+   
+for (i = 0; i < 10; i++) {        
 
 var str = response[i][4];
 var singlequote = str.replace(/'/g, "qqqq");
 //var description = "'" + singlequote.replace(/(\r\n|\n|\r)/gm,"") + "'";
 var type = response[i][9];
+
+
+
+
 someText = str.replace(/(\r\n|\n|\r)/gm,"<br />");
+
+//onclick="getDeal(\''+ response[i][2]  +'\',\''+ response[i][16]  +'\',\''+ response[i][3]  +'\',\''+ response[i][1]  +'\',\''+ response[i][14]  +'\',\''+ response[i][10]  +'\',\''+ response[i][11]  +'\',\''+ response[i][6]  +'\')"
+
+if (pages_list=='a' || typeof pages_list === 'undefined') {
+
+
+if (type == 'comment') {$$( '#result' ).append('<li class="swipeout s_'+ response[i][2] +'" style="border-right:5px solid #ff8000;border-left:5px solid #3b5998;margin-top:5px;margin-bottom:5px;"><img onclick="popUp(\''+ response[i][3]  +'\',\''+ singlequote  +'\',\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" src="http://smilesavers.net.au/images/compressed/'+response[i][1]+'_'+response[i][21]+'.jpg" style="width:100%;"/><div class="swipeout-content"><a href="#" id="getDeal"  onclick="popUp(\''+ response[i][3]  +'\',\''+ singlequote  +'\',\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" class="item-content"><div class="item-media" onclick="getBusiness(\''+ response[i][1]  +'\');"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=30&height=30" style="border-radius:50%;"/></div><div class="item-inner" style="border-bottom:0;"><div class="item-title-row" style="clear:both;"><div class="item-title">'+ response[i][3] + '</div><div class="item-after"><span class="badge" style="margin-right:2px;background-color:#3b5998;">'+ response[i][17] + '</span><span class="badge" style="background-color:#ff8000;">'+ response[i][18] + '</span></div></div></div></a></div><div class="swipeout-actions-left"><a href="#" class="bg-green swipeout-overswipe" style="background-color:#3b5998;" onclick="popUp(\''+ response[i][3]  +'\',\''+ singlequote  +'\',\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')"><i class="pe-7s-comment pe-2x"></i></a></div><div class="swipeout-actions-right"><a href="#" onclick="closeButton(\''+ response[i][2]  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a></div></li>');}
+if (type=='like') {$$( '#result' ).append('<li class="swipeout s_'+ response[i][2] +'" style="border-right:5px solid #ff8000;border-left:5px solid #3b5998;margin-top:5px;margin-bottom:5px;"><img onclick="popUp(\''+ response[i][3]  +'\',\''+ singlequote  +'\',\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" src="http://smilesavers.net.au/images/compressed/'+response[i][1]+'_'+response[i][21]+'.jpg" style="width:100%;"/><div class="swipeout-content"><a href="#" id="getDeal"  onclick="popUp(\''+ response[i][3]  +'\',\''+ singlequote  +'\',\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" class="item-content"><div class="item-media" onclick="getBusiness(\''+ response[i][1]  +'\');"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=30&height=30" style="border-radius:50%;"/></div><div class="item-inner" style="border-bottom:0;"><div class="item-title-row" style="clear:both;"><div class="item-title">'+ response[i][3] + '</div><div class="item-after"><span class="badge" style="margin-right:2px;background-color:#3b5998;">'+ response[i][17] + '</span><span class="badge" style="background-color:#ff8000;">'+ response[i][18] + '</span></div></div></div></a></div><div class="swipeout-actions-left"><a href="#" class="bg-green swipeout-delete swipeout-overswipe" style="background-color:#3b5998;" onclick="likeButton(\''+ response[i][2]  +'\',\''+ response[i][6]  +'\')"><i class="pe-7s-like2 pe-2x"></i></a></div><div class="swipeout-actions-right"><a href="#" onclick="closeButton(\''+ response[i][2]  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a></div></li>');}
 }
 
- alert(itemlist);
+if ((post_id_list instanceof Array) && (pages_list=='b')) {
+	
+$$( '#result' ).append('<li class="swipeout s_'+ response[i][2] +'" style="border-right:5px solid #ff3b30;border-left:5px solid #4cd964;margin-top:5px;margin-bottom:5px;"><img onclick="popUp(\''+ response[i][3]  +'\',\''+ singlequote  +'\',\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" src="http://smilesavers.net.au/images/compressed/'+response[i][1]+'_'+response[i][21]+'.jpg" style="width:100%;"/><div class="swipeout-content"><a href="#" id="getDeal"  onclick="popUp(\''+ response[i][3]  +'\',\''+ singlequote  +'\',\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" class="item-content"><div class="item-media" onclick="getBusiness(\''+ response[i][1]  +'\');"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=50&height=50" style="border-radius:50%;"/></div><div class="item-inner" style="border-bottom:0;"><div class="item-title-row" style="clear:both;"><div class="item-title">'+ response[i][3] + '</div><div class="item-after"><span class="badge" style="margin-right:2px;background-color:#3b5998;">'+ response[i][17] + '</span><span class="badge" style="background-color:#ff8000;">'+ response[i][18] + '</span></div></div></div></a></div><div class="swipeout-actions-left"><a href="#" class="bg-green swipeout-delete swipeout-overswipe" style="background-color:#3b5998;" onclick=""><i class="pe-7s-diskette pe-2x"></i></a></div><div class="swipeout-actions-right"><a href="#" onclick="closeButton(\''+ response[i][2]  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a></div></li>');
+	
+}
 
-var myList = myApp.virtualList('.list-block.virtual-list', {
-    // Array with items data
-    items: itemlist,
-    // Custom render function to render item's HTML
-    renderItem: function (index, item) {
-        return '<li class="swipeout s_'+ item.page_id +'" style="border-right:5px solid #ff8000;border-left:5px solid #3b5998;margin-top:5px;margin-bottom:5px;">'+
-	'<img onclick="popUp(\''+ item.title  +'\',\''+ singlequote  +'\',\''+ item.page_id  +'\',\''+ item.post_id  +'\')" src="http://smilesavers.net.au/images/compressed/'+item.page_id+'_'+item.photo_created+'.jpg" style="width:100%;"/>'+
-		'<div class="swipeout-content">'+
-			'<a href="#" id="getDeal"  onclick="popUp(\''+ item.title  +'\',\''+ singlequote  +'\',\''+ item.page_id  +'\',\''+ item.post_id  +'\')" class="item-content">'+
-            	'<div class="item-media" onclick=""><img src="http://graph.facebook.com/'+item.page_id+'/picture?width=30&height=30" style="border-radius:50%;"/></div>'+
-                '<div class="item-inner" style="border-bottom:0;">'+
-                	'<div class="item-title-row" style="clear:both;">'+
-                    	'<div class="item-title">'+ item.marker + '**' + item.title + '</div>'+
-                        '<div class="item-after"><span class="badge" style="margin-right:2px;background-color:#3b5998;">'+ item.like + '</span><span class="badge" style="background-color:#ff8000;">'+  item.dislike  + '</span></div>'+
-                    '</div>'+
-                '</div>'+
-           ' </a>'+
-        '</div>'+
-        '<div class="swipeout-actions-left">'+
-        	'<a href="#" class="bg-green swipeout-delete swipeout-overswipe" style="background-color:#3b5998;" onclick="likeButton(\''+ item.post_id  +'\',\''+ item.expiry  +'\')"><i class="pe-7s-like2 pe-2x"></i></a></div>'+
-        '<div class="swipeout-actions-right"><a href="#" onclick="closeButton(\''+ item.post_id  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a></div>'+
-'</li>';
-    }
-});            
-  
+if ((fav_id_list instanceof Array) && (pages_list=='c')) {
+	
+$$( '#result' ).append('<li class="swipeout s_'+ response[i][2] +'" style="border-right:5px solid #ff3b30;border-left:5px solid #5ac8fa;margin-top:5px;margin-bottom:5px;"><img onclick="popUp(\''+ response[i][3]  +'\',\''+ singlequote  +'\',\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" src="http://smilesavers.net.au/images/compressed/'+response[i][1]+'_'+response[i][21]+'.jpg" style="width:100%;"/><div class="swipeout-content"><a href="#" id="getDeal"  onclick="popUp(\''+ response[i][3]  +'\',\''+ singlequote  +'\',\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" class="item-content"><div class="item-media" onclick="getBusiness(\''+ response[i][1]  +'\');"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=50&height=50" style="border-radius:50%;"/></div><div class="item-inner" style="border-bottom:0;"><div class="item-title-row" style="clear:both;"><div class="item-title">'+ response[i][3] + '</div><div class="item-after"><span class="badge" style="margin-right:2px;background-color:#3b5998;">'+ response[i][17] + '</span><span class="badge" style="background-color:#ff8000;">'+ response[i][18] + '</span></div></div></div></a></div><div class="swipeout-actions-left"><a href="#" class="bg-green swipeout-delete swipeout-overswipe" style="background-color:#3b5998;" onclick=""><i class="pe-7s-diskette pe-2x"></i></a></div><div class="swipeout-actions-right"><a href="#" onclick="closeButton(\''+ response[i][2]  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a></div></li>');
+	
+}
+
+if (pages_list instanceof Array) {
+	
+$$( '#add_container' ).append('<li class="swipeout s_'+ response[i][2] +'"><img onclick="popUpModify(\''+ response[i][3]  +'\',\''+ singlequote  +'\',\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" src="'+ response[i][14] +'" style="width:100%;"/><div class="swipeout-content"><a href="#" id="getDeal"  onclick="popUpModify(\''+ response[i][3]  +'\',\''+ singlequote  +'\',\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" class="item-content item-link link"><div class="item-media" onclick="getBusiness(\''+ response[i][1]  +'\');"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=50&height=50" style="border-radius:50%;"/></div><div class="item-inner"><div class="item-title-row" style="clear:both;"><div class="item-title">'+ response[i][3] + '</div></div><div class="item-subtitle">'+ response[i][16] + '</div><div class="item-text">'+ someText +'</div></div></a></div><div class="swipeout-actions-left"><a href="#" class="bg-blue swipeout-overswipe" style="-webkit-border-top-right-radius: 1000px;-moz-border-radius-topright: 1000px;border-top-right-radius: 1000px;" onclick=""><i class="pe-7s-display1 pe-2x"></i></a><a href="#" class="bg-blue" style="-webkit-border-top-right-radius: 1000px;-moz-border-radius-topright: 1000px;border-top-right-radius: 1000px;" onclick="updateDeal()"><i class="pe-7s-tools pe-2x"></i></a></div><div class="swipeout-actions-right"><a href="#" onclick="" class="swipeout-delete swipeout-overswipe" data-confirm="Are you sure want to permanently delete this deal?" data-confirm-title="Delete?" style="-webkit-border-top-left-radius: 1000px;-moz-border-radius-topleft: 1000px;border-top-left-radius: 1000px;"><i class="pe-7s-close-circle pe-2x"></i></a></div></li>');	
+
+}
+
+
+}
+
+track_click++;
+$$(".load_more").show();
+$$(".load_previous").show();
+
 });
-   
-
-$$("#loader-container").hide();
 
 
 
