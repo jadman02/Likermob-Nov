@@ -13,36 +13,7 @@ document.getElementById("profilepic").innerHTML = '<img src="http://graph.facebo
 
     functionEmpty();
 
-var previousScrollPosition = 0;
-$$('.page-content').on('scroll', function (e) {
-    var pageContent = this;
-    var pageScroll = pageContent.scrollTop;
-    if (pageScroll > 44) {
-        if (pageScroll > previousScrollPosition) {
-            mainView.hideNavbar();
-            mainView.hideToolbar();
-        }
-        else {
-            mainView.showNavbar();
-            mainView.showToolbar();
-        }
 
-        if (pageScroll >= pageContent.scrollHeight - pageContent.offsetHeight - 44) {
-            mainView.showNavbar();
-            mainView.showToolbar();
-        }
-
-    }
-    else {
-        mainView.showNavbar();
-        mainView.showToolbar();
-    }
-    var scrollDiff = Math.abs(previousScrollPosition - pageScroll);
-    if (previousScrollPosition > pageScroll) previousScrollPosition = pageScroll;
-    else {
-        if (scrollDiff > 20) previousScrollPosition = pageScroll;
-    }
-});
 
 
 
