@@ -242,21 +242,37 @@ var track_click = 0;
      
 $$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', ''+ data_send +'',function(response){
 var itemlist = [];
-for (i = 0; i < response.length; i++) {itemlist.push({title: 'Item 1' + response[i][3],picture: 'http://smilesavers.net.au/images/cover.png'});} 
+for (i = 0; i < response.length; i++) {itemlist.push({title: response[i][3],page_id: response[i][1],post_id: response[i][2],photo_created: response[i][21],like: response[i][17],dislike: response[i][18],expiry: response[i][6]}); 
  
-
+var str = response[i][4];
+var singlequote = str.replace(/'/g, "qqqq");
+//var description = "'" + singlequote.replace(/(\r\n|\n|\r)/gm,"") + "'";
+var type = response[i][9];
+someText = str.replace(/(\r\n|\n|\r)/gm,"<br />");
+}
 
 var myList = myApp.virtualList('.list-block.virtual-list', {
     // Array with items data
     items: itemlist,
     // Custom render function to render item's HTML
     renderItem: function (index, item) {
-        return '<li class="item-content">' +
-                  '<div class="item-media"><img src="' + item.picture + '"></div>' +
-                  '<div class="item-inner">' +
-                      '<div class="item-title">' + item.title + '</div>' +
-                  '</div>' +
-               '</li>';
+        return '<li class="swipeout s_'+ item.page_id +'" style="border-right:5px solid #ff8000;border-left:5px solid #3b5998;margin-top:5px;margin-bottom:5px;">'+
+	'<img onclick="popUp(\''+ item.title  +'\',\''+ singlequote  +'\',\''+ item.page_id  +'\',\''+ item.post_id  +'\')" src="http://smilesavers.net.au/images/compressed/'+item.page_id+'_'+item.photo_created+'.jpg" style="width:100%;"/>'+
+		'<div class="swipeout-content">'+
+			'<a href="#" id="getDeal"  onclick="popUp(\''+ item.title  +'\',\''+ singlequote  +'\',\''+ item.page_id  +'\',\''+ item.post_id  +'\')" class="item-content">'+
+            	'<div class="item-media" onclick=""><img src="http://graph.facebook.com/'+item.page_id+'/picture?width=30&height=30" style="border-radius:50%;"/></div>'+
+                '<div class="item-inner" style="border-bottom:0;">'+
+                	'<div class="item-title-row" style="clear:both;">'+
+                    	'<div class="item-title">'+ item.title + '</div>'+
+                        '<div class="item-after"><span class="badge" style="margin-right:2px;background-color:#3b5998;">'+ item.like + '</span><span class="badge" style="background-color:#ff8000;">'+  item.dislike  + '</span></div>'+
+                    '</div>'+
+                '</div>'+
+           ' </a>'+
+        '</div>'+
+        '<div class="swipeout-actions-left">'+
+        	'<a href="#" class="bg-green swipeout-delete swipeout-overswipe" style="background-color:#3b5998;" onclick="likeButton(\''+ item.post_id  +'\',\''+ item.expiry  +'\')"><i class="pe-7s-like2 pe-2x"></i></a></div>'+
+        '<div class="swipeout-actions-right"><a href="#" onclick="closeButton(\''+ item.post_id  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a></div>'+
+'</li>';
     }
 });            
   
