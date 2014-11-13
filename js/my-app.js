@@ -28,8 +28,9 @@ $$('.page-content').on('scroll', function (e) {
         }
 
         if (pageScroll >= pageContent.scrollHeight - pageContent.offsetHeight - 44) {
-            mainView.showNavbar();
-            mainView.showToolbar();
+            //mainView.showNavbar();
+            //mainView.showToolbar();
+            functionEmpty();
         }
 
     }
@@ -929,7 +930,7 @@ function popUp(title,description,page_id,post_id){
 var user_name = localStorage.getItem('user_name');
 var uid = localStorage.getItem('uid');
 var clear_description = description.replace(/qqqq/g, "'");
-  var heightpopup = $$(window).height()-;
+//  var heightpopup = $$(window).height()-;
 
 
     
