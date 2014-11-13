@@ -1,5 +1,6 @@
 // Initialize your app
 var myApp = new Framework7({
+  hideNavbarOnPageScroll:true,
   init: false //Disable App's automatica initialization
 });
 
