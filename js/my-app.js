@@ -14,7 +14,7 @@ myApp.onPageBeforeInit('index', function (page) {
     functionEmpty();
 
 var previousScrollPosition = 0;
-$$('.page-content').on('scroll', function (e) {
+$$('.page-content-scroll').on('scroll', function (e) {
     var pageContent = this;
     var pageScroll = pageContent.scrollTop;
     if (pageScroll > 44) {
@@ -30,7 +30,8 @@ $$('.page-content').on('scroll', function (e) {
         if (pageScroll >= pageContent.scrollHeight - pageContent.offsetHeight - 44) {
             //mainView.showNavbar();
             //mainView.showToolbar();
-            alert('end');
+            $$( ".page-content" ).removeClass( "page-content-scroll" );
+            functionEmpty();
         }
 
     }
@@ -197,6 +198,8 @@ var data_send;
 var domain;
 
 function functionEmpty(pages_list) {
+
+$$( ".page-content" ).addClass( "page-content-scroll" );
 
 var uid = localStorage.getItem("uid");
 
