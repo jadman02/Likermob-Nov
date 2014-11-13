@@ -21,6 +21,8 @@ $$('.page-content-scroll').on('scroll', function (e) {
         if (pageScroll > previousScrollPosition) {
             mainView.hideNavbar();
             mainView.hideToolbar();
+            $$( '.pull-to-refresh-layer' ).css( 'margin-top', '-44px' );
+            
         }
         else {
             mainView.showNavbar();
@@ -963,13 +965,6 @@ myApp.modal({
           
           
           
-          
-        }
-      },
-      {
-        text: '<div style="margin:-40px;margin-left:-180px;margin-top:-2px;"><img src="http://graph.facebook.com/'+ page_id +'/picture?width=30&height=30" style="border-radius:50%;border-right:200px solid #ff8000;border-left:200px solid #3b5998;margin:0 auto;"/></div>',
-        onClick: function() {
-          getBusiness(page_id);
           
         }
       },
