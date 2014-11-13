@@ -32,7 +32,7 @@ $$('.page-content-scroll').on('scroll', function (e) {
             //mainView.showToolbar();
             
             $$( ".page-content" ).removeClass( "page-content-scroll" );
-            $$("#result li").remove();
+            $$("#result img").remove();
             functionEmpty();
         }
 
