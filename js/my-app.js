@@ -30,7 +30,9 @@ $$('.page-content-scroll').on('scroll', function (e) {
         if (pageScroll >= pageContent.scrollHeight - pageContent.offsetHeight - 44) {
             //mainView.showNavbar();
             //mainView.showToolbar();
+            
             $$( ".page-content" ).removeClass( "page-content-scroll" );
+            $$("#result li").remove();
             functionEmpty();
         }
 
@@ -226,7 +228,6 @@ if (pages_list instanceof Array) {domain = "getpages";data_send = "pages_list=" 
 
 	
 $$(".load_more").removeAttr("disabled", "disabled");
-$$( "#result li" ).removeClass( "disabled" );
 $$(".load_previous").attr("disabled", "disabled");
 var track_click = 0;
 
