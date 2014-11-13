@@ -240,7 +240,7 @@ $$("#loader-container").hide();
 
 
    
-for (i = 0; i < 10; i++) {        
+for (i = 0; i < 5; i++) {        
 
 var str = response[i][4];
 var singlequote = str.replace(/'/g, "qqqq");
@@ -304,8 +304,8 @@ $$("#result li").remove();
 
 
 
-var start = track_click * 10;
-var finish = start + 10;
+var start = track_click * 5;
+var finish = start + 5;
 
 for (i = start; i < finish; i++) {        
 
@@ -351,7 +351,7 @@ $$( '#add_container' ).append('<li class="swipeout s_'+ response[i][2] +'"><img 
 $$(".load_more").click(function (e) {
 
 var number_pages = localStorage.getItem("total_pages");
-var stop = Math.ceil(number_pages / 10);
+var stop = Math.ceil(number_pages / 5);
 
 if (track_click >= (stop-1)) {
 $$(".load_more").attr("disabled", "disabled");
@@ -362,8 +362,8 @@ $$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', ''+ data
 $$("#result li").remove();
 
 
-var start = track_click * 10;
-var finish = start + 10;
+var start = track_click * 5;
+var finish = start + 5;
 
 
 for (i = start; i < finish; i++) {        
