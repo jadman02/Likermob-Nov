@@ -17,14 +17,14 @@ var previousScrollPosition = 0;
 $$('.page-content-scroll').on('scroll', function (e) {
     var pageContent = this;
     var pageScroll = pageContent.scrollTop;
-    if (pageScroll > 0) {
+    if (pageScroll > 44) {
         if (pageScroll > previousScrollPosition) {
             mainView.hideNavbar();
             mainView.hideToolbar();
         }
         else {
-            mainView.showNavbar();
-            mainView.showToolbar();
+            //mainView.showNavbar();
+            //mainView.showToolbar();
         }
 
         if (pageScroll >= pageContent.scrollHeight - pageContent.offsetHeight - 44) {
