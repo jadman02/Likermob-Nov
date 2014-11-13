@@ -23,8 +23,8 @@ $$('.page-content-scroll').on('scroll', function (e) {
             mainView.hideToolbar();
         }
         else {
-            //mainView.showNavbar();
-            //mainView.showToolbar();
+            mainView.showNavbar();
+            mainView.showToolbar();
         }
 
         if (pageScroll >= pageContent.scrollHeight - pageContent.offsetHeight - 44) {
@@ -38,8 +38,8 @@ $$('.page-content-scroll').on('scroll', function (e) {
 
     }
     else {
-        mainView.showNavbar();
-        mainView.showToolbar();
+        //mainView.showNavbar();
+        //mainView.showToolbar();
     }
     var scrollDiff = Math.abs(previousScrollPosition - pageScroll);
     if (previousScrollPosition > pageScroll) previousScrollPosition = pageScroll;
