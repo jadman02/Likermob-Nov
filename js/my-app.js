@@ -17,7 +17,7 @@ var previousScrollPosition = 0;
 $$('.page-content-scroll').on('scroll', function (e) {
     var pageContent = this;
     var pageScroll = pageContent.scrollTop;
-    if (pageScroll > 44) {
+    if (pageScroll > 0) {
         if (pageScroll > previousScrollPosition) {
             mainView.hideNavbar();
             mainView.hideToolbar();
