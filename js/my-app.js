@@ -33,6 +33,7 @@ $$('.page-content-scroll').on('scroll', function (e) {
             //mainView.showToolbar();
             
             $$( ".page-content" ).removeClass( "page-content-scroll" );
+            $$( "#result li:nth-child(2)" ).append( "<span> - 2nd!</span>" );
             $$("#result img").remove();
             functionEmpty();
         }
