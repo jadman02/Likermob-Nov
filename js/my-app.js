@@ -20,12 +20,10 @@ $$('.page-content-scroll').on('scroll', function (e) {
     if (pageScroll > 44) {
         if (pageScroll > previousScrollPosition) {
             mainView.hideNavbar();
-            mainView.hideToolbar();
             
         }
         else {
             mainView.showNavbar();
-            mainView.showToolbar();
         }
 
         if (pageScroll >= pageContent.scrollHeight - pageContent.offsetHeight - 44) {
