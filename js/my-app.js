@@ -16,22 +16,22 @@ myApp.onPageBeforeInit('index', function (page) {
 var previousScrollPosition = 0;
 $$('.page-content-scroll').on('scroll', function (e) {
 
-var swipeoutTop = $$('.i_0').scrollTop;
-var swipeoutHeight = $$('.i_0').height();
-
-alert('Top' + swipeoutTop +'Height'+swipeoutHeight);
-
-
 
     var pageContent = this;
     var pageScroll = pageContent.scrollTop;
-    if (pageScroll > 44) {
+        if (pageScroll > 44) {
         if (pageScroll > previousScrollPosition) {
             mainView.hideNavbar();
             
         }
         else {
             mainView.showNavbar();
+        }
+
+if (pageScroll > 480) {
+        if (pageScroll > previousScrollPosition) {
+            alert('more than 480');
+            
         }
 
         if (pageScroll >= pageContent.scrollHeight - pageContent.offsetHeight - 44) {
