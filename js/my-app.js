@@ -18,7 +18,8 @@ $$('.page-content-scroll').on('scroll', function (e) {
 
 
 var result_list = $$("#result").children("li").length; 
-alert(result_list);
+//alert(result_list);
+if (result_list >10) {$$( "#result li:nth-child(-n+5)" ).append( "<span> - 2nd!</span>" );$$("#result img").remove();}
 
     var pageContent = this;
     var pageScroll = pageContent.scrollTop;
@@ -36,8 +37,6 @@ alert(result_list);
             //mainView.showToolbar();
             
             $$( ".page-content" ).removeClass( "page-content-scroll" );
-            $$( "#result li:nth-child(2)" ).append( "<span> - 2nd!</span>" );
-            $$("#result img").remove();
             functionEmpty();
         }
 
