@@ -17,7 +17,8 @@ var previousScrollPosition = 0;
 $$('.page-content-scroll').on('scroll', function (e) {
 
 
-
+var result_list = $$("#result").children("li").length; 
+alert(result_list);
 
     var pageContent = this;
     var pageScroll = pageContent.scrollTop;
