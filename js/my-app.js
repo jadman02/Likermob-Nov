@@ -31,7 +31,7 @@ $$('.page-content-scroll').on('scroll', function (e) {
 if (pageScroll > 480) {
         if (pageScroll > previousScrollPosition) {
             alert('more than 480');
-$$( ".swipeout img" ).first().remove();
+$$( "#result img" ).first().remove();
             
         }}
 
