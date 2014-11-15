@@ -21,7 +21,7 @@ index = 0;
 
     var pageContent = this;
     var pageScroll = pageContent.scrollTop;
-    if (pageScroll = 4000) {alert('4000 reached');}
+    if ((pageScroll > previousScrollPosition)&&(pageScroll = 4000)) {alert('4000 reached');}
     if (pageScroll > 44) {
         if (pageScroll > previousScrollPosition) {
             mainView.hideNavbar();
