@@ -1,5 +1,9 @@
 // Initialize your app
 var myApp = new Framework7({
+  animatePages: false,
+    sortable: false,
+    swipeBackPageAnimateShadow: false,
+    swipeBackPageAnimateOpacity: false,
   init: false //Disable App's automatica initialization
 });
 
