@@ -39,9 +39,11 @@ $$('.page-content-scroll').on('scroll', function (e) {
         if (pageScroll >= pageContent.scrollHeight - pageContent.offsetHeight - 44) {
             //mainView.showNavbar();
             //mainView.showToolbar();
-            number_of_scrolls++;
-            alert(number_of_scrolls);
+            
+           
             $$( ".page-content" ).removeClass( "page-content-scroll" );
+           number_of_scrolls++;
+            alert(number_of_scrolls);
             $$("#result img" ).remove();
             if(number_of_scrolls >= 3) {$$( "#result li:nth-child(-n+5)" ).remove();}
             functionEmpty();
@@ -213,7 +215,7 @@ var domain;
 
 function functionEmpty(pages_list) {
 
-$$( ".page-content" ).addClass( "page-content-scroll" );
+
 
 var uid = localStorage.getItem("uid");
 
@@ -250,7 +252,7 @@ localStorage.setItem("total_pages", response.length);
 $$("#loader-container").hide();
 
 
-
+$$( ".page-content" ).addClass( "page-content-scroll" );
    
 for (i = 0; i < 5; i++) {        
 
