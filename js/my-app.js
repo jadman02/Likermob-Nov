@@ -33,7 +33,7 @@ if (pageScroll > 480) {
             alert('more than 480');
 $$( ".swipeout img" ).first().remove();
             
-        }
+        }}
 
         if (pageScroll >= pageContent.scrollHeight - pageContent.offsetHeight - 44) {
             //mainView.showNavbar();
