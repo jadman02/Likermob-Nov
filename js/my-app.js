@@ -29,7 +29,8 @@ $$('.page-content-scroll').on('scroll', function (e) {
         }
 
 var result_list = $$("#result li").length;
-if (result_list > 10) {$$( "#result li:nth-child(-n+5)" ).remove();}
+alert(result_list);
+//if (result_list > 10) {$$( "#result li:nth-child(-n+5)" ).remove();}
 
         if (pageScroll >= pageContent.scrollHeight - pageContent.offsetHeight - 244) {
             //mainView.showNavbar();
