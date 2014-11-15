@@ -31,6 +31,7 @@ $$('.page-content-scroll').on('scroll', function (e) {
 if (pageScroll > 480) {
         if (pageScroll > previousScrollPosition) {
             alert('more than 480');
+$$( ".swipeout img" ).first().remove();
             
         }
 
@@ -39,7 +40,6 @@ if (pageScroll > 480) {
             //mainView.showToolbar();
             
             $$( ".page-content" ).removeClass( "page-content-scroll" );
-            $$( "#result li:nth-child(2)" ).append( "<span> - 2nd!</span>" );
             $$("#result img").remove();
             functionEmpty();
         }
