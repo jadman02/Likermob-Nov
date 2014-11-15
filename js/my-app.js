@@ -16,9 +16,8 @@ myApp.onPageBeforeInit('index', function (page) {
 var previousScrollPosition = 0;
 $$('.page-content-scroll').on('scroll', function (e) {
 
-var swipeout = document.getElementById(".i_0").value;
-var swipeoutTop = swipeout.scrollTop;
-var swipeoutHeight = swipeout.height();
+var swipeoutTop = $$('.i_0').scrollTop;
+var swipeoutHeight = $$('.i_0').height();
 
 alert('Top' + swipeoutTop +'Height'+swipeoutHeight);
 
