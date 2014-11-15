@@ -14,11 +14,12 @@ myApp.onPageBeforeInit('index', function (page) {
     functionEmpty();
 
 var previousScrollPosition = 0;
+var number_of_scrolls = 0;
 $$('.page-content-scroll').on('scroll', function (e) {
 
- var result_list = $$("#result").children("li").length; 
+// var result_list = $$("#result").children("li").length; 
  //alert(result_list);
-if (result_list >10) {$$( "#result li:nth-child(-n+5)" ).remove();}
+//if (result_list >10) {}
 
     var pageContent = this;
     var pageScroll = pageContent.scrollTop;
@@ -34,9 +35,10 @@ if (result_list >10) {$$( "#result li:nth-child(-n+5)" ).remove();}
         if (pageScroll >= pageContent.scrollHeight - pageContent.offsetHeight - 480) {
             //mainView.showNavbar();
             //mainView.showToolbar();
-            
+            number_of_scrolls++;
             $$( ".page-content" ).removeClass( "page-content-scroll" );
             $$("#result img" ).remove();
+            if(number_of_scrolls > 0) {$$( "#result li:nth-child(-n+5)" ).remove();}
             functionEmpty();
         }
 
