@@ -28,14 +28,10 @@ $$('.page-content-scroll').on('scroll', function (e) {
             mainView.showNavbar();
         }
 
-if (pageScroll > 480) {
-        if (pageScroll > previousScrollPosition) {
+var result_list = $$("#result li").length;
+if (result_list > 10) {$$( "#result li:nth-child(-n+5)" ).remove();}
 
-$$( "#result li:nth-child(1)" ).remove();
-            
-        }}
-
-        if (pageScroll >= pageContent.scrollHeight - pageContent.offsetHeight - 44) {
+        if (pageScroll >= pageContent.scrollHeight - pageContent.offsetHeight - 244) {
             //mainView.showNavbar();
             //mainView.showToolbar();
             
