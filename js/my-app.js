@@ -32,10 +32,11 @@ $$('.page-content-scroll').on('scroll', function (e) {
             mainView.showNavbar();
         }
 
-        if (pageScroll >= pageContent.scrollHeight - pageContent.offsetHeight - 480) {
+        if (pageScroll >= pageContent.scrollHeight - pageContent.offsetHeight - 44) {
             //mainView.showNavbar();
             //mainView.showToolbar();
             number_of_scrolls++;
+            alert(number_of_scrolls);
             $$( ".page-content" ).removeClass( "page-content-scroll" );
             $$("#result img" ).remove();
             if(number_of_scrolls > 0) {$$( "#result li:nth-child(-n+5)" ).remove();}
