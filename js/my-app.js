@@ -28,7 +28,8 @@ $$('.page-content-scroll').on('scroll', function (e) {
             mainView.showNavbar();
         }
 
-var result_list = $$("#result li").length;
+
+var result_list = $$("#result").children("li").length; 
 alert(result_list);
 //if (result_list > 10) {$$( "#result li:nth-child(-n+5)" ).remove();}
 
