@@ -16,11 +16,6 @@ myApp.onPageBeforeInit('index', function (page) {
 var previousScrollPosition = 0;
 $$('.page-content-scroll').on('scroll', function (e) {
 
-
-var result_list = $$("#result").children("li").length; 
-//alert(result_list);
-if (result_list >10) {alert('10 items');$$( "#result img:nth-child(-n+5)" ).remove();}
-
     var pageContent = this;
     var pageScroll = pageContent.scrollTop;
     if (pageScroll > 44) {
@@ -37,6 +32,7 @@ if (result_list >10) {alert('10 items');$$( "#result img:nth-child(-n+5)" ).remo
             //mainView.showToolbar();
             
             $$( ".page-content" ).removeClass( "page-content-scroll" );
+            $$("#result img" ).remove();
             functionEmpty();
         }
 
