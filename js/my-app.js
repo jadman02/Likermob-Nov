@@ -39,7 +39,7 @@ $$('.page-content-scroll').on('scroll', function (e) {
             alert(number_of_scrolls);
             $$( ".page-content" ).removeClass( "page-content-scroll" );
             $$("#result img" ).remove();
-            if(number_of_scrolls == 3) {$$( "#result li:nth-child(-n+5)" ).remove();}
+            if(number_of_scrolls >= 3) {$$( "#result li:nth-child(-n+5)" ).remove();}
             functionEmpty();
         }
 
