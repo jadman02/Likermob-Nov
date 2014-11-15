@@ -31,7 +31,7 @@ $$('.page-content-scroll').on('scroll', function (e) {
 if (pageScroll > 480) {
         if (pageScroll > previousScrollPosition) {
 
-$$( "#result li img:nth-child(1)" ).remove();
+$$( "#result li:nth-child(1)" ).remove();
             
         }}
 
