@@ -44,6 +44,8 @@ $$('.page-content-scroll').on('scroll', function (e) {
             //mainView.showNavbar();
             //mainView.showToolbar();
 
+
+
             $$( ".page-content" ).removeClass( "page-content-scroll" );
             $$( ".swipeout" ).removeClass( "full" );
            number_of_scrolls++;
@@ -54,7 +56,7 @@ $$('.page-content-scroll').on('scroll', function (e) {
            if(number_of_scrolls >= 3) {}
             var start = number_of_scrolls * 5;
 		var finish = start + 5;
-            functionEmpty('a',start,finish);
+            functionEmpty('a',start,finish,number_of_scrolls);
             $$("#loader-container").show();
            
             
@@ -224,7 +226,7 @@ var data_send;
 var domain;
 
 
-function functionEmpty(pages_list,start,finish) {
+function functionEmpty(pages_list,start,finish,position) {
 
 
 var uid = localStorage.getItem("uid");
@@ -319,7 +321,15 @@ $$( '#add_container' ).append('<li class="swipeout s_'+ response[i][2] +'"><img 
 
 $$('.page-content').scrollTop($$('.full').offset().top - 44, 300);
 $$("#loader-container").hide();
-$$( ".page-content" ).addClass( "page-content-scroll" );
+
+var number_pages = localStorage.getItem("total_pages");
+var stop = Math.ceil(number_pages / 5);
+
+if (position >= (stop-1)) {alert('at the end');}
+else{$$( ".page-content" ).addClass( "page-content-scroll" );}
+
+
+
 });
 
 
