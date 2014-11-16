@@ -23,13 +23,13 @@ document.getElementById("profilepic").innerHTML = '<img src="http://graph.facebo
 
 var previousScrollPosition = 0;
 var number_of_scrolls = 0;
-$$('.page-content').on('scroll', function (e) {
+$$('.page-content-scroll').on('scroll', function (e) {
 
 // var result_list = $$("#result").children("li").length; 
  //alert(result_list);
 //if (result_list >10) {}
-$$( ".page-content" ).addClass( "page-content-scroll" );
-    var pageContent = $$('.page-content-scroll');
+
+    var pageContent = this;
     var pageScroll = pageContent.scrollTop;
     if (pageScroll > 44) {
         if (pageScroll > previousScrollPosition) {
@@ -316,10 +316,10 @@ $$( '#add_container' ).append('<li class="swipeout s_'+ response[i][2] +'"><img 
 }
 
 
-
+alert();
 $$("#loader-container").hide();
-$$('.page-content').scrollTop(294, 300);
-$$( ".page-content" ).addClass( "page-content-scroll" );
+alert('http://smilesavers.net.au/images/compressed/'+response[4][1]+'_'+response[4][21]+'.jpg');
+imgLoad('http://smilesavers.net.au/images/compressed/'+response[i][1]+'_'+response[i][21]+'.jpg');
 
 
 }
@@ -2007,6 +2007,17 @@ function clearInput(){
 	document.getElementById('dbnames').value = "";
 	$$('#resultfclear').hide();
 	$$('#dbnamesclear').hide();
+}
+
+function imgLoad(URL){
+var image = new Image();
+    image.src = URL;
+    image.onload = function() {
+	$$('.page-content').scrollTop(294, 300);
+$$( ".page-content" ).addClass( "page-content-scroll" );
+    }	
+	
+	
 }
 
 
