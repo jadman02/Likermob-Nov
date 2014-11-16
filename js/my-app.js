@@ -266,7 +266,7 @@ var stop = Math.ceil(response.length / 5);
 
 //alert('stope:'+stop + 'position:' + position);
 if (position == (stop-1)) {alert('1 away');}
-if (position == stop) {alert('at the end');}
+if (position == stop) {alert('at the end');$$( ".page-content" ).removeClass( "page-content-scroll" );}
 
 //$$('.page-content').scrollTop(294, 300);
 
@@ -323,9 +323,10 @@ $$( '#add_container' ).append('<li class="swipeout s_'+ response[i][2] +'"><img 
 
 
 
+
 $$("#loader-container").hide();
-alert('http://smilesavers.net.au/images/compressed/'+response[4][1]+'_'+response[4][21]+'.jpg');
-imgLoad('http://smilesavers.net.au/images/compressed/'+response[4][1]+'_'+response[4][21]+'.jpg');
+if (typeof start === 'undefined') {$$( ".page-content" ).addClass( "page-content-scroll" );}
+else{imgLoad('http://smilesavers.net.au/images/compressed/'+response[4][1]+'_'+response[4][21]+'.jpg');}
 
 
 
