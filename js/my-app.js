@@ -265,8 +265,8 @@ $$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', ''+ data
 var stop = Math.ceil(response.length / 5);
 
 alert('stope:'+stop + 'position:' + position);
-if (position == (stop-1)) {alert('at the end');$$('.page-content').scrollTop(294, 300);}
-
+if (position == (stop-1)) {$$('.page-content').scrollTop(294, 300);}
+if (position > (stop-1)) {alert('at the end');}
 
 
 for (i = start; i < finish; i++) {        
