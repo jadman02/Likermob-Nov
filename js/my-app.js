@@ -53,7 +53,6 @@ $$('.page-content-scroll').on('scroll', function (e) {
             if(count >5){$$( "#result li:nth-child(-n+5)" ).remove();}
             $$("#result img" ).remove();
             
-           if(number_of_scrolls >= 3) {}
             var start = number_of_scrolls * 5;
 		var finish = start + 5;
             functionEmpty('a',start,finish,number_of_scrolls);
@@ -325,9 +324,9 @@ $$("#loader-container").hide();
 var number_pages = localStorage.getItem("total_pages");
 var stop = Math.ceil(number_pages / 5);
 alert('stope:'+stop + 'position:' + position);
-//if (position >= (stop-1)) {alert('at the end');}
-//else{}
-$$( ".page-content" ).addClass( "page-content-scroll" );
+if (position >= (stop-1)) {alert('at the end');}
+else{$$( ".page-content" ).addClass( "page-content-scroll" );}
+
 
 
 });
