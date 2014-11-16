@@ -319,10 +319,7 @@ $$( '#add_container' ).append('<li class="swipeout s_'+ response[i][2] +'"><img 
 
 
 // $$('.page-content').scrollTop($$('.full').offset().top - 44, 300);
-
-$$('.page-content').animate({scrollTop: 294}, 1000);
-
-//$$('.page-content').scrollTop(294, 2000);
+$$('.page-content').scrollTop(294, 0);
 $$("#loader-container").hide();
 $$( ".page-content" ).addClass( "page-content-scroll" );
 
