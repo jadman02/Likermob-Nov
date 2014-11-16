@@ -1987,6 +1987,5 @@ function clearInput(){
 
 function alertMe(){
 alert('scroll to');
-
-$( ".page-content-scroll" ).scrollTop( 400 );
+$$('.page-content').scrollTop($$('.page-content-scroll').offset().top - 44, 300);
 }
