@@ -51,7 +51,7 @@ $$('.page-content-scroll').on('scroll', function (e) {
             $$("#result img" ).remove();
             if(number_of_scrolls >= 3) {$$( "#result li:nth-child(-n+5)" ).remove();}
             functionEmpty();
-            $$('.page-content-scroll').scrollTop(300);
+            $window.scrollTo(0,200);
         }
 
     }
