@@ -143,7 +143,7 @@ ptrContent.on('refresh', function (e) {
     // Emulate 2s loading
   //  setTimeout(function () {
 $$("#result li").remove();
-number_of_scrolls = 0;
+var number_of_scrolls = 0;
 $$("#loader-container").show();
     functionEmpty();
 
