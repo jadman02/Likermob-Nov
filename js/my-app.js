@@ -316,16 +316,16 @@ $$( '#add_container' ).append('<li class="swipeout s_'+ response[i][2] +'"><img 
 }
 
 
-alert();
-$$("#loader-container").hide();
-alert('http://smilesavers.net.au/images/compressed/'+response[4][1]+'_'+response[4][21]+'.jpg');
-imgLoad('http://smilesavers.net.au/images/compressed/'+response[i][1]+'_'+response[i][21]+'.jpg');
+
 
 
 }
 
 
 
+$$("#loader-container").hide();
+alert('http://smilesavers.net.au/images/compressed/'+response[4][1]+'_'+response[4][21]+'.jpg');
+imgLoad('http://smilesavers.net.au/images/compressed/'+response[4][1]+'_'+response[4][21]+'.jpg');
 
 
 
