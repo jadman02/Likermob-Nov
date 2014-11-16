@@ -319,11 +319,10 @@ $$( '#add_container' ).append('<li class="swipeout s_'+ response[i][2] +'"><img 
 
 var stop = Math.ceil(response.length / 5);
 
-if (position == (stop-1)) {$$( ".page-content" ).removeClass( "page-content-scroll" );return false;}
+if (position == (stop-1)) {alert('no more');$$( ".page-content" ).removeClass( "page-content-scroll" );return false;}
 
-if (start > 4) {imgLoad('http://smilesavers.net.au/images/compressed/'+response[4][1]+'_'+response[4][21]+'.jpg');return false;}
-$$("#loader-container").hide();
-$$( ".page-content" ).addClass( "page-content-scroll" );
+imgLoad('http://smilesavers.net.au/images/compressed/'+response[4][1]+'_'+response[4][21]+'.jpg');
+
 
 
 
