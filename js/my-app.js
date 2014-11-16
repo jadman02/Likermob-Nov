@@ -40,7 +40,7 @@ $$('.page-content-scroll').on('scroll', function (e) {
             mainView.showNavbar();
         }
 
-        if (pageScroll >= pageContent.scrollHeight - pageContent.offsetHeight - 44) {
+        if (pageScroll >= pageContent.scrollHeight - pageContent.offsetHeight - 0) {
             //mainView.showNavbar();
             //mainView.showToolbar();
 
