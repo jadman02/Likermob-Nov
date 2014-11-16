@@ -262,7 +262,9 @@ $$(".load_previous").attr("disabled", "disabled");
 
 $$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', ''+ data_send +'',function(response){
 
+var stop = Math.ceil(response.length / 5);
 
+if (position == (stop-1)) {alert('no more');$$( ".page-content" ).removeClass( "page-content-scroll" );}
 
 for (i = start; i < finish; i++) {        
 
@@ -315,11 +317,9 @@ $$( '#add_container' ).append('<li class="swipeout s_'+ response[i][2] +'"><img 
 
 }
 
+if (position == (stop-1)) {alert('the end');}
 
 
-var stop = Math.ceil(response.length / 5);
-
-if (position == (stop-1)) {alert('no more');$$( ".page-content" ).removeClass( "page-content-scroll" );return false;}
 
 imgLoad('http://smilesavers.net.au/images/compressed/'+response[4][1]+'_'+response[4][21]+'.jpg');
 
