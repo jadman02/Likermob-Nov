@@ -264,6 +264,11 @@ $$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', ''+ data
 var stop = Math.ceil(response.length / 5);
 
 if (position < (stop-1)) {$$( '#result' ).append('<li id="listmarker"></li>');$$( ".page-content" ).removeClass( "page-content-scroll" );}
+if (position == (stop-1)) {$$( '#result' ).append('<li id="listmarker"></li>');$$('.page-content').scrollTop($$('#listmarker').offset().top - 44, 300);$$( ".page-content" ).removeClass( "page-content-scroll" );$$("#loader-container").hide();}
+
+
+
+
 
 
 for (i = start; i < finish; i++) {        
