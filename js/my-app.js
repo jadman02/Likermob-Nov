@@ -1986,6 +1986,7 @@ function clearInput(){
 }
 
 function scrollTop(){
+alert('scroll to');
        var $target = $$('html,body'); 
 $target.animate({scrollTop: $target.height()}, 200);
 
