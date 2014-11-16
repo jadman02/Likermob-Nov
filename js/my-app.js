@@ -324,7 +324,7 @@ $$("#loader-container").hide();
 
 var number_pages = localStorage.getItem("total_pages");
 var stop = Math.ceil(number_pages / 5);
-
+alert('stope:'+stop + 'position:' + position);
 if (position >= (stop-1)) {alert('at the end');}
 else{$$( ".page-content" ).addClass( "page-content-scroll" );}
 
