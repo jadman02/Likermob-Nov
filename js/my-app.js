@@ -1985,5 +1985,6 @@ function clearInput(){
 	$$('#dbnamesclear').hide();
 }
 
-
-
+function scrollTop(){
+$( ".page-content-scroll" ).scrollTop( 300 );
+}
