@@ -48,8 +48,9 @@ $$('.page-content-scroll').on('scroll', function (e) {
             $$( ".swipeout" ).removeClass( "full" );
            number_of_scrolls++;
             var count = $$("#result").children("li").length;
-            if(count >5){$$( "#result li:nth-child(-n+5)" ).remove();}
+            if(count >10){$$( "#result li:nth-child(-n+5)" ).remove();}
             $$("#result img" ).remove();
+            
            // if(number_of_scrolls >= 3) {}
             var start = number_of_scrolls * 5;
 	var finish = start + 5;
