@@ -51,7 +51,7 @@ $$('.page-content-scroll').on('scroll', function (e) {
             $$("#result img" ).remove();
             if(number_of_scrolls >= 3) {$$( "#result li:nth-child(-n+5)" ).remove();}
             functionEmpty();
-            $$('.page-content').scrollTop($$('.full').offset().top - 44, 300);
+           
             
         }
 
@@ -307,6 +307,8 @@ $$( '#add_container' ).append('<li class="swipeout s_'+ response[i][2] +'"><img 
 
 
 }
+
+ $$('.page-content').scrollTop($$('.full').offset().top - 44, 300);
 
 track_click++;
 $$(".load_more").show();
