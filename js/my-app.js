@@ -40,11 +40,11 @@ $$('.page-content-scroll').on('scroll', function (e) {
             mainView.showNavbar();
         }
 
-        if (pageScroll >= pageContent.scrollHeight - pageContent.offsetHeight - 0) {
+        if (pageScroll >= pageContent.scrollHeight - pageContent.offsetHeight - 44) {
             //mainView.showNavbar();
             //mainView.showToolbar();
 
-
+ $$("#listmarker" ).remove();
 
             $$( ".page-content" ).removeClass( "page-content-scroll" );
             $$( ".swipeout" ).removeClass( "full" );
@@ -264,7 +264,7 @@ $$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', ''+ data
 
 var stop = Math.ceil(response.length / 5);
 
-if (position == (stop-1)) {alert('no more');$$( ".page-content" ).removeClass( "page-content-scroll" );$$('.page-content').scrollTop(294, 300);$$("#loader-container").hide();}
+if (position < (stop-1)) {$$( '#result' ).append('<li id="listmarker"></li>');alert('no more');$$( ".page-content" ).removeClass( "page-content-scroll" );$$('.page-content').scrollTop(294, 300);$$("#loader-container").hide();}
 
 
 for (i = start; i < finish; i++) {        
@@ -320,9 +320,9 @@ $$( '#add_container' ).append('<li class="swipeout s_'+ response[i][2] +'"><img 
 
 
 
-
-
-imgLoad('http://smilesavers.net.au/images/compressed/'+response[4][1]+'_'+response[4][21]+'.jpg');
+$$('.page-content').scrollTop($$('#listmarker').offset().top - 44, 300);
+$$( ".page-content" ).addClass( "page-content-scroll" );
+$$("#loader-container").hide();
 
 
 
@@ -2007,16 +2007,5 @@ function clearInput(){
 	$$('#dbnamesclear').hide();
 }
 
-function imgLoad(URL){
 
-var image = new Image();
-    image.onload = function() {
-	$$('.page-content').scrollTop(294, 300);
-$$( ".page-content" ).addClass( "page-content-scroll" );
-$$("#loader-container").hide();
-    }
-image.src = URL;
-	
-	
-}
 
