@@ -324,9 +324,10 @@ $$( '#add_container' ).append('<li class="swipeout s_'+ response[i][2] +'"><img 
 
 
 
+
+if (start > 4) {imgLoad('http://smilesavers.net.au/images/compressed/'+response[4][1]+'_'+response[4][21]+'.jpg');return;}
 $$("#loader-container").hide();
-if (typeof start === 'undefined') {$$( ".page-content" ).addClass( "page-content-scroll" );}
-else{imgLoad('http://smilesavers.net.au/images/compressed/'+response[4][1]+'_'+response[4][21]+'.jpg');}
+$$( ".page-content" ).addClass( "page-content-scroll" );
 
 
 
