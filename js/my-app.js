@@ -2008,14 +2008,14 @@ function clearInput(){
 }
 
 function imgLoad(URL){
-var timestamp = new Date(expiry).getTime() / 1000;
+
 var image = new Image();
-    image.src = URL + '?' + timestamp;
     image.onload = function() {
 	$$('.page-content').scrollTop(294, 300);
 $$( ".page-content" ).addClass( "page-content-scroll" );
 $$("#loader-container").hide();
-    }	
+    }
+image.src = URL;
 	
 	
 }
