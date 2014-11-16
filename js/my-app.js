@@ -50,7 +50,7 @@ $$('.page-content-scroll').on('scroll', function (e) {
             $$("#result img" ).remove();
             if(number_of_scrolls >= 3) {$$( "#result li:nth-child(-n+5)" ).remove();}
             functionEmpty();
-            $window.scrollTo(0,200);
+            window.scrollTo(0,200);
         }
 
     }
