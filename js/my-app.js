@@ -316,10 +316,6 @@ $$( '#add_container' ).append('<li class="swipeout s_'+ response[i][2] +'"><img 
 }
 
 
-}
-
-
-
 var img = new Image();
 img.src = 'http://smilesavers.net.au/images/compressed/'+response[4][1]+'_'+response[4][21]+'.jpg');
 img.onload = function () {
@@ -328,6 +324,12 @@ $$("#loader-container").hide();
 $$( ".page-content" ).addClass( "page-content-scroll" );	
 	
 };
+
+}
+
+
+
+
 
 
 // $$('.page-content').scrollTop($$('.full').offset().top - 44, 300);
