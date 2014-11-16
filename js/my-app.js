@@ -1987,5 +1987,6 @@ function clearInput(){
 
 function alertMe(){
 alert('scroll to');
-window.scrollTo(0,500);
+
+$( ".page-content-scroll" ).scrollTop( 400 );
 }
