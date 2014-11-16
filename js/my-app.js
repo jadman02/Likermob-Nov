@@ -47,14 +47,14 @@ $$('.page-content-scroll').on('scroll', function (e) {
             $$( ".page-content" ).removeClass( "page-content-scroll" );
             $$( ".swipeout" ).removeClass( "full" );
            number_of_scrolls++;
-           // var count = $$("#result").children("li").length;
-            //if(count >10){$$( "#result li:nth-child(-n+5)" ).remove();}
+            var count = $$("#result").children("li").length;
+            if(count >10){$$( "#result li:nth-child(-n+5)" ).remove();}
             $$("#result img" ).remove();
             
-           // if(number_of_scrolls >= 3) {}
+           if(number_of_scrolls >= 3) {}
             var start = number_of_scrolls * 5;
-	var finish = start + 5;
-            functionEmpty('a',start,finish);
+		var finish = start + 5;
+            functionEmpty(,start,finish);
             $$("#loader-container").show();
            
             
@@ -150,7 +150,6 @@ ptrContent.on('refresh', function (e) {
     // Emulate 2s loading
   //  setTimeout(function () {
 $$("#result li").remove();
-var number_of_scrolls = 0;
 $$("#loader-container").show();
     functionEmpty();
 
