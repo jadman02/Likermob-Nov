@@ -23,13 +23,13 @@ document.getElementById("profilepic").innerHTML = '<img src="http://graph.facebo
 
 var previousScrollPosition = 0;
 var number_of_scrolls = 0;
-$$('.page-content-scroll').on('scroll', function (e) {
+$$('.page-content').on('scroll', function (e) {
 
 // var result_list = $$("#result").children("li").length; 
  //alert(result_list);
 //if (result_list >10) {}
-
-    var pageContent = this;
+$$( ".page-content" ).addClass( "page-content-scroll" );
+    var pageContent = $$('.page-content-scroll');
     var pageScroll = pageContent.scrollTop;
     if (pageScroll > 44) {
         if (pageScroll > previousScrollPosition) {
