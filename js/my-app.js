@@ -43,17 +43,15 @@ $$('.page-content-scroll').on('scroll', function (e) {
         if (pageScroll >= pageContent.scrollHeight - pageContent.offsetHeight - 44) {
             //mainView.showNavbar();
             //mainView.showToolbar();
-            var count = $$("#result").children("li").length;
-            if(count >=10){$$( "#result li:nth-child(-n+5)" ).remove();}
-            alert(count);
-           
+
             $$( ".page-content" ).removeClass( "page-content-scroll" );
             $$( ".swipeout" ).removeClass( "full" );
            number_of_scrolls++;
             $$("#result img" ).remove();
            // if(number_of_scrolls >= 3) {}
             functionEmpty();
-           
+                       var count = $$("#result").children("li").length;
+            if(count >=15){$$( "#result li:nth-child(-n+5)" ).remove();
             
         }
 
