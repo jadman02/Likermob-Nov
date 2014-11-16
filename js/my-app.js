@@ -265,8 +265,8 @@ $$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', ''+ data
 var stop = Math.ceil(response.length / 5);
 
 //alert('stope:'+stop + 'position:' + position);
-if (position == (stop-1)) {alert('1 away');}
-if (position == stop) {alert('at the end');$$( ".page-content" ).removeClass( "page-content-scroll" );}
+if (position == (stop-1)) {alert('1 away');$$( ".page-content" ).removeClass( "page-content-scroll" );}
+//if (position == stop) {alert('at the end');$$( ".page-content" ).removeClass( "page-content-scroll" );}
 
 //$$('.page-content').scrollTop(294, 300);
 
@@ -2017,6 +2017,7 @@ var image = new Image();
     image.onload = function() {
 	$$('.page-content').scrollTop(294, 300);
 $$( ".page-content" ).addClass( "page-content-scroll" );
+$$("#loader-container").hide();
     }	
 	
 	
