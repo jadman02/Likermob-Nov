@@ -47,7 +47,6 @@ $$('.page-content-scroll').on('scroll', function (e) {
            
             $$( ".page-content" ).removeClass( "page-content-scroll" );
            number_of_scrolls++;
-            alert(number_of_scrolls);
             $$("#result img" ).remove();
             if(number_of_scrolls >= 3) {$$( "#result li:nth-child(-n+5)" ).remove();}
             functionEmpty();
