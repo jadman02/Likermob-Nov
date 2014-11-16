@@ -44,15 +44,14 @@ $$('.page-content-scroll').on('scroll', function (e) {
             //mainView.showNavbar();
             //mainView.showToolbar();
 
- $$("#listmarker" ).remove();
 
+ $$("#listmarker" ).remove();
             $$( ".page-content" ).removeClass( "page-content-scroll" );
             $$( ".swipeout" ).removeClass( "full" );
            number_of_scrolls++;
             var count = $$("#result").children("li").length;
             if(count >5){$$( "#result li:nth-child(-n+5)" ).remove();}
             $$("#result img" ).remove();
-            
             var start = number_of_scrolls * 5;
 		var finish = start + 5;
             functionEmpty('a',start,finish,number_of_scrolls);
@@ -264,7 +263,7 @@ $$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', ''+ data
 
 var stop = Math.ceil(response.length / 5);
 
-if (position < (stop-1)) {$$( '#result' ).append('<li id="listmarker"></li>');alert('no more');$$( ".page-content" ).removeClass( "page-content-scroll" );$$('.page-content').scrollTop(294, 300);$$("#loader-container").hide();}
+if (position < (stop-1)) {$$( '#result' ).append('<li id="listmarker" style="height:50px;background-color:red;"></li>');alert('no more');$$( ".page-content" ).removeClass( "page-content-scroll" );$$('.page-content').scrollTop(294, 300);$$("#loader-container").hide();}
 
 
 for (i = start; i < finish; i++) {        
