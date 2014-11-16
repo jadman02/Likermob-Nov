@@ -317,7 +317,7 @@ $$( '#add_container' ).append('<li class="swipeout s_'+ response[i][2] +'"><img 
 
 }
 
-$$('.page-content').scrollTop(200, 300);
+$$('.page-content').scrollTop(294, 300);
 $$("#loader-container").hide();
 $$( ".page-content" ).addClass( "page-content-scroll" );
 
