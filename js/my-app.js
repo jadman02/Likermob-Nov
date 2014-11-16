@@ -17,6 +17,10 @@ myApp.onPageBeforeInit('index', function (page) {
 
     functionEmpty();
 
+showAds();
+
+ 
+
 var previousScrollPosition = 0;
 var number_of_scrolls = 0;
 $$('.page-content-scroll').on('scroll', function (e) {
@@ -1980,4 +1984,8 @@ function clearInput(){
 
 
 
-
+ function showAds()
+  {
+    var adsElement = document.getElementById('ads');
+    _inmobi.getNewAd(adsElement);
+  }
