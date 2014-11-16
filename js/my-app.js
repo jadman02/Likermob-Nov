@@ -54,7 +54,7 @@ $$('.page-content-scroll').on('scroll', function (e) {
            if(number_of_scrolls >= 3) {}
             var start = number_of_scrolls * 5;
 		var finish = start + 5;
-            functionEmpty(,start,finish);
+            functionEmpty('a',start,finish);
             $$("#loader-container").show();
            
             
@@ -234,10 +234,10 @@ var longitude = localStorage.getItem("longitude");
 var post_id_list = [];
 var fav_id_list = [];
 
-if (typeof start === 'undefined') {start = 0;}
-if (typeof finish === 'undefined') {finish = 5;}
+if (typeof start === 'undefined') {$$("#result li").remove();start = 0;}
+if (typeof finish === 'undefined') {$$("#result li").remove();finish = 5;}
 
-if (pages_list=='a') {$$("#result li").remove();domain = "jsonp";data_send = "user_id=" + uid + "&latitude=" + latitude + "&longitude=" + longitude;}
+if (pages_list=='a') {domain = "jsonp";data_send = "user_id=" + uid + "&latitude=" + latitude + "&longitude=" + longitude;}
 
 if (pages_list=='b') {$$("#result li").remove();
 var existingEntries = JSON.parse(localStorage.getItem("allEntries"));
