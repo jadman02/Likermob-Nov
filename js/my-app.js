@@ -266,7 +266,7 @@ var stop = Math.ceil(response.length / 5);
 
 //alert('stope:'+stop + 'position:' + position);
 if (position == (stop-1)) {alert('1 away');}
-if (position == stop-1) {alert('at the end');}
+if (position == stop) {alert('at the end');}
 
 //$$('.page-content').scrollTop(294, 300);
 
