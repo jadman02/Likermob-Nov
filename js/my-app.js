@@ -265,7 +265,7 @@ $$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', ''+ data
 localStorage.setItem("total_pages", response.length);
 
 
-$$( ".page-content" ).addClass( "page-content-scroll" );
+
 
 
    
@@ -319,7 +319,7 @@ $$( '#add_container' ).append('<li class="swipeout s_'+ response[i][2] +'"><img 
 
 $$('.page-content').scrollTop($$('.full').offset().top - 44, 300);
 $$("#loader-container").hide();
-
+$$( ".page-content" ).addClass( "page-content-scroll" );
 });
 
 
