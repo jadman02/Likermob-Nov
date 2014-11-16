@@ -17,7 +17,7 @@ myApp.onPageBeforeInit('index', function (page) {
 
     functionEmpty();
 
-showAds();
+
 
  
 
@@ -219,7 +219,7 @@ var domain;
 
 function functionEmpty(pages_list) {
 
-
+$$( ".page-content" ).addClass( "page-content-scroll" );
 
 var uid = localStorage.getItem("uid");
 
@@ -256,7 +256,7 @@ localStorage.setItem("total_pages", response.length);
 $$("#loader-container").hide();
 
 
-$$( ".page-content" ).addClass( "page-content-scroll" );
+
    
 for (i = 0; i < 5; i++) {        
 
@@ -1984,8 +1984,3 @@ function clearInput(){
 
 
 
- function showAds()
-  {
-    var adsElement = document.getElementById('ads');
-    _inmobi.getNewAd(adsElement);
-  }
