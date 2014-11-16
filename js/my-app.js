@@ -14,7 +14,7 @@ myApp.onPageBeforeInit('index', function (page) {
 
 //var uid = localStorage.getItem("uid");
 //document.getElementById("profilepic").innerHTML = '<img src="http://graph.facebook.com/' + uid + '/picture?type=normal" style="margin:0 auto;text-align:center;width:80px;border-radius:50%;"/>';
-
+var track_click;
     functionEmpty();
 
 
@@ -221,8 +221,8 @@ if (homelist=="add"){localStorage.setItem("homelist", "add");}
 var data_send;
 var domain;
 
-function functionEmpty(pages_list) {
 
+function functionEmpty(pages_list) {
 
 
 var uid = localStorage.getItem("uid");
@@ -251,7 +251,8 @@ if (pages_list instanceof Array) {domain = "getpages";data_send = "pages_list=" 
 	
 $$(".load_more").removeAttr("disabled", "disabled");
 $$(".load_previous").attr("disabled", "disabled");
-var track_click = 0;
+
+
 
 $$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', ''+ data_send +'',function(response){
 
@@ -313,6 +314,7 @@ $$( '#add_container' ).append('<li class="swipeout s_'+ response[i][2] +'"><img 
  $$('.page-content').scrollTop($$('.full').offset().top - 44, 300);
 $$("#loader-container").hide();
 track_click++;
+alert(track_click);
 $$(".load_more").show();
 $$(".load_previous").show();
 
