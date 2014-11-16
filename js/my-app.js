@@ -51,7 +51,7 @@ $$('.page-content-scroll').on('scroll', function (e) {
             $$("#result img" ).remove();
             if(number_of_scrolls >= 3) {$$( "#result li:nth-child(-n+5)" ).remove();}
             functionEmpty();
-            $$('.full').scrollTop($$('.swipeout').offset().top - 44, 300);
+            $$('.page-content').scrollTop($$('.full').offset().top - 44, 300);
             
         }
 
