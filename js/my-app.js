@@ -311,10 +311,10 @@ $$( '#add_container' ).append('<li class="swipeout s_'+ response[i][2] +'"><img 
 
 }
 
- $$('.page-content').scrollTop($$('.full').offset().top - 44, 300);
+$$('.page-content').scrollTop($$('.full').offset().top - 44, 300);
 $$("#loader-container").hide();
 track_click++;
-alert(track_click);
+alert('number:' + track_click);
 $$(".load_more").show();
 $$(".load_previous").show();
 
