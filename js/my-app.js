@@ -264,7 +264,7 @@ $$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', ''+ data
 
 var stop = Math.ceil(response.length / 5);
 
-if (position == (stop-1)) {alert('no more');$$( ".page-content" ).removeClass( "page-content-scroll" );	$$('.page-content').scrollTop(294, 300);$$( '#loader-container' ).append('No More results');}
+if (position == (stop-1)) {alert('no more');$$( ".page-content" ).removeClass( "page-content-scroll" );	$$('.page-content').scrollTop(294, 300);}
 
 for (i = start; i < finish; i++) {        
 
