@@ -12,9 +12,9 @@ var $$ = Dom7;
 
 myApp.onPageBeforeInit('index', function (page) {
 
-//var uid = localStorage.getItem("uid");
-//document.getElementById("profilepic").innerHTML = '<img src="http://graph.facebook.com/' + uid + '/picture?type=normal" style="margin:0 auto;text-align:center;width:80px;border-radius:50%;"/>';
-var track_click = 0;
+var uid = localStorage.getItem("uid");
+document.getElementById("profilepic").innerHTML = '<img src="http://graph.facebook.com/' + uid + '/picture?type=normal" style="margin:0 auto;text-align:center;width:80px;border-radius:50%;"/>';
+
     functionEmpty();
 
 
@@ -51,7 +51,9 @@ $$('.page-content-scroll').on('scroll', function (e) {
             if(count >5){$$( "#result li:nth-child(-n+5)" ).remove();}
             $$("#result img" ).remove();
            // if(number_of_scrolls >= 3) {}
-            functionEmpty();
+            var start = number_of_scrolls * 5;
+	var finish = start + 5;
+            functionEmpty('a',start,finish);
             $$("#loader-container").show();
            
             
@@ -222,7 +224,7 @@ var data_send;
 var domain;
 
 
-function functionEmpty(pages_list) {
+function functionEmpty(pages_list,start,finish) {
 
 
 var uid = localStorage.getItem("uid");
@@ -231,6 +233,9 @@ var latitude = localStorage.getItem("latitude");
 var longitude = localStorage.getItem("longitude");
 var post_id_list = [];
 var fav_id_list = [];
+
+if (typeof start === 'undefined') {start = 0;}
+if (typeof finish === 'undefined') {finish = 5;}
 
 if (pages_list=='a') {$$("#result li").remove();domain = "jsonp";data_send = "user_id=" + uid + "&latitude=" + latitude + "&longitude=" + longitude;}
 
@@ -262,8 +267,9 @@ localStorage.setItem("total_pages", response.length);
 
 $$( ".page-content" ).addClass( "page-content-scroll" );
 
+
    
-for (i = 0; i < 5; i++) {        
+for (i = start; i < finish; i++) {        
 
 var str = response[i][4];
 var singlequote = str.replace(/'/g, "qqqq");
