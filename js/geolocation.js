@@ -2,18 +2,11 @@
     //
     document.addEventListener("deviceready", onDeviceReady, false);
 
-document.addEventListener("resume", onResume, false);
-
-function onResume() {
-    alert('resume app');
-}
-
     // Cordova is ready
     //
     function onDeviceReady() {
         navigator.geolocation.getCurrentPosition(onSuccess, onError);
        
-     
        
     }
 
