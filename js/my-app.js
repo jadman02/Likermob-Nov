@@ -14,7 +14,7 @@ myApp.onPageBeforeInit('index', function (page) {
 
 //var uid = localStorage.getItem("uid");
 //document.getElementById("profilepic").innerHTML = '<img src="http://graph.facebook.com/' + uid + '/picture?type=normal" style="margin:0 auto;text-align:center;width:80px;border-radius:50%;"/>';
-var track_click;
+var track_click = 0;
     functionEmpty();
 
 
@@ -313,9 +313,7 @@ $$( '#add_container' ).append('<li class="swipeout s_'+ response[i][2] +'"><img 
 
 $$('.page-content').scrollTop($$('.full').offset().top - 44, 300);
 $$("#loader-container").hide();
-alert('yo1');
 track_click++;
-alert('yo2');
 alert('number:' + track_click);
 $$(".load_more").show();
 $$(".load_previous").show();
