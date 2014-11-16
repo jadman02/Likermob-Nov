@@ -219,7 +219,7 @@ var domain;
 
 function functionEmpty(pages_list) {
 
-$$( ".page-content" ).addClass( "page-content-scroll" );
+
 
 var uid = localStorage.getItem("uid");
 
@@ -255,7 +255,7 @@ $$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', ''+ data
 localStorage.setItem("total_pages", response.length);
 $$("#loader-container").hide();
 
-
+$$( ".page-content" ).addClass( "page-content-scroll" );
 
    
 for (i = 0; i < 5; i++) {        
