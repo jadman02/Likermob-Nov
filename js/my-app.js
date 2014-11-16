@@ -281,7 +281,7 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout s_'+ response[i][
 
 
 var $target = $$('html,body'); 
-$target.animate({scrollTop: $target.height()}, 200); 
+$target.animate({scrollTop: $target.height()}, 50); 
 
 if ((post_id_list instanceof Array) && (pages_list=='b')) {
 	
