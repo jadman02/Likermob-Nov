@@ -50,8 +50,8 @@ $$('.page-content-scroll').on('scroll', function (e) {
             $$("#result img" ).remove();
            // if(number_of_scrolls >= 3) {}
             functionEmpty();
-                       var count = $$("#result").children("li").length;
-            if(count >=15){$$( "#result li:nth-child(-n+5)" ).remove();
+           var count = $$("#result").children("li").length;
+            if(count >=15){$$( "#result li:nth-child(-n+5)" ).remove();}
             
         }
 
