@@ -281,7 +281,7 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout s_'+ response[i][
 
 
        var $target = $$('.page-content-scroll'); 
-$target.animate({scrollTop: $target.height()}, 50);
+$target.animate({scrollTop: $target.height()}, 800);
 
 
 
