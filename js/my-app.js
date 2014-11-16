@@ -43,7 +43,7 @@ $$('.page-content-scroll').on('scroll', function (e) {
         if (pageScroll >= pageContent.scrollHeight - pageContent.offsetHeight - 44) {
             //mainView.showNavbar();
             //mainView.showToolbar();
-            var count = $("#result").children("li").length;
+            var count = $$("#result").children("li").length;
             alert(count);
            
             $$( ".page-content" ).removeClass( "page-content-scroll" );
