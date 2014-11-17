@@ -336,8 +336,8 @@ $$( '#add_container' ).append('<li class="swipeout s_'+ response[i][2] +'"><img 
 
 
 $$("#loader-container").hide();
-if (position < (stop-1)) {$$( ".page-content" ).addClass( "page-content-scroll" );$$('.page-content').scrollTop($$('#listmarker').offset().top - 36, 300);}
-if (position == (stop-1)) {$$( ".page-content" ).removeClass( "page-content-scroll" );$$('.page-content').scrollTop($$('#listmarker_end').offset().top - 36, 300);}
+if (position < (stop-1)) {$$( ".page-content" ).addClass( "page-content-scroll" );$$('.page-content').scrollTop($$('#listmarker').offset().top - 5, 300);}
+if (position == (stop-1)) {$$( ".page-content" ).removeClass( "page-content-scroll" );$$('.page-content').scrollTop($$('#listmarker_end').offset().top - 5, 300);}
 
 
 
