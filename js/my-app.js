@@ -279,7 +279,7 @@ var stop = Math.ceil(response.length / 5);
 
 
 
-if (position < (stop-1)) {$$( '#result' ).append('<li id="listmarker"></li>');document.getElementById("listmarker").innerHTML = 'Items: ' + last;$$( ".page-content" ).removeClass( "page-content-scroll" );}
+if (position < (stop-1)) {$$( '#result' ).append('<li id="listmarker"></li>');document.getElementById("listmarker").innerHTML = 'Items: ';$$( ".page-content" ).removeClass( "page-content-scroll" );}
 if (position == (stop-1)) {finish = last;$$( '#result' ).append('<li id="listmarker_end"></li>');$$( ".page-content" ).removeClass( "page-content-scroll" );}
 if (position > (stop-1)) {alert('no more');}
 
