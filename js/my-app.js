@@ -264,7 +264,7 @@ $$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', ''+ data
 var length = response.length / 5;
 var stop = Math.ceil(response.length / 5);
 var remainder = length.toString().split(".")[1];
-//var lastitem = (position * 5) + (remainer/2);
+var lastitem = position * 5;
 
 //var num = 12.1542;
 //alert(num % 1);
