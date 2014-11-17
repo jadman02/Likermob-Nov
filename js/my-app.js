@@ -280,7 +280,7 @@ alert(percentage);
 
    
 
-if (position < (stop-1)) {$$( '#result' ).append('<li id="listmarker"></li>');document.getElementById("listmarker").innerHTML = '<div style="height:5px;color:black;width:'+ percentage +'%"></div>';$$( ".page-content" ).removeClass( "page-content-scroll" );}
+if (position < (stop-1)) {$$( '#result' ).append('<li id="listmarker"></li>');document.getElementById("listmarker").innerHTML = '<div style="height:5px;color:black;width:10%;';$$( ".page-content" ).removeClass( "page-content-scroll" );}
 if (position == (stop-1)) {finish = last;$$( '#result' ).append('<li id="listmarker_end"></li>');$$( ".page-content" ).removeClass( "page-content-scroll" );}
 if (position > (stop-1)) {alert('no more');}
 
