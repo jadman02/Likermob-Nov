@@ -330,6 +330,7 @@ $$( '#add_container' ).append('<li class="swipeout s_'+ response[i][2] +'"><img 
 $$('.page-content').scrollTop($$('#listmarker').offset().top - 44, 300);
 $$("#loader-container").hide();
 if (position < (stop-1)) {$$( ".page-content" ).addClass( "page-content-scroll" );}
+if (position == (stop-1)) {$$( ".page-content" ).removeClass( "page-content-scroll" );}
 
 
 
