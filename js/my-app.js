@@ -273,13 +273,13 @@ var last =  response.length;
 //var length = response.length / 5;
 var stop = Math.ceil(response.length / 5);
 //var remainder = (length.toString().split(".")[1])/2;
-
+var percentage = ((stop * 5) / last)*100;
 //var num = 12.1542;
 //alert(num % 1);
 
    
 
-if (position < (stop-1)) {$$( '#result' ).append('<li id="listmarker"></li>');document.getElementById("listmarker").innerHTML = '<div class="item-input"><div class="range-slider"><input type="range" min="0" max="100" step="0.1"></div></div>';$$( ".page-content" ).removeClass( "page-content-scroll" );}
+if (position < (stop-1)) {$$( '#result' ).append('<li id="listmarker"></li>');document.getElementById("listmarker").innerHTML = '<div style="height:5px;width:'+ percentage +'%"></div>';$$( ".page-content" ).removeClass( "page-content-scroll" );}
 if (position == (stop-1)) {finish = last;$$( '#result' ).append('<li id="listmarker_end"></li>');$$( ".page-content" ).removeClass( "page-content-scroll" );}
 if (position > (stop-1)) {alert('no more');}
 
