@@ -23,6 +23,9 @@ document.getElementById("profilepic").innerHTML = '<img src="http://graph.facebo
 
 var previousScrollPosition = 0;
 var number_of_scrolls = 0;
+ 
+ if ($$('#listmarker').length){
+
 $$('.page-content-scroll').on('scroll', function (e) {
 
 // var result_list = $$("#result").children("li").length; 
@@ -43,6 +46,7 @@ $$('.page-content-scroll').on('scroll', function (e) {
         if (pageScroll >= pageContent.scrollHeight - pageContent.offsetHeight - 44) {
             //mainView.showNavbar();
             //mainView.showToolbar();
+
 
 
  $$("#listmarker" ).remove();
@@ -71,6 +75,10 @@ $$('.page-content-scroll').on('scroll', function (e) {
         if (scrollDiff > 20) previousScrollPosition = pageScroll;
     }
 });
+
+    }
+
+
 
 
 });	
@@ -272,7 +280,7 @@ var stop = Math.ceil(response.length / 5);
 
 
 if (position < (stop-1)) {$$( '#result' ).append('<li id="listmarker"></li>');$$( ".page-content" ).removeClass( "page-content-scroll" );}
-if (position == (stop-1)) {finish = last;$$( '#result' ).append('<li id="listmarker"></li>');$$( ".page-content" ).removeClass( "page-content-scroll" );}
+if (position == (stop-1)) {finish = last;$$( '#result' ).append('<li id="listmarker_end"></li>');$$( ".page-content" ).removeClass( "page-content-scroll" );}
 
 
 
@@ -327,10 +335,10 @@ $$( '#add_container' ).append('<li class="swipeout s_'+ response[i][2] +'"><img 
 
 }
 
-$$('.page-content').scrollTop($$('#listmarker').offset().top - 44, 300);
+
 $$("#loader-container").hide();
-if (position < (stop-1)) {$$( ".page-content" ).addClass( "page-content-scroll" );}
-if (position == (stop-1)) {$$( ".page-content" ).removeClass( "page-content-scroll" );}
+if (position < (stop-1)) {$$( ".page-content" ).addClass( "page-content-scroll" );$$('.page-content').scrollTop($$('#listmarker').offset().top - 44, 300);}
+if (position == (stop-1)) {$$( ".page-content" ).removeClass( "page-content-scroll" );$$('.page-content').scrollTop($$('#listmarker_end').offset().top - 44, 300);}
 
 
 
