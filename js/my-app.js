@@ -273,7 +273,7 @@ var last =  response.length;
 //var length = response.length / 5;
 var stop = Math.ceil(response.length / 5);
 //var remainder = (length.toString().split(".")[1])/2;
-var percentage = ((stop * 5) / last)*100;
+var percentage = ((position * 5) / last)*100;
 alert(percentage);
 //var num = 12.1542;
 //alert(num % 1);
