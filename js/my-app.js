@@ -263,18 +263,15 @@ $$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', ''+ data
 
 var length = response.length / 5;
 var stop = Math.ceil(response.length / 5);
-var remainder = length.toString().split(".")[1];
+var remainder = (length.toString().split(".")[1])/2;
+var lastitem = (position * 5) + remainer;
 //var num = 12.1542;
 //alert(num % 1);
 
 
 
 if (position < (stop-1)) {$$( '#result' ).append('<li id="listmarker"></li>');$$( ".page-content" ).removeClass( "page-content-scroll" );}
-if ((position == (stop-1)) && remainder == 2) {finish = 1;$$( '#result' ).append('<li id="listmarker" style="height:50px;background-color:red;"></li>');$$( ".page-content" ).removeClass( "page-content-scroll" );$$("#loader-container").hide();$$('.page-content').scrollTop($$('#listmarker').offset().top - 44, 300);}
-if ((position == (stop-1)) && remainder == 4) {finish = 2;$$( '#result' ).append('<li id="listmarker" style="height:50px;background-color:red;"></li>');$$( ".page-content" ).removeClass( "page-content-scroll" );$$("#loader-container").hide();$$('.page-content').scrollTop(294, 300);}
-if ((position == (stop-1)) && remainder == 6) {finish = 3;$$( '#result' ).append('<li id="listmarker" style="height:50px;background-color:red;"></li>');$$( ".page-content" ).removeClass( "page-content-scroll" );$$("#loader-container").hide();$$('.page-content').scrollTop($$('#listmarker').offset().top - 44, 300);}
-if ((position == (stop-1)) && remainder == 8) {finish = 4;$$( '#result' ).append('<li id="listmarker" style="height:50px;background-color:red;"></li>');$$( ".page-content" ).removeClass( "page-content-scroll" );$$("#loader-container").hide();$$('.page-content').scrollTop($$('#listmarker').offset().top - 44, 300);}
-if ((position == (stop-1)) && remainder == 0) {finish = 5;$$( '#result' ).append('<li id="listmarker" style="height:50px;background-color:red;"></li>');$$( ".page-content" ).removeClass( "page-content-scroll" );$$("#loader-container").hide();$$('.page-content').scrollTop($$('#listmarker').offset().top - 44, 300);}
+if ((position == (stop-1)) && remainder == 2) {finish = lastitem;$$( '#result' ).append('<li id="listmarker" style="height:50px;background-color:red;"></li>');$$( ".page-content" ).removeClass( "page-content-scroll" );$$("#loader-container").hide();$$('.page-content').scrollTop($$('#listmarker').offset().top - 44, 300);}
 
 
 
@@ -329,7 +326,7 @@ $$( '#add_container' ).append('<li class="swipeout s_'+ response[i][2] +'"><img 
 
 }
 
-//if ((position == (stop-1)) {alert('on the last page');}
+//if ((position == (stop-1)) && remainder == 2) {finish = lastitem;$$( '#result' ).append('<li id="listmarker" style="height:50px;background-color:red;"></li>');$$( ".page-content" ).removeClass( "page-content-scroll" );$$("#loader-container").hide();$$('.page-content').scrollTop($$('#listmarker').offset().top - 44, 300);}
 
 $$('.page-content').scrollTop($$('#listmarker').offset().top - 44, 300);
 $$( ".page-content" ).addClass( "page-content-scroll" );
