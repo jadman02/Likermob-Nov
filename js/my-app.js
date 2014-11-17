@@ -269,6 +269,7 @@ $$(".load_previous").attr("disabled", "disabled");
 $$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', ''+ data_send +'',function(response){
 
 var last =  response.length;
+document.getElementById("amount").innerHTML = 'Items: ' + last;
 //var length = response.length / 5;
 var stop = Math.ceil(response.length / 5);
 //var remainder = (length.toString().split(".")[1])/2;
