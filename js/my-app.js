@@ -261,12 +261,12 @@ $$(".load_previous").attr("disabled", "disabled");
 
 $$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', ''+ data_send +'',function(response){
 
-//var length = response.length / 5;
-//var remainer = length % 1;
+var length = response.length / 5;
+var remainer = (length % 1);
 var stop = Math.ceil(response.length / 5);
 
-var num = 12.1542;
-alert(num % 1);
+//var num = 12.1542;
+//alert(num % 1);
 
 alert(remainder);
 
