@@ -24,7 +24,7 @@ document.getElementById("profilepic").innerHTML = '<img src="http://graph.facebo
 var previousScrollPosition = 0;
 var number_of_scrolls = 0;
  
- if(document.getElementById("listmarker") !== null)
+ if(document.getElementById("listmarker") !== null){
 
 $$('.page-content-scroll').on('scroll', function (e) {
 
