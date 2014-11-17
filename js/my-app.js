@@ -272,7 +272,7 @@ var stop = Math.ceil(response.length / 5);
 
 
 if (position < (stop-1)) {$$( '#result' ).append('<li id="listmarker"></li>');$$( ".page-content" ).removeClass( "page-content-scroll" );}
-if (position == (stop-1)) {finish = last;$$( '#result' ).append('<li id="listmarker" style="height:50px;background-color:red;"></li>');$$( ".page-content" ).removeClass( "page-content-scroll" );$$("#loader-container").hide();$$('.page-content').scrollTop($$('#listmarker').offset().top - 44, 300);}
+if (position == (stop-1)) {finish = last;$$( '#result' ).append('<li id="listmarker"></li>');$$( ".page-content" ).removeClass( "page-content-scroll" );}
 
 
 
@@ -327,11 +327,13 @@ $$( '#add_container' ).append('<li class="swipeout s_'+ response[i][2] +'"><img 
 
 }
 
-//if ((position == (stop-1)) && remainder == 2) {finish = lastitem;$$( '#result' ).append('<li id="listmarker" style="height:50px;background-color:red;"></li>');$$( ".page-content" ).removeClass( "page-content-scroll" );$$("#loader-container").hide();$$('.page-content').scrollTop($$('#listmarker').offset().top - 44, 300);}
-
 $$('.page-content').scrollTop($$('#listmarker').offset().top - 44, 300);
-$$( ".page-content" ).addClass( "page-content-scroll" );
 $$("#loader-container").hide();
+if (position < (stop-1)) {$$( ".page-content" ).addClass( "page-content-scroll" );}
+
+
+
+
 
 
 
