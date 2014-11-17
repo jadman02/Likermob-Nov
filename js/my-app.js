@@ -23,9 +23,7 @@ document.getElementById("profilepic").innerHTML = '<img src="http://graph.facebo
 
 var previousScrollPosition = 0;
 var number_of_scrolls = 0;
-  var $myDiv = $$('#listmarker');
 
-    if ( $myDiv.length){
 
 $$('.page-content-scroll').on('scroll', function (e) {
 
@@ -77,7 +75,7 @@ $$('.page-content-scroll').on('scroll', function (e) {
     }
 });
 
-    }
+
 
 
 
