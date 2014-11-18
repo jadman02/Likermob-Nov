@@ -159,7 +159,7 @@ ptrContent.on('refresh', function (e) {
 $$("#result li").remove();
 $$("#loader-container").show();
     functionEmpty('a',0,5,1);
-
+number_of_scrolls = 0;
         // When loading done, we need to reset it
         myApp.pullToRefreshDone();
  //   }, 500);
