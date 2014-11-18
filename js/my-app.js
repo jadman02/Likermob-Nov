@@ -175,7 +175,7 @@ var mainView = myApp.addView('.view-main', {
 
 var register = localStorage.getItem('register');
 if (register) {
-alert('register localstorage');
+//alert('register localstorage');
 if(latitude) {mainView.loadPage('index.html');}
 else{mainView.loadPage('location.html');}
 	
@@ -232,7 +232,7 @@ var domain;
 
 function functionEmpty(pages_list,start,finish,position) {
 
-alert('pages_list: ' + pages_list + 'start: ' +start + 'finish: ' +finish + 'position: ' + position);
+//alert('pages_list: ' + pages_list + 'start: ' +start + 'finish: ' +finish + 'position: ' + position);
 
 var uid = localStorage.getItem("uid");
 localStorage.setItem("position", position);
