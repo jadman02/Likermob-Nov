@@ -280,8 +280,8 @@ var minuspercentage = 100-percentage;
 
    
 
-if (position < (stop-1)) {$$( '#result' ).append('<li id="listmarker" style="width:100%"><div style="height:5px;background-color:#333;float:left;width:'+ percentage +'%;"><div style="height:5px;background-color:#333;float:left;width:'+ minuspercentage +'%;"></div></li>');$$( ".page-content" ).removeClass( "page-content-scroll" );}
-if (position == (stop-1)) {finish = last;$$( '#result' ).append('<li id="listmarker_end"></li>');$$( ".page-content" ).removeClass( "page-content-scroll" );}
+if (position < (stop-1)) {$$( '#result' ).append('<li id="listmarker" style="width:100%"><div style="height:5px;background-color:#333;float:left;width:'+ percentage +'%;"></div><div style="height:5px;background-color:#ccc;float:left;width:'+ minuspercentage +'%;"></div></li>');$$( ".page-content" ).removeClass( "page-content-scroll" );}
+if (position == (stop-1)) {finish = last;$$( '#result' ).append('<li id="listmarker_end" style="width:100%"><div style="height:5px;background-color:#333;float:left;width:100%;"></div></li></li>');$$( ".page-content" ).removeClass( "page-content-scroll" );}
 if (position > (stop-1)) {alert('no more');}
 
 
