@@ -274,13 +274,13 @@ var last =  response.length;
 var stop = Math.ceil(response.length / 5);
 //var remainder = (length.toString().split(".")[1])/2;
 var percentage = ((position * 5) / last)*100;
-alert(percentage);
+var minuspercentage = 100-percentage;
 //var num = 12.1542;
 //alert(num % 1);
 
    
 
-if (position < (stop-1)) {$$( '#result' ).append('<li id="listmarker" class="badge" style="background-color:#ccc;text-align:center;margin:0 auto;background-color:#ccc;width:'+ percentage +'%;">'+ start +'-'+ finish +'</li>');$$( ".page-content" ).removeClass( "page-content-scroll" );}
+if (position < (stop-1)) {$$( '#result' ).append('<li id="listmarker" style="width:100%"><div style="height:5px;background-color:#333;float:left;width:'+ percentage +'%;"><div style="height:5px;background-color:#333;float:left;width:'+ minuspercentage +'%;"></div></li>');$$( ".page-content" ).removeClass( "page-content-scroll" );}
 if (position == (stop-1)) {finish = last;$$( '#result' ).append('<li id="listmarker_end"></li>');$$( ".page-content" ).removeClass( "page-content-scroll" );}
 if (position > (stop-1)) {alert('no more');}
 
@@ -2027,6 +2027,4 @@ function clearInput(){
 	$$('#resultfclear').hide();
 	$$('#dbnamesclear').hide();
 }
-
-
 
