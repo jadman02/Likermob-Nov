@@ -34,11 +34,6 @@ var number_of_scrolls = localStorage.getItem("position");
     var pageContent = this;
     var pageScroll = pageContent.scrollTop;
     
-    if (pageScroll > 400) {
-        if (pageScroll > previousScrollPosition) {
-            //mainView.hideNavbar();
-            $$( "#result li:nth-child(-n+1)" ).remove();
-        }}
     if (pageScroll > 44) {
         if (pageScroll > previousScrollPosition) {
             //mainView.hideNavbar();
@@ -69,7 +64,7 @@ var number_of_scrolls = localStorage.getItem("position");
 		var finish = start + 5;
             functionEmpty('a',start,finish,number_of_scrolls);
             $$("#loader-container").show();
-           
+           $$( "#result li:nth-child(-n+5)" ).remove();
             
         }
 
