@@ -281,8 +281,8 @@ var minuspercentage = 100-percentage;
    
 
 if (position < (stop-1)) {$$( '#result' ).append('<li id="listmarker"></li>');$$( '#loaded' ).css( 'width', percentage+'%' );$$( '#notloaded' ).css( 'width', minuspercentage+'%' );$$( ".page-content" ).removeClass( "page-content-scroll" );}
-if (position == (stop-1)) {finish = last;$$( '#result' ).append('<li id="listmarker_end" style="width:100%"><div style="height:5px;background-color:#333;float:left;width:100%;"></div></li></li>');$$( ".page-content" ).removeClass( "page-content-scroll" );}
-if (position > (stop-1)) {alert('no more');}
+if (position == (stop-1)) {finish = last;$$( '#result' ).append('<li id="listmarker"></li>');$$( '#loaded' ).css( 'width', percentage+'%' );$$( '#notloaded' ).css( 'width', minuspercentage+'%' );$$( ".page-content" ).removeClass( "page-content-scroll" );}
+if (position > (stop-1)) {$$( '#result' ).append('<li id="listmarker">No More Results</li>');$$( '#loaded' ).css( 'width', '100%' );$$( '#notloaded' ).css( 'width', '0%' );$$("#loader-container").hide();return false;}
 
 
 for (i = start; i < finish; i++) {        
