@@ -33,6 +33,12 @@ $$('.page-content-scroll').on('scroll', function (e) {
 var number_of_scrolls = localStorage.getItem("position");
     var pageContent = this;
     var pageScroll = pageContent.scrollTop;
+    
+    if (pageScroll > 400) {
+        if (pageScroll > previousScrollPosition) {
+            //mainView.hideNavbar();
+            $$( "#result li:nth-child(-n+1)" ).remove();
+        }}
     if (pageScroll > 44) {
         if (pageScroll > previousScrollPosition) {
             //mainView.hideNavbar();
@@ -42,7 +48,7 @@ var number_of_scrolls = localStorage.getItem("position");
             mainView.showNavbar();
         }
 
-        if (pageScroll >= pageContent.scrollHeight - pageContent.offsetHeight - 440) {
+        if (pageScroll >= pageContent.scrollHeight - pageContent.offsetHeight - 44) {
             //mainView.showNavbar();
             //mainView.showToolbar();
 
@@ -57,7 +63,7 @@ var number_of_scrolls = localStorage.getItem("position");
             //var count = $$("#result").children("li").length;
            // if(count >5){$$( "#result li:nth-child(-n+5)" ).remove();}
            // $$("#result img" ).remove();
-            $$( "#result li:nth-child(-n+5)" ).remove();
+           // $$( "#result li:nth-child(-n+5)" ).remove();
            // $$("#result li" ).remove();
             var start = number_of_scrolls * 5;
 		var finish = start + 5;
