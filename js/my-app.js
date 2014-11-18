@@ -51,12 +51,13 @@ var number_of_scrolls = localStorage.getItem("position");
  $$("#listmarker" ).remove();
             $$( ".page-content" ).removeClass( "page-content-scroll" );
            
-            $$( ".item-subtitle" ).removeClass( "hide" );
-            $$( ".swipeout" ).removeClass( "full" );
+           // $$( ".item-subtitle" ).removeClass( "hide" );
+           // $$( ".swipeout" ).removeClass( "full" );
            number_of_scrolls++;
-            var count = $$("#result").children("li").length;
-            if(count >5){$$( "#result li:nth-child(-n+5)" ).remove();}
-            $$("#result img" ).remove();
+            //var count = $$("#result").children("li").length;
+           // if(count >5){$$( "#result li:nth-child(-n+5)" ).remove();}
+           // $$("#result img" ).remove();
+            $$("#result li" ).remove();
             var start = number_of_scrolls * 5;
 		var finish = start + 5;
             functionEmpty('a',start,finish,number_of_scrolls);
