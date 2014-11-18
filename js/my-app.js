@@ -58,8 +58,8 @@ var number_of_scrolls = localStorage.getItem("position");
            // if(count >5){$$( "#result li:nth-child(-n+5)" ).remove();}
            // $$("#result img" ).remove();
             $$("#result li" ).remove();
-            var start = number_of_scrolls * 5;
-		var finish = start + 5;
+            var start = number_of_scrolls * 7;
+		var finish = start + 7;
             functionEmpty('a',start,finish,number_of_scrolls);
             $$("#loader-container").show();
            
