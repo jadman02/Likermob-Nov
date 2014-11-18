@@ -15,14 +15,13 @@ myApp.onPageBeforeInit('index', function (page) {
 var uid = localStorage.getItem("uid");
 document.getElementById("profilepic").innerHTML = '<img src="http://graph.facebook.com/' + uid + '/picture?type=normal" style="margin:0 auto;text-align:center;width:80px;border-radius:50%;"/>';
 
-    functionEmpty();
+    functionEmpty('a',0,5,1);
 
 
 
  
 
 var previousScrollPosition = 0;
-var number_of_scrolls = 0;
 
 
 $$('.page-content-scroll').on('scroll', function (e) {
@@ -31,6 +30,7 @@ $$('.page-content-scroll').on('scroll', function (e) {
  //alert(result_list);
 //if (result_list >10) {}
 
+var number_of_scrolls = localStorage.getItem("position");
     var pageContent = this;
     var pageScroll = pageContent.scrollTop;
     if (pageScroll > 44) {
@@ -159,7 +159,6 @@ ptrContent.on('refresh', function (e) {
 $$("#result li").remove();
 $$("#loader-container").show();
     functionEmpty('a',0,5,1);
-number_of_scrolls = 0;
         // When loading done, we need to reset it
         myApp.pullToRefreshDone();
  //   }, 500);
@@ -236,6 +235,9 @@ function functionEmpty(pages_list,start,finish,position) {
 alert('pages_list: ' + pages_list + 'start: ' +start + 'finish: ' +finish + 'position: ' + position);
 
 var uid = localStorage.getItem("uid");
+localStorage.setItem("position", position);
+
+
 
 var latitude = localStorage.getItem("latitude");
 var longitude = localStorage.getItem("longitude");
