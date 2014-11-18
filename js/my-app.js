@@ -58,8 +58,8 @@ var number_of_scrolls = localStorage.getItem("position");
            // if(count >5){$$( "#result li:nth-child(-n+5)" ).remove();}
            // $$("#result img" ).remove();
             $$("#result li" ).remove();
-            var start = number_of_scrolls * 10;
-		var finish = start + 10;
+            var start = number_of_scrolls * 7;
+		var finish = start + 7;
             functionEmpty('a',start,finish,number_of_scrolls);
             $$("#loader-container").show();
            
@@ -248,7 +248,7 @@ var post_id_list = [];
 var fav_id_list = [];
 
 if (typeof start === 'undefined') {$$("#result li").remove();start = 0;}
-if (typeof finish === 'undefined') {$$("#result li").remove();finish = 5;}
+if (typeof finish === 'undefined') {$$("#result li").remove();finish = 7;}
 
 if (pages_list=='a') {domain = "jsonp";data_send = "user_id=" + uid + "&latitude=" + latitude + "&longitude=" + longitude;}
 
@@ -277,9 +277,9 @@ $$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', ''+ data
 var last =  response.length;
 
 //var length = response.length / 5;
-var stop = Math.ceil(response.length / 10);
+var stop = Math.ceil(response.length / 7);
 //var remainder = (length.toString().split(".")[1])/2;
-var percentage = ((position * 10) / last)*100;
+var percentage = ((position * 7) / last)*100;
 var minuspercentage = 100-percentage;
 //var num = 12.1542;
 //alert(num % 1);
