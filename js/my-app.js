@@ -17,8 +17,8 @@ document.getElementById("profilepic").innerHTML = '<img src="http://graph.facebo
 
     functionEmpty('a',0,10,1);
 
-var pagecontent = $$(window).height() - 64;
-$$( '.page-content' ).css( 'height', pagecontent + 'px' );
+//var pagecontent = $$(window).height() - 64;
+//$$( '.page-content' ).css( 'height', pagecontent + 'px' );
 
 var previousScrollPosition = 0;
 
