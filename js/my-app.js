@@ -258,7 +258,7 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 }
 
 
-$$( '.swipeout' ).css( 'height', '100px' );
+$$( '.swipeout' ).css( 'height', '25%' );
 
 
 
