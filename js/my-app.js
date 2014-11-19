@@ -18,9 +18,10 @@ document.getElementById("profilepic").innerHTML = '<img src="http://graph.facebo
     functionEmpty('a',0,10,1);
 
 var pagecontent = $$(window).height() - 120;
-//var phoneheight = $$(window).height();
+var phoneheight = $$(window).height();
 $$( '#result' ).css( 'height', pagecontent + 'px' );
-//$$( '.page-content' ).css( 'height', phoneheight + 'px' );
+$$( '.page-content' ).css( 'height', phoneheight + 'px' );
+$$( '.page-content' ).css( 'overflow', 'hidden' );
 
 
 
