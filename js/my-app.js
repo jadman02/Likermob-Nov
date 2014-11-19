@@ -20,64 +20,7 @@ document.getElementById("profilepic").innerHTML = '<img src="http://graph.facebo
 //var pagecontent = $$(window).height() - 64;
 //$$( '.page-content' ).css( 'height', pagecontent + 'px' );
 
-var previousScrollPosition = 0;
 
-
-$$('.page-content-scroll').on('scroll', function (e) {
-
-// var result_list = $$("#result").children("li").length; 
- //alert(result_list);
-//if (result_list >10) {}
-
-var number_of_scrolls = localStorage.getItem("position");
-    var pageContent = this;
-    var pageScroll = pageContent.scrollTop;
-    
-    if (pageScroll > 44) {
-        if (pageScroll > previousScrollPosition) {
-            //mainView.hideNavbar();
-            
-        }
-        else {
-            mainView.showNavbar();
-        }
-
-        if (pageScroll >= pageContent.scrollHeight - pageContent.offsetHeight - 44) {
-            //mainView.showNavbar();
-            //mainView.showToolbar();
-
-
-
- $$("#listmarker" ).remove();
-            $$( ".page-content" ).removeClass( "page-content-scroll" );
-           
-           // $$( ".item-subtitle" ).removeClass( "hide" );
-           // $$( ".swipeout" ).removeClass( "full" );
-           number_of_scrolls++;
-            //var count = $$("#result").children("li").length;
-           // if(count >5){$$( "#result li:nth-child(-n+5)" ).remove();}
-           // $$("#result img" ).remove();
-           // $$( "#result li:nth-child(-n+5)" ).remove();
-           // $$("#result li" ).remove();
-            var start = number_of_scrolls * 5;
-		var finish = start + 5;
-            functionEmpty('a',start,finish,number_of_scrolls);
-            $$("#loader-container").show();
-           
-            
-        }
-
-    }
-    else {
-        //mainView.showNavbar();
-        //mainView.showToolbar();
-    }
-    var scrollDiff = Math.abs(previousScrollPosition - pageScroll);
-    if (previousScrollPosition > pageScroll) previousScrollPosition = pageScroll;
-    else {
-        if (scrollDiff > 20) previousScrollPosition = pageScroll;
-    }
-});
 
 
 
