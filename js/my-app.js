@@ -17,7 +17,7 @@ document.getElementById("profilepic").innerHTML = '<img src="http://graph.facebo
 
     functionEmpty('a',0,10,1);
 
-var pagecontent = $$(window).height() - 96;
+var pagecontent = $$(window).height() - 50;
 $$( '#result' ).css( 'height', pagecontent + 'px' );
 
 
