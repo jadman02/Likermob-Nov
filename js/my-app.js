@@ -107,7 +107,7 @@ ptrContent.on('refresh', function (e) {
   //  setTimeout(function () {
 $$("#result li").remove();
 $$("#loader-container").show();
-    functionEmpty('a',0,5,1);
+    functionEmpty('a',0,3,1);
         // When loading done, we need to reset it
         myApp.pullToRefreshDone();
  //   }, 500);
