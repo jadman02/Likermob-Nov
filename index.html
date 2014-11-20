@@ -140,7 +140,7 @@
       <!-- Your main view, should have "view-main" class -->
       <div class="view view-main">
         <!-- Top Navbar-->
-        <div class="navbar">
+        <div class="navbar" style="height:90px;">
           <div class="navbar-inner">
             <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
 
@@ -194,7 +194,41 @@
   
         </div>
        
-       <div style="width:100%;border-bottom:1px solid transparent;position:absolute;margin-top:42px;"><div id="loaded" style="height:2px;background-color:#007aff;float:left;width:0%;"></div><div id="notloaded" style="height:2px;background-color:transparent;float:left;width:100%;"></div></div>
+       <div style="width:100%;border-bottom:1px solid transparent;position:absolute;margin-top:41px;">
+       
+        <div class="toolbar tabbar tabbar-labels" style="height:36px;background-color:transparent;border:0;padding-top:30px;">
+    <div class="toolbar-inner">
+        <a href="#tab1" class="tab-link" onclick="functionEmpty('a')" style="color:#3b5998;">
+            <i class="icon pe-7s-home pe-lg button"></i>
+            
+        </a>
+        <a href="#tab2" class="tab-link" onclick="functionEmpty('b')" style="margin-left:5px;">
+            <i class="icon pe-7s-like2 pe-lg button"></i>
+
+            
+            
+        </a>
+      
+      
+     
+              <a href="#tab5" class="tab-link">
+<span class="badge" style="background-color:#3b5998;margin-top:8px;">15</span>
+        </a>
+        <a href="#tab3" class="tab-link" onclick="functionEmpty('c')" style="margin-right:5px;">
+            <i class="icon pe-7s-star pe-lg button"></i>
+
+        </a>
+        <a href="#tab4" class="tab-link">
+            <i class="icon pe-7s-diskette pe-lg button"></i>
+
+        </a>
+
+    </div>
+    
+    
+</div>
+       
+       <div id="loaded" style="height:2px;background-color:#007aff;float:left;width:0%;"></div><div id="notloaded" style="height:2px;background-color:#ccc;float:left;width:100%;"></div></div>
 
         </div>
 
@@ -255,7 +289,7 @@
 
                 
 
-<ul id="result" style="overflow:hidden;"></ul></div>
+<ul id="result" style="overflow:hidden;margin-top:-36px;"></ul></div>
 <div style="text-align:center;margin:0 auto;width:100%;color:#ff8000" id="loader-container">
         <span class="preloader" style="width:31px; height:31px"></span>
         LOADING
@@ -286,63 +320,28 @@
 
       
        
-            <div class="toolbar tabbar tabbar-labels" style="height:36px;padding-top:30px;">
+            <div class="toolbar tabbar tabbar-labels" style="height:36px;background-color:transparent;border:0;margin-top:20px;">
+    <div class="toolbar-inner" >
     
-    <div class="list-block" style="border-top:1px solid #ccc;background-color:transparent;width:100%;position:absolute;margin-top:-65px;padding-left:10px;padding-right:10px;border-radius:5px;">
-  <ul style="height:36px;border:0;">
+    	<div class="list-block">
+  <ul>
     <!-- Text inputs -->
     <li>
       <div class="item-content">
-        <div class="item-media"><div id="commentpic"></div></div>
-        <div class="item-inner" style="border-bottom:0;">
+        <div class="item-media"><i class="icon icon-form-name"></i></div>
+        <div class="item-inner">
           <div class="item-input">
-            <input type="text" placeholder="Comment on Facebook">
+            <input type="text" placeholder="Your name">
           </div>
         </div>
       </div>
     </li>
     </ul>
     </div>
-    
-    <div class="toolbar-inner" style"border-top: 1px solid #ccc;">
-        
-        
-        
-        
-        
-        <a href="#tab1" class="tab-link" onclick="functionEmpty('a')" style="color:#3b5998;">
-            <i class="icon pe-7s-home pe-lg button" style="padding-top:2px;"></i>
-            
-        </a>
-
-        
-        <a href="#tab2" class="tab-link" onclick="functionEmpty('b')" style="margin-left:5px;">
-            <i class="icon pe-7s-like2 pe-lg button" style="padding-top:2px;"></i>
-
-            
-            
-        </a>
-      
-      
-     
-              <a href="#tab5" class="tab-link">
-<span class="badge" style="background-color:#3b5998;margin-top:4px;">15</span>
-        </a>
-        <a href="#tab3" class="tab-link" onclick="functionEmpty('c')" style="margin-right:5px;">
-            <i class="icon pe-7s-star pe-lg button" style="padding-top:2px;"></i>
-
-        </a>
-        <a href="#tab4" class="tab-link">
-            <i class="icon pe-7s-diskette pe-lg button" style="padding-top:2px;"></i>
-
-        </a>
-
-    
-
-
+    	
+    	
     </div>
-  
-</div>
+    </div>
 
 
     
