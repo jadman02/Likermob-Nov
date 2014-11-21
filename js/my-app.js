@@ -289,10 +289,11 @@ if (position < (stop-1)) {$$( ".page-content" ).addClass( "page-content-scroll" 
 if (position == (stop-1)) {$$( ".page-content" ).removeClass( "page-content-scroll" );$$('.page-content').scrollTop($$('#listmarker_end').offset().top-44, 300);$$( '#loaded' ).css( 'width', percentage+'%' );$$( '#notloaded' ).css( 'width', minuspercentage+'%' );}
 
 var swipeoutheight = $$('.s_' + response[0][2]).height();
-$$( '.swipeout' ).css( 'height',  swipeoutheight + 'px' );
+alert(swipeoutheight)
+$$( '.swipeout' ).css( 'height',  '800px' );
 
 //var pagecontent = $$(window).height() - 90;
-$$( '#result' ).css( 'height', swipeoutheight + 'px' );
+$$( '#result' ).css( 'height',  '800px' );
 //$$( '#result' ).css( 'margin-bottom', '41px' );
 
 //$$('.page-content').scrollTop($$('#listmarker').offset().top-44, 300);
