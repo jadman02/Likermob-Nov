@@ -260,7 +260,7 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 
 //var swipeoutheight = $$('s_' + response[0][2]).height();
 alert('s_' + response[0][2]);
-$$( '.swipeout' ).css( 'height',  '400px' );
+$$( '.swipeout' ).css( 'height',  '800px' );
 
 
 
