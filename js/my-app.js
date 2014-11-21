@@ -15,11 +15,9 @@ myApp.onPageBeforeInit('index', function (page) {
 var uid = localStorage.getItem("uid");
 document.getElementById("profilepic").innerHTML = '<img src="http://graph.facebook.com/' + uid + '/picture?type=normal" style="margin:0 auto;text-align:center;width:80px;border-radius:50%;"/>';
 document.getElementById("commentpic").innerHTML = '<img src="http://graph.facebook.com/' + uid + '/picture?type=small" style="margin:0 auto;text-align:center;width:80px;height:30px;width:30px;"/>';
-    functionEmpty('a',0,10,1);
+    functionEmpty('a',0,3,1);
 
-var pagecontent = $$(window).height() - 90;
-$$( '#result' ).css( 'height', pagecontent + 'px' );
-$$( '#result' ).css( 'margin-bottom', '41px' );
+
 
 
 
@@ -258,10 +256,6 @@ if (type == 'comment') {$$( '#result' ).append('<li class="swipeout s_'+ respons
 if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ response[i][2] +'" style="border-right:3px solid #ff8000;border-left:3px solid #3b5998;margin-top:5px;margin-bottom:5px;"><img onclick="popUp(\''+ response[i][3]  +'\',\''+ singlequote  +'\',\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" src="http://smilesavers.net.au/images/compressed/'+response[i][1]+'_'+response[i][21]+'.jpg" style="width:100%;"/><div class="swipeout-content"><div class="item-content" style="margin-top:-50px;"><div class="item-inner" style="border-bottom:0;"><div class="item-title-row"><div class="item-title"></div><div class="item-after"><span class="badge" style="margin-right:2px;background-color:#3b5998;height:20px;">'+ response[i][17] + '</span><span class="badge" style="background-color:#ff8000;height:20px;">'+ response[i][18] + '</span><br/><a href="#" style="clear:both;" class="button button-fill" onclick="getBusiness(\''+ response[i][1]  +'\');"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=5&height=5" style="border-radius:50%;height:20px;width:20px;padding-top:5px;float:left;"/> <span style="float:left;margin-left:5px;">'+response[i][16]+'</span></a></div></div></div></div><a href="#" id="getDeal"  onclick="popUp(\''+ response[i][3]  +'\',\''+ singlequote  +'\',\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" class="item-content"><div class="item-inner" style="border-bottom:0;"><div class="item-title-row" style="clear:both;"><div class="item-title"  style="color:#333;">'+ response[i][3] + '</div><div class="item-after"><span class="badge" style="display:none;margin-right:2px;background-color:#3b5998;height:25px;">'+ response[i][17] + '</span><span class="badge" style="display:none;background-color:#ff8000;height:25px;">'+ response[i][18] + '</span></div></div><div class="item-subtitle hide">by '+response[i][16]+'</div></div></a><div class="content-block"><div class="content-block-inner">Here comes another text block additionaly wrapped with "content-block-inner". Praesent nec imperdiet diam. Maecenas vel lectus porttitor, consectetur magna nec, viverra sem. Aliquam sed risus dolor. Morbi tincidunt ut libero id sodales. Integer blandit varius nisi quis consectetur. </div></div></div><div class="swipeout-actions-left"><a href="#" class="bg-green swipeout-delete swipeout-overswipe" style="background-color:#3b5998;" onclick="likeButton(\''+ response[i][2]  +'\',\''+ response[i][6]  +'\')"><i class="pe-7s-like2 pe-2x"></i></a></div><div class="swipeout-actions-right"><a href="#" onclick="closeButton(\''+ response[i][2]  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a></div></li>');}
 }
 
-//var swipeoutheight = $$('s_' + response[0][2]).height();
-alert('s_' + response[0][2]);
-$$( '.swipeout' ).css( 'height',  '800px' );
-
 
 
 
@@ -294,6 +288,12 @@ $$("#loader-container").hide();
 if (position < (stop-1)) {$$( ".page-content" ).addClass( "page-content-scroll" );$$( "#result li:nth-child(-n+5)" ).remove();$$( '#loaded' ).css( 'width', percentage+'%' );$$( '#notloaded' ).css( 'width', minuspercentage+'%' );}
 if (position == (stop-1)) {$$( ".page-content" ).removeClass( "page-content-scroll" );$$('.page-content').scrollTop($$('#listmarker_end').offset().top-44, 300);$$( '#loaded' ).css( 'width', percentage+'%' );$$( '#notloaded' ).css( 'width', minuspercentage+'%' );}
 
+var swipeoutheight = $$('.s_' + response[0][2]).height();
+$$( '.swipeout' ).css( 'height',  swipeoutheight + 'px' );
+
+//var pagecontent = $$(window).height() - 90;
+$$( '#result' ).css( 'height', swipeoutheight + 'px' );
+//$$( '#result' ).css( 'margin-bottom', '41px' );
 
 //$$('.page-content').scrollTop($$('#listmarker').offset().top-44, 300);
 
