@@ -289,7 +289,7 @@ if (position < (stop-1)) {$$( ".page-content" ).addClass( "page-content-scroll" 
 if (position == (stop-1)) {$$( ".page-content" ).removeClass( "page-content-scroll" );$$('.page-content').scrollTop($$('#listmarker_end').offset().top-44, 300);$$( '#loaded' ).css( 'width', percentage+'%' );$$( '#notloaded' ).css( 'width', minuspercentage+'%' );}
 
 var swipeoutheight = $$('.swipeout:first').height();
-alert(swipeoutheight)
+alert(swipeoutheight);
 $$( '.swipeout' ).css( 'height',  '800px' );
 
 //var pagecontent = $$(window).height() - 90;
