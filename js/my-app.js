@@ -15,7 +15,7 @@ myApp.onPageBeforeInit('index', function (page) {
 var uid = localStorage.getItem("uid");
 document.getElementById("profilepic").innerHTML = '<img src="http://graph.facebook.com/' + uid + '/picture?type=normal" style="margin:0 auto;text-align:center;width:80px;border-radius:50%;"/>';
 document.getElementById("commentpic").innerHTML = '<img src="http://graph.facebook.com/' + uid + '/picture?type=small" style="margin:0 auto;text-align:center;width:80px;height:30px;width:30px;"/>';
-    functionEmpty('a',0,3,1);
+    functionEmpty('a',0,10,1);
 
 
 
@@ -288,7 +288,7 @@ $$("#loader-container").hide();
 if (position < (stop-1)) {$$( ".page-content" ).addClass( "page-content-scroll" );$$( "#result li:nth-child(-n+5)" ).remove();$$( '#loaded' ).css( 'width', percentage+'%' );$$( '#notloaded' ).css( 'width', minuspercentage+'%' );}
 if (position == (stop-1)) {$$( ".page-content" ).removeClass( "page-content-scroll" );$$('.page-content').scrollTop($$('#listmarker_end').offset().top-44, 300);$$( '#loaded' ).css( 'width', percentage+'%' );$$( '#notloaded' ).css( 'width', minuspercentage+'%' );}
 
-var swipeoutheight = $$('.s_' + response[0][2]).height();
+var swipeoutheight = $$('.swipeout:first').height();
 alert(swipeoutheight)
 $$( '.swipeout' ).css( 'height',  '800px' );
 
