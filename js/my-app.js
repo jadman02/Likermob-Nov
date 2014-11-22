@@ -288,7 +288,7 @@ $$("#loader-container").hide();
 if (position < (stop-1)) {$$( ".page-content" ).addClass( "page-content-scroll" );$$( "#result li:nth-child(-n+5)" ).remove();$$( '#loaded' ).css( 'width', percentage+'%' );$$( '#notloaded' ).css( 'width', minuspercentage+'%' );}
 if (position == (stop-1)) {$$( ".page-content" ).removeClass( "page-content-scroll" );$$('.page-content').scrollTop($$('#listmarker_end').offset().top-44, 300);$$( '#loaded' ).css( 'width', percentage+'%' );$$( '#notloaded' ).css( 'width', minuspercentage+'%' );}
 
-var swipeoutheight = $$('.swipeout:first').height();
+var swipeoutheight = $$(window).height();
 alert(swipeoutheight);
 $$( '.swipeout' ).css( 'height',  '800px' );
 
