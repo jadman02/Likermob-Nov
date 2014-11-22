@@ -291,7 +291,7 @@ var swipeoutheight = $$(window).height() - 100;
 //$$( '.swipeout' ).css( 'height',  swipeoutheight + 'px' );
 
 //var pagecontent = $$(window).height() - 90;
-$$( '#result' ).css( 'height',  swipeoutheight + 'px' );
+//$$( '#result' ).css( 'height',  swipeoutheight + 'px' );
 //$$( '#result' ).css( 'margin-bottom', '41px' );
 
 //$$('.page-content').scrollTop($$('#listmarker').offset().top-44, 300);
