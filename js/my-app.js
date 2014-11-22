@@ -14,7 +14,7 @@ myApp.onPageBeforeInit('index', function (page) {
 
 var uid = localStorage.getItem("uid");
 document.getElementById("profilepic").innerHTML = '<img src="http://graph.facebook.com/' + uid + '/picture?type=normal" style="margin:0 auto;text-align:center;width:80px;border-radius:50%;"/>';
-    functionEmpty('a',0,10,1);
+    functionEmpty('a',0,3,1);
 
 
 
@@ -191,7 +191,7 @@ var post_id_list = [];
 var fav_id_list = [];
 
 if (typeof start === 'undefined') {$$("#result li").remove();start = 0;}
-if (typeof finish === 'undefined') {$$("#result li").remove();finish = 7;}
+if (typeof finish === 'undefined') {$$("#result li").remove();finish = 3;}
 
 if (pages_list=='a') {domain = "jsonp";data_send = "user_id=" + uid + "&latitude=" + latitude + "&longitude=" + longitude;}
 
@@ -220,9 +220,9 @@ $$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', ''+ data
 var last =  response.length;
 
 //var length = response.length / 5;
-var stop = Math.ceil(response.length / 5);
+var stop = Math.ceil(response.length / 3);
 //var remainder = (length.toString().split(".")[1])/2;
-var percentage = ((position * 5) / last)*100;
+var percentage = ((position * 3) / last)*100;
 var minuspercentage = 100-percentage;
 //var num = 12.1542;
 //alert(num % 1);
