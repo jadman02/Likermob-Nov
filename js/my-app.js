@@ -191,7 +191,7 @@ var post_id_list = [];
 var fav_id_list = [];
 
 if (typeof start === 'undefined') {$$("#result li").remove();start = 0;}
-if (typeof finish === 'undefined') {$$("#result li").remove();finish = 3;}
+if (typeof finish === 'undefined') {$$("#result li").remove();finish = 2;}
 
 if (pages_list=='a') {domain = "jsonp";data_send = "user_id=" + uid + "&latitude=" + latitude + "&longitude=" + longitude;}
 
@@ -285,7 +285,7 @@ $$( '#add_container' ).append('<li class="swipeout s_'+ response[i][2] +'"><img 
 $$("#loader-container").hide();
 //if ((position < (stop-1)) && (position > 0)) {$$( ".page-content" ).addClass( "page-content-scroll" );$$( '#loaded' ).css( 'width', percentage+'%' );$$( '#notloaded' ).css( 'width', minuspercentage+'%' );}
 //if (position == (stop-1)) {$$( ".page-content" ).removeClass( "page-content-scroll" );$$('.page-content').scrollTop($$('#listmarker_end').offset().top-44, 300);$$( '#loaded' ).css( 'width', percentage+'%' );$$( '#notloaded' ).css( 'width', minuspercentage+'%' );}
-if (position == last) {$$( '#result' ).append('<li id="listmarker">No More Results</li>');$$( '#loaded' ).css( 'width', '100%' );$$( '#notloaded' ).css( 'width', '0%' );$$("#loader-container").hide();return false;}
+//if (position == last) {$$( '#result' ).append('<li id="listmarker">No More Results</li>');$$( '#loaded' ).css( 'width', '100%' );$$( '#notloaded' ).css( 'width', '0%' );$$("#loader-container").hide();return false;}
 
 var swipeoutheight = $$(window).height() - 95;
 var imagedivheight = $$(window).height() - 130;
