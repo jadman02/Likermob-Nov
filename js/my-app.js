@@ -587,7 +587,7 @@ $$.getJSON('http://www.smilesavers.net.au/dislike.php?callback=?','user_id=' + u
 }
 
 function getList(){
-alert('yes');
+
 var position = localStorage.getItem("position");
 position++;
 var start; 
