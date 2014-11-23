@@ -564,6 +564,7 @@ document.getElementById("longitude_box").value = response.result.geometry.locati
 
 
 function likeButton(post_id,expiry) {
+getList();
 like(post_id);
 addEntry(post_id,expiry);
 var uid = localStorage.getItem("uid");
@@ -575,7 +576,7 @@ $$.getJSON('http://www.smilesavers.net.au/like.php?callback=?','user_id=' + uid 
 
 
 function closeButton(post_id){
-	
+getList();	
 var uid = localStorage.getItem("uid");
 $$.getJSON('http://www.smilesavers.net.au/dislike.php?callback=?','user_id=' + uid + '&post_id=' + post_id + '&type=dislike',function(res){
     
@@ -585,8 +586,16 @@ $$.getJSON('http://www.smilesavers.net.au/dislike.php?callback=?','user_id=' + u
 	
 }
 
+function getList(){
+var position = localStorage.getItem("position");
+position++;
+var start; 
+var finish;
 
-
+if (position == 1) {start = 3; finish = 4;}
+else {start = position + 2; finish = start + 2;}
+functionEmpty('a',start,finish,position);
+}
 
 function addEntry(post_id,expiry) {
 	var timestamp = new Date(expiry).getTime() / 1000;
