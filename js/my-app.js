@@ -104,7 +104,7 @@ ptrContent.on('refresh', function (e) {
   //  setTimeout(function () {
 $$("#result li").remove();
 $$("#loader-container").show();
-    functionEmpty('a',0,3,0);
+    functionEmpty('a',0,2,0);
         // When loading done, we need to reset it
         myApp.pullToRefreshDone();
  //   }, 500);
@@ -178,7 +178,7 @@ var domain;
 
 function functionEmpty(pages_list,start,finish,position) {
 
-//alert('pages_list: ' + pages_list + 'start: ' +start + 'finish: ' +finish + 'position: ' + position);
+alert('pages_list: ' + pages_list + 'start: ' +start + 'finish: ' +finish + 'position: ' + position);
 
 var uid = localStorage.getItem("uid");
 localStorage.setItem("position", position);
