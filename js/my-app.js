@@ -228,7 +228,7 @@ var minuspercentage = 100-percentage;
 
    
 
-//if (position <= last) {$$( '#result' ).append('<li id="listmarker"></li>');$$( ".page-content" ).removeClass( "page-content-scroll" );}
+//if (position <= last) {$$( ".page-content" ).removeClass( "page-content-scroll" );}
 //if (position == (stop-1)) {finish = last;$$( '#result' ).append('<li id="listmarker_end"></li>');$$( ".page-content" ).removeClass( "page-content-scroll" );}
 
 
@@ -283,9 +283,12 @@ $$( '#add_container' ).append('<li class="swipeout s_'+ response[i][2] +'"><img 
 
 
 $$("#loader-container").hide();
-//if ((position < (stop-1)) && (position > 0)) {$$( ".page-content" ).addClass( "page-content-scroll" );$$( '#loaded' ).css( 'width', percentage+'%' );$$( '#notloaded' ).css( 'width', minuspercentage+'%' );}
+//if ((position < (stop-1)) && (position > 0)) {$$( ".page-content" ).addClass( "page-content-scroll" );}
 //if (position == (stop-1)) {$$( ".page-content" ).removeClass( "page-content-scroll" );$$('.page-content').scrollTop($$('#listmarker_end').offset().top-44, 300);$$( '#loaded' ).css( 'width', percentage+'%' );$$( '#notloaded' ).css( 'width', minuspercentage+'%' );}
-//if (position == last) {$$( '#result' ).append('<li id="listmarker">No More Results</li>');$$( '#loaded' ).css( 'width', '100%' );$$( '#notloaded' ).css( 'width', '0%' );$$("#loader-container").hide();return false;}
+if (position == last) {alert(position + last); }
+if (position<last) {$$( '#loaded' ).css( 'width', percentage+'%' );$$( '#notloaded' ).css( 'width', minuspercentage+'%' );}
+
+//$$( '#result' ).append('<li id="listmarker">No More Results</li>');$$( '#loaded' ).css( 'width', '100%' );$$( '#notloaded' ).css( 'width', '0%' );$$("#loader-container").hide();return false;
 
 var swipeoutheight = $$(window).height() - 95;
 var imagedivheight = $$(window).height() - 130;
