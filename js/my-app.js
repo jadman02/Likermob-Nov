@@ -14,7 +14,7 @@ myApp.onPageBeforeInit('index', function (page) {
 
 var uid = localStorage.getItem("uid");
 document.getElementById("profilepic").innerHTML = '<img src="http://graph.facebook.com/' + uid + '/picture?type=normal" style="margin:0 auto;text-align:center;width:80px;border-radius:50%;"/>';
-    functionEmpty('a',0,3,0);
+    functionEmpty('a',0,2,0);
 
 
 
@@ -220,9 +220,9 @@ $$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', ''+ data
 var last =  response.length;
 
 //var length = response.length / 5;
-var stop = Math.ceil(response.length / 3);
+var stop = Math.ceil(response.length / 2);
 //var remainder = (length.toString().split(".")[1])/2;
-var percentage = ((position * 3) / last)*100;
+var percentage = ((position * 2) / last)*100;
 var minuspercentage = 100-percentage;
 //var num = 12.1542;
 //alert(num % 1);
@@ -593,8 +593,8 @@ position++;
 var start; 
 var finish;
 
-if (position == 1) {start = 3; finish = 4;}
-else {start = position + 2; finish = start + 2;}
+if (position == 1) {start = 2; finish = 3;}
+else {start = position + 1; finish = start + 1;}
 functionEmpty('a',start,finish,position);
 }
 
