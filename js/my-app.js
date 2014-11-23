@@ -220,7 +220,7 @@ $$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', ''+ data
 var last =  response.length;
 
 //var length = response.length / 5;
-var stop = Math.ceil(response.length / 2);
+var stop = Math.ceil(response.length - 1);
 //var remainder = (length.toString().split(".")[1])/2;
 var percentage = ((position * 2) / last)*100;
 var minuspercentage = 100-percentage;
