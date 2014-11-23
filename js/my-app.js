@@ -589,14 +589,15 @@ $$.getJSON('http://www.smilesavers.net.au/dislike.php?callback=?','user_id=' + u
 
 function getList(){
 
-var position = localStorage.getItem("position");
+//var position = localStorage.getItem("position");
 position++;
-var start; 
-var finish;
+functionEmpty('a',0,1,0);
+//var start; 
+//var finish;
 
-if (position == 1) {start = 2; finish = 3;}
-else {start = position + 1; finish = start + 1;}
-functionEmpty('a',start,finish,position);
+//if (position == 1) {start = 2; finish = 3;}
+//else {start = position + 1; finish = start + 1;}
+//functionEmpty('a',start,finish,position);
 }
 
 function addEntry(post_id,expiry) {
