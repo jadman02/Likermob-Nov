@@ -218,10 +218,10 @@ $$(".load_previous").attr("disabled", "disabled");
 $$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', ''+ data_send +'',function(response){
 
 var last =  response.length;
-
+alert(last);
 //var length = response.length / 5;
 //var remainder = (length.toString().split(".")[1])/2;
-var percentage = ((position * 2) / last)*100;
+var percentage = ((position + 1) / last)*100;
 var minuspercentage = 100-percentage;
 //var num = 12.1542;
 //alert(num % 1);
