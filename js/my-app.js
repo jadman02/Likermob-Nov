@@ -292,7 +292,7 @@ var imagedivheight = $$(window).height() - 130;
 //$$( '.swipeout' ).css( 'height',  swipeoutheight + 'px' );
 
 //var pagecontent = $$(window).height() - 90;
-$$( '#result' ).css( 'height',  swipeoutheight + 'px' );
+//$$( '#result' ).css( 'height',  swipeoutheight + 'px' );
 $$( '.imagediv' ).css( 'height',  imagedivheight + 'px' );
 $$( '.imagediv' ).css( 'overflow',  'hidden' );
 //$$( '#result' ).css( 'margin-bottom', '41px' );
