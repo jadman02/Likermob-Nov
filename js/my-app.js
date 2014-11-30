@@ -565,6 +565,7 @@ document.getElementById("longitude_box").value = response.result.geometry.locati
 
 
 function likeButton(post_id,expiry) {
+alert('like button');
 getList();
 like(post_id);
 addEntry(post_id,expiry);
@@ -577,6 +578,7 @@ $$.getJSON('http://www.smilesavers.net.au/like.php?callback=?','user_id=' + uid 
 
 
 function closeButton(post_id){
+alert('disliek button');
 getList();	
 var uid = localStorage.getItem("uid");
 $$.getJSON('http://www.smilesavers.net.au/dislike.php?callback=?','user_id=' + uid + '&post_id=' + post_id + '&type=dislike',function(res){
