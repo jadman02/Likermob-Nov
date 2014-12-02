@@ -255,12 +255,12 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 '<img onclick="popUp(\''+ response[i][3]  +'\',\''+ singlequote  +'\',\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" src="http://smilesavers.net.au/images/compressed/'+response[i][1]+'_'+response[i][21]+'.jpg" style="width:100%;"/>'+
 '</div>'+
 '<div class="swipeout-content">'+
-'<div class="item-content" style="margin-top:-50px;">'+
+'<div class="item-content">'+
 '<div class="item-inner" style="border-bottom:0;">'+
 '<div class="item-title-row">'+
 '<div class="item-title"></div>'+
 '<div class="item-after">'+
-'<span class="badge" style="margin-right:2px;background-color:#3b5998;height:20px;">'+ response[i][17] + '</span><span class="badge" style="background-color:#ff8000;height:20px;">'+ response[i][18] + '</span><br/><a href="#" style="clear:both;" class="button button-fill" onclick="getBusiness(\''+ response[i][1]  +'\');"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=5&height=5" style="border-radius:50%;height:20px;width:20px;padding-top:5px;float:left;"/><span style="float:left;margin-left:5px;">'+response[i][16]+'</span></a>'+
+'<a href="#" style="clear:both;" class="button button-fill" onclick="getBusiness(\''+ response[i][1]  +'\');"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=5&height=5" style="border-radius:50%;height:20px;width:20px;padding-top:5px;float:left;"/><span style="float:left;margin-left:5px;">'+response[i][16]+'</span></a>'+
 '</div>'+
 '</div></div></div>'+
 '<a href="#" id="getDeal"  onclick="popUp(\''+ response[i][3]  +'\',\''+ singlequote  +'\',\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" class="item-content" style="margin-top:-50px;">'+
