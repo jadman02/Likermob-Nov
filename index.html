@@ -229,10 +229,7 @@
 <div id="buttons"></div>
 
 <ul id="add_container" style="border:none;"></ul>
-<a href="#" class="button" onclick="openSearchHome()">Search</a>
 
-
-<a href="#" class="button" onclick="openStripe()">Purchase</a>
 
 
 
@@ -679,35 +676,7 @@ function getMyPages(){
       <script type="text/javascript">
             app.initialize1();
         </script>
-        <script src="https://checkout.stripe.com/checkout.js"></script>
 
-<script>
-  var handler = StripeCheckout.configure({
-    key: 'pk_test_SlHSaf1IHRTUDWENH6xdunK9',
-    image: '/square-image.png',
-    token: function(token) {
-      // Use the token to create the charge with a server-side script.
-      // You can access the token ID with `token.id`
-    }
-  });
-
- function openStripe(){
- 	
- 	 // Open Checkout with further options
-    handler.open({
-      name: 'Demo Sitesss',
-      description: '2 widgets ($20.00)',
-      amount: 2000
-    });
-    e.preventDefault();
- }
-
-  // Close Checkout on page navigation
-  $$(window).on('popstate', function() {
-    handler.close();
-  });
-</script>
-        
         
   </body>
 </html> 
