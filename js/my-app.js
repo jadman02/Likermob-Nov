@@ -596,14 +596,14 @@ var position = localStorage.getItem("position");
 
  position++;
 
-functionEmpty('a',0,2,0);
+//functionEmpty('a',0,2,0);
 
-//var start; 
-//var finish;
+var start; 
+var finish;
 
-//if (position == 1) {start = 2; finish = 3;}
-//else {start = position + 1; finish = start + 1;}
-//functionEmpty('a',start,finish,position);
+if (position == 1) {start = 2; finish = 3;}
+else {start = position + 1; finish = start + 1;}
+functionEmpty('a',start,finish,position);
 
  }
 
