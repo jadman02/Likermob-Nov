@@ -231,16 +231,35 @@
 <ul id="add_container" style="border:none;"></ul>
 <a href="#" class="button" onclick="openSearchHome()">Search</a>
 
-<form action="" method="POST">
-  <script
-    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-    data-key="pk_test_SlHSaf1IHRTUDWENH6xdunK9"
-    data-amount="2000"
-    data-name="Demo Site"
-    data-description="2 widgets ($20.00)"
-    data-image="/128x128.png">
-  </script>
-</form>
+<script src="https://checkout.stripe.com/checkout.js"></script>
+
+<a href="#" class="button" id="customButton">Purchase</a>
+
+<script>
+  var handler = StripeCheckout.configure({
+    key: 'pk_test_SlHSaf1IHRTUDWENH6xdunK9',
+    image: '/square-image.png',
+    token: function(token) {
+      // Use the token to create the charge with a server-side script.
+      // You can access the token ID with `token.id`
+    }
+  });
+
+  $$('#customButton').on('click', function(e) {
+    // Open Checkout with further options
+    handler.open({
+      name: 'Demo Site',
+      description: '2 widgets ($20.00)',
+      amount: 2000
+    });
+    e.preventDefault();
+  });
+
+  // Close Checkout on page navigation
+  $$(window).on('popstate', function() {
+    handler.close();
+  });
+</script>
 
 <ul id="result" style="overflow:hidden;"></ul></div>
 <div style="text-align:center;margin:0 auto;width:100%;color:#ff8000" id="loader-container">
