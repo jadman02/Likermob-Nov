@@ -595,12 +595,15 @@ $$.getJSON('http://www.smilesavers.net.au/dislike.php?callback=?','user_id=' + u
 var position = localStorage.getItem("position");
 
  position++;
-var start; 
-var finish;
 
-if (position == 1) {start = 2; finish = 3;}
-else {start = position + 1; finish = start + 1;}
-functionEmpty('a',start,finish,position);
+functionEmpty('a',0,2,0);
+
+//var start; 
+//var finish;
+
+//if (position == 1) {start = 2; finish = 3;}
+//else {start = position + 1; finish = start + 1;}
+//functionEmpty('a',start,finish,position);
 
  }
 
