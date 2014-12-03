@@ -325,7 +325,7 @@ var swipeoutheight = $$(window).height() - 95;
 $$( '.imagediv img' ).css( 'height',  swipeoutheight + 'px' );
 //$$( '#result' ).css( 'margin-bottom', '41px' );
 
-var imagewidth = ($$('.imagediv').width() / 2) * (-1);
+var imagewidth = ($$('.imagediv img').width() / 2) * (-1);
         alert(imagewidth);
 
 
