@@ -318,6 +318,8 @@ if (position<last) {$$( '#loaded' ).css( 'width', percentage+'%' );$$( '#notload
 //$$( '#result' ).append('<li id="listmarker">No More Results</li>');$$( '#loaded' ).css( 'width', '100%' );$$( '#notloaded' ).css( 'width', '0%' );$$("#loader-container").hide();return false;
 
 var swipeoutheight = $$(window).height() - 95;
+var imagewidth = $$('.imagediv img').width();
+alert(imagewidth);
 //$$( '.swipeout' ).css( 'height',  swipeoutheight + 'px' );
 
 //var pagecontent = $$(window).height() - 90;
