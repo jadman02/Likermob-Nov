@@ -628,9 +628,10 @@ var position = localStorage.getItem("position");
  position++;
 
 functionEmpty('a',0,1,position);
-var imagewidth = ($$('.imagediv img').width() / 2) * (-1);
-alert(imagewidth);
-            $$( '.imagediv img' ).css( 'padding-left', imagewidth + 'px' );
+var imagewidth = $$('.imagediv img').width();
+var screenwidth = $$(window).width();
+var leftover = ((screenwidth - imagewidth) / 2)*(-1);
+$$( '.imagediv img' ).css( 'margin-left', imagewidth + 'px' );
 //var start; 
 //var finish;
 
