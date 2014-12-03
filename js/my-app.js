@@ -631,7 +631,7 @@ functionEmpty('a',0,1,position);
 var imagewidth = $$('.imagediv img').width();
 var screenwidth = $$(window).width();
 var leftover = ((screenwidth - imagewidth) / 2)*(-1);
-$$( '.imagediv img' ).css( 'margin-left', imagewidth + 'px' );
+$$( '.imagediv img' ).css( 'margin-left', leftover + 'px' );
 //var start; 
 //var finish;
 
