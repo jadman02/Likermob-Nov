@@ -328,8 +328,8 @@ $$( '.imagediv img' ).css( 'height',  swipeoutheight + 'px' );
 var tmpImg = new Image() ;
     tmpImg.src = $('.imagediv img').attr('src') ;
     tmpImg.onload = function() {
-        var imagewidth = ($$('.imagediv img').width() / 2) * (-1);
-        $$( '.imagediv img' ).css( 'margin-left',  imagewidth + 'px' );
+        alert('image loaded');
+
     } ;
 
 
