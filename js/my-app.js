@@ -325,7 +325,7 @@ alert(imagewidth);
 //var pagecontent = $$(window).height() - 90;
 //$$( '#result' ).css( 'height',  swipeoutheight + 'px' );
 $$( '.imagediv img' ).css( 'height',  swipeoutheight + 'px' );
-$$( '.imagediv' ).css( 'margin-left',  '-50%' );
+$$( '.imagediv' ).css( 'margin-left',  '-25%' );
 //$$( '#result' ).css( 'margin-bottom', '41px' );
 
 //$$('.page-content').scrollTop($$('#listmarker').offset().top-44, 300);
