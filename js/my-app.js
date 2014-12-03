@@ -325,6 +325,15 @@ var swipeoutheight = $$(window).height() - 95;
 $$( '.imagediv img' ).css( 'height',  swipeoutheight + 'px' );
 //$$( '#result' ).css( 'margin-bottom', '41px' );
 
+var tmpImg = new Image() ;
+    tmpImg.src = $('.imagediv img').attr('src') ;
+    tmpImg.onload = function() {
+        var imagewidth = ($$('.imagediv img').width() / 2) * (-1);
+        $$( '.imagediv img' ).css( 'margin-left',  imagewidth + 'px' );
+    } ;
+
+
+
 //$$('.page-content').scrollTop($$('#listmarker').offset().top-44, 300);
 
 
