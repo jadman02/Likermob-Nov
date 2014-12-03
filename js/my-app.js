@@ -629,7 +629,8 @@ var position = localStorage.getItem("position");
 
 functionEmpty('a',0,1,position);
 var imagewidth = ($$('.imagediv img').width() / 2) * (-1);
-        alert(imagewidth);
+alert(imagewidth);
+            $$( '.imagediv img' ).css( 'margin-left', imagewidth + 'px' );
 //var start; 
 //var finish;
 
