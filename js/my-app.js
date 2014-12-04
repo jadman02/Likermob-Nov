@@ -20,16 +20,7 @@ document.getElementById("profilepic").innerHTML = '<img src="http://graph.facebo
 
 
 
-var myPhotoBrowserStandalone = myApp.photoBrowser({
-    photos : [
-        'http://lorempixel.com/1024/1024/sports/1/',
-        'http://lorempixel.com/1024/1024/sports/2/',
-        'http://lorempixel.com/1024/1024/sports/3/',
-    ]
-});
-//Open photo browser on click
 
-    myPhotoBrowserStandalone.open();
 
 
 
@@ -2040,3 +2031,14 @@ function clearInput(){
 }
 
 
+function openBrowser(){
+	
+	var myPhotoBrowserStandalone = myApp.photoBrowser({
+    photos : [
+        'http://lorempixel.com/1024/1024/sports/1/',
+    ]
+});
+//Open photo browser on click
+
+    myPhotoBrowserStandalone.open();
+}
