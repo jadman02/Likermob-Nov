@@ -255,14 +255,7 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 '<img onclick="popUp(\''+ response[i][3]  +'\',\''+ singlequote  +'\',\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" src="http://smilesavers.net.au/images/compressed/'+response[i][1]+'_'+response[i][21]+'.jpg"/>'+
 '</div>'+
 '<div class="swipeout-content">'+
-'<div class="item-content">'+
-'<div class="item-inner" style="border-bottom:0;">'+
-'<div class="item-title-row">'+
-'<div class="item-title"></div>'+
-'<div class="item-after">'+
 '<a href="#" style="clear:both;" class="button" onclick="getBusiness(\''+ response[i][1]  +'\');"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=15&height=15" style="border-radius:50%;height:20px;width:20px;padding-top:5px;float:left;"/></a>'+
-'</div>'+
-'</div></div></div>'+
 '<a href="#" id="getDeal"  onclick="popUp(\''+ response[i][3]  +'\',\''+ singlequote  +'\',\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" class="item-content" style="margin-top:-50px;">'+
 '<div class="item-inner" style="border-bottom:0;">'+
 '<div class="item-title-row" style="clear:both;">'+
