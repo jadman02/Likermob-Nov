@@ -20,11 +20,17 @@ document.getElementById("profilepic").innerHTML = '<img src="http://graph.facebo
 
 
 
-	var myPhotoBrowser = app.photoBrowser({
-    zoom: 400,
-    photos: ['http://smilesavers.net.au/images/cover.png','http://smilesavers.net.au/images/cover.png']
-});   
-myPhotoBrowser.open(); // open photo browser
+var myPhotoBrowserStandalone = myApp.photoBrowser({
+    photos : [
+        'http://lorempixel.com/1024/1024/sports/1/',
+        'http://lorempixel.com/1024/1024/sports/2/',
+        'http://lorempixel.com/1024/1024/sports/3/',
+    ]
+});
+//Open photo browser on click
+
+    myPhotoBrowserStandalone.open();
+
 
 
 
