@@ -2032,15 +2032,47 @@ function clearInput(){
 function openBrowser(){
 	
 	var myPhotoBrowserStandalone = myApp.photoBrowser({
-    navbarTemplate:'<div class="navbar"><div class="navbar-inner"><div class="left sliding"><a href="#" class="link close-popup photo-browser-close-link"><i class="icon icon-back"></i><span>Closezzz</span></a></div><div class="center sliding"><span class="photo-browser-current"></span> <span class="photo-browser-of">of</span> <span class="photo-browser-total"></span></div><div class="right"></div></div></div>',
-    lazyLoading:true,
+    navbarTemplate:'<div class="navbar"><div class="navbar-inner"><div class="left sliding"><a href="#" class="link close-popup photo-browser-close-link"><i class="icon icon-back"></i><span>Closezzz</span></a></div><div class="center sliding"><span class="photo-browser-current"></span> <span class="photo-browser-of">of</span> <span class="photo-browser-total"></span></div><div class="right" onclick="modalModal()">modal</div></div></div>',
+    lazyLoadingInPrevNext:true,
     photos : [
         'http://lorempixel.com/1024/1024/sports/1/',
                 'http://lorempixel.com/1024/1024/sports/2/',
         'http://lorempixel.com/1024/1024/sports/3/',
+        'http://lorempixel.com/1024/1024/sports/4/',
+                'http://lorempixel.com/1024/1024/sports/5/',
+        'http://lorempixel.com/1024/1024/sports/6/',
     ]
 });
 //Open photo browser on click
 
     myPhotoBrowserStandalone.open();
+}
+
+function modalModal(){
+	myApp.modal({
+    title:  'Modal with 3 buttons',
+    text: 'Vivamus feugiat diam velit. Maecenas aliquet egestas lacus, eget pretium massa mattis non. Donec volutpat euismod nisl in posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae',
+    buttons: [
+      {
+        text: 'B1',
+        onClick: function() {
+          myApp.alert('You clicked first button!')
+        }
+      },
+      {
+        text: 'B2',
+        onClick: function() {
+          myApp.alert('You clicked second button!')
+        }
+      },
+      {
+        text: 'B3',
+        bold: true,
+        onClick: function() {
+          myApp.alert('You clicked third button!')
+        }
+      },
+    ]
+  })
+	
 }
