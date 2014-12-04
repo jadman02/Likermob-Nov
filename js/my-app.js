@@ -2032,6 +2032,7 @@ function clearInput(){
 function openBrowser(){
 	
 	var myPhotoBrowserStandalone = myApp.photoBrowser({
+    navbarTemplate:'<div class="navbar"><div class="navbar-inner"><div class="left sliding"><a href="#" class="link close-popup photo-browser-close-link"><i class="icon icon-back"></i><span>Closezzz</span></a></div><div class="center sliding"><span class="photo-browser-current"></span> <span class="photo-browser-of">of</span> <span class="photo-browser-total"></span></div><div class="right"></div></div></div>',
     photos : [
         'http://lorempixel.com/1024/1024/sports/1/',
     ]
