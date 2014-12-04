@@ -230,8 +230,6 @@ var minuspercentage = 100-percentage;
 
 //if (position <= last) {$$( ".page-content" ).removeClass( "page-content-scroll" );}
 //if (position == (stop-1)) {finish = last;$$( '#result' ).append('<li id="listmarker_end"></li>');$$( ".page-content" ).removeClass( "page-content-scroll" );}
-$$( '#result' ).append('<img src="http://smilesavers.net.au/images/compressed/'+response[i][1]+'_'+response[i][21]+'.jpg"/> style="z-index:999999999999;"');
-
 for (i = start; i < finish; i++) {        
 
 var str = response[i][4];
