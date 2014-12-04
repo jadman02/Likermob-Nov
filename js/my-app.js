@@ -2048,9 +2048,10 @@ function openBrowser(){
         url: 'http://lorempixel.com/1024/1024/sports/3/',
         caption: 'jdklajdklsajdklasjssjdsioa'
     },
-    // This one will be also without caption
-    url: 'http://lorempixel.com/1024/1024/sports/4/',
-        caption: 'urywqiueyuwieq'
+ {
+        url: 'http://lorempixel.com/1024/1024/sports/4/',
+        caption: 'fsdsasa'
+    },
 ]
 });
 //Open photo browser on click
