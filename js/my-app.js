@@ -2034,25 +2034,20 @@ function openBrowser(){
 	var myPhotoBrowserStandalone = myApp.photoBrowser({
     navbarTemplate:'<div class="navbar"><div class="navbar-inner"><div class="left sliding"><a href="#" class="link close-popup photo-browser-close-link"><i class="icon icon-back"></i><span>Closezzz</span></a></div><div class="center sliding"><span class="photo-browser-current"></span> <span class="photo-browser-of">of</span> <span class="photo-browser-total"></span></div><div class="right" onclick="modalModal()">modal</div></div></div>',
     lazyLoadingInPrevNext:true,
-   var photos = [
-    {
-        url: 'http://lorempixel.com/1024/1024/sports/1/',
-        caption: 'Get a Free Drink'
-    },
-    {
-        url: 'http://lorempixel.com/1024/1024/sports/2/',
-        caption: 'Get a New Jumper...Get a New Jumper...Get a New Jumper...FeeeGet a New Jumper...Get a New Jumper...HHHHHHGet a New Jumper...Get a New Jumper...ZZZZZ'
-    },
-    // This one will be without caption
-    {
-        url: 'http://lorempixel.com/1024/1024/sports/3/',
-        caption: 'jdklajdklsajdklasjssjdsioa'
-    },
- {
-        url: 'http://lorempixel.com/1024/1024/sports/4/',
-        caption: 'fsdsasa'
-    },
-]
+photos : [
+        {
+            url: 'http://lorempixel.com/1024/1024/sports/1/',
+            caption: 'Caption 1 Text'
+        },
+        {
+            url: 'http://lorempixel.com/1024/1024/sports/2/',
+            caption: 'Second Caption Text'
+        },
+        // This one without caption
+        {
+            url: 'http://lorempixel.com/1024/1024/sports/3/',
+        },
+    ],
 });
 //Open photo browser on click
 
