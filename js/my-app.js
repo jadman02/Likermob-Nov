@@ -2033,7 +2033,7 @@ function openBrowser(){
 	
 	var myPhotoBrowser = app.photoBrowser({
     zoom: 400,
-    photos: ['http://smilesavers.net.au/images/cover.png']
+    photos: ['http://smilesavers.net.au/images/cover.png','http://smilesavers.net.au/images/cover.png']
 });   
 myPhotoBrowser.open(); // open photo browser
 }
