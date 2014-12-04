@@ -20,7 +20,11 @@ document.getElementById("profilepic").innerHTML = '<img src="http://graph.facebo
 
 
 
-
+	var myPhotoBrowser = app.photoBrowser({
+    zoom: 400,
+    photos: ['http://smilesavers.net.au/images/cover.png','http://smilesavers.net.au/images/cover.png']
+});   
+myPhotoBrowser.open(); // open photo browser
 
 
 
@@ -2029,11 +2033,4 @@ function clearInput(){
 	$$('#dbnamesclear').hide();
 }
 
-function openBrowser(){
-	alert('photo browser');
-	var myPhotoBrowser = app.photoBrowser({
-    zoom: 400,
-    photos: ['http://smilesavers.net.au/images/cover.png','http://smilesavers.net.au/images/cover.png']
-});   
-myPhotoBrowser.open(); // open photo browser
-}
+
