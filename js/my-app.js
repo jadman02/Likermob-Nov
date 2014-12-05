@@ -2049,6 +2049,7 @@ var photos = [
 	var myPhotoBrowserStandalone = myApp.photoBrowser({
     navbarTemplate:'<div class="navbar"><div class="navbar-inner"><div class="left sliding"><a href="#" class="link close-popup photo-browser-close-link"><i class="icon icon-back"></i><span>Closezzz</span></a></div><div class="center sliding"><span class="photo-browser-current"></span> <span class="photo-browser-of">of</span> <span class="photo-browser-total"></span></div><div class="right" onclick="modalModal()">modal</div></div></div>',
     lazyLoadingInPrevNext:true,
+    objectTemplate:'<div class="photo-browser-slide photo-browser-object-slide slider-slide">yooo</div>',
     expositionHideCaptions:true,
 photos : photos,
 });
