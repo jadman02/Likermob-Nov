@@ -2041,7 +2041,7 @@ photos : [
         },
         {
             url: 'http://lorempixel.com/1024/1024/sports/2/',
-            caption: 'Second Caption Text'
+            caption: 'Second Caption Text Second Caption Text Second Caption Text Second Caption Text Second Caption Text Second Caption Text Second Caption Text Second Caption TextSecond Caption Text Second Caption Text Second Caption Text Second Caption TextSecond Caption Text Second Caption Text Second Caption Text Second Caption Text zzz' 
         },
         // This one without caption
         {
