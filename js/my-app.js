@@ -237,8 +237,9 @@ var singlequote = str.replace(/'/g, "qqqq");
 //var description = "'" + singlequote.replace(/(\r\n|\n|\r)/gm,"") + "'";
 var type = response[i][9];
 
+var homecontentimage = 'http://smilesavers.net.au/images/compressed/'+response[i][1]+'_'+response[i][21]+'.jpg';
 
-
+$$( '.homecontent' ).css( 'background-image', 'url(\''+ homecontentimage  +'\')');
 
 someText = str.replace(/(\r\n|\n|\r)/gm,"<br />");
 
@@ -316,7 +317,7 @@ var swipeoutheight = $$(window).height() - 165;
 $$( '.imagediv img' ).css( 'height',  swipeoutheight + 'px' );
 //$$( '#result' ).css( 'margin-bottom', '41px' );
 
-
+             
 
 
 
