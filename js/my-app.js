@@ -239,9 +239,9 @@ var type = response[i][9];
 
 var homecontentimage = 'http://smilesavers.net.au/images/compressed/'+response[i][1]+'_'+response[i][21]+'.jpg';
 
-$$( '.homecontent' ).css( 'background-image', 'url(\''+ homecontentimage  +'\')');
-$$( '.homecontent' ).css( 'background-size', '100%');
-$$( '.homecontent' ).css( 'background-repeat', 'no-repeat');
+$$( '#resultlist' ).css( 'background-image', 'url(\''+ homecontentimage  +'\')');
+$$( '#resultlist' ).css( 'background-size', '100%');
+$$( '#resultlist' ).css( 'background-repeat', 'no-repeat');
 someText = str.replace(/(\r\n|\n|\r)/gm,"<br />");
 
 //onclick="getDeal(\''+ response[i][2]  +'\',\''+ response[i][16]  +'\',\''+ response[i][3]  +'\',\''+ response[i][1]  +'\',\''+ response[i][14]  +'\',\''+ response[i][10]  +'\',\''+ response[i][11]  +'\',\''+ response[i][6]  +'\')"
@@ -1731,11 +1731,11 @@ function moveCover(){
 function moveHomeimage(){
 	
 	var img = new Image();
-     img.src = $$( '.page-content' ).css('background-image').replace(/url\(|\)$|"/ig, '');
+     img.src = $$( '#resultlist' ).css('background-image').replace(/url\(|\)$|"/ig, '');
      img.onload = function () {
      	windowsize = $$(window).width();
 	height_image = ((img.height/img.width) * windowsize)-60;
-     $$( '#resultlist' ).css( 'padding-top', height_image + 'px' );
+     $$( '#resul' ).css( 'padding-top', height_image + 'px' );
  };
 }
 
