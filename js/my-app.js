@@ -2028,7 +2028,7 @@ function clearInput(){
 	$$('#dbnamesclear').hide();
 }
 
-
+var myPhotoBrowserStandalone;
 function openBrowser(){
 
 var photos = [
@@ -2046,7 +2046,7 @@ var photos = [
         },
     ];
 	
-	var myPhotoBrowserStandalone = myApp.photoBrowser({
+	myPhotoBrowserStandalone = myApp.photoBrowser({
     navbarTemplate:'<div class="navbar"><div class="navbar-inner"><div class="left sliding"><a href="#" class="link close-popup photo-browser-close-link"><i class="icon icon-back"></i><span>Closezzz</span></a></div><div class="center sliding"><span class="photo-browser-current"></span> <span class="photo-browser-of">of</span> <span class="photo-browser-total"></span></div><div class="right link open-panel" data-panel="right">modal</div></div></div>',
     lazyLoadingInPrevNext:true,
     expositionHideCaptions:true,
@@ -2090,5 +2090,6 @@ function modalModal(){
 
 function removeSlide(){
 	alert('remove slide');
-	$$('.slider').remove();
+	$$('.slider-slide-active').remove();
+	myPhotoBrowserStandalone.update();
 }
