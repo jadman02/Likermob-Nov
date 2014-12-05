@@ -315,7 +315,7 @@ var swipeoutheight = $$(window).height() - 165;
 
 //var pagecontent = $$(window).height() - 90;
 //$$( '#result' ).css( 'height',  swipeoutheight + 'px' );
-$$( '.imagediv img' ).css( 'height',  swipeoutheight + 'px' );
+//$$( '.imagediv img' ).css( 'height',  swipeoutheight + 'px' );
 //$$( '#result' ).css( 'margin-bottom', '41px' );
 moveHomeimage();
              
