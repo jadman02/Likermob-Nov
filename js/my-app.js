@@ -2094,4 +2094,5 @@ function removeSlide(){
 	$$('.slider-slide-active').remove();
 	
 	myPhotoBrowserStandalone.update();
+	myPhotoBrowserStandalone.slideTo(0);
 }
