@@ -2090,6 +2090,8 @@ function modalModal(){
 
 function removeSlide(){
 	alert('remove slide');
-	$$('.photo-browser').remove();
+	$$('.slider-slide-active').remove();
+	$$('.photo-browser-caption').remove();
+	
 	myPhotoBrowserStandalone.update();
 }
