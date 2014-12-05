@@ -2030,12 +2030,8 @@ function clearInput(){
 
 
 function openBrowser(){
-	
-	var myPhotoBrowserStandalone = myApp.photoBrowser({
-    navbarTemplate:'<div class="navbar"><div class="navbar-inner"><div class="left sliding"><a href="#" class="link close-popup photo-browser-close-link"><i class="icon icon-back"></i><span>Closezzz</span></a></div><div class="center sliding"><span class="photo-browser-current"></span> <span class="photo-browser-of">of</span> <span class="photo-browser-total"></span></div><div class="right" onclick="modalModal()">modal</div></div></div>',
-    lazyLoadingInPrevNext:true,
-    expositionHideCaptions:true,
-photos : [
+
+var photos = [
         {
             url: 'http://lorempixel.com/1024/1024/sports/1/',
             caption: 'Caption 1 Text'
@@ -2048,7 +2044,13 @@ photos : [
         {
             url: 'http://lorempixel.com/1024/1024/sports/3/',
         },
-    ],
+    ];
+	
+	var myPhotoBrowserStandalone = myApp.photoBrowser({
+    navbarTemplate:'<div class="navbar"><div class="navbar-inner"><div class="left sliding"><a href="#" class="link close-popup photo-browser-close-link"><i class="icon icon-back"></i><span>Closezzz</span></a></div><div class="center sliding"><span class="photo-browser-current"></span> <span class="photo-browser-of">of</span> <span class="photo-browser-total"></span></div><div class="right" onclick="modalModal()">modal</div></div></div>',
+    lazyLoadingInPrevNext:true,
+    expositionHideCaptions:true,
+photos : photos,
 });
 //Open photo browser on click
 
