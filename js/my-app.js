@@ -2050,7 +2050,7 @@ var photos = [
     navbarTemplate:'<div class="navbar"><div class="navbar-inner"><div class="left sliding"><a href="#" class="link close-popup photo-browser-close-link"><i class="icon icon-back"></i><span>Closezzz</span></a></div><div class="center sliding"><span class="photo-browser-current"></span> <span class="photo-browser-of">of</span> <span class="photo-browser-total"></span></div><div class="right link open-panel" data-panel="right">modal</div></div></div>',
     lazyLoadingInPrevNext:true,
     expositionHideCaptions:true,
-captionTemplate:'<div onclick="modalModal()" class="photo-browser-caption" data-caption-index="{{captionIndex}}">{{caption}}</div>',
+captionTemplate:'<div onclick="modalModal()" class="photo-browser-caption" data-caption-index="{{captionIndex}}">ll{{caption}}</div>',
 photos : photos,
 });
 //Open photo browser on click
