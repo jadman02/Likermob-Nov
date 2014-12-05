@@ -254,7 +254,7 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 
 '<div class="imagediv" onclick="openBrowser()">'+
 
-'<a href="#" style="clear:both;height:50px;width:50px;margin-top:-100px;border-radius:50%;" class="button" onclick="getBusiness(\''+ response[i][1]  +'\');"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=30&height=30" style="border-radius:50%;padding-top:5px;float:left;"/></a>'+
+'<a href="#" style="clear:both;height:50px;width:50px;border-radius:50%;" class="button" onclick="getBusiness(\''+ response[i][1]  +'\');"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=30&height=30" style="border-radius:50%;padding-top:5px;float:left;"/></a>'+
 '</div>'+
 '<div class="swipeout-content">'+
 '<a href="#" id="getDeal"  onclick="popUp(\''+ response[i][3]  +'\',\''+ singlequote  +'\',\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" class="item-content" style="margin-top:-50px;">'+
@@ -317,7 +317,7 @@ var swipeoutheight = $$(window).height() - 165;
 //$$( '#result' ).css( 'height',  swipeoutheight + 'px' );
 $$( '.imagediv img' ).css( 'height',  swipeoutheight + 'px' );
 //$$( '#result' ).css( 'margin-bottom', '41px' );
-
+moveHomeimage()
              
 
 
@@ -1725,6 +1725,17 @@ function moveCover(){
      	windowsize = $$(window).width();
 	height_image = ((img.height/img.width) * windowsize)-60;
      $$( '.content-block' ).css( 'padding-top', height_image + 'px' );
+ };
+}
+
+function moveHomeimage(){
+	
+	var img = new Image();
+     img.src = $$( '.page-content' ).css('background-image').replace(/url\(|\)$|"/ig, '');
+     img.onload = function () {
+     	windowsize = $$(window).width();
+	height_image = ((img.height/img.width) * windowsize)-60;
+     $$( '#result' ).css( 'padding-top', height_image + 'px' );
  };
 }
 
