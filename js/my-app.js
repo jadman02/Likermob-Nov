@@ -2090,5 +2090,5 @@ function modalModal(){
 
 function removeSlide(){
 	alert('remove slide');
-	$$(".slider-slide-active").remove();
+	$$(myPhotoBrowserStandalone).remove();
 }
