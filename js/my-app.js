@@ -2147,6 +2147,6 @@ function removeSlide(){
 }
 
 function enlargeToolbar(){
-	$$( '.tabbar' ).css( 'height', '200px;');
+	$$( ".tabbar" ).toggleClass( "height" );
 	
 }
