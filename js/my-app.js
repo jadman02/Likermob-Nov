@@ -244,7 +244,6 @@ var homecontentimage = 'http://smilesavers.net.au/images/compressed/'+response[i
   if (backgroundImage != 'none') {
    tempImage = new Image();
     tempImage.src = homecontentimage;
-    alert(tempImage);
   }
   else {
 
@@ -629,7 +628,7 @@ $$.getJSON('http://www.smilesavers.net.au/dislike.php?callback=?','user_id=' + u
 var position = localStorage.getItem("position");
 
  position++;
- $$( '.homecontent' ).css( 'background-image', 'url(\''+ tempImage  +'\')');
+ $$( '.homecontent' ).css( 'background-image', 'url("http://smilsavers.net.au/images/cover.png")');
 $$( '.homecontent' ).css( 'background-size', '100%');
 $$( '.homecontent' ).css( 'background-repeat', 'no-repeat');
 functionEmpty('a',0,1,position);
