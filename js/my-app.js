@@ -263,7 +263,7 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 
 '<div class="imagediv" onclick="openBrowser()" style="margin:0 auto;width:50px;">'+
 
-'<a href="#" style="clear:both;height:50px;width:50px;border-radius:50%;padding:5px;" class="button" onclick="getBusiness(\''+ response[i][1]  +'\');"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=50&height=50" style="border-radius:50%;margin-left:-10px;"/></a>'+
+'<a href="#" style="clear:both;height:50px;width:50px;border-radius:50%;" class="button" onclick="getBusiness(\''+ response[i][1]  +'\');"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=50&height=50" style="border-radius:50%;margin-left:-10px;"/></a>'+
 '</div>'+
 '<div class="swipeout-content" style="margin-top:60px;">'+
 '<a href="#" id="getDeal"  onclick="popUp(\''+ response[i][3]  +'\',\''+ singlequote  +'\',\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" class="item-content" style="margin-top:-50px;">'+
@@ -278,7 +278,7 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 '</div>'+
 '</a>'+
    '<div class="content-block">'+
-     ' <div class="content-block-inner">Here comes another text block additionaly wrapped with "content-block-inner". Praesent nec imperdiet diam. Maecenas vel lectus porttitor, consectetur magna nec, viverra sem. Aliquam sed risus dolor. Morbi tincidunt ut libero id sodales. Integer blandit varius nisi quis consectetur. </div>'+
+     ' <div class="content-block-inner" style="background-color:hsl(0, 0%, 70%)">Here comes another text block additionaly wrapped with "content-block-inner". Praesent nec imperdiet diam. Maecenas vel lectus porttitor, consectetur magna nec, viverra sem. Aliquam sed risus dolor. Morbi tincidunt ut libero id sodales. Integer blandit varius nisi quis consectetur. </div>'+
     '</div>'+
 '</div>'+
 '<div class="swipeout-actions-left"><a href="#" class="bg-green swipeout-delete swipeout-overswipe" style="background-color:#3b5998;" onclick="likeButton(\''+ response[i][2]  +'\',\''+ response[i][6]  +'\')"><i class="pe-7s-like2 pe-2x"></i></a></div><div class="swipeout-actions-right"><a href="#" onclick="closeButton(\''+ response[i][2]  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a></div></li>');}
