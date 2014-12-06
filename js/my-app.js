@@ -175,7 +175,7 @@ if (homelist=="add"){localStorage.setItem("homelist", "add");}
 
 var data_send;
 var domain;
-
+var tempImage;
 
 function functionEmpty(pages_list,start,finish,position) {
 
@@ -239,9 +239,19 @@ var type = response[i][9];
 
 var homecontentimage = 'http://smilesavers.net.au/images/compressed/'+response[i][1]+'_'+response[i][21]+'.jpg';
 
+
+  var backgroundImage = $$('.homecontent').css("background-image");
+  if (backgroundImage != 'none') {
+   tempImage = new Image();
+    tempImage.src = backgroundImage;
+  }
+  else {
+
 $$( '.homecontent' ).css( 'background-image', 'url(\''+ homecontentimage  +'\')');
 $$( '.homecontent' ).css( 'background-size', '100%');
-$$( '.homecontent' ).css( 'background-repeat', 'no-repeat');
+$$( '.homecontent' ).css( 'background-repeat', 'no-repeat');}
+
+
 someText = str.replace(/(\r\n|\n|\r)/gm,"<br />");
 
 //onclick="getDeal(\''+ response[i][2]  +'\',\''+ response[i][16]  +'\',\''+ response[i][3]  +'\',\''+ response[i][1]  +'\',\''+ response[i][14]  +'\',\''+ response[i][10]  +'\',\''+ response[i][11]  +'\',\''+ response[i][6]  +'\')"
@@ -619,12 +629,11 @@ $$.getJSON('http://www.smilesavers.net.au/dislike.php?callback=?','user_id=' + u
 var position = localStorage.getItem("position");
 
  position++;
-
+$$( '.homecontent' ).css( 'background-image', 'url(\''+ tempImage  +'\')');
+$$( '.homecontent' ).css( 'background-size', '100%');
+$$( '.homecontent' ).css( 'background-repeat', 'no-repeat');}
 functionEmpty('a',0,1,position);
-var imagewidth = $$('.imagediv img').width();
-var screenwidth = $$(window).width();
-var leftover = ((screenwidth - imagewidth) / 2)*(-1);
-$$( '.imagediv img' ).css( 'margin-left', leftover + 'px' );
+
 //var start; 
 //var finish;
 
