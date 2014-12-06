@@ -1752,11 +1752,11 @@ function moveHomeimage(){
      img.src = $$( '.homecontent' ).css('background-image').replace(/url\(|\)$|"/ig, '');
      img.onload = function () {
      	windowsize = $$(window).width();
-	height_image = ((img.height/img.width) * windowsize)-35;
+	height_image = ((img.height/img.width) * windowsize)-45;
 	var positionimage = height_image - 80;
 	var liHeight = $$( "#content-block" ).height();
 
-	var resultheight = liHeight + height_image + 140;
+	var resultheight = liHeight + height_image + 120;
      $$( '.imagediv' ).css( 'padding-top', positionimage + 'px' );
      $$( '#result' ).css( 'height', resultheight + 'px' );
  };
