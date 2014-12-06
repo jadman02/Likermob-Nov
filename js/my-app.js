@@ -264,16 +264,16 @@ if (type == 'comment') {$$( '#result' ).append('<li class="swipeout s_'+ respons
 if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ response[i][2] +'" style="border-right:3px solid #ff8000;border-left:3px solid #3b5998;margin-top:5px;margin-bottom:5px;">'+
 
 '<div class="imagediv" onclick="openBrowser()" style="margin:0 auto;" class="row">'+
- '<div class="col-33.33">'+
+ '<div class="col-33">'+
     '<a href="#" class="button button-red" style="margin:0 auto;border-radius:50%;width:50px;height:50px;background-color:#3b5998;"><i class="pe-7s-like2 pe-2x" style="color:white"></i></a>'+
   '</div>'+
   
-   '<div class="col-33.33">'+
+   '<div class="col-33">'+
     '<a href="#" style="height:50px;width:50px;border-radius:50%;" class="button" onclick="getBusiness(\''+ response[i][1]  +'\');"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=50&height=50" style="border-radius:50%;margin-left:-10px;"/></a>'+
    '<i class="pe-7s-more pe-3x"></i>'+
   '</div>'+
 
- ' <div class="col-33.33">'+
+ ' <div class="col-33">'+
    ' <a href="#" class="button button-green" style="margin:0 auto;border-radius:50%;width:50px;height:50px;background-color:#ff8000;"><i class="pe-7s-like2 pe-2x pe-rotate-180" style="color:white"></i></a>'+
   '</div>'+
 
