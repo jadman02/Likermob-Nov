@@ -277,7 +277,7 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 '<div class="item-subtitle hide">by '+response[i][16]+'</div>'+
 '</div>'+
 '</a>'+
-   '<div class="content-block">'+
+   '<div class="content-block" id="content-block">'+
      ' <div class="content-block-inner" style="background-color:hsla(0, 0%, 100%, 0.5)"><b>'+ response[i][3] + '</b></br></br>Here comes another text block additionaly wrapped with "content-block-inner". Praesent nec imperdiet diam. Maecenas vel lectus porttitor, consectetur magna nec, viverra sem. Aliquam sed risus dolor. Morbi tincidunt ut libero id sodales. Integer blandit varius nisi quis consectetur. </div>'+
     '</div>'+
 '</div>'+
@@ -1746,9 +1746,8 @@ function moveHomeimage(){
      	windowsize = $$(window).width();
 	height_image = ((img.height/img.width) * windowsize)-60;
 	var positionimage = height_image - 50;
-	var liHeight = $$( "#result li:nth-child(1)" ).height();
+	var liHeight = $$( "#content-block" ).height();
 	var resultheight = liHeight + height_image;
-	alert(liHeight);
      $$( '.imagediv' ).css( 'padding-top', positionimage + 'px' );
      $$( '#result' ).css( 'height', resultheight + 'px' );
  };
