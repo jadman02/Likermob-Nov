@@ -242,8 +242,8 @@ var homecontentimage = 'http://smilesavers.net.au/images/compressed/'+response[i
 
   var backgroundImage = $$('.homecontent').css("background-image");
   if (backgroundImage != 'none') {
-   tempImage = new Image();
-    tempImage.src = homecontentimage;
+alert('image already exists');
+$$( '#tempImg' ).css( 'background-image', 'url(\''+ homecontentimage  +'\')');
   }
   else {
 alert('yo');
