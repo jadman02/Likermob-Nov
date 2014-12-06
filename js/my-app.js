@@ -628,10 +628,10 @@ $$.getJSON('http://www.smilesavers.net.au/dislike.php?callback=?','user_id=' + u
 var position = localStorage.getItem("position");
 
  position++;
-	var tempyimg = new Image();
- tempyimg.src = $$( '#tempImg' ).css('background-image').replace(/url\(|\)$|"/ig, '');
- alert(tempyimg);
- $$( '.homecontent' ).css( 'background-image', 'url(\''+ tempyimg +'\')');
+var bg = $('#tempImg').css('background-image');
+        bg = bg.replace('url(','').replace(')','');
+        alert(bg);
+ $$( '.homecontent' ).css( 'background-image', 'url(\''+ bg +'\')');
 $$( '.homecontent' ).css( 'background-size', '100%');
 $$( '.homecontent' ).css( 'background-repeat', 'no-repeat');
 functionEmpty('a',0,1,position);
