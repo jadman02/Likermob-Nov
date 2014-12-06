@@ -266,6 +266,8 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 '<div class="imagediv" onclick="openBrowser()" style="margin:0 auto;width:50px;">'+
 
 '<a href="#" style="clear:both;height:50px;width:50px;border-radius:50%;" class="button" onclick="getBusiness(\''+ response[i][1]  +'\');"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=50&height=50" style="border-radius:50%;margin-left:-10px;"/></a>'+
+   '<div style="float:left;font-size:14px;"><i class="pe-7s-clock pe-lg"></i> Expires in 6 days</div>'+
+'<div style="float:right;font-size:14px;"><i class="pe-7s-like2 pe-lg"></i>'+ response[i][17] + '<i class="pe-7s-like2 pe-lg pe-rotate-180"></i>'+ response[i][18] + '</div>'+
 '</div>'+
 '<div class="swipeout-content">'+
 '<a href="#" id="getDeal"  onclick="popUp(\''+ response[i][3]  +'\',\''+ singlequote  +'\',\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" class="item-content" style="margin-top:-50px;">'+
@@ -281,8 +283,6 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 '</a>'+
    '<div class="content-block" id="content-block">'+
      ' <div class="content-block-inner" style="background-color:hsla(0, 0%, 100%, 0.5)"><b>'+ response[i][3] + '</b></br></br>dsfds'+response[i][4]+'dfsfdfsd</div>'+
-   '<div style="float:left;font-size:14px;"><i class="pe-7s-clock pe-lg"></i> Expires in 6 days</div>'+
-'<div style="float:right;font-size:14px;"><i class="pe-7s-like2 pe-lg"></i>'+ response[i][17] + '<i class="pe-7s-like2 pe-lg pe-rotate-180"></i>'+ response[i][18] + '</div>'+
     '</div>'+
 
 
