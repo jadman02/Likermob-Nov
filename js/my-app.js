@@ -1749,6 +1749,7 @@ function moveHomeimage(){
 	height_image = ((img.height/img.width) * windowsize)-60;
 	var positionimage = height_image - 50;
 	var liHeight = $$( "#content-block" ).height();
+	alert(liHeight);
 	var resultheight = liHeight + height_image;
      $$( '.imagediv' ).css( 'padding-top', positionimage + 'px' );
      $$( '#result' ).css( 'height', resultheight + 'px' );
