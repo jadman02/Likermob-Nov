@@ -282,7 +282,7 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
    '<div class="content-block" id="content-block">'+
      ' <div class="content-block-inner" style="background-color:hsla(0, 0%, 100%, 0.5)"><b>'+ response[i][3] + '</b></br></br>dsfds'+response[i][4]+'dfsfdfsd</div>'+
     '</div>'+
-'<div class="list-block">
+'<div class="list-block">'+
       '<ul>'+
        ' <li class="item-content">'+
          ' <div class="item-media"><i class="pe-7s-clock pe-lg"></i></div>'+
