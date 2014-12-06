@@ -282,11 +282,11 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
    '<div class="content-block" id="content-block">'+
      ' <div class="content-block-inner" style="background-color:hsla(0, 0%, 100%, 0.5)"><b>'+ response[i][3] + '</b></br></br>dsfds'+response[i][4]+'dfsfdfsd</div>'+
     '</div>'+
-         ' <div class="item-media"><i class="pe-7s-clock pe-lg"></i></div>'+
-          '<div class="item-inner">'+
-           ' <div class="item-title">Expires in 6 days</div>'+
-           ' <div class="item-after"><i class="pe-7s-like2 pe-lg"></i>'+ response[i][17] + '<i class="pe-7s-like2 pe-lg pe-rotate-180"></i>'+ response[i][18] + '</div>'+
-          '</div>'+
+
+'<div style="float:left;"><i class="pe-7s-clock pe-lg"></i> Expires in 6 days</div>'+
+'<div style="float:right;"><i class="pe-7s-like2 pe-lg"></i>'+ response[i][17] + '<i class="pe-7s-like2 pe-lg pe-rotate-180"></i>'+ response[i][18] + '</div>'+
+           
+
 '</div>'+
 '<div class="swipeout-actions-left"><a href="#" class="bg-green swipeout-delete swipeout-overswipe" style="background-color:#3b5998;" onclick="likeButton(\''+ response[i][2]  +'\',\''+ response[i][6]  +'\')"><i class="pe-7s-like2 pe-2x"></i></a></div><div class="swipeout-actions-right"><a href="#" onclick="closeButton(\''+ response[i][2]  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a></div></li>');}
 }
