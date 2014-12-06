@@ -265,7 +265,7 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 
 '<a href="#" style="clear:both;height:50px;width:50px;border-radius:50%;" class="button" onclick="getBusiness(\''+ response[i][1]  +'\');"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=50&height=50" style="border-radius:50%;margin-left:-10px;"/></a>'+
 '</div>'+
-'<div class="swipeout-content" style="margin-top:60px;">'+
+'<div class="swipeout-content">'+
 '<a href="#" id="getDeal"  onclick="popUp(\''+ response[i][3]  +'\',\''+ singlequote  +'\',\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" class="item-content" style="margin-top:-50px;">'+
 '<div class="item-inner" style="border-bottom:0;">'+
 '<div class="item-title-row" style="clear:both;">'+
