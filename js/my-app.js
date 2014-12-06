@@ -630,6 +630,7 @@ var position = localStorage.getItem("position");
  position++;
 	var tempyimg = new Image();
  tempyimg.src = $$( '#tempImg' ).css('background-image').replace(/url\(|\)$|"/ig, '');
+ alert(tempyimg);
  $$( '.homecontent' ).css( 'background-image', 'url(\''+ tempyimg +'\')');
 $$( '.homecontent' ).css( 'background-size', '100%');
 $$( '.homecontent' ).css( 'background-repeat', 'no-repeat');
