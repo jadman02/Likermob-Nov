@@ -288,7 +288,14 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 
     '</div>'+
 
-
+'<div class="row">'+
+  '<div class="col-50">'+
+    '<a href="#" class="button button-red" style="border-radius:50%;"><i class="pe-7s-like2 pe-lg"></i></a>'+
+  '</div>'+
+ ' <div class="col-50">'+
+   ' <a href="#" class="button button-green" style="border-radius:50%;"><i class="pe-7s-like2 pe-lg pe-rotate-180"></i></a>'+
+  '</div>'+
+'</div>  '+  
            
 
 '</div>'+
