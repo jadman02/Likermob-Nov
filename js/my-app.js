@@ -291,7 +291,7 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 '<div class="item-subtitle hide">by '+response[i][16]+'</div>'+
 '</div>'+
 '</a>'+
-   '<div class="content-block" id="content-block">'+
+   '<div class="content-block" id="content-block" style="margin-top:40px;">'+
      ' <div class="content-block-inner" style="padding-bottom:30px;background-color:hsla(0, 0%, 100%, 0.5)">'+
 
      '<div id="dealtitle"><b>'+ response[i][3] + '</b></div><i class="pe-7s-more pe-2x" style="float:right;width:30px;"></i></br><div style="clear:both;">'+response[i][4]+'</div>'+
@@ -1772,7 +1772,7 @@ function moveHomeimage(){
 	var positionimage = height_image - 55;
 	var liHeight = $$( "#content-block" ).height();
 
-	var resultheight = liHeight + height_image + 115;
+	var resultheight = liHeight + height_image;
      $$( '.imagediv' ).css( 'padding-top', positionimage + 'px' );
      $$( '#result' ).css( 'height', resultheight + 'px' );
  };
