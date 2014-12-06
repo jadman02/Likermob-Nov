@@ -244,7 +244,6 @@ var homecontentimage = 'http://smilesavers.net.au/images/compressed/'+response[i
   if (backgroundImage != 'none') {
    tempImage = new Image();
     tempImage.src = homecontentimage;
-    document.getElementById("#result").innerHTML = '<img src="'+ tempImage +'"/>';
   }
   else {
 alert('yo');
