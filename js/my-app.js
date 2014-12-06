@@ -1746,7 +1746,7 @@ function moveHomeimage(){
      img.src = $$( '.homecontent' ).css('background-image').replace(/url\(|\)$|"/ig, '');
      img.onload = function () {
      	windowsize = $$(window).width();
-	height_image = ((img.height/img.width) * windowsize)-60;
+	height_image = ((img.height/img.width) * windowsize)-40;
 	var positionimage = height_image - 50;
 	var liHeight = $$( "#content-block" ).height();
 	alert(liHeight);
