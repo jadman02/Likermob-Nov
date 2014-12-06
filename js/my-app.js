@@ -261,7 +261,7 @@ if (pages_list=='a' || typeof pages_list === 'undefined') {
 if (type == 'comment') {$$( '#result' ).append('<li class="swipeout s_'+ response[i][2] +'" style="border-right:3px solid #ff8000;border-left:3px solid #3b5998;margin-top:5px;margin-bottom:5px;"><div class="imagediv"><img onclick="popUp(\''+ response[i][3]  +'\',\''+ singlequote  +'\',\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" src="http://smilesavers.net.au/images/compressed/'+response[i][1]+'_'+response[i][21]+'.jpg" style="width:100%;"/></div><div class="swipeout-content"><div class="item-content" style="margin-top:-50px;"><div class="item-inner" style="border-bottom:0;"><div class="item-title-row"><div class="item-title"></div><div class="item-after"><span class="badge" style="margin-right:2px;background-color:#3b5998;height:25px;">'+ response[i][17] + '</span><span class="badge" style="background-color:#ff8000;height:25px;">'+ response[i][18] + '</span></div></div></div></div><a href="#" id="getDeal"  onclick="popUp(\''+ response[i][3]  +'\',\''+ singlequote  +'\',\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" class="item-content"><div class="item-inner" style="border-bottom:0;"><div class="item-title-row" style="clear:both;"><div class="item-title" style="color:#333;">'+ response[i][3] + '</div><div class="item-after"><span class="badge" style="display:none;margin-right:2px;background-color:#3b5998;height:25px;">'+ response[i][17] + '</span><span class="badge" style="display:none;background-color:#ff8000;height:25px;">'+ response[i][18] + '</span></div></div><div class="item-subtitle hide">'+response[i][16]+'</div></div></a></div><div class="swipeout-actions-left"><a href="#" class="bg-green swipeout-overswipe" style="background-color:#3b5998;" onclick="popUp(\''+ response[i][3]  +'\',\''+ singlequote  +'\',\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')"><i class="pe-7s-comment pe-2x"></i></a></div><div class="swipeout-actions-right"><a href="#" onclick="closeButton(\''+ response[i][2]  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a></div></li>');}
 if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ response[i][2] +'" style="border-right:3px solid #ff8000;border-left:3px solid #3b5998;margin-top:5px;margin-bottom:5px;">'+
 
-'<div class="imagediv" onclick="openBrowser()">'+
+'<div class="imagediv" onclick="openBrowser()" style="margin:0 auto;">'+
 
 '<a href="#" style="clear:both;height:50px;width:50px;border-radius:50%;" class="button" onclick="getBusiness(\''+ response[i][1]  +'\');"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=30&height=30" style="border-radius:50%;padding-top:5px;float:left;"/></a>'+
 '</div>'+
@@ -327,7 +327,7 @@ var swipeoutheight = $$(window).height() - 165;
 //$$( '.imagediv img' ).css( 'height',  swipeoutheight + 'px' );
 //$$( '#result' ).css( 'margin-bottom', '41px' );
 moveHomeimage();
-       document.getElementById("tempImg").innerHTML = '<img src="' + tempImage + '"/>';      
+   
 
 
 
@@ -1746,6 +1746,7 @@ function moveHomeimage(){
      	windowsize = $$(window).width();
 	height_image = ((img.height/img.width) * windowsize)-60;
      $$( '.swipeout-content' ).css( 'padding-top', height_image + 'px' );
+     $$( '.imageDiv' ).css( 'padding-top', height_image + 'px' );
  };
 }
 
