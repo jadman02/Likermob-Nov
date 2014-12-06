@@ -269,7 +269,7 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
   '</div>'+
   
    '<div style="float:left;width:33.33%;">'+
-    '<a href="#" style="height:40px;width:40px;border-radius:50%;margin:0 auto;" class="button" onclick="getBusiness(\''+ response[i][1]  +'\');"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=40&height=40" style="border-radius:50%;margin-left:-5px;"/></a>'+
+    '<a href="#" style="height:40px;width:40px;border-radius:50%;margin:0 auto;" class="button" onclick="getBusiness(\''+ response[i][1]  +'\');"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=40&height=40" style="border-radius:50%;margin-left:-10px;"/></a>'+
   '</div>'+
 
  ' <div style="float:left;width:33.33%;">'+
@@ -1769,7 +1769,7 @@ function moveHomeimage(){
      img.onload = function () {
      	windowsize = $$(window).width();
 	height_image = ((img.height/img.width) * windowsize);
-	var positionimage = height_image - 55;
+	var positionimage = height_image - 45;
 	var liHeight = $$( "#content-block" ).height();
 
 	var resultheight = liHeight + height_image;
