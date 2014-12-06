@@ -265,7 +265,7 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 
 '<div class="imagediv" onclick="openBrowser()" style="margin:0 auto;">'+
  '<div style="float:left;width:33.33%;">'+
-    '<a href="#" class="button button-red" style="margin:0 auto;border-radius:50%;border:0;width:40px;height:40px;background-color:#3b5998;"><i class="pe-7s-like2 pe-2x" style="color:white;margin-top:5px;;"></i></a>'+
+    '<a href="#" class="button button-red" style="margin:0 auto;border-radius:50%;border:0;width:50px;height:50px;background-color:#3b5998;"><i class="pe-7s-like2 pe-2x" style="color:white;margin-top:5px;;"></i></a>'+
   '</div>'+
   
    '<div style="float:left;width:33.33%;">'+
@@ -273,7 +273,7 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
   '</div>'+
 
  ' <div style="float:left;width:33.33%;">'+
-   ' <a href="#" class="button button-green" style="margin:0 auto;border-radius:50%;border:0;width:40px;height:40px;background-color:#ff8000;"><i class="pe-7s-like2 pe-2x pe-rotate-180" style="color:white;margin-top:5px;"></i></a>'+
+   ' <a href="#" class="button button-green" style="margin:0 auto;border-radius:50%;border:0;width:50px;height:50px;background-color:#ff8000;"><i class="pe-7s-like2 pe-2x pe-rotate-180" style="color:white;margin-top:5px;"></i></a>'+
   '</div>'+
 
 
@@ -2144,4 +2144,9 @@ function removeSlide(){
 	$$('.slider-slide-active').remove();
 	
 	myPhotoBrowserStandalone.slider.update();
+}
+
+function enlargeToolbar(){
+	$$( '.tabbar' ).css( 'height', '200px;');
+	
 }
