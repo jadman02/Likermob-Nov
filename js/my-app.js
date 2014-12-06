@@ -1746,6 +1746,7 @@ function moveHomeimage(){
      	windowsize = $$(window).width();
 	height_image = ((img.height/img.width) * windowsize)-60;
      $$( '.swipeout-content' ).css( 'padding-top', height_image + 'px' );
+     $$( '.imagediv' ).css( 'padding-top', height_image + 'px' );
  };
 }
 
