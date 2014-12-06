@@ -265,7 +265,7 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 
 '<a href="#" style="clear:both;height:50px;width:50px;border-radius:50%;" class="button" onclick="getBusiness(\''+ response[i][1]  +'\');"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=30&height=30" style="border-radius:50%;padding-top:5px;float:left;"/></a>'+
 '</div>'+
-'<div class="swipeout-content" style="background-color:hsl(0, 0%, 70%)">'+
+'<div class="swipeout-content">'+
 '<a href="#" id="getDeal"  onclick="popUp(\''+ response[i][3]  +'\',\''+ singlequote  +'\',\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" class="item-content" style="margin-top:-50px;">'+
 '<div class="item-inner" style="border-bottom:0;">'+
 '<div class="item-title-row" style="clear:both;">'+
@@ -327,7 +327,7 @@ var swipeoutheight = $$(window).height() - 165;
 //$$( '.imagediv img' ).css( 'height',  swipeoutheight + 'px' );
 //$$( '#result' ).css( 'margin-bottom', '41px' );
 moveHomeimage();
-   
+       document.getElementById("tempImg").innerHTML = '<img src="' + tempImage + '"/>';      
 
 
 
@@ -1746,7 +1746,6 @@ function moveHomeimage(){
      	windowsize = $$(window).width();
 	height_image = ((img.height/img.width) * windowsize)-60;
      $$( '.swipeout-content' ).css( 'padding-top', height_image + 'px' );
-
  };
 }
 
