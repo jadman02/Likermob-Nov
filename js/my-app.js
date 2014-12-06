@@ -288,12 +288,12 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 
     '</div>'+
 
-'<div class="row">'+
+'<div class="row" style="text-align:center;">'+
   '<div class="col-50">'+
-    '<a href="#" class="button button-red" style="border-radius:50%;width:50px;height:50px;background-color:#3b5998;"><i class="pe-7s-like2 pe-lg"></i></a>'+
+    '<a href="#" class="button button-red" style="margin:0 auto;border-radius:50%;width:50px;height:50px;background-color:#3b5998;"><i class="pe-7s-like2 pe-2x" style="color:white"></i></a>'+
   '</div>'+
  ' <div class="col-50">'+
-   ' <a href="#" class="button button-green" style="border-radius:50%;width:50px;height:50px;background-color:#ff8000;"><i class="pe-7s-like2 pe-lg pe-rotate-180"></i></a>'+
+   ' <a href="#" class="button button-green" style="margin:0 auto;border-radius:50%;width:50px;height:50px;background-color:#ff8000;"><i class="pe-7s-like2 pe-2x pe-rotate-180" style="color:white"></i></a>'+
   '</div>'+
 '</div>  '+  
            
