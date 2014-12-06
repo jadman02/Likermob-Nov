@@ -327,7 +327,7 @@ var swipeoutheight = $$(window).height() - 165;
 //$$( '.imagediv img' ).css( 'height',  swipeoutheight + 'px' );
 //$$( '#result' ).css( 'margin-bottom', '41px' );
 moveHomeimage();
-       document.getElementById("tempImage").innerHTML = '<img src="' + tempImage + '"/>';      
+       document.getElementById("tempImg").innerHTML = '<img src="' + tempImage + '"/>';      
 
 
 
