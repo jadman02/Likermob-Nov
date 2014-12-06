@@ -1759,7 +1759,7 @@ function moveHomeimage(){
 	var positionimage = height_image - 80;
 	var liHeight = $$( "#content-block" ).height();
 
-	var resultheight = liHeight + height_image + 70;
+	var resultheight = liHeight + height_image + 55;
      $$( '.imagediv' ).css( 'padding-top', positionimage + 'px' );
      $$( '#result' ).css( 'height', resultheight + 'px' );
  };
