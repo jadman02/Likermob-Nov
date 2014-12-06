@@ -246,7 +246,7 @@ var homecontentimage = 'http://smilesavers.net.au/images/compressed/'+response[i
     tempImage.src = homecontentimage;
   }
   else {
-
+alert('yo');
 $$( '.homecontent' ).css( 'background-image', 'url(\''+ homecontentimage  +'\')');
 $$( '.homecontent' ).css( 'background-size', '100%');
 $$( '.homecontent' ).css( 'background-repeat', 'no-repeat');}
