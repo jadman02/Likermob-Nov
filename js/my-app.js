@@ -252,7 +252,7 @@ $$( '.homecontent' ).css( 'background-size', '100%');
 $$( '.homecontent' ).css( 'background-repeat', 'no-repeat');}
 
 someText = str.replace(/(\r\n|\n|\r)/gm,"<br />");
-alert(response[i][4]);
+
 
 
 //onclick="getDeal(\''+ response[i][2]  +'\',\''+ response[i][16]  +'\',\''+ response[i][3]  +'\',\''+ response[i][1]  +'\',\''+ response[i][14]  +'\',\''+ response[i][10]  +'\',\''+ response[i][11]  +'\',\''+ response[i][6]  +'\')"
@@ -1749,7 +1749,7 @@ function moveHomeimage(){
 	height_image = ((img.height/img.width) * windowsize)-35;
 	var positionimage = height_image - 50;
 	var liHeight = $$( "#content-block" ).height();
-	alert(liHeight);
+
 	var resultheight = liHeight + height_image + 40;
      $$( '.imagediv' ).css( 'padding-top', positionimage + 'px' );
      $$( '#result' ).css( 'height', resultheight + 'px' );
