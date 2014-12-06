@@ -1746,7 +1746,7 @@ function moveHomeimage(){
      	windowsize = $$(window).width();
 	height_image = ((img.height/img.width) * windowsize)-60;
 	var positionimage = height_image - 50;
-	var liHeight = $$('#result li:eq(0)').height();
+	var liHeight = $$( "#result li:nth-child(1)" ).height();
 	alert(liHeight);
      $$( '.imagediv' ).css( 'padding-top', positionimage + 'px' );
  };
