@@ -293,7 +293,7 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 '</a>'+
    '<div class="content-block" id="content-block">'+
      ' <div class="content-block-inner" style="padding-bottom:30px;background-color:hsla(0, 0%, 100%, 0.5)">'+
-        '<i class="pe-7s-more pe-3x" style="margin:0 auto;"></i>'+
+
      '<b>'+ response[i][3] + '</b></br>dsfds'+response[i][4]+'dfsfdfsd'+
          '<div style="float:left;font-size:14px;clear:both;"><i class="pe-7s-clock pe-lg"></i> Expires in 6 days</div>'+
 '<div style="float:right;font-size:14px;"><i class="pe-7s-like2 pe-lg" style="margin-right:2px;"></i>'+ response[i][17] + '<i class="pe-7s-like2 pe-lg pe-rotate-180" style="margin-left:5px;margin-right:2px;"></i>'+ response[i][18] + '</div>'+
