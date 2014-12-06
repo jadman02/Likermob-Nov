@@ -291,8 +291,8 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 '<div class="item-subtitle hide">by '+response[i][16]+'</div>'+
 '</div>'+
 '</a>'+
-   '<div class="content-block" id="content-block" style="margin-top:80px;">'+
-     ' <div class="content-block-inner" style="padding-bottom:30px;background-color:hsla(0, 0%, 100%, 0.5)">'+
+   '<div class="content-block" id="content-block" style="margin-top:60px;">'+
+     ' <div class="content-block-inner" style="padding-bottom:41px;background-color:hsla(0, 0%, 100%, 0.5)">'+
 
      '<div id="dealtitle" style="float:left;"><b>'+ response[i][3] + '</b></div><i class="pe-7s-more pe-2x" style="float:right;width:50px;"></i><div style="clear:both;">'+response[i][4]+'</div>'+
          '<div style="float:left;font-size:14px;clear:both;"><i class="pe-7s-clock pe-lg"></i> Expires in 6 days</div>'+
