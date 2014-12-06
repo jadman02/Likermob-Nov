@@ -243,14 +243,13 @@ var homecontentimage = 'http://smilesavers.net.au/images/compressed/'+response[i
   var backgroundImage = $$('.homecontent').css("background-image");
   if (backgroundImage != 'none') {
    tempImage = new Image();
-    tempImage.src = backgroundImage;
+    tempImage.src = homecontentimage;
   }
   else {
 
 $$( '.homecontent' ).css( 'background-image', 'url(\''+ homecontentimage  +'\')');
 $$( '.homecontent' ).css( 'background-size', '100%');
 $$( '.homecontent' ).css( 'background-repeat', 'no-repeat');}
-
 
 someText = str.replace(/(\r\n|\n|\r)/gm,"<br />");
 
