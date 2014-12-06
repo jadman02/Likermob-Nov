@@ -265,7 +265,7 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 
 '<div class="imagediv" onclick="openBrowser()" style="margin:0 auto;width:50px;">'+
 
-'<a href="#" onclick="openBrowser();">Photo Browser</a><a href="#" style="clear:both;height:50px;width:50px;border-radius:50%;" class="button" onclick="getBusiness(\''+ response[i][1]  +'\');"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=50&height=50" style="border-radius:50%;margin-left:-10px;"/></a>'+
+'<a href="#" style="clear:both;height:50px;width:50px;border-radius:50%;" class="button" onclick="getBusiness(\''+ response[i][1]  +'\');"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=50&height=50" style="border-radius:50%;margin-left:-10px;"/></a>'+
 '</div>'+
 '<div class="swipeout-content">'+
 '<a href="#" id="getDeal"  onclick="popUp(\''+ response[i][3]  +'\',\''+ singlequote  +'\',\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" class="item-content" style="margin-top:-50px;">'+
@@ -282,6 +282,18 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
    '<div class="content-block" id="content-block">'+
      ' <div class="content-block-inner" style="background-color:hsla(0, 0%, 100%, 0.5)"><b>'+ response[i][3] + '</b></br></br>dsfds'+response[i][4]+'dfsfdfsd</div>'+
     '</div>'+
+'<div class="list-block">
+      '<ul>'+
+       ' <li class="item-content">'+
+         ' <div class="item-media"><i class="pe-7s-clock pe-lg"></i></div>'+
+          '<div class="item-inner">'+
+           ' <div class="item-title">Expires in 6 days</div>'+
+           ' <div class="item-after"><i class="pe-7s-like2 pe-lg"></i>'+ response[i][17] + '<i class="pe-7s-like2 pe-lg pe-rotate-180"></i>'+ response[i][18] + '</div>'+
+          '</div>'+
+        '</li>'+
+       ' </ul>'+
+       ' </div>'+
+
 '</div>'+
 '<div class="swipeout-actions-left"><a href="#" class="bg-green swipeout-delete swipeout-overswipe" style="background-color:#3b5998;" onclick="likeButton(\''+ response[i][2]  +'\',\''+ response[i][6]  +'\')"><i class="pe-7s-like2 pe-2x"></i></a></div><div class="swipeout-actions-right"><a href="#" onclick="closeButton(\''+ response[i][2]  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a></div></li>');}
 }
