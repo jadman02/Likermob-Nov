@@ -269,7 +269,7 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 '<a href="#" id="getDeal"  onclick="popUp(\''+ response[i][3]  +'\',\''+ singlequote  +'\',\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" class="item-content" style="margin-top:-50px;">'+
 '<div class="item-inner" style="border-bottom:0;">'+
 '<div class="item-title-row" style="clear:both;">'+
-'<div class="item-title"  style="color:#333;">'+ response[i][3] + '</div>'+
+
 '<div class="item-after">'+
 '<span class="badge" style="display:none;margin-right:2px;background-color:#3b5998;height:25px;">'+ response[i][17] + '</span><span class="badge" style="display:none;background-color:#ff8000;height:25px;">'+ response[i][18] + '</span>'+
 '</div>'+
@@ -278,7 +278,7 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 '</div>'+
 '</a>'+
    '<div class="content-block">'+
-     ' <div class="content-block-inner" style="background-color:hsla(0, 0%, 100%, 0.5)">Here comes another text block additionaly wrapped with "content-block-inner". Praesent nec imperdiet diam. Maecenas vel lectus porttitor, consectetur magna nec, viverra sem. Aliquam sed risus dolor. Morbi tincidunt ut libero id sodales. Integer blandit varius nisi quis consectetur. </div>'+
+     ' <div class="content-block-inner" style="background-color:hsla(0, 0%, 100%, 0.5)"><b>'+ response[i][3] + '</b>Here comes another text block additionaly wrapped with "content-block-inner". Praesent nec imperdiet diam. Maecenas vel lectus porttitor, consectetur magna nec, viverra sem. Aliquam sed risus dolor. Morbi tincidunt ut libero id sodales. Integer blandit varius nisi quis consectetur. </div>'+
     '</div>'+
 '</div>'+
 '<div class="swipeout-actions-left"><a href="#" class="bg-green swipeout-delete swipeout-overswipe" style="background-color:#3b5998;" onclick="likeButton(\''+ response[i][2]  +'\',\''+ response[i][6]  +'\')"><i class="pe-7s-like2 pe-2x"></i></a></div><div class="swipeout-actions-right"><a href="#" onclick="closeButton(\''+ response[i][2]  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a></div></li>');}
