@@ -2147,7 +2147,6 @@ function removeSlide(){
 }
 
 function enlargeToolbar(){
-$$( "#hometoolbar" ).toggleClass( "height" );
-$$( "#toolbarfilter" ).removeClass( "hide" );
+$$( "#toolbarfilter" ).toggleClass( "hide" );
 $$( "#toolbarsearch" ).toggleClass( "hide" );	
 }
