@@ -1637,15 +1637,21 @@ $$( ".location" ).removeClass( "active" );}
 function searchPlaces(id){
 	
 var searchvalue;
+var commentvalue;
 
 if (id=='set'){
 
 searchvalue = document.getElementById('fulladdressf').value;
 
-if (searchvalue == '') {$$('#resultfclear').hide();$$('#resultgclear').hide();}
-else {$$('#resultfclear').show();$$('#resultgclear').show();}
+if (searchvalue == '') {$$('#resultfclear').hide();}
+else {$$('#resultfclear').show();}
 	
+if (id=='comment'){
 
+searchvalue = document.getElementById('commentinput').value;
+
+if (searchvalue == '') {$$('#resultgclear').hide();}
+else {$$('#resultgclear').show();}
 
 	
 $$.getJSON('https://maps.googleapis.com/maps/api/place/autocomplete/json?input='+ searchvalue +'&types=(cities)&key=AIzaSyAssayN33K28DkBxPB8iWOM0NG2-sCNHEk', function(response){
