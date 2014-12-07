@@ -14,7 +14,6 @@ myApp.onPageBeforeInit('index', function (page) {
 
 var uid = localStorage.getItem("uid");
 document.getElementById("profilepic").innerHTML = '<img src="http://graph.facebook.com/' + uid + '/picture?type=normal" style="margin:0 auto;text-align:center;width:80px;border-radius:50%;"/>';
-document.getElementById("commentpic").innerHTML = '<img src="http://graph.facebook.com/' + uid + '/picture?type=normal" style="margin:0 auto;text-align:center;width:30px;border-radius:50%;"/>';
 
     functionEmpty('a',0,2,0);
 
