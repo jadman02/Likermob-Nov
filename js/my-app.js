@@ -1640,7 +1640,7 @@ var searchvalue;
 var commentvalue;
 
 if (id=='comment'){
-	
+alert('commentinput');	
 commentvalue = document.getElementById('commentinput').value;
 if (commentvalue == '') {$$('#resultgclear').hide();}
 else {$$('#resultgclear').show();}
