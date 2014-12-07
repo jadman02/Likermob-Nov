@@ -1642,8 +1642,11 @@ if (id=='set'){
 
 searchvalue = document.getElementById('fulladdressf').value;
 
-if (searchvalue == '') {$$('#resultfclear').hide();}
+if (searchvalue == '') {$$('#resultfclear').hide();$$('#resultgclear').hide();}
 else {$$('#resultfclear').show();}
+	
+if (searchvalue == 'comment') {$$('#resultgclear').show();}
+
 	
 $$.getJSON('https://maps.googleapis.com/maps/api/place/autocomplete/json?input='+ searchvalue +'&types=(cities)&key=AIzaSyAssayN33K28DkBxPB8iWOM0NG2-sCNHEk', function(response){
 $$("#resultf li").remove();
@@ -2079,6 +2082,12 @@ function clearInput(){
 	document.getElementById('dbnames').value = "";
 	$$('#resultfclear').hide();
 	$$('#dbnamesclear').hide();
+}
+
+function clearcommentInput(){
+	
+	document.getElementById('commentinput').value = "";
+	$$('#resultgclear').hide();
 }
 
 var myPhotoBrowserStandalone;
