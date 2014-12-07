@@ -296,7 +296,7 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 
      '<div id="dealtitle" style="float:left;"><b>'+ response[i][3] + '</b></div><i class="pe-7s-more pe-2x" style="float:right;width:50px;"></i><br/><div>'+response[i][4]+'</div>'+
          '<div style="float:left;font-size:14px;clear:both;"><i class="pe-7s-clock pe-lg"></i> Expires in 6 days</div>'+
-'<div style="float:right;font-size:14px;"><i class="pe-7s-like2 pe-lg" style="margin-right:2px;border-radius:50%;width:30px;height:30px;background-color:#3b5998;"></i>'+ response[i][17] + '<i class="pe-7s-like2 pe-lg pe-rotate-180" style="margin-left:5px;margin-right:2px;border-radius:50%;width:30px;height:30px;background-color:#ff8000;"></i>'+ response[i][18] + '</div>'+
+'<div style="float:right;font-size:14px;"><div style="border-radius:50%;width:20px;height:20px;background-color:#3b5998;margin-right:2px;"><i class="pe-7s-like2 pe-lg" style="color:white;"></i></div>'+ response[i][17] + '<div style="border-radius:50%;width:30px;height:30px;background-color:#ff8000;margin-left:5px;margin-right:2px;"><i class="pe-7s-like2 pe-lg pe-rotate-180" style="color:white;"></i></div>'+ response[i][18] + '</div>'+
      '</br></div>'+
 
     '</div>'+
