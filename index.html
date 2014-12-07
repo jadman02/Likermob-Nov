@@ -34,6 +34,9 @@
      #hometoolbar {height:41px;}
      
      .hide {display:none;}
+     .show {display:block;}
+
+#toolbarfilter {display:none;}
 
 .slider-slide-business {
   background: #fff;
@@ -281,7 +284,7 @@
     
      <div class="toolbar-inner">
      
-<div class="list-block">
+<div class="list-block" id="toolbarsearch">
   <ul style="border:0;height:41px;background-color:transparent;">
     <!-- Text inputs -->
     <li>
@@ -297,9 +300,39 @@
      </ul></div>
      
      	
+     	<div id="toolbarfilter" style="background-color:transparent;">
+        <a href="#tab1" class="tab-link" onclick="functionEmpty('a')" style="color:#3b5998;border-bottom:2px solid #3b5998">
+            <i class="icon pe-7s-home pe-lg"></i>
+            <span class="tabbar-label">Discover</span>
+        </a>
+        <a href="#tab2" class="tab-link" onclick="functionEmpty('b')" style="border-bottom:2px solid #ccc;margin-left:5px;">
+            <i class="icon pe-7s-like2 pe-lg"></i>
+<span class="tabbar-label">Likes</span>
+            
+            
+        </a>
+      
+              <a href="#tab5" class="tab-link">
+<span class="badge" style="background-color:#3b5998;margin-top:8px;">15</span>
+        </a>
+        <a href="#tab3" class="tab-link" onclick="functionEmpty('c')" style="border-bottom:2px solid #ccc;margin-right:5px;">
+            <i class="icon pe-7s-star pe-lg"></i>
+            <span class="tabbar-label">Favourites</span>
+        </a>
+        <a href="#tab4" class="tab-link" style="border-bottom:2px solid #ccc">
+            <i class="icon pe-7s-diskette pe-lg"></i>
+            <span class="tabbar-label">Saved</span>
+        </a>
+
+    </div>
+     	
+     	
+     	
+     	
      </div>
     
     
+
     
     
 </div>
