@@ -1648,9 +1648,9 @@ else {$$('#resultfclear').show();}
 	
 if (id=='comment'){
 
-searchvalue = document.getElementById('commentinput').value;
+commentvalue = document.getElementById('commentinput').value;
 
-if (searchvalue == '') {$$('#resultgclear').hide();}
+if (commentvalue == '') {$$('#resultgclear').hide();}
 else {$$('#resultgclear').show();}
 
 	
