@@ -2148,7 +2148,7 @@ function removeSlide(){
 
 function enlargeToolbar(){
 	alert('yo');
-$$( '#hometoolbar' ).css( 'height', '200px');
+$$( "#hometoolbar" ).toggleClass( "height" );
 
 	
 }
