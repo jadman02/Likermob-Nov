@@ -1638,9 +1638,9 @@ function searchPlaces(id){
 	
 var searchvalue;
 var commentvalue;
-
+alert('commentinput');
 if (id=='comment'){
-alert('commentinput');	
+	
 commentvalue = document.getElementById('commentinput').value;
 if (commentvalue == '') {$$('#resultgclear').hide();}
 else {$$('#resultgclear').show();}
