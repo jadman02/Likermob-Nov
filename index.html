@@ -283,37 +283,44 @@
 
 <div class="toolbar tabbar tabbar-labels" id="hometoolbar" style="height:41px;">
     
-     <div class="toolbar-inner">
+     <div class="toolbar-inner toolbartabs">
 
 
-<a href="#tab1" class="tab-link active toolbartabs">
+<a href="#tab1" class="tab-link active">
             <i class="pe-7s-star pe-2x"></i>
         </a>
-        <a href="#tab2" class="tab-link toolbartabs" onclick="toggleSearch1()">
+        <a href="#tab2" class="tab-link" onclick="toggleSearch1()">
            <i class="pe-7s-comment pe-2x"></i>
         </a>
-        <a href="#tab3" class="tab-link toolbartabs" onclick="toggleFilter1()">
+        <a href="#tab3" class="tab-link" onclick="toggleFilter1()">
            <i class="pe-7s-filter pe-2x"></i>
         </a>
+	
+     </div>
+    
 
-<a href="#tab1" style="display:none" class="tab-link active toolbarfilter" onclick="toggleFilter2()">
+
+ <div class="toolbar-inner toolbarfilter hide">
+
+<a href="#tab1" style="display:none" class="tab-link active " onclick="toggleFilter2()">
            <i class="pe-7s-filter pe-2x"></i>
         </a>
-<a href="#tab2" style="display:none" class="tab-link active toolbarfilter">
+<a href="#tab2" style="display:none" class="tab-link active">
             <i class="pe-7s-gleam pe-lg"></i>
             <span class="tabbar-label">New</span>
         </a>
-        <a href="#tab3" style="display:none" class="tab-link toolbarfilter">
+        <a href="#tab3" style="display:none" class="tab-link">
              <i class="pe-7s-map-marker pe-lg"></i></i>
             <span class="tabbar-label">Nearby</span>
         </a>
-        <a href="#tab4" style="display:none" class="tab-link toolbarfilter">
+        <a href="#tab4" style="display:none" class="tab-link">
              <i class="pe-7s-timer pe-lg"></i>
             <span class="tabbar-label">Expiring</span>
         </a>
+</div>
 
-     
-<div class="list-block hide" id="toolbarsearch">
+ <div class="toolbar-inner toolbarsearch hide">     
+<div class="list-block hide">
   <ul style="border:0;height:41px;background-color:transparent;">
     <!-- Text inputs -->
     <li>
@@ -328,10 +335,13 @@
       </div>
     </li>
      </ul></div>
+</div>
 
-     	
-     </div>
-    
+
+
+
+
+
     
 
     
