@@ -2166,7 +2166,7 @@ $$( '.toolbarfilter' ).toggleClass( "hide" );
 
 
 function toggleSearch(){
-$$( "#toolbarsearch" ).toggleClass( "hide" );
+$$( ".toolbarsearch" ).toggleClass( "hide" );
 $$( ".toolbartabs" ).toggleClass( "hide" );
 }
 
