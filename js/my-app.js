@@ -2160,11 +2160,18 @@ function removeSlide(){
 }
 
 function toggleFilter(){
-$$( '.toolbarfilter' ).css( 'display', 'block');
-$$( '.toolbartabs' ).css( 'display', 'none');
+$$( "#toolbarfilter1" ).toggleClass( "hide" );
+$$( "#toolbarfilter2" ).toggleClass( "hide" );
+$$( "#toolbarfilter3" ).toggleClass( "hide" );
+$$( "#toolbarfilter4" ).toggleClass( "hide" );
+$$( "#toolbartabs1" ).toggleClass( "hide" );
+$$( "#toolbartabs2" ).toggleClass( "hide" );
+$$( "#toolbartabs3" ).toggleClass( "hide" );
 }
 
 function toggleSearch(){
 $$( "#toolbarsearch" ).toggleClass( "hide" );
-$$( ".toolbartabs" ).toggleClass( "hide" );	
+$$( "#toolbartabs1" ).toggleClass( "hide" );
+$$( "#toolbartabs2" ).toggleClass( "hide" );
+$$( "#toolbartabs3" ).toggleClass( "hide" );	
 }
