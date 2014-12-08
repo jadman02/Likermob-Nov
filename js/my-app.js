@@ -2159,19 +2159,21 @@ function removeSlide(){
 	myPhotoBrowserStandalone.slider.update();
 }
 
-function toggleFilter(){
-$$( "#toolbarfilter1" ).toggleClass( "hide" );
-$$( "#toolbarfilter2" ).toggleClass( "hide" );
-$$( "#toolbarfilter3" ).toggleClass( "hide" );
-$$( "#toolbarfilter4" ).toggleClass( "hide" );
-$$( "#toolbartabs1" ).toggleClass( "hide" );
-$$( "#toolbartabs2" ).toggleClass( "hide" );
-$$( "#toolbartabs3" ).toggleClass( "hide" );
+function toggleFilter1(){
+$$( '.toolbartabs' ).css( 'display', 'none');
+$$( '.toolbarfilter' ).css( 'display', 'block');
+}
+function toggleFilter2(){
+$$( '.toolbarfilter' ).css( 'display', 'none');
+$$( '.toolbartabs' ).css( 'display', 'block');
 }
 
-function toggleSearch(){
+function toggleSearch1(){
 $$( "#toolbarsearch" ).toggleClass( "hide" );
-$$( "#toolbartabs1" ).toggleClass( "hide" );
-$$( "#toolbartabs2" ).toggleClass( "hide" );
-$$( "#toolbartabs3" ).toggleClass( "hide" );	
+$$( '.toolbartabs' ).css( 'display', 'none');	
+}
+
+function toggleSearch2(){
+$$( "#toolbarsearch" ).toggleClass( "hide" );
+$$( '.toolbartabs' ).css( 'display', 'block');	
 }
