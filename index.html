@@ -286,41 +286,41 @@
      <div class="toolbar-inner">
 
 
-<a href="#tab1" class="tab-link active">
+<a href="#tab1" class="tab-link active toolbartabs">
             <i class="pe-7s-star pe-2x"></i>
         </a>
-        <a href="#tab2" class="tab-link">
+        <a href="#tab2" class="tab-link toolbartabs" onclick="toggleSearch()">
            <i class="pe-7s-comment pe-2x"></i>
         </a>
-        <a href="#tab3" class="tab-link" onclick="toggleFilter()">
+        <a href="#tab3" class="tab-link toolbartabs" onclick="toggleFilter()">
            <i class="pe-7s-filter pe-2x"></i>
         </a>
 
      
-     <div class="hide" id="toolbarfilter">
-<a href="#tab1" class="tab-link active" onclick="toggleFilter()">
+
+<a href="#tab1" class="tab-link active toolbarfilter hide" onclick="toggleFilter()">
            <i class="pe-7s-filter pe-2x"></i>
         </a>
-<a href="#tab1" class="tab-link active">
+<a href="#tab1" class="tab-link active toolbarfilter hide">
             <i class="pe-7s-gleam pe-lg"></i>
             <span class="tabbar-label">New</span>
         </a>
-        <a href="#tab2" class="tab-link">
+        <a href="#tab2" class="tab-link toolbarfilter hide">
              <i class="pe-7s-map-marker pe-lg"></i></i>
             <span class="tabbar-label">Nearby</span>
         </a>
-        <a href="#tab3" class="tab-link">
+        <a href="#tab3" class="tab-link toolbarfilter hide">
              <i class="pe-7s-timer pe-lg"></i>
             <span class="tabbar-label">Expiring</span>
         </a>
-</div>
+
      
 <div class="list-block hide" id="toolbarsearch">
   <ul style="border:0;height:41px;background-color:transparent;">
     <!-- Text inputs -->
     <li>
       <div class="item-content" style="background-color:transparent;">
-        <div class="item-media"><i class="pe-7s-comment pe-2x"></i></div>
+        <div class="item-media" onclick="toggleSearch()"><i class="pe-7s-comment pe-2x"></i></div>
         <div class="item-inner">
                       
           <div class="item-input">
