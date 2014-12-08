@@ -2159,7 +2159,12 @@ function removeSlide(){
 	myPhotoBrowserStandalone.slider.update();
 }
 
-function enlargeToolbar(){
+function toggleFilter(){
 $$( "#toolbarfilter" ).toggleClass( "hide" );
-$$( "#toolbarsearch" ).toggleClass( "hide" );	
+$$( "#toolbartabs" ).toggleClass( "hide" );	
+}
+
+function toggleSearch(){
+$$( "#toolbarsearch" ).toggleClass( "hide" );
+$$( "#toolbartabs" ).toggleClass( "hide" );	
 }
