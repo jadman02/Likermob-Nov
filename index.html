@@ -30,7 +30,7 @@
 }
      
      
-     
+
 
      .height{height:200px;}
      .hide {display:none;}
@@ -284,13 +284,43 @@
 <div class="toolbar tabbar tabbar-labels" id="hometoolbar" style="height:41px;">
     
      <div class="toolbar-inner">
+
+<div id="toolbartabs">
+<a href="#tab1" class="tab-link active">
+            <i class="pe-7s-star pe-2x"></i>
+        </a>
+        <a href="#tab2" class="tab-link">
+           <i class="pe-7s-comment pe-2x"></i>
+        </a>
+        <a href="#tab3" class="tab-link">
+           <i class="pe-7s-filter pe-2x"></i>
+        </a>
+     </div>
      
-<div class="list-block" id="toolbarsearch">
+     <div class="hide" id="toolbarfilter">
+<a href="#tab1" class="tab-link active">
+           <i class="pe-7s-filter pe-2x"></i>
+        </a>
+<a href="#tab1" class="tab-link active">
+            <i class="pe-7s-gleam pe-lg"></i>
+            <span class="tabbar-label">New</span>
+        </a>
+        <a href="#tab2" class="tab-link">
+             <i class="pe-7s-map-marker pe-lg"></i></i>
+            <span class="tabbar-label">Nearby</span>
+        </a>
+        <a href="#tab3" class="tab-link">
+             <i class="pe-7s-timer pe-lg"></i>
+            <span class="tabbar-label">Expiring</span>
+        </a>
+</div>
+     
+<div class="list-block" class="hide" id="toolbarsearch">
   <ul style="border:0;height:41px;background-color:transparent;">
     <!-- Text inputs -->
     <li>
       <div class="item-content" style="background-color:transparent;">
-        <div class="item-media" onclick="enlargeToolbar();"><a href="#" id="resultgclear" onclick="clearInput();" style="display:none;float:left;margin-top:3px;color:hsl(0, 0%, 70%);"><i class="pe-7s-close-circle pe-lg"></i></a></div>
+        <div class="item-media"><i class="pe-7s-comment pe-2x"></i></div>
         <div class="item-inner">
                       
           <div class="item-input">
