@@ -2160,11 +2160,11 @@ function removeSlide(){
 }
 
 function toggleFilter(){
-$$( "#toolbarfilter" ).toggleClass( "hide" );
-$$( "#toolbartabs" ).toggleClass( "hide" );	
+$$( ".toolbarfilter" ).toggleClass( "hide" );
+$$( ".toolbartabs" ).toggleClass( "hide" );	
 }
 
 function toggleSearch(){
 $$( "#toolbarsearch" ).toggleClass( "hide" );
-$$( "#toolbartabs" ).toggleClass( "hide" );	
+$$( ".toolbartabs" ).toggleClass( "hide" );	
 }
