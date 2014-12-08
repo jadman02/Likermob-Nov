@@ -2160,8 +2160,8 @@ function removeSlide(){
 }
 
 function toggleFilter(){
-$$( ".toolbarfilter" ).toggleClass( "hide" );
-$$( ".toolbartabs" ).toggleClass( "hide" );	
+$$( '.toolbarfilter' ).css( 'display', 'block');
+$$( '.toolbartabs' ).css( 'display', 'none');
 }
 
 function toggleSearch(){
