@@ -2159,21 +2159,15 @@ function removeSlide(){
 	myPhotoBrowserStandalone.slider.update();
 }
 
-function toggleFilter1(){
-$$( '.toolbartabs' ).css( 'display', 'none');
-$$( '.toolbarfilter' ).css( 'display', 'block');
-}
-function toggleFilter2(){
-$$( '.toolbarfilter' ).css( 'display', 'none');
-$$( '.toolbartabs' ).css( 'display', 'block');
+function toggleFilter(){
+$$( '.toolbartabs' ).toggleClass( "hide" );
+$$( '.toolbarfilter' ).toggleClass( "hide" );
 }
 
-function toggleSearch1(){
+
+function toggleSearch(){
 $$( "#toolbarsearch" ).toggleClass( "hide" );
-$$( '.toolbartabs' ).css( 'display', 'none');	
+$$( ".toolbartabs" ).toggleClass( "hide" );
 }
 
-function toggleSearch2(){
-$$( "#toolbarsearch" ).toggleClass( "hide" );
-$$( '.toolbartabs' ).css( 'display', 'block');	
-}
+
