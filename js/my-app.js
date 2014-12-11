@@ -19,7 +19,18 @@ document.getElementById("profilepic").innerHTML = '<img src="http://graph.facebo
 
 
 
-
+var ad_units = {
+    ios : {
+        banner: 'ca-app-pub-4300087400824669/9771030634',
+        interstitial: 'ca-app-pub-4300087400824669/3724497034'
+    },
+    android : {
+        banner: 'ca-app-pub-xxx/9375997553',
+        interstitial: 'ca-app-pub-xxx/1657046752'
+    }
+};
+// select the right Ad Id according to platform
+var admobid = ( /(android)/i.test(navigator.userAgent) ) ? ad_units.android : ad_units.ios;
 
 
 
@@ -485,6 +496,11 @@ track_click++;
 
 }
 
+
+if(AdMob) AdMob.createBanner( {
+    adId:admobid.banner, 
+    position:AdMob.AD_POSITION.BOTTOM_CENTER, 
+    autoShow:true} );
 
 
 function removeLikes(){
