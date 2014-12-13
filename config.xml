@@ -14,7 +14,7 @@
     <author href="http://www.likermob.com" email="jadman02@hotmail.com">
         Jarrod Dean
     </author>
-
+ <gap:plugin name="com.admob.google" source="plugins.cordova.io" />
 <gap:platform name="ios" />
 <gap:plugin name="org.apache.cordova.inappbrowser"/>
 <gap:plugin name="org.apache.cordova.core.camera" />
