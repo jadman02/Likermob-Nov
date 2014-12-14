@@ -25,7 +25,6 @@
 <gap:plugin name="nl.x-services.plugins.launchmyapp">
 <param name="URL_SCHEME" value="likermob" />
 </gap:plugin>
-<gap:plugin name="com.admob.plugin" source="plugins.cordova.io" />
 <preference name="orientation" value="portrait" />
 <preference name="DisallowOverscroll" value="true" />
 <feature name="InAppPurchase">
