@@ -2174,7 +2174,6 @@ $$( ".toolbartabs" ).toggleClass( "hide" );
 }
 
 function makeComment(){
-	
-	mainView.showToolbar();
+	$$( "#hometoolbar" ).removeClass( "hide" );
 	$$('#commentinput').focus();
 }
