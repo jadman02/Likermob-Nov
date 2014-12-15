@@ -268,7 +268,10 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 
 '<div class="imagediv" style="margin:0 auto;" onclick="makeComment();">'+
 
-  '<a href="#" onclick="makeComment();" style="height:60px;width:60px;border-radius:50%;margin:0 auto;background-color:hsla(0, 0%, 100%, 0.5);" class="button"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=60&height=60" style="border-radius:50%;margin-left:-10px;"/></a>'+
+  '<a href="#" onclick="makeComment();" style="height:30px;width:30px;border-radius:50%;margin:0 auto;background-color:hsla(0, 0%, 100%, 0.5);" class="button"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=30&height=30" style="border-radius:50%;margin-left:-10px;"/></a>'+
+'<a href="#" onclick="makeComment();" style="height:30px;width:30px;border-radius:50%;margin:0 auto;background-color:hsla(0, 0%, 100%, 0.5);" class="button"><i class="pe-7s-comment pe-2x" style="float:right;"></i></a>'+
+'<a href="#" onclick="makeComment();" style="height:30px;width:30px;border-radius:50%;margin:0 auto;background-color:hsla(0, 0%, 100%, 0.5);" class="button"><i class="pe-7s-more pe-2x" style="float:right;border-right:1px solid #333;"></i></a>'+
+
 //openBrowser();
     
   
@@ -291,7 +294,7 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
    '<div class="content-block" id="content-block" style="margin-top:10px;">'+
      ' <div class="content-block-inner" style="padding-bottom:41px;background-color:hsla(0, 0%, 100%, 0.5)">'+
 
-     '<div id="dealtitle" style="float:left;"><b>'+ response[i][3] + '</b></div><i class="pe-7s-more pe-2x" style="float:right;border-right:1px solid #333;"></i><i class="pe-7s-comment pe-2x" style="float:right;"></i><br/><div>'+response[i][4]+'</div>'+
+     '<div id="dealtitle" style="float:left;"><b>'+ response[i][3] + '</b></div><br/><div>'+response[i][4]+'</div>'+
          '<div style="float:left;font-size:14px;clear:both;"><i class="pe-7s-clock pe-lg"></i> Expires in 6 days</div>'+
 '<div style="float:right;font-size:14px;"><i class="pe-7s-like2 pe-lg" style="margin-right:2px;"></i>'+ response[i][17] + '<i class="pe-7s-like2 pe-lg pe-rotate-180" style="margin-left:5px;margin-right:2px;"></i>'+ response[i][18] + '</div>'+
      '</div>'+
