@@ -2174,6 +2174,7 @@ $$( ".toolbartabs" ).toggleClass( "hide" );
 }
 
 function makeComment(){
+	alert('yo');
 	$$( "#hometoolbar" ).removeClass( "hide" );
 	$$('#commentinput').focus();
 }
