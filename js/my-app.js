@@ -180,6 +180,8 @@ var tempImage;
 
 function functionEmpty(pages_list,start,finish,position) {
 
+mainView.hideToolbar();
+
 //alert('pages_list: ' + pages_list + 'start: ' +start + 'finish: ' +finish + 'position: ' + position);
 
 var uid = localStorage.getItem("uid");
