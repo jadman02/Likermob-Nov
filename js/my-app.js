@@ -19,18 +19,7 @@ document.getElementById("profilepic").innerHTML = '<img src="http://graph.facebo
 
 
 
-var ad_units = {
-    ios : {
-        banner: 'ca-app-pub-4300087400824669/9771030634',
-        interstitial: 'ca-app-pub-4300087400824669/3724497034'
-    },
-    android : {
-        banner: 'ca-app-pub-xxx/9375997553',
-        interstitial: 'ca-app-pub-xxx/1657046752'
-    }
-};
-// select the right Ad Id according to platform
-var admobid = ( /(android)/i.test(navigator.userAgent) ) ? ad_units.android : ad_units.ios;
+
 
 
 
@@ -276,17 +265,12 @@ if (type == 'comment') {$$( '#result' ).append('<li class="swipeout s_'+ respons
 if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ response[i][2] +'" style="border-right:3px solid #ff8000;border-left:3px solid #3b5998;margin-top:5px;margin-bottom:5px;">'+
 
 '<div class="imagediv" onclick="openBrowser()" style="margin:0 auto;">'+
- '<div style="float:left;width:33.33%;">'+
-    
-  '</div>'+
-  
-   '<div style="float:left;width:33.33%;">'+
-    '<a href="#" class="button"><i class="pe-7s-comment pe-lg"></i></a>'+
-  '</div>'+
 
- ' <div style="float:left;width:33.33%;">'+
-   
-  '</div>'+
+  
+
+    '<a href="#" class="button" style="width:50px;border-radius:50%;margin:0 auto;"><i class="pe-7s-comment pe-3x"></i></a>'+
+  
+
 
 
 
