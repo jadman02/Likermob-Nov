@@ -295,11 +295,13 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 '<div style="float:right;font-size:14px;"><i class="pe-7s-like2 pe-lg" style="margin-right:2px;"></i>'+ response[i][17] + '<i class="pe-7s-like2 pe-lg pe-rotate-180" style="margin-left:5px;margin-right:2px;"></i>'+ response[i][18] + '</div>'+
      '</br></div>'+
 
+'<a href="#" style="height:40px;width:40px;border-radius:50%;margin:0 auto;" class="button" onclick="getBusiness(\''+ response[i][1]  +'\');"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=40&height=40" style="border-radius:50%;margin-left:-10px;"/></a>'+
+
     '</div>'+
 
 
            
-'<a href="#" style="height:40px;width:40px;border-radius:50%;margin:0 auto;" class="button" onclick="getBusiness(\''+ response[i][1]  +'\');"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=40&height=40" style="border-radius:50%;margin-left:-10px;"/></a>'+
+
 
 '</div>'+
 '<div class="swipeout-actions-left"><a href="#" class="bg-green swipeout-delete swipeout-overswipe" style="background-color:#3b5998;" onclick="likeButton(\''+ response[i][2]  +'\',\''+ response[i][6]  +'\')"><i class="pe-7s-like2 pe-2x"></i></a></div><div class="swipeout-actions-right"><a href="#" onclick="closeButton(\''+ response[i][2]  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a></div></li>');}
@@ -1783,7 +1785,7 @@ function moveHomeimage(){
      img.onload = function () {
      	windowsize = $$(window).width();
 	height_image = ((img.height/img.width) * windowsize);
-	var positionimage = height_image - 45;
+	var positionimage = height_image - 41;
 	var liHeight = $$( "#content-block" ).height();
 
 	var resultheight = liHeight + height_image;
