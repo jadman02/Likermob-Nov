@@ -266,9 +266,9 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 
 '<div class="imagediv" onclick="openBrowser()" style="margin:0 auto;">'+
 
-  
+  '<a href="#" style="height:40px;width:40px;border-radius:50%;margin:0 auto;" class="button" onclick="getBusiness(\''+ response[i][1]  +'\');"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=40&height=40" style="border-radius:50%;margin-left:-10px;"/></a>'+
 
-    '<a href="#" class="button" style="width:50px;border-radius:50%;margin:0 auto;width:70px;height:70px;background-color:white;"><i class="pe-7s-comment pe-3x"></i></a>'+
+    
   
 
 
@@ -295,7 +295,7 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 '<div style="float:right;font-size:14px;"><i class="pe-7s-like2 pe-lg" style="margin-right:2px;"></i>'+ response[i][17] + '<i class="pe-7s-like2 pe-lg pe-rotate-180" style="margin-left:5px;margin-right:2px;"></i>'+ response[i][18] + '</div>'+
      '</br></div>'+
 
-'<a href="#" style="height:40px;width:40px;border-radius:50%;margin:0 auto;" class="button" onclick="getBusiness(\''+ response[i][1]  +'\');"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=40&height=40" style="border-radius:50%;margin-left:-10px;"/></a>'+
+
 
     '</div>'+
 
