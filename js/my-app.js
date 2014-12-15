@@ -266,11 +266,10 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 
 '<div class="imagediv" onclick="openBrowser();makeComment();" style="margin:0 auto;">'+
 
-  '<a href="#" style="height:60px;width:60px;border-radius:50%;margin:0 auto;background-color:hsla(0, 0%, 100%, 0.5);" class="button" ><i class="pe-7s-comment pe-3x" style="margin-top:10px;"></i></a>'+
+  '<a href="#" style="height:60px;width:60px;border-radius:50%;margin:0 auto;background-color:hsla(0, 0%, 100%, 0.5);" class="button" onclick="getBusiness(\''+ response[i][1]  +'\');"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=40&height=40" style="border-radius:50%;margin-left:-10px;"/></a>'+
 
     
-  //getBusiness(\''+ response[i][1]  +'\');
-//<img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=40&height=40" style="border-radius:50%;margin-left:-10px;"/>
+  
 
 
 //onclick="popUp(\''+ response[i][3]  +'\',\''+ singlequote  +'\',\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')"
