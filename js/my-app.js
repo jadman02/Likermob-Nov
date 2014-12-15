@@ -268,7 +268,7 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 
   
 
-    '<a href="#" class="button" style="width:50px;border-radius:50%;margin:0 auto;"><i class="pe-7s-comment pe-3x"></i></a>'+
+    '<a href="#" class="button" style="width:50px;border-radius:50%;margin:0 auto;width:70px;height:70px;background-color:white;"><i class="pe-7s-comment pe-3x"></i></a>'+
   
 
 
