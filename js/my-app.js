@@ -180,7 +180,7 @@ var tempImage;
 
 function functionEmpty(pages_list,start,finish,position) {
 
-mainView.hideToolbar();
+myApp.hideToolbar(toolbar);
 
 //alert('pages_list: ' + pages_list + 'start: ' +start + 'finish: ' +finish + 'position: ' + position);
 
