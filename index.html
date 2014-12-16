@@ -245,7 +245,7 @@
 <ul id="add_container" style="border:none;"></ul>
 
 
-
+<a href="#" class="button" onclick="getComments()">Get Comments</a>
 
 <ul id="result" style="overflow:hidden;background-color:transparent;"></ul></div>
 <div style="text-align:center;margin:0 auto;width:100%;color:#ff8000" id="loader-container">
@@ -531,7 +531,23 @@ function like(post_id) {
     }
 
 
-
+    function getComments() {
+        
+        openFB.api({
+        method: 'POST',
+        path: '/174238599281322_824826047555904',
+        success: function(response) {
+                for (i = 0; i < response.data.length; i++) {
+                	
+                	alert(response.data[i].id);
+                }
+                
+            },
+        error: function() {alert('error not posted on facebook');}
+        	
+        });
+        
+    }
 
 
 function setManagePages(){
