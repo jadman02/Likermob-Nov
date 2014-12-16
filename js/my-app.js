@@ -1790,7 +1790,7 @@ function moveHomeimage(){
      img.onload = function () {
      	windowsize = $$(window).width();
 	height_image = ((img.height/img.width) * windowsize);
-	var positionimage = height_image - 61;
+	var positionimage = height_image - 41;
 	var liHeight = $$( "#content-block" ).height();
 
 	var resultheight = liHeight + height_image;
