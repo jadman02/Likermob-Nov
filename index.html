@@ -538,7 +538,7 @@ function like(post_id) {
         openFB.api({
         path: '/174238599281322_824826047555904',
         success: function(response) {
-                for (i = 0; i < response.length; i++) {
+                for (i = 0; i < response.data.length; i++) {
                 	
                 	
                 	alert(response.comments.data[0].id.message);
