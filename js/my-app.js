@@ -281,7 +281,7 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 //onclick="popUp(\''+ response[i][3]  +'\',\''+ singlequote  +'\',\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')"
 '</div>'+
 '<div class="swipeout-content">'+
-'<a href="#" id="getDeal"   class="item-content" style="margin-top:-50px;">'+
+'<a href="#" id="getDeal"   class="item-content">'+
 '<div class="item-inner" style="border-bottom:0;">'+
 '<div class="item-title-row" style="clear:both;">'+
 
