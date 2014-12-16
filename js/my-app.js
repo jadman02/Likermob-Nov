@@ -269,7 +269,7 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 '<div class="imagediv" style="margin:0 auto;">'+
 '<a href="#" onclick="makeComment();" style="z-index:1000000;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-more pe-2x" style="margin-left:-5px;margin-top:5px;"></i></a>'+
 '<a href="#" onclick="makeComment();" style="z-index:1000000;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-comment pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a>'+
-  '<a href="#" onclick="getBusiness(\''+ response[i][1]  +'\');" style="z-index:1000000;float:right;margin-right:5px;height:40px;width:40px;border-radius:0;background-color:transparent" class="button"><i class="pe-7s-info pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a>'+
+  '<a href="#" onclick="getBusiness(\''+ response[i][1]  +'\');" style="z-index:1000000;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent" class="button"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=30&height=30" style="border-radius:50%;"/></a>'+
 
 
 
@@ -296,7 +296,6 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
      ' <div class="content-block-inner" style="padding-bottom:41px;background-color:hsla(0, 0%, 100%, 0.5)">'+
 
      '<div id="dealtitle" style="float:left;width:"><b>'+ response[i][3] + 'fklasjdlksadjskldjsakldjsakld the best in the world</b></div><br/><div>'+response[i][4]+'</div>'+
-         '<div style="float:left;font-size:14px;"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=10&height=10" style="border-radius:50%;"/> Smilesavers (Dentist)</div>'+
          '<div style="float:left;font-size:14px;"><i class="pe-7s-cloud-upload pe-lg"></i> Uploaded 6 minutes ago</div>'+
          '<div style="float:left;font-size:14px;clear:both;"><i class="pe-7s-clock pe-lg"></i> Expires in 6 days</div>'+
          
