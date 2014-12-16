@@ -271,7 +271,7 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 '<a href="#" onclick="makeComment();" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-comment pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a>'+
   '<a href="#" onclick="getBusiness(\''+ response[i][1]  +'\');" style="z-index:100;float:right;margin-right:5px;height:40px;border:0;background-color:transparent" class="button"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=30&height=30" style="border-radius:50%;"/></a>'+
 
-
+    '<div style="float:right;font-size:14px;clear:both;"><i class="pe-7s-cloud-upload pe-lg"></i> Uploaded 6 minutes ago by Smilesavers</div>'+
 
 //openBrowser();
     
@@ -300,7 +300,7 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
          '<div style="float:left;font-size:14px;clear:both;"><i class="pe-7s-clock pe-lg"></i> Expires in 6 days</div>'+
          
 '<div style="float:right;font-size:14px;"><i class="pe-7s-like2 pe-lg" style="margin-right:2px;"></i>'+ response[i][17] + '<i class="pe-7s-like2 pe-lg pe-rotate-180" style="margin-left:5px;margin-right:2px;"></i>'+ response[i][18] + '</div>'+
-    '<div style="float:left;font-size:14px;"><i class="pe-7s-cloud-upload pe-lg"></i> Uploaded 6 minutes ago</div>'+
+
      '</div>'+
 
 
