@@ -292,7 +292,7 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 '<div class="item-subtitle hide">by '+response[i][16]+'</div>'+
 '</div>'+
 '</a>'+
-   '<div class="content-block" id="content-block" style="margin-top:10px;clear:both;">'+
+   '<div class="content-block" id="content-block" style="margin-top:20px;clear:both;">'+
      ' <div class="content-block-inner" style="padding-bottom:41px;background-color:hsla(0, 0%, 100%, 0.5)">'+
 
      '<div id="dealtitle" style="float:left;"><b>'+ response[i][3] + '</b></div><br/><div>'+response[i][4]+'</div>'+
