@@ -267,9 +267,9 @@ if (type == 'comment') {$$( '#result' ).append('<li class="swipeout s_'+ respons
 if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ response[i][2] +'" style="border-right:3px solid #ff8000;border-left:3px solid #3b5998;margin-top:5px;margin-bottom:5px;">'+
 
 '<div class="imagediv" style="margin:0 auto;">'+
-'<a href="#" onclick="makeComment();" style="float:right;margin-right:5px;height:40px;width:40px;border-radius:50%;background-color:white;" class="button"><i class="pe-7s-more pe-2x" style="margin-left:-5px;margin-top:5px;"></i></a>'+
-'<a href="#" onclick="makeComment();" style="float:right;margin-right:5px;height:40px;width:40px;border-radius:50%;background-color:white;" class="button"><i class="pe-7s-comment pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a>'+
-  '<a href="#" onclick="getBusiness(\''+ response[i][1]  +'\');" style="float:right;margin-right:5px;height:40px;width:40px;border-radius:50%;background-color:hsla(0, 0%, 100%, 0.5);" class="button"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=40&height=40" style="border-radius:50%;margin-left:-10px;"/></a>'+
+'<a href="#" onclick="makeComment();" style="z-index:1000000;float:right;margin-right:5px;height:40px;width:40px;border-radius:50%;background-color:white;" class="button"><i class="pe-7s-more pe-2x" style="margin-left:-5px;margin-top:5px;"></i></a>'+
+'<a href="#" onclick="makeComment();" style="z-index:1000000;float:right;margin-right:5px;height:40px;width:40px;border-radius:50%;background-color:white;" class="button"><i class="pe-7s-comment pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a>'+
+  '<a href="#" onclick="getBusiness(\''+ response[i][1]  +'\');" style="z-index:1000000;float:right;margin-right:5px;height:40px;width:40px;border-radius:50%;background-color:hsla(0, 0%, 100%, 0.5);" class="button"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=40&height=40" style="border-radius:50%;margin-left:-10px;"/></a>'+
 
 
 
