@@ -267,8 +267,8 @@ if (type == 'comment') {$$( '#result' ).append('<li class="swipeout s_'+ respons
 if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ response[i][2] +'" style="border-right:3px solid #ff8000;border-left:3px solid #3b5998;margin-top:5px;margin-bottom:5px;">'+
 
 '<div class="imagediv" style="margin:0 auto;">'+
-'<a href="#" onclick="makeComment();" style="float:right;margin-right:5px;height:40px;width:40px;border-radius:50%;background-color:hsla(0, 0%, 100%, 0.5);" class="button"><i class="pe-7s-more pe-2x" style="margin-left:-5px;margin-top:5px;"></i></a>'+
-'<a href="#" onclick="makeComment();" style="float:right;margin-right:5px;height:40px;width:40px;border-radius:50%;background-color:hsla(0, 0%, 100%, 0.5);" class="button"><i class="pe-7s-comment pe-2x" style="margin-left:-5px;margin-top:5px;"></i></a>'+
+'<a href="#" onclick="makeComment();" style="float:right;margin-right:5px;height:40px;width:40px;border-radius:50%;background-color:white;" class="button"><i class="pe-7s-more pe-2x" style="margin-left:-5px;margin-top:5px;"></i></a>'+
+'<a href="#" onclick="makeComment();" style="float:right;margin-right:5px;height:40px;width:40px;border-radius:50%;background-color:white;" class="button"><i class="pe-7s-comment pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a>'+
   '<a href="#" onclick="getBusiness(\''+ response[i][1]  +'\');" style="float:right;margin-right:5px;height:40px;width:40px;border-radius:50%;background-color:hsla(0, 0%, 100%, 0.5);" class="button"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=40&height=40" style="border-radius:50%;margin-left:-10px;"/></a>'+
 
 
@@ -292,7 +292,7 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 '<div class="item-subtitle hide">by '+response[i][16]+'</div>'+
 '</div>'+
 '</a>'+
-   '<div class="content-block" id="content-block" style="margin-top:19px;clear:both;">'+
+   '<div class="content-block" id="content-block" style="margin-top:9px;clear:both;">'+
      ' <div class="content-block-inner" style="padding-bottom:41px;background-color:hsla(0, 0%, 100%, 0.5)">'+
 
      '<div id="dealtitle" style="float:left;"><b>'+ response[i][3] + '</b></div><br/><div>'+response[i][4]+'</div>'+
@@ -1790,7 +1790,7 @@ function moveHomeimage(){
      img.onload = function () {
      	windowsize = $$(window).width();
 	height_image = ((img.height/img.width) * windowsize);
-	var positionimage = height_image - 41;
+	var positionimage = height_image - 51;
 	var liHeight = $$( "#content-block" ).height();
 
 	var resultheight = liHeight + height_image;
