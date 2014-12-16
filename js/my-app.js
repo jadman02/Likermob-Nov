@@ -295,8 +295,8 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
    '<div class="content-block" id="content-block" style="margin-top:9px;clear:both;">'+
      ' <div class="content-block-inner" style="padding-bottom:41px;background-color:hsla(0, 0%, 100%, 0.5)">'+
 
-     '<div id="dealtitle" style="float:left;"><b>'+ response[i][3] + 'fklasjdlksadjskldjsakldjsakld the best in the world</b></div><div style="float:right;font-size:14px;"><i class="pe-7s-cloud-upload pe-lg"></i> 6 minutes ago</div><br/><div>'+response[i][4]+'</div>'+
-         '<div style="float:left;font-size:14px;clear:both;"><i class="pe-7s-clock pe-lg"></i> Expires in 6 days</div>'+
+     '<div id="dealtitle" style="float:left;width:"><b>'+ response[i][3] + 'fklasjdlksadjskldjsakldjsakld the best in the world</b></div><div style="float:left;width:40%;font-size:14px;"><i class="pe-7s-cloud-upload pe-lg"></i> 6 minutes ago</div><br/><div>'+response[i][4]+'</div>'+
+         '<div style="float:left;width:60%;font-size:14px;clear:both;"><i class="pe-7s-clock pe-lg"></i> Expires in 6 days</div>'+
 '<div style="float:right;font-size:14px;"><i class="pe-7s-like2 pe-lg" style="margin-right:2px;"></i>'+ response[i][17] + '<i class="pe-7s-like2 pe-lg pe-rotate-180" style="margin-left:5px;margin-right:2px;"></i>'+ response[i][18] + '</div>'+
      '</div>'+
 
