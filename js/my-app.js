@@ -295,7 +295,7 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
    '<div class="content-block" id="content-block" style="margin-top:-1px;clear:both;">'+
      ' <div class="content-block-inner" style="padding-bottom:41px;background-color:hsla(0, 0%, 100%, 0.5)">'+
 
-     '<div id="dealtitle" style="float:left;max-width:60%;"><b>'+ response[i][3] + 'fklasjdlksadjskldjsakldjsakld the best in the world</b></div><div style="float:left;width:40%;font-size:14px;"><i class="pe-7s-cloud-upload pe-lg"></i> Uploaded 6 minutes ago</div><br/><div style="clear:both;">'+response[i][4]+'</div>'+
+     '<div id="dealtitle" style="float:left;max-width:60%;"><b>'+ response[i][3] + ' fklasjdl ksadjskld jsakldjs akld the best in the world</b></div><div style="float:left;width:40%;font-size:14px;"><i class="pe-7s-cloud-upload pe-lg"></i> Uploaded 6 minutes ago</div><br/><div style="clear:both;">'+response[i][4]+'</div>'+
 
          '<div style="float:left;font-size:14px;clear:both;"><i class="pe-7s-clock pe-lg"></i> Expires in 6 days</div>'+
          
