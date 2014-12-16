@@ -267,9 +267,9 @@ if (type == 'comment') {$$( '#result' ).append('<li class="swipeout s_'+ respons
 if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ response[i][2] +'" style="border-right:3px solid #ff8000;border-left:3px solid #3b5998;margin-top:5px;margin-bottom:5px;">'+
 
 '<div class="imagediv" style="margin:0 auto;">'+
-'<a href="#" onclick="makeComment();" style="z-index:1000000;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-more pe-2x" style="margin-left:-5px;margin-top:5px;"></i></a>'+
-'<a href="#" onclick="makeComment();" style="z-index:1000000;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-comment pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a>'+
-  '<a href="#" onclick="getBusiness(\''+ response[i][1]  +'\');" style="z-index:1000000;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent" class="button"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=30&height=30" style="border-radius:50%;"/></a>'+
+'<a href="#" onclick="makeComment();" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-more pe-2x" style="margin-left:-5px;margin-top:5px;"></i></a>'+
+'<a href="#" onclick="makeComment();" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-comment pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a>'+
+  '<a href="#" onclick="getBusiness(\''+ response[i][1]  +'\');" style="z-index:100;float:right;margin-right:5px;height:40px;border:0;background-color:transparent" class="button"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=30&height=30" style="border-radius:50%;"/></a>'+
 
 
 
@@ -311,7 +311,7 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 
 
 '</div>'+
-'<div class="swipeout-actions-left"><a href="#" class="bg-green swipeout-delete swipeout-overswipe" style="background-color:#3b5998;" onclick="likeButton(\''+ response[i][2]  +'\',\''+ response[i][6]  +'\')"><i class="pe-7s-like2 pe-2x"></i></a></div><div class="swipeout-actions-right"><a href="#" onclick="closeButton(\''+ response[i][2]  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a></div></li>');}
+'<div class="swipeout-actions-left"><a href="#" class="bg-green swipeout-delete swipeout-overswipe" style="background-color:#3b5998;" onclick="likeButton(\''+ response[i][2]  +'\',\''+ response[i][6]  +'\')"><i class="pe-7s-like2 pe-2x"></i></a></div><div class="swipeout-actions-right" style="z-index:100000"><a href="#" onclick="closeButton(\''+ response[i][2]  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a></div></li>');}
 }
 
 
