@@ -268,9 +268,9 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 
 '<div class="imagediv" style="margin:0 auto;" onclick="makeComment();">'+
 
-  '<a href="#" onclick="makeComment();" style="height:30px;width:30px;border-radius:50%;margin:0 auto;background-color:hsla(0, 0%, 100%, 0.5);" class="button"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=30&height=30" style="border-radius:50%;margin-left:-10px;"/></a>'+
-'<a href="#" onclick="makeComment();" style="height:30px;width:30px;border-radius:50%;margin:0 auto;background-color:hsla(0, 0%, 100%, 0.5);" class="button"><i class="pe-7s-comment pe-2x" style="float:right;"></i></a>'+
-'<a href="#" onclick="makeComment();" style="height:30px;width:30px;border-radius:50%;margin:0 auto;background-color:hsla(0, 0%, 100%, 0.5);" class="button"><i class="pe-7s-more pe-2x" style="float:right;border-right:1px solid #333;"></i></a>'+
+  '<a href="#" onclick="makeComment();" style="float:left;height:50px;width:50px;border-radius:50%;background-color:hsla(0, 0%, 100%, 0.5);" class="button"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=50&height=50" style="border-radius:50%;margin-left:-10px;"/></a>'+
+'<a href="#" onclick="makeComment();" style="float:left;height:50px;width:50px;border-radius:50%;background-color:hsla(0, 0%, 100%, 0.5);" class="button"><i class="pe-7s-comment pe-2x" style="float:right;"></i></a>'+
+'<a href="#" onclick="makeComment();" style="float:left;height:50px;width:50px;border-radius:50%;background-color:hsla(0, 0%, 100%, 0.5);" class="button"><i class="pe-7s-more pe-2x" style="float:right;border-right:1px solid #333;"></i></a>'+
 
 //openBrowser();
     
