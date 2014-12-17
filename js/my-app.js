@@ -302,18 +302,19 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 '<div style="float:right;font-size:14px;"><i class="pe-7s-like2 pe-lg button" style="border-radius:50%;border-color:#3b5998;margin-right:2px;color:#3b5998"></i>'+ response[i][17] + '<i class="pe-7s-like2 pe-lg pe-rotate-180 button" style="border-radius:50%;color:#ff8000;border-color:#ff8000;margin-left:5px;margin-right:2px;"></i>'+ response[i][18] + '</div>'+
 
      '</div>'+
+
 '<a href="#" class="button" onclick="getComments()">Get Comments</a>'+
+
+    '</div>'+
+
+
+      
    '<div class="page-content messages-content">'+
     '<div class="messages messages-auto-layout">'+
       '<div class="message message-received" id="commentlist">'+
     '</div>'+
   '</div>'+
-'</div>'+  
-
-    '</div>'+
-
-
-           
+'</div>'+       
 
 
 '</div>'+
