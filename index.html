@@ -245,7 +245,7 @@
 <ul id="add_container" style="border:none;"></ul>
 
 
-<a href="#" class="button" onclick="getComments()">Get Comments</a>
+
 
 <ul id="result" style="overflow:hidden;background-color:transparent;"></ul></div>
 <div style="text-align:center;margin:0 auto;width:100%;color:#ff8000" id="loader-container">
@@ -539,11 +539,13 @@ function like(post_id) {
         path: '/174238599281322_824826047555904',
         success: function(response) {
                 
-                alert(response.id);
+
                 
                 for (i = 0; i < 10; i++) {
+                
+                $$( '#commentlist' ).append(response.comments.data[i].message+ '</br></br>');
                 	
-                alert(response.comments.data[i].message);	
+                	
                 	
                 }
                 
