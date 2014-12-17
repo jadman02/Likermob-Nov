@@ -297,8 +297,7 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
    '<div class="content-block" id="content-block" style="margin-top:-1px;clear:both;">'+
      ' <div class="content-block-inner" style="padding-bottom:41px;background-color:hsla(0, 0%, 100%, 0.5)">'+
 
-'<div class="messages-date">Sunday, Feb 3 <span>11:58</span></div>'+  
-'<div class="message-text">additional class for single message which indicates that this message was sent by user. It stays on right side with </div>'+
+'<div class="messages-date">Created Sunday, Feb 3 <span>11:58</span> by Smilesavers</div>'+  
      '<div id="dealtitle" style="float:left;"><b>'+ response[i][3] + ' fklasjdl ksadjskld jsakldjs akld the best in the world</b></div><br/><div style="clear:both;">'+response[i][4]+'</div>'+
 
          '<div style="float:left;font-size:14px;clear:both;"><i class="pe-7s-clock pe-lg"></i> Expires in 6 days</div>'+
