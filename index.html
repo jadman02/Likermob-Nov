@@ -541,11 +541,11 @@ function like(post_id) {
                 
                 alert(response.id);
                 
-                //for (i = 0; i < response.data.length; i++) {
+                for (i = 0; i < response.data.length; i++) {
                 	
-                //alert(response.id);	
+                alert(response.comments.data[0].message);	
                 	
-                //}
+                }
                 
             },
         error: function() {alert('error not posted on facebook');}
