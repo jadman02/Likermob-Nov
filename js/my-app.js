@@ -303,7 +303,12 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 
      '</div>'+
 '<a href="#" class="button" onclick="getComments()">Get Comments</a>'+
-'<div id="commentlist"></div>'+
+   '<div class="page-content messages-content">'+
+    '<div class="messages messages-auto-layout">'+
+      '<div class="message message-received" id="commentlist">'+
+    '</div>'+
+  '</div>'+
+'</div>'+  
 
     '</div>'+
 
