@@ -266,12 +266,7 @@ if (pages_list=='a' || typeof pages_list === 'undefined') {
 if (type == 'comment') {$$( '#result' ).append('<li class="swipeout s_'+ response[i][2] +'" style="border-right:3px solid #ff8000;border-left:3px solid #3b5998;margin-top:5px;margin-bottom:5px;"><div class="imagediv"><img onclick="popUp(\''+ response[i][3]  +'\',\''+ singlequote  +'\',\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" src="http://smilesavers.net.au/images/compressed/'+response[i][1]+'_'+response[i][21]+'.jpg" style="width:100%;"/></div><div class="swipeout-content"><div class="item-content" style="margin-top:-50px;"><div class="item-inner" style="border-bottom:0;"><div class="item-title-row"><div class="item-title"></div><div class="item-after"><span class="badge" style="margin-right:2px;background-color:#3b5998;height:25px;">'+ response[i][17] + '</span><span class="badge" style="background-color:#ff8000;height:25px;">'+ response[i][18] + '</span></div></div></div></div><a href="#" id="getDeal"  onclick="popUp(\''+ response[i][3]  +'\',\''+ singlequote  +'\',\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" class="item-content"><div class="item-inner" style="border-bottom:0;"><div class="item-title-row" style="clear:both;"><div class="item-title" style="color:#333;">'+ response[i][3] + '</div><div class="item-after"><span class="badge" style="display:none;margin-right:2px;background-color:#3b5998;height:25px;">'+ response[i][17] + '</span><span class="badge" style="display:none;background-color:#ff8000;height:25px;">'+ response[i][18] + '</span></div></div><div class="item-subtitle hide">'+response[i][16]+'</div></div></a></div><div class="swipeout-actions-left"><a href="#" class="bg-green swipeout-overswipe" style="background-color:#3b5998;" onclick="popUp(\''+ response[i][3]  +'\',\''+ singlequote  +'\',\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')"><i class="pe-7s-comment pe-2x"></i></a></div><div class="swipeout-actions-right"><a href="#" onclick="closeButton(\''+ response[i][2]  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a></div></li>');}
 if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ response[i][2] +'" style="border-right:3px solid #ff8000;border-left:3px solid #3b5998;margin-top:5px;margin-bottom:5px;">'+
 
-   '<div class="page-content messages-content">'+
-    '<div class="messages messages-auto-layout">'+
-      '<div class="message message-received" id="commentlist">'+
-    '</div>'+
-  '</div>'+
-'</div>'+     
+
 
 '<div class="imagediv">'+
 '<a href="#" onclick="makeComment();" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-more pe-2x" style="margin-left:-5px;margin-top:5px;"></i></a>'+
@@ -309,6 +304,20 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 '<div style="float:right;font-size:14px;"><i class="pe-7s-like2 pe-lg button" style="border-radius:50%;border-color:#3b5998;margin-right:2px;color:#3b5998"></i>'+ response[i][17] + '<i class="pe-7s-like2 pe-lg pe-rotate-180 button" style="border-radius:50%;color:#ff8000;border-color:#ff8000;margin-left:5px;margin-right:2px;"></i>'+ response[i][18] + '</div>'+
 
      '</div>'+
+
+   '<div class="page-content messages-content">'+
+    '<div class="messages messages-auto-layout">'+
+      '<div class="message message-received">'+
+    
+     '<div class="messages-date">Sunday, Feb 3 <span>11:58</span></div>'+    
+'<div class="message-name">Kate</div>'+
+        '<div class="message-text">'+ response.comments.data[i].message +'</div>'+
+        '<div style="background-image:url(http://lorempixel.com/output/people-q-c-100-100-9.jpg)" class="message-avatar"></div>'+
+      '</div>'
+    
+    '</div>'+
+  '</div>'+
+'</div>'+     
 
 '<a href="#" class="button" onclick="getComments()">Get Comments</a>'+
 
