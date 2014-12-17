@@ -311,7 +311,7 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
     
      '<div class="messages-date">Sunday, Feb 3 <span>11:58</span></div>'+    
 '<div class="message-name">Kate</div>'+
-        '<div class="message-text">'+ response.comments.data[i].message +'</div>'+
+        '<div class="message-text">additional class for single message which indicates that this message was sent by user. It stays on right side with </div>'+
         '<div style="background-image:url(http://lorempixel.com/output/people-q-c-100-100-9.jpg)" class="message-avatar"></div>'+
       '</div>'
     
