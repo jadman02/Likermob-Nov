@@ -561,9 +561,10 @@ function like(post_id) {
           var img = new Image();
      img.src = $$( '.homecontent' ).css('background-image').replace(/url\(|\)$|"/ig, '');      
         var windowsize = $$(window).width();
+        var commentlistbox = $$( ".messages-content" ).height(); 
 	var height_image = ((img.height/img.width) * windowsize);
 	var liHeight = $$( "#content-block" ).height();
-	var resultheight = liHeight + height_image;
+	var resultheight = liHeight + height_image + commentlistbox;
 	 $$( '#result' ).css( 'height', resultheight + 'px' );
                 
             },
