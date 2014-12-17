@@ -296,7 +296,9 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 '</a>'+
    '<div class="content-block" id="content-block" style="margin-top:-1px;clear:both;">'+
      ' <div class="content-block-inner" style="padding-bottom:41px;background-color:hsla(0, 0%, 100%, 0.5)">'+
-'<div style="float:right;font-size:14px;clear:both;"><i class="pe-7s-cloud-upload pe-lg"></i> Uploaded 6 minutes ago by Smilesavers</div>'+
+
+'<div class="messages-date">Sunday, Feb 3 <span>11:58</span></div>'+  
+'<div class="message-text">additional class for single message which indicates that this message was sent by user. It stays on right side with </div>'+
      '<div id="dealtitle" style="float:left;"><b>'+ response[i][3] + ' fklasjdl ksadjskld jsakldjs akld the best in the world</b></div><br/><div style="clear:both;">'+response[i][4]+'</div>'+
 
          '<div style="float:left;font-size:14px;clear:both;"><i class="pe-7s-clock pe-lg"></i> Expires in 6 days</div>'+
@@ -304,20 +306,6 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 '<div style="float:right;font-size:14px;"><i class="pe-7s-like2 pe-lg button" style="border-radius:50%;border-color:#3b5998;margin-right:2px;color:#3b5998"></i>'+ response[i][17] + '<i class="pe-7s-like2 pe-lg pe-rotate-180 button" style="border-radius:50%;color:#ff8000;border-color:#ff8000;margin-left:5px;margin-right:2px;"></i>'+ response[i][18] + '</div>'+
 
      '</div>'+
-
-   '<div class="page-content messages-content">'+
-    '<div class="messages messages-auto-layout">'+
-      '<div class="message message-received">'+
-    
-     '<div class="messages-date">Sunday, Feb 3 <span>11:58</span></div>'+    
-'<div class="message-name">Kate</div>'+
-        '<div class="message-text">additional class for single message which indicates that this message was sent by user. It stays on right side with </div>'+
-        '<div style="background-image:url(\'http://graph.facebook.com/713560463/picture?type=normal\')" class="message-avatar"></div>'+
-      '</div>'+
-    
-    '</div>'+
-  '</div>'+
-'</div>'+     
 
 '<a href="#" class="button" onclick="getComments()">Get Comments</a>'+
 
