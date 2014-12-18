@@ -303,16 +303,8 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 
          '<div style="float:left;font-size:14px;clear:both;"><i class="pe-7s-clock pe-lg"></i> Expires in 6 days</div>'+
 
-
-      
-      '<div class="toolbar tabbar"><div class="toolbar-inner">'+
-
- '<a href="#tab2" class="tab-link"><i class="pe-7s-clock pe-lg"><span class="badge bg-red">5</span></i></a>'+
-  '<a href="#tab2" class="tab-link"><i class="pe-7s-clock pe-lg"><span class="badge bg-blue">4</span></i></a>'+
-
-    '</div></div>'+
          
-'<div style="float:right;font-size:14px;"><i class="pe-7s-like2 pe-lg button" style="border-radius:50%;border-color:#3b5998;margin-right:2px;color:#3b5998"></i>'+ response[i][17] + '<i class="pe-7s-like2 pe-lg pe-rotate-180 button" style="border-radius:50%;color:#ff8000;border-color:#ff8000;margin-left:5px;margin-right:2px;"></i>'+ response[i][18] + '</div>'+
+'<div style="float:right;font-size:14px;"><a href="#" class="button" style="border-radius:50%;border-color:#3b5998;"><i class="pe-7s-like2 pe-lg" style="margin-right:2px;color:#3b5998"></i></a>'+ response[i][17] + '<a href="#" class="button" style="border-radius:50%;border-color:#ff8000;"><i class="pe-7s-like2 pe-lg pe-rotate-180 button" style="color:#ff8000;margin-left:5px;margin-right:2px;"></i></a>'+ response[i][18] + '</div>'+
 
      '</div>'+
 
