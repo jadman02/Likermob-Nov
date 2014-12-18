@@ -305,7 +305,7 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
   '<div style="float:left;width:20%;height:100%;"><a href="#" onclick="getBusiness(\''+ response[i][1]  +'\');" style="z-index:100;float:left;margin:0 auto;height:40px;width:40px;border:0;background-color:transparent" class="button"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=30&height=30" style="border-radius:50%;"/></a></div>'+
  
      
-     '<div style="float:left;width:80%;">'+
+     '<div style="float:left;width:80%;height:100%;">'+
      
      '<div class="messages-date" style="float:left;margin:0;padding:0;"><span>Smilesavers</span></div>'+
      '<div id="dealtitle" style="float:left;font-weight:500;">'+ response[i][3] + ' fklasjdl ksadjskld jsakldjs akld the best in the world</div><br/><div style="clear:both;">'+response[i][4]+'</div>'+
