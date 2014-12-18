@@ -300,9 +300,13 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
   ' <div class="messages-content">'+
     '<div class="messages messages-auto-layout">'+
       '<div class="messages-date">Sunday, Feb 9 <span>12:58</span></div>'+
-      '<div class="message message-sent">'+
-        '<div class="message-text">Hello</div>'+
-      '</div>'+
+      
+     ' <div class="message message-received">'+
+       ' <div class="message-name">Kate</div>'+
+       ' <div class="message-text">I am fine, thanks</div>'+
+        '<div style="background-image:url(http://lorempixel.com/output/people-q-c-100-100-9.jpg)" class="message-avatar"></div>'+
+     ' </div>'+
+      
       '</div>'+
      ' </div>'+
    
