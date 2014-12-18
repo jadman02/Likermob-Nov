@@ -293,31 +293,15 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
    '<div class="content-block" id="content-block" style="margin-top:-1px;clear:both;background-color:hsla(0, 0%, 100%, 0.8);">'+
      ' <div class="content-block-inner" style="height:100%;">'+
 
-'<div class="messages-date">Sunday, Feb 3 <span>11:58</span></div>'+  
-  
-  '<div style="float:left;width:20%;height:100%;"><a href="#" onclick="getBusiness(\''+ response[i][1]  +'\');" style="z-index:100;float:left;margin:0 auto;height:40px;width:40px;border:0;background-color:transparent" class="button"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=30&height=30" style="border-radius:50%;"/></a></div>'+
- 
-     
-     '<div style="float:left;width:80%;height:100%;">'+
-     
-     '<div class="messages-date" style="float:left;margin:0;padding:0;"><span>Smilesavers</span></div>'+
-     '<div id="dealtitle" style="float:left;font-weight:500;">'+ response[i][3] + ' fklasjdl ksadjskld jsakldjs akld the best in the world</div><br/><div style="clear:both;">'+response[i][4]+'</div>'+
 
-         '<div style="float:left;font-size:14px;clear:both;"><i class="pe-7s-clock pe-lg"></i> Expires in 6 days</div>'+
      
-     '</div>'+
-     
-
+'fasfsasdas</br>fasfsasdas</br>fasfsasdas</br>fasfsasdas</br>fasfsasdas</br>fasfsasdas</br>fasfsasdas</br>fasfsasdas</br>fasfsasdas</br>fasfsasdas</br>fasfsasdas</br>fasfsasdas</br>fasfsasdas</br>fasfsasdas</br>fasfsasdas</br>fasfsasdas</br>fasfsasdas</br>fasfsasdas</br>fasfsasdas</br>fasfsasdas</br>fasfsasdas</br>fasfsasdas</br>fasfsasdas</br>fasfsasdas</br>fasfsasdas</br>fasfsasdas</br>fasfsasdas</br>fasfsasdas</br>fasfsasdas</br>fasfsasdas</br>fasfsasdas</br>fasfsasdas</br>fasfsasdas</br>'+
          
 
 
 
 
      '</div>'+
-
-
-
-
     '</div>'+
 
 
