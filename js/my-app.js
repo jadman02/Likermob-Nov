@@ -307,8 +307,8 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
       
       '<div class="toolbar tabbar"><div class="toolbar-inner">'+
 
- '<a href="#tab2"><i class="pe-7s-clock pe-lg"><span class="badge bg-red">5</span></i></a>'+
-  '<a href="#tab2"><i class="pe-7s-clock pe-lg"><span class="badge bg-blue">4</span></i></a>'+
+ '<a href="#tab2" class="tab-link"><i class="pe-7s-clock pe-lg"><span class="badge bg-red">5</span></i></a>'+
+  '<a href="#tab2" class="tab-link"><i class="pe-7s-clock pe-lg"><span class="badge bg-blue">4</span></i></a>'+
 
     '</div></div>'+
          
