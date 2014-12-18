@@ -272,7 +272,7 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 
 
 '<div style="height:40px;background-color:hsla(0, 0%, 0%, 0.5);">'+
-'<div style="float:left;font-size:14px;"><i class="pe-7s-like2 pe-lg" style="margin-right:2px;"></i>'+ response[i][17] + '<i class="pe-7s-like2 pe-lg pe-rotate-180" style="margin-left:5px;margin-right:2px;"></i>'+ response[i][18] + '</div>'+'
+'<div style="float:left;font-size:14px;"><i class="pe-7s-like2 pe-lg" style="margin-right:2px;"></i>'+ response[i][17] + '<i class="pe-7s-like2 pe-lg pe-rotate-180" style="margin-left:5px;margin-right:2px;"></i>'+ response[i][18] + '</div>'+
 '<a href="#" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-more pe-2x" style="margin-left:-5px;margin-top:5px;"></i></a>'+
 '<a href="#" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-star pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a>'+
 '<a href="#" onclick="getBusiness(\''+ response[i][1]  +'\');" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-map pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a>'+
