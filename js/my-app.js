@@ -288,17 +288,7 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 //onclick="popUp(\''+ response[i][3]  +'\',\''+ singlequote  +'\',\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')"
 '</div>'+
 '<div class="swipeout-content">'+
-'<a href="#" id="getDeal"   class="item-content">'+
-'<div class="item-inner" style="border-bottom:0;">'+
-'<div class="item-title-row" style="clear:both;">'+
 
-'<div class="item-after">'+
-'<span class="badge" style="display:none;margin-right:2px;background-color:#3b5998;height:25px;">'+ response[i][17] + '</span><span class="badge" style="display:none;background-color:#ff8000;height:25px;">'+ response[i][18] + '</span>'+
-'</div>'+
-'</div>'+
-'<div class="item-subtitle hide">by '+response[i][16]+'</div>'+
-'</div>'+
-'</a>'+
    
    '<div class="content-block" id="content-block" style="margin-top:-1px;clear:both;background-color:hsla(0, 0%, 100%, 0.8);">'+
      ' <div class="content-block-inner" style="height:100%;">'+
