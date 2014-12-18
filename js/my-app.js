@@ -298,7 +298,7 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 '</a>'+
    
    '<div class="content-block" id="content-block" style="margin-top:-1px;clear:both;">'+
-     ' <div class="content-block-inner" style="padding-bottom:61px;background-color:hsla(0, 0%, 100%, 0.8)">'+
+     ' <div class="content-block-inner" style="height:100%;background-color:hsla(0, 0%, 100%, 0.8);">'+
 
 '<div class="messages-date">Sunday, Feb 3 <span>11:58</span></div>'+  
   
