@@ -296,6 +296,16 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 '<div class="item-subtitle hide">by '+response[i][16]+'</div>'+
 '</div>'+
 '</a>'+
+   
+  ' <div class="messages-content">'+
+    '<div class="messages messages-auto-layout">'+
+      '<div class="messages-date">Sunday, Feb 9 <span>12:58</span></div>'+
+      '<div class="message message-sent">'+
+        '<div class="message-text">Hello</div>'+
+      '</div>'+
+      '</div>'+
+     ' </div>'+
+   
    '<div class="content-block" id="content-block" style="margin-top:-1px;clear:both;">'+
      ' <div class="content-block-inner" style="padding-bottom:61px;background-color:hsla(0, 0%, 100%, 0.8)">'+
 
@@ -307,7 +317,7 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
          
 '<div style="float:right;font-size:14px;"><a href="#" class="button" style="margin-right:5px;float:left;background-color:#3b5998;border-radius:50%;border-color:#3b5998;width:50px;height:50px;"><i class="pe-7s-like2 pe-lg" style="margin-right:2px;color:white"></i>'+ response[i][17] + '</a><a href="#" class="button" style="background-color:#ff8000;float:left;border-radius:50%;border-color:#ff8000;width:40px;height:40px;"><i class="pe-7s-like2 pe-lg pe-rotate-180" style="color:white;margin-left:5px;margin-right:2px;"></i><span class="badge" style="background-color:#ff8000">'+ response[i][18] + '</span></a></div>'+
 
-'<a href="#" onclick="getBusiness(\''+ response[i][1]  +'\');" style="z-index:100;float:left;margin-right:5px;height:40px;border:0;background-color:transparent" class="button"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=30&height=30" style="border-radius:50%;"/> Smilesavers</a>'+
+
 
      '</div>'+
 
