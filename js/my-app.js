@@ -302,12 +302,16 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 
      
 
-       '<a href="#" onclick="makeComment();" style="z-index:100;margin-right:5px;height:40px;width:40px;margin:0 auto;border:0;background-color:transparent;" class="button"><i class="pe-7s-comment pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a>'+  
+       
 
 
 
 
      '</div>'+
+     
+     
+     '<a href="#" onclick="makeComment();" style="z-index:100;margin-right:5px;height:40px;width:40px;margin:0 auto;border-radius:50%;background-color:transparent;" class="button"><i class="pe-7s-comment pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a>'+  
+     
     '</div>'+
 
 
