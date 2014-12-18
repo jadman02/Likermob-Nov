@@ -531,7 +531,7 @@ function like(post_id) {
                 for (i = 0; i < 10; i++) {
              
 
-                
+                $$( '#commentlist' ).append(response.comments.data[i].message + '<br/><br/>');
           	
  
               	
@@ -539,10 +539,9 @@ function like(post_id) {
           var img = new Image();
      img.src = $$( '.homecontent' ).css('background-image').replace(/url\(|\)$|"/ig, '');      
         var windowsize = $$(window).width();
-        var commentlistbox = $$( ".messages-content" ).height(); 
 	var height_image = ((img.height/img.width) * windowsize);
 	var liHeight = $$( "#content-block" ).height();
-	var resultheight = liHeight + height_image + commentlistbox;
+	var resultheight = liHeight + height_image;
 	 //$$( '#result' ).css( 'height', resultheight + 'px' );
                 
             },
