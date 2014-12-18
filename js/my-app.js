@@ -302,6 +302,8 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
      '<div id="dealtitle" style="float:left;font-weight:500;">'+ response[i][3] + ' fklasjdl ksadjskld jsakldjs akld the best in the world</div><br/><div style="clear:both;">'+response[i][4]+'</div>'+
 
          '<div style="float:left;font-size:14px;clear:both;"><i class="pe-7s-clock pe-lg"></i> Expires in 6 days</div>'+
+
+ '<a href="#tab2"><i class="pe-7s-clock pe-lg"><span class="badge bg-red">5</span></i></a>'+
          
 '<div style="float:right;font-size:14px;"><i class="pe-7s-like2 pe-lg button" style="border-radius:50%;border-color:#3b5998;margin-right:2px;color:#3b5998"></i>'+ response[i][17] + '<i class="pe-7s-like2 pe-lg pe-rotate-180 button" style="border-radius:50%;color:#ff8000;border-color:#ff8000;margin-left:5px;margin-right:2px;"></i>'+ response[i][18] + '</div>'+
 
