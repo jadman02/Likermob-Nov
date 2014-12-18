@@ -269,6 +269,7 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 
 
 '<div class="imagediv">'+
+'<a href="#" onclick="getBusiness(\''+ response[i][1]  +'\');" style="z-index:100;float:left;margin-right:5px;height:40px;border:0;background-color:transparent" class="button"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=30&height=30" style="border-radius:50%;"/> Smilesavers</a>'+
 '<a href="#" onclick="makeComment();" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-more pe-2x" style="margin-left:-5px;margin-top:5px;"></i></a>'+
 '<a href="#" onclick="makeComment();" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-comment pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a>'+
 '<a href="#" onclick="makeComment();" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-star pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a>'+
@@ -304,13 +305,13 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
          '<div style="float:left;font-size:14px;clear:both;"><i class="pe-7s-clock pe-lg"></i> Expires in 6 days</div>'+
 
          
-'<div style="float:right;font-size:14px;"><a href="#" class="button" style="float:left;background-color:#3b5998;border-radius:50%;border-color:#3b5998;width:40px;height:40px;"><i class="pe-7s-like2 pe-lg" style="margin-right:2px;color:white"></i><span class="badge" style="background-color:#3b5998">'+ response[i][17] + '</span></a><a href="#" class="button" style="background-color:#ff8000;float:left;border-radius:50%;border-color:#ff8000;width:40px;height:40px;"><i class="pe-7s-like2 pe-lg pe-rotate-180" style="color:white;margin-left:5px;margin-right:2px;"></i><span class="badge" style="background-color:#ff8000">'+ response[i][18] + '</span></a></div>'+
+'<div style="float:right;font-size:14px;"><a href="#" class="button" style="float:left;background-color:#3b5998;border-radius:50%;border-color:#3b5998;width:50px;height:50px;"><i class="pe-7s-like2 pe-lg" style="margin-right:2px;color:white"></i>'+ response[i][17] + '</a><a href="#" class="button" style="background-color:#ff8000;float:left;border-radius:50%;border-color:#ff8000;width:40px;height:40px;"><i class="pe-7s-like2 pe-lg pe-rotate-180" style="color:white;margin-left:5px;margin-right:2px;"></i><span class="badge" style="background-color:#ff8000">'+ response[i][18] + '</span></a></div>'+
 
 
 
      '</div>'+
 
-'<a href="#" onclick="getBusiness(\''+ response[i][1]  +'\');" style="z-index:100;float:right;margin-right:5px;height:40px;border:0;background-color:transparent" class="button"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=30&height=30" style="border-radius:50%;"/></a>'+
+
 
 
     '</div>'+
