@@ -297,7 +297,7 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 '</div>'+
 '</a>'+
    '<div class="content-block" id="content-block" style="margin-top:-1px;clear:both;">'+
-     ' <div class="content-block-inner" style="padding-bottom:41px;background-color:hsla(0, 0%, 100%, 0.8)">'+
+     ' <div class="content-block-inner" style="padding-bottom:61px;background-color:hsla(0, 0%, 100%, 0.8)">'+
 
 '<div class="messages-date">Sunday, Feb 3 <span>11:58</span></div>'+  
      '<div id="dealtitle" style="float:left;font-weight:500;">'+ response[i][3] + ' fklasjdl ksadjskld jsakldjs akld the best in the world</div><br/><div style="clear:both;">'+response[i][4]+'</div>'+
@@ -305,7 +305,7 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
          '<div style="float:left;font-size:14px;clear:both;"><i class="pe-7s-clock pe-lg"></i> Expires in 6 days</div>'+
 
          
-'<div style="float:right;font-size:14px;"><a href="#" class="button" style="float:left;background-color:#3b5998;border-radius:50%;border-color:#3b5998;width:50px;height:50px;"><i class="pe-7s-like2 pe-lg" style="margin-right:2px;color:white"></i>'+ response[i][17] + '</a><a href="#" class="button" style="background-color:#ff8000;float:left;border-radius:50%;border-color:#ff8000;width:40px;height:40px;"><i class="pe-7s-like2 pe-lg pe-rotate-180" style="color:white;margin-left:5px;margin-right:2px;"></i><span class="badge" style="background-color:#ff8000">'+ response[i][18] + '</span></a></div>'+
+'<div style="float:right;font-size:14px;"><a href="#" class="button" style="margin-right:5px;float:left;background-color:#3b5998;border-radius:50%;border-color:#3b5998;width:50px;height:50px;"><i class="pe-7s-like2 pe-lg" style="margin-right:2px;color:white"></i>'+ response[i][17] + '</a><a href="#" class="button" style="background-color:#ff8000;float:left;border-radius:50%;border-color:#ff8000;width:40px;height:40px;"><i class="pe-7s-like2 pe-lg pe-rotate-180" style="color:white;margin-left:5px;margin-right:2px;"></i><span class="badge" style="background-color:#ff8000">'+ response[i][18] + '</span></a></div>'+
 
 
 
