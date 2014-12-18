@@ -303,7 +303,7 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 
      '<div id="commentlist"></div>'+
      
-'<div class="row"><div class="col-20"></div><div class="col-80"><div class="row"><div class="col-33"><a href="#" onclick="makeComment();" style="z-index:100;margin-right:5px;height:40px;width:40px;margin:0 auto;border-radius:50%;background-color:transparent;margin-top:20px;" class="button"><i class="pe-7s-chat pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a></div>'+  
+'<div class="row"><div class="col-20"></div><div class="col-80"><div class="row"><div class="col-33"><a href="#" onclick="getComments();" style="z-index:100;margin-right:5px;height:40px;width:40px;margin:0 auto;border-radius:50%;background-color:transparent;margin-top:20px;" class="button"><i class="pe-7s-chat pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a></div>'+  
 '<div class="col-33"><a href="#" onclick="makeComment();" style="z-index:100;margin-right:5px;height:40px;width:40px;margin:0 auto;border-radius:50%;background-color:transparent;margin-top:20px;" class="button"><i class="pe-7s-comment pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a></div>'+  
 '<div class="col-33"><a href="#" onclick="makeComment();" style="z-index:100;margin-right:5px;height:40px;width:40px;margin:0 auto;border-radius:50%;background-color:transparent;margin-top:20px;" class="button"><i class="pe-7s-camera pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a></div></div></div></div>'+  
         
