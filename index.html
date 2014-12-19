@@ -528,78 +528,21 @@ function like(post_id) {
                 
                 for (i = 0; i < 10; i++) {
 
-created_time = response.comments.data[i].created_time
-year = created_time.substring(0, 4);
+var created_time = response.comments.data[i].created_time;
+var year = created_time.substring(0, 4);
+var month = created_time.substring(6, 7);
+var day = created_time.substring(9, 10);
+var hour = created_time.substring(12, 13);
+var minute = created_time.substring(15, 16);
+var second = created_time.substring(18, 19);
 
 alert(year);
-var date = new Date("11/21/1987 16:00:00"); // some mock date
+var date = new Date(''+ month +'/'+ day +'/'+ year +' '+ hours +':'+ minute +':'+ second +''); // some mock date
 var milliseconds = date.getTime(); 
 
 alert(milliseconds);
 
 
-   // var offset = date.getTimezoneOffset() * 60;
-var date = new Date();
-var offset = date.getTimezoneOffset() * 60;
-alert(offset);
-
-
-
-
-
-2014-12-12T02:36:54+0000
-
-
-
-October 13, 2014 11:13:00
-
-alert(response.comments.data[i].created_time);
-
-The 7 numbers specify the year, month, day, hour, minute, second, and millisecond, in that order:
-
-Example
-
-<script>
-var d = new Date(99,5,24,11,33,30,0);
-
-//var unix = Math.round(+new Date()/1000);
-
-//var unix = Math.round(new Date(response.comments.data[i].created_time).getTime()/1000) + offset;
-//alert(unix);
-var d = new Date();
-var month = new Array(12);
-month[0] = "Jan";
-month[1] = "Feb";
-month[2] = "Mar";
-month[3] = "Apr";
-month[4] = "May";
-month[5] = "Jun";
-month[6] = "Jul";
-month[7] = "Aug";
-month[8] = "Sep";
-month[9] = "Oct";
-month[10] = "Nov";
-month[11] = "Dec";
-
-var day_name = new Array(7);
-day_name[0] = "Sunday";
-day_name[1] = "Monday";
-day_name[2] = "Tuesday";
-day_name[3] = "Wednesday";
-day_name[4] = "Thursday";
-day_name[5] = "Friday";
-day_name[6] = "Saturday";
-
-var month_name = month[d.getUTCMonth()];
-var weekday_name = day_name[d.getUTCDay()];
-var day = d.getUTCDate();
-var year = d.getUTCFullYear();
-var hours = d.getUTCHours();
-var minutes = d.getUTCMinutes();
-
-var output = weekday_name + "," + month_name + " " + day + " " + hours + ":" + minutes;
-             
-           // alert(output);
 
 
 
