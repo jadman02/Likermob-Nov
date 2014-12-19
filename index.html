@@ -529,11 +529,11 @@ function like(post_id) {
                 for (i = 0; i < 10; i++) {
    // var offset = date.getTimezoneOffset() * 60;
 
+alert(response.comments.data[i].created_time.getTime());
 
+//var unix = Math.round(response.comments.data[i].created_time.getTime()/1000) + offset;
 
-var unix = Math.round(response.comments.data[i].created_time.getTime()/1000) + offset;
-
-alert(unix);
+//alert(unix);
 
 var date = new Date();
 var offset = date.getTimezoneOffset() * 60;
