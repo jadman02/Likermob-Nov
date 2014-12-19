@@ -2197,3 +2197,67 @@ function makeComment(){
 	$$( "#hometoolbar" ).removeClass( "hide" );
 	$$('#commentinput').focus();
 }
+
+var fuzzyFacebookTime = (function(){
+ 
+  fuzzyTime.defaultOptions={
+    // time display options
+    relativeTime : 48,
+    // language options
+    monthNames : ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+    amPm : ['AM', 'PM'],
+    ordinalSuffix : function(n) {return ['th','st','nd','rd'][n<4 || (n>20 && n % 10<4) ? n % 10 : 0]}
+  }
+ 
+  function fuzzyTime (timeValue, options) {
+ 
+    var options=options||fuzzyTime.defaultOptions, 
+        date=parseDate(timeValue),
+        delta=parseInt(((new Date()).getTime()-date.getTime())/1000),
+        relative=options.relativeTime,
+        cutoff=+relative===relative ? relative*60*60 : Infinity;
+ 
+    if (relative===false || delta>cutoff)
+      return formatTime(date, options)+' '+formatDate(date, options);
+ 
+    if (delta<60) return 'less than a minute ago';
+    var minutes=parseInt(delta/60 +0.5);
+    if (minutes <= 1) return 'about a minute ago';
+    var hours=parseInt(minutes/60 +0.5);
+    if (hours<1) return minutes+' minutes ago';
+    if (hours==1) return 'about an hour ago';
+    var days=parseInt(hours/24 +0.5);
+    if (days<1) return hours+' hours ago';
+    if (days==1) return formatTime(date, options)+' yesterday';
+    var weeks=parseInt(days/7 +0.5);
+    if (weeks<2) return formatTime(date, options)+' '+days+' days ago';
+    var months=parseInt(weeks/4.34812141 +0.5);
+    if (months<2) return weeks+' weeks ago';
+    var years=parseInt(months/12 +0.5);
+    if (years<2) return months+' months ago';
+    return years+' years ago';
+  }
+ 
+  function parseDate (str) {
+    var v=str.replace(/[T\+]/g,' ').split(' ');
+    return new Date(Date.parse(v[0] + " " + v[1] + " UTC"));
+  }
+ 
+  function formatTime (date, options) {
+    var h=date.getHours(), m=''+date.getMinutes(), am=options.amPm;
+    return (h>12 ? h-12 : h)+':'+(m.length==1 ? '0' : '' )+m+' '+(h<12 ? am[0] : am[1]);
+  }
+ 
+  function formatDate (date, options) {
+    var mon=options.monthNames[date.getMonth()],
+        day=date.getDate(),
+        year=date.getFullYear(),
+        thisyear=(new Date()).getFullYear(),
+        suf=options.ordinalSuffix(day);
+ 
+    return mon+' '+day+suf+(thisyear!=year ? ', '+year : '');
+  }
+ 
+  return fuzzyTime;
+ 
+}());
