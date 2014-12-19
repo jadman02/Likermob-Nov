@@ -542,7 +542,7 @@ function like(post_id) {
 	var height_image = ((img.height/img.width) * windowsize);
 	var liHeight = $$( "#content-block" ).height();
 	var resultheight = liHeight + height_image;
-	 //$$( '#result' ).css( 'height', resultheight + 'px' );
+	 $$( '#result' ).css( 'height', resultheight + 'px' );
                 
             },
         error: function() {alert('error not posted on facebook');}
