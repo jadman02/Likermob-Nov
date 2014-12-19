@@ -527,8 +527,8 @@ function like(post_id) {
 
                 
                 for (i = 0; i < 10; i++) {
-    
-             var d = new Date();
+   // var offset = date.getTimezoneOffset() * 60;
+             var d = response.comments.data[i].created_time;
 var month = new Array(12);
 month[0] = "Jan";
 month[1] = "Feb";
