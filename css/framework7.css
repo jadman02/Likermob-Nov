@@ -1177,11 +1177,11 @@ html:not(.watch-active-state) .searchbar.searchbar-active .searchbar-cancel:acti
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  border: 1px solid #c8c8cd;
   background: #fff;
   border-radius: 5px;
   box-shadow: none;
   display: block;
+  border: 1px solid #c8c8cd;
   padding: 3px 8px 3px;
   margin: 0;
   width: 100%;
