@@ -532,12 +532,14 @@ var click = 0;
         
 var last = response.summary.total_count;
 var cycles = last / 5;
-alert('click = ' + click + 'cycle = ' + cycle);
+alert('click = ' + click + 'cycle = ' + cycles);
 if (click == 0) {start = 0; finish = 5;}
 if (click == (cycles -1)) {start = click*5; finish = last;alert('reached');}
         else {start = click*5; finish = (click + 1) * 5;}
         
         click ++;
+                
+
                 
 $$( "#hometoolbar" ).removeClass( "hide" );
         $$( '#commentlist' ).append('<div style="width:100%"><a href="#" onclick="getComments();" style="z-index:100;margin-right:5px;height:40px;width:40px;margin:0 auto;border-radius:50%;background-color:transparent;margin-top:20px;" class="button"><i class="pe-7s-chat pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a> '+ start +' - '+ finish +' </div>');        
