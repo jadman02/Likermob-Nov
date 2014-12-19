@@ -324,7 +324,7 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 
 
 '</div>'+
-'<div class="swipeout-actions-left"><a href="#" class="bg-green swipeout-delete swipeout-overswipe" style="background-color:#3b5998;" onclick="likeButton(\''+ response[i][2]  +'\',\''+ response[i][6]  +'\')"><span style="position:absolute:margin-top:10px;"><i class="pe-7s-like2 pe-2x"></i></span></a></div><div class="swipeout-actions-right" style="z-index:100000"><a href="#" onclick="closeButton(\''+ response[i][2]  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a></div></li>');}
+'<div class="swipeout-actions-left"><a href="#" class="bg-green swipeout-delete swipeout-overswipe" style="background-color:#3b5998;" onclick="likeButton(\''+ response[i][2]  +'\',\''+ response[i][6]  +'\')"></a><span style="position:absolute:top:10%;"><i class="pe-7s-like2 pe-2x"></i></span></div><div class="swipeout-actions-right" style="z-index:100000"><a href="#" onclick="closeButton(\''+ response[i][2]  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a></div></li>');}
 }
 
 
