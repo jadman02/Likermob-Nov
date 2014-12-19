@@ -530,7 +530,7 @@ var click = 0;
         path: '/174238599281322_824826047555904/comments',
         success: function(response) {
                 
-var last = response.data[i].summary.total_count;
+var last = response.summary.total_count;
 var cycles = last / 5;
 if (click == 0) {start = 0; finish = 5;}
 if (click == (cycles -1)) {{start = click*5; finish = last;}
