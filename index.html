@@ -521,14 +521,14 @@ function like(post_id) {
     function getComments() {
         
         openFB.api({
-        path: '/174238599281322_824826047555904',
+        path: '/174238599281322_824826047555904/comments',
         success: function(response) {
                 
 
                 
                 for (i = 0; i < 15; i++) {
 
-var created_time = response.comments.data[i].created_time;
+var created_time = response.data[i].created_time;
 var year_c = created_time.substring(0, 4);
 var month_c = created_time.substring(5, 7);
 var day_c = created_time.substring(8, 10);
@@ -587,7 +587,7 @@ var seconddate = hours + ":" + minutes;
 
 
 
-                $$( '#commentlist' ).append('<div class="messages-date">'+ firstdate +'<span> '+ seconddate +'</span></div><div class="row"><div class="col-20"><a href="#" style="z-index:100;float:left;margin:0 auto;border:0;background-color:transparent;margin-top:20px;" class="button"><img src="http://graph.facebook.com/'+response.comments.data[i].from.id+'/picture?width=30&height=30" style="border-radius:50%;"/></a></div><div class="col-80"><div class="messages-date" style="float:left;margin:0;padding:0;"><span>'+ response.comments.data[i].from.name +'</span></div><div style="background-color:#e5e5ea;padding:10px;border-radius:10px;margin-top:20px;"><div style="clear:both;">'+response.comments.data[i].message+'</div></div></div></div>');
+                $$( '#commentlist' ).append('<div class="messages-date">'+ firstdate +'<span> '+ seconddate +'</span></div><div class="row"><div class="col-20"><a href="#" style="z-index:100;float:left;margin:0 auto;border:0;background-color:transparent;margin-top:20px;" class="button"><img src="http://graph.facebook.com/'+response.data[i].from.id+'/picture?width=30&height=30" style="border-radius:50%;"/></a></div><div class="col-80"><div class="messages-date" style="float:left;margin:0;padding:0;"><span>'+ response.data[i].from.name +'</span></div><div style="background-color:#e5e5ea;padding:10px;border-radius:10px;margin-top:20px;"><div style="clear:both;">'+response.data[i].message+'</div><div style="float:right;"><i class="pe-7s-like2 pe-2x"></i>'+response.data[i].message+'</div></div></div></div>');
           	
  
               	
