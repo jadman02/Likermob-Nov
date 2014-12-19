@@ -531,18 +531,20 @@ function like(post_id) {
 
 
 
-//var unix = Math.round(response.comments.data[i].created_time.getTime()/1000) + offset;
-
-//alert(unix);
 
 var date = new Date();
 var offset = date.getTimezoneOffset() * 60;
 alert(offset);
+var adjusted = response.comments.data[i].created_time.replace(/-/g,'/'));
+var unix = Math.round(new Date(adjusted).getTime()/1000) + offset;
+alert(unix);
+
+
 //var unix = Math.round(+new Date()/1000);
 
 //var unix = Math.round(new Date(response.comments.data[i].created_time).getTime()/1000) + offset;
 //alert(unix);
-var d = new Date(response.comments.data[i].created_time);
+var d = new Date();
 var month = new Array(12);
 month[0] = "Jan";
 month[1] = "Feb";
@@ -575,7 +577,7 @@ var minutes = d.getUTCMinutes();
 
 var output = weekday_name + "," + month_name + " " + day + " " + hours + ":" + minutes;
              
-            alert(output);
+           // alert(output);
 
 
                 $$( '#commentlist' ).append('<div class="messages-date">'+ response.comments.data[i].created_time +' Sunday, Feb 3 <span>11:58</span></div><div class="row"><div class="col-20"><a href="#" style="height:100px;z-index:100;float:left;margin:0 auto;border:0;background-color:transparent;margin-top:20px;" class="button"><img src="http://graph.facebook.com/'+response.comments.data[i].from.id+'/picture?width=30&height=30" style="border-radius:50%;"/></a></div><div class="col-80"><div class="messages-date" style="float:left;margin:0;padding:0;"><span>'+ response.comments.data[i].from.name +'</span></div><div style="background-color:#e5e5ea;padding:10px;border-radius:10px;margin-top:20px;"><div style="clear:both;">'+response.comments.data[i].message+'</div></div></div></div>');
