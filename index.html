@@ -528,6 +528,11 @@ function like(post_id) {
                 
                 for (i = 0; i < 10; i++) {
    // var offset = date.getTimezoneOffset() * 60;
+
+var fbtime = response.comments.data[i].created_time.toUTCString();
+
+alert(fbtime);
+
 var created_time = response.comments.data[i].created_time;
 var iso = created_time.toISOString(); 
 alert(iso);
