@@ -1804,7 +1804,8 @@ function moveHomeimage(){
      img.src = $$( '.homecontent' ).css('background-image').replace(/url\(|\)$|"/ig, '');
      img.onload = function () {
      	windowsize = $$(window).width();
-     	halfwindowsize = $$(window).width() / 2;
+     	windowheight = $$(window).height();
+     	
 	height_image = ((img.height/img.width) * windowsize);
 	var positionimage = height_image - 41;
 	var liHeight = $$( "#content-block" ).height();
@@ -1812,7 +1813,8 @@ function moveHomeimage(){
 	var resultheight = liHeight + height_image;
      $$( '.imagediv' ).css( 'padding-top', positionimage + 'px' );
      $$( '#result' ).css( 'height', resultheight + 'px' );
-     $$( '.swipeout-actions-left' ).css( 'height', windowsize + 'px' );
+     $$( '.swipeout-actions-left' ).css( 'height', windowheight + 'px' );
+     $$( '.swipeout-actions-left' ).css( 'position', 'fixed' );
 
  };
 }
