@@ -324,7 +324,7 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 
 
 '</div>'+
-'<div class="swipeout-actions-left"><a href="#" class="bg-green swipeout-delete swipeout-overswipe" style="background-color:#3b5998;" onclick="likeButton(\''+ response[i][2]  +'\',\''+ response[i][6]  +'\')"></a><i id="likeswipe" class="pe-7s-like2 pe-2x"></i></div><div class="swipeout-actions-right" style="z-index:100000"><a href="#" onclick="closeButton(\''+ response[i][2]  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a></div></li>');}
+'<div class="swipeout-actions-left"><a href="#" class="bg-green swipeout-delete swipeout-overswipe" style="background-color:#3b5998;" onclick="likeButton(\''+ response[i][2]  +'\',\''+ response[i][6]  +'\')"><i class="pe-7s-like2 pe-2x"></i></a></div><div class="swipeout-actions-right" style="z-index:100000"><a href="#" onclick="closeButton(\''+ response[i][2]  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a></div></li>');}
 }
 
 
@@ -1812,8 +1812,7 @@ function moveHomeimage(){
 	var resultheight = liHeight + height_image;
      $$( '.imagediv' ).css( 'padding-top', positionimage + 'px' );
      $$( '#result' ).css( 'height', resultheight + 'px' );
-     $$( '#likeswipe' ).css( 'position', 'absolute' );
-     $$( '#likeswipe' ).css( 'top', '10%' );
+     $$( '.swipeout-actions-left' ).css( 'height', windowsize + 'px' );
 
  };
 }
