@@ -517,16 +517,26 @@ function like(post_id) {
         
     }
 
+var click = 0;
 
     function getComments() {
+        
+        var start;
+        var finish;
+        
+        if (click == 0) {start = 0; finish = 15;}
+        else {start = click*15; finish = (click + 1) * 15;}
+        
+        click ++;
         
         openFB.api({
         path: '/174238599281322_824826047555904/comments',
         success: function(response) {
                 
-
-                
-                for (i = 0; i < 15; i++) {
+$$( "#hometoolbar" ).removeClass( "hide" );
+        $$( '#commentlist' ).append('<div style="width:100%"><a href="#" onclick="getComments();" style="z-index:100;margin-right:5px;height:40px;width:40px;margin:0 auto;border-radius:50%;background-color:transparent;margin-top:20px;" class="button"><i class="pe-7s-chat pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a> '+ start +' - '+ finish +' </div>');        
+  
+                for (i = start; i < finish; i++) {
 
 var created_time = response.data[i].created_time;
 var year_c = created_time.substring(0, 4);
