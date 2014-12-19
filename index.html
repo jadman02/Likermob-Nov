@@ -536,9 +536,12 @@ var hour = created_time.substring(12, 13);
 var minute = created_time.substring(15, 16);
 var second = created_time.substring(18, 19);
 
-alert(year);
-var date = new Date(''+ month +'/'+ day +'/'+ year +' '+ hours +':'+ minute +':'+ second +''); // some mock date
+var datetime = month +'/'+ day +'/'+ year +' '+ hours +':'+ minute +':'+ second;
+alert(datetime;)
+var date = new Date(datetime); // some mock date
 var milliseconds = date.getTime(); 
+
+
 
 alert(milliseconds);
 
