@@ -534,8 +534,10 @@ var last = response.summary.total_count;
 var cycles = Math.ceil(last / 5);
 alert('click = ' + click + 'cycle = ' + cycles);
 if (click == 0) {start = 0; finish = 5;}
+else {start = click*5; finish = (click + 1) * 5;}
+
 if (click == (cycles -1)) {start = click*5; finish = last;alert('reached');}
-        else {start = click*5; finish = (click + 1) * 5;}
+        
         
         click ++;
                 
