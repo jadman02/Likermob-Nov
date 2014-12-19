@@ -520,8 +520,6 @@ function like(post_id) {
 
     function getComments() {
         
-        alert('get comments');
-        
         openFB.api({
         path: '/174238599281322_824826047555904',
         success: function(response) {
@@ -530,8 +528,17 @@ function like(post_id) {
                 
                 for (i = 0; i < 10; i++) {
              
+             var d = new Date(response.comments.data[i].created_time);
+var month = d.getUTCMonth() + 1;
+var day = d.getUTCDate();
+var year = d.getUTCFullYear();
 
-                $$( '#commentlist' ).append('<div class="messages-date">'+ response.comments.data[i].created_time +' Sunday, Feb 3 <span>11:58</span></div><div class="row"><div class="col-20"><a href="#" style="height:100px;z-index:100;float:left;margin:0 auto;border:0;background-color:transparent;margin-top:20px;" class="button"><img src="http://graph.facebook.com/'+response.comments.data[i].from.id+'/picture?width=30&height=30" style="border-radius:50%;"/></a></div><div class="col-80"><div class="messages-date" style="float:left;margin:0;padding:0;"><span>'+ response.comments.data[i].from.name +'</span></div><div style="background-color:#e5e5ea;padding:10px;padding-bottom:30px;border-radius:10px;margin-top:20px;"><div style="clear:both;">'+response.comments.data[i].message+'</div></div></div></div>');
+var output = month + "-" + day + "-" + year;
+             
+             alert(output);
+
+
+                $$( '#commentlist' ).append('<div class="messages-date">'+ response.comments.data[i].created_time +' Sunday, Feb 3 <span>11:58</span></div><div class="row"><div class="col-20"><a href="#" style="height:100px;z-index:100;float:left;margin:0 auto;border:0;background-color:transparent;margin-top:20px;" class="button"><img src="http://graph.facebook.com/'+response.comments.data[i].from.id+'/picture?width=30&height=30" style="border-radius:50%;"/></a></div><div class="col-80"><div class="messages-date" style="float:left;margin:0;padding:0;"><span>'+ response.comments.data[i].from.name +'</span></div><div style="background-color:#e5e5ea;padding:10px;border-radius:10px;margin-top:20px;"><div style="clear:both;">'+response.comments.data[i].message+'</div></div></div></div>');
           	
  
               	
