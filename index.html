@@ -526,7 +526,7 @@ function like(post_id) {
                 
 
                 
-                for (i = 7; i < 10; i++) {
+                for (i = 0; i < 15; i++) {
 
 var created_time = response.comments.data[i].created_time;
 var year_c = created_time.substring(0, 4);
@@ -534,20 +534,15 @@ var month_c = created_time.substring(5, 7);
 var day_c = created_time.substring(8, 10);
 var time_c = created_time.substring(11, 19);
 
-alert(response.comments.data[i].created_time);
-alert(year_c);
-alert(month_c);
-alert(day_c);
-alert(time_c);
 
 var date = new Date(month_c + "/" + day_c + "/" + year_c + " " + time_c); // some mock date
 var milliseconds = date.getTime(); 
-alert(milliseconds);
+
 var datetoday = new Date();
 var offset = datetoday.getTimezoneOffset() * 60;
-alert(offset);
+
 var unix = Math.round(milliseconds) + offset;
-alert(unix);
+
 var d = new Date(unix);
 var month = new Array(12);
 month[0] = "Jan";
@@ -580,7 +575,7 @@ var hours = d.getUTCHours();
 var minutes = d.getUTCMinutes();
 if (minutes < 10) {minutes = minutes + "0"} 
 
-var firstdate = weekday_name + "," + month_name + " " + day ;
+var firstdate = weekday_name + ", " + month_name + " " + day ;
 var seconddate = hours + ":" + minutes;             
             
 
@@ -592,7 +587,7 @@ var seconddate = hours + ":" + minutes;
 
 
 
-                $$( '#commentlist' ).append('<div class="messages-date">'+ firstdate +'<span>'+ seconddate +'</span></div><div class="row"><div class="col-20"><a href="#" style="height:100px;z-index:100;float:left;margin:0 auto;border:0;background-color:transparent;margin-top:20px;" class="button"><img src="http://graph.facebook.com/'+response.comments.data[i].from.id+'/picture?width=30&height=30" style="border-radius:50%;"/></a></div><div class="col-80"><div class="messages-date" style="float:left;margin:0;padding:0;"><span>'+ response.comments.data[i].from.name +'</span></div><div style="background-color:#e5e5ea;padding:10px;border-radius:10px;margin-top:20px;"><div style="clear:both;">'+response.comments.data[i].message+'</div></div></div></div>');
+                $$( '#commentlist' ).append('<div class="messages-date">'+ firstdate +'<span> '+ seconddate +'</span></div><div class="row"><div class="col-20"><a href="#" style="height:100px;z-index:100;float:left;margin:0 auto;border:0;background-color:transparent;margin-top:20px;" class="button"><img src="http://graph.facebook.com/'+response.comments.data[i].from.id+'/picture?width=30&height=30" style="border-radius:50%;"/></a></div><div class="col-80"><div class="messages-date" style="float:left;margin:0;padding:0;"><span>'+ response.comments.data[i].from.name +'</span></div><div style="background-color:#e5e5ea;padding:10px;border-radius:10px;margin-top:20px;"><div style="clear:both;">'+response.comments.data[i].message+'</div></div></div></div>');
           	
  
               	
