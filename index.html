@@ -543,13 +543,23 @@ month[9] = "Oct";
 month[10] = "Nov";
 month[11] = "Dec";
 
-var month = month[d.getUTCMonth()];
+var day_name = new Array(7);
+month[0] = "Sunday";
+month[1] = "Monday";
+month[2] = "Tuesday";
+month[3] = "Wednesday";
+month[4] = "Thursday";
+month[5] = "Friday";
+month[6] = "Saturday";
+
+var month_name = month[d.getUTCMonth()];
+var weekday_name = day_name[d.getUTCDay()];
 var day = d.getUTCDate();
 var year = d.getUTCFullYear();
 var hours = d.getUTCHours();
 var minutes = d.getUTCMinutes();
 
-var output = month + "," + day + " " + hours + ":" + minutes;
+var output = weekday_name + " " + month_name + "," + day + " " + hours + ":" + minutes;
              
              alert(output);
 
