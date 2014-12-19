@@ -533,8 +533,8 @@ var click = 0;
 var last = response.summary.total_count;
 var cycles = Math.ceil(last / 5);
 alert('click = ' + click + 'cycle = ' + cycles);
-if (click == 0) {start = 0; finish = 5;}
-else {start = click*5; finish = (click + 1) * 5;}
+if (click == 0) {start = 0; finish = 4;}
+else {start = click*5; finish = ((click + 1) * 5) - 1;}
 
 if (click == (cycles -1)) {start = click*5; finish = last;alert('reached');}
         
@@ -618,7 +618,7 @@ var seconddate = hours + ":" + minutes;
 	var height_image = ((img.height/img.width) * windowsize);
 	var liHeight = $$( "#content-block" ).height();
 	var resultheight = liHeight + height_image;
-	 $$( '#result' ).css( 'height', '10000px' );
+	 $$( '#result' ).css( 'height', resultheight + 'px' );
                 
             },
         error: function() {alert('error not posted on facebook');}
