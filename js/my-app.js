@@ -303,9 +303,9 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 
      '<div id="commentlist"></div>'+
      
-'<div class="row"><div class="col-20"></div><div class="col-80"><div class="row"><div class="col-33"><a href="#" id="chat_button" onclick="getComments();" style="z-index:100;margin-right:5px;height:40px;width:40px;margin:0 auto;border-radius:50%;background-color:transparent;margin-top:20px;" class="button"><i class="pe-7s-chat pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a></div>'+  
-'<div class="col-33"><a href="#" id="comment_button" onclick="makeComment();" style="z-index:100;margin-right:5px;height:40px;width:40px;margin:0 auto;border-radius:50%;background-color:transparent;margin-top:20px;" class="button"><i class="pe-7s-comment pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a></div>'+  
-'<div class="col-33"><a href="#" id="camera_button" onclick="makeComment();" style="z-index:100;margin-right:5px;height:40px;width:40px;margin:0 auto;border-radius:50%;background-color:transparent;margin-top:20px;" class="button"><i class="pe-7s-camera pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a></div></div></div></div>'+  
+'<div class="row"><div class="col-20"></div><div class="col-80"><div class="row"><div class="col-33" id="chat_button"><a href="#" onclick="getComments();" style="z-index:100;margin-right:5px;height:40px;width:40px;margin:0 auto;border-radius:50%;background-color:transparent;margin-top:20px;" class="button"><i class="pe-7s-chat pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a></div>'+  
+'<div class="col-33" id="comment_button" ><a href="#" onclick="makeComment();" style="z-index:100;margin-right:5px;height:40px;width:40px;margin:0 auto;border-radius:50%;background-color:transparent;margin-top:20px;" class="button"><i class="pe-7s-comment pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a></div>'+  
+'<div class="col-33" id="camera_button"><a href="#"  onclick="makeComment();" style="z-index:100;margin-right:5px;height:40px;width:40px;margin:0 auto;border-radius:50%;background-color:transparent;margin-top:20px;" class="button"><i class="pe-7s-camera pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a></div></div></div></div>'+  
         
 
 
@@ -324,7 +324,7 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 
 
 '</div>'+
-'<div class="swipeout-actions-left"><a href="#" class="bg-green swipeout-delete swipeout-overswipe" style="background-color:#3b5998;" onclick="likeButton(\''+ response[i][2]  +'\',\''+ response[i][6]  +'\')"><i class="pe-7s-like2 pe-2x"></i></a></div><div class="swipeout-actions-right" style="z-index:100000"><a href="#" onclick="closeButton(\''+ response[i][2]  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a></div></li>');}
+'<div class="swipeout-actions-left"><a href="#" class="bg-green swipeout-delete swipeout-overswipe" style="background-color:#3b5998;" onclick="likeButton(\''+ response[i][2]  +'\',\''+ response[i][6]  +'\')"><span style="position:absolute:margin-top:10px;"><i class="pe-7s-like2 pe-2x"></i></span></a></div><div class="swipeout-actions-right" style="z-index:100000"><a href="#" onclick="closeButton(\''+ response[i][2]  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a></div></li>');}
 }
 
 
@@ -1813,8 +1813,6 @@ function moveHomeimage(){
 	var resultheight = liHeight + height_image;
      $$( '.imagediv' ).css( 'padding-top', positionimage + 'px' );
      $$( '#result' ).css( 'height', resultheight + 'px' );
-     $$( '.swipeout-actions-left' ).css( 'height', windowheight + 'px' );
-     $$( '.swipeout-actions-left' ).css( 'position', 'fixed' );
 
  };
 }
