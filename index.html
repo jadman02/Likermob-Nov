@@ -542,12 +542,12 @@ alert(time_c);
 
 var date = new Date(day_c + "/" + month_c + "/" + year_c + " " + time_c); // some mock date
 var milliseconds = date.getTime(); 
-
+alert(milliseconds);
 var datetoday = new Date();
 var offset = datetoday.getTimezoneOffset() * 60;
-
+alert(offset);
 var unix = Math.round(milliseconds) + offset;
-
+alert(offset);
 var d = new Date(unix);
 var month = new Array(12);
 month[0] = "Jan";
