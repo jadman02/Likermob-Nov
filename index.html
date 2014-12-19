@@ -530,15 +530,13 @@ function like(post_id) {
 
 var created_time = response.comments.data[i].created_time;
 var year = created_time.substring(0, 4);
-var month = created_time.substring(6, 7);
-var day = created_time.substring(9, 10);
-var hour = created_time.substring(12, 13);
-var minute = created_time.substring(15, 16);
-var second = created_time.substring(18, 19);
+var month = created_time.substring(5, 8);
+var day = created_time.substring(8, 11);
+var hour = created_time.substring(11, 14);
+var minute = created_time.substring(14, 17);
+var second = created_time.substring(17, 20);
 
-
-alert(second);
-var datetime = month +'/'+ day +'/'+ year +' '+ hours +':'+ minute +':'+ second;
+var datetime = ''+month +'/'+ day +'/'+ year +' '+ hours +':'+ minute +':'+ second+'';
 alert(datetime);
 var date = new Date(datetime); // some mock date
 var milliseconds = date.getTime(); 
