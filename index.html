@@ -527,13 +527,29 @@ function like(post_id) {
 
                 
                 for (i = 0; i < 10; i++) {
-             
-             var d = new Date("2011-08-02T00:00:00-00:00");
-var month = d.getUTCMonth() + 1;
+         response.comments.data[i].created_time    
+             var d = new Date();
+var month = new Array(12);
+month[0] = "Jan";
+month[1] = "Feb";
+month[2] = "Mar";
+month[3] = "Apr";
+month[4] = "May";
+month[5] = "Jun";
+month[6] = "Jul";
+month[7] = "Aug";
+month[8] = "Sep";
+month[9] = "Oct";
+month[10] = "Nov";
+month[11] = "Dec";
+
+var month = month[d.getUTCMonth()];
 var day = d.getUTCDate();
 var year = d.getUTCFullYear();
+var hours = d.getUTCHours();
+var minutes = d.getUTCMinutes();
 
-var output = month + "-" + day + "-" + year;
+var output = month + "," + day + " " + hours + ":" + minutes;
              
              alert(output);
 
