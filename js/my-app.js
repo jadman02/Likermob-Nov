@@ -271,9 +271,9 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 '<div class="imagediv">'+
 
 
-'<div style="height:40px;background-color:hsla(0, 0%, 0%, 0.5);">'+
+'<div style="height:40px;background-color:hsla(0, 0%, 0%, 0.7);">'+
 '<div style="float:left;font-size:14px;margin-left:10px;margin-top:10px;"><i class="pe-7s-like2 pe-lg" style="margin-right:2px;color:#3b5998;"></i><span style="color:#ccc;">'+ response[i][17] + '</span><i class="pe-7s-like2 pe-lg pe-rotate-180" style="color:#ff8000;margin-left:5px;margin-right:2px;"></i><span style="color:#ccc;">'+ response[i][18] + '</span></div>'+
-'<a href="#" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-more pe-2x" style="margin-left:-5px;margin-top:5px;"></i></a>'+
+'<a href="#" onclick="loadMore();" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-more pe-2x" style="margin-left:-5px;margin-top:5px;"></i></a>'+
 '<a href="#" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-star pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a>'+
 '<a href="#" onclick="getBusiness(\''+ response[i][1]  +'\');" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-map pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a>'+
 '</div>'+ 
@@ -2201,66 +2201,28 @@ function makeComment(){
 	$$('#commentinput').focus();
 }
 
-var fuzzyFacebookTime = (function(){
- 
-  fuzzyTime.defaultOptions={
-    // time display options
-    relativeTime : 48,
-    // language options
-    monthNames : ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-    amPm : ['AM', 'PM'],
-    ordinalSuffix : function(n) {return ['th','st','nd','rd'][n<4 || (n>20 && n % 10<4) ? n % 10 : 0]}
-  }
- 
-  function fuzzyTime (timeValue, options) {
- 
-    var options=options||fuzzyTime.defaultOptions, 
-        date=parseDate(timeValue),
-        delta=parseInt(((new Date()).getTime()-date.getTime())/1000),
-        relative=options.relativeTime,
-        cutoff=+relative===relative ? relative*60*60 : Infinity;
- 
-    if (relative===false || delta>cutoff)
-      return formatTime(date, options)+' '+formatDate(date, options);
- 
-    if (delta<60) return 'less than a minute ago';
-    var minutes=parseInt(delta/60 +0.5);
-    if (minutes <= 1) return 'about a minute ago';
-    var hours=parseInt(minutes/60 +0.5);
-    if (hours<1) return minutes+' minutes ago';
-    if (hours==1) return 'about an hour ago';
-    var days=parseInt(hours/24 +0.5);
-    if (days<1) return hours+' hours ago';
-    if (days==1) return formatTime(date, options)+' yesterday';
-    var weeks=parseInt(days/7 +0.5);
-    if (weeks<2) return formatTime(date, options)+' '+days+' days ago';
-    var months=parseInt(weeks/4.34812141 +0.5);
-    if (months<2) return weeks+' weeks ago';
-    var years=parseInt(months/12 +0.5);
-    if (years<2) return months+' months ago';
-    return years+' years ago';
-  }
- 
-  function parseDate (str) {
-    var v=str.replace(/[T\+]/g,' ').split(' ');
-    return new Date(Date.parse(v[0] + " " + v[1] + " UTC"));
-  }
- 
-  function formatTime (date, options) {
-    var h=date.getHours(), m=''+date.getMinutes(), am=options.amPm;
-    return (h>12 ? h-12 : h)+':'+(m.length==1 ? '0' : '' )+m+' '+(h<12 ? am[0] : am[1]);
-  }
- 
-  function formatDate (date, options) {
-    var mon=options.monthNames[date.getMonth()],
-        day=date.getDate(),
-        year=date.getFullYear(),
-        thisyear=(new Date()).getFullYear(),
-        suf=options.ordinalSuffix(day);
- 
-    return mon+' '+day+suf+(thisyear!=year ? ', '+year : '');
-  }
- 
-  return fuzzyTime;
- 
-}());
+function loadMore(){
+	
+ var buttons = [
+        {
+            text: 'View Photo',
+            onClick: function () {
+                myApp.alert('Button1 clicked');
+            }
+        },
+        {
+            text: 'Share',
+            onClick: function () {
+                myApp.alert('Button2 clicked');
+            }
+        },
+        {
+            text: 'Report',
+            color: 'red',
+            onClick: function () {
+                myApp.alert('Cancel clicked');
+            }
+        },
+    ];
+    myApp.actions(buttons);
+}
