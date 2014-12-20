@@ -2215,7 +2215,7 @@ function loadMore(){
             onClick: function () {
                 myApp.prompt('What is your name?', 'Custom Title', 
       function (value) {
-        myApp.alert('Your name is "' + value + '". You clicked Ok button');
+        share(value);
       },
       function (value) {
         myApp.alert('Your name is "' + value + '". You clicked Cancel button');
