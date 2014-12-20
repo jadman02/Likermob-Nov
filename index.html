@@ -475,8 +475,9 @@ var modal = myApp.modal({
         
         openFB.api({
             method: 'POST',
-            path: '/me/feed',
+            path: '/me/photos',
             params: {
+                url: 'http://www.smilesavers.net.au/images/cover.png',
                 message: value
             },
             success: function() {
