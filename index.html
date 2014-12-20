@@ -469,7 +469,7 @@ var modal = myApp.modal({
     }
 
 
-    function share() {
+    function share(value) {
         
         alert('clciked share');
         
@@ -477,7 +477,7 @@ var modal = myApp.modal({
             method: 'POST',
             path: '/me/feed',
             params: {
-                message: 'Testing Facebook APIs'
+                message: value
             },
             success: function() {
                 alert('the item was posted on Facebook');
