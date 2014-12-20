@@ -2211,9 +2211,16 @@ function loadMore(){
             }
         },
         {
-            text: 'Share',
+            text: 'Share Deal',
             onClick: function () {
-                myApp.alert('Button2 clicked');
+                myApp.prompt('What is your name?', 'Custom Title', 
+      function (value) {
+        myApp.alert('Your name is "' + value + '". You clicked Ok button');
+      },
+      function (value) {
+        myApp.alert('Your name is "' + value + '". You clicked Cancel button');
+      }
+    );
             }
         },
         {
