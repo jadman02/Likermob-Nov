@@ -21,13 +21,8 @@ document.getElementById("profilepic").innerHTML = '<img src="http://graph.facebo
 
 
 
-$$('.pull-to-refresh-layer').on('scroll', function (e) {
-var pageContent = this;
-var pageScroll = pageContent.scrollTop;	
-var background_size = pageScroll + 100;
+	
 
-if (pageScroll > 0) {$$( '.homecontent' ).css( 'background-size', background_size + '%');}	
-});
 
 
 
@@ -105,6 +100,13 @@ myApp.init();
 
 // Pull to refresh content
 var ptrContent = $$('.pull-to-refresh-content');
+
+$$('.pull-to-refresh-layer').on('scroll', function (e) {
+var pageContent = this;
+var pageScroll = pageContent.scrollTop;	
+var background_size = pageScroll + 100;
+
+if (pageScroll > 0) {$$( '.homecontent' ).css( 'background-size', background_size + '%');}
  
 // Add 'refresh' listener on it
 ptrContent.on('refresh', function (e) {
@@ -2140,6 +2142,7 @@ photos : photos,
 //Open photo browser on click
 
     myPhotoBrowserStandalone.open();
+    $$( body ).click();
 }
 
 
