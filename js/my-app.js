@@ -2191,7 +2191,13 @@ myApp.modal({
             onClick: function () {
 myApp.modal({
     title: 'Report ',
-    text: '<div class="content-block" style="padding:0;margin:0;max-height:200px;overflow: scroll;overflow-x:hidden;"><div class="content-block-inner" style="background-color:transparent;">' + title + ' ajkdaskjbsajkdbsakj dbsa kjdb sajk dbsajk dbsajkdbsajkdbs ajkd bsajkdbsajkdbsaj kdasbdkjasbd jsdbasjdb asjdbasjd bsajkdbasjkdba skjdba sk jdb asjkdbasjkdba sj kdbasjkd bsa<br/><img style="margin-top:10px;width:50%;" src="'+ url +'"/></div></div>',
+    text: '<div class="content-block" style="padding:0;margin:0;max-height:200px;overflow: scroll;overflow-x:hidden;"><div class="content-block-inner" style="background-color:transparent;">'+
+    '<div class="list-block"><ul>'+
+'<li><label class="label-checkbox item-content"><input type="checkbox" name="fake-checkbox" value="fake"><div class="item-media"><i class="icon icon-form-checkbox"></i></div><div class="item-inner"><div class="item-title">Fake / Deceptive</div></div></label></li>'+
+'<li><label class="label-checkbox item-content"><input type="checkbox" name="rude-checkbox" value="rude" checked="checked"><div class="item-media"><i class="icon icon-form-checkbox"></i></div><div class="item-inner"><div class="item-title">Offensive / Rude</div></div></label></li>'+
+'<li><label class="label-checkbox item-content"><input type="checkbox" name="spam-checkbox" value="spam"><div class="item-media"><i class="icon icon-form-checkbox"></i></div><div class="item-inner"><div class="item-title">Spam</div></div></label></li>'+
+'</ul></div>'+
+    '</div></div>',
      afterText:  '<div class="list-block" style="margin-top:10px;margin-bottom:10px;"><ul><li><div class="item-content"><div class="item-media"><img src="http://graph.facebook.com/'+ uid +'/picture?type=small"></div><div class="item-inner"><div class="item-input"><textarea id="reportbox" placeholder="What is wrong with this deal?"></textarea></div></div></div></li></ul</div>',
     buttons: [
       {
@@ -2221,5 +2227,6 @@ myApp.modal({
     ];
     myApp.actions(buttons);
 }
+
 
 
