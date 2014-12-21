@@ -2193,9 +2193,9 @@ myApp.modal({
     title: 'Report ',
     text: '<div class="content-block" style="padding:0;margin:0;max-height:200px;overflow: scroll;overflow-x:hidden;"><div class="content-block-inner" style="background-color:transparent;">'+
     '<div class="list-block" style="margin-top:10px;margin-bottom:0px;border-bottom:0;"><ul>'+
-'<li><label class="label-radio item-content"><input type="radio" name="fake-radio" value="fake" checked="checked"><div class="item-inner"><div class="item-title">Fake / Deceptive</div></div></label></li>'+
-'<li><label class="label-radio item-content"><input type="radio" name="rude-radio" value="rude" checked="checked"><div class="item-inner"><div class="item-title">Offensive / Rude</div></div></label></li>'+
-'<li><label class="label-radio item-content"><input type="radio" name="spam-radio" value="spam" checked="checked"><div class="item-inner"><div class="item-title">Spam</div></div></label></li>'+
+'<li><label class="label-radio item-content"><input type="radio" name="fake-radio" value="fake"><div class="item-inner"><div class="item-title">Fake / Deceptive</div></div></label></li>'+
+'<li><label class="label-radio item-content"><input type="radio" name="rude-radio" value="rude"><div class="item-inner"><div class="item-title">Offensive / Rude</div></div></label></li>'+
+'<li><label class="label-radio item-content"><input type="radio" name="spam-radio" value="spam"><div class="item-inner"><div class="item-title">Spam</div></div></label></li>'+
 '</ul></div>'+
     '</div></div>',
      afterText:  '<div class="list-block" style="margin-top:10px;margin-bottom:10px;"><ul><li><div class="item-content"><div class="item-media"><img src="http://graph.facebook.com/'+ uid +'/picture?type=small"></div><div class="item-inner"><div class="item-input"><textarea id="reportbox" placeholder="What is wrong with this deal?"></textarea></div></div></div></li></ul</div>',
