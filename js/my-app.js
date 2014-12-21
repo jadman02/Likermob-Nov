@@ -296,7 +296,7 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 
     
 
-//openBrowser();
+
     
   
 //
@@ -2135,24 +2135,8 @@ function clearInput(){
 	$$('#dbnamesclear').hide();
 }
 
-var myPhotoBrowserStandalone;
-function openBrowser(url){
 
-var photos = [
-        {
-            url: url
-        },
-    ];
-	
-	myPhotoBrowserStandalone = myApp.photoBrowser({
-photos : photos,
-});
-//Open photo browser on click
 
-    myPhotoBrowserStandalone.open();
-    $$( '.photo-browser-slide' ).click();
-    
-}
 
 
 
