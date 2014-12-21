@@ -23,14 +23,15 @@ $$('.pull-to-refresh-content').on('scroll', function (e) {
 
     var pageContent = this;
     var pageScroll = pageContent.scrollTop;
-  var positionpageScroll = pageScroll * -1;
+  var positionpageScroll = (pageScroll * -1) / 2;
   var background_size = (pageScroll * -1) + 100;
    if (pageScroll < 0) {
         $$( '.homecontent' ).css( 'background-size', background_size + '%');
         $$( '.homecontent' ).css( 'background-position', positionpageScroll + '% 0%');
             
         }
-    else {$$( '.homecontent' ).css( 'background-size', background_size + '100%');$$( '.homecontent' ).css( 'background-position', '0% 0%');}
+    if (pageScroll == 0) {$$( '.homecontent' ).css( 'background-size', '100%');$$( '.homecontent' ).css( 'background-position', '0% 0%');}
+   
    
     
 });
