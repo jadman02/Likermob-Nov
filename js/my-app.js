@@ -27,7 +27,7 @@ var pageScroll = pageContent.scrollTop;
 var background_size = (pageScroll / 100) + 100;
 
 if (pageScroll > 0) {$$( '.homecontent' ).css( 'background-size', background_size + '%');}	
-}
+});
 
 
 
