@@ -21,15 +21,11 @@ document.getElementById("profilepic").innerHTML = '<img src="http://graph.facebo
 var previousScrollPosition = 0;
 $$('.pull-to-refresh-content').on('scroll', function (e) {
 
-// var result_list = $$("#result").children("li").length; 
- //alert(result_list);
-//if (result_list >10) {}
-
     var pageContent = this;
     var pageScroll = pageContent.scrollTop;
+  var background_size = (pageScroll * -1) + 100;
    if (pageScroll < 0) {
-        
-            alert(pageScroll);
+        $$( '.homecontent' ).css( 'background-size', background_size + '%');
             
         }
    
