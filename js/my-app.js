@@ -31,7 +31,7 @@ $$('.pull-to-refresh-content').on('scroll', function (e) {
         
             
         }
-    if (pageScroll == -0.5) {$$( '.homecontent' ).css( 'background-size', '100%');$$( '.homecontent' ).css( 'background-position', '0% 0%');}
+    if (pageScroll == 0) {$$( '.homecontent' ).css( 'background-size', '100%');$$( '.homecontent' ).css( 'background-position', '0% 0%');}
    
    
     
