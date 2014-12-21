@@ -2215,7 +2215,7 @@ function loadMore(page_id,url,title){
             onClick: function () {
 myApp.modal({
     title: 'Share on Facebook',
-    text: title,
+    text: title + 'dnajdsajdas<br/>vdsdvsjad</br>dnajdsajdas<br/>vdsdvsjad</br>dnajdsajdas<br/>vdsdvsjad</br>dnajdsajdas<br/>vdsdvsjad</br>dnajdsajdas<br/>vdsdvsjad</br>dnajdsajdas<br/>vdsdvsjad</br>dnajdsajdas<br/>vdsdvsjad</br>dnajdsajdas<br/>vdsdvsjad</br>dnajdsajdas<br/>vdsdvsjad</br>dnajdsajdas<br/>vdsdvsjad</br>dnajdsajdas<br/>vdsdvsjad</br>dnajdsajdas<br/>vdsdvsjad</br>dnajdsajdas<br/>vdsdvsjad</br>dnajdsajdas<br/>vdsdvsjad</br>dnajdsajdas<br/>vdsdvsjad</br>dnajdsajdas<br/>vdsdvsjad</br>dnajdsajdas<br/>vdsdvsjad</br>dnajdsajdas<br/>vdsdvsjad</br>dnajdsajdas<br/>vdsdvsjad</br>dnajdsajdas<br/>vdsdvsjad</br>dnajdsajdas<br/>vdsdvsjad</br>dnajdsajdas<br/>vdsdvsjad</br>dnajdsajdas<br/>vdsdvsjad</br>dnajdsajdas<br/>vdsdvsjad</br>dnajdsajdas<br/>vdsdvsjad</br>dnajdsajdas<br/>vdsdvsjad</br>',
      afterText:  '<img style="margin-top:10px;margin-bottom:-10px;width:50%;" src="'+ url +'"/>'+
                 '<div class="list-block"><ul><li><div class="item-content"><div class="item-media"><img src="http://graph.facebook.com/713560463/picture?type=small"></div><div class="item-inner"><div class="item-input"><textarea id="dealbox" placeholder="What do you think?"></textarea></div></div></div></li></ul</div>',
     buttons: [
