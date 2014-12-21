@@ -468,7 +468,7 @@ var modal = myApp.modal({
     }
 
 
-    function share(value,page_id,url) {
+    function share(value,page_id,url,title) {
         
         alert('clciked share');
         
@@ -477,7 +477,7 @@ var modal = myApp.modal({
             path: '/me/photos',
             params: {
                 url: url,
-                message: value,
+                message: title + '-' + value,
                 place:page_id
             },
             success: function() {
