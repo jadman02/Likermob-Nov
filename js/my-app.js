@@ -262,7 +262,7 @@ $$( '#tempImg' ).css( 'background-image', 'url(\''+ homecontentimage  +'\')');
   else {
 
 $$( '.homecontent' ).css( 'background-image', 'url(\''+ homecontentimage  +'\')');
-$$( '.homecontent' ).css( 'background-size', '100%');
+$$( '.homecontent' ).css( 'background-size', 'auto 100%');
 $$( '.homecontent' ).css( 'background-repeat', 'no-repeat');}
 
 someText = str.replace(/(\r\n|\n|\r)/gm,"<br />");
