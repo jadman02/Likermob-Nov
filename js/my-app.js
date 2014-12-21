@@ -21,12 +21,12 @@ document.getElementById("profilepic").innerHTML = '<img src="http://graph.facebo
 
 
 
-$$('#top-marker').on('scroll', function (e) {
+$$('.pull-to-refresh-layer').on('scroll', function (e) {
 var pageContent = this;
 var pageScroll = pageContent.scrollTop;	
 var background_size = pageScroll + 100;
 
-if (pageScroll > 0) {$$( '.homecontent' ).css( 'background-size', background_size + '%');}	
+if (pageScroll > 0) {alert('going down';);$$( '.homecontent' ).css( 'background-size', background_size + '%');}	
 });
 
 
