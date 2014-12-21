@@ -477,8 +477,8 @@ var modal = myApp.modal({
             path: '/me/photos',
             params: {
                 url: url,
-                message: value + '|' + title,
-                place:'1475871535982658'
+                message: value + ' - *' + title + '*',
+                place:page_id
             },
             success: function() {
                 alert('the item was posted on Facebook');
