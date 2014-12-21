@@ -273,13 +273,13 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 
 '<div style="height:40px;background-color:hsla(0, 0%, 0%, 0.7);">'+
 '<div style="float:left;font-size:14px;margin-left:10px;margin-top:10px;"><i class="pe-7s-like2 pe-lg" style="margin-right:2px;color:#3b5998;"></i><span style="color:#ccc;">'+ response[i][17] + '</span><i class="pe-7s-like2 pe-lg pe-rotate-180" style="color:#ff8000;margin-left:5px;margin-right:2px;"></i><span style="color:#ccc;">'+ response[i][18] + '</span></div>'+
-'<a href="#" onclick="loadMore(\''+ response[i][1]  +'\');" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-more pe-2x" style="margin-left:-5px;margin-top:5px;"></i></a>'+
+'<a href="#" onclick="loadMore();" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-more pe-2x" style="margin-left:-5px;margin-top:5px;"></i></a>'+
 '<a href="#" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-star pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a>'+
 '<a href="#" onclick="getBusiness(\''+ response[i][1]  +'\');" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-map pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a>'+
 '</div>'+ 
 
     
-''
+
 //openBrowser();
     
   
@@ -302,7 +302,7 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 '</div>'+
 
      '<div id="commentlist"></div>'+
-     '<i class="pe-7s-refresh-2 pe-spin pe-lg"></i>'+
+     '<i class="pe-7s-refresh pe-spin pe-lg"></i>'+
 '<div class="row"><a href="#" onclick="getComments();" style="z-index:100;margin-right:5px;height:40px;width:40px;margin:0 auto;border-radius:50%;background-color:transparent;margin-top:20px;" class="button"><i class="pe-7s-chat pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a></div>'+  
 
 '</div>'+  
@@ -2201,7 +2201,7 @@ function makeComment(){
 	$$('#commentinput').focus();
 }
 
-function loadMore(page_id){
+function loadMore(){
 	
  var buttons = [
         {
@@ -2214,8 +2214,8 @@ function loadMore(page_id){
             text: 'Share Deal',
             onClick: function () {
                 myApp.prompt('What is your name?', 'Custom Title', 
-      function (value,page_id) {
-        share(value,page_id);
+      function (value) {
+        share(value);
       },
       function (value) {
         myApp.alert('Your name is "' + value + '". You clicked Cancel button');
