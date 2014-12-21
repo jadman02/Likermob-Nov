@@ -2189,10 +2189,7 @@ myApp.modal({
             text: 'Report',
             color: 'red',
             onClick: function () {
-                $$.getJSON('http://www.smilesavers.net.au/report.php?callback=?','page_id=' + page_id + '&uid=' + uid + '&post_id=' + post_id,function(res){
-    alert('reported');
-    alert('Your post is '+res.fullname);
-});
+                
             }
         },
     ];
