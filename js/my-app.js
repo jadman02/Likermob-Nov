@@ -25,7 +25,7 @@ $$('.pull-to-refresh-content').on('scroll', function (e) {
     var pageScroll = pageContent.scrollTop;
   var background_size = (pageScroll * -1) + 100;
    if (pageScroll < 0) {
-        $$( '.homecontent' ).css( 'background-size', auto background_size + '%');
+        $$( '.homecontent' ).css( 'background-size', background_size + '% 100%');
             
         }
    
@@ -262,7 +262,7 @@ $$( '#tempImg' ).css( 'background-image', 'url(\''+ homecontentimage  +'\')');
   else {
 
 $$( '.homecontent' ).css( 'background-image', 'url(\''+ homecontentimage  +'\')');
-$$( '.homecontent' ).css( 'background-size', '100% 100%');
+$$( '.homecontent' ).css( 'background-size', '100%');
 $$( '.homecontent' ).css( 'background-repeat', 'no-repeat');}
 
 someText = str.replace(/(\r\n|\n|\r)/gm,"<br />");
