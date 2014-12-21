@@ -24,7 +24,7 @@ document.getElementById("profilepic").innerHTML = '<img src="http://graph.facebo
 $$('#top-marker').on('scroll', function (e) {
 var pageContent = this;
 var pageScroll = pageContent.scrollTop;	
-var background_size = (pageScroll / 100) + 100;
+var background_size = pageScroll + 100;
 
 if (pageScroll > 0) {$$( '.homecontent' ).css( 'background-size', background_size + '%');}	
 });
