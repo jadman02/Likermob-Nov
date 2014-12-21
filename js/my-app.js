@@ -2189,10 +2189,33 @@ myApp.modal({
             text: 'Report',
             color: 'red',
             onClick: function () {
-                $$.getJSON('http://www.smilesavers.net.au/report.php?callback=?','page_id=' + page_id + '&uid=' + uid + '&post_id=' + post_id,function(res){
+myApp.modal({
+    title: 'Report ',
+    text: '<div class="content-block" style="padding:0;margin:0;max-height:200px;overflow: scroll;overflow-x:hidden;"><div class="content-block-inner" style="background-color:transparent;">' + title + ' ajkdaskjbsajkdbsakj dbsa kjdb sajk dbsajk dbsajkdbsajkdbs ajkd bsajkdbsajkdbsaj kdasbdkjasbd jsdbasjdb asjdbasjd bsajkdbasjkdba skjdba sk jdb asjkdbasjkdba sj kdbasjkd bsa<br/><img style="margin-top:10px;width:50%;" src="'+ url +'"/></div></div>',
+     afterText:  '<div class="list-block" style="margin-top:10px;margin-bottom:10px;"><ul><li><div class="item-content"><div class="item-media"><img src="http://graph.facebook.com/'+ uid +'/picture?type=small"></div><div class="item-inner"><div class="item-input"><textarea id="reportbox" placeholder="What is wrong with this deal?"></textarea></div></div></div></li></ul</div>',
+    buttons: [
+      {
+        text: 'Cancel',
+        onClick: function() {
+          myApp.closeModal();
+        }
+      },
+      {
+        text: 'Report',
+        onClick: function() {
+          var why = $$("#reportbox").val();
+          $$.getJSON('http://www.smilesavers.net.au/report.php?callback=?','page_id=' + page_id + '&uid=' + uid + '&post_id=' + post_id+ '&why=' + why,function(res){
     alert('reported');
     alert('Your post is '+res.fullname);
+    closeButton(post_id);
 });
+        }
+      },
+    ]
+  });
+
+
+
             }
         },
     ];
