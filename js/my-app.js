@@ -2135,7 +2135,7 @@ photos : photos,
 //Open photo browser on click
 
     myPhotoBrowserStandalone.open();
-    $$( '.photo-browser-slider-container' ).click();
+    $$( '.photo-browser-slide' ).click();
     
 }
 
