@@ -2120,28 +2120,15 @@ function clearInput(){
 }
 
 var myPhotoBrowserStandalone;
-function openBrowser(){
+function openBrowser(url){
 
 var photos = [
         {
-            url: 'http://lorempixel.com/1024/1024/sports/1/',
-            caption: 'Caption 1 Text'
-        },
-        {
-            url: 'http://lorempixel.com/1024/1024/sports/2/',
-            caption: 'Second Caption Text Second Caption Text Second Caption Text Second Caption Text Second Caption Text Second Caption Text Second Caption Text Second Caption TextSecond Caption Text Second Caption Text Second Caption Text Second Caption TextSecond Caption Text Second Caption Text Second Caption Text Second Caption Text zzz' 
-        },
-        // This one without caption
-        {
-            url: 'http://lorempixel.com/1024/1024/sports/3/',
+            url: url
         },
     ];
 	
 	myPhotoBrowserStandalone = myApp.photoBrowser({
-    navbarTemplate:'<div class="navbar"><div class="navbar-inner"><div class="left sliding"><a href="#" class="link close-popup photo-browser-close-link"><i class="icon icon-back"></i><span>Closezzz</span></a></div><div class="center sliding"><span class="photo-browser-current"></span> <span class="photo-browser-of">of</span> <span class="photo-browser-total"></span></div><div class="right link open-panel" data-panel="right">modal</div></div></div>',
-    lazyLoadingInPrevNext:true,
-    expositionHideCaptions:true,
-toolbarTemplate:'<div class="toolbar tabbar"><div class="toolbar-inner"><a href="#" class="link photo-browser-prev"><i class="icon icon-prev"></i></a><a href="#" class="link"><i class="pe-7s-like pe-lg" style="color:#ff8000"></i></a><a href="#" class="link"><i class="pe-7s-info pe-lg" onclick="removeSlide()" style="color:#ff8000"></i></a><a href="#" class="link"><i class="pe-7s-like pe-lg" style="color:#ff8000"></i></a><a href="#" class="link photo-browser-next"><i class="icon icon-next"></i></a></div></div>',
 photos : photos,
 });
 //Open photo browser on click
@@ -2149,41 +2136,7 @@ photos : photos,
     myPhotoBrowserStandalone.open();
 }
 
-function modalModal(){
-	myApp.modal({
-    title:  'Modal with 3 buttons',
-    text: 'Vivamus feugiat diam velit. Maecenas aliquet egestas lacus, eget pretium massa mattis non. Donec volutpat euismod nisl in posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae',
-    buttons: [
-      {
-        text: 'B1',
-        onClick: function() {
-          myApp.alert('You clicked first button!')
-        }
-      },
-      {
-        text: 'B2',
-        onClick: function() {
-          myApp.alert('You clicked second button!')
-        }
-      },
-      {
-        text: 'B3',
-        bold: true,
-        onClick: function() {
-          myApp.alert('You clicked third button!')
-        }
-      },
-    ]
-  })
-	
-}
 
-function removeSlide(){
-	alert('remove slide');
-	$$('.slider-slide-active').remove();
-	
-	myPhotoBrowserStandalone.slider.update();
-}
 
 function toggleFilter(){
 $$( '.toolbartabs' ).toggleClass( "hide" );
@@ -2207,7 +2160,7 @@ function loadMore(page_id,url,title,uid){
         {
             text: 'View Photo',
             onClick: function () {
-                myApp.alert('Button1 clicked');
+               openBrowser(url);
             }
         },
         {
@@ -2229,7 +2182,6 @@ myApp.modal({
         onClick: function() {
           var value = $$("#dealbox").val();
           share(value,page_id,url,title);
-          myApp.alert('You clicked second button!')
         }
       },
     ]
