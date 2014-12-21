@@ -26,8 +26,9 @@ $$('.pull-to-refresh-content').on('scroll', function (e) {
   var positionpageScroll = (pageScroll * -1) / 2;
   var background_size = (pageScroll * -1) + 100;
    if (pageScroll < 0) {
-        $$( '.homecontent' ).css( 'background-size', background_size + '%');
         $$( '.homecontent' ).css( 'background-position', positionpageScroll + '% 0%');
+        $$( '.homecontent' ).css( 'background-size', background_size + '%');
+        
             
         }
     if (pageScroll == 0) {$$( '.homecontent' ).css( 'background-size', '100%');$$( '.homecontent' ).css( 'background-position', '0% 0%');}
