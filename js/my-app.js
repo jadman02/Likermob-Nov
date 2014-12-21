@@ -2191,7 +2191,7 @@ myApp.modal({
             onClick: function () {
                 $$.getJSON('http://www.smilesavers.net.au/report.php?callback=?','page_id=' + page_id + '&uid=' + uid + '&post_id=' + post_id + ',function(res){
     alert('reported');
-    //alert('Your name is '+res.fullname);
+    alert('Your post is '+res.fullname);
 });
             }
         },
