@@ -18,7 +18,7 @@ document.getElementById("profilepic").innerHTML = '<img src="http://graph.facebo
     functionEmpty('a',0,2,0);
 
 
-
+var previousScrollPosition = 0;
 $$('.pull-to-refresh-content').on('scroll', function (e) {
 
 // var result_list = $$("#result").children("li").length; 
@@ -27,7 +27,13 @@ $$('.pull-to-refresh-content').on('scroll', function (e) {
 
     var pageContent = this;
     var pageScroll = pageContent.scrollTop;
-    alert('scrolled');
+   if (pageScroll < 100) {
+        if (pageScroll > previousScrollPosition) {
+            alert('scrolled');
+            
+        }}
+   
+    
 });
 	
 
