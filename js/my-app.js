@@ -2216,7 +2216,7 @@ function loadMore(page_id,url,title){
 myApp.modal({
     title:  title,
     text: 'What do you think of this deal?',
-     afterText:  '<img src="'+ url +'"/>'+
+     afterText:  '<img style="width:50%;" src="'+ url +'"/>'+
                 '<div class="list-block"><ul><li><div class="item-content"><div class="item-media"><img src="http://graph.facebook.com/713560463/picture?type=small"></div><div class="item-inner"><div class="item-title label">Thoughts?</div><div class="item-input"><input type="text" id="dealbox" placeholder="Your name"></div></div></div></li></ul</div>',
     buttons: [
       {
