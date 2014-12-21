@@ -470,18 +470,19 @@ var modal = myApp.modal({
 
     function share(value,page_id,url,title) {
         
-        alert('clciked share');
+        if (value==""){message1 = ""};
+        else {message1 = value + "          |          "};
         
         openFB.api({
             method: 'POST',
             path: '/me/photos',
             params: {
                 url: url,
-                message: value + '          |          ' + title,
+                message: mesage1 + title,
                 place:page_id
             },
             success: function() {
-                alert('the item was posted on Facebook');
+                myApp.alert('Thanks for sharing!');
             },
             error: errorHandler});
     }
