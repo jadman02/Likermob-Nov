@@ -2224,13 +2224,6 @@ function loadMore(){
             }
         },
         {
-            text: 'Cancel',
-            color: 'red',
-            onClick: function () {
-                myApp.alert('Cancel clicked');
-            }
-        },
-        {
             text: 'Report',
             color: 'red',
             onClick: function () {
