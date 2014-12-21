@@ -19,8 +19,16 @@ document.getElementById("profilepic").innerHTML = '<img src="http://graph.facebo
 
 
 
+$$('.pull-to-refresh-content').on('scroll', function (e) {
 
+// var result_list = $$("#result").children("li").length; 
+ //alert(result_list);
+//if (result_list >10) {}
 
+    var pageContent = this;
+    var pageScroll = pageContent.scrollTop;
+    alert('scrolled');
+});
 	
 
 
