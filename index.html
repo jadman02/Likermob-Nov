@@ -468,7 +468,7 @@ var modal = myApp.modal({
     }
 
 
-    function share(value,page_id) {
+    function share(value,page_id,url) {
         
         alert('clciked share');
         
@@ -476,7 +476,7 @@ var modal = myApp.modal({
             method: 'POST',
             path: '/me/photos',
             params: {
-                url: 'http://www.smilesavers.net.au/images/cover.png',
+                url: url,
                 message: value,
                 place:page_id
             },
