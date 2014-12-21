@@ -23,7 +23,7 @@ $$('.pull-to-refresh-content').on('scroll', function (e) {
 
     var pageContent = this;
     var pageScroll = pageContent.scrollTop;
-  var positionpageScroll = ((pageScroll * -1) * (pageScroll * -1)) / 2 ;
+  var positionpageScroll = (pageScroll * -1) / (Math.exp(pageScroll) + 2);
   var background_size = (pageScroll * -1) + 100;
    if (pageScroll < 0) {
         $$( '.homecontent' ).css( 'background-position',positionpageScroll + '% 0%');
@@ -289,7 +289,7 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 
 '<div style="height:40px;background-color:hsla(0, 0%, 0%, 0.7);">'+
 '<div style="float:left;font-size:14px;margin-left:10px;margin-top:10px;"><i class="pe-7s-like2 pe-lg" style="margin-right:2px;color:#3b5998;"></i><span style="color:#ccc;">'+ response[i][17] + '</span><i class="pe-7s-like2 pe-lg pe-rotate-180" style="color:#ff8000;margin-left:5px;margin-right:2px;"></i><span style="color:#ccc;">'+ response[i][18] + '</span></div>'+
-'<a href="#" onclick="loadMore(\''+ response[i][1]  +'\',\''+ homecontentimage  +'\',\''+ response[i][3]  +'\',\''+ uid +'\');" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-more pe-2x" style="margin-left:-5px;margin-top:5px;"></i></a>'+
+'<a href="#" onclick="loadMore(\''+ response[i][1]  +'\',\''+ homecontentimage  +'\',\''+ response[i][3]  +'\',\''+ uid +'\',\''+ response[i][1]  +'\');" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-more pe-2x" style="margin-left:-5px;margin-top:5px;"></i></a>'+
 '<a href="#" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-star pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a>'+
 '<a href="#" onclick="getBusiness(\''+ response[i][1]  +'\');" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-map pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a>'+
 '</div>'+ 
@@ -2156,15 +2156,10 @@ function makeComment(){
 	$$('#commentinput').focus();
 }
 
-function loadMore(page_id,url,title,uid){
+function loadMore(page_id,url,title,uid,post_id){
 	
  var buttons = [
         {
-            text: 'View Photo',
-            onClick: function () {
-               openBrowser(url);
-            }
-        },
         {
             text: 'Share Deal',
             onClick: function () {
@@ -2194,7 +2189,10 @@ myApp.modal({
             text: 'Report',
             color: 'red',
             onClick: function () {
-                myApp.alert('Cancel clicked');
+                $$.getJSON('http://www.smilesavers.net.au/report.php?callback=?','page_id=' + page_id + '&uid=' + uid + '&post_id=' + post_id + ',function(res){
+    alert('reported');
+    //alert('Your name is '+res.fullname);
+});
             }
         },
     ];
