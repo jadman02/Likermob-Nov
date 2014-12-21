@@ -27,11 +27,11 @@ $$('.pull-to-refresh-content').on('scroll', function (e) {
 
     var pageContent = this;
     var pageScroll = pageContent.scrollTop;
-   if (pageScroll < 100) {
-        if (pageScroll > previousScrollPosition) {
-            alert('scrolled');
+   if (pageScroll < 0) {
+        
+            alert(pageScroll);
             
-        }}
+        }
    
     
 });
