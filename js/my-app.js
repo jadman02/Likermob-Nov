@@ -25,7 +25,7 @@ $$('.pull-to-refresh-content').on('scroll', function (e) {
     var pageScroll = pageContent.scrollTop;
   var background_size = (pageScroll * -1) + 100;
    if (pageScroll < 0) {
-        $$( '.homecontent' ).css( 'background-size', background_size + '% 100%');
+        $$( '.homecontent' ).css( 'background-size', background_size + '% auto');
             
         }
    
