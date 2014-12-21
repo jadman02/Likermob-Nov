@@ -23,10 +23,11 @@ $$('.pull-to-refresh-content').on('scroll', function (e) {
 
     var pageContent = this;
     var pageScroll = pageContent.scrollTop;
-  var positionpageScroll = (pageScroll * -1) / 2;
+  var positionpageScroll = (pageScroll * -1);
+  var log = Math.log(positionpageScroll);
   var background_size = (pageScroll * -1) + 100;
    if (pageScroll < 0) {
-        $$( '.homecontent' ).css( 'background-position', positionpageScroll + '% 0%');
+        $$( '.homecontent' ).css( 'background-position', log + '% 0%');
         $$( '.homecontent' ).css( 'background-size', background_size + '%');
         
             
