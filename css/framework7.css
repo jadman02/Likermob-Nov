@@ -2422,6 +2422,7 @@ html.ios .popup-overlay.modal-overlay-visible {
 }
 .modal {
   width: 270px;
+  padding:10px;
   position: absolute;
   z-index: 11000;
   left: 50%;
