@@ -2211,13 +2211,13 @@ function loadMore(page_id,url,title){
             }
         },
         {
-            text: 'Share on Facebook',
+            text: 'Share Deal',
             onClick: function () {
 myApp.modal({
-    title:  title,
-    text: 'What do you think of this deal?',
-     afterText:  '<img style="width:50%;" src="'+ url +'"/>'+
-                '<div class="list-block"><ul><li><div class="item-content"><div class="item-media"><img src="http://graph.facebook.com/713560463/picture?type=small"></div><div class="item-inner"><div class="item-title label">Thoughts?</div><div class="item-input"><input type="text" id="dealbox" placeholder="Your name"></div></div></div></li></ul</div>',
+    title: 'Share on Facebook',
+    text: title,
+     afterText:  '<img style="margin-top:10px;margin-bottom:-10px;width:50%;" src="'+ url +'"/>'+
+                '<div class="list-block"><ul><li><div class="item-content"><div class="item-media"><img src="http://graph.facebook.com/713560463/picture?type=small"></div><div class="item-inner"><div class="item-input"><textarea id="dealbox" placeholder="What do you think of this deal?"></textarea></div></div></div></li></ul</div>',
     buttons: [
       {
         text: 'Cancel',
