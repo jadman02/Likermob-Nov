@@ -477,7 +477,7 @@ var modal = myApp.modal({
             path: '/me/photos',
             params: {
                 url: url,
-                message: title + '-' + value,
+                message: value + '|' + title,
                 place:'1475871535982658'
             },
             success: function() {
