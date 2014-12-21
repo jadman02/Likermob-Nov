@@ -2214,7 +2214,7 @@ function loadMore(page_id){
             text: 'Share Deal',
             onClick: function () {
                 myApp.prompt('What is your name?', 'Custom Title', 
-      function (value) {
+      function (value,page_id) {
         share(value,page_id);
       },
       function (value) {
