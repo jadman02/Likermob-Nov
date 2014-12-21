@@ -2215,7 +2215,7 @@ function loadMore(page_id,url,title){
             onClick: function () {
 myApp.modal({
     title: 'Share on Facebook',
-    text: '<div class="content-block" style="padding:0;margin:0;max-height:200px;overflow: scroll;"><div class="content-block-inner">' + title + ' <br/><img style="margin-top:10px;margin-bottom:-10px;width:50%;" src="'+ url +'"/></div></div>',
+    text: '<div class="content-block" style="padding:0;margin:0;max-height:200px;overflow: scroll;"><div class="content-block-inner">' + title + ' <br/><br/><img style="margin-top:10px;margin-bottom:-10px;width:50%;" src="'+ url +'"/></div></div>',
      afterText:  '<div class="list-block"><ul><li><div class="item-content"><div class="item-media"><img src="http://graph.facebook.com/713560463/picture?type=small"></div><div class="item-inner"><div class="item-input"><textarea id="dealbox" placeholder="What do you think?"></textarea></div></div></div></li></ul</div>',
     buttons: [
       {
