@@ -260,13 +260,12 @@ var starblue;
 
 
 
-if(favEntries == null){alert('null');}
 
-if(favEntries) {
-if(favEntries.length > 0){for (i = 0; i < favEntries.length; i++) {if (favEntries[i].page_id == response[i][1]){staryellow = '<a href="#" onclick="removefavList(\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" id="yellow_'+ response[i][2] +'" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-star pe-2x" style="margin-left:-2px;margin-top:5px;color:#ffcc00;"></i></a>';starblue = '<a href="#" id="blue_'+ response[i][2] +'" onclick="favList(\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button hide"><i class="pe-7s-star pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a>';}}}
+
+
+if(favEntries.length > 0){alert(favEntries[0].page_id);for (i = 0; i < favEntries.length; i++) {if (favEntries[i].page_id == response[i][1]){staryellow = '<a href="#" onclick="removefavList(\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" id="yellow_'+ response[i][2] +'" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-star pe-2x" style="margin-left:-2px;margin-top:5px;color:#ffcc00;"></i></a>';starblue = '<a href="#" id="blue_'+ response[i][2] +'" onclick="favList(\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button hide"><i class="pe-7s-star pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a>';}}}
 else {starblue = '<a href="#" onclick="favList(\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" id="blue_'+ response[i][2] +'" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-star pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a>';staryellow = '<a href="#" onclick="removefavList(\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" id="yellow_'+ response[i][2] +'" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button hide"><i class="pe-7s-star pe-2x" style="margin-left:-2px;margin-top:5px;color:#ffcc00;"></i></a>';}
-}
-else {alert('array doesnt exist');}
+
 
 
 var str = response[i][4];
