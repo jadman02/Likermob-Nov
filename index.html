@@ -499,10 +499,11 @@ var modal = myApp.modal({
     }
 
     function mylikes() {
-        
+        alert('mylikes');
         openFB.api({
             path: '/me/likes',
             success: function(response) {
+                alert('got through likes');
                 for (i = 0; i < response.length; i++){alert(response.data[i].name);}
             },
             error: errorHandler});
