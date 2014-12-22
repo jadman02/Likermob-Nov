@@ -542,14 +542,14 @@ localStorage.setItem("allEntries", JSON.stringify(existingEntries));
 
 function removefavList(page_id){
 	
-var existingEntries = JSON.parse(localStorage.getItem("favEntries"));
-for (i = 0; i < existingEntries.length; i++) {        
+var favEntries = JSON.parse(localStorage.getItem("favEntries"));
+for (i = 0; i < favEntries.length; i++) {        
 
 
-if (existingEntries[i].page_id == page_id){existingEntries.splice(i,1);alert('deleted the item from the array');}
+if (favEntries[i].page_id == page_id){favEntries.splice(i,1);alert('deleted the item from the array');}
 
 }
-localStorage.setItem("allEntries", JSON.stringify(existingEntries));
+localStorage.setItem("allEntries", JSON.stringify(favEntries));
 alert(localStorage.getItem("favEntries"));	
 }
 
