@@ -2192,10 +2192,10 @@ myApp.modal({
 myApp.modal({
     title: 'Report ',
     text: '<div class="content-block" style="padding:0;margin:0;max-height:200px;overflow: scroll;overflow-x:hidden;"><div class="content-block-inner" style="background-color:transparent;">'+
-    '<div class="list-block" style="margin-top:10px;margin-bottom:0px;border-bottom:0;"><ul>'+
-'<li><label class="label-radio item-content"><input type="radio" name="fake-radio" value="fake"><div class="item-inner"><div class="item-title">Fake / Deceptive</div></div></label></li>'+
-'<li><label class="label-radio item-content"><input type="radio" name="rude-radio" value="rude"><div class="item-inner"><div class="item-title">Offensive / Rude</div></div></label></li>'+
-'<li><label class="label-radio item-content"><input type="radio" name="spam-radio" value="spam"><div class="item-inner"><div class="item-title">Spam</div></div></label></li>'+
+    '<div class="list-block" style="margin-top:10px;margin-bottom:0px;"><ul>'+
+'<li><label class="label-checkbox item-content"><input type="checkbox" id="fake-checkbox" name="fake-checkbox" value="fake"><div class="item-media"><i class="icon icon-form-checkbox"></i></div><div class="item-inner"><div class="item-title">Fake / Deceptive</div></div></label></li>'+
+'<li><label class="label-checkbox item-content"><input type="checkbox" id="rude-checkbox" name="rude-checkbox" value="rude"><div class="item-media"><i class="icon icon-form-checkbox"></i></div><div class="item-inner"><div class="item-title">Offensive / Rude</div></div></label></li>'+
+'<li><label class="label-checkbox item-content"><input type="checkbox" id="spam-checkbox" name="spam-checkbox" value="spam"><div class="item-media"><i class="icon icon-form-checkbox"></i></div><div class="item-inner"><div class="item-title">Spam</div></div></label></li>'+
 '</ul></div>'+
     '</div></div>',
      afterText:  '<div class="list-block" style="margin-top:10px;margin-bottom:10px;"><ul><li><div class="item-content"><div class="item-media"><img src="http://graph.facebook.com/'+ uid +'/picture?type=small"></div><div class="item-inner"><div class="item-input"><textarea id="reportbox" placeholder="What is wrong with this deal?"></textarea></div></div></div></li></ul</div>',
@@ -2210,7 +2210,12 @@ myApp.modal({
         text: 'Report',
         onClick: function() {
           var why = $$("#reportbox").val();
-          $$.getJSON('http://www.smilesavers.net.au/report.php?callback=?','page_id=' + page_id + '&uid=' + uid + '&post_id=' + post_id+ '&why=' + why + '&checkbox=' + checkbox,function(res){
+          var fake = $('#fake-checkbox').val();
+          var rude = $('#rude-checkbox').val();
+          var spam = $('#spam-checkbox').val();
+          var checkbox = why + "," + fake + "," rude;
+          alert(checkbox);
+          $$.getJSON('http://www.smilesavers.net.au/report.php?callback=?','page_id=' + page_id + '&uid=' + uid + '&post_id=' + post_id+ '&why=' + why+ '&checkbox=' + checkbox,function(res){
     alert('reported');
     alert('Your post is '+res.fullname);
     closeButton(post_id);
@@ -2229,5 +2234,3 @@ myApp.modal({
 }
 
 
-
-     
