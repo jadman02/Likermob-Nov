@@ -380,6 +380,7 @@ function userLikesLogin() {
                     if(response.status === 'connected') {
                         alert('Facebook login succeeded, got access token: ' + response.authResponse.token);
 localStorage.setItem("user_likes", "user_likes");
+mylikes();
 
                     } else {
                         alert('Facebook login failed: ' + response.error);
