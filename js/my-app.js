@@ -746,12 +746,32 @@ function addEntry(post_id,expiry) {
 
 
 function favList(page_id) {
- alert(localStorage.getItem("favEntries"));
-	var timestamp = Math.round(new Date().getTime() / 1000);
-    // Parse any JSON previously stored in allEntries
-    var favEntries = JSON.parse(localStorage.getItem("favEntries"));
-    if(favEntries == null) favEntries = [];
-    var faventry = {
+
+var timestamp = Math.round(new Date().getTime() / 1000);
+var favEntries = JSON.parse(localStorage.getItem("favEntries"));
+if(favEntries == null) favEntries = [];
+
+if (page_id instanceof Array){
+	
+	
+	for (i = 0; i < page_id.length; i++){
+		
+		var faventry = {
+        "page_id": page_id,
+        "created": timestamp
+    };
+    localStorage.setItem("faventry", JSON.stringify(faventry));
+    // Save allEntries back to local storage
+    favEntries.push(faventry);
+    localStorage.setItem("favEntries", JSON.stringify(favEntries));
+
+  
+	}
+alert(localStorage.getItem("favEntries"));	
+}
+else {
+	
+	var faventry = {
         "page_id": page_id,
         "created": timestamp
     };
@@ -761,6 +781,16 @@ function favList(page_id) {
     localStorage.setItem("favEntries", JSON.stringify(favEntries));
 
   alert(localStorage.getItem("favEntries"));	
+	
+}
+
+
+
+   
+    
+    
+
+	
 }
 
 
@@ -1696,8 +1726,8 @@ $$( ".location" ).removeClass( "active" );}
 
 function favouritesPage(){
 var user_likes = localStorage.getItem('user_likes');
+if (user_likes) {
 
-//if (user_likes) {'<a href="#" class="button" onclick="userLikesLogin();">Sync new Favs from Facebook</a>'+}
 var popupHTML = 
 '<div class="popup">'+
 '<div class="navbar">'+
@@ -1710,16 +1740,24 @@ var popupHTML =
 	
 
                     '<div class="content-block">'+
+//'<a href="#" class="button" onclick="userLikesLogin();">Sync new Favs from Facebook</a>'+
 
-
-'<a href="#" class="button" onclick="userLikesLogin();">Get My Favourites</a>'+
-'<a href="#" class="button" onclick="mylikes();">Get Likes</a>'+
                     '</div>'+
                   '</div>'
  
 
 
- myApp.popup(popupHTML);	
+myApp.popup(popupHTML);
+var favEntries = localStorage.getItem('favEntries');
+
+	
+}
+else {
+'<a href="#" class="button" onclick="userLikesLogin();">Get My Favourites</a>'+
+'<a href="#" class="button" onclick="mylikes();">Get Likes</a>'+	
+	
+}
+	
 
 	
 }
