@@ -2210,10 +2210,10 @@ myApp.modal({
         text: 'Report',
         onClick: function() {
           var why = $$("#reportbox").val();
-          var fake = $('#fake-checkbox').val();
-          var rude = $('#rude-checkbox').val();
-          var spam = $('#spam-checkbox').val();
-          var checkbox = why + "," + fake + "," rude;
+          var fake = $$('#fake-checkbox').val();
+          var rude = $$('#rude-checkbox').val();
+          var spam = $$('#spam-checkbox').val();
+          var checkbox = why + "," + fake + "," + rude;
           alert(checkbox);
           $$.getJSON('http://www.smilesavers.net.au/report.php?callback=?','page_id=' + page_id + '&uid=' + uid + '&post_id=' + post_id+ '&why=' + why+ '&checkbox=' + checkbox,function(res){
     alert('reported');
