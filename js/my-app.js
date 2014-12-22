@@ -290,7 +290,8 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 '<div style="height:40px;background-color:hsla(0, 0%, 0%, 0.7);">'+
 '<div style="float:left;font-size:14px;margin-left:10px;margin-top:10px;"><i class="pe-7s-like2 pe-lg" style="margin-right:2px;color:#3b5998;"></i><span style="color:#ccc;">'+ response[i][17] + '</span><i class="pe-7s-like2 pe-lg pe-rotate-180" style="color:#ff8000;margin-left:5px;margin-right:2px;"></i><span style="color:#ccc;">'+ response[i][18] + '</span></div>'+
 '<a href="#" onclick="loadMore(\''+ response[i][1]  +'\',\''+ homecontentimage  +'\',\''+ response[i][3]  +'\',\''+ uid +'\',\''+ response[i][1]  +'\');" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-more pe-2x" style="margin-left:-5px;margin-top:5px;"></i></a>'+
-'<a href="#" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-star pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a>'+
+'<a href="#" onclick="favList(\''+ response[i][1]  +'\')" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-star pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a>'+
+'<a href="#" onclick="removefavList(\''+ response[i][1]  +'\')" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-star pe-2x" style="margin-left:-2px;margin-top:5px;color:#ffcc00;"></i></a>'+
 '<a href="#" onclick="getBusiness(\''+ response[i][1]  +'\');" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-map pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a>'+
 '</div>'+ 
 
@@ -520,11 +521,6 @@ track_click++;
 }
 
 
-if(AdMob) AdMob.createBanner( {
-    adId:admobid.banner, 
-    position:AdMob.AD_POSITION.BOTTOM_CENTER, 
-    autoShow:true} );
-
 
 function removeLikes(){
 	
@@ -544,6 +540,18 @@ localStorage.setItem("allEntries", JSON.stringify(existingEntries));
 	
 }
 
+function removefavList(page_id){
+	
+var existingEntries = JSON.parse(localStorage.getItem("favEntries"));
+for (i = 0; i < existingEntries.length; i++) {        
+
+
+if (existingEntries[i].page_id == page_id){existingEntries.splice(i,1);alert('deleted the item from the array');}
+
+}
+localStorage.setItem("allEntries", JSON.stringify(existingEntries));
+alert(localStorage.getItem("favEntries"));	
+}
 
 
 
