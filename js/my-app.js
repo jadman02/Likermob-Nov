@@ -550,7 +550,7 @@ localStorage.setItem("allEntries", JSON.stringify(existingEntries));
 }
 
 function removefavList(page_id){
-	
+alert(page_id);	
 var favEntries = JSON.parse(localStorage.getItem("favEntries"));
 for (i = 0; i < favEntries.length; i++) {        
 
