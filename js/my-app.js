@@ -1690,6 +1690,34 @@ $$( ".location" ).removeClass( "active" );}
        //$$( '.rangeslider' ).css( 'height', heightrange + 'px' );
 }
 
+
+
+
+
+function favouritesPage(){
+var user_likes = localStorage.getItem('user_likes');
+'<div class="navbar theme-orange">'+
+ ' <div class="navbar-inner">'+
+ '<div id="left"></div>'
+ '<div id="center">Favourites</div>'
+ '</div>'+
+ '</div>'+
+	
+	'<div class="popup">'+
+                    '<div class="content-block">'+
+                      '<p>Popup created dynamically.</p>'+
+                      '<p><a href="#" class="close-popup">Close me</a></p>'+
+                    '</div>'+
+                  '</div>'
+ 
+if (user_likes) {'<a href="#" class="button" onclick="userLikesLogin();">Sync new Favs from Facebook</a>'+}
+else{'<a href="#" class="button" onclick="userLikesLogin();">Get My Favourites</a>'+}
+
+ myApp.popup(popupHTML);	
+
+	
+}
+
 function searchPlaces(id){
 	
 var searchvalue;
