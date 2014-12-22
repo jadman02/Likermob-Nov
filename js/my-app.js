@@ -246,15 +246,14 @@ var minuspercentage = 100-percentage;
 //alert(num % 1);
 
 
-var favEntries = JSON.parse(localStorage.getItem("favEntries"));
-var star; 
+ 
 
 //if (position <= last) {$$( ".page-content" ).removeClass( "page-content-scroll" );}
 //if (position == (stop-1)) {finish = last;$$( '#result' ).append('<li id="listmarker_end"></li>');$$( ".page-content" ).removeClass( "page-content-scroll" );}
 for (i = start; i < finish; i++) {        
 
-
-star = '<a href="#" onclick="favList(\''+ response[i][1]  +'\')" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-star pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a>';
+var favEntries = JSON.parse(localStorage.getItem("favEntries"));
+var star = '<a href="#" onclick="favList(\''+ response[i][1]  +'\')" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-star pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a>';
 
 for (i = 0; i < favEntries.length; i++) {        
 if (favEntries[i].page_id == response[i][1]){star = '<a href="#" onclick="removefavList(\''+ response[i][1]  +'\')" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-star pe-2x" style="margin-left:-2px;margin-top:5px;color:#ffcc00;"></i></a>';}
