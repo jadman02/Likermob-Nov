@@ -1696,22 +1696,22 @@ $$( ".location" ).removeClass( "active" );}
 
 function favouritesPage(){
 var user_likes = localStorage.getItem('user_likes');
-//if (user_likes) {'<a href="#" class="button" onclick="userLikesLogin();">Sync new Favs from Facebook</a>'+}
-//else{'<a href="#" class="button" onclick="userLikesLogin();">Get My Favourites</a>'+}
+
 
 var popupHTML = 
 '<div class="popup">'+
 '<div class="navbar">'+
  ' <div class="navbar-inner">'+
- '<div id="left"></div>'+
+ '<div id="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Close</span></a></div>'+
  '<div id="center">Favourites</div>'+
  '</div>'+
  '</div>'+
 	
 
                     '<div class="content-block">'+
-                      '<p>Popup created dynamically.</p>'+
-                      '<p><a href="#" class="close-popup">Close me</a></p>'+
+
+if (user_likes) {'<a href="#" class="button" onclick="userLikesLogin();">Sync new Favs from Facebook</a>'+}
+else{'<a href="#" class="button" onclick="userLikesLogin();">Get My Favourites</a>'+}
                     '</div>'+
                   '</div>'
  
