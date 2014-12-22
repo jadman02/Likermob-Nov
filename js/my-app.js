@@ -757,6 +757,7 @@ function addEntry(post_id,expiry) {
 
 function favList(page_id,post_id) {
 alert(page_id);	
+alert(page_id[0]);
 var timestamp = Math.round(new Date().getTime() / 1000);
 var favEntries = JSON.parse(localStorage.getItem("favEntries"));
 if(favEntries == null) favEntries = [];
@@ -767,7 +768,7 @@ if (page_id instanceof Array){
 	for (i = 0; i < page_id.length; i++){
 		
 		var faventry = {
-        "page_id": favEntries[i].page_id,
+        "page_id": page_id[i],
         "created": timestamp
     };
     localStorage.setItem("faventry", JSON.stringify(faventry));
