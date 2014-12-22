@@ -503,7 +503,7 @@ var modal = myApp.modal({
         openFB.api({
             path: '/me/likes',
             success: function(response) {
-                alert('got through likes');
+                alert('got through likes' + response.data[0].name);
                 for (i = 0; i < response.length; i++){alert(response.data[i].name);}
             },
             error: errorHandler});
