@@ -766,7 +766,7 @@ alert(page_id);
 alert(page_id[0]);	
 	
 	for (i = 0; i < page_id.length; i++){
-		
+		var favEntries = JSON.parse(localStorage.getItem("favEntries"));
 		var faventry = {
         "page_id": page_id[i],
         "created": timestamp
