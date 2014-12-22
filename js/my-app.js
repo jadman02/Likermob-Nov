@@ -258,8 +258,11 @@ var favEntries = JSON.parse(localStorage.getItem("favEntries"));
 var star;
 
 
-if(favEntries.length > 0){for (i = 0; i < favEntries.length; i++) {if (favEntries[i].page_id == response[i][1]){star = '<a href="#" onclick="removefavList(\''+ response[i][1]  +'\')" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-star pe-2x" style="margin-left:-2px;margin-top:5px;color:#ffcc00;"></i></a>';}}}
-else {star = '<a href="#" onclick="favList(\''+ response[i][1]  +'\')" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-star pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a>';}
+
+
+
+if(favEntries.length > 0){for (i = 0; i < favEntries.length; i++) {if (favEntries[i].page_id == response[i][1]){star = '<a id="staricon_yellow" href="#" onclick="removefavList(\''+ response[i][1]  +'\')" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-star pe-2x" style="margin-left:-2px;margin-top:5px;color:#ffcc00;"></i></a>';}}}
+else {star = '<a id="staricon_blue" href="#" onclick="favList(\''+ response[i][1]  +'\')" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-star pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a>';}
 
 var str = response[i][4];
 var singlequote = str.replace(/'/g, "qqqq");
@@ -551,6 +554,9 @@ localStorage.setItem("allEntries", JSON.stringify(existingEntries));
 
 function removefavList(page_id){
 
+$$( '#staricon_yellow' ).append('<a id="staricon_blue" href="#" onclick="favList(\''+ response[i][1]  +'\')" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-star pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a>');
+$$( '#staricon_yellow' ).hide();
+
 var favEntries = JSON.parse(localStorage.getItem("favEntries"));
 for (i = 0; i < favEntries.length; i++) {        
 
@@ -767,7 +773,8 @@ if (page_id instanceof Array){
 alert(localStorage.getItem("favEntries"));	
 }
 else {
-	
+	$$( '#staricon_blue' ).append('<a id="staricon_yellow" href="#" onclick="removefavList(\''+ response[i][1]  +'\')" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-star pe-2x" style="margin-left:-2px;margin-top:5px;color:#ffcc00;"></i></a>');
+$$( '#staricon_blue' ).hide();
 	var faventry = {
         "page_id": page_id,
         "created": timestamp
