@@ -2335,4 +2335,5 @@ myApp.modal({
     myApp.actions(buttons);
 }
 
-
+function clearEntries() {var favEntries = JSON.parse(localStorage.getItem("favEntries"));
+favEntries = [];localStorage.setItem("favEntries", JSON.stringify(favEntries));alert(localStorage.getItem("favEntries"));}
