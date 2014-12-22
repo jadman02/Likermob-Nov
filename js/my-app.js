@@ -262,8 +262,8 @@ var starblue;
 
 
 
-if(favEntries.length > 0){for (i = 0; i < favEntries.length; i++) {if (favEntries[i].page_id == response[i][1]){staryellow = '<a id="yellow_'+ response[i][2] +'" href="#" onclick="removefavList(\''+ response[i][1]  +'\')" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-star pe-2x" style="margin-left:-2px;margin-top:5px;color:#ffcc00;"></i></a>';starblue = '<a id="blue_'+ response[i][2] +'" href="#" onclick="favList(\''+ response[i][1]  +'\')" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button hide"><i class="pe-7s-star pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a>';}}}
-else {starblue = '<a id="blue_'+ response[i][2] +'" href="#" onclick="favList(\''+ response[i][1]  +'\')" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-star pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a>';staryellow = '<a id="yellow_'+ response[i][2] +'" href="#" onclick="removefavList(\''+ response[i][1]  +'\')" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button hide"><i class="pe-7s-star pe-2x" style="margin-left:-2px;margin-top:5px;color:#ffcc00;"></i></a>';}
+if(favEntries.length > 0){for (i = 0; i < favEntries.length; i++) {if (favEntries[i].page_id == response[i][1]){staryellow = '<a id="yellow_'+ response[i][2] +'" href="#" onclick="removefavList(\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-star pe-2x" style="margin-left:-2px;margin-top:5px;color:#ffcc00;"></i></a>';starblue = '<a id="blue_'+ response[i][2] +'" href="#" onclick="favList(\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button hide"><i class="pe-7s-star pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a>';}}}
+else {starblue = '<a id="blue_'+ response[i][2] +'" href="#" onclick="favList(\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-star pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a>';staryellow = '<a id="yellow_'+ response[i][2] +'" href="#" onclick="removefavList(\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button hide"><i class="pe-7s-star pe-2x" style="margin-left:-2px;margin-top:5px;color:#ffcc00;"></i></a>';}
 
 var str = response[i][4];
 var singlequote = str.replace(/'/g, "qqqq");
@@ -554,11 +554,11 @@ localStorage.setItem("allEntries", JSON.stringify(existingEntries));
 	
 }
 
-function removefavList(page_id){
+function removefavList(page_id,post_id){
 
 //onclick="favList(\''+ page_id  +'\')"
-$$( '#yellow_' + page_id ).addClass( 'hide' );
-$$( '#blue_' + page_id ).removeClass( 'hide' );
+$$( '#yellow_' + post_id ).addClass( 'hide' );
+$$( '#blue_' + post_id ).removeClass( 'hide' );
 
 var favEntries = JSON.parse(localStorage.getItem("favEntries"));
 for (i = 0; i < favEntries.length; i++) {        
@@ -751,7 +751,7 @@ function addEntry(post_id,expiry) {
   alert(localStorage.getItem("allEntries"));	
 }
 
-function favList(page_id) {
+function favList(page_id,post_id) {
 alert(page_id);	
 var timestamp = Math.round(new Date().getTime() / 1000);
 var favEntries = JSON.parse(localStorage.getItem("favEntries"));
@@ -777,8 +777,8 @@ alert(localStorage.getItem("favEntries"));
 }
 else {
 
-$$( '#yellow_' + page_id ).removeClass( 'hide' );
-$$( '#blue_' + page_id ).addClass( 'hide' );
+$$( '#yellow_' + post_id ).removeClass( 'hide' );
+$$( '#blue_' + post_id ).addClass( 'hide' );
 	var faventry = {
         "page_id": page_id,
         "created": timestamp
