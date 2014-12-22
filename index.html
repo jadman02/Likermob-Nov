@@ -249,7 +249,7 @@
 
 <ul id="add_container" style="border:none;"></ul>
 
-<a href="#" class="button" onclick="mylikes()">My Likes</a>
+<a href="#" class="button" onclick="favouritesPage()">My Likes</a>
 
 <ul id="result" style="overflow:hidden;background-color:transparent;"></ul></div>
 <div style="text-align:center;margin:0 auto;width:100%;color:#ff8000" id="loader-container">
@@ -366,12 +366,26 @@ function managePagesLogin() {
                     if(response.status === 'connected') {
                         alert('Facebook login succeeded, got access token: ' + response.authResponse.token);
 localStorage.setItem("manage_pages", "manage_pages");	
+pages();
                     } else {
                         alert('Facebook login failed: ' + response.error);
                     }
                 }, {scope: 'manage_pages'});
     }
 
+function userLikesLogin() {
+	alert('user_likes login');
+        openFB.login(
+                function(response) {
+                    if(response.status === 'connected') {
+                        alert('Facebook login succeeded, got access token: ' + response.authResponse.token);
+localStorage.setItem("user_likes", "user_likes");
+
+                    } else {
+                        alert('Facebook login failed: ' + response.error);
+                    }
+                }, {scope: 'user_likes'});
+    }
 
 
         function facebookPhotos(page_id) {
