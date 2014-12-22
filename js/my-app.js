@@ -253,13 +253,13 @@ var minuspercentage = 100-percentage;
 for (i = start; i < finish; i++) {        
 var favEntries = JSON.parse(localStorage.getItem("favEntries"));
 var star; 
-star = '<a href="#" onclick="removefavList(\''+ response[i][1]  +'\')" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-star pe-2x" style="margin-left:-2px;margin-top:5px;color:#ffcc00;"></i></a>'
 
-//for (i = 0; i < favEntries.length; i++) {        
-//if (favEntries[i].page_id == response[i][1]){;alert('you like this');}
 
-//else {star ='<a href="#" onclick="favList(\''+ response[i][1]  +'\')" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-star pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a>';alert('you do not like this'); }
-//}
+for (i = 0; i < favEntries.length; i++) {        
+if (favEntries[i].page_id == response[i][1]){star = '<a href="#" onclick="removefavList(\''+ response[i][1]  +'\')" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-star pe-2x" style="margin-left:-2px;margin-top:5px;color:#ffcc00;"></i></a>';alert('you like this');}
+
+else {star ='<a href="#" onclick="favList(\''+ response[i][1]  +'\')" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-star pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a>';alert('you do not like this'); }
+}
 alert(star);
 var str = response[i][4];
 var singlequote = str.replace(/'/g, "qqqq");
