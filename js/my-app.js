@@ -1696,10 +1696,13 @@ $$( ".location" ).removeClass( "active" );}
 
 function favouritesPage(){
 var user_likes = localStorage.getItem('user_likes');
-'<div class="navbar theme-orange">'+
+if (user_likes) {'<a href="#" class="button" onclick="userLikesLogin();">Sync new Favs from Facebook</a>'+}
+else{'<a href="#" class="button" onclick="userLikesLogin();">Get My Favourites</a>'+}
+
+var popupHTML = '<div class="navbar theme-orange">'+
  ' <div class="navbar-inner">'+
- '<div id="left"></div>'
- '<div id="center">Favourites</div>'
+ '<div id="left"></div>'+
+ '<div id="center">Favourites</div>'+
  '</div>'+
  '</div>'+
 	
