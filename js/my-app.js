@@ -1706,8 +1706,6 @@ var user_likes = localStorage.getItem('user_likes');
 	'<div class="popup">'+
                     '<div class="content-block">'+
                       '<p>Popup created dynamically.</p>'+
-if (user_likes) {'<a href="#" class="button" onclick="userLikesLogin();">Sync new Favs from Facebook</a>'+}
-else{'<a href="#" class="button" onclick="userLikesLogin();">Get My Favourites</a>'+}
                       '<p><a href="#" class="close-popup">Close me</a></p>'+
                     '</div>'+
                   '</div>'
