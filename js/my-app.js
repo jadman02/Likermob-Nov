@@ -549,7 +549,7 @@ for (i = 0; i < favEntries.length; i++) {
 if (favEntries[i].page_id == page_id){favEntries.splice(i,1);alert('deleted the item from the array');}
 
 }
-localStorage.setItem("allEntries", JSON.stringify(favEntries));
+localStorage.setItem("favEntries", JSON.stringify(favEntries));
 alert(localStorage.getItem("favEntries"));	
 }
 
