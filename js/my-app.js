@@ -1752,20 +1752,21 @@ var popupHTML =
 
                     '<div class="content-block">'+
 //'<a href="#" class="button" onclick="userLikesLogin();">Sync new Favs from Facebook</a>'+
-
+'yo'+
                     '</div>'+
                   '</div>'
  
 
 
 myApp.popup(popupHTML);
-var favEntries = localStorage.getItem('favEntries');
+var favEntries = JSON.parse(localStorage.getItem("favEntries"));
+for (i = 0; i < favEntries.length; i++) {alert(favEntries[i].page_id);}
 
 	
 }
 else {
-'<a href="#" class="button" onclick="userLikesLogin();">Get My Favourites</a>'+
-'<a href="#" class="button" onclick="mylikes();">Get Likes</a>'+	
+//'<a href="#" class="button" onclick="userLikesLogin();">Get My Favourites</a>'+
+//'<a href="#" class="button" onclick="mylikes();">Get Likes</a>'+	
 	
 }
 	
