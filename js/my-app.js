@@ -550,7 +550,7 @@ localStorage.setItem("allEntries", JSON.stringify(existingEntries));
 }
 
 function removefavList(page_id){
-alert(page_id);	
+
 var favEntries = JSON.parse(localStorage.getItem("favEntries"));
 for (i = 0; i < favEntries.length; i++) {        
 
@@ -742,22 +742,8 @@ function addEntry(post_id,expiry) {
   alert(localStorage.getItem("allEntries"));	
 }
 
-
-function removefavList(page_id){
-	
-var favEntries = JSON.parse(localStorage.getItem("favEntries"));
-for (i = 0; i < favEntries.length; i++) {        
-
-
-if (favEntries[i].page_id == page_id){favEntries.splice(i,1);alert('deleted the item from the array');}
-
-}
-localStorage.setItem("favEntries", JSON.stringify(favEntries));
-alert(localStorage.getItem("favEntries"));	
-}
-
 function favList(page_id) {
-
+alert(page_id);	
 var timestamp = Math.round(new Date().getTime() / 1000);
 var favEntries = JSON.parse(localStorage.getItem("favEntries"));
 if(favEntries == null) favEntries = [];
