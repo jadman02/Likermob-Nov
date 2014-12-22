@@ -743,7 +743,18 @@ function addEntry(post_id,expiry) {
 }
 
 
+function removefavList(page_id){
+	
+var favEntries = JSON.parse(localStorage.getItem("favEntries"));
+for (i = 0; i < favEntries.length; i++) {        
 
+
+if (favEntries[i].page_id == page_id){favEntries.splice(i,1);alert('deleted the item from the array');}
+
+}
+localStorage.setItem("favEntries", JSON.stringify(favEntries));
+alert(localStorage.getItem("favEntries"));	
+}
 
 function favList(page_id) {
 
@@ -757,7 +768,7 @@ if (page_id instanceof Array){
 	for (i = 0; i < page_id.length; i++){
 		
 		var faventry = {
-        "page_id": page_id,
+        "page_id": favEntries[i].page_id,
         "created": timestamp
     };
     localStorage.setItem("faventry", JSON.stringify(faventry));
