@@ -1702,8 +1702,9 @@ var popupHTML =
 '<div class="popup">'+
 '<div class="navbar">'+
  ' <div class="navbar-inner">'+
- '<div id="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Close</span></a></div>'+
+ '<div id="left"><a href="#" class="close-popup"><i class="icon icon-back"></i><span>Close</span></a></div>'+
  '<div id="center">Favourites</div>'+
+  '<div id="right"><i class="pe-7s-refresh pe-2x"></i></div>'+
  '</div>'+
  '</div>'+
 	
@@ -1712,6 +1713,7 @@ var popupHTML =
 
 
 '<a href="#" class="button" onclick="userLikesLogin();">Get My Favourites</a>'+
+'<a href="#" class="button" onclick="mylikes();">Get Likes</a>'+
                     '</div>'+
                   '</div>'
  
