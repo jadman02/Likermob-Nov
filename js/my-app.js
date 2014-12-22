@@ -554,9 +554,9 @@ localStorage.setItem("allEntries", JSON.stringify(existingEntries));
 
 function removefavList(page_id){
 
-//<a id="staricon_blue" href="#" onclick="favList(\''+ page_id  +'\')" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-star pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a>
 
-$$( '#starinsert' ).append('yo');
+
+$$( '#starinsert' ).append(alert('<a id="staricon_blue" href="#" onclick="favList(\''+ page_id  +'\')" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-star pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a>'););
 $$( '#staricon_yellow' ).hide();
 
 var favEntries = JSON.parse(localStorage.getItem("favEntries"));
@@ -775,8 +775,8 @@ if (page_id instanceof Array){
 alert(localStorage.getItem("favEntries"));	
 }
 else {
-//<a id="staricon_yellow" href="#" onclick="removefavList(\''+ page_id  +'\')" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-star pe-2x" style="margin-left:-2px;margin-top:5px;color:#ffcc00;"></i></a>
-	$$( '#starinsert' ).append('yo');
+
+	$$( '#starinsert' ).append(alert('<a id="staricon_yellow" href="#" onclick="removefavList(\''+ page_id  +'\')" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-star pe-2x" style="margin-left:-2px;margin-top:5px;color:#ffcc00;"></i></a>'););
 $$( '#staricon_blue' ).hide();
 	var faventry = {
         "page_id": page_id,
