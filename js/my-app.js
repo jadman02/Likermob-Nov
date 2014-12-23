@@ -571,7 +571,7 @@ if (favEntries[i].page_id == page_id){favEntries.splice(i,1);}
 
 }
 localStorage.setItem("favEntries", JSON.stringify(favEntries));
-//alert(localStorage.getItem("favEntries"));	
+alert(localStorage.getItem("favEntries"));	
 }
 
 
@@ -792,7 +792,7 @@ $$( '#blue_' + post_id ).addClass( 'hide' );
     favEntries.push(faventry);
     localStorage.setItem("favEntries", JSON.stringify(favEntries));
 
-  alert(localStorage.getItem("favEntries"));	
+  //alert(localStorage.getItem("favEntries"));	
 	
 }
 
