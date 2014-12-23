@@ -265,7 +265,7 @@ var starblue = '<a href="#" onclick="favList(\''+ response[i][1]  +'\',\''+ resp
 //alert(favEntries.length);
 
 
-if(favEntries.length > 0){for (j = 0; j < favEntries.length; j++) {if (favEntries[j].page_id == response[i][1]){alert('match found');staryellow = '<a href="#" onclick="removefavList(\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" id="yellow_'+ response[i][2] +'" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-star pe-2x" style="margin-left:-2px;margin-top:5px;color:#ffcc00;"></i></a>';starblue = '<a href="#" id="blue_'+ response[i][2] +'" onclick="favList(\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button hide"><i class="pe-7s-star pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a>';}}}
+if(favEntries.length > 0){for (j = 0; j < favEntries.length; j++) {if (favEntries[j].page_id == response[i][1]){staryellow = '<a href="#" onclick="removefavList(\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" id="yellow_'+ response[i][2] +'" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-star pe-2x" style="margin-left:-2px;margin-top:5px;color:#ffcc00;"></i></a>';starblue = '<a href="#" id="blue_'+ response[i][2] +'" onclick="favList(\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button hide"><i class="pe-7s-star pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a>';}}}
 
 
 
