@@ -1753,6 +1753,8 @@ var popupHTML =
 	
 
                     '<div class="content-block">'+
+<!-- Virtual List -->
+'<div class="list-block virtual-list"></div>'+
 //'<a href="#" class="button" onclick="userLikesLogin();">Sync new Favs from Facebook</a>'+
 'yo'+
                     '</div>'+
@@ -1762,7 +1764,13 @@ var popupHTML =
 
 myApp.popup(popupHTML);
 var favEntries = JSON.parse(localStorage.getItem("favEntries"));
-for (i = 0; i < favEntries.length; i++) {alert(favEntries[i].page_id);}
+var myList = app.virtualList('.list-block', {
+    items: [1,2,3,4],
+    height: 44
+});   
+
+
+//for (i = 0; i < favEntries.length; i++) {alert(favEntries[i].page_id);}
 
 	
 }
