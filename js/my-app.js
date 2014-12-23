@@ -339,7 +339,7 @@ starblue +
 
      '<div id="commentlist"></div>'+
 '<div class="row">'+
-'<a href="#" id="commentloader" class="button" style="height:40px;width:40px;margin:0 auto;background-color:transparent;margin-top:20px;"><i class="pe-7s-refresh pe-spin pe-lg hide"></i></a>'+
+'<a href="#" id="commentloader" class="button hide" style="border-radius:50%;height:40px;width:40px;margin:0 auto;background-color:transparent;margin-top:20px;"><i class="pe-7s-refresh pe-spin pe-lg"></i></a>'+
 '<a href="#" id="chatloader" onclick="getComments();" style="z-index:100;height:40px;width:40px;margin:0 auto;border-radius:50%;background-color:transparent;margin-top:20px;" class="button"><i class="pe-7s-chat pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a></div>'+  
 
 '</div>'+  
