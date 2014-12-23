@@ -548,7 +548,9 @@ var click = 0;
 
     function getComments() {
         
-       
+        $$( "#commentloader" ).removeClass( "hide" );
+        $$( "#chatloader" ).addClass( "hide" ); 
+
         var start;
         var finish;
         
@@ -556,6 +558,9 @@ var click = 0;
         openFB.api({
         path: '/174238599281322_824826047555904/comments?summary=1&',
         success: function(response) {
+
+        $$( "#commentloader" ).addClass( "hide" );
+        $$( "#chatloader" ).removeClass( "hide" ); 
         
 var last = response.summary.total_count;
 var cycles = Math.ceil(last / 5);
