@@ -1753,7 +1753,6 @@ var popupHTML =
 	
 
                     '<div class="content-block">'+
-<!-- Virtual List -->
 '<div class="list-block virtual-list"></div>'+
 //'<a href="#" class="button" onclick="userLikesLogin();">Sync new Favs from Facebook</a>'+
 'yo'+
@@ -1764,9 +1763,31 @@ var popupHTML =
 
 myApp.popup(popupHTML);
 var favEntries = JSON.parse(localStorage.getItem("favEntries"));
-var myList = app.virtualList('.list-block', {
-    items: [1,2,3,4],
-    height: 44
+var myList = myApp.virtualList('.list-block.virtual-list', {
+    // Array with items data
+    items: [
+        {
+            title: 'Item 1',
+            picture: 'http://www.smilesavers.net.au/images/cover.png'
+        },
+        {
+            title: 'Item 2',
+            picture: 'http://www.smilesavers.net.au/images/cover.png'
+        },
+        {
+            title: 'Item 1000',
+            picture: 'http://www.smilesavers.net.au/images/cover.png'
+        },
+    ],
+    // Custom render function to render item's HTML
+    renderItem: function (index, item) {
+        return '<li class="item-content">' +
+                  '<div class="item-media"><img src="' + item.picture + '"></div>' +
+                  '<div class="item-inner">' +
+                      '<div class="item-title">' + item.title + '</div>' +
+                  '</div>' +
+               '</li>';
+    }
 });   
 
 
