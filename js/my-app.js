@@ -762,6 +762,7 @@ var favEntries = JSON.parse(localStorage.getItem("favEntries"));
 if(favEntries == null) favEntries = [];
 
 if (page_id instanceof Array){
+page_id=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
 alert(page_id);	
 alert(page_id[0]);	
 	
