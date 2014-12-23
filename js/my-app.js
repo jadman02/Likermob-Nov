@@ -1764,31 +1764,14 @@ var popupHTML =
 myApp.popup(popupHTML);
 var favEntries = JSON.parse(localStorage.getItem("favEntries"));
 var myList = myApp.virtualList('.list-block.virtual-list', {
-    // Array with items data
+    // Array with plain HTML items
     items: [
-        {
-            title: 'Item 1',
-            picture: 'http://www.smilesavers.net.au/images/cover.png'
-        },
-        {
-            title: 'Item 2',
-            picture: 'http://www.smilesavers.net.au/images/cover.png'
-        },
-        {
-            title: 'Item 1000',
-            picture: 'http://www.smilesavers.net.au/images/cover.png'
-        },
-    ],
-    // Custom render function to render item's HTML
-    renderItem: function (index, item) {
-        return '<li class="item-content">' +
-                  '<div class="item-media"><img src="' + item.picture + '"></div>' +
-                  '<div class="item-inner">' +
-                      '<div class="item-title">' + item.title + '</div>' +
-                  '</div>' +
-               '</li>';
-    }
-});   
+        '<li class="item-content"><div clas="item-inner"><div class="item-title">Item 1</div></div></li>',
+        '<li class="item-content"><div clas="item-inner"><div class="item-title">Item 2</div></div></li>',
+        '<li class="item-content"><div clas="item-inner"><div class="item-title">Item 3</div></div></li>',
+        '<li class="item-content"><div clas="item-inner"><div class="item-title">Item 1000</div></div></li>'
+    ]
+});
 
 
 //for (i = 0; i < favEntries.length; i++) {alert(favEntries[i].page_id);}
