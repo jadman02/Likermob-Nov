@@ -567,11 +567,11 @@ var favEntries = JSON.parse(localStorage.getItem("favEntries"));
 for (i = 0; i < favEntries.length; i++) {        
 
 
-if (favEntries[i].page_id == page_id){favEntries.splice(i,1);alert('deleted the item from the array');}
+if (favEntries[i].page_id == page_id){favEntries.splice(i,1);}
 
 }
 localStorage.setItem("favEntries", JSON.stringify(favEntries));
-alert(localStorage.getItem("favEntries"));	
+//alert(localStorage.getItem("favEntries"));	
 }
 
 
