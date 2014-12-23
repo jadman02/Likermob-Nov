@@ -558,7 +558,7 @@ var click = 0;
         openFB.api({
         path: '/174238599281322_824826047555904/comments?summary=1&',
         success: function(response) {
-$$('.page-content').scrollTop($$('#commentloader').offset().top-44, 300);
+        $$(window).scrollTop($("#commentloader").offset().top);
         $$( "#commentloader" ).addClass( "hide" );
         $$( "#chatloader" ).removeClass( "hide" ); 
         
