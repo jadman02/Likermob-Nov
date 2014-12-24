@@ -1920,7 +1920,6 @@ function moveCover(){
 }
 
 function moveHomeimage(){
-	alert('moveimagehome');
 	var img = new Image();
      img.src = $$( '.homecontent' ).css('background-image').replace(/url\(|\)$|"/ig, '');
      img.onload = function () {
