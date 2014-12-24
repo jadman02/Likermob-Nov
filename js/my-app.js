@@ -2363,7 +2363,7 @@ var newPageContent =
     
     '<div class="searchbar-overlay"></div>'+
                         '<div class="page-content">' +
-'<div class="list-block virtual-list list-block-search"></div>'+
+'<div class="list-block virtual-list"></div>'+
                         '</div>' +
                       '</div>';
  
