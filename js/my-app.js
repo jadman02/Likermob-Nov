@@ -191,7 +191,7 @@ function functionEmpty(pages_list,start,finish,position) {
 //alert('pages_list: ' + pages_list + 'start: ' +start + 'finish: ' +finish + 'position: ' + position);
 
 var uid = localStorage.getItem("uid");
-alert(uid);
+
 localStorage.setItem("position", position);
 
 click = 0;
@@ -200,6 +200,8 @@ var latitude = localStorage.getItem("latitude");
 var longitude = localStorage.getItem("longitude");
 var post_id_list = [];
 var fav_id_list = [];
+
+alert(latitude + "," + longitude);
 
 if (typeof start === 'undefined') {$$("#result li").remove();start = 0;}
 if (typeof finish === 'undefined') {$$("#result li").remove();finish = 2;}
