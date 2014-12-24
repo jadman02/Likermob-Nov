@@ -2353,21 +2353,47 @@ var newPageContent =
     '</div>'+
 '</div>'+
 '<div class="page" data-page="my-page">' +
+'<form class="searchbar" data-search-list=".list-block-search" data-search-in=".item-title" data-searchbar-found=".searchbar-found" data-searchbar-not-found=".searchbar-not-found">'+
+        '<div class="searchbar-input">'+
+            '<input type="search" placeholder="Search">'+
+            '<a href="#" class="searchbar-clear"></a>'+
+        '</div>'+
+        '<a href="#" class="searchbar-cancel">Cancel</a>'+
+    '</form>'+
+    
+    '<div class="searchbar-overlay"></div>'+
                         '<div class="page-content">' +
-'<div class="list-block virtual-list"></div>'+
+'<div class="list-block virtual-list list-block-search"></div>'+
                         '</div>' +
                       '</div>';
  
 //Load new content as new page
 mainView.router.loadContent(newPageContent);
 var myList = myApp.virtualList('.list-block.virtual-list', {
-    // Array with plain HTML items
+    // Array with items data
     items: [
-        '<li class="item-content"><div clas="item-inner"><div class="item-title">Item 1</div></div></li>',
-        '<li class="item-content"><div clas="item-inner"><div class="item-title">Item 2</div></div></li>',
-        '<li class="item-content"><div clas="item-inner"><div class="item-title">Item 3</div></div></li>',
-        //...
-        '<li class="item-content"><div clas="item-inner"><div class="item-title">Item 1000</div></div></li>'
-    ]
-});
+        {
+            title: 'Item 1',
+            picture: 'http://www.smilesavers.net.au/images/cover.png'
+        },
+        {
+            title: 'Item 2',
+            picture: 'http://www.smilesavers.net.au/images/cover.png'
+        },
+        {
+            title: 'Item 1000',
+            picture: 'http://www.smilesavers.net.au/images/cover.png'
+        },
+    ],
+    // search all items, we need to return array with indexes of matched items
+    searchAll: function (query, items) {
+        var foundItems = [];
+        for (var i = 0; i < items.length; i++) {
+            // Check if title contains query string
+            if (items[i].title.indexOf(query.trim()) >= 0) foundItems.push(i);
+        }
+        // Return array with indexes of matched items
+        return foundItems; 
+    }
+});  
 }
