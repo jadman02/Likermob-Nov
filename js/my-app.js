@@ -2363,7 +2363,7 @@ var newPageContent =
     
     '<div class="searchbar-overlay"></div>'+
                         '<div class="page-content">' +
-'<div class="list-block virtual-list"></div>'+
+'<div class="list-block virtual-list list-block-search searchbar-found"></div>'+
                         '</div>' +
                       '</div>';
  
@@ -2375,6 +2375,15 @@ for (i = 0; i < favEntries.length; i++) {itemlist.push({page_id:favEntries[i].pa
 var myList = myApp.virtualList('.list-block.virtual-list', {
     // Array with items data
     items: itemlist,
+    searchAll: function (query, items) {
+        var foundItems = [];
+        for (var i = 0; i < items.length; i++) {
+            // Check if title contains query string
+            if (items[i].title.indexOf(query.trim()) >= 0) foundItems.push(i);
+        }
+        // Return array with indexes of matched items
+        return foundItems; 
+    },
     // Custom render function to render item's HTML
     renderItem: function (index, item) {
         return '<li class="item-content">' +
