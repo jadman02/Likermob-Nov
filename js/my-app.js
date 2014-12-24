@@ -180,9 +180,7 @@ myApp.onPageInit('about', function (page) {
 
 alert('on about page');
 
-	$$('.create-page').on('click', function () {
-        createContentPage();
-    });
+
 });
 
 
