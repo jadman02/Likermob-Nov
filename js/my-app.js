@@ -77,8 +77,9 @@ $$( ".business" ).remove();
 functionEmpty();
 });
 
-
-
+myApp.onPageInit('my-page', function (page) {
+	alert('yo');
+});
 	
 myApp.onPageInit('location', function (page) {
 
