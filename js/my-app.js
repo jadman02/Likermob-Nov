@@ -201,7 +201,7 @@ var longitude = localStorage.getItem("longitude");
 var post_id_list = [];
 var fav_id_list = [];
 
-alert(start + "," + finish);
+alert(pages_list);
 
 if (typeof start === 'undefined') {$$("#result li").remove();start = 0;}
 if (typeof finish === 'undefined') {$$("#result li").remove();finish = 2;}
