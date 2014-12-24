@@ -2369,31 +2369,20 @@ var newPageContent =
  
 //Load new content as new page
 mainView.router.loadContent(newPageContent);
+var favEntries = JSON.parse(localStorage.getItem("favEntries"));
+var itemlist = [];
+itemlist.push({page_id:favEntries[i].page_id,timestamp:favEntries[i].timestamp});
 var myList = myApp.virtualList('.list-block.virtual-list', {
     // Array with items data
-    items: [
-        {
-            title: 'Item 1',
-            picture: 'http://www.smilesavers.net.au/images/cover.png'
-        },
-        {
-            title: 'Item 2',
-            picture: 'http://www.smilesavers.net.au/images/cover.png'
-        },
-        {
-            title: 'Item 1000',
-            picture: 'http://www.smilesavers.net.au/images/cover.png'
-        },
-    ],
-    // search all items, we need to return array with indexes of matched items
-    searchAll: function (query, items) {
-        var foundItems = [];
-        for (var i = 0; i < items.length; i++) {
-            // Check if title contains query string
-            if (items[i].title.indexOf(query.trim()) >= 0) foundItems.push(i);
-        }
-        // Return array with indexes of matched items
-        return foundItems; 
+    items: itemlist,
+    // Custom render function to render item's HTML
+    renderItem: function (index, item) {
+        return '<li class="item-content">' +
+                  '<div class="item-media"><img src="http://graph.facebook.com/'+item.page_id+'/picture?width=30&height=30" style="border-radius:50%;"/>' +
+                  '<div class="item-inner">' +
+                      '<div class="item-title">' + item.timestamp + '</div>' +
+                  '</div>' +
+               '</li>';
     }
 });  
 }
