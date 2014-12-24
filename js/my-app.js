@@ -188,11 +188,10 @@ var tempImage;
 
 function functionEmpty(pages_list,start,finish,position) {
 
-myApp.hideToolbar(toolbar);
-
 //alert('pages_list: ' + pages_list + 'start: ' +start + 'finish: ' +finish + 'position: ' + position);
 
 var uid = localStorage.getItem("uid");
+alert(uid);
 localStorage.setItem("position", position);
 
 click = 0;
