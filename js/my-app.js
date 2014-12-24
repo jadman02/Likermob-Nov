@@ -46,10 +46,19 @@ $$('.pull-to-refresh-content').on('scroll', function (e) {
 
 });	
 
-myApp.onPageInit('add_deal', function (page) {
+myApp.onPageInit('deal', function (page) {
 
 
-
+var myList = myApp.virtualList('.list-block.virtual-list', {
+    // Array with plain HTML items
+    items: [
+        '<li class="item-content"><div clas="item-inner"><div class="item-title">Item 1</div></div></li>',
+        '<li class="item-content"><div clas="item-inner"><div class="item-title">Item 2</div></div></li>',
+        '<li class="item-content"><div clas="item-inner"><div class="item-title">Item 3</div></div></li>',
+        //...
+        '<li class="item-content"><div clas="item-inner"><div class="item-title">Item 1000</div></div></li>'
+    ]
+});
 
 
 });
