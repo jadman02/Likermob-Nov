@@ -2353,7 +2353,7 @@ var newPageContent =
     '</div>'+
 '</div>'+
 '<div class="page" data-page="my-page">' +
-'<form class="searchbar" onkeyup="alert(\'keyup\');" data-search-list=".list-block-search" data-search-in=".item-title" data-searchbar-found=".searchbar-found" data-searchbar-not-found=".searchbar-not-found">'+
+'<form class="searchbar" data-search-list=".list-block-search" data-search-in=".item-title" data-searchbar-found=".searchbar-found" data-searchbar-not-found=".searchbar-not-found">'+
         '<div class="searchbar-input">'+
             '<input type="search" placeholder="Search">'+
             '<a href="#" class="searchbar-clear"></a>'+
@@ -2378,6 +2378,16 @@ for (i = 0; i < favEntries.length; i++) {itemlist.push({page_id:favEntries[i].pa
 var myList = myApp.virtualList('.list-block.virtual-list', {
     // Array with items data
     items: itemlist,
+    searchAll: function (query, items) {
+        var foundItems = [];
+        for (var i = 0; i < items.length; i++) {
+            // Check if title contains query string
+            if (items[i].title.indexOf(query.trim()) >= 0) foundItems.push(i);
+        }
+        // Return array with indexes of matched items
+        return foundItems; 
+        myList.filter(foundItems);
+    },
     // Custom render function to render item's HTML
     renderItem: function (index, item) {
         return '<li class="item-content">' +
