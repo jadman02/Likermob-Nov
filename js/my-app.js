@@ -2371,7 +2371,7 @@ var newPageContent =
 mainView.router.loadContent(newPageContent);
 var favEntries = JSON.parse(localStorage.getItem("favEntries"));
 var itemlist = [];
-itemlist.push({page_id:favEntries[i].page_id,timestamp:favEntries[i].created});
+for (i = 0; i < favEntries.length; i++) {itemlist.push({page_id:favEntries[i].page_id,timestamp:favEntries[i].created});}
 var myList = myApp.virtualList('.list-block.virtual-list', {
     // Array with items data
     items: itemlist,
