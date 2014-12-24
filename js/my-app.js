@@ -13,7 +13,7 @@ var $$ = Dom7;
 myApp.onPageBeforeInit('index', function (page) {
 
 var uid = localStorage.getItem("uid");
-alert(uid);
+
 document.getElementById("profilepic").innerHTML = '<img src="http://graph.facebook.com/' + uid + '/picture?type=normal" style="margin:0 auto;text-align:center;width:80px;border-radius:50%;"/>';
 
     functionEmpty('a',0,2,0);
@@ -47,22 +47,6 @@ $$('.pull-to-refresh-content').on('scroll', function (e) {
 
 });	
 
-myApp.onPageInit('favourites', function (page) {
-
-
-var myList = myApp.virtualList('.list-block.virtual-list', {
-    // Array with plain HTML items
-    items: [
-        '<li class="item-content"><div clas="item-inner"><div class="item-title">Item 1</div></div></li>',
-        '<li class="item-content"><div clas="item-inner"><div class="item-title">Item 2</div></div></li>',
-        '<li class="item-content"><div clas="item-inner"><div class="item-title">Item 3</div></div></li>',
-        //...
-        '<li class="item-content"><div clas="item-inner"><div class="item-title">Item 1000</div></div></li>'
-    ]
-});
-
-
-});
 
 myApp.onPageBeforeRemove('add_deal', function (page) {
 $$( ".business" ).remove();
