@@ -2346,10 +2346,20 @@ function favourites(){
 	// HTML Content of new page:
 var newPageContent = '<div class="page" data-page="my-page">' +
                         '<div class="page-content">' +
-                          '<p>Here comes new page</p>' +
+'<div class="list-block virtual-list"></div>'+
                         '</div>' +
                       '</div>';
  
 //Load new content as new page
 mainView.router.loadContent(newPageContent);
+var myList = myApp.virtualList('.list-block.virtual-list', {
+    // Array with plain HTML items
+    items: [
+        '<li class="item-content"><div clas="item-inner"><div class="item-title">Item 1</div></div></li>',
+        '<li class="item-content"><div clas="item-inner"><div class="item-title">Item 2</div></div></li>',
+        '<li class="item-content"><div clas="item-inner"><div class="item-title">Item 3</div></div></li>',
+        //...
+        '<li class="item-content"><div clas="item-inner"><div class="item-title">Item 1000</div></div></li>'
+    ]
+});
 }
