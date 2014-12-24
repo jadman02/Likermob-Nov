@@ -2382,7 +2382,7 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
         var foundItems = [];
         for (var i = 0; i < items.length; i++) {
             // Check if title contains query string
-            if (items[i].title.indexOf(query.trim()) >= 0) foundItems.push(i);
+            if (items[i].page_id.indexOf(query.trim()) >= 0) foundItems.push(i);
         }
         // Return array with indexes of matched items
         return foundItems; 
