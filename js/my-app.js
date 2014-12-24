@@ -46,7 +46,7 @@ $$('.pull-to-refresh-content').on('scroll', function (e) {
 
 });	
 
-myApp.onPageInit('deal', function (page) {
+myApp.onPageInit('favourites', function (page) {
 
 
 var myList = myApp.virtualList('.list-block.virtual-list', {
