@@ -2353,7 +2353,7 @@ var newPageContent =
     '</div>'+
 '</div>'+
 '<div class="page" data-page="my-page">' +
-'<form class="searchbar" data-search-list=".list-block-search" data-search-in=".item-title" data-searchbar-found=".searchbar-found" data-searchbar-not-found=".searchbar-not-found">'+
+'<form class="searchbar" onkeyup="alert(foundItems)" data-search-list=".list-block-search" data-search-in=".item-title" data-searchbar-found=".searchbar-found" data-searchbar-not-found=".searchbar-not-found">'+
         '<div class="searchbar-input">'+
             '<input type="search" placeholder="Search">'+
             '<a href="#" class="searchbar-clear"></a>'+
@@ -2386,7 +2386,6 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
         }
         // Return array with indexes of matched items
         return foundItems; 
-        myList.filter(foundItems);
     },
     // Custom render function to render item's HTML
     renderItem: function (index, item) {
