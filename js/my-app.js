@@ -2344,7 +2344,15 @@ favEntries = [];localStorage.setItem("favEntries", JSON.stringify(favEntries));a
 function favourites(){
 	
 	// HTML Content of new page:
-var newPageContent = '<div class="page" data-page="my-page">' +
+var newPageContent = 
+'<div class="navbar">'+
+    '<div class="navbar-inner">'+
+        '<div class="left">Left</div>'+
+        '<div class="center">Center</div>'+
+        '<div class="right">Right</div>'+
+    '</div>'+
+'</div>'+
+'<div class="page" data-page="my-page">' +
                         '<div class="page-content">' +
 '<div class="list-block virtual-list"></div>'+
                         '</div>' +
