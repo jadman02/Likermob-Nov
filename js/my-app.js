@@ -2363,6 +2363,9 @@ var newPageContent =
     
     '<div class="searchbar-overlay"></div>'+
                         '<div class="page-content">' +
+                        '<div class="content-block searchbar-not-found">'+
+      '<div class="content-block-inner">Nothing found</div>'+
+    '</div>'+
 '<div class="list-block virtual-list list-block-search searchbar-found"></div>'+
                         '</div>' +
                       '</div>';
@@ -2383,6 +2386,7 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
         }
         // Return array with indexes of matched items
         return foundItems; 
+        alert(foundItems);
     },
     // Custom render function to render item's HTML
     renderItem: function (index, item) {
