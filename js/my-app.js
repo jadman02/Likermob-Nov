@@ -2389,7 +2389,7 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
         return '<li class="item-content">' +
                   '<div class="item-media"><img src="http://graph.facebook.com/'+item.page_id+'/picture?width=30&height=30" style="border-radius:50%;"/>' +
                   '<div class="item-inner">' +
-                      '<div class="item-title">'+ index+ ',' + item.timestamp + '</div>' +
+                      '<div class="item-title">'+ index+ ',' + item.timestamp + ',' + item.page_id + '</div>' +
                   '</div>' +
                '</li>';
     }
