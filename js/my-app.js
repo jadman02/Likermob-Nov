@@ -2339,3 +2339,16 @@ myApp.modal({
 
 function clearEntries() {var favEntries = JSON.parse(localStorage.getItem("favEntries"));
 favEntries = [];localStorage.setItem("favEntries", JSON.stringify(favEntries));alert(localStorage.getItem("favEntries"));}
+
+function favourites(){
+	
+	// HTML Content of new page:
+var newPageContent = '<div class="page" data-page="my-page">' +
+                        '<div class="page-content">' +
+                          '<p>Here comes new page</p>' +
+                        '</div>' +
+                      '</div>';
+ 
+//Load new content as new page
+mainView.router.loadContent(newPageContent);
+}
