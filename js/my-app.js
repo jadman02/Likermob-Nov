@@ -2378,15 +2378,16 @@ for (i = 0; i < favEntries.length; i++) {itemlist.push({page_id:favEntries[i].pa
 var myList = myApp.virtualList('.list-block.virtual-list', {
     // Array with items data
     items: itemlist,
-    searchAll: function (query, items) {
-        var foundItems = [];
-        for (var i = 0; i < items.length; i++) {
-            // Check if title contains query string
-            if (items[i].title.indexOf(query.trim()) >= 0) foundItems.push(i);
+    searchByItem: function (query, index, item) {
+        // Check if title contains query string
+        if (item.title.indexOf(query.trim()) >= 0) {
+            return true; //item matches query
+            alert('items match');
         }
-        // Return array with indexes of matched items
-        return foundItems; 
-        alert(foundItems);
+        else {
+            return false; //item doesn't match
+            alert('items do not match');
+        }
     },
     // Custom render function to render item's HTML
     renderItem: function (index, item) {
