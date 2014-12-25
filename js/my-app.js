@@ -754,15 +754,16 @@ if(favEntries == null) favEntries = [];
 
 if (page_id instanceof Array){
 	alert(page_id);
-	var pageya = page_id[0].split('_')[1];
-	alert(pageya)
+	
 	
 	
 	for (i = 0; i < page_id.length; i++){
+		var page_name = page_id[i].split('_')[1];
+		var page_ide = page_id[i].split('_')[0];
 		var favEntries = JSON.parse(localStorage.getItem("favEntries"));
 		var faventry = {
-        "page_id": page_id[i],
-        "name": name[i],
+        "page_id": page_ide,
+        "name": page_name,
         "created": timestamp
     };
     localStorage.setItem("faventry", JSON.stringify(faventry));
