@@ -2506,8 +2506,9 @@ domain = "getposts";data_send = "pages_list=" + post_id_list + "&user_id=" + uid
 
 $$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', ''+ data_send +'',function(response){
 
-for (i = 0; i < response.length; i++) {
-itemlist.push({post_id: response[i][2] ,page_id: response[i][1]});
+for (j = 0; j < response.length; j++) {
+	alert('got through');
+itemlist.push({post_id: response[j][2], page_id: response[j][1]});
 }
 });  
 
