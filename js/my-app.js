@@ -2510,9 +2510,11 @@ for (j = 0; j < response.length; j++) {
 	alert('got through');
 itemlist.push({post_id: response[j][2], page_id: response[j][1]});
 }
+alert('itemlist' + itemlist);
+
 });  
 
-alert('itemlist' + itemlist);
+
 
 
 
