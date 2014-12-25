@@ -550,9 +550,10 @@ localStorage.setItem("allEntries", JSON.stringify(existingEntries));
 }
 
 function removefavList(page_id,post_id){
-if (typeof post_id === 'undefined') {alert('yo');}
-else {$$( '#yellow_' + post_id ).addClass( 'hide' );
-$$( '#blue_' + post_id ).removeClass( 'hide' );}
+if (typeof post_id === 'undefined') {alert('no post id');}
+//onclick="favList(\''+ page_id  +'\')"
+$$( '#yellow_' + post_id ).addClass( 'hide' );
+$$( '#blue_' + post_id ).removeClass( 'hide' );
 
 var favEntries = JSON.parse(localStorage.getItem("favEntries"));
 for (i = 0; i < favEntries.length; i++) {        
@@ -2373,7 +2374,7 @@ var newPageContent =
                         '<div class="content-block searchbar-not-found">'+
       '<div class="content-block-inner">Nothing found</div>'+
     '</div>'+
-'<div class="list-block virtual-list list-block-search searchbar-found media-list"></div>'+
+'<div class="list-block virtual-list list-block-search searchbar-found media-list" style="margin-top:-30px;"></div>'+
                         '</div>' +
                       '</div>';
  
@@ -2442,7 +2443,7 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
                   '<div class="item-inner virtual-inner">' +
                      '<div class="item-title-row">'+
                          '<div class="item-title">' + item.name + '</div>' +
-                        '<div class="item-after" onclick="removefavList('+item.page_id+')"><i class="pe-7s-star pe-lg starcon" style="color:#ffcc00;"></i></div>'+
+                        '<div class="item-after" onclick="removefavList('+item.page_id+')"><i class="pe-7s-star pe-lg" style="color:#ffcc00;"></i></div>'+
                     '</div>'+
                     '<div class="item-subtitle">'+ item.timestamp +'</div>'
                   '</div>' +
@@ -2451,9 +2452,8 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
 });  
 var innersize = $$(window).width() - 50;
 var windowsize = $$(window).width();
-$$( '.virtual-inner' ).css( 'width', innersize + 'px');
+$$( '.virtual-inner' ).css( 'width', innersize+'px');
 $$( '.virtual-list ul' ).css( 'border', '0');
 $$( '.virtual-content' ).css( 'width', windowsize + 'px');
 	
 }
-
