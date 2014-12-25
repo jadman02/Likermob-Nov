@@ -2383,7 +2383,7 @@ var newPageContent =
 mainView.router.loadContent(newPageContent);
 var favEntries = JSON.parse(localStorage.getItem("favEntries"));
 var itemlist = [];
-for (i = 0; i < favEntries.length; i++) {itemlist.push({page_id:favEntries[i].page_id,timestamp:favEntries[i].created});}
+for (i = 0; i < favEntries.length; i++) {itemlist.push({page_id:favEntries[i].page_id,name:favEntries[i].name,timestamp:favEntries[i].created});}
 var myList = myApp.virtualList('.list-block.virtual-list', {
     // Array with items data
     items: itemlist,
@@ -2401,7 +2401,7 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
         return '<li class="item-content">' +
                   '<div class="item-media"><img src="http://graph.facebook.com/'+item.page_id+'/picture?width=30&height=30" style="border-radius:50%;"/>' +
                   '<div class="item-inner">' +
-                      '<div class="item-title">'+ index+ ',' + item.timestamp + ',' + item.page_id + '</div>' +
+                      '<div class="item-title">' + item.name + '</div>' +
                   '</div>' +
                '</li>';
     }
