@@ -550,10 +550,9 @@ localStorage.setItem("allEntries", JSON.stringify(existingEntries));
 }
 
 function removefavList(page_id,post_id){
-if (typeof post_id === 'undefined') {alert('no post id');}
-//onclick="favList(\''+ page_id  +'\')"
-$$( '#yellow_' + post_id ).addClass( 'hide' );
-$$( '#blue_' + post_id ).removeClass( 'hide' );
+if (typeof post_id === 'undefined') {$$( '.starcon' ).css( 'color', '#5ac8fa');}
+else{$$( '#yellow_' + post_id ).addClass( 'hide' );
+$$( '#blue_' + post_id ).removeClass( 'hide' );}
 
 var favEntries = JSON.parse(localStorage.getItem("favEntries"));
 for (i = 0; i < favEntries.length; i++) {        
@@ -2438,12 +2437,12 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
     },
     // Custom render function to render item's HTML
     renderItem: function (index, item) {
-        return '<li class="item-content virtual-content" style="overflow:hidden;margin-top:-10px;">' +
+        return '<li class="item-content virtual-content" onclick="getBusiness('+item.page_id+')" style="overflow:hidden;margin-top:-10px;">' +
                   '<div class="item-media"><img src="http://graph.facebook.com/'+item.page_id+'/picture?width=30&height=30" style="border-radius:50%;max-width:30px;margin-right:10px;"/>' +
                   '<div class="item-inner virtual-inner">' +
                      '<div class="item-title-row">'+
                          '<div class="item-title">' + item.name + '</div>' +
-                        '<div class="item-after" onclick="removefavList('+item.page_id+')"><i class="pe-7s-star pe-lg" style="color:#ffcc00;"></i></div>'+
+                        '<div class="item-after" onclick="removefavList('+item.page_id+')"><i class="pe-7s-star pe-lg starcon" style="color:#ffcc00;"></i></div>'+
                     '</div>'+
                     '<div class="item-subtitle">'+ item.timestamp +'</div>'
                   '</div>' +
