@@ -2424,7 +2424,7 @@ if (minutes < 10) {minutes = minutes + "0"}
 var firstdate = weekday_name + ", " + month_name + " " + day ;
 var seconddate = hours + ":" + minutes;  
 var datetime = '<div class="messages-date" style="padding:0;float:left;margin:0;">'+ firstdate +'<span> '+ seconddate +'</span></div>';
-	itemlist.push({page_id:favEntries[i].page_id,lowercased:lowercase,name:favEntries[i].name,timestamp:datetime});}
+	itemlist.push({page_id:favEntries[i].page_id,lowercased:lowercase,name:favEntries[i].name,timestamp:favEntries[i].created});}
 var myList = myApp.virtualList('.list-block.virtual-list', {
     // Array with items data
     items: itemlist,
