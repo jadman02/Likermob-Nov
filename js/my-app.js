@@ -550,7 +550,7 @@ localStorage.setItem("allEntries", JSON.stringify(existingEntries));
 }
 
 function removefavList(page_id,post_id){
-if (typeof post_id === 'undefined') {$$( '.starcon' ).css( 'color', '#ccc');}
+if (typeof post_id === 'undefined') {alert('yo');}
 else {$$( '#yellow_' + post_id ).addClass( 'hide' );
 $$( '#blue_' + post_id ).removeClass( 'hide' );}
 
@@ -2451,7 +2451,7 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
 });  
 var innersize = $$(window).width() - 50;
 var windowsize = $$(window).width();
-$$( '.virtual-inner' ).css( 'width', innersize+'px');
+$$( '.virtual-inner' ).css( 'width', innersize + 'px');
 $$( '.virtual-list ul' ).css( 'border', '0');
 $$( '.virtual-content' ).css( 'width', windowsize + 'px');
 	
