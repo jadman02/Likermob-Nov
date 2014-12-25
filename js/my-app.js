@@ -2505,12 +2505,12 @@ for (i = 0; i < allEntries.length; i++) {post_id_list.push("999999"+ allEntries[
 domain = "getposts";data_send = "pages_list=" + post_id_list + "&user_id=" + uid + "&latitude=" + latitude + "&longitude=" + longitude;
 
 $$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', ''+ data_send +'',function(response){
-
+alert('got through');
 for (j = 0; j < response.length; j++) {
 
 itemlist.push({post_id: response[j][2], page_id: response[j][1]});
 }
-
+alert('item list' + itemlist);
 var myList = myApp.virtualList('.list-block.virtual-list', {
     // Array with items data
     items: itemlist,
