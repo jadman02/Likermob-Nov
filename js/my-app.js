@@ -2398,9 +2398,9 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
     },
     // Custom render function to render item's HTML
     renderItem: function (index, item) {
-        return '<li class="item-content virtual-content" style="width:320px;overflow:hidden;">' +
+        return '<li class="item-content virtual-content">' +
                   '<div class="item-media"><img src="http://graph.facebook.com/'+item.page_id+'/picture?width=30&height=30" style="border-radius:50%;"/>' +
-                  '<div class="item-inner" style="width:320px;overflow:hidden;">' +
+                  '<div class="item-inner virtual-inner">' +
                      '<div class="item-title-row">'+
                          '<div class="item-title">' + item.name + '</div>' +
                         '<div class="item-after"><i class="pe-7s-star pe-lg"></i></div>'+
@@ -2410,8 +2410,8 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
                '</li>';
     }
 });  
-
-	
+var windowsize = $$(window).width() - 50;
+$$( '.virtual-inner' ).css( 'width', windowsize+'px');	
 	
 }
 
