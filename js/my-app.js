@@ -754,7 +754,9 @@ if(favEntries == null) favEntries = [];
 
 if (page_id instanceof Array){
 	alert(page_id);
-
+	var pageya = page_id[0].split('_')[1];
+	alert(pageya)
+	
 	
 	for (i = 0; i < page_id.length; i++){
 		var favEntries = JSON.parse(localStorage.getItem("favEntries"));
