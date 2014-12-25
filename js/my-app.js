@@ -2385,7 +2385,46 @@ var favEntries = JSON.parse(localStorage.getItem("favEntries"));
 var itemlist = [];
 for (i = 0; i < favEntries.length; i++) {
 	var lowercase = favEntries[i].name.toLowerCase();
-	itemlist.push({page_id:favEntries[i].page_id,lowercased:lowercase,name:favEntries[i].name,timestamp:favEntries[i].created});}
+	
+	var offset = datetoday.getTimezoneOffset() * 60;
+
+var unix = favEntries[i].created + offset;
+
+var d = new Date(unix);
+var month = new Array(12);
+month[0] = "Jan";
+month[1] = "Feb";
+month[2] = "Mar";
+month[3] = "Apr";
+month[4] = "May";
+month[5] = "Jun";
+month[6] = "Jul";
+month[7] = "Aug";
+month[8] = "Sep";
+month[9] = "Oct";
+month[10] = "Nov";
+month[11] = "Dec";
+
+var day_name = new Array(7);
+day_name[0] = "Sunday";
+day_name[1] = "Monday";
+day_name[2] = "Tuesday";
+day_name[3] = "Wednesday";
+day_name[4] = "Thursday";
+day_name[5] = "Friday";
+day_name[6] = "Saturday";
+
+var month_name = month[d.getUTCMonth()];
+var weekday_name = day_name[d.getUTCDay()];
+var day = d.getUTCDate();
+var year = d.getUTCFullYear();
+var hours = d.getUTCHours();
+var minutes = d.getUTCMinutes();
+if (minutes < 10) {minutes = minutes + "0"} 
+
+var firstdate = weekday_name + ", " + month_name + " " + day ;
+var seconddate = hours + ":" + minutes;  
+	itemlist.push({page_id:favEntries[i].page_id,lowercased:lowercase,name:favEntries[i].name,timestamp:firstdate});}
 var myList = myApp.virtualList('.list-block.virtual-list', {
     // Array with items data
     items: itemlist,
