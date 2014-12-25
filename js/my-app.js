@@ -748,7 +748,7 @@ function addEntry(post_id,expiry) {
 
 function favList(page_id,post_id,name) {
 
-alert(name);
+
 
 var timestamp = Math.round(new Date().getTime() / 1000);
 var favEntries = JSON.parse(localStorage.getItem("favEntries"));
@@ -779,7 +779,7 @@ alert(localStorage.getItem("favEntries"));
 }
 else {
 
-alert(name);
+
 
 $$( '#yellow_' + post_id ).removeClass( 'hide' );
 $$( '#blue_' + post_id ).addClass( 'hide' );
@@ -793,7 +793,7 @@ $$( '#blue_' + post_id ).addClass( 'hide' );
     favEntries.push(faventry);
     localStorage.setItem("favEntries", JSON.stringify(favEntries));
 
-  //alert(localStorage.getItem("favEntries"));	
+  alert(localStorage.getItem("favEntries"));	
 	
 }
 
