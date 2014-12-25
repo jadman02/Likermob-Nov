@@ -728,7 +728,7 @@ functionEmpty('a',0,1,position);
  }
 
 
-function addEntry(post_id,expiry,page_id) {
+function addEntry(post_id,expiry,page_id,photo) {
 var d = new Date();
     var timestamp = d.getTime();
     // Parse any JSON previously stored in allEntries
