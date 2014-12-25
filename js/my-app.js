@@ -2361,7 +2361,7 @@ var newPageContent =
     '</div>'+
 '</div>'+
 '<div class="page" data-page="my-page">' +
-'<form class="searchbar" onkeyup="alert(foundItems)" data-search-list=".list-block-search" data-search-in=".item-title" data-searchbar-found=".searchbar-found" data-searchbar-not-found=".searchbar-not-found">'+
+'<form class="searchbar" style="margin-top:-10px;" data-search-list=".list-block-search" data-search-in=".item-title" data-searchbar-found=".searchbar-found" data-searchbar-not-found=".searchbar-not-found">'+
         '<div class="searchbar-input">'+
             '<input type="search" placeholder="Search">'+
             '<a href="#" class="searchbar-clear"></a>'+
@@ -2374,7 +2374,7 @@ var newPageContent =
                         '<div class="content-block searchbar-not-found">'+
       '<div class="content-block-inner">Nothing found</div>'+
     '</div>'+
-'<div class="list-block virtual-list list-block-search searchbar-found media-list"></div>'+
+'<div class="list-block virtual-list list-block-search searchbar-found media-list" style="background-color:white;"></div>'+
                         '</div>' +
                       '</div>';
  
@@ -2422,7 +2422,7 @@ if (minutes < 10) {minutes = minutes + "0"}
 
 var firstdate = weekday_name + ", " + month_name + " " + day + " " + year ;
 var seconddate = hours + ":" + minutes;  
-var datetime = '<div class="messages-date" style="padding:0;float:left;margin:0;"><span>added</span>'+ firstdate +'<span> '+ seconddate +'</span></div>';
+var datetime = '<div class="messages-date" style="padding:0;float:left;margin:0;">'+ firstdate +'<span> '+ seconddate +'</span></div>';
 	itemlist.push({page_id:favEntries[i].page_id,lowercased:lowercase,name:favEntries[i].name,timestamp:datetime});}
 var myList = myApp.virtualList('.list-block.virtual-list', {
     // Array with items data
@@ -2452,6 +2452,7 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
 });  
 var innersize = $$(window).width() - 50;
 $$( '.virtual-inner' ).css( 'width', innersize+'px');
+$$( '.virtual-list ul' ).css( 'border', '0');
 
 	
 }
