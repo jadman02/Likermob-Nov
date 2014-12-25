@@ -2507,8 +2507,7 @@ domain = "getposts";data_send = "pages_list=" + post_id_list + "&user_id=" + uid
 $$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', ''+ data_send +'',function(response){
 alert('got through');
 for (j = 0; j < response.length; j++) {
-alert(response.length);
-itemlist.push({post_id: response[j][2], page_id: response[j][1],id: response[j][0]});
+itemlist.push({post_id: response[j][2], page_id: response[j][1],title: response[j][3],id: response[j][0]});
 }
 alert('item list length:' + itemlist.length);
 var myList = myApp.virtualList('.list-block.virtual-list', {
@@ -2529,7 +2528,7 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
                   '<div class="item-media">' +
                   '<div class="item-inner virtual-inner">' +
                      '<div class="item-title-row">'+
-                         '<div class="item-title">'+item.id+',' + item.page_id + '</div>' +
+                         '<div class="item-title">'+item.title+','+item.id+',' + item.page_id + '</div>' +
                         '<div class="item-after"><img src="http://graph.facebook.com/'+item.page_id+'/picture?width=30&height=30" style="border-radius:50%;max-width:30px;margin-right:10px;"/></div>'+
                     '</div>'+
                     '<div class="item-subtitle">yo</div>'
