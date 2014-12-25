@@ -2501,10 +2501,11 @@ var post_id_list = [];
 for (i = 0; i < allEntries.length; i++) {post_id_list.push("999999"+ allEntries[i].post_id + "999999");}
 
 
-alert(post_id_list);
+
 domain = "getposts";data_send = "pages_list=" + post_id_list + "&user_id=" + uid + "&latitude=" + latitude + "&longitude=" + longitude;
 
 $$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', ''+ data_send +'',function(response){
+alert(response.length);
 for (j = 0; j < response.length; j++) {
 itemlist.push({post_id: response[j][2], page_id: response[j][1],title: response[j][3],id: response[j][0]});
 }
