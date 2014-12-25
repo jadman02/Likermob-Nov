@@ -2496,11 +2496,11 @@ var longitude = localStorage.getItem("longitude");
 var itemlist = [];
 var post_id_list = [];
 
-alert(uid + ',' + latitude + ',' + longitude);
+
 
 for (i = 0; i < allEntries.length; i++) {post_id_list.push("999999"+ allEntries[i].post_id + "999999");}
 
-alert('post_id_list' +post_id_list);
+
 
 domain = "getposts";data_send = "pages_list=" + post_id_list + "&user_id=" + uid + "&latitude=" + latitude + "&longitude=" + longitude;
 
