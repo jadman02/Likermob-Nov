@@ -2400,7 +2400,7 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
     },
     // Custom render function to render item's HTML
     renderItem: function (index, item) {
-        return '<li class="item-content virtual-content" style="width:320px;">' +
+        return '<li class="item-content virtual-content" style="width:320px;overflow:hidden;">' +
                   '<div class="item-media"><img src="http://graph.facebook.com/'+item.page_id+'/picture?width=30&height=30" style="border-radius:50%;max-width:30px;padding-right:10px;"/>' +
                   '<div class="item-inner virtual-inner">' +
                      '<div class="item-title-row">'+
