@@ -2385,7 +2385,7 @@ var favEntries = JSON.parse(localStorage.getItem("favEntries"));
 var itemlist = [];
 for (i = 0; i < favEntries.length; i++) {
 	var lowercase = favEntries[i].name.toLowerCase();
-	
+	var datetoday = new Date();
 	var offset = datetoday.getTimezoneOffset() * 60;
 
 var unix = favEntries[i].created + offset;
