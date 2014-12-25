@@ -2420,9 +2420,9 @@ var hours = d.getUTCHours();
 var minutes = d.getUTCMinutes();
 if (minutes < 10) {minutes = minutes + "0"} 
 
-var firstdate = weekday_name + ", " + month_name + " " + day ;
+var firstdate = weekday_name + ", " + month_name + " " + day + " " + year ;
 var seconddate = hours + ":" + minutes;  
-var datetime = '<div class="messages-date" style="padding:0;float:left;margin:0;">'+ firstdate +'<span> '+ seconddate +'</span></div>';
+var datetime = '<div class="messages-date" style="padding:0;float:left;margin:0;"><span>added</span>'+ firstdate +'<span> '+ seconddate +'</span></div>';
 	itemlist.push({page_id:favEntries[i].page_id,lowercased:lowercase,name:favEntries[i].name,timestamp:datetime});}
 var myList = myApp.virtualList('.list-block.virtual-list', {
     // Array with items data
