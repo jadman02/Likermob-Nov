@@ -2383,14 +2383,8 @@ var newPageContent =
 mainView.router.loadContent(newPageContent);
 var favEntries = JSON.parse(localStorage.getItem("favEntries"));
 var itemlist = [];
-for (i = 0; i < favEntries.length; i++) {
-	var lowercase = favEntries[i].name.toLowerCase();
-	var datetoday = new Date();
-	var offset = datetoday.getTimezoneOffset() * 60;
-
-var unix = favEntries[i].created + offset;
-
-var d = new Date(unix);
+var datetoday = new Date();
+var offset = datetoday.getTimezoneOffset() * 60;
 var month = new Array(12);
 month[0] = "Jan";
 month[1] = "Feb";
@@ -2413,7 +2407,12 @@ day_name[3] = "Wednesday";
 day_name[4] = "Thursday";
 day_name[5] = "Friday";
 day_name[6] = "Saturday";
+for (i = 0; i < favEntries.length; i++) {
+	var lowercase = favEntries[i].name.toLowerCase();
+	
 
+var unix = favEntries[i].created + offset;
+var d = new Date(unix);
 var month_name = month[d.getUTCMonth()];
 var weekday_name = day_name[d.getUTCDay()];
 var day = d.getUTCDate();
