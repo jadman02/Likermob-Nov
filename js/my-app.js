@@ -2496,9 +2496,11 @@ var longitude = localStorage.getItem("longitude");
 var itemlist = [];
 var post_id_list = [];
 
-for (i = 0; i < allEntries.length; i++) {
+alert(uid + ',' + latitude + ',' + longitude);
 
-post_id_list.push("999999"+ allEntries[i].post_id + "999999");}
+for (i = 0; i < allEntries.length; i++) {post_id_list.push("999999"+ allEntries[i].post_id + "999999");}
+
+alert('post_id_list' +post_id_list);
 
 domain = "getposts";data_send = "pages_list=" + post_id_list + "&user_id=" + uid + "&latitude=" + latitude + "&longitude=" + longitude;
 
@@ -2509,7 +2511,7 @@ itemlist.push({post_id: response[i][2] ,page_id: response[i][1]});
 }
 });  
 
-
+alert('itemlist' + itemlist);
 
 
 
