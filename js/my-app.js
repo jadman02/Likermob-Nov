@@ -2356,9 +2356,9 @@ function favourites(){
 var newPageContent = 
 '<div class="navbar">'+
     '<div class="navbar-inner">'+
-        '<div class="left">Left</div>'+
-        '<div class="center">Center</div>'+
-        '<div class="right">Right</div>'+
+        '<div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>'+
+        '<div class="center">Favourites</div>'+
+        '<div class="right"><i class="pe-7s-refresh pe-lg"></i></div>'+
     '</div>'+
 '</div>'+
 '<div class="page" data-page="my-page">' +
@@ -2401,9 +2401,13 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
         return '<li class="item-content">' +
                   '<div class="item-media"><img src="http://graph.facebook.com/'+item.page_id+'/picture?width=30&height=30" style="border-radius:50%;"/>' +
                   '<div class="item-inner">' +
-                      '<div class="item-title">' + item.name + '</div>' +
+                     '<div class="item-title-row">'+
+                         '<div class="item-title">' + item.name + '</div>' +
+                        '<div class="item-after"><i class="pe-7s-star pe-lg"></i></div>'+
+                    '</div>'+
                   '</div>' +
                '</li>';
     }
 });  
 }
+
