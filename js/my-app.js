@@ -550,7 +550,7 @@ localStorage.setItem("allEntries", JSON.stringify(existingEntries));
 }
 
 function removefavList(page_id,post_id){
-if (typeof post_id === 'undefined') {$$( '.starcon' ).css( 'color', '#5ac8fa');}
+if (typeof post_id === 'undefined') {$$( '.starcon_' + page_id ).css( 'color', '#ccc');}
 else{$$( '#yellow_' + post_id ).addClass( 'hide' );
 $$( '#blue_' + post_id ).removeClass( 'hide' );}
 
@@ -2442,7 +2442,7 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
                   '<div class="item-inner virtual-inner">' +
                      '<div class="item-title-row">'+
                          '<div class="item-title">' + item.name + '</div>' +
-                        '<div class="item-after" onclick="removefavList('+item.page_id+')"><i class="pe-7s-star pe-lg starcon" style="color:#ffcc00;"></i></div>'+
+                        '<div class="item-after" onclick="removefavList('+item.page_id+')"><i class="pe-7s-star pe-lg starcon_'+item.page_id+'" style="color:#ffcc00;"></i></div>'+
                     '</div>'+
                     '<div class="item-subtitle">'+ item.timestamp +'</div>'
                   '</div>' +
