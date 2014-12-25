@@ -2389,9 +2389,10 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
     items: itemlist,
     searchAll: function (query, items) {
         var foundItems = [];
+        query = query.trim().lowerCase();
         for (var i = 0; i < items.length; i++) {
             // Check if title contains query string
-            if (items[i].name.lowerCase().indexOf(query.trim().lowerCase()) >= 0) foundItems.push(i);
+            if (items[i].name.lowerCase().indexOf(query) >= 0) foundItems.push(i);
         }
         // Return array with indexes of matched items
         return foundItems; 
