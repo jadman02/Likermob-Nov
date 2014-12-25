@@ -2347,6 +2347,9 @@ myApp.modal({
 function clearEntries() {var favEntries = JSON.parse(localStorage.getItem("favEntries"));
 favEntries = [];localStorage.setItem("favEntries", JSON.stringify(favEntries));alert(localStorage.getItem("favEntries"));}
 
+function clearLikes() {var allEntries = JSON.parse(localStorage.getItem("allEntries"));
+allEntries = [];localStorage.setItem("allEntries", JSON.stringify(allEntries));alert(localStorage.getItem("allEntries"));}
+
 function favourites(){
 	
 	// HTML Content of new page:
