@@ -2375,7 +2375,7 @@ var newPageContent =
                         '<div class="content-block searchbar-not-found">'+
       '<div class="content-block-inner">Nothing found</div>'+
     '</div>'+
-'<div class="list-block virtual-list list-block-search searchbar-found media-list"></div>'+
+'<div class="list-block virtual-list list-block-search searchbar-found media-list" style="width:320px;overflow:hidden;"></div>'+
                         '</div>' +
                       '</div>';
  
