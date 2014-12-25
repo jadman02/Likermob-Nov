@@ -2493,34 +2493,18 @@ mainView.router.loadContent(newPageContent);
 var allEntries = JSON.parse(localStorage.getItem("allEntries"));
 var itemlist = [];
 var post_id_list = [];
-var datetoday = new Date();
-var offset = datetoday.getTimezoneOffset() * 60;
-var month = new Array(12);
-month[0] = "Jan";
-month[1] = "Feb";
-month[2] = "Mar";
-month[3] = "Apr";
-month[4] = "May";
-month[5] = "Jun";
-month[6] = "Jul";
-month[7] = "Aug";
-month[8] = "Sep";
-month[9] = "Oct";
-month[10] = "Nov";
-month[11] = "Dec";
 
-var day_name = new Array(7);
-day_name[0] = "Sunday";
-day_name[1] = "Monday";
-day_name[2] = "Tuesday";
-day_name[3] = "Wednesday";
-day_name[4] = "Thursday";
-day_name[5] = "Friday";
-day_name[6] = "Saturday";
+for (i = 0; i < allEntries.length; i++) {
 
-//domain = "getposts";data_send = "pages_list=" + post_id_list + "&user_id=" + uid + "&latitude=" + latitude + "&longitude=" + longitude;
-//for (i = 0; i < allEntries.length; i++) {post_id_list.push("999999"+ allEntries[i].post_id + "999999");}
-//$$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', ''+ data_send +'',function(response){
+post_id_list.push("999999"+ allEntries[i].post_id + "999999");}
+
+domain = "getposts";data_send = "pages_list=" + post_id_list + "&user_id=" + uid + "&latitude=" + latitude + "&longitude=" + longitude;
+
+$$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', ''+ data_send +'',function(response){
+
+
+itemlist.push({post_id: response[i][2] ,page_id: response[i][1]});
+
 //});  
 
 
@@ -2528,22 +2512,7 @@ day_name[6] = "Saturday";
 
 
 
-for (i = 0; i < allEntries.length; i++) {
 
-var unix = allEntries[i].expiry + offset;
-var d = new Date(unix);
-var month_name = month[d.getUTCMonth()];
-var weekday_name = day_name[d.getUTCDay()];
-var day = d.getUTCDate();
-var year = d.getUTCFullYear();
-var hours = d.getUTCHours();
-var minutes = d.getUTCMinutes();
-if (minutes < 10) {minutes = minutes + "0"} 
-
-var firstdate = weekday_name + ", " + month_name + " " + day + " " + year ;
-var seconddate = hours + ":" + minutes;  
-var datetime = '<div class="messages-date" style="padding:0;float:left;margin:0;">'+ firstdate +'<span> '+ seconddate +'</span></div>';
-	itemlist.push({post_id:allEntries[i].post_id,page_id:allEntries[i].page_id,timestamp:datetime});}
 var myList = myApp.virtualList('.list-block.virtual-list', {
     // Array with items data
     items: itemlist,
@@ -2565,7 +2534,7 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
                          '<div class="item-title">' + item.page_id + '</div>' +
                         '<div class="item-after"><img src="http://graph.facebook.com/'+item.page_id+'/picture?width=30&height=30" style="border-radius:50%;max-width:30px;margin-right:10px;"/></div>'+
                     '</div>'+
-                    '<div class="item-subtitle">'+ item.timestamp +'</div>'
+                    '<div class="item-subtitle">yo</div>'
                   '</div>' +
                '</li>';
     }
