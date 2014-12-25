@@ -191,12 +191,11 @@ function functionEmpty(pages_list,start,finish,position) {
 
 //alert('pages_list: ' + pages_list + 'start: ' +start + 'finish: ' +finish + 'position: ' + position);
 
-var uid = localStorage.getItem("uid");
 
 localStorage.setItem("position", position);
 
 click = 0;
-
+var uid = localStorage.getItem("uid");
 var latitude = localStorage.getItem("latitude");
 var longitude = localStorage.getItem("longitude");
 var post_id_list = [];
@@ -2491,6 +2490,9 @@ var newPageContent =
 //Load new content as new page
 mainView.router.loadContent(newPageContent);
 var allEntries = JSON.parse(localStorage.getItem("allEntries"));
+var uid = localStorage.getItem("uid");
+var latitude = localStorage.getItem("latitude");
+var longitude = localStorage.getItem("longitude");
 var itemlist = [];
 var post_id_list = [];
 
