@@ -505,12 +505,11 @@ var modal = myApp.modal({
 
     function mylikes() {
         var page_id = [];
-        var name_list = [];
         openFB.api({
             path: '/me/likes',
             success: function(response) {
-                for (i = 0; i < response.data.length; i++){page_id.push(response.data[i].id);name_list.push(response.data[i].name);}
-            favList(page_id,0,name_list);
+                for (i = 0; i < response.data.length; i++){page_id.push(response.data[i].id + "_" + response.data[i].name);}
+            favList(page_id);
             	
             },
             error: errorHandler});
