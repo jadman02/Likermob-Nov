@@ -2374,7 +2374,7 @@ var newPageContent =
                         '<div class="content-block searchbar-not-found">'+
       '<div class="content-block-inner">Nothing found</div>'+
     '</div>'+
-'<div class="list-block virtual-list list-block-search searchbar-found media-list" style="background-color:white;"></div>'+
+'<div class="list-block virtual-list list-block-search searchbar-found media-list"></div>'+
                         '</div>' +
                       '</div>';
  
@@ -2438,7 +2438,7 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
     },
     // Custom render function to render item's HTML
     renderItem: function (index, item) {
-        return '<li class="item-content virtual-content" style="width:320px;overflow:hidden;">' +
+        return '<li class="item-content virtual-content" style="overflow:hidden;">' +
                   '<div class="item-media"><img src="http://graph.facebook.com/'+item.page_id+'/picture?width=30&height=30" style="border-radius:50%;max-width:30px;margin-right:10px;"/>' +
                   '<div class="item-inner virtual-inner">' +
                      '<div class="item-title-row">'+
@@ -2451,8 +2451,10 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
     }
 });  
 var innersize = $$(window).width() - 50;
+var windowsize = $$(window).width();
 $$( '.virtual-inner' ).css( 'width', innersize+'px');
 $$( '.virtual-list ul' ).css( 'border', '0');
+$$( '.virtual-content' ).css( 'width', windowsize + 'px');
 
 	
 }
