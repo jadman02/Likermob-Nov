@@ -2500,7 +2500,7 @@ var post_id_list = [];
 
 for (i = 0; i < allEntries.length; i++) {post_id_list.push("999999"+ allEntries[i].post_id + "999999");}
 
-
+alert('all entries length:' + allEntries.length);
 
 domain = "getposts";data_send = "pages_list=" + post_id_list + "&user_id=" + uid + "&latitude=" + latitude + "&longitude=" + longitude;
 
@@ -2510,7 +2510,7 @@ for (j = 0; j < response.length; j++) {
 
 itemlist.push({post_id: response[j][2], page_id: response[j][1],id: response[j][0]});
 }
-alert('item list' + itemlist);
+alert('item list length:' + itemlist.length);
 var myList = myApp.virtualList('.list-block.virtual-list', {
     // Array with items data
     items: itemlist,
@@ -2529,7 +2529,7 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
                   '<div class="item-media">' +
                   '<div class="item-inner virtual-inner">' +
                      '<div class="item-title-row">'+
-                         '<div class="item-title">'+id+',' + item.page_id + '</div>' +
+                         '<div class="item-title">'+item.id+',' + item.page_id + '</div>' +
                         '<div class="item-after"><img src="http://graph.facebook.com/'+item.page_id+'/picture?width=30&height=30" style="border-radius:50%;max-width:30px;margin-right:10px;"/></div>'+
                     '</div>'+
                     '<div class="item-subtitle">yo</div>'
