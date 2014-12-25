@@ -773,7 +773,7 @@ if (page_id instanceof Array){
 
   
 	}
-alert(localStorage.getItem("favEntries"));	
+//alert(localStorage.getItem("favEntries"));	
 }
 else {
 
