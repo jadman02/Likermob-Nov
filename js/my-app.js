@@ -2360,7 +2360,7 @@ var newPageContent =
         '<div class="right"><i class="pe-7s-refresh pe-lg"></i></div>'+
     '</div>'+
 '</div>'+
-'<div class="page" data-page="my-page">' +
+'<div class="page" data-page="my-page" style="background-color:white;">' +
 '<form class="searchbar" style="margin-top:-10px;" data-search-list=".list-block-search" data-search-in=".item-title" data-searchbar-found=".searchbar-found" data-searchbar-not-found=".searchbar-not-found">'+
         '<div class="searchbar-input">'+
             '<input type="search" placeholder="Search">'+
@@ -2438,7 +2438,7 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
     },
     // Custom render function to render item's HTML
     renderItem: function (index, item) {
-        return '<li class="item-content virtual-content" style="overflow:hidden;">' +
+        return '<li class="item-content virtual-content" style="overflow:hidden;margin-top:0px;">' +
                   '<div class="item-media"><img src="http://graph.facebook.com/'+item.page_id+'/picture?width=30&height=30" style="border-radius:50%;max-width:30px;margin-right:10px;"/>' +
                   '<div class="item-inner virtual-inner">' +
                      '<div class="item-title-row">'+
