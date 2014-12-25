@@ -350,7 +350,7 @@ starblue +
 
 
 '</div>'+
-'<div class="swipeout-actions-left"><a href="#" class="bg-green swipeout-delete swipeout-overswipe" style="background-color:#3b5998;" onclick="likeButton(\''+ response[i][2]  +'\',\''+ response[i][6]  +'\')"><i class="pe-7s-like2 pe-2x"></i></a></div><div class="swipeout-actions-right" style="z-index:100000"><a href="#" onclick="closeButton(\''+ response[i][2]  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a></div></li>');}
+'<div class="swipeout-actions-left"><a href="#" class="bg-green swipeout-delete swipeout-overswipe" style="background-color:#3b5998;" onclick="likeButton(\''+ response[i][2]  +'\',\''+ response[i][6]  +'\',\''+ response[i][1]  +'\')"><i class="pe-7s-like2 pe-2x"></i></a></div><div class="swipeout-actions-right" style="z-index:100000"><a href="#" onclick="closeButton(\''+ response[i][2]  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a></div></li>');}
 }
 
 
@@ -443,7 +443,7 @@ someText = str.replace(/(\r\n|\n|\r)/gm,"<br />");
 
 if (pages_list=='a' || typeof pages_list === 'undefined') {
 if (type == 'comment') {$$( '#result' ).append('<li class="swipeout s_'+ response[i][2] +'"><img onclick="popUp(\''+ response[i][3]  +'\',\''+ singlequote  +'\',\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" src="'+ response[i][14] +'" style="width:100%;"/><div class="swipeout-content"><a href="#" id="getDeal"  onclick="popUp(\''+ response[i][3]  +'\',\''+ singlequote  +'\',\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" class="item-content"><div class="item-media" onclick="getBusiness(\''+ response[i][1]  +'\');"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=50&height=50" style="border-radius:50%;"/></div><div class="item-inner"><div class="item-title-row" style="clear:both;"><div class="item-title">'+ response[i][3] + '</div><div class="item-after"><span class="badge" style="margin-right:2px;background-color:#3b5998;">'+ response[i][17] + '</span><span class="badge" style="background-color:#ff8000;">'+ response[i][18] + '</span></div></div><div class="item-subtitle">'+ response[i][16] + '</div><div class="item-text">'+ someText +'</div></div></a></div><div class="swipeout-actions-left"><a href="#" class="bg-green swipeout-overswipe" style="background-color:#3b5998;-webkit-border-top-right-radius: 1000px;-moz-border-radius-topright: 1000px;border-top-right-radius: 1000px;" onclick="popUp(\''+ response[i][3]  +'\',\''+ singlequote  +'\',\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')"><i class="pe-7s-comment pe-2x"></i></a></div><div class="swipeout-actions-right"><a href="#" onclick="closeButton(\''+ response[i][2]  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;-webkit-border-top-left-radius: 1000px;-moz-border-radius-topleft: 1000px;border-top-left-radius: 1000px;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a></div></li>');}
-if (type=='like') {$$( '#result' ).append('<li class="swipeout i_'+[i]+' s_'+ response[i][2] +'"><img onclick="popUp(\''+ response[i][3]  +'\',\''+ singlequote  +'\',\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" src="'+ response[i][14] +'" style="width:100%;"/><div class="swipeout-content"><a href="#" id="getDeal"  onclick="popUp(\''+ response[i][3]  +'\',\''+ singlequote  +'\',\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" class="item-content"><div class="item-media" onclick="getBusiness(\''+ response[i][1]  +'\');"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=50&height=50" style="border-radius:50%;"/></div><div class="item-inner"><div class="item-title-row" style="clear:both;"><div class="item-title">'+ response[i][3] + '</div><div class="item-after"><span class="badge" style="margin-right:2px;background-color:#3b5998;">'+ response[i][17] + '</span><span class="badge" style="background-color:#ff8000;">'+ response[i][18] + '</span></div></div><div class="item-subtitle">'+ response[i][16] + '</div><div class="item-text">'+ someText +'</div></div></a></div><div class="swipeout-actions-left"><a href="#" class="bg-green swipeout-delete swipeout-overswipe" style="background-color:#3b5998;-webkit-border-top-right-radius: 1000px;-moz-border-radius-topright: 1000px;border-top-right-radius: 1000px;" onclick="likeButton(\''+ response[i][2]  +'\',\''+ response[i][6]  +'\')"><i class="pe-7s-like2 pe-2x"></i></a></div><div class="swipeout-actions-right"><a href="#" onclick="closeButton(\''+ response[i][2]  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;-webkit-border-top-left-radius: 1000px;-moz-border-radius-topleft: 1000px;border-top-left-radius: 1000px;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a></div></li>');}
+if (type=='like') {$$( '#result' ).append('<li class="swipeout i_'+[i]+' s_'+ response[i][2] +'"><img onclick="popUp(\''+ response[i][3]  +'\',\''+ singlequote  +'\',\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" src="'+ response[i][14] +'" style="width:100%;"/><div class="swipeout-content"><a href="#" id="getDeal"  onclick="popUp(\''+ response[i][3]  +'\',\''+ singlequote  +'\',\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" class="item-content"><div class="item-media" onclick="getBusiness(\''+ response[i][1]  +'\');"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=50&height=50" style="border-radius:50%;"/></div><div class="item-inner"><div class="item-title-row" style="clear:both;"><div class="item-title">'+ response[i][3] + '</div><div class="item-after"><span class="badge" style="margin-right:2px;background-color:#3b5998;">'+ response[i][17] + '</span><span class="badge" style="background-color:#ff8000;">'+ response[i][18] + '</span></div></div><div class="item-subtitle">'+ response[i][16] + '</div><div class="item-text">'+ someText +'</div></div></a></div><div class="swipeout-actions-left"><a href="#" class="bg-green swipeout-delete swipeout-overswipe" style="background-color:#3b5998;-webkit-border-top-right-radius: 1000px;-moz-border-radius-topright: 1000px;border-top-right-radius: 1000px;" onclick="likeButton(\''+ response[i][2]  +'\',\''+ response[i][6]  +'\',\''+ response[i][1]  +'\')"><i class="pe-7s-like2 pe-2x"></i></a></div><div class="swipeout-actions-right"><a href="#" onclick="closeButton(\''+ response[i][2]  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;-webkit-border-top-left-radius: 1000px;-moz-border-radius-topleft: 1000px;border-top-left-radius: 1000px;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a></div></li>');}
 }
 
 
@@ -502,7 +502,7 @@ someText = str.replace(/(\r\n|\n|\r)/gm,"<br />");
 
 if (pages_list=='a' || typeof pages_list === 'undefined') {
 if (type == 'comment') {$$( '#result' ).append('<li class="swipeout s_'+ response[i][2] +'"><img onclick="popUp(\''+ response[i][3]  +'\',\''+ singlequote  +'\',\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" src="'+ response[i][14] +'" style="width:100%;"/><div class="swipeout-content"><a href="#" id="getDeal"  onclick="popUp(\''+ response[i][3]  +'\',\''+ singlequote  +'\',\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" class="item-content"><div class="item-media" onclick="getBusiness(\''+ response[i][1]  +'\');"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=50&height=50" style="border-radius:50%;"/></div><div class="item-inner"><div class="item-title-row" style="clear:both;"><div class="item-title">'+ response[i][3] + '</div><div class="item-after"><span class="badge" style="margin-right:2px;background-color:#3b5998;">'+ response[i][17] + '</span><span class="badge" style="background-color:#ff8000;">'+ response[i][18] + '</span></div></div><div class="item-subtitle">'+ response[i][16] + '</div><div class="item-text">'+ someText +'</div></div></a></div><div class="swipeout-actions-left"><a href="#" class="bg-green swipeout-overswipe" style="background-color:#3b5998;-webkit-border-top-right-radius: 1000px;-moz-border-radius-topright: 1000px;border-top-right-radius: 1000px;" onclick="popUp(\''+ response[i][3]  +'\',\''+ singlequote  +'\',\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')"><i class="pe-7s-comment pe-2x"></i></a></div><div class="swipeout-actions-right"><a href="#" onclick="closeButton(\''+ response[i][2]  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;-webkit-border-top-left-radius: 1000px;-moz-border-radius-topleft: 1000px;border-top-left-radius: 1000px;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a></div></li>');}
-if (type=='like') {$$( '#result' ).append('<li class="swipeout s_'+ response[i][2] +'"><img onclick="popUp(\''+ response[i][3]  +'\',\''+ singlequote  +'\',\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" src="'+ response[i][14] +'" style="width:100%;"/><div class="swipeout-content"><a href="#" id="getDeal"  onclick="popUp(\''+ response[i][3]  +'\',\''+ singlequote  +'\',\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" class="item-content"><div class="item-media" onclick="getBusiness(\''+ response[i][1]  +'\');"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=50&height=50" style="border-radius:50%;"/></div><div class="item-inner"><div class="item-title-row" style="clear:both;"><div class="item-title">'+ response[i][3] + '</div><div class="item-after"><span class="badge" style="margin-right:2px;background-color:#3b5998;">'+ response[i][17] + '</span><span class="badge" style="background-color:#ff8000;">'+ response[i][18] + '</span></div></div><div class="item-subtitle">'+ response[i][16] + '</div><div class="item-text">'+ someText +'</div></div></a></div><div class="swipeout-actions-left"><a href="#" class="bg-green swipeout-delete swipeout-overswipe" style="background-color:#3b5998;-webkit-border-top-right-radius: 1000px;-moz-border-radius-topright: 1000px;border-top-right-radius: 1000px;" onclick="likeButton(\''+ response[i][2]  +'\',\''+ response[i][6]  +'\')"><i class="pe-7s-like2 pe-2x"></i></a></div><div class="swipeout-actions-right"><a href="#" onclick="closeButton(\''+ response[i][2]  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;-webkit-border-top-left-radius: 1000px;-moz-border-radius-topleft: 1000px;border-top-left-radius: 1000px;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a></div></li>');}
+if (type=='like') {$$( '#result' ).append('<li class="swipeout s_'+ response[i][2] +'"><img onclick="popUp(\''+ response[i][3]  +'\',\''+ singlequote  +'\',\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" src="'+ response[i][14] +'" style="width:100%;"/><div class="swipeout-content"><a href="#" id="getDeal"  onclick="popUp(\''+ response[i][3]  +'\',\''+ singlequote  +'\',\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" class="item-content"><div class="item-media" onclick="getBusiness(\''+ response[i][1]  +'\');"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=50&height=50" style="border-radius:50%;"/></div><div class="item-inner"><div class="item-title-row" style="clear:both;"><div class="item-title">'+ response[i][3] + '</div><div class="item-after"><span class="badge" style="margin-right:2px;background-color:#3b5998;">'+ response[i][17] + '</span><span class="badge" style="background-color:#ff8000;">'+ response[i][18] + '</span></div></div><div class="item-subtitle">'+ response[i][16] + '</div><div class="item-text">'+ someText +'</div></div></a></div><div class="swipeout-actions-left"><a href="#" class="bg-green swipeout-delete swipeout-overswipe" style="background-color:#3b5998;-webkit-border-top-right-radius: 1000px;-moz-border-radius-topright: 1000px;border-top-right-radius: 1000px;" onclick="likeButton(\''+ response[i][2]  +'\',\''+ response[i][6]  +'\',\''+ response[i][1]  +'\')"><i class="pe-7s-like2 pe-2x"></i></a></div><div class="swipeout-actions-right"><a href="#" onclick="closeButton(\''+ response[i][2]  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;-webkit-border-top-left-radius: 1000px;-moz-border-radius-topleft: 1000px;border-top-left-radius: 1000px;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a></div></li>');}
 }
 
 
@@ -681,10 +681,10 @@ document.getElementById("longitude_box").value = response.result.geometry.locati
 
 
 
-function likeButton(post_id,expiry) {
+function likeButton(post_id,expiry,page_id) {
 getList();
 like(post_id);
-addEntry(post_id,expiry);
+addEntry(post_id,expiry,page_id);
 var uid = localStorage.getItem("uid");
 $$.getJSON('http://www.smilesavers.net.au/like.php?callback=?','user_id=' + uid + '&post_id=' + post_id + '&type=like',function(res){
     
@@ -729,13 +729,15 @@ functionEmpty('a',0,1,position);
  }
 
 
-function addEntry(post_id,expiry) {
-	var timestamp = new Date(expiry).getTime() / 1000;
+function addEntry(post_id,expiry,page_id) {
+var d = new Date();
+    var timestamp = d.getTime();
     // Parse any JSON previously stored in allEntries
     var existingEntries = JSON.parse(localStorage.getItem("allEntries"));
     if(existingEntries == null) existingEntries = [];
     var entry = {
         "post_id": post_id,
+        "page_id": page_id,
         "expiry": timestamp
     };
     localStorage.setItem("entry", JSON.stringify(entry));
@@ -832,7 +834,7 @@ if (json[i].post_id == post_id){
         
         '      <div class="content-block" style="padding-top:40px;">' +
         '        <div class="content-block-inner" style="background-color:rgba(255,255,255,.4);">' +
-                      '<a href="#" class="button like-button" style="margin-top:-50px;" onclick="likeButton(\''+ post_id  +'\',\''+ expiry  +'\')"><i class="pe-7s-like2 pe-2x"></i></a>' + 
+                      '<a href="#" class="button like-button" style="margin-top:-50px;" onclick="likeButton(\''+ post_id  +'\',\''+ expiry  +'\',\''+ page_id  +'\')"><i class="pe-7s-like2 pe-2x"></i></a>' + 
                       '<p>You like this'+ title +'</p>'+
                       '<a href="#" class="button button-big" onclick="getBusiness(\''+ page_id  +'\',\''+ latitude  +'\',\''+ longitude  +'\',\''+ name  +'\')">Big Button </a>'+
                       //'<p>'+ description +'</p>'+
@@ -864,7 +866,7 @@ else {
         
         '      <div class="content-block" style="padding-top:40px;">' +
         '        <div class="content-block-inner" style="background-color:rgba(255,255,255,.4);">' +
-                      '<a href="#" class="button like-button" style="margin-top:-50px;" onclick="likeButton(\''+ post_id  +'\',\''+ expiry  +'\')"><i class="pe-7s-like2 pe-2x"></i></a>' + 
+                      '<a href="#" class="button like-button" style="margin-top:-50px;" onclick="likeButton(\''+ post_id  +'\',\''+ expiry  +'\',\''+ page_id  +'\')"><i class="pe-7s-like2 pe-2x"></i></a>' + 
                       '<p>You dont like this'+ title +'</p>'+
                       '<a href="#" class="button button-big" onclick="getBusiness(\''+ page_id  +'\',\''+ latitude  +'\',\''+ longitude  +'\',\''+ name  +'\')">Big Button </a>'+
                       //'<p>'+ description +'</p>'+
@@ -2439,6 +2441,113 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
                   '<div class="item-inner virtual-inner">' +
                      '<div class="item-title-row">'+
                          '<div class="item-title">' + item.name + '</div>' +
+                        '<div class="item-after" onclick="removefavList('+item.page_id+')"><i class="pe-7s-star pe-lg starcon_'+item.page_id+'" style="color:#ffcc00;"></i></div>'+
+                    '</div>'+
+                    '<div class="item-subtitle">'+ item.timestamp +'</div>'
+                  '</div>' +
+               '</li>';
+    }
+});  
+var innersize = $$(window).width() - 50;
+var windowsize = $$(window).width();
+$$( '.virtual-inner' ).css( 'width', innersize+'px');
+$$( '.virtual-list ul' ).css( 'border', '0');
+$$( '.virtual-content' ).css( 'width', windowsize + 'px');
+	
+}
+
+function likeList(){
+	
+	// HTML Content of new page:
+var newPageContent = 
+'<div class="navbar">'+
+    '<div class="navbar-inner">'+
+        '<div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>'+
+        '<div class="center">My Deals</div>'+
+        '<div class="right"><i class="pe-7s-search pe-lg link"></i><i class="pe-7s-star pe-lg link"></i><i class="pe-7s-diskette pe-lg link"></i></div>'+
+    '</div>'+
+'</div>'+
+'<div class="page" data-page="deal-page" style="background-color:white;">' +
+'<form class="searchbar" style="margin-top:-10px;" data-search-list=".list-block-search" data-search-in=".item-title" data-searchbar-found=".searchbar-found" data-searchbar-not-found=".searchbar-not-found">'+
+        '<div class="searchbar-input">'+
+            '<input type="search" placeholder="Search">'+
+            '<a href="#" class="searchbar-clear"></a>'+
+        '</div>'+
+        '<a href="#" class="searchbar-cancel">Cancel</a>'+
+    '</form>'+
+    
+    '<div class="searchbar-overlay"></div>'+
+                        '<div class="page-content">' +
+                        '<div class="content-block searchbar-not-found">'+
+      '<div class="content-block-inner">Nothing found</div>'+
+    '</div>'+
+'<div class="list-block virtual-list list-block-search searchbar-found media-list" style="margin-top:0px;"></div>'+
+                        '</div>' +
+                      '</div>';
+ 
+//Load new content as new page
+mainView.router.loadContent(newPageContent);
+var allEntries = JSON.parse(localStorage.getItem("allEntries"));
+var itemlist = [];
+var datetoday = new Date();
+var offset = datetoday.getTimezoneOffset() * 60;
+var month = new Array(12);
+month[0] = "Jan";
+month[1] = "Feb";
+month[2] = "Mar";
+month[3] = "Apr";
+month[4] = "May";
+month[5] = "Jun";
+month[6] = "Jul";
+month[7] = "Aug";
+month[8] = "Sep";
+month[9] = "Oct";
+month[10] = "Nov";
+month[11] = "Dec";
+
+var day_name = new Array(7);
+day_name[0] = "Sunday";
+day_name[1] = "Monday";
+day_name[2] = "Tuesday";
+day_name[3] = "Wednesday";
+day_name[4] = "Thursday";
+day_name[5] = "Friday";
+day_name[6] = "Saturday";
+for (i = 0; i < allEntries.length; i++) {
+
+var unix = allEntries[i].expiry + offset;
+var d = new Date(unix);
+var month_name = month[d.getUTCMonth()];
+var weekday_name = day_name[d.getUTCDay()];
+var day = d.getUTCDate();
+var year = d.getUTCFullYear();
+var hours = d.getUTCHours();
+var minutes = d.getUTCMinutes();
+if (minutes < 10) {minutes = minutes + "0"} 
+
+var firstdate = weekday_name + ", " + month_name + " " + day + " " + year ;
+var seconddate = hours + ":" + minutes;  
+var datetime = '<div class="messages-date" style="padding:0;float:left;margin:0;">'+ firstdate +'<span> '+ seconddate +'</span></div>';
+	itemlist.push({post_id:allEntries[i].post_id,page_id:allEntries[i].page_id,timestamp:datetime});}
+var myList = myApp.virtualList('.list-block.virtual-list', {
+    // Array with items data
+    items: itemlist,
+    searchAll: function (query, items) {
+        var foundItems = [];
+        for (var i = 0; i < items.length; i++) {
+            // Check if title contains query string
+            if (items[i].name.indexOf(query.trim()) >= 0 || items[i].lowercased.indexOf(query.trim()) >= 0) foundItems.push(i);
+        }
+        // Return array with indexes of matched items
+        return foundItems; 
+    },
+    // Custom render function to render item's HTML
+    renderItem: function (index, item) {
+        return '<li class="item-content virtual-content" onclick="getBusiness('+item.page_id+')" style="overflow:hidden;margin-top:-10px;">' +
+                  '<div class="item-media"><img src="http://graph.facebook.com/'+item.page_id+'/picture?width=30&height=30" style="border-radius:50%;max-width:30px;margin-right:10px;"/>' +
+                  '<div class="item-inner virtual-inner">' +
+                     '<div class="item-title-row">'+
+                         '<div class="item-title">' + item.page_id + '</div>' +
                         '<div class="item-after" onclick="removefavList('+item.page_id+')"><i class="pe-7s-star pe-lg starcon_'+item.page_id+'" style="color:#ffcc00;"></i></div>'+
                     '</div>'+
                     '<div class="item-subtitle">'+ item.timestamp +'</div>'
