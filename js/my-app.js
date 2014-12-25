@@ -2467,7 +2467,7 @@ var newPageContent =
     '<div class="navbar-inner">'+
         '<div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>'+
         '<div class="center">My Deals</div>'+
-        '<div class="right"><i class="pe-7s-search pe-lg link"></i><i class="pe-7s-star pe-lg link"></i><i class="pe-7s-diskette pe-lg link"></i></div>'+
+        '<div class="right"><i class="button pe-7s-search pe-lg link"></i><i class="button pe-7s-star pe-lg link"></i><i class="button pe-7s-diskette pe-lg link"></i></div>'+
     '</div>'+
 '</div>'+
 '<div class="page" data-page="deal-page" style="background-color:white;">' +
@@ -2492,6 +2492,7 @@ var newPageContent =
 mainView.router.loadContent(newPageContent);
 var allEntries = JSON.parse(localStorage.getItem("allEntries"));
 var itemlist = [];
+var post_id_list = [];
 var datetoday = new Date();
 var offset = datetoday.getTimezoneOffset() * 60;
 var month = new Array(12);
@@ -2516,6 +2517,17 @@ day_name[3] = "Wednesday";
 day_name[4] = "Thursday";
 day_name[5] = "Friday";
 day_name[6] = "Saturday";
+
+//domain = "getposts";data_send = "pages_list=" + post_id_list + "&user_id=" + uid + "&latitude=" + latitude + "&longitude=" + longitude;
+//for (i = 0; i < allEntries.length; i++) {post_id_list.push("999999"+ allEntries[i].post_id + "999999");}
+//$$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', ''+ data_send +'',function(response){
+//});  
+
+
+
+
+
+
 for (i = 0; i < allEntries.length; i++) {
 
 var unix = allEntries[i].expiry + offset;
@@ -2539,7 +2551,7 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
         var foundItems = [];
         for (var i = 0; i < items.length; i++) {
             // Check if title contains query string
-            if (items[i].name.indexOf(query.trim()) >= 0 || items[i].lowercased.indexOf(query.trim()) >= 0) foundItems.push(i);
+            if (items[i].page_id.indexOf(query.trim()) >= 0) foundItems.push(i);
         }
         // Return array with indexes of matched items
         return foundItems; 
@@ -2547,11 +2559,11 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
     // Custom render function to render item's HTML
     renderItem: function (index, item) {
         return '<li class="item-content virtual-content" onclick="getBusiness('+item.page_id+')" style="overflow:hidden;margin-top:-10px;">' +
-                  '<div class="item-media"><img src="http://graph.facebook.com/'+item.page_id+'/picture?width=30&height=30" style="border-radius:50%;max-width:30px;margin-right:10px;"/>' +
+                  '<div class="item-media">' +
                   '<div class="item-inner virtual-inner">' +
                      '<div class="item-title-row">'+
                          '<div class="item-title">' + item.page_id + '</div>' +
-                        '<div class="item-after" onclick="removefavList('+item.page_id+')"><i class="pe-7s-star pe-lg starcon_'+item.page_id+'" style="color:#ffcc00;"></i></div>'+
+                        '<div class="item-after"><img src="http://graph.facebook.com/'+item.page_id+'/picture?width=30&height=30" style="border-radius:50%;max-width:30px;margin-right:10px;"/></div>'+
                     '</div>'+
                     '<div class="item-subtitle">'+ item.timestamp +'</div>'
                   '</div>' +
