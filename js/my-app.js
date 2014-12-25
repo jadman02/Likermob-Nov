@@ -2383,16 +2383,17 @@ var newPageContent =
 mainView.router.loadContent(newPageContent);
 var favEntries = JSON.parse(localStorage.getItem("favEntries"));
 var itemlist = [];
-for (i = 0; i < favEntries.length; i++) {itemlist.push({page_id:favEntries[i].page_id,name:favEntries[i].name,timestamp:favEntries[i].created});}
+for (i = 0; i < favEntries.length; i++) {
+	var lowercase = favEntries[i].name.toLowerCase();
+	itemlist.push({page_id:favEntries[i].page_id,lowercased:lowercase,name:favEntries[i].name,timestamp:favEntries[i].created});}
 var myList = myApp.virtualList('.list-block.virtual-list', {
     // Array with items data
     items: itemlist,
     searchAll: function (query, items) {
         var foundItems = [];
-        query = query.trim().lowerCase();
         for (var i = 0; i < items.length; i++) {
             // Check if title contains query string
-            if (items[i].name.lowerCase().indexOf(query) >= 0) foundItems.push(i);
+            if (items[i].name.indexOf(query.trim()) >= 0 || items[i].lowercased.indexOf(query.trim()) >= 0) foundItems.push(i);
         }
         // Return array with indexes of matched items
         return foundItems; 
@@ -2400,7 +2401,7 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
     // Custom render function to render item's HTML
     renderItem: function (index, item) {
         return '<li class="item-content virtual-content">' +
-                  '<div class="item-media"><img src="http://graph.facebook.com/'+item.page_id+'/picture?width=30&height=30" style="border-radius:50%;max-width:30px;margin-right:10px;"/>' +
+                  '<div class="item-media"><img src="http://graph.facebook.com/'+item.page_id+'/picture?width=30&height=30" style="border-radius:50%;max-width:30px;padding-right:10px;"/>' +
                   '<div class="item-inner virtual-inner">' +
                      '<div class="item-title-row">'+
                          '<div class="item-title">' + item.name + '</div>' +
@@ -2415,4 +2416,3 @@ var windowsize = $$(window).width() - 50;
 $$( '.virtual-inner' ).css( 'width', windowsize+'px');	
 	
 }
-
