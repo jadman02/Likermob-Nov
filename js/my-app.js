@@ -2470,7 +2470,7 @@ var newPageContent =
     '<div class="navbar-inner">'+
         '<div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>'+
         '<div class="center">My Deals</div>'+
-        '<div class="right"><i class="pe-7s-clock pe-lg link"></i></div>'+
+        '<div class="right"><i class="pe-7s-clock pe-lg link"></i><i class="pe-7s-like2 pe-lg link"></i></div>'+
     '</div>'+
 '</div>'+
 '<div class="page" data-page="deal-page">' +
@@ -2556,11 +2556,11 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
                   '<div class="item-media" onclick="getBusiness('+item.page_id+')" style="padding:5px;"><img src="http://smilesavers.net.au/images/compressed/'+item.page_id+'_'+item.photo+'.jpg" style="width:40px;max-height:40px;overflow:hidden;"/></div>' +
                   '<div class="item-inner virtual-inner" onclick="getBusiness('+item.page_id+')">' +
                      '<div class="item-title-row">'+
-                         '<div class="item-title"><img src="http://graph.facebook.com/'+item.page_id+'/picture?width=15&height=15" style="border-radius:50%;max-width:15px;margin-right:10px;"/>'+ item.title +'</div>' +
+                         '<div class="item-title">'+ item.title +'</div>' +
                         '<div class="item-after"></div>'+
                     '</div>'+
-                    '<div class="item-subtitle">'+ item.name +'</div>' +
-                    '<div "class="item-text"">'+ item.expiry +'</div>' +
+                    '<div class="item-subtitle"><img src="http://graph.facebook.com/'+item.page_id+'/picture?width=15&height=15" style="border-radius:50%;max-width:15px;margin-right:10px;"/>'+ item.name +'</div>' +
+                    '<div "class="item-text""><i class="pe-7s-clock"></i>'+ item.expiry +'</div>' +
                   '</div>' +
                '</div>'+
                '<div class="swipeout-actions-right">' +
