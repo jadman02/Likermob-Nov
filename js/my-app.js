@@ -2470,7 +2470,7 @@ var newPageContent =
     '<div class="navbar-inner">'+
         '<div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>'+
         '<div class="center">My Deals</div>'+
-        '<div class="right"><a href="#" class="button link" style="border:0;"><i class="pe-7s-clock pe-lg"></i></a></div>'+
+        '<div class="right"><a href="#" class="button link" style="border:0;color:#ccc;"><i class="pe-7s-clock pe-lg"></i></a></div>'+
     '</div>'+
 '</div>'+
 '<div class="page" data-page="deal-page">' +
@@ -2529,13 +2529,9 @@ var month_name = month[d.getUTCMonth()];
 var weekday_name = day_name[d.getUTCDay()];
 var day = d.getUTCDate();
 var year = d.getUTCFullYear();
-var hours = d.getUTCHours();
-var minutes = d.getUTCMinutes();
-if (minutes < 10) {minutes = minutes + "0"} 
 
 var firstdate = weekday_name + ", " + month_name + " " + day + " " + year ;
-var seconddate = hours + ":" + minutes;  
-var datetime = '<div class="messages-date" style="padding:0;float:left;margin:0;"><i class="pe-7s-clock"></i> Expires '+ firstdate +'<span> '+ seconddate +'</span></div>';
+var datetime = '<div class="messages-date" style="padding:0;float:left;margin:0;"><i class="pe-7s-clock"></i> Expires '+ firstdate +'</div>';
 	itemlist.push({page_id:allEntries[i].page_id,post_id:allEntries[i].post_id,lowercased:lowercase,name:allEntries[i].name,title:allEntries[i].title,expiry:datetime,photo:allEntries[i].photo});}
 var myList = myApp.virtualList('.list-block.virtual-list', {
     // Array with items data
@@ -2556,10 +2552,10 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
                   '<div class="item-media" onclick="getBusiness('+item.page_id+')" style="padding:5px;"><img src="http://smilesavers.net.au/images/compressed/'+item.page_id+'_'+item.photo+'.jpg" style="width:40px;max-height:40px;overflow:hidden;"/></div>' +
                   '<div class="item-inner virtual-inner" onclick="getBusiness('+item.page_id+')">' +
                      '<div class="item-title-row">'+
-                         '<div class="item-title">'+ item.title +'</div>' +
+                         '<div class="item-title"><img src="http://graph.facebook.com/'+item.page_id+'/picture?width=15&height=15" style="border-radius:50%;max-width:15px;margin-right:10px;"/>'+ item.title +'</div>' +
                         '<div class="item-after"></div>'+
                     '</div>'+
-                    '<div class="item-subtitle"><img src="http://graph.facebook.com/'+item.page_id+'/picture?width=15&height=15" style="border-radius:50%;max-width:15px;margin-right:10px;"/>'+ item.name +'</div>' +
+                    '<div class="item-subtitle">'+ item.name +'</div>' +
                     '<div "class="item-text"">'+ item.expiry +'</div>' +
                   '</div>' +
                '</div>'+
