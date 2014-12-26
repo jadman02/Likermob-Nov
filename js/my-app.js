@@ -2615,7 +2615,12 @@ var url = 'http://smilesavers.net.au/images/compressed/'+response[0][1]+'_'+resp
         }
       },
       {
-        text: '<i class="pe-7s-map pe-2x"></i>',
+        text: '<i class="pe-7s-map pe-lg"></i>',
+        onClick: function() {
+        }
+      },
+      {
+        text: '<i class="pe-7s-star pe-lg"></i>',
         onClick: function() {
         }
       },
