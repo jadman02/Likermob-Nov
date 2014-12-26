@@ -2549,11 +2549,11 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
     },
     // Custom render function to render item's HTML
     renderItem: function (index, item) {
-        return '<li class="item-content virtual-content swipeout" onclick="getBusiness('+item.page_id+')" style="height:50px;">' +
+        return '<li class="item-content virtual-content swipeout" onclick="getBusiness('+item.page_id+')" style="border-right:3px solid #ff8000;margin-top:5px;margin-bottom:5px;">' +
                   '<div class="item-media" style="padding:5px;"><img src="http://smilesavers.net.au/images/compressed/'+item.page_id+'_'+item.photo+'.jpg" style="width:40px;max-height:40px;overflow:hidden;"/></div>' +
                   '<div class="item-inner virtual-inner">' +
                      '<div class="item-title-row">'+
-                         '<div class="item-title"><img src="http://graph.facebook.com/'+item.page_id+'/picture?width=10&height=10" style="border-radius:50%;max-width:10px;margin-right:10px;"/>Save 10% on Coffee every day of the week</div>' +
+                         '<div class="item-title"><img src="http://graph.facebook.com/'+item.page_id+'/picture?width=20&height=20" style="border-radius:50%;max-width:10px;margin-right:20px;"/>Save 10% on Coffee every day of the week</div>' +
                         '<div class="item-after"></div>'+
                     '</div>'+
                     '<div class="item-subtitle">'+ item.expiry +'</div>' +
