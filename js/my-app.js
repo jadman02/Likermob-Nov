@@ -2623,7 +2623,7 @@ myApp.modal({
       {
         text: '<i class="pe-7s-more pe-lg"></i>',
         onClick: function() {
-        	loadMore(page_id,url,title,uid,post_id);
+        	alert('yo');
         }
       },
     ]
