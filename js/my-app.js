@@ -2468,7 +2468,7 @@ var newPageContent =
     '<div class="navbar-inner">'+
         '<div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>'+
         '<div class="center">My Deals</div>'+
-        '<div class="right"><i class="button pe-7s-search pe-lg link"></i><i class="button pe-7s-star pe-lg link"></i><i class="button pe-7s-diskette pe-lg link"></i></div>'+
+        '<div class="right"><i class="button pe-7s-clock pe-lg link"></i></div>'+
     '</div>'+
 '</div>'+
 '<div class="page" data-page="deal-page">' +
@@ -2538,10 +2538,6 @@ var datetime = '<div class="messages-date" style="padding:0;float:left;margin:0;
 var myList = myApp.virtualList('.list-block.virtual-list', {
     // Array with items data
     items: itemlist,
-    height: function (item) {
-        return 50; //item with picture is 100px height
-        
-    },
     searchAll: function (query, items) {
         var foundItems = [];
         for (var i = 0; i < items.length; i++) {
