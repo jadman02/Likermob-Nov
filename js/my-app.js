@@ -2522,7 +2522,7 @@ day_name[6] = "Saturday";
 for (i = 0; i < allEntries.length; i++) {
 	//var lowercase = favEntries[i].name.toLowerCase();
 	
-var lowercase = favEntries[i].name.toLowerCase();
+var lowercase = allEntries[i].name.toLowerCase();
 var unix = allEntries[i].expiry + offset;
 var d = new Date(unix);
 var month_name = month[d.getUTCMonth()];
