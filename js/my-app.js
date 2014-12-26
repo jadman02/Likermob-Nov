@@ -2470,7 +2470,7 @@ var newPageContent =
         '<div class="right"><i class="button pe-7s-search pe-lg link"></i><i class="button pe-7s-star pe-lg link"></i><i class="button pe-7s-diskette pe-lg link"></i></div>'+
     '</div>'+
 '</div>'+
-'<div class="page" data-page="deal-page" style="background-color:white;">' +
+'<div class="page" data-page="deal-page">' +
 '<form class="searchbar" style="margin-top:-10px;" data-search-list=".list-block-search" data-search-in=".item-title" data-searchbar-found=".searchbar-found" data-searchbar-not-found=".searchbar-not-found">'+
         '<div class="searchbar-input">'+
             '<input type="search" placeholder="Search">'+
