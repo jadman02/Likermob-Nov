@@ -2596,40 +2596,21 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
 function removelikelList(post_id){
 	
 myApp.modal({
-    title:  'Modal with 3 buttons',
-    text: 'Vivamus feugiat diam velit. Maecenas aliquet egestas lacus, eget pretium massa mattis non. Donec volutpat euismod nisl in posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae',
+    title: 'Share on Facebook',
+    text: '<div class="content-block" style="padding:0;margin:0;max-height:200px;overflow: scroll;overflow-x:hidden;"><div class="content-block-inner" style="background-color:transparent;">ajkdaskjbsajkdbsakj dbsa kjdb sajk dbsajk dbsajkdbsajkdbs ajkd bsajkdbsajkdbsaj kdasbdkjasbd jsdbasjdb asjdbasjd bsajkdbasjkdba skjdba sk jdb asjkdbasjkdba sj kdbasjkd bsa<br/><img style="margin-top:10px;width:50%;" src="http://www.smilesavers.net.au/images/cover.png"/></div></div>',
+     afterText:  '',
     buttons: [
       {
-        text: '<i class="pe-7s-map pe-2x"></i>',
+        text: 'Cancel',
         onClick: function() {
-          myApp.alert('You clicked first button!')
+          myApp.closeModal();
         }
       },
       {
-        text: '<i class="pe-7s-star pe-2x"></i>',
+        text: 'Share',
         onClick: function() {
-          myApp.alert('You clicked first button!')
-        }
-      },
-      {
-        text: '<i class="pe-7s-like2 pe-2x pe-rotate-180"></i>',
-        onClick: function() {
-          myApp.alert('You clicked second button!')
-        }
-      },
-         {
-        text: '<i class="pe-7s-more pe-2x"></i>',
-        onClick: function() {
-          myApp.alert('You clicked first button!')
-        }
-      },
-      {
-        text: 'B3',
-        bold: true,
-        onClick: function() {
-          myApp.alert('You clicked third button!')
         }
       },
     ]
-  })
+  });
 }
