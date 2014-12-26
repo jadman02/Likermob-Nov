@@ -2592,7 +2592,7 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
                '<div class="swipeout-actions-right">' +
 
 
-        '<a href="#" onclick="removelikelList(\''+ item.post_id  +'\')"><i class="pe-7s-plus pe-2x"></i></a>' +
+        '<a href="#"><i class="pe-7s-plus pe-2x"></i></a>' +
         '<a href="#"><i class="pe-7s-map pe-2x"></i></a>' +
         '<a href="#" onclick="removelikeList(\''+ item.post_id  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a>' +
       '</div>' +
@@ -2607,14 +2607,14 @@ function removelikelList(post_id){
 var uid = localStorage.getItem("uid");
 domain = "getdeal";data_send = "post_id=" + post_id;
 $$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', ''+ data_send +'',function(response){
-var page_id = response[0][1];var title = response[0][3];var description = response[0][4];var terms = response[0][5];
+var page_id = response[0][1];var title = response[0][3];
 var url = 'http://smilesavers.net.au/images/compressed/'+response[0][1]+'_'+response[0][21]+'.jpg';
 
 	
 	myApp.modal({
-    title: '',
-    text: '<div class="list-block"><ul><li><div class="item-content"><div class="content-block"><div class="content-block-inner" style="background-color:transparent;"><span style="font-weight:500;">' + title + '</span> adsasasdasd adsasas dasdadsasasdasdads asasdasdadsasasdasdadsasasdasd  adsasasdasd adsasasdasd adsasasdasdadsasasdasdadsasa sdasdadsasasdasd<br/><img style="margin-top:10px;width:100%;" src="'+ url +'"/></div></div></div></li></ul></div> ',
-     afterText:  '',
+    title: title,
+    text: '<div class="content-block" style="padding:0;margin:0;max-height:400px;overflow: scroll;overflow-x:hidden;"><div class="content-block-inner" style="background-color:transparent;">' + title + ' ajkdaskjbsajkdbsakj dbsa kjdb sajk dbsajk dbsajkdbsajkdbs ajkd bsajkdbsajkdbsaj kdasbdkjasbd jsdbasjdb asjdbasjd bsajkdbasjkdba skjdba sk jdb asjkdbasjkdba sj kdbasjkd bsa<br/><img style="margin-top:10px;width:100%;" src="'+ url +'"/></div></div><div class="list-block" style="margin-top:10px;margin-bottom:10px;"><ul><li><div class="item-content"><div class="item-media"><img src="http://graph.facebook.com/'+ uid +'/picture?type=small"></div><div class="item-inner"><div class="item-input"><textarea id="dealbox1" placeholder="What do you think?"></textarea></div></div></div></li></ul</div>',
+     
     buttons: [
       {
         text: '<i class="pe-7s-close pe-lg"></i>',
@@ -2646,4 +2646,3 @@ var url = 'http://smilesavers.net.au/images/compressed/'+response[0][1]+'_'+resp
 	
 
 }
-
