@@ -2562,9 +2562,11 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
                '</div>'+
                '<div class="swipeout-actions-right">' +
 
-        '<a href="#"><i class="pe-7s-map pe-2x"></i></a>' +
-        '<a href="#"><i class="pe-7s-star pe-2x"></i>/a>' +
-        '<a href="#" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a>' +
+        '<a href="#" style="width:20%"><i class="pe-7s-plus pe-2x"></i></a>' +
+        '<a href="#" style="width:20%"><i class="pe-7s-share pe-2x"></i></a>' +
+        '<a href="#" style="width:20%"><i class="pe-7s-map pe-2x"></i></a>' +
+        '<a href="#" style="width:20%"><i class="pe-7s-star pe-2x"></i></a>' +
+        '<a href="#" class="swipeout-delete swipeout-overswipe" style="width:20%;background-color:#ff8000;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a>' +
       '</div>' +
                '</li>';
     }
