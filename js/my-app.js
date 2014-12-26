@@ -2594,10 +2594,10 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
 }
 
 function removelikelList(post_id){
-
+var uid = localStorage.getItem("uid");
 domain = "getdeal";data_send = "post_id=" + post_id;
 $$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', ''+ data_send +'',function(response){
-alert(response[0][1]);
+var page_id = response[0][1];var photo = response[0][21]; var title = response[0][3];
 });	
 myApp.modal({
     title: 'Share on Facebook',
