@@ -2571,8 +2571,8 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
     renderItem: function (index, item) {
         return '<li class="virtual-content swipeout" style="border-right:3px solid #ff8000;margin-top:5px;margin-bottom:5px;">' +
                   '<div class="swipeout-content item-content">'+
-                  '<div class="item-media" onclick="getBusiness('+item.page_id+')" style="padding:5px;"><img src="http://smilesavers.net.au/images/compressed/'+item.page_id+'_'+item.photo+'.jpg" style="width:40px;max-height:40px;overflow:hidden;"/></div>' +
-                  '<div class="item-inner virtual-inner" onclick="getBusiness('+item.page_id+')">' +
+                  '<div class="item-media" onclick="dealmodalInfo()" style="padding:5px;"><img src="http://smilesavers.net.au/images/compressed/'+item.page_id+'_'+item.photo+'.jpg" style="width:40px;max-height:40px;overflow:hidden;"/></div>' +
+                  '<div class="item-inner virtual-inner" onclick="dealmodalInfo()">' +
                      '<div class="item-title-row">'+
                          '<div class="item-title"><img src="http://graph.facebook.com/'+item.page_id+'/picture?width=15&height=15" style="border-radius:50%;max-width:15px;margin-right:10px;"/>'+ item.title +'</div>' +
                         '<div class="item-after"><i class="pe-7s-angle-left pe-lg" style="color:#ff8000;"></i></div>'+
@@ -2593,3 +2593,32 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
 });  
 }
 
+function dealmodalInfo(){
+	
+	myApp.modal({
+    title:  'Modal with 3 buttons',
+    text: 'Vivamus feugiat diam velit. Maecenas aliquet egestas lacus, eget pretium massa mattis non. Donec volutpat euismod nisl in posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae',
+     afterText:  '<div class="list-block" style="margin-top:10px;margin-bottom:10px;"><ul><li><div class="item-content"><div class="item-media"><img src="http://graph.facebook.com/'+ uid +'/picture?type=small"></div><div class="item-inner"><div class="item-input"><textarea id="dealbox" placeholder="What do you think?"></textarea></div></div></div></li></ul</div>',
+    buttons: [
+      {
+        text: 'B1',
+        onClick: function() {
+          myApp.alert('You clicked first button!')
+        }
+      },
+      {
+        text: 'B2',
+        onClick: function() {
+          myApp.alert('You clicked second button!')
+        }
+      },
+      {
+        text: 'B3',
+        bold: true,
+        onClick: function() {
+          myApp.alert('You clicked third button!')
+        }
+      },
+    ]
+  })
+}
