@@ -762,9 +762,9 @@ var d = new Date();
   var likeCount = localStorage.getItem("likeCount");
     if(likeCount == null) likeCount = 0;
 likeCount ++;
-$('.badge').text(likeCount);
+$$('.badge').text(likeCount);
 localStorage.setItem("likeCount", likeCount);	
-localStorage.setItem("allEntries", "");
+alert(likeCount);
 
 }
 
