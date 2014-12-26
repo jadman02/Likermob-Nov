@@ -569,10 +569,7 @@ function removelikeList(post_id){
 alert('removelikelist');
 var allEntries = JSON.parse(localStorage.getItem("allEntries"));
 for (i = 0; i < allEntries.length; i++) {        
-
-
 if (allEntries[i].post_id == post_id){allEntries.splice(i,1);}
-
 }
 localStorage.setItem("allEntries", JSON.stringify(allEntries));
 alert(localStorage.getItem("allEntries"));	
@@ -2589,7 +2586,7 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
 
         '<a href="#"><i class="pe-7s-plus pe-2x"></i></a>' +
         '<a href="#"><i class="pe-7s-map pe-2x"></i></a>' +
-        '<a href="#" onclick="removelikeList('+item.post_id+')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a>' +
+        '<a href="#" onclick="removelikeList(\''+ item.post_id  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a>' +
       '</div>' +
                '</li>';
     }
