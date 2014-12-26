@@ -2597,11 +2597,10 @@ function removelikelList(post_id){
 var uid = localStorage.getItem("uid");
 domain = "getdeal";data_send = "post_id=" + post_id;
 $$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', ''+ data_send +'',function(response){
-var page_id = response[0][1];var title = response[0][3];
-var homecontentimage = 'http://smilesavers.net.au/images/compressed/'+response[0][1]+'_'+response[0][21]+'.jpg';
+var page_id = response[0][1];var photo = response[0][21]; var title = response[0][3];
 });	
 myApp.modal({
-    title: title,
+    title: 'Share on Facebook',
     text: '<div class="content-block" style="padding:0;margin:0;max-height:200px;overflow: scroll;overflow-x:hidden;"><div class="content-block-inner" style="background-color:transparent;">ajkdaskjbsajkdbsakj dbsa kjdb sajk dbsajk dbsajkdbsajkdbs ajkd bsajkdbsajkdbsaj kdasbdkjasbd jsdbasjdb asjdbasjd bsajkdbasjkdba skjdba sk jdb asjkdbasjkdba sj kdbasjkd bsa<br/><img style="margin-top:10px;width:50%;" src="http://www.smilesavers.net.au/images/cover.png"/></div></div>',
      afterText:  '',
     buttons: [
@@ -2613,18 +2612,18 @@ myApp.modal({
       },
       {
         text: '<i class="pe-7s-map pe-lg"></i>',
-        onClick: function() {alert('yo');
+        onClick: function() {
         }
       },
       {
         text: '<i class="pe-7s-star pe-lg"></i>',
-        onClick: function() {alert('yo');
+        onClick: function() {
         }
       },
       {
         text: '<i class="pe-7s-more pe-lg"></i>',
-        onClick: function() {alert('yo');
-        	loadMore(\''+ page_id  +'\',\''+ homecontentimage  +'\',\''+ title  +'\',\''+ uid +'\',\''+ post_id  +'\');
+        onClick: function() {
+        	loadMore(page_id,url,title,uid,post_id);
         }
       },
     ]
