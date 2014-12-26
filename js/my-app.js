@@ -2571,7 +2571,7 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
     renderItem: function (index, item) {
         return '<li class="virtual-content swipeout" style="border-right:3px solid #ff8000;margin-top:5px;margin-bottom:5px;">' +
                   '<div class="swipeout-content item-content">'+
-                  '<div class="item-media" onclick="dealmodalInfo('+item.post_id+')" style="padding:5px;"><img src="http://smilesavers.net.au/images/compressed/'+item.page_id+'_'+item.photo+'.jpg" style="width:40px;max-height:40px;overflow:hidden;"/></div>' +
+                  '<div class="item-media" onclick="removelikelList(\''+ item.post_id  +'\')" style="padding:5px;"><img src="http://smilesavers.net.au/images/compressed/'+item.page_id+'_'+item.photo+'.jpg" style="width:40px;max-height:40px;overflow:hidden;"/></div>' +
                   '<div class="item-inner virtual-inner" onclick="removelikelList(\''+ item.post_id  +'\')">' +
                      '<div class="item-title-row">'+
                          '<div class="item-title"><img src="http://graph.facebook.com/'+item.page_id+'/picture?width=15&height=15" style="border-radius:50%;max-width:15px;margin-right:10px;"/>'+ item.title +'</div>' +
@@ -2594,7 +2594,11 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
 }
 
 function removelikelList(post_id){
-	
+
+domain = "getdeal";data_send = "post_id=" + post_id;
+$$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', ''+ data_send +'',function(response){
+alert(response[0][1]);
+});	
 myApp.modal({
     title: 'Share on Facebook',
     text: '<div class="content-block" style="padding:0;margin:0;max-height:200px;overflow: scroll;overflow-x:hidden;"><div class="content-block-inner" style="background-color:transparent;">ajkdaskjbsajkdbsakj dbsa kjdb sajk dbsajk dbsajkdbsajkdbs ajkd bsajkdbsajkdbsaj kdasbdkjasbd jsdbasjdb asjdbasjd bsajkdbasjkdba skjdba sk jdb asjkdbasjkdba sj kdbasjkd bsa<br/><img style="margin-top:10px;width:50%;" src="http://www.smilesavers.net.au/images/cover.png"/></div></div>',
@@ -2619,6 +2623,7 @@ myApp.modal({
       {
         text: '<i class="pe-7s-more pe-lg"></i>',
         onClick: function() {
+        	loadMore(page_id,url,title,uid,post_id);
         }
       },
     ]
