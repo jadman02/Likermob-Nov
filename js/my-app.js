@@ -2565,7 +2565,7 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
                   '<div class="item-inner virtual-inner" onclick="getBusiness('+item.page_id+')">' +
                      '<div class="item-title-row">'+
                          '<div class="item-title"><img src="http://graph.facebook.com/'+item.page_id+'/picture?width=15&height=15" style="border-radius:50%;max-width:15px;margin-right:10px;"/>'+ item.title +'</div>' +
-                        '<div class="item-after"></div>'+
+                        '<div class="item-after"><i class="pe-7s-left-arrow pe-lg" style="color:#ff8000;"></i></div>'+
                     '</div>'+
                     '<div class="item-subtitle">'+ item.name +'</div>' +
                     '<div "class="item-text"">'+ item.expiry +'</div>' +
