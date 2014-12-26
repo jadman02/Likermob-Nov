@@ -565,6 +565,19 @@ localStorage.setItem("favEntries", JSON.stringify(favEntries));
 //alert(localStorage.getItem("favEntries"));	
 }
 
+function removelikeList(page_id){
+
+var allEntries = JSON.parse(localStorage.getItem("allEntries"));
+for (i = 0; i < allEntries.length; i++) {        
+
+
+if (allEntries[i].page_id == page_id){allEntries.splice(i,1);}
+
+}
+localStorage.setItem("allEntries", JSON.stringify(allEntries));
+//alert(localStorage.getItem("favEntries"));	
+}
+
 
 
 
@@ -2576,7 +2589,7 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
 
         '<a href="#"><i class="pe-7s-plus pe-2x"></i></a>' +
         '<a href="#"><i class="pe-7s-map pe-2x"></i></a>' +
-        '<a href="#" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a>' +
+        '<a href="#" onclick="removelikeList('+item.page_id+')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a>' +
       '</div>' +
                '</li>';
     }
