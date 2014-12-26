@@ -2535,7 +2535,7 @@ if (minutes < 10) {minutes = minutes + "0"}
 
 var firstdate = weekday_name + ", " + month_name + " " + day + " " + year ;
 var seconddate = hours + ":" + minutes;  
-var datetime = '<div class="messages-date" style="padding:0;float:left;margin:0;">'+ firstdate +'<span> '+ seconddate +'</span></div>';
+var datetime = '<div class="messages-date" style="padding:0;float:left;margin:0;"><i class="pe-7s-clock"></i> '+ firstdate +'<span> '+ seconddate +'</span></div>';
 	itemlist.push({page_id:allEntries[i].page_id,post_id:allEntries[i].post_id,lowercased:lowercase,name:allEntries[i].name,title:allEntries[i].title,expiry:datetime,photo:allEntries[i].photo});}
 var myList = myApp.virtualList('.list-block.virtual-list', {
     // Array with items data
@@ -2560,7 +2560,7 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
                         '<div class="item-after"></div>'+
                     '</div>'+
                     '<div class="item-subtitle"><img src="http://graph.facebook.com/'+item.page_id+'/picture?width=15&height=15" style="border-radius:50%;max-width:15px;margin-right:10px;"/>'+ item.name +'</div>' +
-                    '<div "class="item-text""><i class="pe-7s-clock"></i>'+ item.expiry +'</div>' +
+                    '<div "class="item-text"">'+ item.expiry +'</div>' +
                   '</div>' +
                '</div>'+
                '<div class="swipeout-actions-right">' +
