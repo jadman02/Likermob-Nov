@@ -2563,6 +2563,7 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
         '<a href="#">Action 1</a>' +
         '<a href="#">Action 2</a>' +
         '<a href="#">Action 3</a>' +
+        '<a href="#">Action 4</a>' +
       '</div>' +
                '</li>';
     }
