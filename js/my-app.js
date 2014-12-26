@@ -2601,13 +2601,23 @@ myApp.modal({
      afterText:  '',
     buttons: [
       {
-        text: 'Cancel',
+        text: '<i class="pe-7s-close pe-lg"></i>',
         onClick: function() {
           myApp.closeModal();
         }
       },
       {
-        text: 'Share',
+        text: '<i class="pe-7s-map pe-lg"></i>',
+        onClick: function() {
+        }
+      },
+      {
+        text: '<i class="pe-7s-star pe-lg"></i>',
+        onClick: function() {
+        }
+      },
+      {
+        text: '<i class="pe-7s-more pe-lg"></i>',
         onClick: function() {
         }
       },
