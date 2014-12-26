@@ -2595,7 +2595,5 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
 
 function dealmodalInfo(post_id){
 	
-	$$('.alert-text-title').on('click', function () {
-    myApp.alert('Here goes alert text', 'Custom Title!');
-});
+alert('yo');
 }
