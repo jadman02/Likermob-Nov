@@ -566,7 +566,7 @@ localStorage.setItem("favEntries", JSON.stringify(favEntries));
 }
 
 function removelikeList(post_id){
-
+alert('removelikelist');
 var allEntries = JSON.parse(localStorage.getItem("allEntries"));
 for (i = 0; i < allEntries.length; i++) {        
 
