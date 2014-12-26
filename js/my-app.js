@@ -2287,26 +2287,7 @@ function loadMore(page_id,url,title,uid,post_id){
         {
             text: 'Share Deal',
             onClick: function () {
-myApp.modal({
-    title: 'Share on Facebook',
-    text: '<div class="content-block" style="padding:0;margin:0;max-height:200px;overflow: scroll;overflow-x:hidden;"><div class="content-block-inner" style="background-color:transparent;">' + title + ' ajkdaskjbsajkdbsakj dbsa kjdb sajk dbsajk dbsajkdbsajkdbs ajkd bsajkdbsajkdbsaj kdasbdkjasbd jsdbasjdb asjdbasjd bsajkdbasjkdba skjdba sk jdb asjkdbasjkdba sj kdbasjkd bsa<br/><img style="margin-top:10px;width:50%;" src="'+ url +'"/></div></div>',
-     afterText:  '<div class="list-block" style="margin-top:10px;margin-bottom:10px;"><ul><li><div class="item-content"><div class="item-media"><img src="http://graph.facebook.com/'+ uid +'/picture?type=small"></div><div class="item-inner"><div class="item-input"><textarea id="dealbox" placeholder="What do you think?"></textarea></div></div></div></li></ul</div>',
-    buttons: [
-      {
-        text: 'Cancel',
-        onClick: function() {
-          myApp.closeModal();
-        }
-      },
-      {
-        text: 'Share',
-        onClick: function() {
-          var value = $$("#dealbox").val();
-          share(value,page_id,url,title);
-        }
-      },
-    ]
-  });
+shareModal(page_id,url,title);
             }
         },
         {
@@ -2601,7 +2582,6 @@ domain = "getdeal";data_send = "post_id=" + post_id;
 $$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', ''+ data_send +'',function(response){
 var page_id = response[0][1];var title = response[0][3];
 var homecontentimage = 'http://smilesavers.net.au/images/compressed/'+response[0][1]+'_'+response[0][21]+'.jpg';
-alert(homecontentimage);
 });	
 myApp.modal({
     title: 'title',
@@ -2616,18 +2596,42 @@ myApp.modal({
         close: false
       },
       {
-        text: '<i class="pe-7s-map pe-lg"></i>',
-        onClick: function() {alert('yo');
-        }
-      },
-      {
-        text: '<i class="pe-7s-more pe-lg"></i>',
+        text: '<i class="pe-7s-share pe-lg"></i>',
         close: false,
         onClick: function() {
-        	alert(homecontentimage); 
+        	shareModal(page_id,homecontentimage,title);
+        }
+      },
+       {
+        text: '<i class="pe-7s-map pe-lg"></i>',
+        onClick: function() {alert('yo');
         }
       },
     ]
   });
 
+}
+
+function shareModal(page_id,url,title){
+	
+	myApp.modal({
+    title: 'Share on Facebook',
+    text: '<div class="content-block" style="padding:0;margin:0;max-height:200px;overflow: scroll;overflow-x:hidden;"><div class="content-block-inner" style="background-color:transparent;">' + title + ' ajkdaskjbsajkdbsakj dbsa kjdb sajk dbsajk dbsajkdbsajkdbs ajkd bsajkdbsajkdbsaj kdasbdkjasbd jsdbasjdb asjdbasjd bsajkdbasjkdba skjdba sk jdb asjkdbasjkdba sj kdbasjkd bsa<br/><img style="margin-top:10px;width:50%;" src="'+ url +'"/></div></div>',
+     afterText:  '<div class="list-block" style="margin-top:10px;margin-bottom:10px;"><ul><li><div class="item-content"><div class="item-media"><img src="http://graph.facebook.com/'+ uid +'/picture?type=small"></div><div class="item-inner"><div class="item-input"><textarea id="dealbox" placeholder="What do you think?"></textarea></div></div></div></li></ul</div>',
+    buttons: [
+      {
+        text: 'Cancel',
+        onClick: function() {
+          myApp.closeModal();
+        }
+      },
+      {
+        text: 'Share',
+        onClick: function() {
+          var value = $$("#dealbox").val();
+          share(value,page_id,url,title);
+        }
+      },
+    ]
+  });
 }
