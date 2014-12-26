@@ -2506,7 +2506,7 @@ $$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', ''+ data
 
 for (i = 0; i < response.length; i++){itemlist.push({page_id:response[i][1],post_id:response[i][2],photo:response[i][21]});}
 });
-
+alert(itemlist);
 /*
 var datetoday = new Date();
 var offset = datetoday.getTimezoneOffset() * 60;
