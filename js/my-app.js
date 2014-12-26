@@ -2492,13 +2492,14 @@ var newPageContent =
 
 mainView.router.loadContent(newPageContent);
 var allEntries = JSON.parse(localStorage.getItem("allEntries"));
+var post_id_list = [];
 for (i = 0; i < allEntries.length; i++) {post_id_list.push("999999"+ allEntries[i].post_id + "999999");}
 var itemlist = [];
 
 var uid = localStorage.getItem("uid");
 var latitude = localStorage.getItem("latitude");
 var longitude = localStorage.getItem("longitude");
-var post_id_list = [];
+
 
 domain = "getposts";data_send = "pages_list=" + post_id_list + "&user_id=" + uid + "&latitude=" + latitude + "&longitude=" + longitude;}
 $$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', ''+ data_send +'',function(response){
