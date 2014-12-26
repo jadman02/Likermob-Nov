@@ -259,7 +259,7 @@ if(favEntries.length > 0){for (j = 0; j < favEntries.length; j++) {if (favEntrie
 
 
 var str = response[i][4];
-var short_title = response[i][3].substring(0,11);
+var short_title = response[i][3].substring(0,21);
 var singlequote = str.replace(/'/g, "qqqq");
 //var description = "'" + singlequote.replace(/(\r\n|\n|\r)/gm,"") + "'";
 var type = response[i][9];
