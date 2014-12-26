@@ -2572,7 +2572,7 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
         return '<li class="virtual-content swipeout" style="border-right:3px solid #ff8000;margin-top:5px;margin-bottom:5px;">' +
                   '<div class="swipeout-content item-content">'+
                   '<div class="item-media" onclick="dealmodalInfo('+item.post_id+')" style="padding:5px;"><img src="http://smilesavers.net.au/images/compressed/'+item.page_id+'_'+item.photo+'.jpg" style="width:40px;max-height:40px;overflow:hidden;"/></div>' +
-                  '<div class="item-inner virtual-inner" onclick="dealmodalInfo('+item.post_id+')">' +
+                  '<div class="item-inner virtual-inner" onclick="removelikeList(\''+ item.post_id  +'\')">' +
                      '<div class="item-title-row">'+
                          '<div class="item-title"><img src="http://graph.facebook.com/'+item.page_id+'/picture?width=15&height=15" style="border-radius:50%;max-width:15px;margin-right:10px;"/>'+ item.title +'</div>' +
                         '<div class="item-after"><i class="pe-7s-angle-left pe-lg" style="color:#ff8000;"></i></div>'+
