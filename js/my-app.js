@@ -2601,6 +2601,7 @@ domain = "getdeal";data_send = "post_id=" + post_id;
 $$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', ''+ data_send +'',function(response){
 var page_id = response[0][1];var title = response[0][3];
 var homecontentimage = 'http://smilesavers.net.au/images/compressed/'+response[0][1]+'_'+response[0][21]+'.jpg';
+alert(homecontentimage);
 });	
 myApp.modal({
     title: 'title',
@@ -2612,10 +2613,7 @@ myApp.modal({
       },
             {
         text: '<i class="pe-7s-star pe-lg"></i>',
-        close: false,
-        onClick: function() {
-          myApp.closeModal();
-        }
+        close: false
       },
       {
         text: '<i class="pe-7s-map pe-lg"></i>',
