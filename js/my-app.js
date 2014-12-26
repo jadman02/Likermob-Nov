@@ -19,6 +19,7 @@ document.getElementById("profilepic").innerHTML = '<img src="http://graph.facebo
     functionEmpty('a',0,2,0);
 
 
+
 var previousScrollPosition = 0;
 $$('.pull-to-refresh-content').on('scroll', function (e) {
 
@@ -758,6 +759,13 @@ var d = new Date();
     existingEntries.unshift(entry);
     localStorage.setItem("allEntries", JSON.stringify(existingEntries));
   alert(localStorage.getItem("allEntries"));	
+  var likeCount = localStorage.getItem("likeCount");
+    if(likeCount == null) likeCount = 0;
+likeCount ++;
+$('.badge').text(likeCount);
+localStorage.setItem("likeCount", likeCount);	
+localStorage.setItem("allEntries", "");
+
 }
 
 function favList(page_id,post_id,name) {
