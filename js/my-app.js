@@ -2553,18 +2553,18 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
                   '<div class="swipeout-content item-content">'+
                   '<div class="item-media" onclick="getBusiness('+item.page_id+')" style="padding:5px;"><img src="http://smilesavers.net.au/images/compressed/'+item.page_id+'_'+item.photo+'.jpg" style="width:40px;max-height:40px;overflow:hidden;"/></div>' +
                   '<div class="item-inner virtual-inner" onclick="getBusiness('+item.page_id+')">' +
-                     '<div class="item-title-row">'+
+                     //'<div class="item-title-row">'+
                          '<div class="item-title"><img src="http://graph.facebook.com/'+item.page_id+'/picture?width=15&height=15" style="border-radius:50%;max-width:15px;margin-right:10px;"/>Save 10% on Coffee every day of the week</div>' +
-                        '<div class="item-after"><i class="pe-7s-more pe-lg" onclick="openSwipe('+ item.post_id +')"></i></div>'+
-                    '</div>'+
+                        //'<div class="item-after"></div>'+
+                    //'</div>'+
                     '<div class="item-subtitle">'+ item.expiry +'</div>' +
                   '</div>' +
                '</div>'+
                '<div class="swipeout-actions-right">' +
 
-        '<a href="#">Action 1</a>' +
-        '<a href="#">Action 2</a>' +
-        '<a href="#" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;">Action 3</a>' +
+        '<a href="#"><i class="pe-7s-map pe-2x"></i></a>' +
+        '<a href="#"><i class="pe-7s-star pe-2x"></i>/a>' +
+        '<a href="#" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a>' +
       '</div>' +
                '</li>';
     }
@@ -2585,7 +2585,4 @@ $$( '.virtual-content' ).css( 'width', windowsize + 'px');
 	
 }
 
-function openSwipe(post_id){
-	
-	myApp.swipeoutOpen('.s_' + post_id);
-}
+
