@@ -2468,7 +2468,7 @@ var newPageContent =
     '<div class="navbar-inner">'+
         '<div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>'+
         '<div class="center">My Deals</div>'+
-        '<div class="right"><i class="button pe-7s-clock pe-lg link"></i></div>'+
+        '<div class="right"><i class="pe-7s-clock pe-lg link"></i></div>'+
     '</div>'+
 '</div>'+
 '<div class="page" data-page="deal-page">' +
