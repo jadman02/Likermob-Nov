@@ -2489,10 +2489,23 @@ var newPageContent =
                       '</div>';
  
 //Load new content as new page
+
 mainView.router.loadContent(newPageContent);
 var allEntries = JSON.parse(localStorage.getItem("allEntries"));
+for (i = 0; i < allEntries.length; i++) {post_id_list.push("999999"+ allEntries[i].post_id + "999999");}
 var itemlist = [];
-var datetoday = new Date();
+
+var uid = localStorage.getItem("uid");
+var latitude = localStorage.getItem("latitude");
+var longitude = localStorage.getItem("longitude");
+var post_id_list = [];
+
+domain = "getposts";data_send = "pages_list=" + post_id_list + "&user_id=" + uid + "&latitude=" + latitude + "&longitude=" + longitude;}
+$$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', ''+ data_send +'',function(response){
+for (i = 0; i < response.length; i++) {itemlist.push({page_id:response[i][1],post_id:response[i][2],photo:response[i][21]});}
+}); 
+alert(itemlist);
+/*var datetoday = new Date();
 var offset = datetoday.getTimezoneOffset() * 60;
 var month = new Array(12);
 month[0] = "Jan";
@@ -2518,8 +2531,6 @@ day_name[5] = "Friday";
 day_name[6] = "Saturday";
 for (i = 0; i < allEntries.length; i++) {
 	//var lowercase = favEntries[i].name.toLowerCase();
-	
-
 var unix = allEntries[i].expiry + offset;
 var d = new Date(unix);
 var month_name = month[d.getUTCMonth()];
@@ -2533,7 +2544,8 @@ if (minutes < 10) {minutes = minutes + "0"}
 var firstdate = weekday_name + ", " + month_name + " " + day + " " + year ;
 var seconddate = hours + ":" + minutes;  
 var datetime = '<div class="messages-date" style="padding:0;float:left;margin:0;">'+ firstdate +'<span> '+ seconddate +'</span></div>';
-	itemlist.push({page_id:allEntries[i].page_id,post_id:allEntries[i].post_id,expiry:datetime,photo:allEntries[i].photo});}
+itemlist.push({page_id:allEntries[i].page_id,post_id:allEntries[i].post_id,expiry:datetime,photo:allEntries[i].photo});}*/
+
 var myList = myApp.virtualList('.list-block.virtual-list', {
     // Array with items data
     items: itemlist,
