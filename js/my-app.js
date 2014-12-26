@@ -2609,7 +2609,7 @@ var url = 'http://smilesavers.net.au/images/compressed/'+response[0][1]+'_'+resp
      afterText:  '<div class="list-block" style="margin-top:10px;margin-bottom:10px;"><ul><li><div class="item-content"><div class="item-media"><img src="http://graph.facebook.com/'+ uid +'/picture?type=small"></div><div class="item-inner"><div class="item-input"><textarea id="dealbox1" placeholder="What do you think?"></textarea></div></div></div></li></ul</div>',
     buttons: [
       {
-        text: 'Cancel',
+        text: '<i class="pe-7s-close pe-lg"></i>',
         onClick: function() {
           myApp.closeModal();
         }
