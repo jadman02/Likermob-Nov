@@ -2535,7 +2535,7 @@ if (minutes < 10) {minutes = minutes + "0"}
 var firstdate = weekday_name + ", " + month_name + " " + day + " " + year ;
 var seconddate = hours + ":" + minutes;  
 var datetime = '<div class="messages-date" style="padding:0;float:left;margin:0;">'+ firstdate +'<span> '+ seconddate +'</span></div>';
-	itemlist.push({page_id:allEntries[i].page_id,post_id:allEntries[i].post_id,expiry:datetime,photo:allEntries[i].photo});}
+	itemlist.push({page_id:allEntries[i].page_id,post_id:allEntries[i].post_id,title:allEntries[i].title,expiry:datetime,photo:allEntries[i].photo});}
 var myList = myApp.virtualList('.list-block.virtual-list', {
     // Array with items data
     items: itemlist,
@@ -2555,7 +2555,7 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
                   '<div class="item-media" onclick="getBusiness('+item.page_id+')" style="padding:5px;"><img src="http://smilesavers.net.au/images/compressed/'+item.page_id+'_'+item.photo+'.jpg" style="width:40px;max-height:40px;overflow:hidden;"/></div>' +
                   '<div class="item-inner virtual-inner" onclick="getBusiness('+item.page_id+')">' +
                      '<div class="item-title-row">'+
-                         '<div class="item-title"><img src="http://graph.facebook.com/'+item.page_id+'/picture?width=15&height=15" style="border-radius:50%;max-width:15px;margin-right:10px;"/>Save 10% on Coffee every day of the week</div>' +
+                         '<div class="item-title"><img src="http://graph.facebook.com/'+item.page_id+'/picture?width=15&height=15" style="border-radius:50%;max-width:15px;margin-right:10px;"/>'+ item.title +'</div>' +
                         '<div class="item-after"></div>'+
                     '</div>'+
                     '<div class="item-subtitle">'+ item.expiry +'</div>' +
