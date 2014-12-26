@@ -2537,6 +2537,10 @@ var datetime = '<div class="messages-date" style="padding:0;float:left;margin:0;
 var myList = myApp.virtualList('.list-block.virtual-list', {
     // Array with items data
     items: itemlist,
+    height: function (item) {
+        return 200; //item with picture is 100px height
+        
+    },
     searchAll: function (query, items) {
         var foundItems = [];
         for (var i = 0; i < items.length; i++) {
