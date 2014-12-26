@@ -2549,10 +2549,10 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
     // Custom render function to render item's HTML
     renderItem: function (index, item) {
         return '<li class="item-content virtual-content" onclick="getBusiness('+item.page_id+')" style="overflow:hidden;margin-top:-10px;">' +
-                  '<div class="item-media"><img src="http://smilesavers.net.au/images/compressed/'+item.page_id+'_'+item.photo+'.jpg" style="height:50px;width:50px;"/></div>' +
+                  '<div class="item-media"><img src="http://graph.facebook.com/'+item.page_id+'/picture?width=30&height=30" style="border-radius:50%;max-width:30px;margin-right:10px;"/></div>' +
                   '<div class="item-inner virtual-inner">' +
                      '<div class="item-title-row">'+
-                         '<div class="item-title">'+ index +',' + item.page_id + '</div>' +
+                         '<div class="item-title">'+ index +',' + item.page_id + '<img src="http://smilesavers.net.au/images/compressed/'+item.page_id+'_'+item.photo+'.jpg" style="height:50px;width:50px;"/></div>' +
                         '<div class="item-after" onclick="removefavList('+item.page_id+')"><i class="pe-7s-star pe-lg starcon_'+item.page_id+'" style="color:#ffcc00;"></i></div>'+
                     '</div>'+
                     '<div class="item-subtitle">'+ item.photo +'</div>'
