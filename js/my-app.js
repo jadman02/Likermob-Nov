@@ -2470,13 +2470,13 @@ var newPageContent =
     '<div class="navbar-inner">'+
         '<div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>'+
         '<div class="center">My Deals</div>'+
-        '<div class="right"><a href="#" class="button link"><i class="pe-7s-clock pe-lg"></i></a></div>'+
+        '<div class="right"><a href="#" class="button link" style="border:0;"><i class="pe-7s-clock pe-lg"></i></a></div>'+
     '</div>'+
 '</div>'+
 '<div class="page" data-page="deal-page">' +
 '<form class="searchbar" style="margin-top:-10px;" data-search-list=".list-block-search" data-search-in=".item-title" data-searchbar-found=".searchbar-found" data-searchbar-not-found=".searchbar-not-found">'+
         '<div class="searchbar-input">'+
-            '<input type="search" placeholder="Search">'+
+            '<input type="search" placeholder="Search by name or deal">'+
             '<a href="#" class="searchbar-clear"></a>'+
         '</div>'+
         '<a href="#" class="searchbar-cancel">Cancel</a>'+
@@ -2544,7 +2544,7 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
         var foundItems = [];
         for (var i = 0; i < items.length; i++) {
             // Check if title contains query string
-            if (items[i].page_id.indexOf(query.trim()) >= 0) foundItems.push(i);
+            if (items[i].name.indexOf(query.trim()) >= 0 || items[i].title.indexOf(query.trim()) >= 0 || items[i].lowercased.indexOf(query.trim()) >= 0) foundItems.push(i);
         }
         // Return array with indexes of matched items
         return foundItems; 
