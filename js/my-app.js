@@ -2615,6 +2615,11 @@ var url = 'http://smilesavers.net.au/images/compressed/'+response[0][1]+'_'+resp
         }
       },
       {
+        text: '<i class="pe-7s-map pe-2x"></i>',
+        onClick: function() {
+        }
+      },
+      {
         text: 'Share',
         onClick: function() {
           var value = $$("#dealbox1").val();
