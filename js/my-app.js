@@ -2600,7 +2600,7 @@ $$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', ''+ data
 var page_id = response[0][1];var photo = response[0][21]; var title = response[0][3];
 });	
 myApp.modal({
-    title: 'Share on Facebook',
+    title: title,
     text: '<div class="content-block" style="padding:0;margin:0;max-height:200px;overflow: scroll;overflow-x:hidden;"><div class="content-block-inner" style="background-color:transparent;">ajkdaskjbsajkdbsakj dbsa kjdb sajk dbsajk dbsajkdbsajkdbs ajkd bsajkdbsajkdbsaj kdasbdkjasbd jsdbasjdb asjdbasjd bsajkdbasjkdba skjdba sk jdb asjkdbasjkdba sj kdbasjkd bsa<br/><img style="margin-top:10px;width:50%;" src="http://www.smilesavers.net.au/images/cover.png"/></div></div>',
      afterText:  '',
     buttons: [
@@ -2612,17 +2612,17 @@ myApp.modal({
       },
       {
         text: '<i class="pe-7s-map pe-lg"></i>',
-        onClick: function() {
+        onClick: function() {alert('yo');
         }
       },
       {
         text: '<i class="pe-7s-star pe-lg"></i>',
-        onClick: function() {
+        onClick: function() {alert('yo');
         }
       },
       {
         text: '<i class="pe-7s-more pe-lg"></i>',
-        onClick: function() {
+        onClick: function() {alert('yo');
         	loadMore(page_id,url,title,uid,post_id);
         }
       },
