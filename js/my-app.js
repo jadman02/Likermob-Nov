@@ -2596,29 +2596,23 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
 function dealmodalInfo(){
 	
 	myApp.modal({
-    title:  'Modal with 3 buttons',
-    text: 'Vivamus feugiat diam velit. Maecenas aliquet egestas lacus, eget pretium massa mattis non. Donec volutpat euismod nisl in posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae',
+    title: 'Share on Facebook',
+    text: '<div class="content-block" style="padding:0;margin:0;max-height:200px;overflow: scroll;overflow-x:hidden;"><div class="content-block-inner" style="background-color:transparent;">' + title + ' ajkdaskjbsajkdbsakj dbsa kjdb sajk dbsajk dbsajkdbsajkdbs ajkd bsajkdbsajkdbsaj kdasbdkjasbd jsdbasjdb asjdbasjd bsajkdbasjkdba skjdba sk jdb asjkdbasjkdba sj kdbasjkd bsa<br/><img style="margin-top:10px;width:50%;" src="'+ url +'"/></div></div>',
      afterText:  '<div class="list-block" style="margin-top:10px;margin-bottom:10px;"><ul><li><div class="item-content"><div class="item-media"><img src="http://graph.facebook.com/'+ uid +'/picture?type=small"></div><div class="item-inner"><div class="item-input"><textarea id="dealbox" placeholder="What do you think?"></textarea></div></div></div></li></ul</div>',
     buttons: [
       {
-        text: 'B1',
+        text: 'Cancel',
         onClick: function() {
-          myApp.alert('You clicked first button!')
+          myApp.closeModal();
         }
       },
       {
-        text: 'B2',
+        text: 'Share',
         onClick: function() {
-          myApp.alert('You clicked second button!')
-        }
-      },
-      {
-        text: 'B3',
-        bold: true,
-        onClick: function() {
-          myApp.alert('You clicked third button!')
+          var value = $$("#dealbox").val();
+          share(value,page_id,url,title);
         }
       },
     ]
-  })
+  });
 }
