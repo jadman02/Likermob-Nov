@@ -2493,7 +2493,20 @@ var newPageContent =
  
 //Load new content as new page
 mainView.router.loadContent(newPageContent);
-var allEntries = JSON.parse(localStorage.getItem("allEntries"));
+
+virtualList();
+
+var innersize = $$(window).width() - 50;
+var windowsize = $$(window).width();
+$$( '.virtual-inner' ).css( 'width', innersize+'px');
+$$( '.virtual-list ul' ).css( 'border', '0');
+$$( '.virtual-content' ).css( 'width', windowsize + 'px');
+
+}
+
+function virtualList() {
+	
+	var allEntries = JSON.parse(localStorage.getItem("allEntries"));
 var itemlist = [];
 var datetoday = new Date();
 var offset = datetoday.getTimezoneOffset() * 60;
@@ -2528,9 +2541,8 @@ var d = new Date(unix);
 var month_name = month[d.getUTCMonth()];
 var weekday_name = day_name[d.getUTCDay()];
 var day = d.getUTCDate();
-var year = d.getUTCFullYear();
 
-var firstdate = weekday_name + ", " + month_name + " " + day + " " + year ;
+var firstdate = weekday_name + ", " + month_name + " " + day ;
 var datetime = '<div class="messages-date" style="padding:0;float:left;margin:0;"><i class="pe-7s-clock"></i> Expires '+ firstdate +'</div>';
 	itemlist.push({page_id:allEntries[i].page_id,post_id:allEntries[i].post_id,lowercased:lowercase,name:allEntries[i].name,title:allEntries[i].title,expiry:datetime,photo:allEntries[i].photo});}
 var myList = myApp.virtualList('.list-block.virtual-list', {
@@ -2569,20 +2581,5 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
                '</li>';
     }
 });  
-var innersize = $$(window).width() - 50;
-var windowsize = $$(window).width();
-$$( '.virtual-inner' ).css( 'width', innersize+'px');
-$$( '.virtual-list ul' ).css( 'border', '0');
-$$( '.virtual-content' ).css( 'width', windowsize + 'px');
-
-
-
-
-
-
-
-
-	
 }
-
 
