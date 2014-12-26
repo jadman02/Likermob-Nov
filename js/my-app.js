@@ -2612,7 +2612,7 @@ var url = 'http://smilesavers.net.au/images/compressed/'+response[0][1]+'_'+resp
 
 	
 	myApp.modal({
-    title: title,
+    title: '<img src="http://graph.facebook.com/'+item.page_id+'/picture?width=15&height=15" style="float:left;border-radius:50%;max-width:15px;margin-right:10px;"/><i class="pe-7s-star pe-lg" style="float:right"></i>',
     text: '<div class="content-block modal-block" style="padding:0;margin:0;max-height:300px;overflow: scroll;overflow-x:hidden;"><div class="content-block-inner" style="background-color:transparent;">' + title + ' ajkdaskjbsajkdbsakj dbsa kjdb sajk dbsajk dbsajkdbsajkdbs ajkd bsajkdbsajkdbsaj kdasbdkjasbd jsdbasjdb asjdbasjd bsajkdbasjkdba skjdba sk jdb asjkdbasjkdba sj kdbasjkd bsa<div class="list-block" style="margin-top:10px;margin-bottom:10px;"><ul><li><div class="item-content"><div class="item-media"><img src="http://graph.facebook.com/'+ uid +'/picture?type=small"></div><div class="item-inner"><div class="item-input"><textarea id="dealbox1" placeholder="What do you think?"></textarea></div></div></div></li></ul</div></div></div>',
      
     buttons: [
@@ -2624,11 +2624,6 @@ var url = 'http://smilesavers.net.au/images/compressed/'+response[0][1]+'_'+resp
       },
       {
         text: '<i class="pe-7s-map pe-lg"></i>',
-        onClick: function() {
-        }
-      },
-      {
-        text: '<i class="pe-7s-star pe-lg"></i>',
         onClick: function() {
         }
       },
