@@ -297,7 +297,7 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 
 '<div style="height:40px;background-color:hsla(0, 0%, 0%, 0.7);">'+
 '<div style="float:left;font-size:14px;margin-left:10px;margin-top:10px;"><i class="pe-7s-like2 pe-lg" style="margin-right:2px;color:#3b5998;"></i><span style="color:#ccc;">'+ response[i][17] + '</span><i class="pe-7s-like2 pe-lg pe-rotate-180" style="color:#ff8000;margin-left:5px;margin-right:2px;"></i><span style="color:#ccc;">'+ response[i][18] + '</span></div>'+
-'<a href="#" onclick="loadMore(\''+ response[i][1]  +'\',\''+ homecontentimage  +'\',\''+ response[i][3]  +'\',\''+ uid +'\',\''+ response[i][1]  +'\');" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-more pe-2x" style="margin-left:-5px;margin-top:5px;"></i></a>'+
+'<a href="#" onclick="loadMore(\''+ response[i][1]  +'\',\''+ homecontentimage  +'\',\''+ response[i][3]  +'\',\''+ uid +'\',\''+ response[i][2]  +'\');" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-more pe-2x" style="margin-left:-5px;margin-top:5px;"></i></a>'+
 staryellow +
 starblue +
 '<div id="starinsert"></div><a href="#" id="mapicon" onclick="getBusiness(\''+ response[i][1]  +'\');" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-map pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a>'+
@@ -2595,30 +2595,41 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
 
 function removelikelList(post_id){
 
+
+var uid = localStorage.getItem("uid");
+domain = "getdeal";data_send = "post_id=" + post_id;
+$$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', ''+ data_send +'',function(response){
+var page_id = response[0][1];var title = response[0][3];
+var homecontentimage = 'http://smilesavers.net.au/images/compressed/'+response[0][1]+'_'+response[0][21]+'.jpg';
+});	
 myApp.modal({
-    title:  'Modal with 3 buttons',
-    text: 'Vivamus feugiat diam velit. Maecenas aliquet egestas lacus, eget pretium massa mattis non. Donec volutpat euismod nisl in posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae',
+    title: title,
+    text: '<div class="content-block" style="padding:0;margin:0;max-height:200px;overflow: scroll;overflow-x:hidden;"><div class="content-block-inner" style="background-color:transparent;">ajkdaskjbsajkdbsakj dbsa kjdb sajk dbsajk dbsajkdbsajkdbs ajkd bsajkdbsajkdbsaj kdasbdkjasbd jsdbasjdb asjdbasjd bsajkdbasjkdba skjdba sk jdb asjkdbasjkdba sj kdbasjkd bsa<br/><img style="margin-top:10px;width:50%;" src="http://www.smilesavers.net.au/images/cover.png"/></div></div>',
+     afterText:  '',
     buttons: [
       {
-        text: 'B1',
+        text: '<i class="pe-7s-close pe-lg"></i>'
+      },
+            {
+        text: '<i class="pe-7s-star pe-lg"></i>',
+        close: false,
         onClick: function() {
-          myApp.alert('You clicked first button!')
+          myApp.closeModal();
         }
       },
       {
-        text: 'B2',
-        onClick: function() {
-          myApp.alert('You clicked second button!')
+        text: '<i class="pe-7s-map pe-lg"></i>',
+        onClick: function() {alert('yo');
         }
       },
       {
-        text: 'B3',
-        bold: true,
+        text: '<i class="pe-7s-more pe-lg"></i>',
+        close: false,
         onClick: function() {
-          myApp.alert('You clicked third button!')
+        	loadMore(\''+ page_id  +'\',\''+ homecontentimage  +'\',\''+ title  +'\',\''+ uid +'\',\''+ post_id  +'\');
         }
       },
     ]
-  })
+  });
 
 }
