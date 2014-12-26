@@ -2492,6 +2492,19 @@ var newPageContent =
 mainView.router.loadContent(newPageContent);
 var allEntries = JSON.parse(localStorage.getItem("allEntries"));
 var itemlist = [];
+var domain = "getposts";
+var uid = localStorage.getItem("uid");
+var latitude = localStorage.getItem("latitude");
+var longitude = localStorage.getItem("longitude");
+var post_id_list = [];
+var existingEntries = JSON.parse(localStorage.getItem("allEntries"));
+for (i = 0; i < existingEntries.length; i++) {post_id_list.push("999999"+ existingEntries[i].post_id + "999999");}
+var data_send = "pages_list=" + post_id_list + "&user_id=" + uid + "&latitude=" + latitude + "&longitude=" + longitude;
+$$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', ''+ data_send +'',function(response){
+itemlist.push({page_id:response[i][1],post_id:response[i][2],photo:response[i][21]});
+});
+
+/*
 var datetoday = new Date();
 var offset = datetoday.getTimezoneOffset() * 60;
 var month = new Array(12);
@@ -2533,7 +2546,7 @@ if (minutes < 10) {minutes = minutes + "0"}
 var firstdate = weekday_name + ", " + month_name + " " + day + " " + year ;
 var seconddate = hours + ":" + minutes;  
 var datetime = '<div class="messages-date" style="padding:0;float:left;margin:0;">'+ firstdate +'<span> '+ seconddate +'</span></div>';
-	itemlist.push({page_id:allEntries[i].page_id,post_id:allEntries[i].post_id,expiry:datetime,photo:allEntries[i].photo});}
+	itemlist.push({page_id:allEntries[i].page_id,post_id:allEntries[i].post_id,expiry:datetime,photo:allEntries[i].photo});}*/
 var myList = myApp.virtualList('.list-block.virtual-list', {
     // Array with items data
     items: itemlist,
