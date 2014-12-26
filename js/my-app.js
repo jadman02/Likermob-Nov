@@ -738,11 +738,12 @@ var d = new Date();
         "post_id": post_id,
         "page_id": page_id,
         "photo": photo,
-        "expiry": timestamp
+        "expiry": timestamp,
+        "title":title
     };
     localStorage.setItem("entry", JSON.stringify(entry));
     // Save allEntries back to local storage
-    existingEntries.push(entry);
+    existingEntries.unshift(entry);
     localStorage.setItem("allEntries", JSON.stringify(existingEntries));
   //alert(localStorage.getItem("allEntries"));	
 }
@@ -2556,7 +2557,7 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
                   '<div class="item-media"><img src="http://smilesavers.net.au/images/compressed/'+item.page_id+'_'+item.photo+'.jpg" style="width:50px;max-height:50px;overflow:hidden;"/></div>' +
                   '<div class="item-inner virtual-inner">' +
                      '<div class="item-title-row">'+
-                         '<div class="item-title">Save 10% on Coffee</div>' +
+                         '<div class="item-title">Save 10% on Coffee every day of the week</div>' +
                         '<div class="item-after"><img src="http://graph.facebook.com/'+item.page_id+'/picture?width=30&height=30" style="border-radius:50%;max-width:30px;margin-right:10px;"/></div>'+
                     '</div>'+
                     '<div class="item-subtitle">Expires in 6 days</div>' +
