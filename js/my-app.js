@@ -2626,7 +2626,7 @@ myApp.modal({
         text: '<i class="pe-7s-more pe-lg"></i>',
         close: false,
         onClick: function() {
-        	loadMore(\''+ page_id  +'\',\''+ homecontentimage  +'\',\''+ title  +'\',\''+ uid +'\',\''+ post_id  +'\');
+        	alert(homecontentimage); 
         }
       },
     ]
