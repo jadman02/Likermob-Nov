@@ -2550,13 +2550,13 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
     // Custom render function to render item's HTML
     renderItem: function (index, item) {
         return '<li class="item-content virtual-content swipeout" onclick="getBusiness('+item.page_id+')" style="height:50px;">' +
-                  '<div class="item-media"><img src="http://smilesavers.net.au/images/compressed/'+item.page_id+'_'+item.photo+'.jpg" style="width:50px;max-height:50px;overflow:hidden;"/></div>' +
+                  '<div class="item-media" style="padding:5px;"><img src="http://smilesavers.net.au/images/compressed/'+item.page_id+'_'+item.photo+'.jpg" style="width:40px;max-height:40px;overflow:hidden;"/></div>' +
                   '<div class="item-inner virtual-inner">' +
                      '<div class="item-title-row">'+
                          '<div class="item-title">Save 10% on Coffee every day of the week</div>' +
                         '<div class="item-after"><img src="http://graph.facebook.com/'+item.page_id+'/picture?width=30&height=30" style="border-radius:50%;max-width:30px;margin-right:10px;"/></div>'+
                     '</div>'+
-                    '<div class="item-subtitle">Expires in 6 days</div>' +
+                    '<div class="item-subtitle">'+ item.expiry +'</div>' +
                   '</div>' +
                '<div class="swipeout-actions-right">' +
 
