@@ -2485,7 +2485,7 @@ var newPageContent =
                         '<div class="content-block searchbar-not-found">'+
       '<div class="content-block-inner">Nothing found</div>'+
     '</div>'+
-'<div class="list-block virtual-list list-block-search searchbar-found media-list" style="margin-top:0px;"></div>'+
+'<div class="list-block virtual-list list-block-search searchbar-found media-list" style="margin-top:-10px;"></div>'+
                         '</div>' +
                       '</div>';
  
@@ -2564,7 +2564,7 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
 
         '<a href="#">Action 1</a>' +
         '<a href="#">Action 2</a>' +
-        '<a href="#" class="swipeout-delete swipeout-overswipe">Action 3</a>' +
+        '<a href="#" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;">Action 3</a>' +
       '</div>' +
                '</li>';
     }
