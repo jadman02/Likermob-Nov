@@ -2553,7 +2553,7 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
                   '<div class="item-media" style="padding:5px;"><img src="http://smilesavers.net.au/images/compressed/'+item.page_id+'_'+item.photo+'.jpg" style="width:40px;max-height:40px;overflow:hidden;"/></div>' +
                   '<div class="item-inner virtual-inner">' +
                      '<div class="item-title-row">'+
-                         '<div class="item-title"><img src="http://graph.facebook.com/'+item.page_id+'/picture?width=20&height=20" style="border-radius:50%;max-width:20px;margin-right:10px;"/>Save 10% on Coffee every day of the week</div>' +
+                         '<div class="item-title"><img src="http://graph.facebook.com/'+item.page_id+'/picture?width=15&height=15" style="border-radius:50%;max-width:15px;margin-right:10px;"/>Save 10% on Coffee every day of the week</div>' +
                         '<div class="item-after"></div>'+
                     '</div>'+
                     '<div class="item-subtitle">'+ item.expiry +'</div>' +
@@ -2562,7 +2562,6 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
 
         '<a href="#">Action 1</a>' +
         '<a href="#">Action 2</a>' +
-        '<a href="#">Action 3</a>' +
       '</div>' +
                '</li>';
     }
