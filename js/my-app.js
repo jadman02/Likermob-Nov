@@ -2613,7 +2613,7 @@ var url = 'http://smilesavers.net.au/images/compressed/'+response[0][1]+'_'+resp
 	
 	myApp.modal({
     title: '',
-    text: '<div class="list-block"><ul><li><div class="item-content"><div class="content-block"><div class="content-block-inner" style="background-color:transparent;"><span style="font-weight:500;">' + title + '</span> <br/><img style="margin-top:10px;width:100%;" src="'+ url +'"/></div></div></div></li></ul></div> ',
+    text: '<div class="list-block"><ul><li><div class="item-content"><div class="content-block"><div class="content-block-inner" style="background-color:transparent;"><span style="font-weight:500;">' + title + '</span> adsasasdasd adsasas dasdadsasasdasdads asasdasdadsasasdasdadsasasdasd  adsasasdasd adsasasdasd adsasasdasdadsasasdasdadsasa sdasdadsasasdasd<br/><img style="margin-top:10px;width:100%;" src="'+ url +'"/></div></div></div></li></ul></div> ',
      afterText:  '',
     buttons: [
       {
