@@ -2595,5 +2595,41 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
 
 function removelikelList(post_id){
 	
-alert('yo');
+myApp.modal({
+    title:  'Modal with 3 buttons',
+    text: 'Vivamus feugiat diam velit. Maecenas aliquet egestas lacus, eget pretium massa mattis non. Donec volutpat euismod nisl in posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae',
+    buttons: [
+      {
+        text: '<i class="pe-7s-map pe-2x"></i>',
+        onClick: function() {
+          myApp.alert('You clicked first button!')
+        }
+      },
+      {
+        text: '<i class="pe-7s-star pe-2x"></i>',
+        onClick: function() {
+          myApp.alert('You clicked first button!')
+        }
+      },
+      {
+        text: '<i class="pe-7s-like2 pe-2x pe-rotate-180"></i>',
+        onClick: function() {
+          myApp.alert('You clicked second button!')
+        }
+      },
+         {
+        text: '<i class="pe-7s-more pe-2x"></i>',
+        onClick: function() {
+          myApp.alert('You clicked first button!')
+        }
+      },
+      {
+        text: 'B3',
+        bold: true,
+        onClick: function() {
+          myApp.alert('You clicked third button!')
+        }
+      },
+    ]
+  })
 }
