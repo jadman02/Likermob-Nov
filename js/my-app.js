@@ -2470,7 +2470,7 @@ var newPageContent =
     '<div class="navbar-inner">'+
         '<div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>'+
         '<div class="center">My Deals</div>'+
-        '<div class="right"><i class="pe-7s-clock pe-lg link"></i><i class="pe-7s-like2 pe-lg link"></i></div>'+
+        '<div class="right"><a href="#" class="button link"><i class="pe-7s-clock pe-lg"></i></a></div>'+
     '</div>'+
 '</div>'+
 '<div class="page" data-page="deal-page">' +
@@ -2535,7 +2535,7 @@ if (minutes < 10) {minutes = minutes + "0"}
 
 var firstdate = weekday_name + ", " + month_name + " " + day + " " + year ;
 var seconddate = hours + ":" + minutes;  
-var datetime = '<div class="messages-date" style="padding:0;float:left;margin:0;"><i class="pe-7s-clock"></i> '+ firstdate +'<span> '+ seconddate +'</span></div>';
+var datetime = '<div class="messages-date" style="padding:0;float:left;margin:0;"><i class="pe-7s-clock"></i> Expires '+ firstdate +'<span> '+ seconddate +'</span></div>';
 	itemlist.push({page_id:allEntries[i].page_id,post_id:allEntries[i].post_id,lowercased:lowercase,name:allEntries[i].name,title:allEntries[i].title,expiry:datetime,photo:allEntries[i].photo});}
 var myList = myApp.virtualList('.list-block.virtual-list', {
     // Array with items data
