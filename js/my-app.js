@@ -744,7 +744,7 @@ var d = new Date();
     // Save allEntries back to local storage
     existingEntries.push(entry);
     localStorage.setItem("allEntries", JSON.stringify(existingEntries));
-  alert(localStorage.getItem("allEntries"));	
+  //alert(localStorage.getItem("allEntries"));	
 }
 
 function favList(page_id,post_id,name) {
