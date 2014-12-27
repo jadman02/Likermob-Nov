@@ -1103,7 +1103,7 @@ $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(res
                   '</div>' +
                '</div>'+
 
-               '<div class="swipeout-actions-right right_'+ res[i][2]  +' hide">' +
+               '<div class="swipeout-actions-right right_'+ res[i][2]  +'" style="display:none;">' +
         '<a href="#" onclick="removelikelList(\''+ res[i][2]  +'\',\''+ res[i][1]  +'\',\''+ res[i][21]  +'\',\''+ res[i][16]  +'\')"><i class="pe-7s-plus pe-2x"></i></a>' +
         '<a href="#" onclick="removelikeList(\''+ res[i][2]  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a>' +
       '</div>' +
@@ -1114,9 +1114,9 @@ $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(res
 
                '</li>');
 
-      for (j = 0; j < allEntries.length; j++) {        
-if (allEntries[j].post_id == res[i][2]){alert('you like this');$$( '.right_'+ res[i][2] ).removeClass( 'hide' );$$( '.left_'+ res[i][2] ).addClass( 'hide' );$$( '.angle_'+ res[i][2] ).addClass( 'hide' );}
-}
+//      for (j = 0; j < allEntries.length; j++) {        
+//if (allEntries[j].post_id == res[i][2]){alert('you like this');$$( '.right_'+ res[i][2] ).removeClass( 'hide' );$$( '.left_'+ res[i][2] ).addClass( 'hide' );$$( '.angle_'+ res[i][2] ).addClass( 'hide' );}
+//}
     	
     }
 
