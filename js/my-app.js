@@ -2642,6 +2642,7 @@ var img = new Image();
 	var height_image = ((img.height/img.width) * 270);
 
      $$( '.modal_inner' ).css( 'padding-top', height_image + 'px' );
+     }
 
 });	
 	
