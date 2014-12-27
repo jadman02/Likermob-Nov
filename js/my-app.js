@@ -1104,8 +1104,7 @@ $$( '#deals-here' ).append( '<li class="virtual-content swipeout" style="border-
                     '<div "class="item-text"">'+ res[i][6] +'</div>' +
                   '</div>' +
                '</div>'+
-
-               '<div class="swipeout-actions-right sar_'+res[i][2]+'">' +
+               '<div class="swipeout-actions-right">' +
         '<a href="#" onclick="removelikelList(\''+ res[i][2]  +'\',\''+ res[i][1]  +'\',\''+ res[i][21]  +'\',\''+ res[i][16]  +'\')"><i class="pe-7s-plus pe-2x"></i></a>' +
         '<a href="#" onclick="removelikeList(\''+ res[i][2]  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a>' +
       '</div>' +
@@ -1125,8 +1124,7 @@ $$( '#deals-here' ).append( '<li class="virtual-content swipeout" style="border-
                     '<div "class="item-text"">'+ res[i][6] +'</div>' +
                   '</div>' +
                '</div>'+
-      
-                    '<div class="swipeout-actions-left sal_'+res[i][2]+'">' +
+                    '<div class="swipeout-actions-left">' +
         '<a href="#" onclick="removelikeList(\''+ res[i][2]  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#3b5998;"><i class="pe-7s-like2 pe-2x"></i></a>' +
         '<a href="#" onclick="removelikelList(\''+ res[i][2]  +'\',\''+ res[i][1]  +'\',\''+ res[i][21]  +'\',\''+ res[i][16]  +'\')"><i class="pe-7s-plus pe-2x"></i></a>' +
       '</div>' +
