@@ -2613,19 +2613,20 @@ var url = 'http://smilesavers.net.au/images/compressed/'+response[0][1]+'_'+resp
 
 	
 	myApp.modal({
-    title: '<img src="http://graph.facebook.com/'+page_id+'/picture?width=30&height=30" style="border-radius:50%;max-width:30px;"/>',
+    title: '<img src="http://graph.facebook.com/'+page_id+'/picture?width=30&height=30" style="border-radius:50%;max-width:30px;"/><div class="messages-date" style="clear:both;margin:0;padding:0;"><span>Smilesavers</span></div>',
      text: '<div class="content-block modal-block" style="padding:0;margin:0;max-height:300px;overflow: scroll;overflow-x:hidden;"><div class="content-block-inner" style="background-color:transparent;"><div class="modal_inner" style="background-color:hsla(0, 0%, 100%, 0.8);">'+
      '<div class="messages-date">Sunday, Feb 3 <span>11:58</span></div>'+ 
 '<div class="row">'+
-        '<div class="messages-date" style="float:left;margin:0;padding:0;"><span>Smilesavers</span></div><div style="background-color:#e5e5ea;padding:10px;padding-bottom:30px;border-radius:10px;margin-top:20px;"><div id="dealtitle" style="float:left;font-weight:500;">'+ title + ' fklasjdl ksadjskld jsakldjs akld the best in the world</div><br/><div style="clear:both;">'+description+'</div><div style="float:left;font-size:14px;clear:both;"><i class="pe-7s-clock pe-lg"></i> Expires in 6 days</div></div>'+
+        '<div class="messages-date" style="float:left;margin:0;padding:0;"><span>Deal</span></div><div style="background-color:#e5e5ea;padding:10px;padding-bottom:30px;border-radius:10px;margin:10px;"><div id="dealtitle" style="float:left;font-weight:500;">'+ title + ' fklasjdl ksadjskld jsakldjs akld the best in the world</div><br/><div style="clear:both;">'+description+'</div><div style="float:left;font-size:14px;clear:both;"><i class="pe-7s-clock pe-lg"></i> Expires in 6 days</div></div>'+
 '</div>'+
 '<div class="row">'+
         '<div class="messages-date" style="float:left;margin:0;padding:0;"><span>Terms</span></div><div style="background-color:#e5e5ea;padding:10px;padding-bottom:30px;border-radius:10px;margin-top:20px;"><div id="dealtitle" style="float:left;font-weight:500;">'+ terms + ' fklasjdl ksadjskld jsakldjs akld the best in the world</div></div>'+
 '</div>'+
      '<div class="row">'+
-        '<div class="col-20"><img src="http://graph.facebook.com/'+ uid +'/picture?type=small"></div>'+
-        '<div class="col-80"><div class="messages-date" style="float:left;margin:0;padding:0;"><span>Share</span></div>div class="item-input"><textarea id="dealbox1" placeholder="What do you think?"></textarea><a href="#" class="button">Share</a></div></div></div></li></ul</div></div>'+
+        '<div class="messages-date" style="float:left;margin:0;padding:0;"><span>Share</span></div><div style="background-color:#e5e5ea;padding:10px;padding-bottom:30px;border-radius:10px;margin-top:20px;"><div class="list-block" style="margin-top:10px;margin-bottom:10px;"><ul><li><div class="item-content"><div class="item-media"><img src="http://graph.facebook.com/'+ uid +'/picture?type=small"></div><div class="item-inner"><div class="item-input"><textarea id="dealbox1" placeholder="What do you think?"></textarea><a href="#" class="button" onclick="$$(\"#dealbox1\").val();share(value,page_id,url,title);">Share</a></div></div></div></li></ul</div></div>'+
 '</div>'+
+     
+     
      '</div></div></div>',
     buttons: [
       {
