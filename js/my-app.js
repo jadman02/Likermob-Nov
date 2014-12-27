@@ -1051,6 +1051,7 @@ mainView.loadContent(
         '    <div class="page-content cover-business" style="z-index: 1;margin-top:30px;">' +
         '      <div class="content-block" style="padding-top:40px;">' +
         '        <div class="content-block-inner" style="background-color:rgba(255,255,255,.4);"">' +
+	      '<div class="list-block media-list"><ul><div id="info-here"></div></ul></div>' +
 	        '<div class="content-block-title">Current Deals</div>'+
 	'<div class="list-block media-list"><ul><div id="deals-here"></div></ul></div>' +
 
@@ -1066,7 +1067,7 @@ mainView.loadContent(
 $$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=' + page_id, function(res){
 
 
-
+$$( '#info-here' ).append('<li><a href="#" class="item-content"><div class="item-media"><img src="http://graph.facebook.com/'+ page_id +'/picture?width=50&height=50" style="border-radius:50%;margin-right:10px;"/></div><div class="item-inner"><div class="item-title-row"><div class="item-title">'+ res[0][1] +'</div></div><div class="item-subtitle">'+ res[0][6] + ' ' + res[0][7] + ' ' +  res[0][8] + '</div><div class="item-text">'+ res[0][9] + ' ' + res[0][10] + ' ' + res[0][11]+'</div></div></a></li>');
 
 
 
@@ -1096,16 +1097,16 @@ $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(res
                   '<div class="item-inner virtual-inner" onclick="removelikelList(\''+ res[i][2]  +'\',\''+ res[i][1] +'\',\''+ res[i][21]  +'\',\''+ res[i][16]  +'\')">' +
                      '<div class="item-title-row">'+
                          '<div class="item-title"><img src="http://graph.facebook.com/'+res[i][1]+'/picture?width=15&height=15" style="border-radius:50%;max-width:15px;margin-right:10px;"/>'+ res[i][3] +'</div>' +
-                        '<div class="item-after"><i class="pe-7s-angle-left pe-lg" style="color:#ff8000;"></i></div>'+
+                        '<div class="item-after"><i class="pe-7s-angle-left pe-lg" style="color:#3b5998;"></i></div>'+
                     '</div>'+
                     '<div class="item-subtitle">'+ res[i][16] +'</div>' +
                     '<div "class="item-text"">'+ res[i][6] +'</div>' +
                   '</div>' +
                '</div>'+
 
-               '<div class="swipeout-actions-right right_'+ res[i][2]  +'">' +
+ '<div class="swipeout-actions-left left_'+ res[i][2]  +'">' +
+        '<a href="#" onclick="removelikeList(\''+ res[i][2]  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#3b5998;"><i class="pe-7s-like2 pe-2x"></i></a>' +
         '<a href="#" onclick="removelikelList(\''+ res[i][2]  +'\',\''+ res[i][1]  +'\',\''+ res[i][21]  +'\',\''+ res[i][16]  +'\')"><i class="pe-7s-plus pe-2x"></i></a>' +
-        '<a href="#" onclick="removelikeList(\''+ res[i][2]  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a>' +
       '</div>' +
 
 
@@ -1120,16 +1121,17 @@ if (allEntries[j].post_id == res[i][2]){
                   '<div class="item-inner virtual-inner" onclick="removelikelList(\''+ res[i][2]  +'\',\''+ res[i][1] +'\',\''+ res[i][21]  +'\',\''+ res[i][16]  +'\')">' +
                      '<div class="item-title-row">'+
                          '<div class="item-title"><img src="http://graph.facebook.com/'+res[i][1]+'/picture?width=15&height=15" style="border-radius:50%;max-width:15px;margin-right:10px;"/>'+ res[i][3] +'</div>' +
-                        '<div class="item-after"><i class="pe-7s-angle-right pe-lg" style="color:#3b5998;"></i></div>'+
+                        '<div class="item-after"><i class="pe-7s-angle-right pe-lg" style="color:#ff8000;"></i></div>'+
                     '</div>'+
                     '<div class="item-subtitle">'+ res[i][16] +'</div>' +
                     '<div "class="item-text"">'+ res[i][6] +'</div>' +
                   '</div>' +
                '</div>'+
-                                         '<div class="swipeout-actions-left left_'+ res[i][2]  +'">' +
-        '<a href="#" onclick="removelikeList(\''+ res[i][2]  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#3b5998;"><i class="pe-7s-like2 pe-2x"></i></a>' +
+                           '<div class="swipeout-actions-right right_'+ res[i][2]  +'">' +
         '<a href="#" onclick="removelikelList(\''+ res[i][2]  +'\',\''+ res[i][1]  +'\',\''+ res[i][21]  +'\',\''+ res[i][16]  +'\')"><i class="pe-7s-plus pe-2x"></i></a>' +
+        '<a href="#" onclick="removelikeList(\''+ res[i][2]  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a>' +
       '</div>' +
+                                        
                
 
                '</li>');	
