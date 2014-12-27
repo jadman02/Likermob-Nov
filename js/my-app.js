@@ -1090,7 +1090,7 @@ $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(res
     for (i = 1; i < res.length; i++) {
 
  
-    		$$( '#deals-here' ).append( '<li class="virtual-content swipeout hide" style="border-right:3px solid #ff8000;margin-top:5px;margin-bottom:5px;">' +
+    		$$( '#deals-here' ).append( '<li class="virtual-content swipeout virtual_'+ res[i][2]  +'" style="border-right:3px solid #ff8000;margin-top:5px;margin-bottom:5px;">' +
                   '<div class="swipeout-content item-content">'+
                   '<div class="item-media" onclick="removelikelList(\''+ res[i][2]  +'\',\''+ res[i][1]  +'\',\''+ res[i][21]  +'\',\''+ res[i][16]  +'\')" style="padding:5px;"><img src="http://smilesavers.net.au/images/compressed/'+res[i][1]+'_'+res[i][21]+'.jpg" style="width:40px;max-height:40px;overflow:hidden;"/></div>' +
                   '<div class="item-inner virtual-inner" onclick="removelikelList(\''+ res[i][2]  +'\',\''+ res[i][1] +'\',\''+ res[i][21]  +'\',\''+ res[i][16]  +'\')">' +
@@ -1103,32 +1103,35 @@ $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(res
                   '</div>' +
                '</div>'+
 
-
-                          '<div class="swipeout-actions-left left_'+ res[i][2]  +'">' +
-        '<a href="#" onclick="removelikeList(\''+ res[i][2]  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#3b5998;"><i class="pe-7s-like2 pe-2x"></i></a>' +
+               '<div class="swipeout-actions-right right_'+ res[i][2]  +'">' +
         '<a href="#" onclick="removelikelList(\''+ res[i][2]  +'\',\''+ res[i][1]  +'\',\''+ res[i][21]  +'\',\''+ res[i][16]  +'\')"><i class="pe-7s-plus pe-2x"></i></a>' +
+        '<a href="#" onclick="removelikeList(\''+ res[i][2]  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a>' +
       '</div>' +
+
 
                '</li>');
 
 for (j = 0; j < allEntries.length; j++) {        
 if (allEntries[j].post_id == res[i][2]){
+	$$('.virtual_'+ res[i][2] ).addClass( 'hide' );
 		$$( '#deals-here' ).append( '<li class="virtual-content swipeout" style="border-left:3px solid #3b5998;margin-top:5px;margin-bottom:5px;">' +
                   '<div class="swipeout-content item-content">'+
                   '<div class="item-media" onclick="removelikelList(\''+ res[i][2]  +'\',\''+ res[i][1]  +'\',\''+ res[i][21]  +'\',\''+ res[i][16]  +'\')" style="padding:5px;"><img src="http://smilesavers.net.au/images/compressed/'+res[i][1]+'_'+res[i][21]+'.jpg" style="width:40px;max-height:40px;overflow:hidden;"/></div>' +
                   '<div class="item-inner virtual-inner" onclick="removelikelList(\''+ res[i][2]  +'\',\''+ res[i][1] +'\',\''+ res[i][21]  +'\',\''+ res[i][16]  +'\')">' +
                      '<div class="item-title-row">'+
                          '<div class="item-title"><img src="http://graph.facebook.com/'+res[i][1]+'/picture?width=15&height=15" style="border-radius:50%;max-width:15px;margin-right:10px;"/>'+ res[i][3] +'</div>' +
-                        '<div class="item-after"><i class="pe-7s-angle-left pe-lg angle_'+ res[i][2]  +'" style="color:#ff8000;"></i></div>'+
+                        '<div class="item-after"><i class="pe-7s-angle-right pe-lg" style="color:#3b5998;"></i></div>'+
                     '</div>'+
                     '<div class="item-subtitle">'+ res[i][16] +'</div>' +
                     '<div "class="item-text"">'+ res[i][6] +'</div>' +
                   '</div>' +
                '</div>'+
-               '<div class="swipeout-actions-right right_'+ res[i][2]  +'" style="display:none;">' +
+                                         '<div class="swipeout-actions-left left_'+ res[i][2]  +'">' +
+        '<a href="#" onclick="removelikeList(\''+ res[i][2]  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#3b5998;"><i class="pe-7s-like2 pe-2x"></i></a>' +
         '<a href="#" onclick="removelikelList(\''+ res[i][2]  +'\',\''+ res[i][1]  +'\',\''+ res[i][21]  +'\',\''+ res[i][16]  +'\')"><i class="pe-7s-plus pe-2x"></i></a>' +
-        '<a href="#" onclick="removelikeList(\''+ res[i][2]  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a>' +
       '</div>' +
+               
+
                '</li>');	
 }
 }
