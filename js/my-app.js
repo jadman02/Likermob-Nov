@@ -1070,7 +1070,7 @@ mainView.loadContent(
 $$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=' + page_id, function(res){
 
 
-
+alert(res[1][3]);
 
 
 
@@ -1093,7 +1093,7 @@ $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(res
     
     for (i = 1; i < res.length; i++) {
     	
-    	alert(res[i][3]);
+    	
     	
     	//$$( '#deals-here' ).append( '<li><a href="#" class="item-content"><div class="item-inner"><div class="item-title-row"><div class="item-title">'+ res[i][3] + '</div></div><div class="item-subtitle">'+ res[i][16] + '</div><div class="item-text">'+ res[i][4] + '</div></div></a></li>' );
 
