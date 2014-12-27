@@ -2609,10 +2609,10 @@ var uid = localStorage.getItem("uid");
 var url = 'http://smilesavers.net.au/images/compressed/'+page_id+'_'+photo+'.jpg';
 var favEntries = JSON.parse(localStorage.getItem("favEntries"));
 if(favEntries == null) favEntries = [];
-var staryellow = '<a href="#" onclick="removefavList(\''+ page_id  +'\',\''+ post_id  +'\')" id="yellow_'+ post_id +'" style="z-index:100;border:0;background-color:transparent;" class="button hide"><i class="pe-7s-star pe-2x" style="color:#ffcc00;"></i></a>';
-var starblue = '<a href="#" onclick="favList(\''+ page_id  +'\',\''+ post_id  +'\',\''+ name  +'\')" id="blue_'+ post_id +'" style="z-index:100;border:0;background-color:transparent;" class="button"><i class="pe-7s-star pe-2x"></i></a>';
+var staryellow = '<a href="#" onclick="removefavList(\''+ page_id  +'\',\''+ post_id  +'\')" id="yellow_'+ post_id +'" style="z-index:100;border:0;background-color:transparent;" class="button hide"><i class="pe-7s-star pe-2x" style="margin-top:10px;color:#ffcc00;"></i></a>';
+var starblue = '<a href="#" onclick="favList(\''+ page_id  +'\',\''+ post_id  +'\',\''+ name  +'\')" id="blue_'+ post_id +'" style="z-index:100;border:0;background-color:transparent;" class="button"><i class="pe-7s-star pe-2x" style="margin-top:10px;"></i></a>';
 
-if(favEntries.length > 0){for (j = 0; j < favEntries.length; j++) {if (favEntries[j].page_id == page_id){staryellow = '<a href="#" onclick="removefavList(\''+  page_id  +'\',\''+ post_id  +'\')" id="yellow_'+ post_id +'" style="z-index:100;border:0;background-color:transparent;" class="button"><i class="pe-7s-star pe-lg" style="color:#ffcc00;padding-top:15px;"></i></a>';starblue = '<a href="#" id="blue_'+ post_id +'" onclick="favList(\''+ page_id  +'\',\''+ post_id  +'\',,\''+ name  +'\')" style="z-index:100;border:0;background-color:transparent;" class="button hide"><i class="pe-7s-star pe-2x"></i></a>';}}}
+if(favEntries.length > 0){for (j = 0; j < favEntries.length; j++) {if (favEntries[j].page_id == page_id){staryellow = '<a href="#" onclick="removefavList(\''+  page_id  +'\',\''+ post_id  +'\')" id="yellow_'+ post_id +'" style="z-index:100;border:0;background-color:transparent;" class="button"><i class="pe-7s-star pe-lg" style="color:#ffcc00;margin-top:10px;"></i></a>';starblue = '<a href="#" id="blue_'+ post_id +'" onclick="favList(\''+ page_id  +'\',\''+ post_id  +'\',,\''+ name  +'\')" style="z-index:100;border:0;background-color:transparent;" class="button hide"><i class="pe-7s-star pe-2x" style="margin-top:10px;"></i></a>';}}}
 
 myApp.modal({
     title: '<img src="http://graph.facebook.com/'+page_id+'/picture?width=30&height=30" style="border-radius:50%;max-width:30px;"/><div class="messages-date" style="margin:0;padding:0;"><span>Smilesavers</span></div>',
@@ -2642,7 +2642,7 @@ myApp.modal({
         }
       },
             {
-        text:'<i class="pe-7s-star pe-lg" style="margin-top:10px;"></i>',
+        text: staryellow + starblue,
         close:false
       },
       {
