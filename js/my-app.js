@@ -2620,10 +2620,10 @@ var url = 'http://smilesavers.net.au/images/compressed/'+response[0][1]+'_'+resp
         '<div style="background-color:#e5e5ea;padding:10px;border-radius:10px;margin:10px;margin-top:0px;text-align:left;"><div id="dealtitle" style="float:left;font-weight:500;">'+ title + ' fklasjdl ksadjskld jsakldjs akld the best in the world</div><br/><div style="clear:both;">'+description+'</div><div style="float:left;font-size:14px;clear:both;"><i class="pe-7s-clock pe-lg"></i> Expires in 6 days</div></div>'+
 '</div>'+
 '<div class="row">'+
-        '<div style="background-color:#e5e5ea;padding:10px;border-radius:10px;margin:10px;"><div id="dealtitle" style="float:left;font-weight:500;">Terms</div><br/>'+ terms + ' akjdakjdbakjdbaskjbs</div>'+
+        '<div style="background-color:#e5e5ea;padding:10px;border-radius:10px;margin:10px;"><div id="dealtitle" style="float:left;font-weight:500;">Terms</div><br/><span style="text-align:left;">'+ terms + ' akjdakjdbakjdbaskjbs</span></div>'+
 '</div>'+
      '<div class="row">'+
-        '<div style="margin-top:10px;"><div class="list-block" style="margin-top:10px;margin-bottom:10px;background-color:transparent;"><ul><li><div class="item-content"><div class="item-media"><img src="http://graph.facebook.com/'+ uid +'/picture?width=30&height=30" style="border-radius:50%;max-width:30px;"></div><div class="item-inner" style="background-color:transparent"><div class="item-input"><textarea id="dealbox1" placeholder="What do you think?" style="font-size:16px;"></textarea><a href="#" class="button" onclick="$$(\"#dealbox1\").val();share(value,page_id,url,title);">Share</a></div></div></div></li></ul</div></div>'+
+        '<div style="background-color:#e5e5ea;padding:10px;border-radius:10px;margin:10px;"><div id="dealtitle" style="float:left;font-weight:500;">Share</div><div class="list-block" style="margin-top:10px;margin-bottom:10px;background-color:transparent;"><ul><li><div class="item-content" style="background-color:transparent"><div class="item-media"><img src="http://graph.facebook.com/'+ uid +'/picture?width=30&height=30" style="border-radius:50%;max-width:30px;"></div><div class="item-inner"><div class="item-input"><textarea id="dealbox1" placeholder="What do you think?" style="font-size:16px;"></textarea><a href="#" class="button" onclick="$$(\"#dealbox1\").val();share(value,page_id,url,title);">Share</a></div></div></div></li></ul</div></div>'+
 '</div>'+
      
      
