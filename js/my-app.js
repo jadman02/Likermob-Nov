@@ -1075,6 +1075,7 @@ $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(res
         '<li><a href="#" class="item-content"><div class="item-media"><img src="http://graph.facebook.com/'+ page_id +'/picture?width=50&height=50" style="border-radius:50%;margin-right:10px;"/></div><div class="item-inner"><div class="item-title-row"><div class="item-title">'+ res[0][1] +'</div></div><div class="item-subtitle">'+ res[0][6] + ' ' + res[0][7] + ' ' +  res[0][8] + '</div><div class="item-text">'+ res[0][9] + ' ' + res[0][10] + ' ' + res[0][11]+'</div></div></a></li>' +
         '</ul></div>' +
 	        '<div class="content-block-title">Current Deals</div>'+
+	'<div class="list-block virtual-list list-block-search searchbar-found media-list" style="margin-top:0px;"></div>'+
 	'<div class="list-block media-list"><ul><div id="deals-here"></div></ul></div>' +
 
         
@@ -2523,9 +2524,18 @@ $$( '.virtual-content' ).css( 'width', windowsize + 'px');
 
 }
 
-function virtualList() {
+function virtualList(page_id) {
+
+var allEntries = JSON.parse(localStorage.getItem("allEntries"));
+
+if (typeof page_id === 'undefined') {x_ = 'all';}
+else{var pageEntries = [];
+for (i = 0; i < allEntries.length; i++) {        
+if (allEntries[i].page_id == page_id){pageEntries.unshift(allEntries[i].post_id);}
+}
+x_ = 'page';
+}
 	
-	var allEntries = JSON.parse(localStorage.getItem("allEntries"));
 var itemlist = [];
 var datetoday = new Date();
 var offset = datetoday.getTimezoneOffset() * 60;
@@ -2551,11 +2561,11 @@ day_name[3] = "Wednesday";
 day_name[4] = "Thursday";
 day_name[5] = "Friday";
 day_name[6] = "Saturday";
-for (i = 0; i < allEntries.length; i++) {
+for (i = 0; i < x_Entries.length; i++) {
 	//var lowercase = favEntries[i].name.toLowerCase();
 	
-var lowercase = allEntries[i].name.toLowerCase();
-var unix = allEntries[i].expiry + offset;
+var lowercase = x_Entries[i].name.toLowerCase();
+var unix = x_Entries[i].expiry + offset;
 var d = new Date(unix);
 var month_name = month[d.getUTCMonth()];
 var weekday_name = day_name[d.getUTCDay()];
@@ -2563,7 +2573,7 @@ var day = d.getUTCDate();
 
 var firstdate = weekday_name + ", " + month_name + " " + day ;
 var datetime = '<div class="messages-date" style="padding:0;float:left;margin:0;"><i class="pe-7s-clock"></i> Expires '+ firstdate +'</div>';
-	itemlist.push({page_id:allEntries[i].page_id,post_id:allEntries[i].post_id,lowercased:lowercase,name:allEntries[i].name,title:allEntries[i].title,expiry:datetime,photo:allEntries[i].photo});}
+	itemlist.push({page_id:x_Entries[i].page_id,post_id:x_Entries[i].post_id,lowercased:lowercase,name:x_Entries[i].name,title:x_Entries[i].title,expiry:datetime,photo:x_Entries[i].photo});}
 var myList = myApp.virtualList('.list-block.virtual-list', {
     // Array with items data
     items: itemlist,
