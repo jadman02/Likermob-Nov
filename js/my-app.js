@@ -1104,7 +1104,7 @@ $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(res
                   '</div>' +
                '</div>'+
                for (i = 0; i < allEntries.length; i++) {        
-if (existingEntries[i].page_id == res[i][1]){alert('you likethis');}
+if (allEntries[i].page_id == res[i][1]){alert('you likethis');}
 }
                '<div class="swipeout-actions-right">' +
         '<a href="#" onclick="removelikelList(\''+ res[i][2]  +'\',\''+ res[i][1]  +'\',\''+ res[i][21]  +'\',\''+ res[i][16]  +'\')"><i class="pe-7s-plus pe-2x"></i></a>' +
