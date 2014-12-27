@@ -1096,7 +1096,7 @@ $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(res
                   '<div class="item-inner virtual-inner" onclick="removelikelList(\''+ res[i][2]  +'\',\''+ res[i][1] +'\',\''+ res[i][21]  +'\',\''+ res[i][16]  +'\')">' +
                      '<div class="item-title-row">'+
                          '<div class="item-title"><img src="http://graph.facebook.com/'+res[i][1]+'/picture?width=15&height=15" style="border-radius:50%;max-width:15px;margin-right:10px;"/>'+ res[i][3] +'</div>' +
-                        '<div class="item-after"><i class="pe-7s-angle-left pe-lg angle_'+ res[i][2]  +'" style="color:#ff8000;"></i></div>'+
+                        '<div class="item-after"><i class="pe-7s-angle-left pe-lg angle_'+ res[i][2]  +'" style="color:#ff8000;margin-right:-5px;margin-top:100px;"></i></div>'+
                     '</div>'+
                     '<div class="item-subtitle">'+ res[i][16] +'</div>' +
                     '<div "class="item-text"">'+ res[i][6] +'</div>' +
