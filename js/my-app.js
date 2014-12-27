@@ -1053,6 +1053,8 @@ mainView.loadContent(
         '        <div class="content-block-inner" style="background-color:rgba(255,255,255,.4);"">' +
         '<p class="buttons-row theme-orange" style="margin-top:-50px;"><a href="#" class="button active" onclick="favList('+ page_id +');"><i class="pe-7s-star pe-2x"></i></a><a href="#" class="button active"><i class="pe-7s-call pe-2x"></i></a><a href="#" class="button active"><i class="pe-7s-share pe-2x"></i></a></p>' + 
         
+        
+        
 	        '<div class="content-block-title">Current Deals</div>'+
 	'<div class="list-block media-list"><ul><div id="deals-here"></div></ul></div>' +
 
@@ -1091,7 +1093,9 @@ $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(res
     
     for (i = 1; i < res.length; i++) {
     	
-    	$$( '#deals-here' ).append( '<li><a href="#" class="item-content"><div class="item-inner"><div class="item-title-row"><div class="item-title">'+ res[i][3] + '</div></div><div class="item-subtitle">'+ res[i][16] + '</div><div class="item-text">'+ res[i][4] + '</div></div></a></li>' );
+    	alert(res[i][3]);
+    	
+    	//$$( '#deals-here' ).append( '<li><a href="#" class="item-content"><div class="item-inner"><div class="item-title-row"><div class="item-title">'+ res[i][3] + '</div></div><div class="item-subtitle">'+ res[i][16] + '</div><div class="item-text">'+ res[i][4] + '</div></div></a></li>' );
 
     	
     }
