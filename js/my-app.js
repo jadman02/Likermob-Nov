@@ -2629,7 +2629,7 @@ myApp.modal({
         '<div style="background-color:#e5e5ea;padding:10px;border-radius:10px;margin:10px;text-align:left;"><div id="dealtitle" style="float:left;font-weight:500;">Terms</div><br/><span style="clear:both;"><div id="termsdiv"></div></span></div>'+
 '</div>'+
      '<div class="row">'+
-        '<div style="background-color:#e5e5ea;padding:10px;border-radius:10px;margin:10px;"><div id="dealtitle" style="float:left;font-weight:500;">Share on Facebook</div><div class="list-block" style="margin-top:20px;margin-bottom:10px;background-color:transparent;"><ul style="background-color:transparent;border:0;"><li><div class="item-content"><div class="item-media"><img src="http://graph.facebook.com/'+ uid +'/picture?width=40&height=40" style="margin-top:-90px;border-radius:50%;max-width:40px;"></div><div class="item-inner"><div class="item-input"><textarea id="dealbox1" placeholder="What do you think?" style="font-size:14px;background-color:white;margin-top:10px;margin-bottom:10px;border-radius:5px;"></textarea><a href="#" class="button">Post</a></div></div></div></li></ul</div></div>'+
+        '<div style="background-color:#e5e5ea;padding:10px;border-radius:10px;margin:10px;"><div id="dealtitle" style="float:left;font-weight:500;">Share on Facebook</div><div class="list-block" style="margin-top:20px;margin-bottom:10px;background-color:transparent;"><ul style="background-color:transparent;border:0;"><li><div class="item-content"><div class="item-media"><img src="http://graph.facebook.com/'+ uid +'/picture?width=40&height=40" style="margin-top:-90px;border-radius:50%;max-width:40px;"></div><div class="item-inner"><div class="item-input"><textarea id="dealbox1" placeholder="What do you think?" style="font-size:14px;background-color:white;margin-top:10px;margin-bottom:10px;border-radius:5px;"></textarea><div id="postdiv"></div></div></div></div></li></ul</div></div>'+
 '</div>'+
      
      
@@ -2673,6 +2673,7 @@ var title = response[0][3];var description = response[0][4];var terms = response
 $$( '#titlediv' ).append(title);
 $$( '#descriptiondiv' ).append(description);
 $$( '#termsdiv' ).append(terms);
+$$( '#postdiv' ).append('<a href="#" class="button" onclick="shareDeal(\''+ page_id  +'\',\''+ url  +'\',\''+ title  +'\')">Post</a>');
 
 });	
 	
