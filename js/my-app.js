@@ -1075,7 +1075,6 @@ $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(res
         '<li><a href="#" class="item-content"><div class="item-media"><img src="http://graph.facebook.com/'+ page_id +'/picture?width=50&height=50" style="border-radius:50%;margin-right:10px;"/></div><div class="item-inner"><div class="item-title-row"><div class="item-title">'+ res[0][1] +'</div></div><div class="item-subtitle">'+ res[0][6] + ' ' + res[0][7] + ' ' +  res[0][8] + '</div><div class="item-text">'+ res[0][9] + ' ' + res[0][10] + ' ' + res[0][11]+'</div></div></a></li>' +
         '</ul></div>' +
 	        '<div class="content-block-title">Current Deals</div>'+
-	'<div class="list-block virtual-list list-block-search searchbar-found media-list" style="margin-top:0px;"></div>'+
 	'<div class="list-block media-list"><ul><div id="deals-here"></div></ul></div>' +
 
         
@@ -2524,18 +2523,9 @@ $$( '.virtual-content' ).css( 'width', windowsize + 'px');
 
 }
 
-function virtualList(page_id) {
-
-var allEntries = JSON.parse(localStorage.getItem("allEntries"));
-
-if (typeof page_id === 'undefined') {var x_ = 'all';}
-else{var pageEntries = [];
-for (i = 0; i < allEntries.length; i++) {        
-if (allEntries[i].page_id == page_id){pageEntries.unshift(allEntries[i].post_id);}
-}
-var x_ = 'page';
-}
+function virtualList() {
 	
+	var allEntries = JSON.parse(localStorage.getItem("allEntries"));
 var itemlist = [];
 var datetoday = new Date();
 var offset = datetoday.getTimezoneOffset() * 60;
@@ -2561,11 +2551,11 @@ day_name[3] = "Wednesday";
 day_name[4] = "Thursday";
 day_name[5] = "Friday";
 day_name[6] = "Saturday";
-for (i = 0; i < x_Entries.length; i++) {
+for (i = 0; i < allEntries.length; i++) {
 	//var lowercase = favEntries[i].name.toLowerCase();
 	
-var lowercase = x_Entries[i].name.toLowerCase();
-var unix = x_Entries[i].expiry + offset;
+var lowercase = allEntries[i].name.toLowerCase();
+var unix = allEntries[i].expiry + offset;
 var d = new Date(unix);
 var month_name = month[d.getUTCMonth()];
 var weekday_name = day_name[d.getUTCDay()];
@@ -2573,7 +2563,7 @@ var day = d.getUTCDate();
 
 var firstdate = weekday_name + ", " + month_name + " " + day ;
 var datetime = '<div class="messages-date" style="padding:0;float:left;margin:0;"><i class="pe-7s-clock"></i> Expires '+ firstdate +'</div>';
-	itemlist.push({page_id:x_Entries[i].page_id,post_id:x_Entries[i].post_id,lowercased:lowercase,name:x_Entries[i].name,title:x_Entries[i].title,expiry:datetime,photo:x_Entries[i].photo});}
+	itemlist.push({page_id:allEntries[i].page_id,post_id:allEntries[i].post_id,lowercased:lowercase,name:allEntries[i].name,title:allEntries[i].title,expiry:datetime,photo:allEntries[i].photo});}
 var myList = myApp.virtualList('.list-block.virtual-list', {
     // Array with items data
     items: itemlist,
@@ -2590,8 +2580,8 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
     renderItem: function (index, item) {
         return '<li class="virtual-content swipeout" style="border-right:3px solid #ff8000;margin-top:5px;margin-bottom:5px;">' +
                   '<div class="swipeout-content item-content">'+
-                  '<div class="item-media" onclick="removelikelList(\''+ item.post_id  +'\')" style="padding:5px;"><img src="http://smilesavers.net.au/images/compressed/'+item.page_id+'_'+item.photo+'.jpg" style="width:40px;max-height:40px;overflow:hidden;"/></div>' +
-                  '<div class="item-inner virtual-inner" onclick="removelikelList(\''+ item.post_id  +'\')">' +
+                  '<div class="item-media" onclick="removelikelList(\''+ item.post_id  +'\',\''+ item.page_id  +'\',\''+ item.photo  +'\',\''+ item.name  +'\')" style="padding:5px;"><img src="http://smilesavers.net.au/images/compressed/'+item.page_id+'_'+item.photo+'.jpg" style="width:40px;max-height:40px;overflow:hidden;"/></div>' +
+                  '<div class="item-inner virtual-inner" onclick="removelikelList(\''+ item.post_id  +'\',\''+ item.page_id  +'\',\''+ item.photo  +'\',\''+ item.name  +'\')">' +
                      '<div class="item-title-row">'+
                          '<div class="item-title"><img src="http://graph.facebook.com/'+item.page_id+'/picture?width=15&height=15" style="border-radius:50%;max-width:15px;margin-right:10px;"/>'+ item.title +'</div>' +
                         '<div class="item-after"><i class="pe-7s-angle-left pe-lg" style="color:#ff8000;"></i></div>'+
@@ -2603,7 +2593,7 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
                '<div class="swipeout-actions-right">' +
 
 
-        '<a href="#" onclick="removelikelList(\''+ item.post_id  +'\')"><i class="pe-7s-plus pe-2x"></i></a>' +
+        '<a href="#" onclick="removelikelList(\''+ item.post_id  +'\',\''+ item.page_id  +'\',\''+ item.photo  +'\',\''+ item.name  +'\')"><i class="pe-7s-plus pe-2x"></i></a>' +
         '<a href="#"><i class="pe-7s-map pe-2x"></i></a>' +
         '<a href="#" onclick="removelikeList(\''+ item.post_id  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a>' +
       '</div>' +
@@ -2612,38 +2602,34 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
 });  
 }
 
-function removelikelList(post_id){
+function removelikelList(post_id,page_id,photo,name){
 
 
 var uid = localStorage.getItem("uid");
-domain = "getdeal";data_send = "post_id=" + post_id;
-$$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', ''+ data_send +'',function(response){
-var page_id = response[0][1];var name = response[0][16];var title = response[0][3];var description = response[0][4];var terms = response[0][5];
-var url = 'http://smilesavers.net.au/images/compressed/'+response[0][1]+'_'+response[0][21]+'.jpg';
-
+var url = 'http://smilesavers.net.au/images/compressed/'+page_id+'_'+photo+'.jpg';
 var favEntries = JSON.parse(localStorage.getItem("favEntries"));
 if(favEntries == null) favEntries = [];
 var staryellow = '<a href="#" onclick="removefavList(\''+ page_id  +'\',\''+ post_id  +'\')" id="yellow_'+ post_id +'" style="z-index:100;border:0;background-color:transparent;" class="button hide"><i class="pe-7s-star pe-2x" style="color:#ffcc00;"></i></a>';
 var starblue = '<a href="#" onclick="favList(\''+ page_id  +'\',\''+ post_id  +'\',\''+ name  +'\')" id="blue_'+ post_id +'" style="z-index:100;border:0;background-color:transparent;" class="button"><i class="pe-7s-star pe-2x"></i></a>';
 
 if(favEntries.length > 0){for (j = 0; j < favEntries.length; j++) {if (favEntries[j].page_id == page_id){staryellow = '<a href="#" onclick="removefavList(\''+  page_id  +'\',\''+ post_id  +'\')" id="yellow_'+ post_id +'" style="z-index:100;border:0;background-color:transparent;" class="button"><i class="pe-7s-star pe-2x" style="color:#ffcc00;"></i></a>';starblue = '<a href="#" id="blue_'+ post_id +'" onclick="favList(\''+ page_id  +'\',\''+ post_id  +'\',,\''+ name  +'\')" style="z-index:100;border:0;background-color:transparent;" class="button hide"><i class="pe-7s-star pe-2x"></i></a>';}}}
-	
-	myApp.modal({
+
+myApp.modal({
     title: '<img src="http://graph.facebook.com/'+page_id+'/picture?width=30&height=30" style="border-radius:50%;max-width:30px;"/><div class="messages-date" style="margin:0;padding:0;"><span>Smilesavers</span></div>',
      text: '<div class="content-block modal-block" style="padding:0;margin:0;max-height:300px;overflow: scroll;overflow-x:hidden;"><div class="content-block-inner" style="background-color:transparent;"><div class="modal_inner" style="background-color:hsla(0, 0%, 100%, 0.8);">'+
      '<div style="padding-top:10px;" class="messages-date">Sunday, Feb 3 <span>11:58</span></div>'+ 
 '<div class="row">'+
-        '<div style="background-color:#e5e5ea;padding:10px;border-radius:10px;margin:10px;margin-top:0px;text-align:left;"><div id="dealtitle" style="float:left;font-weight:500;">'+ title + ' fklasjdl ksadjskld jsakldjs akld the best in the world</div><br/><div style="clear:both;">'+description+'</div></div>'+
+        '<div style="background-color:#e5e5ea;padding:10px;border-radius:10px;margin:10px;margin-top:0px;text-align:left;"><div id="dealtitle" style="float:left;font-weight:500;">fklasjdl ksadjskld jsakldjs akld the best in the world</div><br/><div style="clear:both;"></div></div>'+
 '</div>'+
 
 '<div class="row">'+
         '<div style="background-color:#e5e5ea;padding:10px;border-radius:10px;margin:10px;text-align:left;"><div id="dealtitle" style="float:left;font-weight:500;">Expiry</div><br/><div style="float:left;font-size:14px;clear:both;"><i class="pe-7s-clock pe-lg"></i> Expires in 6 days</div></div>'+
 '</div>'+
 '<div class="row">'+
-        '<div style="background-color:#e5e5ea;padding:10px;border-radius:10px;margin:10px;text-align:left;"><div id="dealtitle" style="float:left;font-weight:500;">Terms</div><br/><span style="clear:both;">'+ terms + ' akjdakjdbakjdbaskjbs</span></div>'+
+        '<div style="background-color:#e5e5ea;padding:10px;border-radius:10px;margin:10px;text-align:left;"><div id="dealtitle" style="float:left;font-weight:500;">Terms</div><br/><span style="clear:both;">akjdakjdbakjdbaskjbs</span></div>'+
 '</div>'+
      '<div class="row">'+
-        '<div style="background-color:#e5e5ea;padding:10px;border-radius:10px;margin:10px;"><div id="dealtitle" style="float:left;font-weight:500;">Share on Facebook</div><div class="list-block" style="margin-top:20px;margin-bottom:10px;background-color:transparent;"><ul style="background-color:transparent;border:0;"><li><div class="item-content"><div class="item-media"><img src="http://graph.facebook.com/'+ uid +'/picture?width=40&height=40" style="margin-top:-90px;border-radius:50%;max-width:40px;"></div><div class="item-inner"><div class="item-input"><textarea id="dealbox1" placeholder="What do you think?" style="font-size:14px;background-color:white;margin-top:10px;margin-bottom:10px;border-radius:5px;"></textarea><a href="#" class="button" onclick="shareDeal(\''+ page_id  +'\',\''+ url  +'\',\''+ title  +'\')">Post</a></div></div></div></li></ul</div></div>'+
+        '<div style="background-color:#e5e5ea;padding:10px;border-radius:10px;margin:10px;"><div id="dealtitle" style="float:left;font-weight:500;">Share on Facebook</div><div class="list-block" style="margin-top:20px;margin-bottom:10px;background-color:transparent;"><ul style="background-color:transparent;border:0;"><li><div class="item-content"><div class="item-media"><img src="http://graph.facebook.com/'+ uid +'/picture?width=40&height=40" style="margin-top:-90px;border-radius:50%;max-width:40px;"></div><div class="item-inner"><div class="item-input"><textarea id="dealbox1" placeholder="What do you think?" style="font-size:14px;background-color:white;margin-top:10px;margin-bottom:10px;border-radius:5px;"></textarea><a href="#" class="button">Post</a></div></div></div></li></ul</div></div>'+
 '</div>'+
      
      
@@ -2681,6 +2667,11 @@ var img = new Image();
      $$( '.modal_inner' ).css( 'margin-top', height_image + 'px' );
      }
 
+domain = "getdeal";data_send = "post_id=" + post_id;
+$$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', ''+ data_send +'',function(response){
+var title = response[0][3];var description = response[0][4];var terms = response[0][5];
+
+alert(title + description + terms);
 });	
 	
 
