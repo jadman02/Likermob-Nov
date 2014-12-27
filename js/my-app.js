@@ -2632,6 +2632,8 @@ var url = 'http://smilesavers.net.au/images/compressed/'+response[0][1]+'_'+resp
   });
 
 $$( '.modal-block' ).css( 'background-image', 'url(\''+ url  +'\')');
+$$( '.modal-block' ).css( 'background-size', '100%');
+$$( '.modal-block' ).css( 'background-repeat', 'no-repeat');
 });	
 	
 
