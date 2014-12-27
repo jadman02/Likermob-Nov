@@ -2617,7 +2617,11 @@ var url = 'http://smilesavers.net.au/images/compressed/'+response[0][1]+'_'+resp
      text: '<div class="content-block modal-block" style="padding:0;margin:0;max-height:300px;overflow: scroll;overflow-x:hidden;"><div class="content-block-inner" style="background-color:transparent;"><div class="modal_inner" style="background-color:hsla(0, 0%, 100%, 0.8);">'+
      '<div style="padding-top:10px;" class="messages-date">Sunday, Feb 3 <span>11:58</span></div>'+ 
 '<div class="row">'+
-        '<div style="background-color:#e5e5ea;padding:10px;border-radius:10px;margin:10px;margin-top:0px;text-align:left;"><div id="dealtitle" style="float:left;font-weight:500;">'+ title + ' fklasjdl ksadjskld jsakldjs akld the best in the world</div><br/><div style="clear:both;">'+description+'</div><div style="float:left;font-size:14px;clear:both;"><i class="pe-7s-clock pe-lg"></i> Expires in 6 days</div></div>'+
+        '<div style="background-color:#e5e5ea;padding:10px;border-radius:10px;margin:10px;margin-top:0px;text-align:left;"><div id="dealtitle" style="float:left;font-weight:500;">'+ title + ' fklasjdl ksadjskld jsakldjs akld the best in the world</div><br/><div style="clear:both;">'+description+'</div></div>'+
+'</div>'+
+
+'<div class="row">'+
+        '<div style="background-color:#e5e5ea;padding:10px;border-radius:10px;margin:10px;text-align:left;"><div id="dealtitle" style="float:left;font-weight:500;">Expiry</div><br/><div style="float:left;font-size:14px;clear:both;"><i class="pe-7s-clock pe-lg"></i> Expires in 6 days</div></div>'+
 '</div>'+
 '<div class="row">'+
         '<div style="background-color:#e5e5ea;padding:10px;border-radius:10px;margin:10px;text-align:left;"><div id="dealtitle" style="float:left;font-weight:500;">Terms</div><br/><span style="clear:both;">'+ terms + ' akjdakjdbakjdbaskjbs</span></div>'+
