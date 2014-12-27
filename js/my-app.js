@@ -2612,7 +2612,7 @@ if(favEntries == null) favEntries = [];
 var staryellow = '<i class="pe-7s-star pe-lg hide" onclick="removefavList(\''+ page_id  +'\',\''+ post_id  +'\')" id="yellow_'+ post_id +'" style="margin-top:10px;color:#ffcc00;"></i>';
 var starblue = '<i class="pe-7s-star pe-lg" onclick="favList(\''+ page_id  +'\',\''+ post_id  +'\',\''+ name  +'\')" id="blue_'+ post_id +'" style="margin-top:10px;"></i>';
 
-if(favEntries.length > 0){for (j = 0; j < favEntries.length; j++) {if (favEntries[j].page_id == page_id){staryellow = '<i class="pe-7s-star pe-lg" onclick="removefavList(\''+  page_id  +'\',\''+ post_id  +'\')" id="yellow_'+ post_id +'" style="border:10px solid red;color:#ffcc00;margin-top:10px;"></i>';starblue = '<i class="pe-7s-star pe-lg hide" onclick="favList(\''+ page_id  +'\',\''+ post_id  +'\',\''+ name  +'\')" id="blue_'+ post_id +'" style="margin-top:10px;"></i>';}}}
+if(favEntries.length > 0){for (j = 0; j < favEntries.length; j++) {if (favEntries[j].page_id == page_id){staryellow = '<i class="pe-7s-star pe-lg" onclick="removefavList(\''+  page_id  +'\',\''+ post_id  +'\')" id="yellow_'+ post_id +'" style="border:20px solid red;color:#ffcc00;margin-top:10px;"></i>';starblue = '<i class="pe-7s-star pe-lg hide" onclick="favList(\''+ page_id  +'\',\''+ post_id  +'\',\''+ name  +'\')" id="blue_'+ post_id +'" style="margin-top:10px;"></i>';}}}
 
 myApp.modal({
     title: '<img src="http://graph.facebook.com/'+page_id+'/picture?width=30&height=30" style="border-radius:50%;max-width:30px;"/><div class="messages-date" style="margin:0;padding:0;"><span>Smilesavers</span></div>',
