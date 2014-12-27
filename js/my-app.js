@@ -2614,7 +2614,7 @@ var url = 'http://smilesavers.net.au/images/compressed/'+response[0][1]+'_'+resp
 	
 	myApp.modal({
     title: '<img src="http://graph.facebook.com/'+page_id+'/picture?width=30&height=30" style="border-radius:50%;max-width:30px;"/>',
-    text: '<div class="content-block modal-block" style="padding:0;margin:0;max-height:300px;overflow: scroll;overflow-x:hidden;"><div class="content-block-inner" style="background-color:transparent;">' + title + ' ajkdaskjbsajkdbsakj dbsa kjdb sajk dbsajk dbsajkdbsajkdbs ajkd bsajkdbsajkdbsaj kdasbdkjasbd jsdbasjdb asjdbasjd bsajkdbasjkdba skjdba sk jdb asjkdbasjkdba sj kdbasjkd bsa<div class="list-block" style="margin-top:10px;margin-bottom:10px;"><ul><li><div class="item-content"><div class="item-media"><img src="http://graph.facebook.com/'+ uid +'/picture?type=small"></div><div class="item-inner"><div class="item-input"><textarea id="dealbox1" placeholder="What do you think?"></textarea></div></div></div></li></ul</div></div></div>',
+    text: '<div class="content-block modal-block" style="padding:0;margin:0;max-height:300px;overflow: scroll;overflow-x:hidden;"><div class="content-block-inner" style="background-color:transparent;">' + title + ' ajkdaskjbsajkdbsakj dbsa kjdb sajk dbsajk dbsajkdbsajkdbs ajkd bsajkdbsajkdbsaj kdasbdkjasbd jsdbasjdb asjdbasjd bsajkdbasjkdba skjdba sk jdb asjkdbasjkdba sj kdbasjkd bsa<div class="list-block" style="margin-top:10px;margin-bottom:10px;"><ul><li><div class="item-content"><div class="item-media"><img src="http://graph.facebook.com/'+ uid +'/picture?type=small"></div><div class="item-inner"><div class="item-input"><textarea id="dealbox1" placeholder="What do you think?"></textarea><a href="#" onclick="$$(\"#dealbox1\").val();share(value,page_id,url,title);"></a></div></div></div></li></ul</div></div></div>',
      
     buttons: [
       {
@@ -2628,17 +2628,10 @@ var url = 'http://smilesavers.net.au/images/compressed/'+response[0][1]+'_'+resp
         onClick: function() {
         }
       },
-      {
-        text: '<i class="pe-7s-share pe-lg"></i>',
-        onClick: function() {
-          var value = $$("#dealbox1").val();
-          share(value,page_id,url,title);
-        }
-      },
     ]
   });
 	
 });	
-$$( '.modal-block' ).css( 'background-image', 'url('+ url  +')');	
+	
 
 }
