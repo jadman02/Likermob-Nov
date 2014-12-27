@@ -1051,10 +1051,6 @@ mainView.loadContent(
         '    <div class="page-content cover-business" style="z-index: 1;margin-top:30px;">' +
         '      <div class="content-block" style="padding-top:40px;">' +
         '        <div class="content-block-inner" style="background-color:rgba(255,255,255,.4);"">' +
-        '<p class="buttons-row theme-orange" style="margin-top:-50px;"><a href="#" class="button active" onclick="favList('+ page_id +');"><i class="pe-7s-star pe-2x"></i></a><a href="#" class="button active"><i class="pe-7s-call pe-2x"></i></a><a href="#" class="button active"><i class="pe-7s-share pe-2x"></i></a></p>' + 
-        
-        
-        
 	        '<div class="content-block-title">Current Deals</div>'+
 	'<div class="list-block media-list"><ul><div id="deals-here"></div></ul></div>' +
 
@@ -1109,7 +1105,6 @@ $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(res
                '</div>'+
                '<div class="swipeout-actions-right">' +
         '<a href="#" onclick="removelikelList(\''+ res[i][2]  +'\',\''+ res[i][1]  +'\',\''+ res[i][21]  +'\',\''+ res[i][16]  +'\')"><i class="pe-7s-plus pe-2x"></i></a>' +
-        '<a href="#"><i class="pe-7s-map pe-2x"></i></a>' +
         '<a href="#" onclick="removelikeList(\''+ res[i][2]  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a>' +
       '</div>' +
                '</li>');
