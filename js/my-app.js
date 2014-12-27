@@ -2641,7 +2641,7 @@ var img = new Image();
      	
 	var height_image = ((img.height/img.width) * 270) -41;
 
-     $$( '.modal_inner' ).css( 'padding-top', height_image + 'px' );
+     $$( '.modal_inner' ).css( 'margin-top', height_image + 'px' );
      }
 
 });	
