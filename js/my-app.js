@@ -1089,7 +1089,10 @@ $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(res
 
     for (i = 1; i < res.length; i++) {
 
-
+  var allEntries = JSON.parse(localStorage.getItem("allEntries"));
+   for (i = 0; i < allEntries.length; i++) {        
+if (allEntries[i].post_id == res[i][2]){alert('like this');}
+}
     	
     	$$( '#deals-here' ).append( '<li class="virtual-content swipeout" style="border-right:3px solid #ff8000;margin-top:5px;margin-bottom:5px;">' +
                   '<div class="swipeout-content item-content">'+
