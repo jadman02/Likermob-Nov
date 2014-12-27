@@ -20,7 +20,7 @@ document.getElementById("profilepic").innerHTML = '<img src="http://graph.facebo
 
   var likeCount = localStorage.getItem("likeCount");
     if(likeCount == null) likeCount = 0;
-$$('.badge').text(likeCount);
+$$('.badge-like').text(likeCount);
 
 var previousScrollPosition = 0;
 $$('.pull-to-refresh-content').on('scroll', function (e) {
@@ -764,7 +764,7 @@ var d = new Date();
   var likeCount = localStorage.getItem("likeCount");
     if(likeCount == null) likeCount = 0;
 likeCount ++;
-$$('.badge').text(likeCount);
+$$('.badge-like').text(likeCount);
 localStorage.setItem("likeCount", likeCount);	
 
 }
