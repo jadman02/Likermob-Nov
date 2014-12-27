@@ -1085,8 +1085,8 @@ $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(res
 	
     initialize(res[0][13],res[0][14]);
   
-  
-    
+  var allEntries = JSON.parse(localStorage.getItem("allEntries"));
+
     for (i = 1; i < res.length; i++) {
     	
 
@@ -1103,6 +1103,9 @@ $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(res
                     '<div "class="item-text"">'+ res[i][6] +'</div>' +
                   '</div>' +
                '</div>'+
+               for (i = 0; i < allEntries.length; i++) {        
+if (existingEntries[i].page_id == res[i][1]){alert('you likethis');}
+}
                '<div class="swipeout-actions-right">' +
         '<a href="#" onclick="removelikelList(\''+ res[i][2]  +'\',\''+ res[i][1]  +'\',\''+ res[i][21]  +'\',\''+ res[i][16]  +'\')"><i class="pe-7s-plus pe-2x"></i></a>' +
         '<a href="#" onclick="removelikeList(\''+ res[i][2]  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a>' +
