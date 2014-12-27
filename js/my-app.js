@@ -1096,7 +1096,7 @@ $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(res
                   '<div class="item-inner virtual-inner" onclick="removelikelList(\''+ res[i][2]  +'\',\''+ res[i][1] +'\',\''+ res[i][21]  +'\',\''+ res[i][16]  +'\')">' +
                      '<div class="item-title-row">'+
                          '<div class="item-title"><img src="http://graph.facebook.com/'+res[i][1]+'/picture?width=15&height=15" style="border-radius:50%;max-width:15px;margin-right:10px;"/>'+ res[i][3] +'</div>' +
-                        '<div class="item-after" style="margin-right:-5px;margin-top:100px;"><i class="pe-7s-angle-left pe-lg angle_'+ res[i][2]  +'" style="color:#ff8000;"></i></div>'+
+                        '<div class="item-after"><i class="pe-7s-angle-left pe-lg angle_'+ res[i][2]  +'" style="color:#ff8000;"></i></div>'+
                     '</div>'+
                     '<div class="item-subtitle">'+ res[i][16] +'</div>' +
                     '<div "class="item-text"">'+ res[i][6] +'</div>' +
@@ -1116,7 +1116,7 @@ if (allEntries[j].post_id == res[i][2]){
 	$$('.virtual_'+ res[i][2] ).addClass( 'hide' );
 		$$( '#deals-here' ).append( '<li class="virtual-content swipeout" style="border-left:3px solid #3b5998;margin-top:5px;margin-bottom:5px;">' +
                   '<div class="swipeout-content item-content">'+
-                  '<div class="item-media" onclick="removelikelList(\''+ res[i][2]  +'\',\''+ res[i][1]  +'\',\''+ res[i][21]  +'\',\''+ res[i][16]  +'\')" style="padding:5px;"><i class="pe-7s-angle-right pe-lg" style="float:left;color:#3b5998;margin-left:-15px;"></i><img src="http://smilesavers.net.au/images/compressed/'+res[i][1]+'_'+res[i][21]+'.jpg" style="width:40px;max-height:40px;overflow:hidden;"/></div>' +
+                  '<div class="item-media" onclick="removelikelList(\''+ res[i][2]  +'\',\''+ res[i][1]  +'\',\''+ res[i][21]  +'\',\''+ res[i][16]  +'\')" style="padding:5px;"><i class="pe-7s-angle-right pe-lg" style="float:left;color:#3b5998;margin-left:-10px;margin-top:-50px;"></i><img src="http://smilesavers.net.au/images/compressed/'+res[i][1]+'_'+res[i][21]+'.jpg" style="width:40px;max-height:40px;overflow:hidden;"/></div>' +
                   '<div class="item-inner virtual-inner" onclick="removelikelList(\''+ res[i][2]  +'\',\''+ res[i][1] +'\',\''+ res[i][21]  +'\',\''+ res[i][16]  +'\')">' +
                      '<div class="item-title-row">'+
                          '<div class="item-title"><img src="http://graph.facebook.com/'+res[i][1]+'/picture?width=15&height=15" style="border-radius:50%;max-width:15px;margin-right:10px;"/>'+ res[i][3] +'</div>' +
