@@ -2608,9 +2608,15 @@ function removelikelList(post_id){
 var uid = localStorage.getItem("uid");
 domain = "getdeal";data_send = "post_id=" + post_id;
 $$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', ''+ data_send +'',function(response){
-var page_id = response[0][1];var title = response[0][3];var description = response[0][4];var terms = response[0][5];
+var page_id = response[0][1];var name = response[0][16];var title = response[0][3];var description = response[0][4];var terms = response[0][5];
 var url = 'http://smilesavers.net.au/images/compressed/'+response[0][1]+'_'+response[0][21]+'.jpg';
 
+var favEntries = JSON.parse(localStorage.getItem("favEntries"));
+if(favEntries == null) favEntries = [];
+var staryellow = '<a href="#" onclick="removefavList(\''+ page_id  +'\',\''+ post_id  +'\')" id="yellow_'+ post_id +'" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button hide"><i class="pe-7s-star pe-2x" style="margin-left:-2px;margin-top:5px;color:#ffcc00;"></i></a>';
+var starblue = '<a href="#" onclick="favList(\''+ page_id  +'\',\''+ post_id  +'\',\''+ name  +'\')" id="blue_'+ post_id +'" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-star pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a>';
+
+if(favEntries.length > 0){for (j = 0; j < favEntries.length; j++) {if (favEntries[j].page_id == page_id){staryellow = '<a href="#" onclick="removefavList(\''+  page_id  +'\',\''+ post_id  +'\')" id="yellow_'+ post_id +'" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-star pe-2x" style="margin-left:-2px;margin-top:5px;color:#ffcc00;"></i></a>';starblue = '<a href="#" id="blue_'+ post_id +'" onclick="favList(\''+ page_id  +'\',\''+ post_id  +'\',,\''+ name  +'\')" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button hide"><i class="pe-7s-star pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a>';}}}
 	
 	myApp.modal({
     title: '<img src="http://graph.facebook.com/'+page_id+'/picture?width=30&height=30" style="border-radius:50%;max-width:30px;"/><div class="messages-date" style="margin:0;padding:0;"><span>Smilesavers</span></div>',
@@ -2635,6 +2641,12 @@ var url = 'http://smilesavers.net.au/images/compressed/'+response[0][1]+'_'+resp
     buttons: [
       {
         text: '<i class="pe-7s-close pe-lg"></i>',
+        onClick: function() {
+          myApp.closeModal();
+        }
+      },
+            {
+        text: staryellow + starblue,
         onClick: function() {
           myApp.closeModal();
         }
