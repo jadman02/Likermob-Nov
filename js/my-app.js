@@ -2667,9 +2667,7 @@ var img = new Image();
 }
 
 function shareDeal(page_id,url,title){
-	alert(page_id);
 	var value = $$("#dealbox1").val();
-	alert(value);
           share(value,page_id,url,title);
 	
 }
