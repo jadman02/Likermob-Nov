@@ -2614,7 +2614,8 @@ var url = 'http://smilesavers.net.au/images/compressed/'+response[0][1]+'_'+resp
 	
 	myApp.modal({
     title: '<img src="http://graph.facebook.com/'+page_id+'/picture?width=30&height=30" style="border-radius:50%;max-width:30px;"/>',
-    text: '<div class="content-block modal-block" style="padding:0;margin:0;max-height:300px;overflow: scroll;overflow-x:hidden;"><div class="content-block-inner" style="background-color:transparent;"><div class="modal_inner" style="background-color:hsla(0, 0%, 100%, 0.8);"><div class="content-block-title">' + title + '</div>'+description+' gdfsdffsdsdfdsfdsf fdssd fsf sdfds f<div class="content-block-title">Terms</div>fasfkjasdjksahdjksadkjsadnsajkdnas</div><div class="list-block" style="margin-top:10px;margin-bottom:10px;"><ul><li><div class="item-content"><div class="item-media"><img src="http://graph.facebook.com/'+ uid +'/picture?type=small"></div><div class="item-inner"><div class="item-input"><textarea id="dealbox1" placeholder="What do you think?"></textarea><a href="#" class="button" onclick="$$(\"#dealbox1\").val();share(value,page_id,url,title);">Share</a></div></div></div></li></ul</div></div></div>',
+     text: '<div class="content-block" style="padding:0;margin:0;max-height:200px;overflow: scroll;"><div class="content-block-inner"><div class="content-block-title">Deal</div>ahdjkandjkasndjaks nakjsdsjkjkasndjsa dkajsdjkasdkjsa dksajhdjksa sad dadas ahdjkandjkasndjaks nakjsdsjkjkasndjsa dkajsdjkasdkjsa dksajhdjksa sad dadas ahdjkandjkasndjaks nakjsdsjkjkasndjsa dkajsdjkasdkjsa dksajhdjksa sad dadas ahdjkandjkasndjaks nakjsdsjkjkasndjsa dkajsdjkasdkjsa dksajhdjksa sad dadas ahdjkandjkasndjaks nakjsdsjkjkasndjsa dkajsdjkasdkjsa dksajhdjksa sad dadas</div></div><div class="content-block" style="padding:0;margin:0;max-height:200px;overflow: scroll;"><div class="content-block-inner"><div class="content-block-title">Terms</div>These are the terms</div></div>',
+    
      
     buttons: [
       {
@@ -2630,7 +2631,7 @@ var url = 'http://smilesavers.net.au/images/compressed/'+response[0][1]+'_'+resp
       },
     ]
   });
-
+/*
 $$( '.modal-block' ).css( 'background-image', 'url(\''+ url  +'\')');
 $$( '.modal-block' ).css( 'background-size', '100%');
 $$( '.modal-block' ).css( 'background-repeat', 'no-repeat');
@@ -2643,7 +2644,7 @@ var img = new Image();
 
      $$( '.modal_inner' ).css( 'margin-top', height_image + 'px' );
      }
-
+*/
 });	
 	
 
