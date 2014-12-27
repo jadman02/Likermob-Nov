@@ -2592,7 +2592,7 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
                '<div class="swipeout-actions-right">' +
 
 
-        '<a href="#"><i class="pe-7s-plus pe-2x"></i></a>' +
+        '<a href="#" onclick="removelikelList(\''+ item.post_id  +'\')"><i class="pe-7s-plus pe-2x"></i></a>' +
         '<a href="#"><i class="pe-7s-map pe-2x"></i></a>' +
         '<a href="#" onclick="removelikeList(\''+ item.post_id  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a>' +
       '</div>' +
@@ -2612,7 +2612,7 @@ var url = 'http://smilesavers.net.au/images/compressed/'+response[0][1]+'_'+resp
 
 	
 	myApp.modal({
-    title: '<img src="http://graph.facebook.com/'+page_id+'/picture?width=15&height=15" style="float:left;border-radius:50%;max-width:15px;margin-right:10px;"/><i class="pe-7s-star pe-lg" style="float:right"></i>',
+    title: '<img src="http://graph.facebook.com/'+page_id+'/picture?width=50&height=50" style="border-radius:50%;max-width:50px;"/><i class="pe-7s-star pe-lg" style="float:right"></i>',
     text: '<div class="content-block modal-block" style="padding:0;margin:0;max-height:300px;overflow: scroll;overflow-x:hidden;"><div class="content-block-inner" style="background-color:transparent;">' + title + ' ajkdaskjbsajkdbsakj dbsa kjdb sajk dbsajk dbsajkdbsajkdbs ajkd bsajkdbsajkdbsaj kdasbdkjasbd jsdbasjdb asjdbasjd bsajkdbasjkdba skjdba sk jdb asjkdbasjkdba sj kdbasjkd bsa<div class="list-block" style="margin-top:10px;margin-bottom:10px;"><ul><li><div class="item-content"><div class="item-media"><img src="http://graph.facebook.com/'+ uid +'/picture?type=small"></div><div class="item-inner"><div class="item-input"><textarea id="dealbox1" placeholder="What do you think?"></textarea></div></div></div></li></ul</div></div></div>',
      
     buttons: [
