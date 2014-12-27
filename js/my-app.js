@@ -2528,12 +2528,12 @@ function virtualList(page_id) {
 
 var allEntries = JSON.parse(localStorage.getItem("allEntries"));
 
-if (typeof page_id === 'undefined') {x_ = 'all';}
+if (typeof page_id === 'undefined') {var x_ = 'all';}
 else{var pageEntries = [];
 for (i = 0; i < allEntries.length; i++) {        
 if (allEntries[i].page_id == page_id){pageEntries.unshift(allEntries[i].post_id);}
 }
-x_ = 'page';
+var x_ = 'page';
 }
 	
 var itemlist = [];
