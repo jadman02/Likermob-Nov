@@ -2638,12 +2638,10 @@ $$( '.modal-block' ).css( 'background-repeat', 'no-repeat');
 var img = new Image();
      img.src = $$( '.modal-block' ).css('background-image').replace(/url\(|\)$|"/ig, '');
      img.onload = function () {
-     	windowsize = $$(window).width();
-     	windowheight = $$(window).height();
      	
-	height_image = ((img.height/img.width) * windowsize);
+	var height_image = ((img.height/img.width) * 270);
 
-     $$( '.modal_inner' ).css( 'padding-top', heightimage + 'px' );
+     $$( '.modal_inner' ).css( 'padding-top', height_image + 'px' );
 
 });	
 	
