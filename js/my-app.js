@@ -1085,7 +1085,7 @@ $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(res
 	
     initialize(res[0][13],res[0][14]);
   
-  var allEntries = JSON.parse(localStorage.getItem("allEntries"));
+
 
     for (i = 1; i < res.length; i++) {
 
@@ -1115,13 +1115,14 @@ $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(res
       '</div>' +
                '</li>');
 
+    	
+    }
+
+  var allEntries = JSON.parse(localStorage.getItem("allEntries"));
    for (i = 0; i < allEntries.length; i++) {        
 if (allEntries[i].post_id == res[i][2]){$$( '.sar_' + res[i][2] ).addClass( 'hide' );}
 else {$$( '.sal_' + res[i][2] ).addClass( 'hide' );}
 }
-    	
-    }
-
     
 	return;
 	
