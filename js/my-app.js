@@ -2642,7 +2642,7 @@ myApp.modal({
         }
       },
             {
-        text: '<span style="padding-top:10px;">' + staryellow + starblue + '</span>',
+        text:'<i class="pe-7s-star pe-2x"></i>',
         close:false
       },
       {
