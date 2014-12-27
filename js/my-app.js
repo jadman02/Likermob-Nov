@@ -1089,18 +1089,16 @@ $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(res
 	
     initialize(res[0][13],res[0][14]);
   
-  closeModal();
+  
     
-    for (i = 1; i < res.length; i++) {
+    for (i = 0; i < res.length; i++) {
     	
+    	alert(res[i][3]);
     	
-    	
-    	//$$( '#deals-here' ).append( '<li><a href="#" class="item-content"><div class="item-inner"><div class="item-title-row"><div class="item-title">'+ res[i][3] + '</div></div><div class="item-subtitle">'+ res[i][16] + '</div><div class="item-text">'+ res[i][4] + '</div></div></a></li>' );
+    	$$( '#deals-here' ).append( '<li><a href="#" class="item-content"><div class="item-inner"><div class="item-title-row"><div class="item-title">'+ res[i][3] + '</div></div><div class="item-subtitle">'+ res[i][16] + '</div><div class="item-text">'+ res[i][4] + '</div></div></a></li>' );
 
     	
     }
-    
-
 
     
 	return;
