@@ -2646,7 +2646,7 @@ if(favEntries.length > 0){for (j = 0; j < favEntries.length; j++) {if (favEntrie
         }
       },
             {
-        text: '<span style="margin-top:10px;">' + staryellow + starblue + '</span>',
+        text: '<span style="padding-top:10px;">' + staryellow + starblue + '</span>',
         close:false
       },
       {
