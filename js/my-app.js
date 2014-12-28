@@ -1052,7 +1052,7 @@ mainView.loadContent(
         '    <div class="page-content cover-business" style="z-index: 1;">' +
         '      <div class="content-block" style="margin-top:-10px;">' +
         '        <div class="content-block-inner" style="background-color:rgba(255,255,255,.4);"">' +
-	      '<div class="list-block media-list"><ul><div id="cover-div"></div><div id="info-here"></div></ul></div>' +
+	      '<div class="list-block media-list" style="margin-top:-10px;"><ul><div id="cover-div"></div><div id="info-here"></div></ul></div>' +
 	        '<div class="content-block-title">Deals I like</div>'+
 	'<div class="list-block media-list"><ul><div id="like-deals-here"></div></ul></div>' +
 	        '<div class="content-block-title">Deals I don\'t like</div>'+
@@ -1131,19 +1131,19 @@ $$( '#like-deals-here' ).append( '<li class="virtual-content swipeout" style="bo
 $$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=' + page_id, function(res){
 
 if (res[0][1]){
-$$( '#info-here' ).append('<li><a href="#" class="item-content" style="color:#666;"><div class="item-media"><i class="pe-7s-map pe-lg"></i></div><div class="item-inner"><div class="item-title-row"><div class="item-title">'+ res[0][6] + ' ' + res[0][7] + ' ' +  res[0][8] + '</div></div><div class="item-subtitle">'+ res[0][9] + ' ' + res[0][10] + ' ' + res[0][11]+'</div></div></a></li>');
+$$( '#info-here' ).append('<li><a href="#" class="item-content" style="color:#666;"><div class="item-media" style="margin-left:50px;"><i class="pe-7s-map pe-lg"></i></div><div class="item-inner"><div class="item-title-row"><div class="item-title">'+ res[0][6] + ' ' + res[0][7] + ' ' +  res[0][8] + '</div></div><div class="item-subtitle">'+ res[0][9] + ' ' + res[0][10] + ' ' + res[0][11]+'</div></div></a></li>');
 }
 
 if (res[0][4]){
-$$( '#info-here' ).append('<li><a href="#" class="item-content" style="color:#666;"><div class="item-media"><i class="pe-7s-call pe-lg"></i></div><div class="item-inner"><div class="item-title-row"><div class="item-title">'+ res[0][4] +'</div></div></div></a></li>');
+$$( '#info-here' ).append('<li><a href="#" class="item-content" style="color:#666;"><div class="item-media" style="margin-left:50px;"><i class="pe-7s-call pe-lg"></i></div><div class="item-inner"><div class="item-title-row"><div class="item-title">'+ res[0][4] +'</div></div></div></a></li>');
 }
 
 if (res[0][15]){
-$$( '#info-here' ).append('<li><a href="#" class="item-content" style="color:#666;"><div class="item-media"><i class="pe-7s-mouse pe-lg"></i></div><div class="item-inner"><div class="item-title-row"><div class="item-title">'+ res[0][15] +'</div></div></div></a></li>');
+$$( '#info-here' ).append('<li><a href="#" class="item-content" style="color:#666;"><div class="item-media" style="margin-left:50px;"><i class="pe-7s-mouse pe-lg"></i></div><div class="item-inner"><div class="item-title-row"><div class="item-title">'+ res[0][15] +'</div></div></div></a></li>');
 }
 
 if (res[0][16]){
-$$( '#info-here' ).append('<li><a href="#" class="item-content" style="color:#666;"><div class="item-media"><i class="pe-7s-mail pe-lg"></i></div><div class="item-inner"><div class="item-title-row"><div class="item-title">'+ res[0][16] +'</div></div></div></a></li>');
+$$( '#info-here' ).append('<li><a href="#" class="item-content" style="color:#666;"><div class="item-media" style="margin-left:50px;"><i class="pe-7s-mail pe-lg"></i></div><div class="item-inner"><div class="item-title-row"><div class="item-title">'+ res[0][16] +'</div></div></div></a></li>');
 }
 	
 $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(response){
