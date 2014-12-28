@@ -1094,8 +1094,36 @@ day_name[6] = "Saturday";
 var allEntries = JSON.parse(localStorage.getItem("allEntries"));
 for (k = 0; k < allEntries.length; k++) { 
 if (allEntries[k].page_id == page_id){	
-alert(page_id);
-alert(allEntries[k].page_id);
+
+$$( '#like-deals-here' ).append(allEntries[k].title + ',');
+
+/*
+var unix = allEntries[k].expiry + offset;
+var d = new Date(unix);
+var month_name = month[d.getUTCMonth()];
+var weekday_name = day_name[d.getUTCDay()];
+var day = d.getUTCDate();
+
+var firstdate = weekday_name + ", " + month_name + " " + day ;
+var datetime = '<div class="messages-date" style="padding:0;float:left;margin:0;"><i class="pe-7s-clock"></i> Expires '+ firstdate +'</div>';
+$$( '#like-deals-here' ).append( '<li class="virtual-content swipeout" style="border-right:3px solid #ff8000;margin-top:5px;margin-bottom:5px;">' +
+                  '<div class="swipeout-content item-content">'+
+                  '<div class="item-media" onclick="removelikelList(\''+ allEntries[k].post_id  +'\',\''+allEntries[k].page_id +'\',\''+ allEntries[k].photo  +'\',\''+ allEntries[k].name  +'\')" style="padding:5px;"><img src="http://smilesavers.net.au/images/compressed/'+allEntries[k].page_id +'_'+allEntries[k].photo +'.jpg" style="width:40px;max-height:40px;overflow:hidden;"/></div>' +
+                  '<div class="item-inner virtual-inner" onclick="removelikelList(\''+ allEntries[k].post_id  +'\',\''+allEntries[k].page_id +'\',\''+ allEntries[k].photo  +'\',\''+ allEntries[k].name  +'\')">' +
+                     '<div class="item-title-row">'+
+                         '<div class="item-title"><img src="http://graph.facebook.com/'+allEntries[k].page_id+'/picture?width=15&height=15" style="border-radius:50%;max-width:15px;margin-right:10px;"/>'+ allEntries[k].title +'</div>' +
+                        '<div class="item-after"><i class="pe-7s-angle-left pe-lg" style="color:#ff8000;"></i></div>'+
+                    '</div>'+
+                    '<div class="item-subtitle">'+ allEntries[k].name +'</div>' +
+                    '<div "class="item-text"">'+ datetime +'</div>' +
+                  '</div>' +
+               '</div>'+
+                           '<div class="swipeout-actions-right right_'+ res[i][2]  +'">' +
+        '<a href="#" onclick="removelikelList(\''+ allEntries[k].post_id  +'\',\''+allEntries[k].page_id +'\',\''+ allEntries[k].photo  +'\',\''+ allEntries[k].name  +'\')"><i class="pe-7s-plus pe-2x"></i></a>' +
+        '<a href="#" onclick="removelikeList(\''+ allEntries[k].post_id  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a>' +
+      '</div>' +
+ '</li>');
+*/
 }
 }
 
