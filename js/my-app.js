@@ -1139,12 +1139,12 @@ $$( '#info-here' ).append('<li><a href="#" class="item-content" style="color:#66
 if (res[0][4]){
 $$( '.name_after' ).append('<a href="#" class="button" style="border:0;width:30px;height:30px;margin-right:5px;"><i class="pe-7s-call pe-lg"></i></a>');
 }
-else {$$( '.name_after' ).append('<a href="#" class="button disabled" style="border:0;width:30px;height:30px;margin-right:5px;"><i class="pe-7s-call pe-lg"></i></a>');}
+
 
 if (res[0][16]){
 $$( '.name_after' ).append('<a href="#" class="button" style="border:0;width:30px;height:30px;"><i class="pe-7s-mail pe-lg"></i></a>');
 }
-else {$$( '.name_after' ).append('<a href="#" class="button disabled" style="border:0;width:30px;height:30px;"><i class="pe-7s-mail pe-lg"></i></a>');}
+
 	
 $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(response){
 	
