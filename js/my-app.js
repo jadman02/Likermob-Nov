@@ -1066,7 +1066,7 @@ mainView.loadContent(
         '  </div>' +
         '</div>'
     );
-
+/*
 var datetoday = new Date();
 var offset = datetoday.getTimezoneOffset() * 60;
 var month = new Array(12);
@@ -1120,7 +1120,7 @@ $$( '#like-deals-here' ).append( '<li class="virtual-content swipeout" style="bo
       '</div>' +
  '</li>');
 }
-
+*/
 
 
 $$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=' + page_id, function(res){
