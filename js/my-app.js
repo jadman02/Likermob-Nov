@@ -1049,7 +1049,7 @@ mainView.loadContent(
         '    <!-- Scrollable page content-->' +
 '<div id="map-canvas"></div>' +
         '    <div class="page-content cover-business" style="z-index: 1;">' +
-        '      <div class="content-block">' +
+        '      <div class="content-block" style="margin-top:-10px;">' +
         '        <div class="content-block-inner" style="background-color:rgba(255,255,255,.4);"">' +
 	      '<div id="cover-div"></div>'+
 	      '<div class="list-block media-list"><ul><div id="info-here"></div></ul></div>' +
@@ -1067,32 +1067,62 @@ mainView.loadContent(
         '</div>'
     );
 
-//for (k = 0; k < allEntries.length; k++) { 
-//if (allEntries[k].page_id == page_id){	
-//	$$( '#like-deals-here' ).append('');
-//}
-/*
-$$( '#deals-here' ).append( '<li class="virtual-content swipeout" style="border-right:3px solid #ff8000;margin-top:5px;margin-bottom:5px;">' +
+var datetoday = new Date();
+var offset = datetoday.getTimezoneOffset() * 60;
+var month = new Array(12);
+month[0] = "Jan";
+month[1] = "Feb";
+month[2] = "Mar";
+month[3] = "Apr";
+month[4] = "May";
+month[5] = "Jun";
+month[6] = "Jul";
+month[7] = "Aug";
+month[8] = "Sep";
+month[9] = "Oct";
+month[10] = "Nov";
+month[11] = "Dec";
+
+var day_name = new Array(7);
+day_name[0] = "Sunday";
+day_name[1] = "Monday";
+day_name[2] = "Tuesday";
+day_name[3] = "Wednesday";
+day_name[4] = "Thursday";
+day_name[5] = "Friday";
+day_name[6] = "Saturday";
+
+for (k = 0; k < allEntries.length; k++) { 
+if (allEntries[k].page_id == page_id){	
+var unix = allEntries[k].expiry + offset;
+var d = new Date(unix);
+var month_name = month[d.getUTCMonth()];
+var weekday_name = day_name[d.getUTCDay()];
+var day = d.getUTCDate();
+
+var firstdate = weekday_name + ", " + month_name + " " + day ;
+var datetime = '<div class="messages-date" style="padding:0;float:left;margin:0;"><i class="pe-7s-clock"></i> Expires '+ firstdate +'</div>';
+$$( '#like-deals-here' ).append( '<li class="virtual-content swipeout" style="border-right:3px solid #ff8000;margin-top:5px;margin-bottom:5px;">' +
                   '<div class="swipeout-content item-content">'+
-                  '<div class="item-media" onclick="removelikelList(\''+ res[i][2]  +'\',\''+ res[i][1]  +'\',\''+ res[i][21]  +'\',\''+ res[i][16]  +'\')" style="padding:5px;"><img src="http://smilesavers.net.au/images/compressed/'+res[i][1]+'_'+res[i][21]+'.jpg" style="width:40px;max-height:40px;overflow:hidden;"/></div>' +
-                  '<div class="item-inner virtual-inner" onclick="removelikelList(\''+ res[i][2]  +'\',\''+ res[i][1] +'\',\''+ res[i][21]  +'\',\''+ res[i][16]  +'\')">' +
+                  '<div class="item-media" onclick="removelikelList(\''+ allEntries[k].post_id  +'\',\''+allEntries[k].page_id +'\',\''+ allEntries[k].photo  +'\',\''+ allEntries[k].name  +'\')" style="padding:5px;"><img src="http://smilesavers.net.au/images/compressed/'+allEntries[k].page_id +'_'+allEntries[k].photo +'.jpg" style="width:40px;max-height:40px;overflow:hidden;"/></div>' +
+                  '<div class="item-inner virtual-inner" onclick="removelikelList(\''+ allEntries[k].post_id  +'\',\''+allEntries[k].page_id +'\',\''+ allEntries[k].photo  +'\',\''+ allEntries[k].name  +'\')">' +
                      '<div class="item-title-row">'+
-                         '<div class="item-title"><img src="http://graph.facebook.com/'+res[i][1]+'/picture?width=15&height=15" style="border-radius:50%;max-width:15px;margin-right:10px;"/>'+ res[i][3] +'</div>' +
+                         '<div class="item-title"><img src="http://graph.facebook.com/'+allEntries[k].page_id+'/picture?width=15&height=15" style="border-radius:50%;max-width:15px;margin-right:10px;"/>'+ allEntries[k].title +'</div>' +
                         '<div class="item-after"><i class="pe-7s-angle-left pe-lg" style="color:#ff8000;"></i></div>'+
                     '</div>'+
-                    '<div class="item-subtitle">'+ res[i][16] +'</div>' +
-                    '<div "class="item-text"">'+ res[i][6] +'</div>' +
+                    '<div class="item-subtitle">'+ allEntries[k].name +'</div>' +
+                    '<div "class="item-text"">'+ datetime +'</div>' +
                   '</div>' +
                '</div>'+
                            '<div class="swipeout-actions-right right_'+ res[i][2]  +'">' +
-        '<a href="#" onclick="removelikelList(\''+ res[i][2]  +'\',\''+ res[i][1]  +'\',\''+ res[i][21]  +'\',\''+ res[i][16]  +'\')"><i class="pe-7s-plus pe-2x"></i></a>' +
-        '<a href="#" onclick="removelikeList(\''+ res[i][2]  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a>' +
+        '<a href="#" onclick="removelikelList(\''+ allEntries[k].post_id  +'\',\''+allEntries[k].page_id +'\',\''+ allEntries[k].photo  +'\',\''+ allEntries[k].name  +'\')"><i class="pe-7s-plus pe-2x"></i></a>' +
+        '<a href="#" onclick="removelikeList(\''+ allEntries[k].post_id  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a>' +
       '</div>' +
-                                        
-               
+ '</li>');
+}
 
-               '</li>');
-*/
+
+
 $$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=' + page_id, function(res){
 
 
