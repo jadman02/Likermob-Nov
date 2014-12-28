@@ -1066,7 +1066,7 @@ mainView.loadContent(
         '  </div>' +
         '</div>'
     );
-/*
+
 var datetoday = new Date();
 var offset = datetoday.getTimezoneOffset() * 60;
 var month = new Array(12);
@@ -1091,7 +1091,7 @@ day_name[3] = "Wednesday";
 day_name[4] = "Thursday";
 day_name[5] = "Friday";
 day_name[6] = "Saturday";
-
+var allEntries = JSON.parse(localStorage.getItem("allEntries"));
 for (k = 0; k < allEntries.length; k++) { 
 if (allEntries[k].page_id == page_id){	
 var unix = allEntries[k].expiry + offset;
@@ -1120,7 +1120,7 @@ $$( '#like-deals-here' ).append( '<li class="virtual-content swipeout" style="bo
       '</div>' +
  '</li>');
 }
-*/
+
 
 
 $$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=' + page_id, function(res){
@@ -1146,7 +1146,7 @@ $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(res
 	
     initialize(res[0][13],res[0][14]);
   
- var allEntries = JSON.parse(localStorage.getItem("allEntries"));
+ 
 
     for (i = 1; i < res.length; i++) {
 
