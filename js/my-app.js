@@ -1194,7 +1194,7 @@ if (allEntries[j].post_id == res[i][2]){
 }
 }
  var deals_notliked = totaldeals - deals_liked;
- document.getElementById("after-notliked").innerHTML = deals_notliked;
+ document.getElementById("after-notliked").innerHTML = totaldeals;
     	
     }
 
