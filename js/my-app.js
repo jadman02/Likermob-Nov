@@ -1051,6 +1051,7 @@ mainView.loadContent(
         '    <div class="page-content cover-business" style="z-index: 1;margin-top:30px;">' +
         '      <div class="content-block" style="padding-top:40px;">' +
         '        <div class="content-block-inner" style="background-color:rgba(255,255,255,.4);"">' +
+	      '<div id="cover-div"></div>'+
 	      '<div class="list-block media-list"><ul><div id="info-here"></div></ul></div>' +
 	        '<div class="content-block-title">Current Deals</div>'+
 	'<div class="list-block media-list"><ul><div id="deals-here"></div></ul></div>' +
@@ -1077,9 +1078,10 @@ $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(res
 	
 	
 	var coverpic = response["cover"]["source"];
-	$$( '.cover-business' ).css( 'background-image', 'url(\''+ coverpic  +'\')' );
-	$$( '.cover-business' ).css( 'background-size', '100%' );
-	$$( '.cover-business' ).css( 'background-repeat', 'no-repeat' );
+	$$( '#cover-div' ).append('<img src="'+ coverpic  +'"/>');
+	//$$( '.cover-business' ).css( 'background-image', 'url(\''+ coverpic  +'\')' );
+	//$$( '.cover-business' ).css( 'background-size', '100%' );
+	//$$( '.cover-business' ).css( 'background-repeat', 'no-repeat' );
 	
 });	
 	
