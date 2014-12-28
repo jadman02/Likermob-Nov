@@ -1052,11 +1052,11 @@ mainView.loadContent(
         '    <div class="page-content cover-business" style="z-index: 1;">' +
         '      <div class="content-block" style="margin-top:-10px;">' +
         '        <div class="content-block-inner" style="background-color:rgba(255,255,255,.4);"">' +
-	      '<div class="list-block media-list" style="margin-top:-10px;"><ul><div id="cover-div"></div><div id="info-here"></div></ul></div>' +
+	      '<div class="list-block media-list" style="margin-top:-10px;"><ul><div id="cover-div"></div><div id="info-here"><li><a href="#" class="item-content" style="color:#666;"><div class="item-media" style="margin-left:30px;width:50px;"></div><div class="item-inner"><div class="item-title-row"><div class="item-title"><i class="pe-7s-call pe-lg button"></i> <i class="pe-7s-mouse pe-lg button" <i class="pe-7s-mail pe-lg button"></i>></i></div></div></div></a></li></div></ul></div>' +
 
-	'<div class="list-block media-list"><ul><li><div class="item-content"><div class="item-media"><i class="pe-7s-like2 pe-2x"></i></div><div class="item-inner"><div class="item-title">Deals I Like</div></div></div></li><div id="like-deals-here"></div></ul></div>' +
+	'<div class="list-block media-list"><ul><li style="background-color:#3b5998;color:white;"><div class="item-content"><div class="item-media"><i class="pe-7s-like2 pe-2x"></i></div><div class="item-inner"><div class="item-title">Deals I Like</div></div></div></li><div id="like-deals-here"></div></ul></div>' +
 
-	'<div class="list-block media-list"><ul><li><div class="item-content"><div class="item-media"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></div><div class="item-inner"><div class="item-title">Deals I Don\'t Like</div></div></div></li><div id="deals-here"></div></ul></div>' +
+	'<div class="list-block media-list"><ul><li style="background-color:#ff8000;color:white;"><div class="item-content"><div class="item-media"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></div><div class="item-inner"><div class="item-title">Deals I Don\'t Like</div></div></div></li><div id="deals-here"></div></ul></div>' +
 
         
         
@@ -1135,7 +1135,7 @@ $$( '#info-here' ).append('<li><a href="#" class="item-content" style="color:#66
 }
 
 if (res[0][4]){
-$$( '#info-here' ).append('<li><a href="#" tel="'+ res[0][4] +'" class="item-content" style="color:#666;"><div class="item-media" style="margin-left:30px;"><i class="pe-7s-call pe-lg"></i></div><div class="item-inner"><div class="item-title-row"><div class="item-title">Call</div></div></div></a></li>');
+
 }
 
 if (res[0][15]){
