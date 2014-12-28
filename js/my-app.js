@@ -1052,11 +1052,11 @@ mainView.loadContent(
         '    <div class="page-content cover-business" style="z-index: 1;">' +
         '      <div class="content-block" style="margin-top:-9px;">' +
         '        <div class="content-block-inner" style="background-color:rgba(255,255,255,.4);"">' +
-	      '<div class="list-block media-list" style="margin-top:0px;"><ul><div id="cover-div"></div><div id="info-here"></div><li><a href="#" class="button"><i class="pe-7s-call pe-lg"></i></a> <a href="#" class="button"><i class="pe-7s-mail pe-lg button"></i></a></li></ul></div>' +
+	      '<div class="list-block media-list" style="margin-top:0px;"><ul><div id="cover-div"></div><div id="info-here"></div></ul></div>' +
 
-	'<div class="list-block media-list"><ul><li style="background-color:#3b5998;color:white;"><div class="item-content"><div class="item-media"><i class="pe-7s-like2 pe-lg"></i></div><div class="item-inner" style="border:0"><div class="item-title">Deals I Like</div></div></div></li><div id="like-deals-here"></div></ul></div>' +
+	'<div class="list-block media-list"><ul><li style="background-color:#3b5998;color:white;"><div class="item-content"><div class="item-inner" style="border:0;text-align:center;"><div class="item-title"><i class="pe-7s-like2 pe-lg"></i> Deals I Like</div></div></div></li><div id="like-deals-here"></div></ul></div>' +
 
-	'<div class="list-block media-list"><ul><li style="background-color:#ff8000;color:white;"><div class="item-content"><div class="item-media"><i class="pe-7s-like2 pe-lg pe-rotate-180"></i></div><div class="item-inner" style="border:0"><div class="item-title">Deals I Don\'t Like</div></div></div></li><div id="deals-here"></div></ul></div>' +
+	'<div class="list-block media-list"><ul><li style="background-color:#ff8000;color:white;"><div class="item-content"><div class="item-inner" style="border:0;text-align:center;"><div class="item-title"><i class="pe-7s-like2 pe-lg pe-rotate-180"></i> Deals I Don\'t Like</div></div></div></li><div id="deals-here"></div></ul></div>' +
 
         
         
@@ -1068,7 +1068,9 @@ mainView.loadContent(
     );
 
 
-$$( '#info-here' ).append('<li><div class="item-content"><div class="item-media"><i class="pe-7s-ribbon pe-2x"></i></div><div class="item-inner"><div class="item-title">'+ name +'</div></div></div></li>');
+$$( '#info-here' ).append('<li><div class="item-content"><div class="item-media"><i class="pe-7s-ribbon pe-2x"></i></div><div class="item-inner"><div class="item-title-row"><div class="item-title">'+ name +'</div><div class="item-after name_after"></div></div></div></div></li>');
+
+ 
 
 var datetoday = new Date();
 var offset = datetoday.getTimezoneOffset() * 60;
@@ -1135,16 +1137,14 @@ $$( '#info-here' ).append('<li><a href="#" class="item-content" style="color:#66
 }
 
 if (res[0][4]){
-
+$$( '.name_after' ).append('<a href="#" class="button"><i class="pe-7s-call pe-lg"></i></a>');
 }
-
-if (res[0][15]){
-$$( '#info-here' ).append('<li><a href="'+ res[0][15] +'" class="item-content" style="color:#666;"><div class="item-media" style="margin-left:30px;"><i class="pe-7s-mouse pe-lg"></i></div><div class="item-inner"><div class="item-title-row"><div class="item-title">Website</div></div></div></a></li>');
-}
+else {$$( '.name_after' ).append('<a href="#" class="button disabled"><i class="pe-7s-call pe-lg"></i></a>');}
 
 if (res[0][16]){
-$$( '#info-here' ).append('<li><a href="mailto:'+ res[0][16] +'" class="item-content" style="color:#666;"><div class="item-media" style="margin-left:30px;"><i class="pe-7s-mail pe-lg"></i></div><div class="item-inner"><div class="item-title-row"><div class="item-title">Email</div></div></div></a></li>');
+$$( '.name_after' ).append('<a href="#" class="button"><i class="pe-7s-mail pe-lg"></i></a>');
 }
+else {$$( '.name_after' ).append('<a href="#" class="button disabled"><i class="pe-7s-mail pe-lg"></i></a>');}
 	
 $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(response){
 	
