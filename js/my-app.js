@@ -1097,7 +1097,7 @@ if (allEntries[k].page_id == page_id){
 
 $$( '#like-deals-here' ).append(allEntries[k].title + ',');
 
-/*
+
 var unix = allEntries[k].expiry + offset;
 var d = new Date(unix);
 var month_name = month[d.getUTCMonth()];
@@ -1118,12 +1118,12 @@ $$( '#like-deals-here' ).append( '<li class="virtual-content swipeout" style="bo
                     '<div "class="item-text"">'+ datetime +'</div>' +
                   '</div>' +
                '</div>'+
-                           '<div class="swipeout-actions-right right_'+ res[i][2]  +'">' +
+                           '<div class="swipeout-actions-right">' +
         '<a href="#" onclick="removelikelList(\''+ allEntries[k].post_id  +'\',\''+allEntries[k].page_id +'\',\''+ allEntries[k].photo  +'\',\''+ allEntries[k].name  +'\')"><i class="pe-7s-plus pe-2x"></i></a>' +
         '<a href="#" onclick="removelikeList(\''+ allEntries[k].post_id  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a>' +
       '</div>' +
  '</li>');
-*/
+
 }
 }
 
