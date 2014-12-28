@@ -1040,7 +1040,7 @@ mainView.loadContent(
         '<div class="navbar business">' +
         '  <div class="navbar-inner">' +
         '    <div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>' +
-        '<div class="center"><img src="http://graph.facebook.com/1475871535982658/picture?width=30&height=30" style="border-radius:50%;width:30px;"/></div>'+
+        '<div class="center"><img src="http://graph.facebook.com/'+page_id+'/picture?width=30&height=30" style="border-radius:50%;width:30px;"/></div>'+
         '    <div class="right"><div class="item-input" onclick="openMap();"><label class="label-switch"><input type="checkbox"><div class="checkbox"></div></label></div>' +
         '  </div>' +
         '</div>' +
@@ -1054,9 +1054,9 @@ mainView.loadContent(
         '        <div class="content-block-inner" style="background-color:rgba(255,255,255,.4);"">' +
 	      '<div class="list-block media-list" style="margin-top:0px;"><ul><div id="cover-div"></div><div id="info-here"></div></ul></div>' +
 
-	'<div class="list-block media-list"><ul><li style="background-color:#3b5998;color:white;"><div class="item-content"><div class="item-media"><i class="pe-7s-like2 pe-lg"></i></div><div class="item-inner" style="border:0;text-align:center;"><div class="item-title">Deals I Like</div></div></div></li><div id="like-deals-here"></div></ul></div>' +
+	'<div class="list-block media-list"><ul><li style="background-color:#3b5998;color:white;"><div class="item-content"><div class="item-media"><i class="pe-7s-like2 pe-lg"></i></div><div class="item-inner" style="border:0;"><div class="item-title">Deals I Like</div></div></div></li><div id="like-deals-here"></div></ul></div>' +
 
-	'<div class="list-block media-list"><ul><li style="background-color:#ff8000;color:white;"><div class="item-content"><div class="item-media"><i class="pe-7s-like2 pe-lg pe-rotate-180"></i></div><div class="item-inner" style="border:0;text-align:center;"><div class="item-title">Deals I Don\'t Like</div></div></div></li><div id="deals-here"></div></ul></div>' +
+	'<div class="list-block media-list"><ul><li style="background-color:#ff8000;color:white;"><div class="item-content"><div class="item-media"><i class="pe-7s-like2 pe-lg pe-rotate-180"></i></div><div class="item-inner" style="border:0;"><div class="item-title">Deals I Don\'t Like</div></div></div></li><div id="deals-here"></div></ul></div>' +
 
         
         
@@ -1137,14 +1137,14 @@ $$( '#info-here' ).append('<li><a href="#" class="item-content" style="color:#66
 }
 
 if (res[0][4]){
-$$( '.name_after' ).append('<a href="#" class="button" style="border-radius:50%;width:30px;height:30px;margin-right:5px;"><i class="pe-7s-call pe-lg"></i></a>');
+$$( '.name_after' ).append('<a href="#" class="button" style="border:0;width:30px;height:30px;margin-right:5px;"><i class="pe-7s-call pe-lg"></i></a>');
 }
-else {$$( '.name_after' ).append('<a href="#" class="button disabled" style="border-radius:50%;width:30px;height:30px;margin-right:5px;"><i class="pe-7s-call pe-lg"></i></a>');}
+else {$$( '.name_after' ).append('<a href="#" class="button disabled" style="border:0;width:30px;height:30px;margin-right:5px;"><i class="pe-7s-call pe-lg"></i></a>');}
 
 if (res[0][16]){
-$$( '.name_after' ).append('<a href="#" class="button" style="border-radius:50%;width:30px;height:30px;"><i class="pe-7s-mail pe-lg"></i></a>');
+$$( '.name_after' ).append('<a href="#" class="button" style="border:0;width:30px;height:30px;"><i class="pe-7s-mail pe-lg"></i></a>');
 }
-else {$$( '.name_after' ).append('<a href="#" class="button disabled" style="border-radius:50%;width:30px;height:30px;"><i class="pe-7s-mail pe-lg"></i></a>');}
+else {$$( '.name_after' ).append('<a href="#" class="button disabled" style="border:0;width:30px;height:30px;"><i class="pe-7s-mail pe-lg"></i></a>');}
 	
 $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(response){
 	
