@@ -17,10 +17,8 @@ var uid = localStorage.getItem("uid");
 document.getElementById("profilepic").innerHTML = '<img src="http://graph.facebook.com/' + uid + '/picture?type=normal" style="margin:0 auto;text-align:center;width:80px;border-radius:50%;"/>';
 
     functionEmpty('a',0,2,0);
-
-  var likeCount = localStorage.getItem("likeCount");
-    if(likeCount == null) likeCount = 0;
-$$('.badge-like').text(likeCount);
+var existingEntries = JSON.parse(localStorage.getItem("allEntries"));
+$$('.badge-like').text(existingEntries.length);
 
 var previousScrollPosition = 0;
 $$('.pull-to-refresh-content').on('scroll', function (e) {
@@ -760,12 +758,9 @@ var d = new Date();
     // Save allEntries back to local storage
     existingEntries.unshift(entry);
     localStorage.setItem("allEntries", JSON.stringify(existingEntries));
+    $$('.badge-like').text(existingEntries.length);
   //alert(localStorage.getItem("allEntries"));	
-  var likeCount = localStorage.getItem("likeCount");
-    if(likeCount == null) likeCount = 0;
-likeCount ++;
-$$('.badge-like').text(likeCount);
-localStorage.setItem("likeCount", likeCount);	
+
 
 }
 
