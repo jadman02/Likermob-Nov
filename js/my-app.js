@@ -17,10 +17,8 @@ var uid = localStorage.getItem("uid");
 document.getElementById("profilepic").innerHTML = '<img src="http://graph.facebook.com/' + uid + '/picture?type=normal" style="margin:0 auto;text-align:center;width:80px;border-radius:50%;"/>';
 
     functionEmpty('a',0,2,0);
-
-  var likeCount = localStorage.getItem("likeCount");
-    if(likeCount == null) likeCount = 0;
-$$('.badge-like').text(likeCount);
+var existingEntries = JSON.parse(localStorage.getItem("allEntries"));
+$$('.badge-like').text(existingEntries.length);
 
 var previousScrollPosition = 0;
 $$('.pull-to-refresh-content').on('scroll', function (e) {
@@ -761,11 +759,8 @@ var d = new Date();
     existingEntries.unshift(entry);
     localStorage.setItem("allEntries", JSON.stringify(existingEntries));
   //alert(localStorage.getItem("allEntries"));	
-  var likeCount = localStorage.getItem("likeCount");
-    if(likeCount == null) likeCount = 0;
-likeCount ++;
-$$('.badge-like').text(likeCount);
-localStorage.setItem("likeCount", likeCount);	
+var existingEntries = JSON.parse(localStorage.getItem("allEntries"));
+$$('.badge-like').text(existingEntries.length);
 
 }
 
@@ -1038,7 +1033,7 @@ $$("#loader-container").show();
 mainView.loadContent(
         '<!-- Top Navbar-->' +
         '<div class="navbar business">' +
-        '  <div class="navbar-inner">' +
+        '  <div class="navbar-inner" style="border-bottom: 1px solid #c4c4c4;">' +
         '    <div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>' +
         '<div class="center"><img src="http://graph.facebook.com/'+page_id+'/picture?width=30&height=30" style="border-radius:50%;width:30px;"/></div>'+
         '    <div class="right"><div class="item-input" onclick="openMap();"><label class="label-switch"><input type="checkbox"><div class="checkbox"></div></label></div>' +
@@ -1134,7 +1129,7 @@ document.getElementById("after-liked").innerHTML = deals_liked;
 $$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=' + page_id, function(res){
 
 if (res[0][8]){
-$$( '#info-here' ).append('<li><a href="#" onclick="openMap();" class="item-content" style="color:#666;"><div class="item-media" style="margin-left:30px;"><i class="pe-7s-map pe-lg"></i></div><div class="item-inner"><div class="item-title-row"><div class="item-title">'+ res[0][6] + ' ' + res[0][7] + ' ' +  res[0][8] + '</div></div><div class="item-subtitle">'+ res[0][9] + ' ' + res[0][10] + ' ' + res[0][11]+'</div></div></a></li>');
+$$( '#info-here' ).append('<li><a href="#" onclick="openMap();" class="item-content" style="color:#666;"><div class="item-media" style="margin-left:30px;"><i class="pe-7s-map pe-lg"></i></div><div class="item-inner"><div class="item-title-row"><div class="item-title">'+ res[0][6] + ' ' + res[0][7] + '</div></div><div class="item-subtitle">'+ res[0][9] + ' ' + res[0][10] + ' ' + res[0][11]+'</div></div></a></li>');
 }
 
 if (res[0][4]){
@@ -1194,7 +1189,7 @@ if (allEntries[j].post_id == res[i][2]){
 }
 }
  var deals_notliked = totaldeals - deals_liked;
- document.getElementById("after-notliked").innerHTML = totaldeals;
+ document.getElementById("after-notliked").innerHTML = deals_notliked;
     	
     }
 
