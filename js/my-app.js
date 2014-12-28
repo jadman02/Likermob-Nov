@@ -1040,7 +1040,7 @@ mainView.loadContent(
         '<div class="navbar business">' +
         '  <div class="navbar-inner">' +
         '    <div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>' +
-        '<div class="center"><div id="bus-icon"></div></div>'+
+        '<div class="center"><img src="http://graph.facebook.com/1475871535982658/picture?width=30&height=30" style="border-radius:50%;width:30px;"/></div>'+
         '    <div class="right"><div class="item-input" onclick="openMap();"><label class="label-switch"><input type="checkbox"><div class="checkbox"></div></label></div>' +
         '  </div>' +
         '</div>' +
@@ -1067,7 +1067,7 @@ mainView.loadContent(
         '</div>'
     );
 
-$$( '#bus-icon' ).append('<img src="http://graph.facebook.com/'+ page_id +'/picture?width=30&height=30" style="border-radius:50%;width:30px;"/>');
+
 $$( '#info-here' ).append('<li><div class="item-content"><div class="item-media"><i class="pe-7s-ribbon pe-2x"></i></div><div class="item-inner"><div class="item-title">'+ name +'</div></div></div></li>');
 
 var datetoday = new Date();
