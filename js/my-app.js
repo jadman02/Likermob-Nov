@@ -303,7 +303,7 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 '<a href="#" onclick="loadMore(\''+ response[i][1]  +'\',\''+ homecontentimage  +'\',\''+ response[i][3]  +'\',\''+ uid +'\',\''+ response[i][2]  +'\');" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-more pe-2x" style="margin-left:-5px;margin-top:5px;"></i></a>'+
 staryellow +
 starblue +
-'<div id="starinsert"></div><a href="#" id="mapicon" onclick="getBusiness(\''+ response[i][1]  +'\');" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-map pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a>'+
+'<div id="starinsert"></div><a href="#" id="mapicon" onclick="getBusiness(\''+ response[i][1]  +'\',\''+ response[i][16]  +'\');" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-map pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a>'+
 '</div>'+ 
 
     
@@ -325,7 +325,7 @@ starblue +
 '<div class="messages-date">Sunday, Feb 3 <span>11:58</span></div>'+ 
 
 '<div class="row">'+
-        '<div class="col-20"><a href="#" onclick="getBusiness(\''+ response[i][1]  +'\');" style="height:100px;z-index:100;float:left;margin:0 auto;border:0;background-color:transparent;margin-top:20px;" class="button"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=30&height=30" style="border-radius:50%;"/></a></div>'+
+        '<div class="col-20"><a href="#" onclick="getBusiness(\''+ response[i][1]  +'\',\''+ response[i][16]  +'\');" style="height:100px;z-index:100;float:left;margin:0 auto;border:0;background-color:transparent;margin-top:20px;" class="button"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=30&height=30" style="border-radius:50%;"/></a></div>'+
         '<div class="col-80"><div class="messages-date" style="float:left;margin:0;padding:0;"><span>Smilesavers</span></div><div style="background-color:#e5e5ea;padding:10px;padding-bottom:30px;border-radius:10px;margin-top:20px;"><div id="dealtitle" style="float:left;font-weight:500;">'+ response[i][3] + ' fklasjdl ksadjskld jsakldjs akld the best in the world</div><br/><div style="clear:both;">'+response[i][4]+'</div><div style="float:left;font-size:14px;clear:both;"><i class="pe-7s-clock pe-lg"></i> Expires in 6 days</div></div></div>'+
 '</div>'+
 
@@ -1029,12 +1029,12 @@ $$( "#" + id + "icon" ).addClass( "green" );
 
 }
 
-function getBusiness(page_id) {
+function getBusiness(page_id,name) {
 
 
 $$("#result li").remove();
 $$("#loader-container").show();
-alert(page_id);
+
 mainView.loadContent(
         '<!-- Top Navbar-->' +
         '<div class="navbar business">' +
@@ -2681,7 +2681,7 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
 
 
         '<a href="#" onclick="removelikelList(\''+ item.post_id  +'\',\''+ item.page_id  +'\',\''+ item.photo  +'\',\''+ item.name  +'\')"><i class="pe-7s-plus pe-2x"></i></a>' +
-        '<a href="#"><i class="pe-7s-map pe-2x"></i></a>' +
+        '<a href="#" onclick="getBusiness(\''+ item.page_id  +'\',\''+ item.name  +'\');"><i class="pe-7s-map pe-2x"></i></a>' +
         '<a href="#" onclick="removelikeList(\''+ item.post_id  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a>' +
       '</div>' +
                '</li>';
@@ -2735,7 +2735,7 @@ myApp.modal({
       {
         text: '<i class="pe-7s-map pe-lg"></i>',
         onClick: function() {
-        	getBusiness(page_id);
+        	getBusiness(page_id,name);
         }
       },
     ]
