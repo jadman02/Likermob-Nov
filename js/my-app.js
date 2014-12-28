@@ -1034,13 +1034,13 @@ function getBusiness(page_id,name) {
 
 $$("#result li").remove();
 $$("#loader-container").show();
-alert(name);
+
 mainView.loadContent(
         '<!-- Top Navbar-->' +
         '<div class="navbar business">' +
         '  <div class="navbar-inner">' +
         '    <div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>' +
-        '<div class="center"><img src="http://graph.facebook.com/'+ page_id +'/picture?width=30&height=30" style="border-radius:50%;width:30px;;"/></div>'+
+        '<div class="center"><div id="bus-icon"></div></div>'+
         '    <div class="right"><div class="item-input" onclick="openMap();"><label class="label-switch"><input type="checkbox"><div class="checkbox"></div></label></div>' +
         '  </div>' +
         '</div>' +
@@ -1052,8 +1052,7 @@ mainView.loadContent(
         '    <div class="page-content cover-business" style="z-index: 1;">' +
         '      <div class="content-block" style="margin-top:-10px;">' +
         '        <div class="content-block-inner" style="background-color:rgba(255,255,255,.4);"">' +
-	      '<div id="cover-div"></div>'+
-	      '<div class="list-block media-list"><ul><div id="info-here"></div></ul></div>' +
+	      '<div class="list-block media-list"><ul><div id="cover-div"></div><div id="info-here"></div></ul></div>' +
 	        '<div class="content-block-title">Deals I like</div>'+
 	'<div class="list-block media-list"><ul><div id="like-deals-here"></div></ul></div>' +
 	        '<div class="content-block-title">Deals I don\'t like</div>'+
@@ -1067,6 +1066,9 @@ mainView.loadContent(
         '  </div>' +
         '</div>'
     );
+
+$$( '#bus-icon' ).append('<img src="http://graph.facebook.com/'+ page_id +'/picture?width=30&height=30" style="border-radius:50%;width:30px;"/>');
+$$( '#info-here' ).append('<li><div class="item-content"><div class="item-media"><i class="pe-7s-ribbon pe-2x"></i></div><div class="item-inner"><div class="item-title">'+ name +'</div></div></div></li>');
 
 var datetoday = new Date();
 var offset = datetoday.getTimezoneOffset() * 60;
@@ -1139,7 +1141,7 @@ $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(res
 	
 	
 	var coverpic = response["cover"]["source"];
-	$$( '#cover-div' ).append('<img src="'+ coverpic  +'" style="width:100%"/>');
+	$$( '#cover-div' ).append('<li><img src="'+ coverpic  +'" style="width:100%"/></li>');
 	//$$( '.cover-business' ).css( 'background-image', 'url(\''+ coverpic  +'\')' );
 	//$$( '.cover-business' ).css( 'background-size', '100%' );
 	//$$( '.cover-business' ).css( 'background-repeat', 'no-repeat' );
