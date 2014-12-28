@@ -1034,7 +1034,7 @@ function getBusiness(page_id) {
 
 $$("#result li").remove();
 $$("#loader-container").show();
-
+alert(page_id);
 mainView.loadContent(
         '<!-- Top Navbar-->' +
         '<div class="navbar business">' +
