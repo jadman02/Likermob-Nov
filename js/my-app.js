@@ -1094,10 +1094,6 @@ day_name[6] = "Saturday";
 var allEntries = JSON.parse(localStorage.getItem("allEntries"));
 for (k = 0; k < allEntries.length; k++) { 
 if (allEntries[k].page_id == page_id){	
-
-$$( '#like-deals-here' ).append(allEntries[k].title + ',');
-
-
 var unix = allEntries[k].expiry + offset;
 var d = new Date(unix);
 var month_name = month[d.getUTCMonth()];
