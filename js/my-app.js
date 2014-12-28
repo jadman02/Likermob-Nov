@@ -1133,7 +1133,9 @@ $$( '.business-right' ).append('<a href="tel:'+res[0][4]+'" class="button extern
 if (res[0][16]){
 $$( '.business-right' ).append('<a href="mailto:'+res[0][16]+'" class="button external" style="border:0;width:30px;height:30px;"><i class="pe-7s-mail pe-lg"></i></a>');
 }
-//onclick="openMap();"
+if (res[0][13] && res[0][14])
+$$( '.business-right' ).append('<a href="#" class="button" onclick="openMap();" style="border:0;width:30px;height:30px;"><i class="pe-7s-map pe-lg"></i></a>');
+
 	
 $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(response){
 	
