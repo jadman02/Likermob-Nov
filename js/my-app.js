@@ -1120,6 +1120,7 @@ $$( '#like-deals-here' ).append( '<li class="virtual-content swipeout" style="bo
       '</div>' +
  '</li>');
 }
+}
 
 
 
