@@ -1050,13 +1050,13 @@ mainView.loadContent(
         '    <!-- Scrollable page content-->' +
 '<div id="map-canvas"></div>' +
         '    <div class="page-content cover-business" style="z-index: 1;">' +
-        '      <div class="content-block" style="margin-top:-10px;">' +
+        '      <div class="content-block" style="margin-top:-9px;">' +
         '        <div class="content-block-inner" style="background-color:rgba(255,255,255,.4);"">' +
-	      '<div class="list-block media-list" style="margin-top:-10px;"><ul><div id="cover-div"></div><div id="info-here"><li><a href="#" class="item-content" style="color:#666;"><div class="item-media" style="margin-left:30px;width:50px;"></div><div class="item-inner"><div class="item-title-row"><div class="item-title"><i class="pe-7s-call pe-lg button"></i> <i class="pe-7s-mouse pe-lg button" <i class="pe-7s-mail pe-lg button"></i>></i></div></div></div></a></li></div></ul></div>' +
+	      '<div class="list-block media-list" style="margin-top:0px;"><ul><div id="cover-div"></div><div id="info-here"></div><li><a href="#" class="button"><i class="pe-7s-call pe-lg"></i></a> <a href="#" class="button"><i class="pe-7s-mail pe-lg button"></i></a></li></ul></div>' +
 
-	'<div class="list-block media-list"><ul><li style="background-color:#3b5998;color:white;"><div class="item-content"><div class="item-media"><i class="pe-7s-like2 pe-2x"></i></div><div class="item-inner"><div class="item-title">Deals I Like</div></div></div></li><div id="like-deals-here"></div></ul></div>' +
+	'<div class="list-block media-list"><ul><li style="background-color:#3b5998;color:white;"><div class="item-content"><div class="item-media"><i class="pe-7s-like2 pe-lg"></i></div><div class="item-inner" style="border:0"><div class="item-title">Deals I Like</div></div></div></li><div id="like-deals-here"></div></ul></div>' +
 
-	'<div class="list-block media-list"><ul><li style="background-color:#ff8000;color:white;"><div class="item-content"><div class="item-media"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></div><div class="item-inner"><div class="item-title">Deals I Don\'t Like</div></div></div></li><div id="deals-here"></div></ul></div>' +
+	'<div class="list-block media-list"><ul><li style="background-color:#ff8000;color:white;"><div class="item-content"><div class="item-media"><i class="pe-7s-like2 pe-lg pe-rotate-180"></i></div><div class="item-inner" style="border:0"><div class="item-title">Deals I Don\'t Like</div></div></div></li><div id="deals-here"></div></ul></div>' +
 
         
         
