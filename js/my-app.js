@@ -551,7 +551,6 @@ localStorage.setItem("allEntries", JSON.stringify(existingEntries));
 }
 
 function removefavList(page_id,post_id){
-	alert('remove favlist');
 if (typeof post_id === '9') {$$( '#yellow_b' ).css( 'color', '#ccc');}
 if (typeof post_id === 'undefined') {$$( '.starcon_' + page_id ).css( 'color', '#ccc');}
 else{$$( '#yellow_' + post_id ).addClass( 'hide' );
