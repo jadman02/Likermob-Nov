@@ -551,6 +551,7 @@ localStorage.setItem("allEntries", JSON.stringify(existingEntries));
 }
 
 function removefavList(page_id,post_id){
+if (typeof post_id === '9') {$$( '#yellow_b' ).css( 'color', '#ccc');}
 if (typeof post_id === 'undefined') {$$( '.starcon_' + page_id ).css( 'color', '#ccc');}
 else{$$( '#yellow_' + post_id ).addClass( 'hide' );
 $$( '#blue_' + post_id ).removeClass( 'hide' );}
@@ -1062,10 +1063,10 @@ mainView.loadContent(
     );
 var favEntries = JSON.parse(localStorage.getItem("favEntries"));
 if(favEntries == null) favEntries = [];
-var staryellow = '<i class="pe-7s-star pe-lg hide" onclick="removefavList(\''+ page_id  +'\')" style="border:20px solid transparent;margin-top:-10px;color:#ffcc00;"></i>';
-var starblue = '<i class="pe-7s-star pe-lg" onclick="favList(\''+ page_id  +'\')" style="border:20px solid transparent;margin-top:-10px;"></i>';
+var staryellow = '<i class="pe-7s-star pe-lg hide" id="yellow_b" onclick="removefavList(\''+ page_id  +'\',9)" style="border:20px solid transparent;margin-top:-10px;color:#ffcc00;"></i>';
+var starblue = '<i class="pe-7s-star id="blue_b" pe-lg" onclick="favList(\''+ page_id  +'\',9)" style="border:20px solid transparent;margin-top:-10px;"></i>';
 
-if(favEntries.length > 0){for (j = 0; j < favEntries.length; j++) {if (favEntries[j].page_id == page_id){staryellow = '<i class="pe-7s-star pe-lg" onclick="removefavList(\''+  page_id  +'\')" style="border:20px solid transparent;color:#ffcc00;margin-top:-10px;"></i>';starblue = '<i class="pe-7s-star pe-lg hide" onclick="favList(\''+ page_id  +'\')" style="border:20px solid transparent;margin-top:-10px;"></i>';}}}
+if(favEntries.length > 0){for (j = 0; j < favEntries.length; j++) {if (favEntries[j].page_id == page_id){staryellow = '<i class="pe-7s-star pe-lg" id="yellow_b" onclick="removefavList(\''+  page_id  +'\',9)" style="border:20px solid transparent;color:#ffcc00;margin-top:-10px;"></i>';starblue = '<i class="pe-7s-star pe-lg hide" id="blue_b" onclick="favList(\''+ page_id  +'\',9)" style="border:20px solid transparent;margin-top:-10px;"></i>';}}}
 
 $$( '#info-here' ).append('<li><div class="item-content"><div class="item-media"><img src="http://graph.facebook.com/'+page_id+'/picture?width=30&height=30" style="border-radius:50%;width:30px;"/></div><div class="item-inner"><div class="item-title-row"><div class="item-title">'+ name +'</div><div class="item-after name_after">'+staryellow + starblue+'</div></div></div></div></li>');
 
