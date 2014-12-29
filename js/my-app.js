@@ -1048,9 +1048,9 @@ mainView.loadContent(
         '      <div class="content-block" style="margin-top:-9px;">' +
         '        <div class="content-block-inner" style="background-color:rgba(255,255,255,.4);"">' +
 	      '<div class="list-block media-list" style="margin-top:0px;"><ul style="background-color:hsla(0, 0%, 100%, 0.8);"><div id="cover-div"></div><div id="info-here"></div></ul></div>' +
-	'<div class="list-block media-list" style="margin-top:0px;"><ul style="background-color:hsla(0, 0%, 100%, 0.8);"><li style="background-color:#3b5998;color:white;"><div class="item-content" style="background-color:transparent"><div class="item-media"><i class="pe-7s-like2 pe-lg"></i></div><div class="item-inner" style="border:0;"><div class="item-title-row"><div class="item-title">Deals I Like</div><div id="after-liked" class="item-after"></div></div></div></div></li><div id="like-deals-here"></div></ul></div>' +
+	'<div class="list-block media-list" style="margin-top:-10px;"><ul style="background-color:hsla(0, 0%, 100%, 0.8);"><li style="background-color:#3b5998;color:white;"><div class="item-content" style="background-color:transparent"><div class="item-media"><i class="pe-7s-like2 pe-lg"></i></div><div class="item-inner" style="border:0;"><div class="item-title-row"><div class="item-title">Deals I Like</div><div id="after-liked" class="item-after"></div></div></div></div></li><div id="like-deals-here"></div></ul></div>' +
 
-	'<div class="list-block media-list" style="margin-top:0px;"><ul style="background-color:hsla(0, 0%, 100%, 0.8);"><li style="background-color:#ff8000;color:white;"><div class="item-content"><div class="item-media"><i class="pe-7s-like2 pe-lg pe-rotate-180"></i></div><div class="item-inner" style="border:0;"><div class="item-title-row"><div class="item-title">Deals I Don\'t Like</div><div id="after-notliked" class="item-after"></div></div></div></div></li><div id="deals-here"></div></ul></div>' +
+	'<div class="list-block media-list" style="margin-top:-10px;"><ul style="background-color:hsla(0, 0%, 100%, 0.8);"><li style="background-color:#ff8000;color:white;"><div class="item-content"><div class="item-media"><i class="pe-7s-like2 pe-lg pe-rotate-180"></i></div><div class="item-inner" style="border:0;"><div class="item-title-row"><div class="item-title">Deals I Don\'t Like</div><div id="after-notliked" class="item-after"></div></div></div></div></li><div id="deals-here"></div></ul></div>' +
 
 
         
@@ -1060,9 +1060,15 @@ mainView.loadContent(
         '  </div>' +
         '</div>'
     );
+if(favEntries == null) favEntries = [];
+var staryellow = '<i class="pe-7s-star pe-lg hide" onclick="removefavList(\''+ page_id  +'\',\''+ post_id  +'\')" id="yellow_'+ post_id +'" style="border:20px solid transparent;margin-top:-10px;color:#ffcc00;"></i>';
+var starblue = '<i class="pe-7s-star pe-lg" onclick="favList(\''+ page_id  +'\',\''+ post_id  +'\',\''+ name  +'\')" id="blue_'+ post_id +'" style="border:20px solid transparent;margin-top:-10px;"></i>';
+
+if(favEntries.length > 0){for (j = 0; j < favEntries.length; j++) {if (favEntries[j].page_id == page_id){staryellow = '<i class="pe-7s-star pe-lg" onclick="removefavList(\''+  page_id  +'\',\''+ post_id  +'\')" id="yellow_'+ post_id +'" style="border:20px solid transparent;color:#ffcc00;margin-top:-10px;"></i>';starblue = '<i class="pe-7s-star pe-lg hide" onclick="favList(\''+ page_id  +'\',\''+ post_id  +'\',\''+ name  +'\')" id="blue_'+ post_id +'" style="border:20px solid transparent;margin-top:-10px;"></i>';}}}
+
+$$( '#info-here' ).append('<li><div class="item-content"><div class="item-media"><img src="http://graph.facebook.com/'+page_id+'/picture?width=30&height=30" style="border-radius:50%;width:30px;"/></div><div class="item-inner"><div class="item-title-row"><div class="item-title">'+ name +'</div><div class="item-after name_after">'+staryellow + starblue+'</div></div></div></div></li>');
 
 
-$$( '#info-here' ).append('<li><div class="item-content"><div class="item-media"><img src="http://graph.facebook.com/'+page_id+'/picture?width=30&height=30" style="border-radius:50%;width:30px;"/></div><div class="item-inner"><div class="item-title-row"><div class="item-title">'+ name +'</div><div class="item-after name_after"></div></div></div></div></li>');
 
  //<i class="pe-7s-ribbon pe-2x"></i>
 
@@ -1854,56 +1860,7 @@ $$( ".location" ).removeClass( "active" );}
 
 
 
-function favouritesPage(){
-var user_likes = localStorage.getItem('user_likes');
-if (user_likes) {
 
-var popupHTML = 
-'<div class="popup">'+
-'<div class="navbar">'+
- ' <div class="navbar-inner">'+
- '<div id="left"><a href="#" class="close-popup"><i class="icon icon-back"></i><span>Close</span></a></div>'+
- '<div id="center">Favourites</div>'+
-  '<div id="right"><i class="pe-7s-refresh pe-2x"></i></div>'+
- '</div>'+
- '</div>'+
-	
-
-                    '<div class="content-block">'+
-'<div class="list-block virtual-list"></div>'+
-//'<a href="#" class="button" onclick="userLikesLogin();">Sync new Favs from Facebook</a>'+
-'yo'+
-                    '</div>'+
-                  '</div>'
- 
-
-
-myApp.popup(popupHTML);
-var favEntries = JSON.parse(localStorage.getItem("favEntries"));
-var myList = myApp.virtualList('.list-block.virtual-list', {
-    // Array with plain HTML items
-    items: [
-        '<li class="item-content"><div clas="item-inner"><div class="item-title">Item 1</div></div></li>',
-        '<li class="item-content"><div clas="item-inner"><div class="item-title">Item 2</div></div></li>',
-        '<li class="item-content"><div clas="item-inner"><div class="item-title">Item 3</div></div></li>',
-        '<li class="item-content"><div clas="item-inner"><div class="item-title">Item 1000</div></div></li>'
-    ]
-});
-
-
-//for (i = 0; i < favEntries.length; i++) {alert(favEntries[i].page_id);}
-
-	
-}
-else {
-//'<a href="#" class="button" onclick="userLikesLogin();">Get My Favourites</a>'+
-//'<a href="#" class="button" onclick="mylikes();">Get Likes</a>'+	
-	
-}
-	
-
-	
-}
 
 function searchPlaces(id){
 	
