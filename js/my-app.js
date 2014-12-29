@@ -1060,6 +1060,7 @@ mainView.loadContent(
         '  </div>' +
         '</div>'
     );
+var favEntries = JSON.parse(localStorage.getItem("favEntries"));
 if(favEntries == null) favEntries = [];
 var staryellow = '<i class="pe-7s-star pe-lg hide" onclick="removefavList(\''+ page_id  +'\',\''+ post_id  +'\')" id="yellow_'+ post_id +'" style="border:20px solid transparent;margin-top:-10px;color:#ffcc00;"></i>';
 var starblue = '<i class="pe-7s-star pe-lg" onclick="favList(\''+ page_id  +'\',\''+ post_id  +'\',\''+ name  +'\')" id="blue_'+ post_id +'" style="border:20px solid transparent;margin-top:-10px;"></i>';
