@@ -552,7 +552,7 @@ localStorage.setItem("allEntries", JSON.stringify(existingEntries));
 
 function removefavList(page_id,post_id){
 	
-if (post_id == '9') {$$( '#yellow_b' ).css( 'color', '#ccc');}
+if (post_id == '9') {$$( '#yellow_b' ).hide();$$( '#blue_b' ).show();}
 if (typeof post_id === 'undefined') {$$( '.starcon_' + page_id ).css( 'color', '#ccc');}
 else{$$( '#yellow_' + post_id ).addClass( 'hide' );
 $$( '#blue_' + post_id ).removeClass( 'hide' );}
@@ -767,7 +767,7 @@ $$('.badge-like').text(existingEntries.length);
 }
 
 function favList(page_id,post_id,name) {
-
+if (post_id == '9') {$$( '#blue_b' ).hide();$$( '#yellow_b' ).show();}
 var d = new Date();
     var timestamp = d.getTime();
 var favEntries = JSON.parse(localStorage.getItem("favEntries"));
