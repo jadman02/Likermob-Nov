@@ -1011,8 +1011,8 @@ function commentClick(){
 
 function openMap() {
 
-$$( ".page-content" ).toggleClass( "hide" );
-
+$$( ".cover-business" ).toggleClass( "hide" );
+$$( ".button-map" ).toggleClass( "hide" );
 	
 	
 }
@@ -1133,14 +1133,14 @@ $$( '#info-here' ).append('<li><a href="#" onclick="openMap();" class="item-cont
 }
 
 if (res[0][4]){
-$$( '.business-right' ).append('<a href="tel:'+res[0][4]+'" class="button external" style="border:0;width:30px;height:30px;margin-right:5px;"><i class="pe-7s-call pe-lg"></i></a>');
+$$( '.business-right' ).append('<a href="tel:'+res[0][4]+'" class="button external link" style="border:0;margin-right:5px;"><i class="pe-7s-call pe-lg"></i></a>');
 }
 
 if (res[0][16]){
-$$( '.business-right' ).append('<a href="mailto:'+res[0][16]+'" class="button external" style="border:0;width:30px;height:30px;"><i class="pe-7s-mail pe-lg"></i></a>');
+$$( '.business-right' ).append('<a href="mailto:'+res[0][16]+'" class="button external link" style="border:0;"><i class="pe-7s-mail pe-lg"></i></a>');
 }
 if (res[0][13] && res[0][14])
-$$( '.business-right' ).append('<a href="#" class="button" onclick="openMap();" style="border:0;width:30px;height:30px;"><i class="pe-7s-map pe-lg"></i></a>');
+$$( '.business-right' ).append('<a href="#" class="button link button-map" onclick="openMap();" style="border:0;"><i class="pe-7s-map pe-lg"></i></a><a href="#" class="button link button-map hide" onclick="openMap();" style="border:0;"><i class="pe-7s-ribbon pe-lg"></i></a>');
 
 	
 $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(response){
