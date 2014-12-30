@@ -1057,7 +1057,7 @@ mainView.loadContent(
         '      <div class="content-block" style="margin-top:-9px;">' +
         '        <div class="content-block-inner" style="background-color:rgba(255,255,255,.4);"">' +
 	      '<div class="list-block media-list" style="margin-top:0px;"><ul style="background-color:hsla(0, 0%, 100%, 0.8);"><div id="cover-div"></div><div id="info-here"></div></ul></div>' +
-	'<div class="list-block media-list" style="margin-top:-10px;"><ul style="background-color:hsla(0, 0%, 100%, 0.8);"><li style="background-color:#3b5998;color:white;"><div class="item-content" style="background-color:transparent"><div class="item-media"><i class="pe-7s-like2 pe-lg"></i></div><div class="item-inner" style="border:0;"><div class="item-title-row"><div class="item-title">Deals I Like</div><div id="after-liked" class="item-after"></div></div></div></div></li><div id="like-deals-here"></div></ul></div>' +
+	'<div class="list-block media-list" style="margin-top:-10px;" id="s43"><ul style="background-color:hsla(0, 0%, 100%, 0.8);"><li style="background-color:#3b5998;color:white;"><div class="item-content" style="background-color:transparent"><div class="item-media"><i class="pe-7s-like2 pe-lg"></i></div><div class="item-inner" style="border:0;"><div class="item-title-row"><div class="item-title">Deals I Like</div><div id="after-liked" class="item-after"></div></div></div></div></li><div id="like-deals-here"></div></ul></div>' +
 
 	'<div class="list-block media-list" style="margin-top:-10px;"><ul style="background-color:hsla(0, 0%, 100%, 0.8);"><li style="background-color:#ff8000;color:white;"><div class="item-content"><div class="item-media"><i class="pe-7s-like2 pe-lg pe-rotate-180"></i></div><div class="item-inner" style="border:0;"><div class="item-title-row"><div class="item-title">Deals I Don\'t Like</div><div id="after-notliked" class="item-after"></div></div></div></div></li><div id="deals-here"></div></ul></div>' +
 
@@ -1151,7 +1151,8 @@ if (res[0][16]){
 $$( '.business-right' ).append('<a href="mailto:'+res[0][16]+'" class="button external link" style="border:0;"><i class="pe-7s-mail pe-lg"></i></a>');
 }
 if (res[0][13] && res[0][14])
-{$$( '.business-right' ).append('<a href="#" class="button link button-map" onclick="openMap();" style="border:0;"><i class="pe-7s-map pe-lg"></i></a>');}
+{$$( '.business-right' ).append('<a href="#" class="button link button-map" onclick="openMap();" style="border:0;"><i class="pe-7s-map pe-lg"></i></a><a href="#" class="button link" onclick="$$(\'.page-content\').scrollTop($$(\'#s43\').offset().top - 44, 300);" style="border:0;"><i class="pe-7s-like2 pe-lg"></i></a>');}
+
 
 
 	
