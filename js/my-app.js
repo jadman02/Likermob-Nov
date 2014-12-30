@@ -1034,10 +1034,10 @@ $$("#loader-container").show();
 
 var favEntries = JSON.parse(localStorage.getItem("favEntries"));
 if(favEntries == null) favEntries = [];
-var staryellow = '<i class="pe-7s-star pe-lg hide button link" id="yellow_b" onclick="removefavList(\''+ page_id  +'\',9)" style="border:20px solid transparent;margin-top:-10px;color:#ffcc00;"></i>';
+var staryellow = '<i class="pe-7s-star pe-lg button link" id="yellow_b" onclick="removefavList(\''+ page_id  +'\',9)" style="display:none;border:20px solid transparent;margin-top:-10px;color:#ffcc00;"></i>';
 var starblue = '<i class="pe-7s-star pe-lg button link" id="blue_b" onclick="favList(\''+ page_id  +'\',9)" style="border:20px solid transparent;margin-top:-10px;"></i>';
  
-if(favEntries.length > 0){for (j = 0; j < favEntries.length; j++) {if (favEntries[j].page_id == page_id){staryellow = '<i class="pe-7s-star pe-lg button link" id="yellow_b" onclick="removefavList(\''+  page_id  +'\',9)" style="border:0;color:#ffcc00;"></i>';starblue = '<i class="pe-7s-star pe-lg button link" id="blue_b" onclick="favList(\''+ page_id  +'\',9)" style="border:0;"></i>';}}}
+if(favEntries.length > 0){for (j = 0; j < favEntries.length; j++) {if (favEntries[j].page_id == page_id){staryellow = '<i class="pe-7s-star pe-lg button link" id="yellow_b" onclick="removefavList(\''+  page_id  +'\',9)" style="border:0;color:#ffcc00;"></i>';starblue = '<i class="pe-7s-star pe-lg button link" id="blue_b" onclick="favList(\''+ page_id  +'\',9)" style="border:0;display:none;"></i>';}}}
 
 mainView.loadContent(
         '<!-- Top Navbar-->' +
