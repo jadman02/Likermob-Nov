@@ -533,8 +533,7 @@ track_click++;
 
 
 function removeLikes(){
-
-
+	
 	var date_today = new Date();
 //var newdate = new Date(date);
 //newdate.setDate(newdate.getDate() - 30);
@@ -571,6 +570,7 @@ localStorage.setItem("favEntries", JSON.stringify(favEntries));
 
 function removelikeList(post_id,page_id,photo,name,add){
 alert('removelikelist');
+
 if (add == 9) {$$( '#deals-here' ).append( '<li class="virtual-content swipeout virtual_'+ post_id  +' likelix hide" style="border-left:3px solid #3b5998;margin-top:5px;margin-bottom:5px;">' +
                   '<div class="swipeout-content item-content">'+
                   '<div class="item-media" onclick="removelikelList(\''+ post_id  +'\',\''+ page_id  +'\',\''+ photo  +'\',\''+ name  +'\')" style="padding:5px;"><img src="http://smilesavers.net.au/images/compressed/'+page_id+'_'+photo+'.jpg" style="width:40px;max-height:40px;overflow:hidden;"/></div>' +
@@ -2781,4 +2781,3 @@ function shareDeal(page_id,url,title){
           share(value,page_id,url,title);
 	
 }
-
