@@ -1019,6 +1019,13 @@ $$( ".button-map" ).toggleClass( "active" );
 	
 }
 
+function openLikez() {
+
+$$( "#s43 li" ).toggleClass( "hide" );
+	
+	
+}
+
 function toggleBox(id) {
 
 $$( "#" + id + "icon" ).addClass( "green" );
@@ -1057,7 +1064,7 @@ mainView.loadContent(
         '      <div class="content-block" style="margin-top:-9px;">' +
         '        <div class="content-block-inner" style="background-color:rgba(255,255,255,.4);"">' +
 	      '<div class="list-block media-list" style="margin-top:0px;"><ul style="background-color:hsla(0, 0%, 100%, 0.8);"><div id="cover-div"></div><div id="info-here"></div></ul></div>' +
-	'<div class="list-block media-list" style="margin-top:-10px;" id="s43"><ul style="background-color:hsla(0, 0%, 100%, 0.8);"><li style="background-color:#3b5998;color:white;"><div class="item-content" style="background-color:transparent"><div class="item-media"><i class="pe-7s-like2 pe-lg"></i></div><div class="item-inner" style="border:0;"><div class="item-title-row"><div class="item-title">Deals I Like</div><div id="after-liked" class="item-after"></div></div></div></div></li><div id="like-deals-here"></div></ul></div>' +
+	'<div class="list-block media-list" style="margin-top:-10px;"><ul style="background-color:hsla(0, 0%, 100%, 0.8);" id="s43"><li style="background-color:#3b5998;color:white;" onclick="openLikez()"><div class="item-content" style="background-color:transparent"><div class="item-media"><i class="pe-7s-like2 pe-lg"></i></div><div class="item-inner" style="border:0;"><div class="item-title-row"><div class="item-title">Deals I Like</div><div id="after-liked" class="item-after"></div></div></div></div></li><div id="like-deals-here"></div></ul></div>' +
 
 	'<div class="list-block media-list" style="margin-top:-10px;"><ul style="background-color:hsla(0, 0%, 100%, 0.8);"><li style="background-color:#ff8000;color:white;"><div class="item-content"><div class="item-media"><i class="pe-7s-like2 pe-lg pe-rotate-180"></i></div><div class="item-inner" style="border:0;"><div class="item-title-row"><div class="item-title">Deals I Don\'t Like</div><div id="after-notliked" class="item-after"></div></div></div></div></li><div id="deals-here"></div></ul></div>' +
 
@@ -1114,7 +1121,7 @@ var day = d.getUTCDate();
 
 var firstdate = weekday_name + ", " + month_name + " " + day ;
 var datetime = '<div class="messages-date" style="padding:0;float:left;margin:0;"><i class="pe-7s-clock"></i> Expires '+ firstdate +'</div>';
-$$( '#like-deals-here' ).append( '<li class="virtual-content swipeout" style="border-right:3px solid #ff8000;margin-top:5px;margin-bottom:5px;">' +
+$$( '#like-deals-here' ).append( '<li class="virtual-content swipeout hide" style="border-right:3px solid #ff8000;margin-top:5px;margin-bottom:5px;">' +
                   '<div class="swipeout-content item-content">'+
                   '<div class="item-media" onclick="removelikelList(\''+ allEntries[k].post_id  +'\',\''+allEntries[k].page_id +'\',\''+ allEntries[k].photo  +'\',\''+ allEntries[k].name  +'\')" style="padding:5px;"><img src="http://smilesavers.net.au/images/compressed/'+allEntries[k].page_id +'_'+allEntries[k].photo +'.jpg" style="width:40px;max-height:40px;overflow:hidden;"/></div>' +
                   '<div class="item-inner virtual-inner" onclick="removelikelList(\''+ allEntries[k].post_id  +'\',\''+allEntries[k].page_id +'\',\''+ allEntries[k].photo  +'\',\''+ allEntries[k].name  +'\')">' +
