@@ -1032,13 +1032,20 @@ function getBusiness(page_id,name) {
 $$("#result li").remove();
 $$("#loader-container").show();
 
+var favEntries = JSON.parse(localStorage.getItem("favEntries"));
+if(favEntries == null) favEntries = [];
+var staryellow = '<i class="pe-7s-star pe-lg hide button link" id="yellow_b" onclick="removefavList(\''+ page_id  +'\',9)" style="border:20px solid transparent;margin-top:-10px;color:#ffcc00;"></i>';
+var starblue = '<i class="pe-7s-star pe-lg button link" id="blue_b" onclick="favList(\''+ page_id  +'\',9)" style="border:20px solid transparent;margin-top:-10px;"></i>';
+ 
+if(favEntries.length > 0){for (j = 0; j < favEntries.length; j++) {if (favEntries[j].page_id == page_id){staryellow = '<i class="pe-7s-star pe-lg button link" id="yellow_b" onclick="removefavList(\''+  page_id  +'\',9)" style="border:0;color:#ffcc00;"></i>';starblue = '<i class="pe-7s-star pe-lg button link" id="blue_b" onclick="favList(\''+ page_id  +'\',9)" style="border:0;"></i>';}}}
+
 mainView.loadContent(
         '<!-- Top Navbar-->' +
         '<div class="navbar business">' +
         '  <div class="navbar-inner" style="border-bottom: 1px solid #c4c4c4;">' +
         '    <div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>' +
         
-        '    <div class="right business-right"></div>' +
+        '    <div class="right business-right">'+staryellow + starblue+'</div>' +
         '  </div>' +
         '</div>' +
         '<div class="pages business">' +
@@ -1062,12 +1069,7 @@ mainView.loadContent(
         '  </div>' +
         '</div>'
     );
-var favEntries = JSON.parse(localStorage.getItem("favEntries"));
-if(favEntries == null) favEntries = [];
-var staryellow = '<i class="pe-7s-star pe-lg hide button link" id="yellow_b" onclick="removefavList(\''+ page_id  +'\',9)" style="border:20px solid transparent;margin-top:-10px;color:#ffcc00;"></i>';
-var starblue = '<i class="pe-7s-star pe-lg button link" id="blue_b" onclick="favList(\''+ page_id  +'\',9)" style="border:20px solid transparent;margin-top:-10px;"></i>';
- 
-if(favEntries.length > 0){for (j = 0; j < favEntries.length; j++) {if (favEntries[j].page_id == page_id){staryellow = '<i class="pe-7s-star pe-lg button link" id="yellow_b" onclick="removefavList(\''+  page_id  +'\',9)" style="border:0;color:#ffcc00;"></i>';starblue = '<i class="pe-7s-star pe-lg button link" id="blue_b" onclick="favList(\''+ page_id  +'\',9)" style="border:0;"></i>';}}}
+
 
 $$( '#info-here' ).append('<li><div class="item-content"><div class="item-media"><img src="http://graph.facebook.com/'+page_id+'/picture?width=30&height=30" style="border-radius:50%;width:30px;"/></div><div class="item-inner"><div class="item-title-row"><div class="item-title">'+ name +'</div><div class="item-after name_after"></div></div></div></div></li>');
 
@@ -1151,8 +1153,7 @@ $$( '.business-right' ).append('<a href="mailto:'+res[0][16]+'" class="button ex
 if (res[0][13] && res[0][14])
 {$$( '.business-right' ).append('<a href="#" class="button link button-map" onclick="openMap();" style="border:0;"><i class="pe-7s-map pe-lg"></i></a>');}
 
-$$( '.business-right' ).append(staryellow);
-$$( '.business-right' ).append(starblue);
+
 	
 $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(response){
 	
