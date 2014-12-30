@@ -1141,7 +1141,7 @@ $$( '#like-deals-here' ).append( '<li class="virtual-content swipeout likeli hid
                   '</div>' +
                '</div>'+
                            '<div class="swipeout-actions-right">' +
-        '<a href="#" onclick="removelikelList(\''+ allEntries[k].post_id  +'\',\''+allEntries[k].page_id +'\',\''+ allEntries[k].photo  +'\',\''+ allEntries[k].name  +'\')"><i class="pe-7s-plus pe-2x"></i></a>' +
+        '<a href="#" onclick="removelikelList(\''+ allEntries[k].post_id  +'\',\''+allEntries[k].page_id +'\',\''+ allEntries[k].photo  +'\',\''+ allEntries[k].name  +'\',9)"><i class="pe-7s-plus pe-2x"></i></a>' +
         '<a href="#" onclick="removelikeList(\''+ allEntries[k].post_id  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a>' +
       '</div>' +
  '</li>');
@@ -2678,8 +2678,8 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
 });  
 }
 
-function removelikelList(post_id,page_id,photo,name){
-
+function removelikelList(post_id,page_id,photo,name,add){
+if (add == 9) {alert('adding to the other list');}
 
 var uid = localStorage.getItem("uid");
 var url = 'http://smilesavers.net.au/images/compressed/'+page_id+'_'+photo+'.jpg';
@@ -2761,3 +2761,4 @@ function shareDeal(page_id,url,title){
           share(value,page_id,url,title);
 	
 }
+
