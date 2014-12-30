@@ -2679,7 +2679,26 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
 }
 
 function removelikelList(post_id,page_id,photo,name,add){
-if (add == 9) {alert('adding to the other list');}
+if (add == 9) {$$( '#deals-here' ).append( '<li class="virtual-content swipeout virtual_'+ post_id  +' likelix hide" style="border-left:3px solid #3b5998;margin-top:5px;margin-bottom:5px;">' +
+                  '<div class="swipeout-content item-content">'+
+                  '<div class="item-media" onclick="removelikelList(\''+ post_id  +'\',\''+ page_id  +'\',\''+ photo  +'\',\''+ name  +'\')" style="padding:5px;"><img src="http://smilesavers.net.au/images/compressed/'+page_id+'_'+photo+'.jpg" style="width:40px;max-height:40px;overflow:hidden;"/></div>' +
+                  '<div class="item-inner virtual-inner" onclick="removelikelList(\''+ post_id  +'\',\''+ page_id +'\',\''+ photo  +'\',\''+ name  +'\')">' +
+                     '<div class="item-title-row">'+
+                         '<div class="item-title"><img src="http://graph.facebook.com/'+page_id+'/picture?width=15&height=15" style="border-radius:50%;max-width:15px;margin-right:10px;"/>yo</div>' +
+                        '<div class="item-after"><i class="pe-7s-angle-right pe-lg" style="color:#3b5998;"></i></div>'+
+                    '</div>'+
+                    '<div class="item-subtitle">'+ name +'</div>' +
+                    '<div "class="item-text">yo</div>' +
+                  '</div>' +
+               '</div>'+
+
+ '<div class="swipeout-actions-left left_'+ post_id  +'">' +
+        '<a href="#" onclick="removelikeList(\''+ post_id  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#3b5998;"><i class="pe-7s-like2 pe-2x"></i></a>' +
+        '<a href="#" onclick="removelikelList(\''+ post_id  +'\',\''+ page_id  +'\',\''+ photo  +'\',\''+ name  +'\')"><i class="pe-7s-plus pe-2x"></i></a>' +
+      '</div>' +
+
+
+               '</li>');
 
 var uid = localStorage.getItem("uid");
 var url = 'http://smilesavers.net.au/images/compressed/'+page_id+'_'+photo+'.jpg';
