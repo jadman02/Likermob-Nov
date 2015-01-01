@@ -803,9 +803,8 @@ $$( '#like-deals-here' ).append( '<li class="virtual-content swipeout likeli hid
       '</div>' +
  '</li>');
 
-var likecount = ($$("#my li").length)-2;
+var likecount = ($$("#my li").length)-1;
 var dislikecount = document.getElementById("after-notliked").value - 1; 
-
 document.getElementById("after-notliked").innerHTML = dislikecount;
 document.getElementById("after-notliked").value = dislikecount;
 
