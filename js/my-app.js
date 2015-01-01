@@ -1114,7 +1114,7 @@ mainView.loadContent(
            '<i class="icon icon-back"></i>'+
             '<span class="tabbar-label"Back</span>'+
         '</a>'+
-        '<a href="#tab2" class="tab-link">'+staryellow + starblue+'+
+        '<a href="#tab2" class="tab-link">'+staryellow + starblue+
             '<span class="tabbar-label">Favourite</span>'+
         '</a>'+
        ' <a href="#tab3" class="tab-link">'+
