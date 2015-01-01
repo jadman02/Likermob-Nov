@@ -601,8 +601,9 @@ var allEntries = JSON.parse(localStorage.getItem("allEntries"));
 for (k = 0; k < allEntries.length; k++) { 
 if (allEntries[k].page_id == page_id){	
 deals_liked ++;
+alert(deals_liked + ',' + k);
 }}	
-
+alert(deals_liked);
 document.getElementById("after-liked").innerHTML = deals_liked;	
 var unliked = document.getElementById("after-notliked").value;
 document.getElementById("after-notliked").innerHTML = unliked + 1;	
