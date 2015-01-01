@@ -785,7 +785,32 @@ var d = new Date();
   //alert(localStorage.getItem("allEntries"));	
 var existingEntries = JSON.parse(localStorage.getItem("allEntries"));
 $$('.badge-like').text(existingEntries.length);
+$$( '#like-deals-here' ).append( '<li class="virtual-content swipeout likeli hide" style="border-right:3px solid #ff8000;margin-top:5px;margin-bottom:5px;">' +
+                  '<div class="swipeout-content item-content">'+
+                  '<div class="item-media" onclick="removelikelList(\''+ post_id  +'\',\''+page_id +'\',\''+ photo  +'\',\''+ name  +'\')" style="padding:5px;"><img src="http://smilesavers.net.au/images/compressed/'+page_id +'_'+photo +'.jpg" style="width:40px;max-height:40px;overflow:hidden;"/></div>' +
+                  '<div class="item-inner virtual-inner" onclick="removelikelList(\''+ post_id  +'\',\''+page_id +'\',\''+ photo  +'\',\''+ name  +'\')">' +
+                     '<div class="item-title-row">'+
+                         '<div class="item-title"><img src="http://graph.facebook.com/'+page_id+'/picture?width=15&height=15" style="border-radius:50%;max-width:15px;margin-right:10px;"/>'+ title +'</div>' +
+                        '<div class="item-after"><i class="pe-7s-angle-left pe-lg" style="color:#ff8000;"></i></div>'+
+                    '</div>'+
+                    '<div class="item-subtitle">'+ name +'</div>' +
+                    '<div "class="item-text"">'+ expiry +'</div>' +
+                  '</div>' +
+               '</div>'+
+                           '<div class="swipeout-actions-right">' +
+        '<a href="#" onclick="removelikelList(\''+ post_id  +'\',\''+page_id +'\',\''+ photo  +'\',\''+ name  +'\')"><i class="pe-7s-plus pe-2x"></i></a>' +
+        '<a href="#" onclick="removelikeList(\''+ post_id  +'\',\''+page_id +'\',\''+ photo  +'\',\''+ name  +'\',\''+ title  +'\',\''+ expiry  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a>' +
+      '</div>' +
+ '</li>');
 
+var likecount = ($$("#my li").length)-2;
+var dislikecount = document.getElementById("after-notliked").value - 1; 
+
+document.getElementById("after-notliked").innerHTML = dislikecount;
+document.getElementById("after-notliked").value = dislikecount;
+
+document.getElementById("after-liked").innerHTML = likecount;
+document.getElementById("after-liked").value = likecount;
 }
 
 function favList(page_id,post_id,name) {
@@ -1172,6 +1197,7 @@ $$( '#like-deals-here' ).append( '<li class="virtual-content swipeout likeli hid
 }
 
 document.getElementById("after-liked").innerHTML = deals_liked;
+document.getElementById("after-liked").value = deals_liked;
 
 $$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=' + page_id, function(res){
 
@@ -1226,7 +1252,7 @@ totaldeals ++;
                '</div>'+
 
  '<div class="swipeout-actions-left left_'+ res[i][2]  +'">' +
-        '<a href="#" onclick="removelikeList(\''+ res[i][2]  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#3b5998;"><i class="pe-7s-like2 pe-2x"></i></a>' +
+        '<a href="#" onclick="addEntry(\''+ res[i][2]  +'\',\''+ res[i][6]  +'\',\''+ res[i][1]  +'\',\''+ res[i][21]  +'\',\''+ res[i][3]  +'\',\''+ res[i][16]  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#3b5998;"><i class="pe-7s-like2 pe-2x"></i></a>' +
         '<a href="#" onclick="removelikelList(\''+ res[i][2]  +'\',\''+ res[i][1]  +'\',\''+ res[i][21]  +'\',\''+ res[i][16]  +'\')"><i class="pe-7s-plus pe-2x"></i></a>' +
       '</div>' +
 
