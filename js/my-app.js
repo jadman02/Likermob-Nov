@@ -596,15 +596,8 @@ if (allEntries[i].post_id == post_id){allEntries.splice(i,1);}
 }
 localStorage.setItem("allEntries", JSON.stringify(allEntries));
 //alert(localStorage.getItem("allEntries"));	
-var deals_liked = 0;
-var allEntries = JSON.parse(localStorage.getItem("allEntries"));
-for (k = 0; k < allEntries.length; k++) { 
-if (allEntries[k].page_id == page_id){	
-deals_liked ++;
-}}
-document.getElementById("after-liked").innerHTML = deals_liked;	
-var unliked = document.getElementById("after-notliked").value;
-document.getElementById("after-notliked").innerHTML = unliked + 1;
+var countnumber = $$("#my li").length);
+alert(countnumber);
 	
 	
 }
@@ -1099,7 +1092,7 @@ mainView.loadContent(
         '      <div class="content-block" style="margin-top:-9px;">' +
         '        <div class="content-block-inner" style="background-color:rgba(255,255,255,.4);"">' +
 	      '<div class="list-block media-list" style="margin-top:0px;"><ul style="background-color:hsla(0, 0%, 100%, 0.8);"><div id="cover-div"></div><div id="info-here"></div></ul></div>' +
-	'<div class="list-block media-list" style="margin-top:-20px;"><ul style="background-color:hsla(0, 0%, 100%, 0.8);"><li style="background-color:#3b5998;color:white;" onclick="openLikez()"><div class="item-content" style="background-color:transparent"><div class="item-media"><i class="pe-7s-like2 pe-lg" style="margin-right:5px;"></i> Liked</div><div class="item-inner" style="border:0;"><div class="item-title-row"><div class="item-title"></div><div class="item-after"><div id="after-liked" class="badge" style="border:1px solid white;background-color:transparent;"></div></div></div></div></div></li><div id="like-deals-here"></div></ul></div>' +
+	'<div class="list-block media-list" style="margin-top:-20px;"><ul style="background-color:hsla(0, 0%, 100%, 0.8);" id="my"><li style="background-color:#3b5998;color:white;" onclick="openLikez()"><div class="item-content" style="background-color:transparent"><div class="item-media"><i class="pe-7s-like2 pe-lg" style="margin-right:5px;"></i> Liked</div><div class="item-inner" style="border:0;"><div class="item-title-row"><div class="item-title"></div><div class="item-after"><div id="after-liked" class="badge" style="border:1px solid white;background-color:transparent;"></div></div></div></div></div></li><div id="like-deals-here"></div></ul></div>' +
 
 	'<div class="list-block media-list" style="margin-top:-20px;"><ul style="background-color:hsla(0, 0%, 100%, 0.8);"><li style="background-color:#ff8000;color:white;" onclick="openLikex()"><div class="item-content"><div class="item-media"><i class="pe-7s-like2 pe-lg pe-rotate-180" style="margin-right:5px;margin-top:2px;"></i>Not Liked</div><div class="item-inner" style="border:0;"><div class="item-title-row"><div class="item-title"></div><div class="item-after"><div id="after-notliked" class="badge" style="border:1px solid white;background-color:transparent;"></div></div></div></div></div></li><div id="deals-here"></div></ul></div>' +
 
