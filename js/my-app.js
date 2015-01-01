@@ -1097,10 +1097,10 @@ $$("#loader-container").show();
 
 var favEntries = JSON.parse(localStorage.getItem("favEntries"));
 if(favEntries == null) favEntries = [];
-var staryellow = '<a href="#" class="button link" style="display:none;border:0;" id="yellow_b" onclick="removefavList(\''+ page_id  +'\',9)"><i class="pe-7s-star pe-2x" style="color:#ffcc00;"></i></a>';
-var starblue = '<a href="#" class="button link" style="border:0;" id="blue_b" onclick="favList(\''+ page_id  +'\',9)"><i class="pe-7s-star pe-2x"></i></a>';
+var staryellow = '<i class="pe-7s-star pe-lg button link" id="yellow_b" onclick="removefavList(\''+ page_id  +'\',9)" style="display:none;border:20px solid transparent;margin-top:-10px;color:#ffcc00;"></i>';
+var starblue = '<i class="pe-7s-star pe-lg button link" id="blue_b" onclick="favList(\''+ page_id  +'\',9)" style="border:20px solid transparent;margin-top:-10px;"></i>';
  
-if(favEntries.length > 0){for (j = 0; j < favEntries.length; j++) {if (favEntries[j].page_id == page_id){staryellow = '<a href="#" class="button link" style="border:0;" id="yellow_b" onclick="removefavList(\''+  page_id  +'\',9)"><i class="pe-7s-star pe-2x" style="color:#ffcc00;"></i></a>';starblue = '<a href="#" class="button link" style="display:none;border:0;" id="blue_b" onclick="removefavList(\''+  page_id  +'\',9)"><i class="pe-7s-star pe-2x" ></i></a>';}}}
+if(favEntries.length > 0){for (j = 0; j < favEntries.length; j++) {if (favEntries[j].page_id == page_id){staryellow = '<i class="pe-7s-star pe-lg button link" id="yellow_b" onclick="removefavList(\''+  page_id  +'\',9)" style="border:0;color:#ffcc00;"></i>';starblue = '<i class="pe-7s-star pe-lg button link" id="blue_b" onclick="favList(\''+ page_id  +'\',9)" style="border:0;display:none;"></i>';}}}
 
 mainView.loadContent(
         '<!-- Top Navbar-->' +
@@ -1118,10 +1118,10 @@ mainView.loadContent(
         '    <div class="page-content cover-business" style="z-index: 1;">' +
         '      <div class="content-block" style="margin-top:-9px;">' +
         '        <div class="content-block-inner" style="background-color:rgba(255,255,255,.4);"">' +
-	      '<div class="list-block media-list" style="margin-top:0px;"><ul style="background-color:hsla(0, 0%, 100%, 0.8);"><div id="cover-div"></div><div id="info-here"></div></ul></div>' +
-	'<div class="list-block media-list" style="margin-top:-20px;"><ul style="background-color:hsla(0, 0%, 100%, 0.8);" id="my"><li style="background-color:#3b5998;color:white;" onclick="openLikez()"><div class="item-content" style="background-color:transparent"><div class="item-media"><i class="pe-7s-like2 pe-lg" style="margin-right:5px;"></i> Liked</div><div class="item-inner" style="border:0;"><div class="item-title-row"><div class="item-title"></div><div class="item-after"><div id="after-liked" class="badge" style="border:1px solid white;background-color:transparent;"></div></div></div></div></div></li><div id="like-deals-here"></div></ul></div>' +
+	      '<div class="list-block media-list" style="margin-top:0px;"><ul style="background-color:hsla(0, 0%, 100%, 0.8);"><div id="cover-div"></div><div id="info-here"></div><li style="background-color:#3b5998;color:white;" onclick="openLikez()"><div class="item-content" style="background-color:transparent"><div class="item-media"><i class="pe-7s-like2 pe-lg" style="margin-right:5px;"></i> Liked</div><div class="item-inner" style="border:0;"><div class="item-title-row"><div class="item-title"></div><div class="item-after"><div id="after-liked" class="badge" style="border:1px solid white;background-color:transparent;"></div></div></div></div></div></li><li style="background-color:#ff8000;color:white;" onclick="openLikex()"><div class="item-content"><div class="item-media"><i class="pe-7s-like2 pe-lg pe-rotate-180" style="margin-right:5px;margin-top:2px;"></i>Not Liked</div><div class="item-inner" style="border:0;"><div class="item-title-row"><div class="item-title"></div><div class="item-after"><div id="after-notliked" class="badge" style="border:1px solid white;background-color:transparent;"></div></div></div></div></div></li></ul></div>' +
+	'<div class="list-block media-list" style="margin-top:-20px;"><ul style="background-color:hsla(0, 0%, 100%, 0.8);" id="my"><div id="like-deals-here"></div></ul></div>' +
 
-	'<div class="list-block media-list" style="margin-top:-20px;"><ul style="background-color:hsla(0, 0%, 100%, 0.8);" id="nomy"><li style="background-color:#ff8000;color:white;" onclick="openLikex()"><div class="item-content"><div class="item-media"><i class="pe-7s-like2 pe-lg pe-rotate-180" style="margin-right:5px;margin-top:2px;"></i>Not Liked</div><div class="item-inner" style="border:0;"><div class="item-title-row"><div class="item-title"></div><div class="item-after"><div id="after-notliked" class="badge" style="border:1px solid white;background-color:transparent;"></div></div></div></div></div></li><div id="deals-here"></div></ul></div>' +
+	'<div class="list-block media-list" style="margin-top:-20px;"><ul style="background-color:hsla(0, 0%, 100%, 0.8);" id="nomy"><div id="deals-here"></div></ul></div>' +
 
 
 
