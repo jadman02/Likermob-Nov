@@ -1097,10 +1097,10 @@ $$("#loader-container").show();
 
 var favEntries = JSON.parse(localStorage.getItem("favEntries"));
 if(favEntries == null) favEntries = [];
-var staryellow = '<i class="pe-7s-star pe-lg button link" id="yellow_b" onclick="removefavList(\''+ page_id  +'\',9)" style="display:none;border:20px solid transparent;margin-top:-10px;color:#ffcc00;"></i>';
-var starblue = '<i class="pe-7s-star pe-lg button link" id="blue_b" onclick="favList(\''+ page_id  +'\',9)" style="border:20px solid transparent;margin-top:-10px;"></i>';
+var staryellow = '<a href="#" class="button link" style="display:none;border-color:transparent;" id="yellow_b"><i class="pe-7s-star pe-2x" onclick="removefavList(\''+ page_id  +'\',9)" style="color:#ffcc00;"></i></a>';
+var starblue = '<a href="#" class="button link" style="border-color:transparent;" id="blue_b"><i class="pe-7s-star pe-2x" onclick="favList(\''+ page_id  +'\',9)"></i></a>';
  
-if(favEntries.length > 0){for (j = 0; j < favEntries.length; j++) {if (favEntries[j].page_id == page_id){staryellow = '<i class="pe-7s-star pe-lg button link" id="yellow_b" onclick="removefavList(\''+  page_id  +'\',9)" style="border:0;color:#ffcc00;"></i>';starblue = '<i class="pe-7s-star pe-lg button link" id="blue_b" onclick="favList(\''+ page_id  +'\',9)" style="border:0;display:none;"></i>';}}}
+if(favEntries.length > 0){for (j = 0; j < favEntries.length; j++) {if (favEntries[j].page_id == page_id){staryellow = '<a href="#" class="button link" style="border-color:transparent;" id="yellow_b"><i class="pe-7s-star pe-2x button link" onclick="removefavList(\''+  page_id  +'\',9)" style="color:#ffcc00;"></i></a>';starblue = '<a href="#" class="button link" style="display:none;border-color:transparent;" id="blue_b"><i class="pe-7s-star pe-2x button link" onclick="favList(\''+ page_id  +'\',9)"></i></a>';}}}
 
 mainView.loadContent(
         '<!-- Top Navbar-->' +
