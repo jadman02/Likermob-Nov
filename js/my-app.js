@@ -603,7 +603,9 @@ if (allEntries[k].page_id == page_id){
 deals_liked ++;
 }}	
 
-document.getElementById("after-liked").innerHTML = deals_liked;		
+document.getElementById("after-liked").innerHTML = deals_liked;	
+var unliked = document.getElementById("after-notliked").value;
+document.getElementById("after-notliked").innerHTML = unliked + 1;	
 }
 
 
