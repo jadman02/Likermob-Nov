@@ -597,12 +597,10 @@ if (allEntries[i].post_id == post_id){allEntries.splice(i,1);}
 localStorage.setItem("allEntries", JSON.stringify(allEntries));
 //alert(localStorage.getItem("allEntries"));	
 var likecount = ($$("#my li").length)-2;
-var dislikecount = $$("#after-notliked").text();
-var dislikecountz = dislikecount + 1;
+var dislikecount = document.getElementById("after-notliked").value + 1; 
 document.getElementById("after-liked").innerHTML = likecount;
-document.getElementById("after-notliked").innerHTML = dislikecountz;
-	
-	
+document.getElementById("after-notliked").innerHTML = dislikecount;
+document.getElementById("after-notliked").value = dislikecount;
 }
 
 
@@ -1247,8 +1245,9 @@ if (allEntries[j].post_id == res[i][2]){
     }
 
  var deals_notliked = totaldeals - deals_liked;
-$$('#after-notliked').text(deals_notliked);
-    
+
+    document.getElementById("after-notliked").value = deals_notliked;
+    document.getElementById("after-notliked").innerHTML = deals_notliked;
 	return;
 	
 });
