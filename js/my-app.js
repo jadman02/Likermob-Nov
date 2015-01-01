@@ -596,7 +596,7 @@ if (allEntries[i].post_id == post_id){allEntries.splice(i,1);}
 }
 localStorage.setItem("allEntries", JSON.stringify(allEntries));
 //alert(localStorage.getItem("allEntries"));	
-alert($("#my li").length);
+alert($$("#my li").length);
 
 	
 	
