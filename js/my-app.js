@@ -1106,7 +1106,6 @@ mainView.loadContent(
         '<!-- Top Navbar-->' +
         '<div class="navbar business">' +
         '  <div class="navbar-inner" style="border-bottom: 1px solid #c4c4c4;">' +
-        '    <div class="left"><a href="#" class=" link"></a></div>' +
         '<div class="center">'+
         '<div class="toolbar tabbar tabbar-labels">'+
     '<div class="toolbar-inner">'+
