@@ -785,7 +785,6 @@ var d = new Date();
   //alert(localStorage.getItem("allEntries"));	
 var existingEntries = JSON.parse(localStorage.getItem("allEntries"));
 $$('.badge-like').text(existingEntries.length);
-$$( '.likeli' ).addClass( 'hide' );
 $$( '#like-deals-here' ).append( '<li class="virtual-content swipeout likeli hide" style="border-right:3px solid #ff8000;margin-top:5px;margin-bottom:5px;">' +
                   '<div class="swipeout-content item-content">'+
                   '<div class="item-media" onclick="removelikelList(\''+ post_id  +'\',\''+page_id +'\',\''+ photo  +'\',\''+ name  +'\')" style="padding:5px;"><img src="http://smilesavers.net.au/images/compressed/'+page_id +'_'+photo +'.jpg" style="width:40px;max-height:40px;overflow:hidden;"/></div>' +
@@ -1069,6 +1068,7 @@ $$( ".button-map" ).toggleClass( "active" );
 function openLikez() {
 
 $$( ".likeli" ).toggleClass( "hide" );
+$$( ".likelix" ).addClass( "hide" );	
 	
 	
 }
@@ -1076,6 +1076,7 @@ $$( ".likeli" ).toggleClass( "hide" );
 function openLikex() {
 
 $$( ".likelix" ).toggleClass( "hide" );
+$$( ".likeli" ).addClass( "hide" );
 	
 	
 }
@@ -1123,7 +1124,7 @@ mainView.loadContent(
 	'<div class="list-block media-list" style="margin-top:-20px;"><ul style="background-color:hsla(0, 0%, 100%, 0.8);" id="nomy"><li style="background-color:#ff8000;color:white;" onclick="openLikex()"><div class="item-content"><div class="item-media"><i class="pe-7s-like2 pe-lg pe-rotate-180" style="margin-right:5px;margin-top:2px;"></i>Not Liked</div><div class="item-inner" style="border:0;"><div class="item-title-row"><div class="item-title"></div><div class="item-after"><div id="after-notliked" class="badge" style="border:1px solid white;background-color:transparent;"></div></div></div></div></div></li><div id="deals-here"></div></ul></div>' +
 
 
- 
+
         '        </div>' +
         '      </div>' +
         '    </div>' +
