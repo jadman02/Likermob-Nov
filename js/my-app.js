@@ -597,9 +597,10 @@ if (allEntries[i].post_id == post_id){allEntries.splice(i,1);}
 localStorage.setItem("allEntries", JSON.stringify(allEntries));
 //alert(localStorage.getItem("allEntries"));	
 var likecount = ($$("#my li").length)-2;
-var dislikecount = $$("#after-notliked").html() + 1;
+var dislikecount = $$("#after-notliked").html();
+var dislikecountz = dislikecount + 1;
 document.getElementById("after-liked").innerHTML = likecount;
-document.getElementById("after-notliked").innerHTML = dislikecount;
+document.getElementById("after-notliked").innerHTML = dislikecountz;
 	
 	
 }
