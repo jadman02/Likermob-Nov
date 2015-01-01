@@ -1129,8 +1129,8 @@ mainView.loadContent(
            ' <i class="pe-7s-map pe-lg"></i>'+
            ' <span class="tabbar-label">Map</span>'+
        ' </a>'+
-    </div>'+
-</div>'+
+   ' </div>'+
+'</div>'+
         '</div>'+
         '  </div>' +
         '</div>' +
