@@ -785,6 +785,7 @@ var d = new Date();
   //alert(localStorage.getItem("allEntries"));	
 var existingEntries = JSON.parse(localStorage.getItem("allEntries"));
 $$('.badge-like').text(existingEntries.length);
+$$( '.likeli' ).addClass( 'hide' );
 $$( '#like-deals-here' ).append( '<li class="virtual-content swipeout likeli hide" style="border-right:3px solid #ff8000;margin-top:5px;margin-bottom:5px;">' +
                   '<div class="swipeout-content item-content">'+
                   '<div class="item-media" onclick="removelikelList(\''+ post_id  +'\',\''+page_id +'\',\''+ photo  +'\',\''+ name  +'\')" style="padding:5px;"><img src="http://smilesavers.net.au/images/compressed/'+page_id +'_'+photo +'.jpg" style="width:40px;max-height:40px;overflow:hidden;"/></div>' +
@@ -803,7 +804,7 @@ $$( '#like-deals-here' ).append( '<li class="virtual-content swipeout likeli hid
       '</div>' +
  '</li>');
 
-var likecount = ($$("#my li").length)-1;
+var likecount = ($$("#my li").length)-2;
 var dislikecount = document.getElementById("after-notliked").value - 1; 
 document.getElementById("after-notliked").innerHTML = dislikecount;
 document.getElementById("after-notliked").value = dislikecount;
