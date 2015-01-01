@@ -1107,7 +1107,7 @@ mainView.loadContent(
         '<div class="navbar business">' +
         '  <div class="navbar-inner" style="border-bottom: 1px solid #c4c4c4;">' +
         '<div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>'+
-        '<div class="center business-right">'+staryellow + starblue+'</div>' +
+        '<div class="right business-right">'+staryellow + starblue+'</div>' +
         '  </div>' +
         '</div>' +
         '<div class="pages business">' +
@@ -1207,14 +1207,14 @@ $$( '#info-here' ).append('<li><a href="#" onclick="openMap();" class="item-cont
 }
 
 if (res[0][4]){
-$$( '.business-right' ).append('<a href="tel:'+res[0][4]+'" class="button external link" style="border:0;margin-right:5px;"><i class="pe-7s-call pe-lg"></i></a>');
+$$( '.business-right' ).append('<a href="tel:'+res[0][4]+'" class="button external link" style="border:0;margin-right:5px;"><i class="pe-7s-call pe-2x"></i></a>');
 }
 
 if (res[0][16]){
-$$( '.business-right' ).append('<a href="mailto:'+res[0][16]+'" class="button external link" style="border:0;"><i class="pe-7s-mail pe-lg"></i></a>');
+$$( '.business-right' ).append('<a href="mailto:'+res[0][16]+'" class="button external link" style="border:0;"><i class="pe-7s-mail pe-2x"></i></a>');
 }
 if (res[0][13] && res[0][14])
-{$$( '.business-right' ).append('<a href="#" class="button link button-map" onclick="openMap();" style="border:0;"><i class="pe-7s-map pe-lg"></i></a>');}
+{$$( '.business-right' ).append('<a href="#" class="button link button-map" onclick="openMap();" style="border:0;"><i class="pe-7s-map pe-2x"></i></a>');}
 
 
 
