@@ -1106,8 +1106,8 @@ mainView.loadContent(
         '<!-- Top Navbar-->' +
         '<div class="navbar business">' +
         '  <div class="navbar-inner" style="border-bottom: 1px solid #c4c4c4;">' +
-        
-        '<div class="business-right"><a href="#" class="back link"><i class="icon icon-back"></i></a>'+staryellow + starblue+'</div>' +
+        '<div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>'+
+        '<div class="center business-right">'+staryellow + starblue+'</div>' +
        
 
         '  </div>' +
