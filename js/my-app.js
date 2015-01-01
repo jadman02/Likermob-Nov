@@ -1107,8 +1107,8 @@ mainView.loadContent(
         '<div class="navbar business">' +
         '  <div class="navbar-inner" style="border-bottom: 1px solid #c4c4c4;">' +
         
-        '    <div class="center business-right"><div class="toolbar tabbar tabbar-labels"><div class="toolbar-inner"><a href="#tab1" class="tab-link active"><i class="icon demo-icon-1"></i><span class="tabbar-label">Label 1</span></a><a href="#tab2" class="tab-link"><i class="icon demo-icon-2"><span class="badge bg-red">5</span></i><span class="tabbar-label">Label 2</span></a><a href="#tab3" class="tab-link"><i class="icon demo-icon-3"></i><span class="tabbar-label">Label 3</span></a><a href="#tab4" class="tab-link"><i class="icon demo-icon-4"></i><span class="tabbar-label">Label 4</span></a></div></div>'+
-'</div>' +
+        '<div class="toolbar tabbar tabbar-labels"><div class="toolbar-inner"><a href="#tab1" class="tab-link active"><i class="icon demo-icon-1"></i><span class="tabbar-label">Label 1</span></a><a href="#tab2" class="tab-link"><i class="icon demo-icon-2"><span class="badge bg-red">5</span></i><span class="tabbar-label">Label 2</span></a><a href="#tab3" class="tab-link"><i class="icon demo-icon-3"></i><span class="tabbar-label">Label 3</span></a><a href="#tab4" class="tab-link"><i class="icon demo-icon-4"></i><span class="tabbar-label">Label 4</span></a></div></div>'+
+
         '  </div>' +
         '</div>' +
         '<div class="pages business">' +
