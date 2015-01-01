@@ -1162,7 +1162,7 @@ $$( '#like-deals-here' ).append( '<li class="virtual-content swipeout likeli hid
                '</div>'+
                            '<div class="swipeout-actions-right">' +
         '<a href="#" onclick="removelikelList(\''+ allEntries[k].post_id  +'\',\''+allEntries[k].page_id +'\',\''+ allEntries[k].photo  +'\',\''+ allEntries[k].name  +'\')"><i class="pe-7s-plus pe-2x"></i></a>' +
-        '<a href="#" onclick="removelikeList(\''+ allEntries[k].post_id  +'\',\''+allEntries[k].page_id +'\',\''+ allEntries[k].photo  +'\',\''+ allEntries[k].name  +'\',\''+ allEntries[k].title  +'\',\''+ datetime  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a>' +
+        '<a href="#" onclick="removelikeList(\''+ allEntries[k].post_id  +'\',\''+allEntries[k].page_id +'\',\''+ allEntries[k].photo  +'\',\''+ allEntries[k].name  +'\',\''+ allEntries[k].title  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a>' +
       '</div>' +
  '</li>');
 
