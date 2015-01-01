@@ -1106,9 +1106,32 @@ mainView.loadContent(
         '<!-- Top Navbar-->' +
         '<div class="navbar business">' +
         '  <div class="navbar-inner" style="border-bottom: 1px solid #c4c4c4;">' +
-        '    <div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>' +
-        
-        '    <div class="right business-right">'+staryellow + starblue+'</div>' +
+        '    <div class="left"><a href="#" class=" link"></a></div>' +
+        '<div class="center">'+
+        '<div class="toolbar tabbar tabbar-labels">'+
+    '<div class="toolbar-inner">'+
+        '<a href="#tab1" class="tab-link back active">'+
+           '<i class="icon icon-back"></i>'+
+            '<span class="tabbar-label"Back</span>'+
+        '</a>'+
+        '<a href="#tab2" class="tab-link">'+staryellow + starblue+'+
+            '<span class="tabbar-label">Favourite</span>'+
+        '</a>'+
+       ' <a href="#tab3" class="tab-link">'+
+            '<i class="pe-7s-call pe-lg"></i>'+
+           ' <span class="tabbar-label">Call</span>'+
+       ' </a>'+
+        '<a href="#tab4" class="tab-link">'+
+           ' <i class="pe-7s-mail pe-lg"></i>'+
+           ' <span class="tabbar-label">Email</span>'+
+       ' </a>'+
+               ' <a href="#tab5" class="tab-link">'+
+           ' <i class="pe-7s-map pe-lg"></i>'+
+           ' <span class="tabbar-label">Map</span>'+
+       ' </a>'+
+    </div>'+
+</div>'+
+        '</div>'+
         '  </div>' +
         '</div>' +
         '<div class="pages business">' +
