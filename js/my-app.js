@@ -1238,8 +1238,8 @@ if (allEntries[j].post_id == res[i][2]){
 }
 }
  
- //var not-liked = ($$('#not-liked li').length) -1;
- //alert(not-liked);
+ var not-liked = $$('#not-liked li').length;
+ alert(not-liked);
  var deals_notliked = totaldeals - deals_liked;
  document.getElementById("after-notliked").innerHTML = deals_notliked;
     	
