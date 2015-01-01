@@ -590,20 +590,18 @@ $$( '#deals-here' ).append( '<li class="virtual-content swipeout virtual_'+ post
 
 
                '</li>');
+var deals_liked = 0;
 var allEntries = JSON.parse(localStorage.getItem("allEntries"));
 for (i = 0; i < allEntries.length; i++) {        
 if (allEntries[i].post_id == post_id){allEntries.splice(i,1);}
 }
-localStorage.setItem("allEntries", JSON.stringify(allEntries));
-//alert(localStorage.getItem("allEntries"));	
-var deals_liked = 0;
-var allEntries = JSON.parse(localStorage.getItem("allEntries"));
 for (k = 0; k < allEntries.length; k++) { 
 if (allEntries[k].page_id == page_id){	
 deals_liked ++;
 alert(deals_liked + ',' + k);
-}}	
-alert(deals_liked);
+}}
+localStorage.setItem("allEntries", JSON.stringify(allEntries));
+//alert(localStorage.getItem("allEntries"));	
 document.getElementById("after-liked").innerHTML = deals_liked;	
 var unliked = document.getElementById("after-notliked").value;
 document.getElementById("after-notliked").innerHTML = unliked + 1;	
