@@ -1238,7 +1238,7 @@ if (allEntries[j].post_id == res[i][2]){
 }
 }
  
- var not-liked = $$("#not-liked").children().length;
+ var not-liked = $$('ul#not-liked li').length;
  alert(not-liked);
  var deals_notliked = totaldeals - deals_liked;
  document.getElementById("after-notliked").innerHTML = deals_notliked;
