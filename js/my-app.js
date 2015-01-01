@@ -1218,7 +1218,7 @@ totaldeals ++;
                          '<div class="item-title"><img src="http://graph.facebook.com/'+res[i][1]+'/picture?width=15&height=15" style="border-radius:50%;max-width:15px;margin-right:10px;"/>'+ res[i][3] +'</div>' +
                         '<div class="item-after"><i class="pe-7s-angle-right pe-lg" style="color:#3b5998;"></i></div>'+
                     '</div>'+
-                    '<div class="item-subtitle">'+ res[i][16] +'</div>' +
+                    '<div class="item-subtitle">'+ i +'<-index'+ res[i][16] +'</div>' +
                     '<div "class="item-text"">'+ res[i][6] +'</div>' +
                   '</div>' +
                '</div>'+
