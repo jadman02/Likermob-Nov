@@ -596,7 +596,7 @@ if (allEntries[i].post_id == post_id){allEntries.splice(i,1);}
 }
 localStorage.setItem("allEntries", JSON.stringify(allEntries));
 //alert(localStorage.getItem("allEntries"));	
-var likecount = ($$("#my li").length)-1;
+var likecount = ($$("#my li").length)-2;
 document.getElementById("after-liked").innerHTML = likecount;
 	
 	
