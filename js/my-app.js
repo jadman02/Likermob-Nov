@@ -570,7 +570,7 @@ localStorage.setItem("favEntries", JSON.stringify(favEntries));
 
 function removelikeList(post_id,page_id,photo,name,title){
 alert('removelikelist');
-$$( '#deals-here' ).append( '<li class="virtual-content swipeout virtual_'+ post_id  +' likelix hide" style="border-left:3px solid #3b5998;margin-top:5px;margin-bottom:5px;">' +
+$$( '#deals-here' ).prepend( '<li class="virtual-content swipeout virtual_'+ post_id  +' likelix hide" style="border-left:3px solid #3b5998;margin-top:5px;margin-bottom:5px;">' +
                   '<div class="swipeout-content item-content">'+
                   '<div class="item-media" onclick="removelikelList(\''+ post_id  +'\',\''+ page_id  +'\',\''+ photo  +'\',\''+ name  +'\')" style="padding:5px;"><img src="http://smilesavers.net.au/images/compressed/'+page_id+'_'+photo+'.jpg" style="width:40px;max-height:40px;overflow:hidden;"/></div>' +
                   '<div class="item-inner virtual-inner" onclick="removelikelList(\''+ post_id  +'\',\''+ page_id  +'\',\''+ photo  +'\',\''+ name  +'\')">' +
@@ -1162,7 +1162,7 @@ $$( '#like-deals-here' ).append( '<li class="virtual-content swipeout likeli hid
                '</div>'+
                            '<div class="swipeout-actions-right">' +
         '<a href="#" onclick="removelikelList(\''+ allEntries[k].post_id  +'\',\''+allEntries[k].page_id +'\',\''+ allEntries[k].photo  +'\',\''+ allEntries[k].name  +'\')"><i class="pe-7s-plus pe-2x"></i></a>' +
-        '<a href="#" onclick="removelikeList(\''+ allEntries[k].post_id  +'\',\''+allEntries[k].page_id +'\',\''+ allEntries[k].photo  +'\',\''+ allEntries[k].name  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a>' +
+        '<a href="#" onclick="removelikeList(\''+ allEntries[k].post_id  +'\',\''+allEntries[k].page_id +'\',\''+ allEntries[k].photo  +'\',\''+ allEntries[k].name  +'\',\''+ allEntries[k].title  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a>' +
       '</div>' +
  '</li>');
 
