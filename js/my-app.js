@@ -1205,7 +1205,7 @@ document.getElementById("after-liked").value = deals_liked;
 $$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=' + page_id, function(res){
 
 if (res[0][8]){
-$$( '#info-here' ).append('<li><a href="#" onclick="openMap();" class="item-content" style="color:#666;"><<div class="item-media" style="width:50px;"></div><div class="item-inner"><div class="item-title-row"><div class="item-title">'+ res[0][6] + ' ' + res[0][7] + '</div><div class="item-after"><i class="pe-7s-map pe-lg"></i></div></div><div class="item-subtitle">'+ res[0][9] + ' ' + res[0][10] + ' ' + res[0][11]+'</div></div></a></li>');
+$$( '#info-here' ).append('<li><a href="#" onclick="openMap();" class="item-content" style="color:#666;"><div class="item-media" style="width:50px;"></div><div class="item-inner"><div class="item-title-row"><div class="item-title">'+ res[0][6] + ' ' + res[0][7] + '</div><div class="item-after"><i class="pe-7s-map pe-lg"></i></div></div><div class="item-subtitle">'+ res[0][9] + ' ' + res[0][10] + ' ' + res[0][11]+'</div></div></a></li>');
 }
 
 if (res[0][4]){
