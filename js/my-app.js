@@ -64,18 +64,18 @@ mainView.hideNavbar();
 
 
 myApp.onPageAfterAnimation('location', function (page) {
-$$("#result li").remove();
+//$$("#result li").remove();
 });
 
 myApp.onPageBeforeRemove('location', function (page) {
-$$("#loader-container").show();
-functionEmpty();
+//$$("#loader-container").show();
+//functionEmpty();
 });
 
 
 myApp.onPageBeforeRemove('business', function (page) {
-$$( ".business" ).remove();
-functionEmpty();
+//$$( ".business" ).remove();
+//functionEmpty();
 });
 
 myApp.onPageInit('my-page', function (page) {
