@@ -1068,29 +1068,20 @@ $$( ".button-map" ).toggleClass( "active" );
 
 function openLikez() {
 
-$$( ".likeli" ).toggleClass( "hide" );
+$$( ".likeli" ).removeClass( "hide" );
 $$( ".likelix" ).addClass( "hide" );
-$$( ".after-liked" ).addClass( "white" );
-$$( "#after-liked" ).addClass( "white" );
-$$( ".after-notliked" ).removeClass( "white" );
-$$( "#after-notliked" ).removeClass( "white" );
-$$( "#li-like" ).toggleClass( "blue-back" );
-$$( "#li-dislike" ).toggleClass( "orange-back" );
+$$( "#li-like" ).addClass( "white-back" );
+$$( "#li-dislike" ).removeClass( "white-back" );
 	
 	
 }
 
 function openLikex() {
 
-$$( ".likelix" ).toggleClass( "hide" );
+$$( ".likelix" ).removeClass( "hide" );
 $$( ".likeli" ).addClass( "hide" );
-$$( "#after-notliked" ).addClass( "orange-circle" );
-$$( ".after-liked" ).removeClass( "white" );
-$$( "#after-liked" ).removeClass( "white" );
-$$( ".after-notliked" ).addClass( "white" );
-$$( "#after-notliked" ).addClass( "white" );
-$$( "#li-like" ).toggleClass( "blue-back" );
-$$( "#li-dislike" ).toggleClass( "orange-back" );	
+$$( "#li-like" ).removeClass( "white-back" );
+$$( "#li-dislike" ).addClass( "white-back" );	
 	
 }
 
@@ -1130,7 +1121,7 @@ mainView.loadContent(
         '    <div class="page-content cover-business" style="z-index: 1;">' +
         '      <div class="content-block" style="margin-top:-9px;">' +
         '        <div class="content-block-inner" style="background-color:rgba(255,255,255,.4);"">' +
-	      '<div class="list-block media-list" style="margin-top:0px;"><ul style="background-color:hsla(0, 0%, 100%, 0.8);"><div id="cover-div"></div><div id="info-here"></div><li style="width:50%;float:left;" id="li-like"><a href="#" onclick="openLikez()" class="item-content" style="color:#666;"><div class="item-media" style="margin-left:30px;"><i class="pe-7s-like2 pe-lg" style="margin-right:5px;" class="after-liked blue"></i></div><div class="item-inner" style="border:0;"><div class="item-title-row"><div class="item-title"></div><div class="item-after"><div id="after-liked" class="badge blue-circle" style="background-color:transparent;"></div></div></div></div></a></li><li style="width:50%;float:left;" id="li-dislike"><a href="#" onclick="openLikex()" class="item-content" style="color:#666;"><div class="item-media" style="margin-left:30px;"><i class="pe-7s-like2 pe-lg pe-rotate-180" style="margin-right:5px;" class="after-notliked orange"></i></div><div class="item-inner" style="border:0;"><div class="item-title-row"><div class="item-title"></div><div class="item-after"><div id="after-notliked" class="badge orange-circle" style="background-color:transparent;"></div></div></div></div></a></li><div id="my"><div id="like-deals-here"></div></div><div id="nomy"><div id="deals-here"></div></div></ul></div>' +
+	      '<div class="list-block media-list" style="margin-top:0px;"><ul style="background-color:hsla(0, 0%, 100%, 0.8);"><div id="cover-div"></div><div id="info-here"></div><li style="width:50%;float:left;" id="li-like"><a href="#" onclick="openLikez()" class="item-content" style="color:#666;"><div class="item-media" style="margin-left:30px;"><i class="pe-7s-like2 pe-lg" style="margin-right:5px;color:#3b5998;"></i></div><div class="item-inner" style="border:0;"><div class="item-title-row"><div class="item-title"></div><div class="item-after"><div id="after-liked" class="badge blue-circle" style="background-color:transparent;"></div></div></div></div></a></li><li style="width:50%;float:left;" id="li-dislike"><a href="#" onclick="openLikex()" class="item-content" style="color:#666;"><div class="item-media" style="margin-left:30px;"><i class="pe-7s-like2 pe-lg pe-rotate-180" style="margin-right:5px;color:#ff8000;"></i></div><div class="item-inner" style="border:0;"><div class="item-title-row"><div class="item-title"></div><div class="item-after"><div id="after-notliked" class="badge orange-circle" style="background-color:transparent;"></div></div></div></div></a></li><div id="my"><div id="like-deals-here"></div></div><div id="nomy"><div id="deals-here"></div></div></ul></div>' +
 
 
 
