@@ -1074,8 +1074,8 @@ $$( ".after-liked" ).addClass( "white" );
 $$( "#after-liked" ).addClass( "white" );
 $$( ".after-notliked" ).removeClass( "white" );
 $$( "#after-notliked" ).removeClass( "white" );
-$$( "#li-like" ).addClass( "blue-back" );
-$$( "#li-dislike" ).removeClass( "orange-back" );
+$$( "#li-like" ).toggleClass( "blue-back" );
+$$( "#li-dislike" ).toggleClass( "orange-back" );
 	
 	
 }
@@ -1089,8 +1089,8 @@ $$( ".after-liked" ).removeClass( "white" );
 $$( "#after-liked" ).removeClass( "white" );
 $$( ".after-notliked" ).addClass( "white" );
 $$( "#after-notliked" ).addClass( "white" );
-$$( "#li-like" ).removeClass( "blue-back" );
-$$( "#li-dislike" ).addClass( "orange-back" );	
+$$( "#li-like" ).toggleClass( "blue-back" );
+$$( "#li-dislike" ).toggleClass( "orange-back" );	
 	
 }
 
