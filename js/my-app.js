@@ -1068,7 +1068,7 @@ $$( ".button-map" ).toggleClass( "active" );
 
 function openLikez() {
 
-$$( ".likeli" ).removeClass( "hide" );
+$$( ".likeli" ).toggleClass( "hide" );
 $$( ".likelix" ).addClass( "hide" );
 $$( "#li-like" ).addClass( "white-back" );
 $$( "#li-dislike" ).removeClass( "white-back" );
@@ -1078,7 +1078,7 @@ $$( "#li-dislike" ).removeClass( "white-back" );
 
 function openLikex() {
 
-$$( ".likelix" ).removeClass( "hide" );
+$$( ".likelix" ).toggleClass( "hide" );
 $$( ".likeli" ).addClass( "hide" );
 $$( "#li-like" ).removeClass( "white-back" );
 $$( "#li-dislike" ).addClass( "white-back" );	
