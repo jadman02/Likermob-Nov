@@ -1101,7 +1101,7 @@ if(favEntries.length > 0){for (j = 0; j < favEntries.length; j++) {if (favEntrie
 mainView.loadContent(
         '<!-- Top Navbar-->' +
         '<div class="navbar business">' +
-        '  <div class="navbar-inner" style="border-bottom: 1px solid #c4c4c4;">' +
+        '  <div class="navbar-inner cover-div" style="border-bottom: 1px solid #c4c4c4;">' +
         '<div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>'+
         '<div class="right business-right"></div>' +
         '  </div>' +
@@ -1207,11 +1207,14 @@ document.getElementById("after-liked").value = deals_liked;
 
 $$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=' + page_id, function(res){
 
-initialize(res[0][13],res[0][14],res[0][1],res[0][16]);
 
-if (res[0][8]){
-$$( '#info-here' ).append('<li><a href="#" onclick="openMap();" class="item-content" style="color:#666;"><div class="item-media" style="width:30px;"></div><div class="item-inner"><div class="item-title-row"><div class="item-title">'+ res[0][6] + ' ' + res[0][7] + '</div><div class="item-after"></div></div><div class="item-subtitle">'+ res[0][9] + ' ' + res[0][10] + ' ' + res[0][11]+'</div></div></a></li>');
-}
+initialize(res[0][13],res[0][14],res[0][1],res[0][16],res[0][6],res[0][7],res[0][9],res[0][10],res[0][11]);
+
+
+
+//if (res[0][8]){
+//$$( '#info-here' ).append('<li><a href="#" onclick="openMap();" class="item-content" style="color:#666;"><div class="item-media" style="width:30px;"></div><div class="item-inner"><div class="item-title-row"><div class="item-title">'+ res[0][6] + ' ' + res[0][7] + '</div><div class="item-after"></div></div><div class="item-subtitle">'+ res[0][9] + ' ' + res[0][10] + ' ' + res[0][11]+'</div></div></a></li>');
+//}
 
 if (res[0][4]){
 $$( '.business-right' ).append('<a href="tel:'+res[0][4]+'" class="button external link" style="border:0;margin-right:5px;"><i class="pe-7s-call pe-lg"></i></a>');
@@ -1231,10 +1234,10 @@ $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(res
 	
 	
 	var coverpic = response["cover"]["source"];
-	$$( '#cover-div' ).append('<li><img src="'+ coverpic  +'" style="width:100%"/></li>');
-	//$$( '.cover-business' ).css( 'background-image', 'url(\''+ coverpic  +'\')' );
-	//$$( '.cover-business' ).css( 'background-size', '100%' );
-	//$$( '.cover-business' ).css( 'background-repeat', 'no-repeat' );
+//	$$( '#cover-div' ).append('<li><img src="'+ coverpic  +'" style="width:100%"/></li>');
+	$$( '.cover-div' ).css( 'background-image', 'url(\''+ coverpic  +'\')' );
+	$$( '.cover-div' ).css( 'background-size', '100%' );
+	$$( '.cover-div' ).css( 'background-repeat', 'no-repeat' );
 	
 });	
 	
@@ -1316,7 +1319,7 @@ if (allEntries[j].post_id == res[i][2]){
 
 
 
-function initialize(latitude,longitude,page_id,name) {
+function initialize(latitude,longitude,page_id,name,number,street,suburb,postcode,state) {
 	
   var myLatlng = new google.maps.LatLng(latitude,longitude);
   var mapOptions = {
@@ -1326,7 +1329,7 @@ function initialize(latitude,longitude,page_id,name) {
   var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
 var contentString = '<div style="width:206px;color:#2c2c2c;padding-bottom:5px;">'+
-'<div id="cover-div"></div><p style="margin-top:0px;padding-top:0px;"><span style="font-weight:400;">'+name+'</span><br/><span style="font-weight:300;">S</span></p>' +
+'<p style="margin-top:0px;padding-top:0px;"><span style="font-weight:400;">'+name+'</span><br/><span style="font-weight:300;">'+number+' '+street+' '+suburb+' '+state+'</span></p>' +
       '<p><a href="#">Website</a></br>Phone</p>'+
       '</div>';
 
