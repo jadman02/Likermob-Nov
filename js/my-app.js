@@ -1101,7 +1101,7 @@ if(favEntries.length > 0){for (j = 0; j < favEntries.length; j++) {if (favEntrie
 mainView.loadContent(
         '<!-- Top Navbar-->' +
         '<div class="navbar business">' +
-        '  <div class="navbar-inner cover-div" style="border-bottom: 1px solid #c4c4c4;">' +
+        '  <div class="navbar-inner" style="border-bottom: 1px solid #c4c4c4;">' +
         '<div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>'+
         '<div class="right business-right"></div>' +
         '  </div>' +
@@ -1112,7 +1112,7 @@ mainView.loadContent(
         '    <!-- Scrollable page content-->' +
 '<div id="map-canvas"></div>' +
         '    <div class="page-content cover-business" style="z-index: 1;">' +
-        '      <div class="content-block" style="margin-top:-9px;">' +
+        '      <div class="content-block cover-div" style="margin-top:-9px;">' +
         '        <div class="content-block-inner" style="background-color:rgba(255,255,255,.4);"">' +
 	      '<div class="list-block media-list" style="margin-top:0px;"><ul style="background-color:hsla(0, 0%, 100%, 0.8);"><div id="info-here"></div><li style="width:50%;float:left;border-top:1px solid #ccc;" id="li-like"><a href="#" onclick="openLikez()" class="item-content" style="color:#666;"><div class="item-media"><i class="pe-7s-like2 pe-lg" style="margin-right:5px;color:#3b5998;"></i></div><div class="item-inner" style="border:0;"><div class="item-title-row"><div class="item-title"></div><div class="item-after"><i class="pe-7s-refresh pe-spin pe-lg" style="color:#3b5998" id="refresh-like"></i><div id="after-liked" class="badge blue-circle" style="background-color:transparent;"></div></div></div></div></a></li><li style="width:50%;float:left;border-top:1px solid #ccc;" id="li-dislike"><a href="#" onclick="openLikex()" class="item-content" style="color:#666;"><div class="item-media"><i class="pe-7s-like2 pe-lg pe-rotate-180" style="margin-right:5px;color:#ff8000;"></i></div><div class="item-inner" style="border:0;"><div class="item-title-row"><div class="item-title"></div><div class="item-after"><i class="pe-7s-refresh pe-spin pe-lg" style="color:#ff8000" id="refresh-dislike"></i><div id="after-notliked" class="badge orange-circle" style="background-color:transparent;display:none;"></div></div></div></div></a></li><div id="my"><div id="like-deals-here"><div style="width:100%;" class="likeli"><div style="width:50%;height:1px;background-color:#3b5998;float:left;"></div></div></div></div><div id="nomy"><div id="deals-here"><div style="width:100%;" class="likelix hide"><div style="width:50%;height:1px;background-color:#ff8000;float:right;"></div></div></div></div></ul></div>' +
 
@@ -1330,7 +1330,6 @@ function initialize(latitude,longitude,page_id,name,number,street,suburb,postcod
 
 var contentString = '<div style="width:206px;color:#2c2c2c;padding-bottom:5px;">'+
 '<p style="margin-top:0px;padding-top:0px;"><span style="font-weight:400;">'+name+'</span><br/><span style="font-weight:300;">'+number+' '+street+' '+suburb+' '+state+'</span></p>' +
-      '<p><a href="#">Website</a></br>Phone</p>'+
       '</div>';
 
 
@@ -1342,7 +1341,7 @@ var contentString = '<div style="width:206px;color:#2c2c2c;padding-bottom:5px;">
       position: myLatlng,
       map: map,
       title: 'Hello World!',
-    icon: 'http://graph.facebook.com/'+page_id+'/picture?width=30&height=30'
+    icon: 'http://graph.facebook.com/'+page_id+'/picture'
   });
 infowindow.open(map,marker);
   google.maps.event.addListener(marker, 'click', function() {
