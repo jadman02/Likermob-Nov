@@ -1208,7 +1208,7 @@ document.getElementById("after-liked").value = deals_liked;
 $$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=' + page_id, function(res){
 
 
-initialize(res[0][13],res[0][14],res[0][1],res[0][16],res[0][6],res[0][7],res[0][9],res[0][10],res[0][11]);
+initialize(res[0][13],res[0][14],res[0][2],res[0][1],res[0][6],res[0][7],res[0][9],res[0][10],res[0][11]);
 
 
 
