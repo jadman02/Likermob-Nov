@@ -1124,23 +1124,23 @@ mainView.loadContent(
         '    </div>' +
         
         
-         '<div class="toolbar tabbar" style="background-color:hsla(0, 0%, 100%, 0.8);">' +
+         '<div class="toolbar tabbar tabbar-labels">' +
     '<div class="toolbar-inner">' +
        ' <a href="#tab1" onclick="openLikez()" class="tab-link active">' +
            '<span class="badge blue-circle"><i class="pe-7s-refresh pe-spin pe-lg" style="color:#3b5998" id="refresh-like"></i><div id="after-liked"></div></span>' +
-        '</a>' +
+        '<span class="tabbar-label">Liked</span></a>' +
        ' <a href="#tab2" class="tab-link">' +
            ' <i class="pe-7s-call pe-lg"></i>' +
-       ' </a>' +
+       ' <span class="tabbar-label">Call</span></a>' +
         ' <a href="#tab2" onclick="openMap();" class="tab-link">' +
            '<i class="pe-7s-map pe-lg"></i>'+
-       ' </a>' +
+       ' <span class="tabbar-label">Map</span></a>' +
         '<a href="#tab3" class="tab-link">' +
           '  <i class="pe-7s-mail pe-lg"></i>' +
-       ' </a>' +
+       ' <span class="tabbar-label">Email</span></a>' +
        '<a href="#tab4" class="tab-link" onclick="openLikex()">' +
            '<span class="badge grey-circle"><i class="pe-7s-refresh pe-spin pe-lg" style="color:#ff8000" id="refresh-dislike"></i><div id="after-notliked" style="display:none;"></div></span>' +
-       ' </a>' +
+       '<span class="tabbar-label">Not Liked</span> </a>' +
    ' </div>' +
 '</div>' +
         
