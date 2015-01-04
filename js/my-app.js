@@ -1367,24 +1367,14 @@ function initialize(latitude,longitude,page_id,number,street,suburb,postcode,sta
 
 $$('#maptrans').show();
 
-var contentString = '<div style="color:#2c2c2c;padding-bottom:5px;">'+
-'<p style="margin-top:0px;padding-top:0px;"><span style="font-weight:400;">'+number+' '+street+'</span><br/><span style="font-weight:300;"> '+suburb+' '+state+'</span></p>' +
-      '</div>';
 
-
-  var infowindow = new google.maps.InfoWindow({
-      content: contentString
-  });
 
   var marker = new google.maps.Marker({
       position: myLatlng,
       map: map
     //icon: 'http://graph.facebook.com/'+page_id+'/picture?width=20&height=20'
   });
-infowindow.open(map,marker);
-  google.maps.event.addListener(marker, 'click', function() {
-    infowindow.open(map,marker);
-  });
+
 }
 
 
