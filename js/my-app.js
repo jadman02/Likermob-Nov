@@ -1133,13 +1133,13 @@ mainView.loadContent(
           '  <i class="pe-7s-mail pe-lg"></i>' +
        ' </a>' +
        '<a href="#tab4" class="tab-link" onclick="openLikex()">' +
-           '<span class="badge orange-circle"><i class="pe-7s-refresh pe-spin pe-lg" style="color:#ff8000" id="refresh-dislike"></i><div id="after-notliked" style="display:none;"></div></span>' +
+           '<span class="badge grey-circle"><i class="pe-7s-refresh pe-spin pe-lg" style="color:#ff8000" id="refresh-dislike"></i><div id="after-notliked" style="display:none;"></div></span>' +
        ' </a>' +
    ' </div>' +
 '</div>' +
 	      
 	      
-	     ' <div id="my"><div id="like-deals-here"><div style="width:100%;" class="likeli"><div style="width:50%;height:1px;background-color:#3b5998;float:left;"></div></div></div></div><div id="nomy"><div id="deals-here"><div style="width:100%;" class="likelix hide"><div style="width:50%;height:1px;background-color:#ff8000;float:right;"></div></div></div></div></ul></div>' +
+	     ' <div id="my"><div id="like-deals-here"><div style="width:100%;" class="likeli"><div style="width:100%;height:1px;background-color:#3b5998;float:left;"></div></div></div></div><div id="nomy"><div id="deals-here"><div style="width:100%;" class="likelix hide"><div style="width:100%;height:1px;background-color:#ff8000;float:right;"></div></div></div></div></ul></div>' +
 
 
         '        </div>' +
@@ -1147,7 +1147,7 @@ mainView.loadContent(
 
         '    </div>' +
         
-                '<div class="toolbar hide" id="toolbar-map" style="background-color:transparent;border:0;display:none;">' +
+                '<div class="toolbar hide" id="toolbar-map" style="background-color:transparent;border:0;">' +
     '<div class="toolbar-inner" style="background-color:transparent;border:0;">' +
 
           '<a href="#" class="link button button-fill" onclick="openMap();" style="width:50px;height:50px;margin:0 auto;margin-top:-50px;border-radius:50%;"><i class="pe-7s-menu pe-lg"></i></a>' +
