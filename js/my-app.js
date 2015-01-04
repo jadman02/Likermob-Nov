@@ -1108,10 +1108,10 @@ mainView.loadContent(
         '</div>' +
         '<div class="pages business">' +
         '  <!-- Page, data-page contains page name-->' +
-        '  <div data-page="business" class="page business">' +
+        '  <div data-page="business" class="page business" style="background-color:transparent;">' +
         '    <!-- Scrollable page content-->' +
 '<div id="map-canvas"></div>' +
-        '    <div class="page-content cover-business" style="z-index: 1;">' +
+        '    <div class="page-content cover-business" style="z-index: 1;" style="background-color:transparent;">' +
         '      <div class="content-block" style="margin-top:-9px;">' +
         '        <div class="content-block-inner" style="background-color:rgba(255,255,255,.4);">' +
 	      '<div class="list-block media-list" style="margin-top:0px;"><ul style="background-color:hsla(0, 0%, 100%, 0.8);"><div id="info-here"></div><li style="width:50%;float:left;border-top:1px solid #ccc;background-color:hsla(0, 0%, 100%, 0.8);" id="li-like"><a href="#" onclick="openLikez()" class="item-content" style="color:#666;"><div class="item-media"><i class="pe-7s-like2 pe-lg" style="margin-right:5px;color:#3b5998;"></i></div><div class="item-inner" style="border:0;"><div class="item-title-row"><div class="item-title"></div><div class="item-after"><i class="pe-7s-refresh pe-spin pe-lg" style="color:#3b5998" id="refresh-like"></i><div id="after-liked" class="badge blue-circle" style="background-color:transparent;"></div></div></div></div></a></li><li style="width:50%;float:left;border-top:1px solid #ccc;background-color:hsla(0, 0%, 100%, 0.8);" id="li-dislike"><a href="#" onclick="openLikex()" class="item-content" style="color:#666;"><div class="item-media"><i class="pe-7s-like2 pe-lg pe-rotate-180" style="margin-right:5px;color:#ff8000;"></i></div><div class="item-inner" style="border:0;"><div class="item-title-row"><div class="item-title"></div><div class="item-after"><i class="pe-7s-refresh pe-spin pe-lg" style="color:#ff8000" id="refresh-dislike"></i><div id="after-notliked" class="badge orange-circle" style="background-color:transparent;display:none;"></div></div></div></div></a></li><div id="my"><div id="like-deals-here"><div style="width:100%;" class="likeli"><div style="width:50%;height:1px;background-color:#3b5998;float:left;"></div></div></div></div><div id="nomy"><div id="deals-here"><div style="width:100%;" class="likelix hide"><div style="width:50%;height:1px;background-color:#ff8000;float:right;"></div></div></div></div></ul></div>' +
@@ -1132,7 +1132,7 @@ mainView.loadContent(
 
         '    </div>' +
         
-                '<div class="toolbar">' +
+                '<div class="toolbar" style="background-color:transparent;">' +
     '<div class="toolbar-inner" style="background-color:transparent;">' +
         '<a href="#" class="link">Link 1</a>' +
     '</div>' +
@@ -1343,7 +1343,7 @@ function initialize(latitude,longitude,page_id,number,street,suburb,postcode,sta
   }
   var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
-var contentString = '<div style="width:206px;color:#2c2c2c;padding-bottom:5px;">'+
+var contentString = '<div style="color:#2c2c2c;padding-bottom:5px;">'+
 '<p style="margin-top:0px;padding-top:0px;"><span style="font-weight:400;">'+number+' '+street+'</span><br/><span style="font-weight:300;"> '+suburb+' '+state+'</span></p>' +
       '</div>';
 
