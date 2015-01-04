@@ -1133,13 +1133,13 @@ mainView.loadContent(
           '  <i class="pe-7s-mail pe-lg"></i>' +
        ' </a>' +
        '<a href="#tab4" class="tab-link" onclick="openLikex()">' +
-           '<span class="badge grey-circle"><i class="pe-7s-refresh pe-spin pe-lg" style="color:#ff8000" id="refresh-dislike"></i><div id="after-notliked" style="display:none;"></div></span>' +
+           '<span class="badge orange-circle"><i class="pe-7s-refresh pe-spin pe-lg" style="color:#ff8000" id="refresh-dislike"></i><div id="after-notliked" style="display:none;"></div></span>' +
        ' </a>' +
    ' </div>' +
 '</div>' +
 	      
 	      
-	     ' <div id="my"><div id="like-deals-here"><div style="width:100%;" class="likeli"><div style="width:100%;height:1px;background-color:#3b5998;float:left;"></div></div></div></div><div id="nomy"><div id="deals-here"><div style="width:100%;" class="likelix hide"><div style="width:100%;height:1px;background-color:#ff8000;float:right;"></div></div></div></div></ul></div>' +
+	     ' <div id="my"><div id="like-deals-here"><div style="width:100%;margin-bottom:5px;" class="likeli"><div style="width:20%;height:1px;background-color:#3b5998;float:left;"></div></div></div></div><div id="nomy"><div id="deals-here"><div style="width:100%;margin-bottom:5px;" class="likelix hide"><div style="width:20%;height:1px;background-color:#ff8000;float:right;"></div></div></div></div></ul></div>' +
 
 
         '        </div>' +
@@ -1167,7 +1167,7 @@ mainView.loadContent(
         
     );
 
-var businessheight = $$(window).height();
+var businessheight = $$(window).height() - 20;
     	$$( '.jinner' ).css( 'min-height', businessheight + 'px' );
 
 $$( '#info-here' ).append('<li><div class="item-content"><div class="item-media"><a href="#" class="back link"><i class="icon icon-back"></i></a></div><div class="item-inner"><div class="item-title-row"><div class="item-title"><img src="http://graph.facebook.com/'+page_id+'/picture?width=20&height=20" style="border-radius:50%;width:20px;margin-top:5px;margin-right:5px;"/>'+ name +'</div><div class="item-after">'+ staryellow + starblue +'</div></div></div></div></li>');
