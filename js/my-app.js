@@ -1113,12 +1113,12 @@ mainView.loadContent(
         '    <!-- Scrollable page content-->' +
 '<div id="map-canvas"></div>' +
         '    <div class="page-content cover-business" style="z-index: 1;" style="background-color:transparent;">' +
-        '      <div class="content-block" style="margin-top:-10px;">' +
+        '      <div class="content-block" style="margin-top:-1px;">' +
         '        <div class="content-block-inner jinner" style="background-color:transparent;">' +
 	      '<div class="list-block media-list" style="margin-top:0px;">' +
 	     ' <ul style="background-color:transparent">' +
 	      '<div id="info-here"></div>' +
-	      '<div style="background-color:transparent;height:200px;margin:0 auto;" onclick="openMap()"></div>'+
+	      '<div id="maptrans" style="background-color:transparent;height:200px;margin:0 auto;display:none;" onclick="openMap()"></div>'+
 	      '<div class="toolbar tabbar">' +
     '<div class="toolbar-inner">' +
        ' <a href="#tab1" onclick="openLikez()" class="tab-link active">' +
@@ -1364,6 +1364,8 @@ function initialize(latitude,longitude,page_id,number,street,suburb,postcode,sta
     center: myLatlng
   }
   var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+$$('#maptrans').show();
 
 var contentString = '<div style="color:#2c2c2c;padding-bottom:5px;">'+
 '<p style="margin-top:0px;padding-top:0px;"><span style="font-weight:400;">'+number+' '+street+'</span><br/><span style="font-weight:300;"> '+suburb+' '+state+'</span></p>' +
