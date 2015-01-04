@@ -1116,7 +1116,7 @@ mainView.loadContent(
         '      <div class="content-block" style="margin-top:-9px;margin-bottom:-100px;">' +
         '        <div class="content-block-inner jinner" style="background-color:rgba(255,255,255,.4);">' +
 	      '<div class="list-block media-list" style="margin-top:0px;">' +
-	     ' <ul>' +
+	     ' <ul style="background-color:transparent;">' +
 	      '<div id="info-here"></div>' +
 	      '<div style="background-color:transparent;height:300px;" onclick="openMap()"></div>'+
 	      '<div class="toolbar tabbar"' +
