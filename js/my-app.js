@@ -1124,15 +1124,15 @@ mainView.loadContent(
        ' <a href="#tab1" onclick="openLikez()" class="tab-link active">' +
            '<span class="badge blue-circle"><i class="pe-7s-refresh pe-spin pe-lg" style="color:#3b5998" id="refresh-like"></i><div id="after-liked"></div></span>' +
         '</a>' +
-       ' <a href="#tab2" class="tab-link">' +
-           ' <i id="callicon" class="pe-7s-call pe-lg"></i><div id="call-right"></div>' +
-       ' </a>' +
-        ' <a href="#tab2" onclick="openMap();" class="tab-link">' +
-           '<i id="mapicon" class="pe-7s-map pe-lg"></i><div id="map-right"></div>'+
-       ' </a>' +
-        '<a href="#tab3" class="tab-link">' +
-          '  <i id="mailicon" class="pe-7s-mail pe-lg"></i><div id="mail-right"></div>' +
-       ' </a>' +
+       ' <a href="#tab2" class="tab-link" id="callicon">' +
+           ' <i class="pe-7s-call pe-lg"></i>' +
+       ' </a><div id="call-right"></div>' +
+        ' <a href="#tab2" onclick="openMap();" class="tab-link" id="mapicon">' +
+           '<i class="pe-7s-map pe-lg"></i>'+
+       ' </a><div id="map-right"></div>' +
+        '<a href="#tab3" class="tab-link" id="mailicon">' +
+          '  <i class="pe-7s-mail pe-lg"></i>' +
+       ' </a><div id="mail-right"></div>' +
        '<a href="#tab4" class="tab-link" onclick="openLikex()">' +
            '<span class="badge orange-circle"><i class="pe-7s-refresh pe-spin pe-lg" style="color:#ff8000" id="refresh-dislike"></i><div id="after-notliked" style="display:none;"></div></span>' +
        ' </a>' +
