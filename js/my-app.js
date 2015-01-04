@@ -1118,37 +1118,13 @@ mainView.loadContent(
 	      '<div class="list-block media-list" style="margin-top:0px;">' +
 	     ' <ul style="background-color:hsla(0, 0%, 100%, 0.8);">' +
 	      '<div id="info-here"></div>' +
-	      '<div class="toolbar tabbar">' +
-    '<div class="toolbar-inner">' +
-       ' <a href="#tab1" onclick="openLikez()" class="tab-link active">' +
-           '<span class="badge blue-circle"><i class="pe-7s-refresh pe-spin pe-lg" style="color:#3b5998" id="refresh-like"></i><div id="after-liked"></div></span>' +
-        '</a>' +
-       ' <a href="#tab2" class="tab-link">' +
-           ' <i class="pe-7s-call pe-lg"></i>' +
-       ' </a>' +
-        ' <a href="#tab2" onclick="openMap();" class="tab-link">' +
-           '<i class="pe-7s-map pe-lg"></i>'+
-       ' </a>' +
-        '<a href="#tab3" class="tab-link">' +
-          '  <i class="pe-7s-mail pe-lg"></i>' +
-       ' </a>' +
-       '<a href="#tab4" class="tab-link" onclick="openLikex()">' +
-           '<span class="badge grey-circle"><i class="pe-7s-refresh pe-spin pe-lg" style="color:#ff8000" id="refresh-dislike"></i><div id="after-notliked" style="display:none;"></div></span>' +
-       ' </a>' +
-   ' </div>' +
-'</div>' +
-	      
-	      
 	     ' <div id="my"><div id="like-deals-here"><div style="width:100%;" class="likeli"><div style="width:100%;height:1px;background-color:#3b5998;float:left;"></div></div></div></div><div id="nomy"><div id="deals-here"><div style="width:100%;" class="likelix hide"><div style="width:100%;height:1px;background-color:#ff8000;float:right;"></div></div></div></div></ul></div>' +
-
-
         '        </div>' +
         '      </div>' +
-
         '    </div>' +
         
         
-         '<div class="toolbar tabbar hide" id="toolbar-map">' +
+         '<div class="toolbar tabbar hide" id="toolbar-map" style="background-color:hsla(0, 0%, 100%, 0.8);">' +
     '<div class="toolbar-inner">' +
        ' <a href="#tab1" onclick="openLikez()" class="tab-link active">' +
            '<span class="badge blue-circle"><i class="pe-7s-refresh pe-spin pe-lg" style="color:#3b5998" id="refresh-like"></i><div id="after-liked"></div></span>' +
