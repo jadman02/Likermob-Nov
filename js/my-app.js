@@ -1114,7 +1114,7 @@ mainView.loadContent(
 '<div id="map-canvas"></div>' +
         '    <div class="page-content cover-business" style="z-index: 1;" style="background-color:transparent;">' +
         '      <div class="content-block" style="margin-top:-9px;">' +
-        '        <div class="content-block-inner" style="background-color:rgba(255,255,255,.4);">' +
+        '        <div class="content-block-inner jinner" style="background-color:rgba(255,255,255,.4);">' +
 	      '<div class="list-block media-list" style="margin-top:0px;">' +
 	     ' <ul style="background-color:hsla(0, 0%, 100%, 0.8);">' +
 	      '<div id="info-here"></div>' +
@@ -1167,6 +1167,8 @@ mainView.loadContent(
         
     );
 
+var businessheight = $$(window).height();
+    	$$( '.jinner' ).css( 'min-height', businessheight + 'px' );
 
 $$( '#info-here' ).append('<li><div class="item-content"><div class="item-media"><a href="#" class="back link"><i class="icon icon-back"></i></a></div><div class="item-inner"><div class="item-title-row"><div class="item-title"><img src="http://graph.facebook.com/'+page_id+'/picture?width=20&height=20" style="border-radius:50%;width:20px;margin-top:5px;margin-right:5px;"/>'+ name +'</div><div class="item-after">'+ staryellow + starblue +'</div></div></div></div></li>');
 
@@ -1274,6 +1276,7 @@ if (res[0][13] && res[0][14])
 	
 //});	
 	
+
 	
     
   
@@ -1393,7 +1396,6 @@ var clear_description = description.replace(/qqqq/g, "'");
 //  var heightpopup = $$(window).height()-;
 
 
-    
 
 myApp.modal({
     title: '<a class="button" style="float:right;border:none;margin-top:-10px;" href="#" onclick="closeModal();"><i class="pe-7s-close pe-lg"></i></a><div style="margin-left:25px;margin-right:25px;">' + title + '</div>',
