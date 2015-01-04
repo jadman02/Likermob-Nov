@@ -1068,13 +1068,13 @@ $$( ".button-map" ).toggleClass( "active" );
 
 function openLikez() {
 
-$$( ".likeli" ).addClass( "hide" );
+$$( ".likeli" ).removeClass( "hide" );
 $$( ".likelix" ).addClass( "hide" );
 }
 
 function openLikex() {
 
-$$( ".likelix" ).addClass( "hide" );
+$$( ".likelix" ).removeClass( "hide" );
 $$( ".likeli" ).addClass( "hide" );
 }
 
@@ -1167,7 +1167,7 @@ mainView.loadContent(
     );
 
 
-$$( '#info-here' ).append('<li><div class="item-content"><div class="item-media"><a href="#" class="back link"><i class="icon icon-back"></i></a></div><div class="item-inner"><div class="item-title-row"><div class="item-title"><img src="http://graph.facebook.com/'+page_id+'/picture?width=20&height=20" style="border-radius:50%;width:20px;"/>'+ name +'</div><div class="item-after">'+ staryellow + starblue +'</div></div></div></div></li>');
+$$( '#info-here' ).append('<li><div class="item-content"><div class="item-media"><a href="#" class="back link"><i class="icon icon-back"></i></a></div><div class="item-inner"><div class="item-title-row"><div class="item-title"><img src="http://graph.facebook.com/'+page_id+'/picture?width=20&height=20" style="border-radius:50%;width:20px;margin-top:5px;margin-right:5px;"/>'+ name +'</div><div class="item-after">'+ staryellow + starblue +'</div></div></div></div></li>');
 
 
 
