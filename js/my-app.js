@@ -1120,10 +1120,13 @@ mainView.loadContent(
 	      '<div class="toolbar tabbar">' +
     '<div class="toolbar-inner">' +
        ' <a href="#tab1" onclick="openLikez()" class="tab-link active">' +
-           '<i class="pe-7s-like2 pe-lg" style="color:#3b5998"><span class="badge blue-circle"><i class="pe-7s-refresh pe-spin pe-lg" style="color:#3b5998" id="refresh-like"></i><div id="after-liked"></div></span></i>' +
+           '<span class="badge blue-circle"><i class="pe-7s-refresh pe-spin pe-lg" style="color:#3b5998" id="refresh-like"></i><div id="after-liked"></div></span>' +
         '</a>' +
        ' <a href="#tab2" class="tab-link">' +
            ' <i class="pe-7s-call pe-lg"></i>' +
+       ' </a>' +
+        ' <a href="#tab2" class="tab-link">' +
+           staryellow + starblue +
        ' </a>' +
         '<a href="#tab3" class="tab-link">' +
           '  <i class="pe-7s-mail pe-lg"></i>' +
@@ -1165,7 +1168,7 @@ mainView.loadContent(
     );
 
 
-$$( '#info-here' ).append('<li><div class="item-content"><div class="item-media"><a href="#" class="back link"><i class="icon icon-back"></i></a><img src="http://graph.facebook.com/'+page_id+'/picture?width=30&height=30" style="border-radius:50%;width:30px;"/></div><div class="item-inner"><div class="item-title-row"><div class="item-title">'+ name +'</div><div class="item-after name_after">'+staryellow + starblue+'</div></div></div></div></li>');
+$$( '#info-here' ).append('<li><div class="item-content"><div class="item-media"><a href="#" class="back link"><i class="icon icon-back"></i></a><img src="http://graph.facebook.com/'+page_id+'/picture?width=30&height=30" style="border-radius:50%;width:30px;"/></div><div class="item-inner"><div class="item-title-row"><div class="item-title">'+ name +'</div></div></div></div></li>');
 
 
 
