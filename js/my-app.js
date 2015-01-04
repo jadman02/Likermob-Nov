@@ -1254,16 +1254,16 @@ initialize(res[0][13],res[0][14],res[0][2],res[0][6],res[0][7],res[0][9],res[0][
 
 if (res[0][4]){
  //$$('#callicon').hide();
-$$( '#call-right' ).append('<a href="tel:'+res[0][4]+'" class="tab-link external link" style="border:0;margin-right:5px;"><i class="pe-7s-call pe-lg"></i></a>');
+$$( '#call-right' ).append('<a href="tel:'+res[0][4]+'" class="tab-link external link"><i class="pe-7s-call pe-lg" style="color:#5ac8fa"></i></a>');
 }
 
 if (res[0][16]){
 //	$$('#mailicon').hide();
-$$( '#mail-right' ).append('<a href="mailto:'+res[0][16]+'" class="tab-link external link" style="border:0;"><i class="pe-7s-mail pe-lg"></i></a>');
+$$( '#mail-right' ).append('<a href="mailto:'+res[0][16]+'" class="tab-link external link"><i class="pe-7s-mail pe-lg" style="color:#5ac8fa"></i></a>');
 }
 if (res[0][13] && res[0][14])
 {//$$('#mapicon').hide();
-$$( '#map-right' ).append('<a href="#" class="tab-link" onclick="openMap();" style="border:0;"><i class="pe-7s-map pe-lg"></i></a>');}
+$$( '#map-right' ).append('<a href="#" class="tab-link" onclick="openMap();"><i class="pe-7s-map pe-lg" style="color:#5ac8fa"></i></a>');}
 
 
 
