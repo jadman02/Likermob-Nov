@@ -1099,32 +1099,16 @@ var starblue = '<i class="pe-7s-star pe-lg button link" id="blue_b" onclick="fav
 if(favEntries.length > 0){for (j = 0; j < favEntries.length; j++) {if (favEntries[j].page_id == page_id){staryellow = '<i class="pe-7s-star pe-lg button link" id="yellow_b" onclick="removefavList(\''+  page_id  +'\',9)" style="border:0;color:#ffcc00;"></i>';starblue = '<i class="pe-7s-star pe-lg button link" id="blue_b" onclick="favList(\''+ page_id  +'\',9)" style="border:0;display:none;"></i>';}}}
 
 mainView.loadContent(
-        '<!-- Top Navbar-->' +
-        '<div class="navbar business">' +
-        '  <div class="navbar-inner" style="border-bottom: 1px solid #c4c4c4;">' +
-        '<div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>'+
-        '<div class="right business-right"></div>' +
-        '  </div>' +
-        '</div>' +
+ 
         '<div class="pages business">' +
         '  <!-- Page, data-page contains page name-->' +
-        '  <div data-page="business" class="page business" style="background-color:transparent;">' +
+        '  <div data-page="business" class="page business">' +
         '    <!-- Scrollable page content-->' +
 '<div id="map-canvas"></div>' +
         '    <div class="page-content cover-business" style="z-index: 1;" style="background-color:transparent;">' +
         '      <div class="content-block" style="margin-top:-9px;">' +
         '        <div class="content-block-inner" style="background-color:rgba(255,255,255,.4);">' +
 	      '<div class="list-block media-list" style="margin-top:0px;"><ul style="background-color:hsla(0, 0%, 100%, 0.8);"><div id="info-here"></div><li style="width:50%;float:left;border-top:1px solid #ccc;background-color:hsla(0, 0%, 100%, 0.8);" id="li-like"><a href="#" onclick="openLikez()" class="item-content" style="color:#666;"><div class="item-media"><i class="pe-7s-like2 pe-lg" style="margin-right:5px;color:#3b5998;"></i></div><div class="item-inner" style="border:0;"><div class="item-title-row"><div class="item-title"></div><div class="item-after"><i class="pe-7s-refresh pe-spin pe-lg" style="color:#3b5998" id="refresh-like"></i><div id="after-liked" class="badge blue-circle" style="background-color:transparent;"></div></div></div></div></a></li><li style="width:50%;float:left;border-top:1px solid #ccc;background-color:hsla(0, 0%, 100%, 0.8);" id="li-dislike"><a href="#" onclick="openLikex()" class="item-content" style="color:#666;"><div class="item-media"><i class="pe-7s-like2 pe-lg pe-rotate-180" style="margin-right:5px;color:#ff8000;"></i></div><div class="item-inner" style="border:0;"><div class="item-title-row"><div class="item-title"></div><div class="item-after"><i class="pe-7s-refresh pe-spin pe-lg" style="color:#ff8000" id="refresh-dislike"></i><div id="after-notliked" class="badge orange-circle" style="background-color:transparent;display:none;"></div></div></div></div></a></li><div id="my"><div id="like-deals-here"><div style="width:100%;" class="likeli"><div style="width:50%;height:1px;background-color:#3b5998;float:left;"></div></div></div></div><div id="nomy"><div id="deals-here"><div style="width:100%;" class="likelix hide"><div style="width:50%;height:1px;background-color:#ff8000;float:right;"></div></div></div></div></ul></div>' +
-
-
-
-
-
-
-
-
-	
-
 
 
         '        </div>' +
@@ -1134,7 +1118,11 @@ mainView.loadContent(
         
                 '<div class="toolbar" style="background-color:transparent;">' +
     '<div class="toolbar-inner" style="background-color:transparent;">' +
-        '<a href="#" class="link">Link 1</a>' +
+        '<a href="#" class="link button"><i class="pe-7s-close pe-lg"></i></a>' +
+         '<a href="#" class="link button"><i class="pe-7s-call pe-lg"></i></a>' +
+          '<a href="#" class="link button"><i class="pe-7s-map pe-lg"></i></a>' +
+           '<a href="#" class="link button"><i class="pe-7s-mail pe-lg"></i></a>' +
+        
     '</div>' +
 '</div>' +
         
