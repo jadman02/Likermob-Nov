@@ -1124,7 +1124,7 @@ mainView.loadContent(
         '    </div>' +
         
         
-         '<div class="toolbar tabbar hide" id="toolbar-map" style="background-color:hsla(0, 0%, 100%, 0.8);">' +
+         '<div class="toolbar tabbar" style="background-color:hsla(0, 0%, 100%, 0.8);">' +
     '<div class="toolbar-inner">' +
        ' <a href="#tab1" onclick="openLikez()" class="tab-link active">' +
            '<span class="badge blue-circle"><i class="pe-7s-refresh pe-spin pe-lg" style="color:#3b5998" id="refresh-like"></i><div id="after-liked"></div></span>' +
