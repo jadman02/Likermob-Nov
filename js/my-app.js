@@ -1093,10 +1093,10 @@ $$("#loader-container").show();
 
 var favEntries = JSON.parse(localStorage.getItem("favEntries"));
 if(favEntries == null) favEntries = [];
-var staryellow = '<i class="pe-7s-star pe-lg button link" id="yellow_b" onclick="removefavList(\''+ page_id  +'\',9)" style="display:none;border:0;color:#ffcc00;"></i>';
-var starblue = '<i class="pe-7s-star pe-lg button link" id="blue_b" onclick="favList(\''+ page_id  +'\',9)" style="border:0;"></i>';
+var staryellow = '<i class="pe-7s-star pe-lg button link" id="yellow_b" onclick="removefavList(\''+ page_id  +'\',9)" style="display:none;border:0;color:#ffcc00;margin-top:5px;"></i>';
+var starblue = '<i class="pe-7s-star pe-lg button link" id="blue_b" onclick="favList(\''+ page_id  +'\',9)" style="border:0;margin-top:5px;"></i>';
  
-if(favEntries.length > 0){for (j = 0; j < favEntries.length; j++) {if (favEntries[j].page_id == page_id){staryellow = '<i class="pe-7s-star pe-lg button link" id="yellow_b" onclick="removefavList(\''+  page_id  +'\',9)" style="border:0;color:#ffcc00;"></i>';starblue = '<i class="pe-7s-star pe-lg button link" id="blue_b" onclick="favList(\''+ page_id  +'\',9)" style="border:0;display:none;"></i>';}}}
+if(favEntries.length > 0){for (j = 0; j < favEntries.length; j++) {if (favEntries[j].page_id == page_id){staryellow = '<i class="pe-7s-star pe-lg button link" id="yellow_b" onclick="removefavList(\''+  page_id  +'\',9)" style="border:0;color:#ffcc00;margin-top:5px;"></i>';starblue = '<i class="pe-7s-star pe-lg button link" id="blue_b" onclick="favList(\''+ page_id  +'\',9)" style="border:0;display:none;margin-top:5px;"></i>';}}}
 
 mainView.loadContent(
         '<!-- Top Navbar-->' +
@@ -1132,7 +1132,7 @@ mainView.loadContent(
           '  <i class="pe-7s-mail pe-lg"></i>' +
        ' </a>' +
        '<a href="#tab4" class="tab-link" onclick="openLikex()">' +
-           '<i class="pe-7s-like2 pe-lg pe-rotate-180" style="color:#ff8000"><span class="badge bg-red pe-rotate-0"><i class="pe-7s-refresh pe-spin pe-lg" style="color:#ff8000" id="refresh-dislike"></i><div id="after-notliked" style="display:none;"></div></span></i>' +
+           '<span class="badge orange-circle"><i class="pe-7s-refresh pe-spin pe-lg" style="color:#ff8000" id="refresh-dislike"></i><div id="after-notliked" style="display:none;"></div></span>' +
        ' </a>' +
    ' </div>' +
 '</div>' +
@@ -1146,10 +1146,10 @@ mainView.loadContent(
 
         '    </div>' +
         
-                '<div class="toolbar" style="background-color:transparent;">' +
+                '<div class="toolbar" style="background-color:transparent;border:0">' +
     '<div class="toolbar-inner" style="background-color:transparent;border:0;">' +
 
-          '<a href="#" class="link button" style="width:30px;height:30px;margin:0 auto;margin-top:-30px;"><i class="pe-7s-map pe-lg"></i></a>' +
+          '<a href="#" class="link button button-fill" onclick="openMap();" style="width:50px;height:50px;margin:0 auto;margin-top:-50px;border-radius:50%;"><i class="pe-7s-map pe-3x"></i></a>' +
 
         
     '</div>' +
@@ -1167,7 +1167,7 @@ mainView.loadContent(
     );
 
 
-$$( '#info-here' ).append('<li><div class="item-content"><div class="item-media"><a href="#" class="back link"><i class="icon icon-back"></i></a></div><div class="item-inner"><div class="item-title-row"><div class="item-title"><img src="http://graph.facebook.com/'+page_id+'/picture?width=30&height=30" style="border-radius:50%;width:30px;"/>'+ name +'</div></div></div></div></li>');
+$$( '#info-here' ).append('<li><div class="item-content"><div class="item-media"><a href="#" class="back link"><i class="icon icon-back"></i></a></div><div class="item-inner"><div class="item-title-row"><div class="item-title"><img src="http://graph.facebook.com/'+page_id+'/picture?width=20&height=20" style="border-radius:50%;width:20px;"/>'+ name +'</div></div></div></div></li>');
 
 
 
