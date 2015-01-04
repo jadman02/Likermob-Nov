@@ -1130,7 +1130,7 @@ mainView.loadContent(
            ' <i class="pe-7s-call pe-lg">' +
             '<span class="tabbar-label">Label 1</span>' +
        ' </a>' +
-       ' <a href="#tab2" class="tab-link">' +' +
+       ' <a href="#tab2" class="tab-link">' +
             '<i class="pe-7s-call pe-lg">' +
                ' <span class="badge bg-red">5</span>' +
            ' </i>' +
