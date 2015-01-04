@@ -1147,14 +1147,29 @@ mainView.loadContent(
 
         '    </div>' +
         
-                '<div class="toolbar hide" id="toolbar-map" style="background-color:transparent;border:0;">' +
-    '<div class="toolbar-inner" style="background-color:transparent;border:0;">' +
-
-          '<a href="#" class="link button button-fill" onclick="openMap();" style="width:50px;height:50px;margin:0 auto;margin-top:-50px;border-radius:50%;"><i class="pe-7s-menu pe-lg"></i></a>' +
-
         
-    '</div>' +
+         '<div class="toolbar tabbar hide" id="toolbar-map">' +
+    '<div class="toolbar-inner">' +
+       ' <a href="#tab1" onclick="openLikez()" class="tab-link active">' +
+           '<span class="badge blue-circle"><i class="pe-7s-refresh pe-spin pe-lg" style="color:#3b5998" id="refresh-like"></i><div id="after-liked"></div></span>' +
+        '</a>' +
+       ' <a href="#tab2" class="tab-link">' +
+           ' <i class="pe-7s-call pe-lg"></i>' +
+       ' </a>' +
+        ' <a href="#tab2" onclick="openMap();" class="tab-link">' +
+           '<i class="pe-7s-map pe-lg"></i>'+
+       ' </a>' +
+        '<a href="#tab3" class="tab-link">' +
+          '  <i class="pe-7s-mail pe-lg"></i>' +
+       ' </a>' +
+       '<a href="#tab4" class="tab-link" onclick="openLikex()">' +
+           '<span class="badge grey-circle"><i class="pe-7s-refresh pe-spin pe-lg" style="color:#ff8000" id="refresh-dislike"></i><div id="after-notliked" style="display:none;"></div></span>' +
+       ' </a>' +
+   ' </div>' +
 '</div>' +
+        
+        
+
         
         
         
