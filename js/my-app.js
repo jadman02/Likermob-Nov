@@ -1114,7 +1114,7 @@ mainView.loadContent(
 '<div id="map-canvas"></div>' +
         '    <div class="page-content cover-business" style="z-index: 1;" style="background-color:transparent;">' +
         '      <div class="content-block" style="margin-top:-9px;margin-bottom:-100px;">' +
-        '        <div class="content-block-inner jinner" style="background-color:rgba(255,255,255,.4);">' +
+        '        <div class="content-block-inner jinner">' +
 	      '<div class="list-block media-list" style="margin-top:0px;">' +
 	     ' <ul style="background-color:transparent">' +
 	      '<div id="info-here"></div>' +
