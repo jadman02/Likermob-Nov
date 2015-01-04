@@ -1123,11 +1123,12 @@ mainView.loadContent(
         '      </div>' +
         '    </div>' +
         
+
   
   '<div class="toolbar tabbar tabbar-labels">' +
     '<div class="toolbar-inner">' +
         '<a href="#tab1" class="tab-link active">' +
-           ' <i class="pe-7s-call pe-lg">' +
+           ' <i class="pe-7s-call pe-lg"></i>' +
             '<span class="tabbar-label">Label 1</span>' +
        ' </a>' +
        ' <a href="#tab2" class="tab-link">' +
