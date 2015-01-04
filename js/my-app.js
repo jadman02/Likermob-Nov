@@ -1099,7 +1099,13 @@ var starblue = '<i class="pe-7s-star pe-lg button link" id="blue_b" onclick="fav
 if(favEntries.length > 0){for (j = 0; j < favEntries.length; j++) {if (favEntries[j].page_id == page_id){staryellow = '<i class="pe-7s-star pe-lg button link" id="yellow_b" onclick="removefavList(\''+  page_id  +'\',9)" style="border:0;color:#ffcc00;"></i>';starblue = '<i class="pe-7s-star pe-lg button link" id="blue_b" onclick="favList(\''+ page_id  +'\',9)" style="border:0;display:none;"></i>';}}}
 
 mainView.loadContent(
- 
+        '<!-- Top Navbar-->' +
+        '<div class="navbar business">' +
+        '  <div class="navbar-inner" style="border-bottom: 1px solid #c4c4c4;">' +
+        '<div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>'+
+        '<div class="right business-right"></div>' +
+        '  </div>' +
+        '</div>' +
         '<div class="pages business">' +
         '  <!-- Page, data-page contains page name-->' +
         '  <div data-page="business" class="page business no-navbar">' +
