@@ -1119,20 +1119,21 @@ mainView.loadContent(
 	      '<div id="info-here"></div>' +
 	      '<div class="toolbar tabbar">' +
     '<div class="toolbar-inner">' +
-       ' <a href="#tab1" class="tab-link active">' +
-           '<i class="pe-7s-call pe-lg"></i>' +
+       ' <a href="#" onclick="openLikez()" class="tab-link active">' +
+           '<i class="pe-7s-like2 pe-lg"><span class="badge bg-red"><i class="pe-7s-refresh pe-spin pe-lg" style="color:#3b5998" id="refresh-like"></i><div id="after-liked"></div></span></i>' +
         '</a>' +
-        '<a href="#tab2" class="tab-link">' +
-           '<i class="pe-7s-call pe-lg"></i>' +
-       ' </a>' +
-       ' <a href="#tab3" class="tab-link">' +
+       ' <a href="#" class="tab-link">' +
            ' <i class="pe-7s-call pe-lg"></i>' +
        ' </a>' +
-        '<a href="#tab4" class="tab-link">' +
+        '<a href="#" class="tab-link">' +
           '  <i class="pe-7s-call pe-lg"></i>' +
+       ' </a>' +
+       '<a href="#" class="tab-link" onclick="openLikex()">' +
+           '<i class="pe-7s-like2 pe-lg pe-rotate-180"><span class="badge bg-red"><i class="pe-7s-refresh pe-spin pe-lg" style="color:#ff8000" id="refresh-dislike"></i><div id="after-notliked" style="display:none;"></div></span></i>' +
        ' </a>' +
    ' </div>' +
 '</div>' +
+	      
 	      
 	     ' <div id="my"><div id="like-deals-here"><div style="width:100%;" class="likeli"><div style="width:50%;height:1px;background-color:#3b5998;float:left;"></div></div></div></div><div id="nomy"><div id="deals-here"><div style="width:100%;" class="likelix hide"><div style="width:50%;height:1px;background-color:#ff8000;float:right;"></div></div></div></div></ul></div>' +
 
