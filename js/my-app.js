@@ -1068,13 +1068,13 @@ $$( ".button-map" ).toggleClass( "active" );
 
 function openLikez() {
 
-$$( ".likeli" ).toggleClass( "hide" );
+$$( ".likeli" ).addClass( "hide" );
 $$( ".likelix" ).addClass( "hide" );
 }
 
 function openLikex() {
 
-$$( ".likelix" ).toggleClass( "hide" );
+$$( ".likelix" ).addClass( "hide" );
 $$( ".likeli" ).addClass( "hide" );
 }
 
@@ -1125,8 +1125,8 @@ mainView.loadContent(
        ' <a href="#tab2" class="tab-link">' +
            ' <i class="pe-7s-call pe-lg"></i>' +
        ' </a>' +
-        ' <a href="#tab2" class="tab-link">' +
-           staryellow + starblue +
+        ' <a href="#tab2" onclick="openMap();" class="tab-link">' +
+           '<i class="pe-7s-map pe-lg"></i>'+
        ' </a>' +
         '<a href="#tab3" class="tab-link">' +
           '  <i class="pe-7s-mail pe-lg"></i>' +
@@ -1149,7 +1149,7 @@ mainView.loadContent(
                 '<div class="toolbar" style="background-color:transparent;border:0">' +
     '<div class="toolbar-inner" style="background-color:transparent;border:0;">' +
 
-          '<a href="#" class="link button button-fill" onclick="openMap();" style="width:50px;height:50px;margin:0 auto;margin-top:-50px;border-radius:50%;"><i class="pe-7s-map pe-3x"></i></a>' +
+          '<a href="#" class="link button button-fill" onclick="openMap();" style="width:50px;height:50px;margin:0 auto;margin-top:-50px;border-radius:50%;"><i class="pe-7s-menu pe-lg"></i></a>' +
 
         
     '</div>' +
@@ -1167,7 +1167,7 @@ mainView.loadContent(
     );
 
 
-$$( '#info-here' ).append('<li><div class="item-content"><div class="item-media"><a href="#" class="back link"><i class="icon icon-back"></i></a></div><div class="item-inner"><div class="item-title-row"><div class="item-title"><img src="http://graph.facebook.com/'+page_id+'/picture?width=20&height=20" style="border-radius:50%;width:20px;"/>'+ name +'</div></div></div></div></li>');
+$$( '#info-here' ).append('<li><div class="item-content"><div class="item-media"><a href="#" class="back link"><i class="icon icon-back"></i></a></div><div class="item-inner"><div class="item-title-row"><div class="item-title"><img src="http://graph.facebook.com/'+page_id+'/picture?width=20&height=20" style="border-radius:50%;width:20px;"/>'+ name +'</div><div class="item-after">'+ staryellow + starblue +'</div></div></div></div></li>');
 
 
 
