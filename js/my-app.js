@@ -1062,6 +1062,7 @@ function openMap() {
 
 $$( ".cover-business" ).toggleClass( "hide" );
 $$( ".button-map" ).toggleClass( "active" );
+$$( "#toolbar-map" ).toggleClass( "hide" );
 	
 	
 }
@@ -1146,7 +1147,7 @@ mainView.loadContent(
 
         '    </div>' +
         
-                '<div class="toolbar" style="background-color:transparent;border:0">' +
+                '<div class="toolbar hide" id="toolbar-map" style="background-color:transparent;border:0;display:none;">' +
     '<div class="toolbar-inner" style="background-color:transparent;border:0;">' +
 
           '<a href="#" class="link button button-fill" onclick="openMap();" style="width:50px;height:50px;margin:0 auto;margin-top:-50px;border-radius:50%;"><i class="pe-7s-menu pe-lg"></i></a>' +
