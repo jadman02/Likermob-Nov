@@ -1127,7 +1127,7 @@ mainView.loadContent(
          '<div class="toolbar tabbar tabbar-labels">' +
     '<div class="toolbar-inner">' +
        ' <a href="#tab1" onclick="openLikez()" class="tab-link active">' +
-           '<span class="badge blue-circle"><i class="pe-7s-refresh pe-spin pe-lg" style="color:#3b5998" id="refresh-like"></i><div id="after-liked"></div></span>' +
+           '<i class="pe-7s-map pe-lg"><span class="badge blue-circle"><i class="pe-7s-refresh pe-spin pe-lg" style="color:#3b5998" id="refresh-like"></i><div id="after-liked"></div></span></i>' +
         '<span class="tabbar-label">Liked</span></a>' +
        ' <a href="#tab2" class="tab-link">' +
            ' <i class="pe-7s-call pe-lg"></i>' +
