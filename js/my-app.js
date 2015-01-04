@@ -1120,7 +1120,7 @@ mainView.loadContent(
 	      '<div class="toolbar tabbar">' +
     '<div class="toolbar-inner">' +
        ' <a href="#tab1" onclick="openLikez()" class="tab-link active">' +
-           '<i class="pe-7s-like2 pe-lg"><span class="badge bg-red"><i class="pe-7s-refresh pe-spin pe-lg" style="color:#3b5998" id="refresh-like"></i><div id="after-liked"></div></span></i>' +
+           '<i class="pe-7s-like2 pe-lg" style="color:#3b5998"><span class="badge blue-circle"><i class="pe-7s-refresh pe-spin pe-lg" style="color:#3b5998" id="refresh-like"></i><div id="after-liked"></div></span></i>' +
         '</a>' +
        ' <a href="#tab2" class="tab-link">' +
            ' <i class="pe-7s-call pe-lg"></i>' +
@@ -1129,7 +1129,7 @@ mainView.loadContent(
           '  <i class="pe-7s-mail pe-lg"></i>' +
        ' </a>' +
        '<a href="#tab4" class="tab-link" onclick="openLikex()">' +
-           '<i class="pe-7s-like2 pe-lg pe-rotate-180"></i><span class="badge bg-red"><i class="pe-7s-refresh pe-spin pe-lg" style="color:#ff8000" id="refresh-dislike"></i><div id="after-notliked" style="display:none;"></div></span>' +
+           '<i class="pe-7s-like2 pe-lg pe-rotate-180" style="color:#ff8000"><span class="badge bg-red pe-rotate-0"><i class="pe-7s-refresh pe-spin pe-lg" style="color:#ff8000" id="refresh-dislike"></i><div id="after-notliked" style="display:none;"></div></span></i>' +
        ' </a>' +
    ' </div>' +
 '</div>' +
