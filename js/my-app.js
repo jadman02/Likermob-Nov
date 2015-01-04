@@ -1126,10 +1126,10 @@ mainView.loadContent(
            ' <i class="pe-7s-call pe-lg"></i>' +
        ' </a>' +
         '<a href="#tab3" class="tab-link">' +
-          '  <i class="pe-7s-call pe-lg"></i>' +
+          '  <i class="pe-7s-mail pe-lg"></i>' +
        ' </a>' +
        '<a href="#tab4" class="tab-link" onclick="openLikex()">' +
-           '<i class="pe-7s-like2 pe-lg pe-rotate-180"><span class="badge bg-red"><i class="pe-7s-refresh pe-spin pe-lg" style="color:#ff8000" id="refresh-dislike"></i><div id="after-notliked" style="display:none;"></div></span></i>' +
+           '<i class="pe-7s-like2 pe-lg pe-rotate-180"></i><span class="badge bg-red"><i class="pe-7s-refresh pe-spin pe-lg" style="color:#ff8000" id="refresh-dislike"></i><div id="after-notliked" style="display:none;"></div></span>' +
        ' </a>' +
    ' </div>' +
 '</div>' +
@@ -1165,7 +1165,7 @@ mainView.loadContent(
     );
 
 
-$$( '#info-here' ).append('<li><div class="item-content"><div class="item-media"><img src="http://graph.facebook.com/'+page_id+'/picture?width=30&height=30" style="border-radius:50%;width:30px;"/></div><div class="item-inner"><div class="item-title-row"><div class="item-title">'+ name +'</div><div class="item-after name_after">'+staryellow + starblue+'</div></div></div></div></li>');
+$$( '#info-here' ).append('<li><div class="item-content"><div class="item-media"><a href="#" class="back link"><i class="icon icon-back"></i></a><img src="http://graph.facebook.com/'+page_id+'/picture?width=30&height=30" style="border-radius:50%;width:30px;"/></div><div class="item-inner"><div class="item-title-row"><div class="item-title">'+ name +'</div><div class="item-after name_after">'+staryellow + starblue+'</div></div></div></div></li>');
 
 
 
