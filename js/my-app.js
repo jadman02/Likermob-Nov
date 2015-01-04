@@ -804,8 +804,8 @@ $$( '#like-deals-here' ).append( '<li class="virtual-content swipeout likeli hid
       '</div>' +
  '</li>');
 
-var likecount = ($$("#my li").length)-1;
-var dislikecount = document.getElementById("after-notliked").value - 1; 
+var likecount = ($$("#my li").length);
+var dislikecount = document.getElementById("after-notliked").value; 
 document.getElementById("after-notliked").innerHTML = dislikecount;
 document.getElementById("after-notliked").value = dislikecount;
 
@@ -1112,7 +1112,7 @@ mainView.loadContent(
         '  <div data-page="business" class="page business no-navbar">' +
         '    <!-- Scrollable page content-->' +
 '<div id="map-canvas"></div>' +
-        '    <div class="page-content cover-business" style="z-index: 1;" style="background-color:transparent;">' +
+        '    <div class="page-content cover-business" style="z-index: 1;" style="background-color:transparent;padding-bottom:-40px;">' +
         '      <div class="content-block" style="margin-top:-1px;">' +
         '        <div class="content-block-inner jinner" style="background-color:transparent;">' +
 	      '<div class="list-block media-list" style="margin-top:0px;">' +
@@ -1125,13 +1125,13 @@ mainView.loadContent(
            '<span class="badge blue-circle"><i class="pe-7s-refresh pe-spin pe-lg" style="color:#3b5998" id="refresh-like"></i><div id="after-liked"></div></span>' +
         '</a>' +
        ' <a href="#tab2" class="tab-link">' +
-           ' <i class="pe-7s-call pe-lg"></i>' +
+           ' <i id="callicon" class="pe-7s-call pe-lg"></i><div id="call-right"></div>' +
        ' </a>' +
         ' <a href="#tab2" onclick="openMap();" class="tab-link">' +
-           '<i class="pe-7s-map pe-lg"></i>'+
+           '<i id="mapicon" class="pe-7s-map pe-lg"></i><div id="map-right"></div>'+
        ' </a>' +
         '<a href="#tab3" class="tab-link">' +
-          '  <i class="pe-7s-mail pe-lg"></i>' +
+          '  <i id="mailicon" class="pe-7s-mail pe-lg"></i><div id="mail-right"></div>' +
        ' </a>' +
        '<a href="#tab4" class="tab-link" onclick="openLikex()">' +
            '<span class="badge orange-circle"><i class="pe-7s-refresh pe-spin pe-lg" style="color:#ff8000" id="refresh-dislike"></i><div id="after-notliked" style="display:none;"></div></span>' +
@@ -1253,14 +1253,16 @@ initialize(res[0][13],res[0][14],res[0][2],res[0][6],res[0][7],res[0][9],res[0][
 //}
 
 if (res[0][4]){
-$$( '.business-right' ).append('<a href="tel:'+res[0][4]+'" class="button external link" style="border:0;margin-right:5px;"><i class="pe-7s-call pe-lg"></i></a>');
+ $$('#callicon').hide();
+$$( '#call-right' ).append('<a href="tel:'+res[0][4]+'" class="button external link" style="border:0;margin-right:5px;"><i class="pe-7s-call pe-lg"></i></a>');
 }
 
 if (res[0][16]){
-$$( '.business-right' ).append('<a href="mailto:'+res[0][16]+'" class="button external link" style="border:0;"><i class="pe-7s-mail pe-lg"></i></a>');
+	$$('#mailicon').hide();
+$$( '#mail-right' ).append('<a href="mailto:'+res[0][16]+'" class="button external link" style="border:0;"><i class="pe-7s-mail pe-lg"></i></a>');
 }
 if (res[0][13] && res[0][14])
-{$$( '.business-right' ).append('<a href="#" class="button link button-map" onclick="openMap();" style="border:0;"><i class="pe-7s-map pe-lg"></i></a>');}
+{$$('#mapicon').hide();$$( '#map-right' ).append('<a href="#" class="button link button-map" onclick="openMap();" style="border:0;"><i class="pe-7s-map pe-lg"></i></a>');}
 
 
 
