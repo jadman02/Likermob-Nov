@@ -1118,7 +1118,7 @@ mainView.loadContent(
 	      '<div class="list-block media-list" style="margin-top:0px;">' +
 	     ' <ul style="background-color:transparent">' +
 	      '<div id="info-here"></div>' +
-	      '<div style="background-color:transparent;height:200px;width:200px;margin:0 auto;border:50px solid hsla(0, 0%, 100%, 0.8);" onclick="openMap()"></div>'+
+	      '<div style="background-color:transparent;height:200px;margin:0 auto;" onclick="openMap()"></div>'+
 	      '<div class="toolbar tabbar">' +
     '<div class="toolbar-inner">' +
        ' <a href="#tab1" onclick="openLikez()" class="tab-link active">' +
