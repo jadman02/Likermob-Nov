@@ -1109,10 +1109,10 @@ mainView.loadContent(
         '</div>' +
         '<div class="pages business">' +
         '  <!-- Page, data-page contains page name-->' +
-        '  <div data-page="business" class="page business no-navbar">' +
+        '  <div data-page="business" class="page business no-navbar" style="margin-bottom:100px;">' +
         '    <!-- Scrollable page content-->' +
 '<div id="map-canvas"></div>' +
-        '    <div class="page-content cover-business" style="z-index: 1;" style="background-color:transparent;margin-bottom:100px;">' +
+        '    <div class="page-content cover-business" style="z-index: 1;" style="background-color:transparent;">' +
         '      <div class="content-block" style="margin-top:-9px;">' +
         '        <div class="content-block-inner" style="background-color:rgba(255,255,255,.4);">' +
 	      '<div class="list-block media-list" style="margin-top:0px;">' +
