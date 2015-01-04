@@ -1133,7 +1133,7 @@ mainView.loadContent(
         '    </div>' +
         
                 '<div class="toolbar">' +
-    '<div class="toolbar-inner">' +
+    '<div class="toolbar-inner" style="background-color:transparent;">' +
         '<a href="#" class="link">Link 1</a>' +
     '</div>' +
 '</div>' +
@@ -1344,7 +1344,7 @@ function initialize(latitude,longitude,page_id,number,street,suburb,postcode,sta
   var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
 var contentString = '<div style="width:206px;color:#2c2c2c;padding-bottom:5px;">'+
-'<p style="margin-top:0px;padding-top:0px;"><span style="font-weight:400;">'+name+'</span><br/><span style="font-weight:300;">'+number+' '+street+' '+suburb+' '+state+'</span></p>' +
+'<p style="margin-top:0px;padding-top:0px;"><span style="font-weight:400;">'+number+' '+street+'</span><br/><span style="font-weight:300;"> '+suburb+' '+state+'</span></p>' +
       '</div>';
 
 
