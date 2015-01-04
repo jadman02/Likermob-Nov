@@ -1118,7 +1118,7 @@ mainView.loadContent(
 	      '<div class="list-block media-list" style="margin-top:0px;">' +
 	     ' <ul style="background-color:hsla(0, 0%, 100%, 0.8);">' +
 	      '<div id="info-here"></div>' +
-	      '<div class="toolbar tabbar">' +
+	      '<div class="toolbar tabbar" style="margin-top:300px;">' +
     '<div class="toolbar-inner">' +
        ' <a href="#tab1" onclick="openLikez()" class="tab-link active">' +
            '<span class="badge blue-circle"><i class="pe-7s-refresh pe-spin pe-lg" style="color:#3b5998" id="refresh-like"></i><div id="after-liked"></div></span>' +
@@ -1139,7 +1139,7 @@ mainView.loadContent(
 '</div>' +
 	      
 	      
-	     ' <div id="my"><div id="like-deals-here"><div style="width:100%;margin-bottom:5px;" class="likeli"><div style="width:20%;height:1px;background-color:#3b5998;float:left;"></div></div></div></div><div id="nomy"><div id="deals-here"><div style="width:100%;margin-bottom:5px;" class="likelix hide"><div style="width:20%;height:1px;background-color:#ff8000;float:right;"></div></div></div></div></ul></div>' +
+	     ' <div id="my"><div id="like-deals-here"><div style="width:100%;" class="likeli"><div style="width:22%;height:1px;background-color:#3b5998;float:left;margin-bottom:5px;"></div></div></div></div><div id="nomy"><div id="deals-here"><div style="width:100%;" class="likelix hide"><div style="margin-bottom:5px;width:22%;height:1px;background-color:#ff8000;float:right;"></div></div></div></div></ul></div>' +
 
 
         '        </div>' +
