@@ -1119,16 +1119,16 @@ mainView.loadContent(
 	      '<div id="info-here"></div>' +
 	      '<div class="toolbar tabbar">' +
     '<div class="toolbar-inner">' +
-       ' <a href="#" onclick="openLikez()" class="tab-link active">' +
+       ' <a href="#tab1" onclick="openLikez()" class="tab-link active">' +
            '<i class="pe-7s-like2 pe-lg"><span class="badge bg-red"><i class="pe-7s-refresh pe-spin pe-lg" style="color:#3b5998" id="refresh-like"></i><div id="after-liked"></div></span></i>' +
         '</a>' +
-       ' <a href="#" class="tab-link">' +
+       ' <a href="#tab2" class="tab-link">' +
            ' <i class="pe-7s-call pe-lg"></i>' +
        ' </a>' +
-        '<a href="#" class="tab-link">' +
+        '<a href="#tab3" class="tab-link">' +
           '  <i class="pe-7s-call pe-lg"></i>' +
        ' </a>' +
-       '<a href="#" class="tab-link" onclick="openLikex()">' +
+       '<a href="#tab4" class="tab-link" onclick="openLikex()">' +
            '<i class="pe-7s-like2 pe-lg pe-rotate-180"><span class="badge bg-red"><i class="pe-7s-refresh pe-spin pe-lg" style="color:#ff8000" id="refresh-dislike"></i><div id="after-notliked" style="display:none;"></div></span></i>' +
        ' </a>' +
    ' </div>' +
