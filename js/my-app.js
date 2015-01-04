@@ -1116,10 +1116,10 @@ mainView.loadContent(
         '      <div class="content-block" style="margin-top:-9px;margin-bottom:-100px;">' +
         '        <div class="content-block-inner jinner" style="background-color:rgba(255,255,255,.4);">' +
 	      '<div class="list-block media-list" style="margin-top:0px;">' +
-	     ' <ul style="background-color:transparent;">' +
+	     ' <ul style="background-color:transparent">' +
 	      '<div id="info-here"></div>' +
-	      '<div style="background-color:transparent;height:300px;" onclick="openMap()"></div>'+
-	      '<div class="toolbar tabbar"' +
+	      '<div style="background-color:hsla(0, 0%, 100%, 0.8);height:300px;" onclick="openMap()"></div>'+
+	      '<div class="toolbar tabbar" style="margin-top:300px;">' +
     '<div class="toolbar-inner">' +
        ' <a href="#tab1" onclick="openLikez()" class="tab-link active">' +
            '<span class="badge blue-circle"><i class="pe-7s-refresh pe-spin pe-lg" style="color:#3b5998" id="refresh-like"></i><div id="after-liked"></div></span>' +
@@ -1171,7 +1171,7 @@ mainView.loadContent(
 var businessheight = $$(window).height() - 20;
     	$$( '.jinner' ).css( 'min-height', businessheight + 'px' );
 
-$$( '#info-here' ).append('<li style="background-color:hsla(0, 0%, 100%, 0.8);"><div class="item-content"><div class="item-media"><a href="#" class="back link"><i class="icon icon-back"></i></a></div><div class="item-inner"><div class="item-title-row"><div class="item-title"><img src="http://graph.facebook.com/'+page_id+'/picture?width=20&height=20" style="border-radius:50%;width:20px;margin-top:5px;margin-right:5px;"/>'+ name +'</div><div class="item-after">'+ staryellow + starblue +'</div></div></div></div></li>');
+$$( '#info-here' ).append('<li><div class="item-content"><div class="item-media"><a href="#" class="back link"><i class="icon icon-back"></i></a></div><div class="item-inner"><div class="item-title-row"><div class="item-title"><img src="http://graph.facebook.com/'+page_id+'/picture?width=20&height=20" style="border-radius:50%;width:20px;margin-top:5px;margin-right:5px;"/>'+ name +'</div><div class="item-after">'+ staryellow + starblue +'</div></div></div></div></li>');
 
 
 
