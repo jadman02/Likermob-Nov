@@ -1123,7 +1123,30 @@ mainView.loadContent(
         '      </div>' +
         '    </div>' +
         
-        
+  
+  '<div class="toolbar tabbar tabbar-labels">' +
+    '<div class="toolbar-inner">' +
+        '<a href="#tab1" class="tab-link active">' +
+           ' <i class="pe-7s-call pe-lg">' +
+            '<span class="tabbar-label">Label 1</span>' +
+       ' </a>' +
+       ' <a href="#tab2" class="tab-link">' +' +
+            '<i class="pe-7s-call pe-lg">' +
+               ' <span class="badge bg-red">5</span>' +
+           ' </i>' +
+           ' <span class="tabbar-label">Label 2</span>' +
+       ' </a>' +
+        '<a href="#tab3" class="tab-link">' +
+           ' <i class="pe-7s-call pe-lg"></i>' +
+            '<span class="tabbar-label">Label 3</span>' +
+        '</a>' +
+       ' <a href="#tab4" class="tab-link">' +
+           ' <i class="pe-7s-call pe-lg"></i>' +
+            '<span class="tabbar-label">Label 4</span>' +
+        '</a>' +
+   ' </div>' +
+'</div>' +
+        /*
          '<div class="toolbar tabbar tabbar-labels">' +
     '<div class="toolbar-inner">' +
        ' <a href="#tab1" onclick="openLikez()" class="tab-link active">' +
@@ -1143,7 +1166,7 @@ mainView.loadContent(
        '<span class="tabbar-label">Not Liked</span> </a>' +
    ' </div>' +
 '</div>' +
-        
+      */  
         
 
         
