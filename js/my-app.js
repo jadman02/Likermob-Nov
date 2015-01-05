@@ -1160,8 +1160,8 @@ mainView.loadContent(
 
         '    </div>' +
         
-        '<div class="toolbar tabbar hide" id="toolbar-map" style="margin-left:10px;margin-right:20px;">' +
-    '<div class="toolbar-inner">' +
+        '<div class="toolbar tabbar hide" id="toolbar-map" style="background:transparent;border:0;">' +
+    '<div class="toolbar-inner" style="margin-left:10px;margin-right:20px;background: #f7f7f8;border-top: 1px solid #c4c4c4;">' +
        ' <a href="#tab1" onclick="openLikez()" class="tab-link active">' +
            '<span class="badge blue-circle"><div id="after-liked2"></div></span>' +
         '</a>' +
@@ -1412,7 +1412,8 @@ function initialize(latitude,longitude,page_id,number,street,suburb,postcode,sta
     zoom: 15,
     center: myLatlng,
     streetViewControl: false,
-    mapTypeControl: false
+    mapTypeControl: false,
+    zoomControl: false
   }
   var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
