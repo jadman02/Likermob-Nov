@@ -1206,9 +1206,7 @@ mainView.loadContent(
 var businessheight = $$(window).height() - 20;
 $$( '.jinner' ).css( 'min-height', businessheight + 'px' );
 
-$$( '#info-here' ).append('<li style="background-color:hsla(0, 0%, 100%, 0.8);"><div class="item-content"><div class="item-media"><a href="#" class="back link"><i class="icon icon-back"></i></a></div><div class="item-inner"><div class="item-title-row"><div class="item-title"><img src="http://graph.facebook.com/'+page_id+'/picture?width=20&height=20" style="border-radius:50%;width:20px;margin-top:5px;margin-right:5px;"/><span style="margin-top:-5px;">'+ name +'</span></div><div class="item-after">'+ staryellow + starblue +'</div></div></div></div></li>');
-
-
+$$( '#info-here' ).append('<div class="list-block media-list" style="margin-top:0px;"><ul style="background-color:transparent"><li style="background-color:hsla(0, 0%, 100%, 0.8);"><div class="item-content"><div class="item-media"><a href="#" class="back link"><i class="icon icon-back"></i></a></div><div class="item-inner"><div class="item-title-row"><div class="item-title"><img src="http://graph.facebook.com/'+page_id+'/picture?width=20&height=20" style="border-radius:50%;width:20px;margin-top:5px;margin-right:5px;"/><span style="margin-top:-5px;">'+ name +'</span></div><div class="item-after">'+ staryellow + starblue +'</div></div></div></div></li></ul></div>');
 
  //<i class="pe-7s-ribbon pe-2x"></i>
 
@@ -1412,7 +1410,9 @@ function initialize(latitude,longitude,page_id,number,street,suburb,postcode,sta
   var myLatlng = new google.maps.LatLng(latitude,longitude);
   var mapOptions = {
     zoom: 15,
-    center: myLatlng
+    center: myLatlng,
+    streetViewControl: false,
+    mapTypeControl: false
   }
   var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
