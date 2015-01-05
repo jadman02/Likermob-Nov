@@ -1117,12 +1117,13 @@ mainView.loadContent(
         '  <div data-page="business" class="page business no-navbar">' +
         '    <!-- Scrollable page content-->' +
 '<div id="map-canvas"></div>' +
+         '<div id="info-here" style="z-index:99999"></div>' +
         '    <div class="page-content cover-business" style="z-index: 1;" style="background-color:transparent;padding-bottom:-40px;">' +
         '      <div class="content-block" style="margin-top:-1px;">' +
         '        <div class="content-block-inner jinner" style="background-color:transparent;">' +
 	      '<div class="list-block media-list" style="margin-top:0px;">' +
 	     ' <ul style="background-color:transparent">' +
-	      '<div id="info-here"></div>' +
+	     
 	      '<div id="maptrans" style="background-color:transparent;height:200px;margin:0 auto;display:none;text-align:center;" onclick="openMap()"><i class="pe-7s-refresh pe-spin pe-lg" style="width:50px;margin:0 auto;margin-top:70px;color:#5ac8fa" id="transrefresh"></i></div>'+
 	      '<div class="toolbar tabbar">' +
     '<div class="toolbar-inner">' +
