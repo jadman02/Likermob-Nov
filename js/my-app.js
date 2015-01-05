@@ -1137,9 +1137,6 @@ mainView.loadContent(
        ' </a>' +
        '<div id="mail-right"></div></div>'+
 
-        '<a href="#" class="tab-link" id="mailicon">' +
-          '<i class="pe-7s-mail pe-lg"></i>' +
-       ' </a>' +
        '<a href="#tab4" class="tab-link" onclick="openLikex()">' +
            '<span class="badge orange-circle"><i class="pe-7s-refresh pe-spin pe-lg" style="color:#ff8000" id="refresh-dislike"></i><div id="after-notliked" style="display:none;"></div></span>' +
        ' </a>' +
@@ -1266,7 +1263,7 @@ $$( '#call-right' ).append('<a href="tel:'+res[0][4]+'" class="external" style="
 
 if (res[0][16]){
 	$$('#mailicon').hide();
-$$( '#mail-right' ).append('<a href="mailto:'+res[0][16]+'" class="external" style="margin:0 auto;width:20px;text-align:center;"><i class="pe-7s-call pe-lg" style="margin:0 auto;width:20px;color:#5ac8fa;"></i></a>');
+$$( '#mail-right' ).append('<a href="mailto:'+res[0][16]+'" class="external" style="margin:0 auto;width:20px;text-align:center;"><i class="pe-7s-mail pe-lg" style="margin:0 auto;width:20px;color:#5ac8fa;"></i></a>');
 }
 //if (res[0][13] && res[0][14])
 //{$$('#mapicon').hide();
