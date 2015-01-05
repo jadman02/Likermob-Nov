@@ -788,7 +788,7 @@ var d = new Date();
     // Save allEntries back to local storage
     existingEntries.unshift(entry);
     localStorage.setItem("allEntries", JSON.stringify(existingEntries));
-  //alert(localStorage.getItem("allEntries"));	
+  alert(localStorage.getItem("allEntries"));	
 var existingEntries = JSON.parse(localStorage.getItem("allEntries"));
 $$('.badge-like').text(existingEntries.length);
 $$( '#like-deals-here' ).append( '<li class="virtual-content swipeout likeli hide" style="background-color:hsla(0, 0%, 100%, 0.9);border-right:3px solid #ff8000;margin-top:5px;margin-bottom:5px;">' +
