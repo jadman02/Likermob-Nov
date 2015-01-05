@@ -1169,7 +1169,7 @@ mainView.loadContent(
     );
 
 var businessheight = $$(window).height() - 20;
-    	$$( '.jinner' ).css( 'min-height', businessheight + 'px' );
+$$( '.jinner' ).css( 'min-height', businessheight + 'px' );
 
 $$( '#info-here' ).append('<li style="background-color:hsla(0, 0%, 100%, 0.8);"><div class="item-content"><div class="item-media"><a href="#" class="back link"><i class="icon icon-back"></i></a></div><div class="item-inner"><div class="item-title-row"><div class="item-title"><img src="http://graph.facebook.com/'+page_id+'/picture?width=20&height=20" style="border-radius:50%;width:20px;margin-top:5px;margin-right:5px;"/><span style="margin-top:-5px;">'+ name +'</span></div><div class="item-after">'+ staryellow + starblue +'</div></div></div></div></li>');
 
@@ -1254,12 +1254,12 @@ initialize(res[0][13],res[0][14],res[0][2],res[0][6],res[0][7],res[0][9],res[0][
 
 if (res[0][4]){
 // $$('#callicon').hide();
-$$( '#call-right' ).append('tel:'+res[0][4]+');
+$$( '#call-right' ).append('tel:'+res[0][4]);
 }
 
 if (res[0][16]){
 //	$$('#mailicon').hide();
-$$( '#mail-right' ).append('mailto:'+res[0][16]+');
+$$( '#mail-right' ).append('mailto:'+res[0][16]);
 }
 //if (res[0][13] && res[0][14])
 //{$$('#mapicon').hide();
