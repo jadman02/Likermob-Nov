@@ -1102,9 +1102,7 @@ if(favEntries.length > 0){for (j = 0; j < favEntries.length; j++) {if (favEntrie
 mainView.loadContent(
         '<!-- Top Navbar-->' +
         '<div class="navbar business">' +
-        '  <div class="navbar-inner" style="border-bottom: 1px solid #c4c4c4;">' +
-        '<div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>'+
-        '<div class="right business-right"></div>' +
+        '  <div class="navbar-inner">' +
         '  </div>' +
         '</div>' +
         '<div class="pages business">' +
@@ -1157,7 +1155,7 @@ mainView.loadContent(
                 '<div class="toolbar hide" id="toolbar-map" style="background-color:transparent;border:0;">' +
     '<div class="toolbar-inner" style="background-color:transparent;border:0;">' +
 
-          '<a href="#" class="link button button-fill" onclick="openMap();" style="width:50px;height:50px;margin:0 auto;margin-top:-50px;border-radius:50%;"><i class="pe-7s-menu pe-lg"></i></a>' +
+          '<a href="#" class="link button button-fill" onclick="openMap();" style="width:50px;height:50px;margin:0 auto;margin-top:-50px;border-radius:50%;color:white;"><i class="icon icon-back"></i></a>' +
 
         
     '</div>' +
