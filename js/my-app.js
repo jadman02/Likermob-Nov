@@ -1159,8 +1159,8 @@ mainView.loadContent(
 
         '    </div>' +
         
-        '<div class="toolbar tabbar hide" id="toolbar-map" style="margin-left:10px;">' +
-    '<div class="toolbar-inner" style="margin:10px;">' +
+        '<div class="toolbar tabbar hide" id="toolbar-map" style="margin-left:10px;margin-right:20px;">' +
+    '<div class="toolbar-inner">' +
        ' <a href="#tab1" onclick="openLikez()" class="tab-link active">' +
            '<span class="badge blue-circle"><div id="after-liked2"></div></span>' +
         '</a>' +
