@@ -1124,8 +1124,8 @@ mainView.loadContent(
        ' <a href="#tab1" onclick="openLikez()" class="tab-link active">' +
            '<span class="badge blue-circle"><i class="pe-7s-refresh pe-spin pe-lg" style="color:#3b5998" id="refresh-like"></i><div id="after-liked"></div></span>' +
         '</a>' +
-       ' <a href="#" class="tab-link" id="callicon">' +
-           ' <i class="pe-7s-call pe-lg"></i>' +
+       ' <a href="#" class="tab-link">' +
+           ' <i class="pe-7s-call pe-lg" id="callicon"></i>' +
        ' </a>' +
        '<div id="call-right"></div>'+
         ' <a href="#" onclick="openMap();" class="tab-link" id="mapicon">' +
