@@ -1426,6 +1426,8 @@ function initialize(myLatlng) {
       map: map
     //icon: 'http://graph.facebook.com/'+page_id+'/picture?width=20&height=20'
   });
+
+/*
 var contentString = '<div style="color:#2c2c2c;padding-bottom:5px;">'+
 '<p style="margin-top:0px;padding-top:0px;"><span style="font-weight:400;">'+number+' '+street+'</span><br/><span style="font-weight:300;"> '+suburb+' '+state+'</span></p>' +
       '</div>';
@@ -1439,7 +1441,7 @@ infowindow.open(map,marker);
   google.maps.event.addListener(marker, 'click', function() {
     infowindow.open(map,marker);
   });
-  
+  */
   
   google.maps.event.addListenerOnce(map, 'idle', function(){
    $$('#transrefresh').hide(); // do something only the first time the map is loaded
