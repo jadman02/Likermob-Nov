@@ -598,7 +598,7 @@ localStorage.setItem("allEntries", JSON.stringify(allEntries));
 //alert(localStorage.getItem("allEntries"));	
 var likecount = ($$("#my li").length)-2;
 $$('.badge-like').text(likecount);
-var dislikecount = var dislikecount = $$('.after-notliked').val() + 1; 
+var dislikecount = $$('.after-notliked').val() + 1; 
 $$('.after-liked').val(likecount);
 $$('.after-liked').html(likecount);
 
