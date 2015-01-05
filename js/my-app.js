@@ -1155,7 +1155,7 @@ mainView.loadContent(
                 '<div class="toolbar hide" id="toolbar-map" style="background-color:transparent;border:0;">' +
     '<div class="toolbar-inner" style="background-color:transparent;border:0;">' +
 
-          '<a href="#" class="link button button-fill" onclick="openMap();" style="width:50px;height:50px;margin:0 auto;margin-top:-50px;border-radius:50%;color:white;"><i class="icon icon-back"></i></a>' +
+          '<a href="#" class="link button button-fill" onclick="openMap();" style="width:50px;height:50px;margin:0 auto;margin-top:-50px;border-radius:50%;"><i class="icon icon-back" style="color:white;"></i></a>' +
 
         
     '</div>' +
