@@ -1256,7 +1256,7 @@ initialize(res[0][13],res[0][14],res[0][2],res[0][6],res[0][7],res[0][9],res[0][
 
 if (res[0][4]){
 $$('#callicon').hide();
-$$( '#call-right' ).append('<a href="tel:'+res[0][4]+'" class="tab-link external" style="margin-left:-50px;"><i class="pe-7s-call pe-lg"></i></a>');
+$$( '#call-right' ).append('<a href="tel:'+res[0][4]+'" class="tab-link external" style="margin-left:-12.5%;"><i class="pe-7s-call pe-lg"></i></a>');
 }
 
 if (res[0][16]){
