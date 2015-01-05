@@ -1145,7 +1145,7 @@ mainView.loadContent(
        '<div id="mail-right"></div></div>'+
 
        '<a href="#tab4" class="tab-link" onclick="openLikex()">' +
-           '<span class="badge orange-circle"><i class="pe-7s-refresh pe-spin pe-lg" style="color:#ff8000" id="refresh-dislike"></i><div id="after-notliked" style="display:none;"></div></span>' +
+           '<span class="badge orange-circle"><i class="pe-7s-refresh pe-spin pe-lg" style="color:#ff8000" id="refresh-dislike"></i><div id="after-notliked"></div></span>' +
        ' </a>' +
    ' </div>' +
 '</div>' +
