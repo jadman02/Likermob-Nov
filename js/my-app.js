@@ -1260,16 +1260,16 @@ initialize(res[0][13],res[0][14],res[0][2],res[0][6],res[0][7],res[0][9],res[0][
 
 if (res[0][4]){
 $$('#callicon').hide();
-$$( '#call-right' ).append('<a href="tel:'+res[0][4]+'" class="external" style="margin:0 auto;width:20px;text-align:center;"><i class="pe-7s-call pe-lg active" style="margin:0 auto;width:20px;"></i></a>');
+$$( '#call-right' ).append('<a href="tel:'+res[0][4]+'" class="active external" style="margin:0 auto;width:20px;text-align:center;"><i class="pe-7s-call pe-lg" style="margin:0 auto;width:20px;"></i></a>');
 }
 
 if (res[0][16]){
 	$$('#mailicon').hide();
-$$( '#mail-right' ).append('<a href="mailto:'+res[0][16]+'" class="external" style="margin:0 auto;width:20px;text-align:center;"><i class="pe-7s-mail pe-lg active" style="margin:0 auto;width:20px;"></i></a>');
+$$( '#mail-right' ).append('<a href="mailto:'+res[0][16]+'" class="active external" style="margin:0 auto;width:20px;text-align:center;"><i class="pe-7s-mail pe-lg" style="margin:0 auto;width:20px;"></i></a>');
 }
 if (res[0][13] && res[0][14])
 {$$('#mapicon').hide();
-$$( '#map-right' ).append('<a href="#" onclick="openMap();" class="external" style="margin:0 auto;width:20px;text-align:center;"><i class="pe-7s-mail pe-lg active" style="margin:0 auto;width:20px;"></i></a>');}
+$$( '#map-right' ).append('<a href="#" onclick="openMap();" class="active xternal" style="margin:0 auto;width:20px;text-align:center;"><i class="pe-7s-map pe-lg" style="margin:0 auto;width:20px;"></i></a>');}
 
 
 
