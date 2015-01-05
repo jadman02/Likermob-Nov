@@ -1159,8 +1159,8 @@ mainView.loadContent(
 
         '    </div>' +
         
-        '<div class="toolbar tabbar hide" id="toolbar-map" style="margin:10px;">' +
-    '<div class="toolbar-inner">' +
+        '<div class="toolbar tabbar hide" id="toolbar-map" style="margin-left:10px;">' +
+    '<div class="toolbar-inner" style="margin:10px;">' +
        ' <a href="#tab1" onclick="openLikez()" class="tab-link active">' +
            '<span class="badge blue-circle"><div id="after-liked2"></div></span>' +
         '</a>' +
@@ -1169,7 +1169,7 @@ mainView.loadContent(
        ' </a>' +
        '<div id="call-right2"></div></div>'+
    
-'<div class="tab-link" style="min-width:20%;text-align:center;">  <a href="#" class="disabled" id="mapicon2" style="margin:0 auto;">' +
+'<div class="tab-link" style="min-width:20%;text-align:center;"><a href="#" class="disabled" id="mapicon2" style="margin:0 auto;">' +
            ' <i class="pe-7s-map pe-lg"></i>' +
        ' </a>' +
        '<div id="map-right2"></div></div>'+
