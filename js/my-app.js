@@ -1127,16 +1127,19 @@ mainView.loadContent(
        '<div class="tab-link" style="min-width:20%;text-align:center;">  <a href="#" id="callicon" style="margin:0 auto;">' +
            ' <i class="pe-7s-call pe-lg"></i>' +
        ' </a>' +
-
-' <a href="#" onclick="openMap();" class="tab-link" id="mapicon">' +
+       '<div id="call-right"></div></div>'+
+        ' <a href="#" onclick="openMap();" class="tab-link" id="mapicon">' +
            '<i class="pe-7s-map pe-lg"></i>'+
        ' </a>' +
-       
-         '<div class="tab-link" style="min-width:20%;text-align:center;">  <a href="#" id="mailicon" style="margin:0 auto;">' +
+
+'<div class="tab-link" style="min-width:20%;text-align:center;">  <a href="#" id="mailicon" style="margin:0 auto;">' +
            ' <i class="pe-7s-mail pe-lg"></i>' +
        ' </a>' +
        '<div id="mail-right"></div></div>'+
-       
+
+        '<a href="#" class="tab-link" id="mailicon">' +
+          '<i class="pe-7s-mail pe-lg"></i>' +
+       ' </a>' +
        '<a href="#tab4" class="tab-link" onclick="openLikex()">' +
            '<span class="badge orange-circle"><i class="pe-7s-refresh pe-spin pe-lg" style="color:#ff8000" id="refresh-dislike"></i><div id="after-notliked" style="display:none;"></div></span>' +
        ' </a>' +
@@ -1258,17 +1261,16 @@ initialize(res[0][13],res[0][14],res[0][2],res[0][6],res[0][7],res[0][9],res[0][
 
 if (res[0][4]){
 $$('#callicon').hide();
-$$( '#call-right' ).append('<a href="tel:'+res[0][4]+'" class="external" style="margin:0 auto;width:20px;text-align:center;"><i class="pe-7s-call pe-lg" style="color:#5ac8fa;margin:0 auto;width:20px;"></i></a>');
+$$( '#call-right' ).append('<a href="tel:'+res[0][4]+'" class="external" style="margin:0 auto;width:20px;text-align:center;"><i class="pe-7s-call pe-lg" style="margin:0 auto;width:20px;"></i></a>');
 }
 
 if (res[0][16]){
 	$$('#mailicon').hide();
-$$( '#mail-right' ).append('<a href="mailto:'+res[0][16]+'" class="external" style="margin:0 auto;width:20px;text-align:center;"><i class="pe-7s-mail pe-lg" style="color:#5ac8fa;margin:0 auto;width:20px;"></i></a>');
+$$( '#mail-right' ).append('<a href="mailto:'+res[0][16]+'" class="external" style="margin:0 auto;width:20px;text-align:center;"><i class="pe-7s-call pe-lg" style="margin:0 auto;width:20px;"></i></a>');
 }
 //if (res[0][13] && res[0][14])
-//{
-//$$( '#mapicon' ).hide();	
-//$$( '#map-right' ).append('<a href="#" onclick="openMap();" style="margin:0 auto;width:20px;text-align:center;"><i class="pe-7s-map pe-lg" style="color:#5ac8fa;margin:0 auto;width:20px;"></i></a>');}
+//{$$('#mapicon').hide();
+//$$( '#map-right' ).append('<a href="#" class="tab-link" onclick="openMap();"><i class="pe-7s-map pe-lg" style="color:#5ac8fa"></i></a>');}
 
 
 
