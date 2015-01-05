@@ -598,14 +598,13 @@ localStorage.setItem("allEntries", JSON.stringify(allEntries));
 //alert(localStorage.getItem("allEntries"));	
 var likecount = ($$("#my li").length)-2;
 $$('.badge-like').text(likecount);
-var dislikecount = $$('.after-notliked').val() + 1; 
-$$('.after-liked').val(likecount);
-$$('.after-liked').html(likecount);
-
-$$('.after-notliked').val(dislikecount);
-$$('.after-notliked').html(dislikecount);
-
-
+var dislikecount = document.getElementById("after-notliked").value + 1; 
+document.getElementById("after-liked").innerHTML = likecount;
+document.getElementById("after-liked2").innerHTML = likecount;
+document.getElementById("after-notliked").innerHTML = dislikecount;
+document.getElementById("after-notliked").value = dislikecount;
+document.getElementById("after-notliked2").innerHTML = dislikecount;
+document.getElementById("after-notliked2").value = dislikecount;
 }
 
 
@@ -809,13 +808,16 @@ $$( '#like-deals-here' ).append( '<li class="virtual-content swipeout likeli hid
  '</li>');
 
 var likecount = ($$("#my li").length);
-var dislikecount = $$('.after-notliked').val();
+var dislikecount = document.getElementById("after-notliked").value; 
+document.getElementById("after-notliked").innerHTML = dislikecount;
+document.getElementById("after-notliked").value = dislikecount;
+document.getElementById("after-notliked2").innerHTML = dislikecount;
+document.getElementById("after-notliked2").value = dislikecount;
 
-$$('.after-notliked').val(dislikecount);
-$$('.after-notliked').html(dislikecount);
-
-$$('.after-liked').val(likecount);
-$$('.after-liked').html(likecount);
+document.getElementById("after-liked").innerHTML = likecount;
+document.getElementById("after-liked").value = likecount;
+document.getElementById("after-liked2").innerHTML = likecount;
+document.getElementById("after-liked2").value = likecount;
 }
 
 function favList(page_id,post_id,name) {
@@ -1121,29 +1123,29 @@ mainView.loadContent(
 	      '<div class="list-block media-list" style="margin-top:0px;">' +
 	     ' <ul style="background-color:transparent">' +
 	      '<div id="info-here"></div>' +
-	      '<div id="maptrans" style="background-color:transparent;height:200px;margin:0 auto;display:none;text-align:center;" onclick="openMap()"><i class="pe-7s-refresh pe-spin pe-2x" style="width:50px;margin:0 auto;color:#5ac8fa;margin-top:100px;" id="transrefresh"></i></div>'+
+	      '<div id="maptrans" style="background-color:transparent;height:200px;margin:0 auto;display:none;text-align:center;" onclick="openMap()"><i class="pe-7s-refresh pe-spin pe-lg" style="width:50px;margin:0 auto;margin-top:70px;color:#5ac8fa" id="transrefresh"></i></div>'+
 	      '<div class="toolbar tabbar">' +
     '<div class="toolbar-inner">' +
        ' <a href="#tab1" onclick="openLikez()" class="tab-link active">' +
-           '<span class="badge blue-circle"><i class="pe-7s-refresh pe-spin pe-lg refresh-like" style="color:#3b5998"></i><div class="after-liked"></div></span>' +
+           '<span class="badge blue-circle"><i class="pe-7s-refresh pe-spin pe-lg" style="color:#3b5998" id="refresh-like"></i><div id="after-liked"></div></span>' +
         '</a>' +
-       '<div class="tab-link" style="min-width:20%;text-align:center;">  <a href="#" class="disabled callicon" style="margin:0 auto;">' +
+       '<div class="tab-link" style="min-width:20%;text-align:center;">  <a href="#" class="disabled" id="callicon" style="margin:0 auto;">' +
            ' <i class="pe-7s-call pe-lg"></i>' +
        ' </a>' +
-       '<div class="call-right"></div></div>'+
+       '<div id="call-right"></div></div>'+
    
-'<div class="tab-link" style="min-width:20%;text-align:center;">  <a href="#" class="disabled mapicon" style="margin:0 auto;">' +
+'<div class="tab-link" style="min-width:20%;text-align:center;">  <a href="#" class="disabled" id="mapicon" style="margin:0 auto;">' +
            ' <i class="pe-7s-map pe-lg"></i>' +
        ' </a>' +
-       '<div class="map-right"></div></div>'+
+       '<div id="map-right"></div></div>'+
 
-'<div class="tab-link" style="min-width:20%;text-align:center;">  <a href="#" class="disabled mailicon" style="margin:0 auto;">' +
+'<div class="tab-link" style="min-width:20%;text-align:center;">  <a href="#" class="disabled" id="mailicon" style="margin:0 auto;">' +
            ' <i class="pe-7s-mail pe-lg"></i>' +
        ' </a>' +
-       '<div class="mail-right"></div></div>'+
+       '<div id="mail-right"></div></div>'+
 
        '<a href="#tab4" class="tab-link" onclick="openLikex()">' +
-           '<span class="badge orange-circle"><i class="pe-7s-refresh pe-spin pe-lg refresh-dislike" style="color:#ff8000"></i><div class="after-notliked" style="display:none;"></div></span>' +
+           '<span class="badge orange-circle"><i class="pe-7s-refresh pe-spin pe-lg" style="color:#ff8000" id="refresh-dislike"></i><div id="after-notliked" style="display:none;"></div></span>' +
        ' </a>' +
    ' </div>' +
 '</div>' +
@@ -1157,14 +1159,37 @@ mainView.loadContent(
 
         '    </div>' +
         
-                '<div class="toolbar hide" id="toolbar-map" style="background-color:transparent;border:0;">' +
-    '<div class="toolbar-inner" style="background-color:transparent;border:0;">' +
+        '<div class="toolbar tabbar hide" id="toolbar-map">' +
+    '<div class="toolbar-inner">' +
+       ' <a href="#tab1" onclick="openLikez()" class="tab-link active">' +
+           '<span class="badge blue-circle"><div id="after-liked2"></div></span>' +
+        '</a>' +
+       '<div class="tab-link" style="min-width:20%;text-align:center;"><a href="#" class="disabled" id="callicon2" style="margin:0 auto;">' +
+           ' <i class="pe-7s-call pe-lg"></i>' +
+       ' </a>' +
+       '<div id="call-right2"></div></div>'+
+   
+'<div class="tab-link" style="min-width:20%;text-align:center;">  <a href="#" class="disabled" id="mapicon2" style="margin:0 auto;">' +
+           ' <i class="pe-7s-map pe-lg"></i>' +
+       ' </a>' +
+       '<div id="map-right2"></div></div>'+
 
-          '<a href="#" class="link button button-fill" onclick="openMap();" style="width:50px;height:50px;margin:0 auto;margin-top:-50px;border-radius:50%;"><i class="pe-7s-back pe-3x" style="color:white;"></i></a>' +
+'<div class="tab-link" style="min-width:20%;text-align:center;">  <a href="#" class="disabled" id="mailicon2" style="margin:0 auto;">' +
+           ' <i class="pe-7s-mail pe-lg"></i>' +
+       ' </a>' +
+       '<div id="mail-right2"></div></div>'+
 
-        
-    '</div>' +
+       '<a href="#tab4" class="tab-link" onclick="openLikex()">' +
+           '<span class="badge orange-circle"><div id="after-notliked2" style="display:none;"></div></span>' +
+       ' </a>' +
+   ' </div>' +
 '</div>' +
+        
+//'<div class="toolbar hide" id="toolbar-map" style="background-color:transparent;border:0;">' +
+// '<div class="toolbar-inner" style="background-color:transparent;border:0;">' +
+// '<a href="#" class="link button button-fill" onclick="openMap();" style="width:50px;height:50px;margin:0 auto;margin-top:-50px;border-radius:50%;"><i class="pe-7s-back pe-3x" style="color:white;"></i></a>' +
+//'</div>' +
+//'</div>' +
         
         
         
@@ -1244,11 +1269,12 @@ $$( '#like-deals-here' ).append( '<li class="virtual-content swipeout likeli" st
 }
 }
 
-$$('.after-liked').show();
-$$('.refresh-like').hide();
+$$('#refresh-like').hide();
 
-$$('.after-liked').val(deals_liked);
-$$('.after-liked').html(deals_liked);
+document.getElementById("after-liked").innerHTML = deals_liked;
+document.getElementById("after-liked").value = deals_liked;
+document.getElementById("after-liked2").innerHTML = deals_liked;
+document.getElementById("after-liked2").value = deals_liked;
 
 $$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=' + page_id, function(res){
 
@@ -1262,17 +1288,27 @@ initialize(res[0][13],res[0][14],res[0][2],res[0][6],res[0][7],res[0][9],res[0][
 //}
 
 if (res[0][4]){
-$$('.callicon').hide();
-$$( '.call-right' ).append('<a href="tel:'+res[0][4]+'" class="active external" style="margin:0 auto;width:20px;text-align:center;"><i class="pe-7s-call pe-lg" style="margin:0 auto;width:20px;"></i></a>');
+$$('#callicon').hide();
+$$( '#call-right' ).append('<a href="tel:'+res[0][4]+'" class="active external" style="margin:0 auto;width:20px;text-align:center;"><i class="pe-7s-call pe-lg" style="margin:0 auto;width:20px;"></i></a>');
+$$('#callicon2').hide();
+$$( '#call-right2' ).append('<a href="tel:'+res[0][4]+'" class="active external" style="margin:0 auto;width:20px;text-align:center;"><i class="pe-7s-call pe-lg" style="margin:0 auto;width:20px;"></i></a>');
+	
 }
 
 if (res[0][16]){
-	$$('.mailicon').hide();
-$$( '.mail-right' ).append('<a href="mailto:'+res[0][16]+'" class="active external" style="margin:0 auto;width:20px;text-align:center;"><i class="pe-7s-mail pe-lg" style="margin:0 auto;width:20px;"></i></a>');
+	$$('#mailicon').hide();
+$$( '#mail-right' ).append('<a href="mailto:'+res[0][16]+'" class="active external" style="margin:0 auto;width:20px;text-align:center;"><i class="pe-7s-mail pe-lg" style="margin:0 auto;width:20px;"></i></a>');
+	$$('#mailicon2').hide();
+$$( '#mail-right2' ).append('<a href="mailto:'+res[0][16]+'" class="active external" style="margin:0 auto;width:20px;text-align:center;"><i class="pe-7s-mail pe-lg" style="margin:0 auto;width:20px;"></i></a>');
+	
 }
 if (res[0][13] && res[0][14])
-{$$('.mapicon').hide();
-$$( '.map-right' ).append('<a href="#" onclick="openMap();" class="active xternal" style="margin:0 auto;width:20px;text-align:center;"><i class="pe-7s-map pe-lg" style="margin:0 auto;width:20px;"></i></a>');}
+{$$('#mapicon').hide();
+$$('#mapicon2').hide();
+$$('#maptrans').show();
+$$( '#map-right' ).append('<a href="#" onclick="openMap();" class="active xternal" style="margin:0 auto;width:20px;text-align:center;"><i class="pe-7s-map pe-lg" style="margin:0 auto;width:20px;"></i></a>');
+$$( '#map-right2' ).append('<a href="#" onclick="openMap();" class="active xternal" style="margin:0 auto;width:20px;text-align:center;"><i class="pe-7s-map pe-lg" style="margin:0 auto;width:20px;"></i></a>');	
+}
 
 
 
@@ -1329,16 +1365,18 @@ if (allEntries[j].post_id == res[i][2]){
 
     	
     }
-    $$('.refresh-dislike').hide();
+    $$('#refresh-dislike').hide();
    
-    $$('#after-notliked').show();
+  
     
 
 
  var deals_notliked = totaldeals - deals_liked;
-$$('.after-notliked').val(deals_notliked);
-$$('.after-notliked').html(deals_notliked);
 
+    document.getElementById("after-notliked").value = deals_notliked;
+    document.getElementById("after-notliked").innerHTML = deals_notliked;
+    document.getElementById("after-notliked2").value = deals_notliked;
+    document.getElementById("after-notliked2").innerHTML = deals_notliked;
 	return;
 	
 });
@@ -1400,7 +1438,7 @@ infowindow.open(map,marker);
     infowindow.open(map,marker);
   });
   
-  $$('#maptrans').show();
+  
   google.maps.event.addListenerOnce(map, 'idle', function(){
    $$('#transrefresh').hide(); // do something only the first time the map is loaded
 });
