@@ -1128,10 +1128,9 @@ mainView.loadContent(
            ' <i class="pe-7s-call pe-lg"></i>' +
        ' </a>' +
 
-         '<div class="tab-link" style="min-width:20%;text-align:center;">  <a href="#" id="mapicon" style="margin:0 auto;">' +
-           ' <i class="pe-7s-map pe-lg"></i>' +
+' <a href="#" onclick="openMap();" class="tab-link" id="mapicon">' +
+           '<i class="pe-7s-map pe-lg"></i>'+
        ' </a>' +
-       '<div id="map-right"></div></div>'+
        
          '<div class="tab-link" style="min-width:20%;text-align:center;">  <a href="#" id="mailicon" style="margin:0 auto;">' +
            ' <i class="pe-7s-mail pe-lg"></i>' +
@@ -1266,10 +1265,10 @@ if (res[0][16]){
 	$$('#mailicon').hide();
 $$( '#mail-right' ).append('<a href="mailto:'+res[0][16]+'" class="external" style="margin:0 auto;width:20px;text-align:center;"><i class="pe-7s-mail pe-lg" style="color:#5ac8fa;margin:0 auto;width:20px;"></i></a>');
 }
-if (res[0][13] && res[0][14])
-{
-$$( '#mapicon' ).hide();	
-$$( '#map-right' ).append('<a href="#" onclick="openMap();" style="margin:0 auto;width:20px;text-align:center;"><i class="pe-7s-map pe-lg" style="color:#5ac8fa;margin:0 auto;width:20px;"></i></a>');}
+//if (res[0][13] && res[0][14])
+//{
+//$$( '#mapicon' ).hide();	
+//$$( '#map-right' ).append('<a href="#" onclick="openMap();" style="margin:0 auto;width:20px;text-align:center;"><i class="pe-7s-map pe-lg" style="color:#5ac8fa;margin:0 auto;width:20px;"></i></a>');}
 
 
 
