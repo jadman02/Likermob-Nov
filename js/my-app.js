@@ -1159,7 +1159,7 @@ mainView.loadContent(
 
         '    </div>' +
         
-        '<div class="toolbar tabbar hide" id="toolbar-map">' +
+        '<div class="toolbar tabbar hide" id="toolbar-map" style="margin:10px;">' +
     '<div class="toolbar-inner">' +
        ' <a href="#tab1" onclick="openLikez()" class="tab-link active">' +
            '<span class="badge blue-circle"><div id="after-liked2"></div></span>' +
@@ -1180,7 +1180,7 @@ mainView.loadContent(
        '<div id="mail-right2"></div></div>'+
 
        '<a href="#tab4" class="tab-link" onclick="openLikex()">' +
-           '<span class="badge orange-circle"><div id="after-notliked2" style="display:none;"></div></span>' +
+           '<span class="badge orange-circle"><div id="after-notliked2"></div></span>' +
        ' </a>' +
    ' </div>' +
 '</div>' +
