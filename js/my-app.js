@@ -1116,7 +1116,7 @@ mainView.loadContent(
 	      '<div class="list-block media-list" style="margin-top:0px;">' +
 	     ' <ul style="background-color:transparent">' +
 	      '<div id="info-here"></div>' +
-	      '<div id="maptrans" style="background-color:transparent;height:200px;margin:0 auto;display:none;" onclick="openMap()"></div>'+
+	      '<div id="maptrans" style="background-color:transparent;height:200px;margin:0 auto;display:none;" onclick="openMap()"><i class="pe-7s-refresh pe-spin pe-3x" id="transrefresh"></i></div>'+
 	      '<div class="toolbar tabbar">' +
     '<div class="toolbar-inner">' +
        ' <a href="#tab1" onclick="openLikez()" class="tab-link active">' +
@@ -1394,7 +1394,11 @@ infowindow.open(map,marker);
   google.maps.event.addListener(marker, 'click', function() {
     infowindow.open(map,marker);
   });
+  
   $$('#maptrans').show();
+  google.maps.event.addListenerOnce(map, 'idle', function(){
+   $$('#transrefresh').hide(); // do something only the first time the map is loaded
+});
 }
 
 
