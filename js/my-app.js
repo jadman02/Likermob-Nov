@@ -1124,9 +1124,10 @@ mainView.loadContent(
        ' <a href="#tab1" onclick="openLikez()" class="tab-link active">' +
            '<span class="badge blue-circle"><i class="pe-7s-refresh pe-spin pe-lg" style="color:#3b5998" id="refresh-like"></i><div id="after-liked"></div></span>' +
         '</a>' +
-       ' <a href="tel:<div id="call-right"></div>" class="tab-link" id="callicon">' +
+       ' <a href="#" class="tab-link" id="callicon">' +
            ' <i class="pe-7s-call pe-lg"></i>' +
        ' </a>' +
+       '<div id="call-right"></div>'+
         ' <a href="#" onclick="openMap();" class="tab-link" id="mapicon">' +
            '<i class="pe-7s-map pe-lg"></i>'+
        ' </a>' +
@@ -1254,8 +1255,8 @@ initialize(res[0][13],res[0][14],res[0][2],res[0][6],res[0][7],res[0][9],res[0][
 //}
 
 if (res[0][4]){
-// $$('#callicon').hide();
-$$( '#call-right' ).append(res[0][4]);
+$$('#callicon').hide();
+$$( '#call-right' ).append('<a href="tel:'+res[0][4]+'" class="tab-link external">');
 }
 
 if (res[0][16]){
