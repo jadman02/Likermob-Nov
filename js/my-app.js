@@ -1116,7 +1116,7 @@ mainView.loadContent(
 	      '<div class="list-block media-list" style="margin-top:0px;">' +
 	     ' <ul style="background-color:transparent">' +
 	      '<div id="info-here"></div>' +
-	      '<div id="maptrans" style="background-color:transparent;height:200px;margin:0 auto;display:none;" onclick="openMap()"><i class="pe-7s-refresh pe-spin pe-3x" id="transrefresh"></i></div>'+
+	      '<div id="maptrans" style="background-color:transparent;height:200px;margin:0 auto;display:none;" onclick="openMap()"><i class="pe-7s-refresh pe-spin pe-2x" style="width:50px;margin:0 auto;height:50px;color:#5ac8fa" id="transrefresh"></i></div>'+
 	      '<div class="toolbar tabbar">' +
     '<div class="toolbar-inner">' +
        ' <a href="#tab1" onclick="openLikez()" class="tab-link active">' +
