@@ -1125,7 +1125,7 @@ mainView.loadContent(
         '        <div class="content-block-inner jinner" style="background-color:transparent;">' +
 	      '<div class="list-block media-list" style="margin-top:0px;">' +
 	     ' <ul style="background-color:transparent;border:0;">' +
-	      '<div class="toolbar tabbar" style="border:0;">' +
+	      '<div class="toolbar tabbar" style="border:0;background-color:transparent;">' +
     '<div class="toolbar-inner">' +
        ' <a href="#tab1" onclick="openLikez()" class="tab-link active" style="padding-right:5px;background-color:hsla(0, 0%, 100%, 0.8);">' +
            '<span class="badge blue-circle"><i class="pe-7s-refresh pe-spin pe-lg" style="color:#3b5998" id="refresh-like"></i><div id="after-liked"></div></span>' +
