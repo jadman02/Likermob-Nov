@@ -1241,7 +1241,7 @@ var allEntries = JSON.parse(localStorage.getItem("allEntries"));
 for (k = 0; k < allEntries.length; k++) { 
 if (allEntries[k].page_id == page_id){	
 deals_liked ++;
-if ((deals_liked == 1) && (allEntries[k].latitude) && (allEntries[k].longitude)) {initialize(allEntries[k].latitude,allEntries[k].longitude);}
+if ((deals_liked == 1) && (allEntries[k].latitude) && (allEntries[k].longitude)) {var latitudeyo = allEntries[k].latitude;var longitudeyo = allEntries[k].longitude; }
 var unix = allEntries[k].expiry + offset;
 var d = new Date(unix);
 var month_name = month[d.getUTCMonth()];
@@ -1270,7 +1270,7 @@ $$( '#like-deals-here' ).append( '<li class="virtual-content swipeout likeli" st
 
 }
 }
-
+initialize(latitudeyo,longitudeyo);
 $$('#refresh-like').hide();
 
 document.getElementById("after-liked").innerHTML = deals_liked;
