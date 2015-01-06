@@ -1119,7 +1119,7 @@ mainView.loadContent(
         '    <!-- Scrollable page content-->' +
 '<div id="map-canvas"></div>' +
          '<div id="info-here" style="z-index:99999;height:44px;overflow:hidden;border-bottom: 1px solid #c4c4c4;"></div>' +
-        	      '<div class="toolbar tabbar" style="background-color:hsla(0, 0%, 100%, 0.8);border:0;">' +
+        	      '<div class="toolbar tabbar" style="background-color:hsla(0, 0%, 100%, 0.8);border:0;top:44px;">' +
     '<div class="toolbar-inner">' +
        ' <a href="#tab1" onclick="openLikez()" class="tab-link active">' +
            '<span class="badge blue-circle"><i class="pe-7s-refresh pe-spin pe-lg" style="color:#3b5998" id="refresh-like"></i><div id="after-liked"></div></span>' +
