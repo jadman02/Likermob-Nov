@@ -1126,32 +1126,8 @@ mainView.loadContent(
 	      '<div class="list-block media-list" style="margin-top:0px;">' +
 	     ' <ul style="background-color:transparent">' +
 	     
-	      '<div id="maptrans" style="background-color:transparent;height:200px;margin:0 auto;display:none;text-align:center;" onclick="openMap()"><i class="pe-7s-refresh pe-spin pe-lg" style="width:50px;margin:0 auto;margin-top:70px;color:#5ac8fa" id="transrefresh"></i></div>'+
-	      '<div class="toolbar tabbar">' +
-    '<div class="toolbar-inner">' +
-       ' <a href="#tab1" onclick="openLikez()" class="tab-link active">' +
-           '<span class="badge blue-circle"><i class="pe-7s-refresh pe-spin pe-lg" style="color:#3b5998" id="refresh-like"></i><div id="after-liked"></div></span>' +
-        '</a>' +
-       '<div class="tab-link" style="min-width:20%;text-align:center;">  <a href="#" class="disabled" id="callicon" style="margin:0 auto;">' +
-           ' <i class="pe-7s-call pe-lg"></i>' +
-       ' </a>' +
-       '<div id="call-right"></div></div>'+
-   
-'<div class="tab-link" style="min-width:20%;text-align:center;">  <a href="#" class="disabled" id="mapicon" style="margin:0 auto;">' +
-           ' <i class="pe-7s-map pe-lg"></i>' +
-       ' </a>' +
-       '<div id="map-right"></div></div>'+
+	      
 
-'<div class="tab-link" style="min-width:20%;text-align:center;">  <a href="#" class="disabled" id="mailicon" style="margin:0 auto;">' +
-           ' <i class="pe-7s-mail pe-lg"></i>' +
-       ' </a>' +
-       '<div id="mail-right"></div></div>'+
-
-       '<a href="#tab4" class="tab-link" onclick="openLikex()">' +
-           '<span class="badge orange-circle"><i class="pe-7s-refresh pe-spin pe-lg" style="color:#ff8000" id="refresh-dislike"></i><div id="after-notliked"></div></span>' +
-       ' </a>' +
-   ' </div>' +
-'</div>' +
 	      
 	      
 	     ' <div id="my"><div id="like-deals-here"><div style="width:100%;" class="likeli"><div style="width:22%;height:1px;background-color:#3b5998;float:left;margin-bottom:5px;"></div></div></div></div><div id="nomy"><div id="deals-here"><div style="width:100%;" class="likelix hide"><div style="margin-bottom:5px;width:22%;height:1px;background-color:#ff8000;float:right;"></div></div></div></div></ul></div>' +
@@ -1162,7 +1138,7 @@ mainView.loadContent(
 
         '    </div>' +
         
-        '<div class="toolbar tabbar hide" id="toolbar-map" style="background-color:hsla(0, 0%, 100%, 0.8);">' +
+        '<div class="toolbar tabbar" id="toolbar-map" style="background-color:hsla(0, 0%, 100%, 0.8);">' +
     '<div class="toolbar-inner">' +
        ' <a href="#tab1" onclick="openLikez()" class="tab-link active">' +
            '<span class="badge blue-circle"><div id="after-liked2"></div></span>' +
