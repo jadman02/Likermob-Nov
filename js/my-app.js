@@ -1119,8 +1119,8 @@ mainView.loadContent(
         '    <!-- Scrollable page content-->' +
 '<div id="map-canvas"></div>' +
          '<div id="info-here" style="z-index:99999"></div>' +
-        '    <div class="page-content cover-business" style="z-index: 1;" style="background-color:transparent;padding-bottom:-40px;margin-top:-100px;">' +
-        '      <div class="content-block" style="margin-top:-1px;">' +
+        '    <div class="page-content cover-business" style="z-index: 1;" style="background-color:transparent;padding-bottom:-40px;">' +
+        '      <div class="content-block" style="margin-top:-200px;">' +
         '        <div class="content-block-inner jinner" style="background-color:transparent;">' +
 	      '<div class="list-block media-list" style="margin-top:0px;">' +
 	     ' <ul style="background-color:transparent;border:0;">' +
