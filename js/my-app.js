@@ -1246,7 +1246,7 @@ $$( '#like-deals-here' ).append( '<li class="virtual-content swipeout likeli" st
 
 }
 }
-alert('starting map');initialize(latitudeyo,longitudeyo);
+initialize(latitudeyo,longitudeyo);
 
 if (latitudeyo && longitudeyo)
 {$$('#mapicon').hide();
@@ -1429,7 +1429,7 @@ infowindow.open(map,marker);
   google.maps.event.addListenerOnce(map, 'idle', function(){
    $$('#transrefresh').hide(); // do something only the first time the map is loaded
 });
-	alert(longitude);
+	
 }
 
 
