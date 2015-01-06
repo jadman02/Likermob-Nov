@@ -75,7 +75,7 @@ myApp.onPageBeforeRemove('location', function (page) {
 
 myApp.onPageBeforeRemove('business', function (page) {
 $$( ".business" ).remove();
-functionEmpty();
+
 });
 
 myApp.onPageInit('my-page', function (page) {
@@ -1072,7 +1072,6 @@ function openMap() {
 
 $$( ".cover-business" ).toggleClass( "hide" );
 $$( ".button-map" ).toggleClass( "active" );
-$$( "#toolbar-map" ).toggleClass( "hide" );
 	
 	
 }
