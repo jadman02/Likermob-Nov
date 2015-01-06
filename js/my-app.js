@@ -1124,7 +1124,17 @@ mainView.loadContent(
         '        <div class="content-block-inner jinner" style="background-color:transparent;">' +
 	      '<div class="list-block media-list" style="margin-top:0px;">' +
 	     ' <ul style="background-color:transparent">' +
-	     
+	      '<div class="toolbar tabbar">' +
+    '<div class="toolbar-inner">' +
+       ' <a href="#tab1" onclick="openLikez()" class="tab-link active">' +
+           '<span class="badge blue-circle"><i class="pe-7s-refresh pe-spin pe-lg" style="color:#3b5998" id="refresh-like"></i><div id="after-liked"></div></span>' +
+        '</a>' +
+
+       '<a href="#tab4" class="tab-link" onclick="openLikex()">' +
+           '<span class="badge orange-circle"><i class="pe-7s-refresh pe-spin pe-lg" style="color:#ff8000" id="refresh-dislike"></i><div id="after-notliked"></div></span>' +
+       ' </a>' +
+   ' </div>' +
+'</div>' +
 	      
 
 	      
@@ -1248,10 +1258,8 @@ $$( '#like-deals-here' ).append( '<li class="virtual-content swipeout likeli" st
 initialize(latitudeyo,longitudeyo);
 
 if (latitudeyo && longitudeyo)
-{$$('#mapicon').hide();
+{
 $$('#mapicon2').hide();
-$$('#maptrans').show();
-$$( '#map-right' ).append('<a href="#" onclick="openMap();" class="active" style="margin:0 auto;width:20px;text-align:center;"><i class="pe-7s-map pe-lg" style="margin:0 auto;width:20px;"></i></a>');
 $$( '#map-right2' ).append('<a href="#" onclick="openMap();" class="active" style="margin:0 auto;width:20px;text-align:center;"><i class="pe-7s-map pe-lg" style="margin:0 auto;width:20px;"></i></a>');	
 }
 
@@ -1274,16 +1282,12 @@ $$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=
 //}
 
 if (res[0][4]){
-$$('#callicon').hide();
-$$( '#call-right' ).append('<a href="tel:'+res[0][4]+'" class="active external" style="margin:0 auto;width:20px;text-align:center;"><i class="pe-7s-call pe-lg" style="margin:0 auto;width:20px;"></i></a>');
 $$('#callicon2').hide();
 $$( '#call-right2' ).append('<a href="tel:'+res[0][4]+'" class="active external" style="margin:0 auto;width:20px;text-align:center;"><i class="pe-7s-call pe-lg" style="margin:0 auto;width:20px;"></i></a>');
 	
 }
 
 if (res[0][16]){
-	$$('#mailicon').hide();
-$$( '#mail-right' ).append('<a href="mailto:'+res[0][16]+'" class="active external" style="margin:0 auto;width:20px;text-align:center;"><i class="pe-7s-mail pe-lg" style="margin:0 auto;width:20px;"></i></a>');
 	$$('#mailicon2').hide();
 $$( '#mail-right2' ).append('<a href="mailto:'+res[0][16]+'" class="active external" style="margin:0 auto;width:20px;text-align:center;"><i class="pe-7s-mail pe-lg" style="margin:0 auto;width:20px;"></i></a>');
 	
