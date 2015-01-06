@@ -1304,13 +1304,13 @@ $$( '#mail-right' ).append('<a href="mailto:'+res[0][16]+'" class="active extern
 $$( '#mail-right2' ).append('<a href="mailto:'+res[0][16]+'" class="active external" style="margin:0 auto;width:20px;text-align:center;"><i class="pe-7s-mail pe-lg" style="margin:0 auto;width:20px;"></i></a>');
 	
 }
-if (res[0][13] && res[0][14])
-{$$('#mapicon').hide();
-$$('#mapicon2').hide();
-$$('#maptrans').show();
-$$( '#map-right' ).append('<a href="#" onclick="openMap();" class="active xternal" style="margin:0 auto;width:20px;text-align:center;"><i class="pe-7s-map pe-lg" style="margin:0 auto;width:20px;"></i></a>');
-$$( '#map-right2' ).append('<a href="#" onclick="openMap();" class="active xternal" style="margin:0 auto;width:20px;text-align:center;"><i class="pe-7s-map pe-lg" style="margin:0 auto;width:20px;"></i></a>');	
-}
+//if (res[0][13] && res[0][14])
+//{$$('#mapicon').hide();
+//$$('#mapicon2').hide();
+//$$('#maptrans').show();
+//$$( '#map-right' ).append('<a href="#" onclick="openMap();" class="active xternal" style="margin:0 auto;width:20px;text-align:center;"><i class="pe-7s-map pe-lg" style="margin:0 auto;width:20px;"></i></a>');
+//$$( '#map-right2' ).append('<a href="#" onclick="openMap();" class="active xternal" style="margin:0 auto;width:20px;text-align:center;"><i class="pe-7s-map pe-lg" style="margin:0 auto;width:20px;"></i></a>');	
+//}
 
 
 
