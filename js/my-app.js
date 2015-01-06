@@ -1270,7 +1270,7 @@ $$( '#like-deals-here' ).append( '<li class="virtual-content swipeout likeli" st
 
 }
 }
-initialize(latitudeyo,longitudeyo);
+alert('starting map');initialize(latitudeyo,longitudeyo);
 $$('#refresh-like').hide();
 
 document.getElementById("after-liked").innerHTML = deals_liked;
@@ -1410,7 +1410,7 @@ if (allEntries[j].post_id == res[i][2]){
 
 function initialize(latitude,longitude) {
 	
-	alert(latitude);
+
 	
   var mapOptions = {
     zoom: 15,
@@ -1450,6 +1450,7 @@ infowindow.open(map,marker);
   google.maps.event.addListenerOnce(map, 'idle', function(){
    $$('#transrefresh').hide(); // do something only the first time the map is loaded
 });
+	alert(latitude);
 }
 
 
