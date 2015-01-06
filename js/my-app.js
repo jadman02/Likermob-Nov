@@ -1118,8 +1118,13 @@ mainView.loadContent(
         '  <div data-page="business" class="page business no-navbar">' +
         '    <!-- Scrollable page content-->' +
 '<div id="map-canvas"></div>' +
-         '<div id="info-here" style="z-index:99999;height:44px;overflow:hidden;border-bottom: 1px solid #c4c4c4;"></div>' +
-        	      '<div class="toolbar tabbar" style="background-color:hsla(0, 0%, 100%, 0.8);border:0;top:44px;">' +
+         '<div id="info-here" style="z-index:99999;height:44px;overflow:hidden;"></div>' +
+        '    <div class="page-content cover-business" style="z-index: 1;" style="background-color:transparent;padding-bottom:-40px;">' +
+        '      <div class="content-block" style="margin-top:-1px;">' +
+        '        <div class="content-block-inner jinner" style="background-color:transparent;">' +
+	      '<div class="list-block media-list" style="margin-top:0px;">' +
+	     ' <ul style="background-color:transparent;border:0;">' +
+	      '<div class="toolbar tabbar" style="background-color:hsla(0, 0%, 100%, 0.8);border:0;">' +
     '<div class="toolbar-inner">' +
        ' <a href="#tab1" onclick="openLikez()" class="tab-link active">' +
            '<span class="badge blue-circle"><i class="pe-7s-refresh pe-spin pe-lg" style="color:#3b5998" id="refresh-like"></i><div id="after-liked"></div></span>' +
@@ -1130,12 +1135,6 @@ mainView.loadContent(
        ' </a>' +
    ' </div>' +
 '</div>' +
-        '    <div class="page-content cover-business" style="z-index: 1;" style="background-color:transparent;padding-bottom:-40px;">' +
-        '      <div class="content-block" style="margin-top:-1px;">' +
-        '        <div class="content-block-inner jinner" style="background-color:transparent;">' +
-	      '<div class="list-block media-list" style="margin-top:0px;">' +
-	     ' <ul style="background-color:transparent;border:0;">' +
-
 	      
 
 	      
@@ -1148,7 +1147,24 @@ mainView.loadContent(
 
         '    </div>' +
         
-        '<div class="toolbar tabbar" id="toolbar-map" style="background-color:hsla(0, 0%, 100%, 0.8);">' +
+       
+        
+//'<div class="toolbar hide" id="toolbar-map" style="background-color:transparent;border:0;">' +
+// '<div class="toolbar-inner" style="background-color:transparent;border:0;">' +
+// '<a href="#" class="link button button-fill" onclick="openMap();" style="width:50px;height:50px;margin:0 auto;margin-top:-50px;border-radius:50%;"><i class="pe-7s-back pe-3x" style="color:white;"></i></a>' +
+//'</div>' +
+//'</div>' +
+        
+        
+        
+        
+        
+        
+        
+        '  </div>' +
+        
+        
+         '<div class="toolbar tabbar" id="toolbar-map" style="background-color:hsla(0, 0%, 100%, 0.8);">' +
     '<div class="toolbar-inner">' +
        ' <a href="#tab1" onclick="openLikez()" class="tab-link active">' +
            '<span class="badge blue-circle"><div id="after-liked2"></div></span>' +
@@ -1174,19 +1190,8 @@ mainView.loadContent(
    ' </div>' +
 '</div>' +
         
-//'<div class="toolbar hide" id="toolbar-map" style="background-color:transparent;border:0;">' +
-// '<div class="toolbar-inner" style="background-color:transparent;border:0;">' +
-// '<a href="#" class="link button button-fill" onclick="openMap();" style="width:50px;height:50px;margin:0 auto;margin-top:-50px;border-radius:50%;"><i class="pe-7s-back pe-3x" style="color:white;"></i></a>' +
-//'</div>' +
-//'</div>' +
         
         
-        
-        
-        
-        
-        
-        '  </div>' +
         '</div>'
         
     );
