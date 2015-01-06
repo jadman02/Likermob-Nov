@@ -1147,24 +1147,7 @@ mainView.loadContent(
 
         '    </div>' +
         
-       
-        
-//'<div class="toolbar hide" id="toolbar-map" style="background-color:transparent;border:0;">' +
-// '<div class="toolbar-inner" style="background-color:transparent;border:0;">' +
-// '<a href="#" class="link button button-fill" onclick="openMap();" style="width:50px;height:50px;margin:0 auto;margin-top:-50px;border-radius:50%;"><i class="pe-7s-back pe-3x" style="color:white;"></i></a>' +
-//'</div>' +
-//'</div>' +
-        
-        
-        
-        
-        
-        
-        
-        '  </div>' +
-        
-        
-         '<div class="toolbar tabbar" id="toolbar-map" style="background-color:hsla(0, 0%, 100%, 0.8);">' +
+        '<div class="toolbar tabbar" id="toolbar-map" style="background-color:hsla(0, 0%, 100%, 0.8);">' +
     '<div class="toolbar-inner">' +
        ' <a href="#tab1" onclick="openLikez()" class="tab-link active">' +
            '<span class="badge blue-circle"><div id="after-liked2"></div></span>' +
@@ -1190,8 +1173,19 @@ mainView.loadContent(
    ' </div>' +
 '</div>' +
         
+//'<div class="toolbar hide" id="toolbar-map" style="background-color:transparent;border:0;">' +
+// '<div class="toolbar-inner" style="background-color:transparent;border:0;">' +
+// '<a href="#" class="link button button-fill" onclick="openMap();" style="width:50px;height:50px;margin:0 auto;margin-top:-50px;border-radius:50%;"><i class="pe-7s-back pe-3x" style="color:white;"></i></a>' +
+//'</div>' +
+//'</div>' +
         
         
+        
+        
+        
+        
+        
+        '  </div>' +
         '</div>'
         
     );
