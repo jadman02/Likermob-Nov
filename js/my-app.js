@@ -774,7 +774,7 @@ var d = new Date();
     // Parse any JSON previously stored in allEntries
     var existingEntries = JSON.parse(localStorage.getItem("allEntries"));
     if(existingEntries == null) existingEntries = [];
-    var myLatlng = new google.maps.LatLng(latitude,longitude);
+
     var entry = {
         "post_id": post_id,
         "page_id": page_id,
@@ -782,7 +782,8 @@ var d = new Date();
         "expiry": timestamp,
         "title":title,
         "name":name,
-        "Latlng":myLatlng
+        "latitude":latitude,
+        "longitude":longitude
     };
     localStorage.setItem("entry", JSON.stringify(entry));
     // Save allEntries back to local storage
@@ -1240,7 +1241,7 @@ var allEntries = JSON.parse(localStorage.getItem("allEntries"));
 for (k = 0; k < allEntries.length; k++) { 
 if (allEntries[k].page_id == page_id){	
 deals_liked ++;
-if ((deals_liked == 1) && (allEntries[k].Latlng)) {initialize(allEntries[i].Latlng);}
+if ((deals_liked == 1) && (allEntries[k].latitude) && (allEntries[k].longitude)) {alert('allEntries[k].latitude');}
 var unix = allEntries[k].expiry + offset;
 var d = new Date(unix);
 var month_name = month[d.getUTCMonth()];
@@ -1407,7 +1408,7 @@ if (allEntries[j].post_id == res[i][2]){
 
 
 
-function initialize(myLatlng) {
+function initialize(latitude,longitude) {
 	
   var mapOptions = {
     zoom: 15,
@@ -1419,7 +1420,7 @@ function initialize(myLatlng) {
   var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
 
-
+    var myLatlng = new google.maps.LatLng(latitude,longitude);
 
 
   var marker = new google.maps.Marker({
