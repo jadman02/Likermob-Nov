@@ -1450,7 +1450,7 @@ infowindow.open(map,marker);
   google.maps.event.addListenerOnce(map, 'idle', function(){
    $$('#transrefresh').hide(); // do something only the first time the map is loaded
 });
-	alert(latitude);
+	alert(longitude);
 }
 
 
