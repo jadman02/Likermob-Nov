@@ -1119,12 +1119,12 @@ mainView.loadContent(
         '    <!-- Scrollable page content-->' +
 '<div id="map-canvas"></div>' +
          '<div id="info-here" style="z-index:99999"></div>' +
-        '    <div class="page-content cover-business" style="z-index: 1;" style="background-color:transparent;padding-bottom:-40px;">' +
+        '    <div class="page-content cover-business" style="z-index: 1;" style="background-color:transparent;padding-bottom:-40px;margin-top:-100px;">' +
         '      <div class="content-block" style="margin-top:-1px;">' +
         '        <div class="content-block-inner jinner" style="background-color:transparent;">' +
 	      '<div class="list-block media-list" style="margin-top:0px;">' +
-	     ' <ul style="background-color:transparent">' +
-	      '<div class="toolbar tabbar">' +
+	     ' <ul style="background-color:transparent;border:0;">' +
+	      '<div class="toolbar tabbar" style="background-color:hsla(0, 0%, 100%, 0.8);border:0;">' +
     '<div class="toolbar-inner">' +
        ' <a href="#tab1" onclick="openLikez()" class="tab-link active">' +
            '<span class="badge blue-circle"><i class="pe-7s-refresh pe-spin pe-lg" style="color:#3b5998" id="refresh-like"></i><div id="after-liked"></div></span>' +
@@ -1139,7 +1139,7 @@ mainView.loadContent(
 
 	      
 	      
-	     ' <div id="my"><div id="like-deals-here"><div style="width:100%;" class="likeli"><div style="width:22%;height:1px;background-color:#3b5998;float:left;margin-bottom:5px;"></div></div></div></div><div id="nomy"><div id="deals-here"><div style="width:100%;" class="likelix hide"><div style="margin-bottom:5px;width:22%;height:1px;background-color:#ff8000;float:right;"></div></div></div></div></ul></div>' +
+	     ' <div id="my"><div id="like-deals-here"><div style="width:100%;" class="likeli"><div style="width:50%;height:1px;background-color:#3b5998;float:left;margin-bottom:5px;"></div></div></div></div><div id="nomy"><div id="deals-here"><div style="width:100%;" class="likelix hide"><div style="margin-bottom:5px;width:50%;height:1px;background-color:#ff8000;float:right;"></div></div></div></div></ul></div>' +
 
 
         '        </div>' +
