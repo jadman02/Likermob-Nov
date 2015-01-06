@@ -1411,7 +1411,7 @@ if (allEntries[j].post_id == res[i][2]){
 function initialize(latitude,longitude) {
 	
 
-	
+	 var myLatlng = new google.maps.LatLng(latitude,longitude);
   var mapOptions = {
     zoom: 15,
     center: myLatlng,
@@ -1422,7 +1422,7 @@ function initialize(latitude,longitude) {
   var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
 
-    var myLatlng = new google.maps.LatLng(latitude,longitude);
+   
 
 
   var marker = new google.maps.Marker({
