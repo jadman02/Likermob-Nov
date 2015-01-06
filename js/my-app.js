@@ -1240,7 +1240,7 @@ var allEntries = JSON.parse(localStorage.getItem("allEntries"));
 for (k = 0; k < allEntries.length; k++) { 
 if (allEntries[k].page_id == page_id){	
 deals_liked ++;
-if (deals_liked == 1 && allEntries[k].Latlng) {initialize(allEntries[i].Latlng);}
+if ((deals_liked == 1) && (allEntries[k].Latlng)) {initialize(allEntries[i].Latlng);}
 var unix = allEntries[k].expiry + offset;
 var d = new Date(unix);
 var month_name = month[d.getUTCMonth()];
