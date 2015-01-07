@@ -1236,7 +1236,7 @@ var day = d.getUTCDate();
 
 var firstdate = weekday_name + ", " + month_name + " " + day ;
 var datetime = '<div class="messages-date" style="padding:0;float:left;margin:0;"><i class="pe-7s-clock"></i> Expires '+ firstdate +'</div>';
-$$( '#like-deals-here' ).append( '<li class="virtual-content swipeout likeli" style="background-color:hsla(0, 0%, 100%, 0.9);clear:both;border-right:1px solid #ff8000;margin-top:5px;margin-bottom:5px;">' +
+$$( '#like-deals-here' ).append( '<li class="virtual-content swipeout likeli" style="background-color:hsla(221, 44%, 42%, 0.9);clear:both;border-right:1px solid #ff8000;margin-top:5px;margin-bottom:5px;">' +
                   '<div class="swipeout-content item-content">'+
                   '<div class="item-media" onclick="removelikelList(\''+ allEntries[k].post_id  +'\',\''+allEntries[k].page_id +'\',\''+ allEntries[k].photo  +'\',\''+ allEntries[k].name  +'\')" style="padding:5px;"><img src="http://smilesavers.net.au/images/compressed/'+allEntries[k].page_id +'_'+allEntries[k].photo +'.jpg" style="width:40px;max-height:40px;overflow:hidden;"/></div>' +
                   '<div class="item-inner virtual-inner" onclick="removelikelList(\''+ allEntries[k].post_id  +'\',\''+allEntries[k].page_id +'\',\''+ allEntries[k].photo  +'\',\''+ allEntries[k].name  +'\')">' +
