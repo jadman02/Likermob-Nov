@@ -1318,8 +1318,8 @@ $$( '#mail-right2' ).append('<a href="mailto:'+res[0][16]+'" class="active exter
 
     for (i = 1; i < res.length; i++) {
 totaldeals ++;
- 
-    		$$( '#deals-here' ).append( '<li class="virtual-content swipeout virtual_'+ res[i][2]  +' likelix hide" style="background-color:hsla(0, 0%, 100%, 0.9);clear:both;border-left:1px solid #3b5998;margin-top:5px;margin-bottom:5px;">' +
+
+    		$$( '#deals-here' ).append( '<li class="virtual-content swipeout virtual_'+ res[i][2]  +' likelix hide" style="background-color:hsla(30, 100%, 50%, 0.9);clear:both;border-left:1px solid #3b5998;margin-top:5px;margin-bottom:5px;">' +
                   '<div class="swipeout-content item-content">'+
                   '<div class="item-media" onclick="removelikelList(\''+ res[i][2]  +'\',\''+ res[i][1]  +'\',\''+ res[i][21]  +'\',\''+ res[i][16]  +'\')" style="padding:5px;"><img src="http://smilesavers.net.au/images/compressed/'+res[i][1]+'_'+res[i][21]+'.jpg" style="width:40px;max-height:40px;overflow:hidden;"/></div>' +
                   '<div class="item-inner virtual-inner" onclick="removelikelList(\''+ res[i][2]  +'\',\''+ res[i][1] +'\',\''+ res[i][21]  +'\',\''+ res[i][16]  +'\')">' +
