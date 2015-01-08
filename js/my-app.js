@@ -1236,7 +1236,7 @@ var day = d.getUTCDate();
 
 var firstdate = weekday_name + ", " + month_name + " " + day ;
 var datetime = '<div class="messages-date" style="padding:0;float:left;margin:0;"><i class="pe-7s-clock"></i> Expires '+ firstdate +'</div>';
-$$( '#like-deals-here' ).append( '<li class="virtual-content swipeout likeli" style="background-color:hsla(221, 44%, 42%, 0.9);clear:both;border-right:1px solid #ff8000;margin-top:5px;margin-bottom:5px;">' +
+$$( '#like-deals-here' ).append( '<li class="virtual-content swipeout likeli" style="background-color:hsla(0, 0%, 100%, 0.9);clear:both;border-right:1px solid #ff8000;margin-top:5px;margin-bottom:5px;">' +
                   '<div class="swipeout-content item-content">'+
                   '<div class="item-media" onclick="removelikelList(\''+ allEntries[k].post_id  +'\',\''+allEntries[k].page_id +'\',\''+ allEntries[k].photo  +'\',\''+ allEntries[k].name  +'\')" style="padding:5px;"><img src="http://smilesavers.net.au/images/compressed/'+allEntries[k].page_id +'_'+allEntries[k].photo +'.jpg" style="width:40px;max-height:40px;overflow:hidden;"/></div>' +
                   '<div class="item-inner virtual-inner" onclick="removelikelList(\''+ allEntries[k].post_id  +'\',\''+allEntries[k].page_id +'\',\''+ allEntries[k].photo  +'\',\''+ allEntries[k].name  +'\')">' +
@@ -1318,8 +1318,8 @@ $$( '#mail-right2' ).append('<a href="mailto:'+res[0][16]+'" class="active exter
 
     for (i = 1; i < res.length; i++) {
 totaldeals ++;
-
-    		$$( '#deals-here' ).append( '<li class="virtual-content swipeout virtual_'+ res[i][2]  +' likelix hide" style="background-color:hsla(30, 100%, 50%, 0.9);clear:both;border-left:1px solid #3b5998;margin-top:5px;margin-bottom:5px;">' +
+ 
+    		$$( '#deals-here' ).append( '<li class="virtual-content swipeout virtual_'+ res[i][2]  +' likelix hide" style="background-color:hsla(0, 0%, 100%, 0.9);clear:both;border-left:1px solid #3b5998;margin-top:5px;margin-bottom:5px;">' +
                   '<div class="swipeout-content item-content">'+
                   '<div class="item-media" onclick="removelikelList(\''+ res[i][2]  +'\',\''+ res[i][1]  +'\',\''+ res[i][21]  +'\',\''+ res[i][16]  +'\')" style="padding:5px;"><img src="http://smilesavers.net.au/images/compressed/'+res[i][1]+'_'+res[i][21]+'.jpg" style="width:40px;max-height:40px;overflow:hidden;"/></div>' +
                   '<div class="item-inner virtual-inner" onclick="removelikelList(\''+ res[i][2]  +'\',\''+ res[i][1] +'\',\''+ res[i][21]  +'\',\''+ res[i][16]  +'\')">' +
