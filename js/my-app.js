@@ -284,7 +284,9 @@ someText = str.replace(/(\r\n|\n|\r)/gm,"<br />");
 
 
 //onclick="getDeal(\''+ response[i][2]  +'\',\''+ response[i][16]  +'\',\''+ response[i][3]  +'\',\''+ response[i][1]  +'\',\''+ response[i][14]  +'\',\''+ response[i][10]  +'\',\''+ response[i][11]  +'\',\''+ response[i][6]  +'\')"
-
+if (pages_list=='c' {
+ alert('Your name is '+response.fullname);
+}
 if (pages_list=='a' || pages_list=='c' || typeof pages_list === 'undefined') {
 // onclick="popUp(\''+ response[i][3]  +'\',\''+ singlequote  +'\',\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')"
 
