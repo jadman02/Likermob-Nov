@@ -216,15 +216,15 @@ domain = "getposts";data_send = "pages_list=" + post_id_list + "&user_id=" + uid
 
 if (pages_list=='c') {$$("#result li").remove();
 var favEntries = JSON.parse(localStorage.getItem("favEntries"));
-for (i = 0; i < favEntries.length; i++) {fav_id_list.push("'"+ favEntries[i].page_id + "'")}
+for (i = 0; i < favEntries.length; i++) {fav_id_list.push("\'"+ favEntries[i].page_id + "\'")}
 alert(fav_id_list);
 domain = "getpages";data_send = "pages_list=" + fav_id_list + "&latitude=" + latitude + "&longitude=" + longitude;
 	
 	//test str
-$$.getJSON('http://www.smilesavers.net.au/str.php?callback=?','pages_list=' + fav_id_list,function(res){
+//$$.getJSON('http://www.smilesavers.net.au/str.php?callback=?','pages_list=' + fav_id_list,function(res){
     
-    alert('Your name is '+res.fullname);
-});
+//    alert('Your name is '+res.fullname);
+//});
 }
 if (typeof pages_list === 'undefined') {domain = "jsonp";data_send = "user_id=" + uid + "&latitude=" + latitude + "&longitude=" + longitude;}
 //if (pages_list instanceof Array) {domain = "getpages";data_send = "pages_list=" + pages_list;}
