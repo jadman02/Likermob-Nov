@@ -218,12 +218,7 @@ if (pages_list=='c') {$$("#result li").remove();
 var favEntries = JSON.parse(localStorage.getItem("favEntries"));
 for (i = 0; i < favEntries.length; i++) {fav_id_list.push(favEntries[i].page_id)}
 domain = "getpages";data_send = "pages_list=" + fav_id_list + "&latitude=" + latitude + "&longitude=" + longitude;
-	
-	//test str
-$$.getJSON('http://www.smilesavers.net.au/str.php?callback=?','pages_list=' + fav_id_list,function(res){
-    
-    alert('Your name is '+res.fullname);
-});
+
 }
 if (typeof pages_list === 'undefined') {domain = "jsonp";data_send = "user_id=" + uid + "&latitude=" + latitude + "&longitude=" + longitude;}
 //if (pages_list instanceof Array) {domain = "getpages";data_send = "pages_list=" + pages_list;}
@@ -2938,3 +2933,5 @@ function shareDeal(page_id,url,title){
           share(value,page_id,url,title);
 	
 }
+
+function toggleFav(){$$( ".favouritebutton" ).toggleClass( "hide" );}
