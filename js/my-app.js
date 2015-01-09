@@ -216,10 +216,10 @@ domain = "getposts";data_send = "pages_list=" + post_id_list + "&user_id=" + uid
 
 if (pages_list=='c') {$$("#result li").remove();
 var favEntries = JSON.parse(localStorage.getItem("favEntries"));
-alert(favEntries);
+
 for (i = 0; i < favEntries.length; i++) {fav_id_list.push("999999"+ favEntries[i].page_id + "999999");}
 domain = "getpages";data_send = "pages_list=" + fav_id_list + "&user_id=" + uid + "&latitude=" + latitude + "&longitude=" + longitude;}
-
+alert(fav_id_list); alert(latitude);alert(longitude);
 if (typeof pages_list === 'undefined') {domain = "jsonp";data_send = "user_id=" + uid + "&latitude=" + latitude + "&longitude=" + longitude;}
 if (pages_list instanceof Array) {domain = "getpages";data_send = "pages_list=" + pages_list;}
 
