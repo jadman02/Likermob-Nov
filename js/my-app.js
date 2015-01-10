@@ -18,7 +18,10 @@ document.getElementById("profilepic").innerHTML = '<img src="http://graph.facebo
 
     functionEmpty('a',0,2,0);
 var existingEntries = JSON.parse(localStorage.getItem("allEntries"));
+var windowheight = $$(window).height();
 $$('.badge-like').text(existingEntries.length);
+
+ $$( '.statusbar-overlay' ).css( 'background-size', '100% ' + windowheight + '%');
 
 var previousScrollPosition = 0;
 $$('.pull-to-refresh-content').on('scroll', function (e) {
