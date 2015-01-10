@@ -79,14 +79,12 @@
         
       }
             .statusbar-overlay {
-background: #3b5998; /* Old browsers */
-background: -moz-linear-gradient(left,  #3b5998 0%, #826761 39%, #826761 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, right top, color-stop(0%,#3b5998), color-stop(39%,#826761), color-stop(100%,#826761)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(left,  #3b5998 0%,#826761 39%,#826761 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(left,  #3b5998 0%,#826761 39%,#826761 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(left,  #3b5998 0%,#826761 39%,#826761 100%); /* IE10+ */
-background: linear-gradient(to right,  #3b5998 0%,#826761 39%,#826761 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b5998', endColorstr='#826761',GradientType=1 ); /* IE6-9 */
+background: #074d55; 
+        background: -moz-radial-gradient(center, ellipse cover, #ff8000 0%, #3b5998 100%); /* FF3.6+ */
+        background: -webkit-gradient(radial, right bottom, 0px, left top, 100%, color-stop(0%,#ff8000), color-stop(100%,#3b5998));
+        background: -webkit-radial-gradient(right bottom, ellipse cover, #ff8000 0%, #3b5998 100%);
+        background: radial-gradient(ellipse at right bottom, #ff8000 0%, #3b5998 100% );
+        height:100%;width:100%;
 
 
 
@@ -104,7 +102,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b5998', end
   </head>
   <body>
     <!-- Status bar overlay for full screen mode (PhoneGap) -->
-    <div class="statusbar-overlay"></div>
+    <div class="height:20px;overflow:hidden;"><div class="statusbar-overlay"></div></div>
     
     <!-- Panels Overlay -->
   <div class="panel-overlay" style="background-color:transparent;"></div>
