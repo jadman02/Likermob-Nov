@@ -12,4 +12,79 @@
  *
  * Released on: October 2, 2014
 */
-Framework7.prototype.plugins.panels3d=function(a,b){"use strict";function c(){b.enabled&&l.css({"-webkit-transform-origin":"100% center","transform-origin":"100% center"})}function d(){b.enabled&&l.css({"-webkit-transform-origin":"0% center","transform-origin":"0% center"})}function e(){l=g(".views"),j=g(".panel-left.panel-reveal"),k=g(".panel-right.panel-reveal"),j.on("open",c),k.on("open",d)}function f(a,c,d){b.enabled&&(c=g(c),c.hasClass("panel-reveal")&&(c.hasClass("panel-left")&&(h||(h=c[0].offsetWidth),l.transform("translate3d("+h*d+"px,0,0) rotateY("+-30*d+"deg)"),l.css({"-webkit-transform-origin":"100% center","transform-origin":"100% center"}),c.transform("translate3d("+-h*(1-d)+"px,0,0)")),c.hasClass("panel-right")&&(i||(i=c[0].offsetWidth),l.transform("translate3d("+-i*d+"px,0,0) rotateY("+30*d+"deg)"),l.css({"-webkit-transform-origin":"0% center","transform-origin":"0% center"}),c.transform("translate3d("+i*(1-d)+"px,0,0)"))))}b=b||{enabled:!0};var g=window.Dom7;a.panels3d={enable:function(){g("body").addClass("panels-3d"),b.enabled=!0},disable:function(){g("body").removeClass("panels-3d"),b.enabled=!1}},b.enabled&&g("body").addClass("panels-3d");var h,i,j,k,l;return{hooks:{appInit:e,swipePanelSetTransform:f}}};
+Framework7.prototype.plugins.panels3d = function (app, params) {
+    'use strict';
+    params = params || {enabled: true};
+    var $ = window.Dom7;
+
+    app.panels3d = {
+        enable: function () {
+            $('body').addClass('panels-3d');
+            params.enabled = true;
+        },
+        disable: function () {
+            $('body').removeClass('panels-3d');
+            params.enabled = false;
+        },
+    };
+    if (params.enabled) $('body').addClass('panels-3d');
+    
+    var leftPanelWidth, rightPanelWidth, leftPanel, rightPanel, views;
+
+    function leftPanelOpen() {
+        if (!params.enabled) return;
+        views.css({
+            '-webkit-transform-origin': '100% center',
+            'transform-origin': '100% center',
+        });
+    }
+
+    function rightPanelOpen() {
+        if (!params.enabled) return;
+        views.css({
+            '-webkit-transform-origin': '0% center',
+            'transform-origin': '0% center',
+        });
+    }
+
+
+    function appInit() {
+        views = $('.views');
+        leftPanel = $('.panel-left.panel-reveal');
+        rightPanel = $('.panel-right.panel-reveal');
+
+        leftPanel.on('open', leftPanelOpen);
+        rightPanel.on('open', rightPanelOpen);
+    }
+
+    function setPanelTransform(viewsContainer, panel, perc) {
+        if (!params.enabled) return;
+        panel = $(panel);
+        if (!panel.hasClass('panel-reveal')) return;
+
+        if (panel.hasClass('panel-left')) {
+            if (!leftPanelWidth) leftPanelWidth = panel[0].offsetWidth;
+            views.transform('translate3d(' + (leftPanelWidth * perc) + 'px,0,0) rotateY(' + (-30 * perc) + 'deg)');
+            views.css({
+                '-webkit-transform-origin': '100% center',
+                'transform-origin': '100% center',
+            });
+            panel.transform('translate3d(' + (-leftPanelWidth * (1 - perc)) + 'px,0,0)');
+        }
+        if (panel.hasClass('panel-right')) {
+            if (!rightPanelWidth) rightPanelWidth = panel[0].offsetWidth;
+            views.transform('translate3d(' + (-rightPanelWidth * perc) + 'px,0,0) rotateY(' + (30 * perc) + 'deg)');
+            views.css({
+                '-webkit-transform-origin': '0% center',
+                'transform-origin': '0% center',
+            });
+            panel.transform('translate3d(' + (rightPanelWidth * (1 - perc)) + 'px,0,0)');
+        }
+    }
+    return {
+        hooks : {
+            appInit: appInit,
+            swipePanelSetTransform: setPanelTransform,
+        }
+    };
+};
