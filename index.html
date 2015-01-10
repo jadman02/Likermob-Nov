@@ -79,11 +79,15 @@
         
       }
             .statusbar-overlay {
-        background: #074d55; 
-        background: -moz-radial-gradient(center, ellipse cover, #946B53 0%, #3b5998 100%); /* FF3.6+ */
-        background: -webkit-gradient(radial, right, 0px, left, 100%, color-stop(0%,#946B53), color-stop(100%,#3b5998));
-        background: -webkit-radial-gradient(right, ellipse cover, #946B53 0%, #3b5998 100%);
-        background: radial-gradient(ellipse at right, #946B53 0%, #3b5998 100% );
+        background: #3b5998; /* Old browsers */
+background: -moz-linear-gradient(left,  #3b5998 0%, #946b53 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,#3b5998), color-stop(100%,#946b53)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(left,  #3b5998 0%,#946b53 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left,  #3b5998 0%,#946b53 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left,  #3b5998 0%,#946b53 100%); /* IE10+ */
+background: linear-gradient(to right,  #3b5998 0%,#946b53 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b5998', endColorstr='#946b53',GradientType=1 ); /* IE6-9 */
+
         
       }
     </style>
