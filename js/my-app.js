@@ -2937,5 +2937,5 @@ function shareDeal(page_id,url,title){
 	
 }
 
-function favOn(){$$( "#whitehomestar" ).hide();$$( "#yellowhomestar" ).show();}
-function favOff(){$$( "#whitehomestar" ).show();$$( "#yellowhomestar" ).hide();}
+function favOn(){$$( "#whitehomestar" ).hide();$$( "#yellowhomestar" ).show();$$( '#yellowhomestar' ).css( 'margin-top', '10px');}
+function favOff(){$$( "#whitehomestar" ).show();$$( "#yellowhomestar" ).hide();$$( '#whitehomestar' ).css( 'margin-top', '10px');}
