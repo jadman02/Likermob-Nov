@@ -260,8 +260,8 @@ for (i = start; i < finish; i++) {
 
 var favEntries = JSON.parse(localStorage.getItem("favEntries"));
 if(favEntries == null) favEntries = [];
-var staryellow = '<a href="#" onclick="removefavList(\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" id="yellow_'+ response[i][2] +'" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button hide"><i class="pe-7s-star pe-2x" style="margin-left:-2px;margin-top:5px;color:#ffcc00;"></i></a>';
-var starblue = '<a href="#" onclick="favList(\''+ response[i][1]  +'\',\''+ response[i][2]  +'\',\''+ response[i][16]  +'\')" id="blue_'+ response[i][2] +'" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-star pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a>';
+var staryellow = '<a href="#" onclick="removefavList(\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" id="yellow_'+ response[i][2] +'" style="z-index:100;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button hide"><i class="pe-7s-star pe-2x" style="margin-left:-2px;margin-top:5px;color:#ffcc00;"></i></a>';
+var starblue = '<a href="#" onclick="favList(\''+ response[i][1]  +'\',\''+ response[i][2]  +'\',\''+ response[i][16]  +'\')" id="blue_'+ response[i][2] +'" style="z-index:100;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-star pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a>';
 
 
 if(favEntries.length > 0){for (j = 0; j < favEntries.length; j++) {if (favEntries[j].page_id == response[i][1]){staryellow = '<a href="#" onclick="removefavList(\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" id="yellow_'+ response[i][2] +'" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-star pe-2x" style="margin-left:-2px;margin-top:5px;color:#ffcc00;"></i></a>';starblue = '<a href="#" id="blue_'+ response[i][2] +'" onclick="favList(\''+ response[i][1]  +'\',\''+ response[i][2]  +'\',,\''+ response[i][16]  +'\')" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button hide"><i class="pe-7s-star pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a>';}}}
@@ -306,12 +306,11 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 '<div class="imagediv">'+
 
 
-'<div style="height:40px;background-color:hsla(0, 0%, 0%, 0.7);">'+
-'<div style="float:left;font-size:14px;margin-left:10px;margin-top:10px;"><i class="pe-7s-like2 pe-lg" style="margin-right:2px;color:#3b5998;"></i><span style="color:#ccc;">'+ response[i][17] + '</span><i class="pe-7s-like2 pe-lg pe-rotate-180" style="color:#ff8000;margin-left:5px;margin-right:2px;"></i><span style="color:#ccc;">'+ response[i][18] + '</span></div>'+
-'<a href="#" onclick="loadMore(\''+ response[i][1]  +'\',\''+ homecontentimage  +'\',\''+ response[i][3]  +'\',\''+ uid +'\',\''+ response[i][2]  +'\');" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-more pe-2x" style="margin-left:-5px;margin-top:5px;"></i></a>'+
+'<div style="height:40px;background-color:hsla(0, 0%, 0%, 0.7);margin:0 auto;text-align:center;">'+
+'<a href="#" onclick="loadMore(\''+ response[i][1]  +'\',\''+ homecontentimage  +'\',\''+ response[i][3]  +'\',\''+ uid +'\',\''+ response[i][2]  +'\');" style="z-index:100;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-more pe-2x" style="margin-left:-5px;margin-top:5px;"></i></a>'+
 staryellow +
 starblue +
-'<div id="starinsert"></div><a href="#" id="mapicon" onclick="getBusiness(\''+ response[i][1]  +'\',\''+ response[i][16]  +'\');" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-map pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a>'+
+'<div id="starinsert"></div><a href="#" id="mapicon" onclick="getBusiness(\''+ response[i][1]  +'\',\''+ response[i][16]  +'\');" style="z-index:100;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-map pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a>'+
 '</div>'+ 
 
     
@@ -333,8 +332,8 @@ starblue +
 '<div class="messages-date">Sunday, Feb 3 <span>11:58</span></div>'+ 
 
 '<div class="row">'+
-        '<div class="col-20"><a href="#" onclick="getBusiness(\''+ response[i][1]  +'\',\''+ response[i][16]  +'\');" style="height:100px;z-index:100;float:left;margin:0 auto;border:0;background-color:transparent;margin-top:20px;" class="button"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=30&height=30" style="border-radius:50%;"/></a></div>'+
-        '<div class="col-80"><div class="messages-date" style="float:left;margin:0;padding:0;"><span>Smilesavers</span></div><div style="background-color:#e5e5ea;padding:10px;padding-bottom:30px;border-radius:10px;margin-top:20px;"><div id="dealtitle" style="float:left;font-weight:500;">'+ response[i][3] + ' fklasjdl ksadjskld jsakldjs akld the best in the world</div><br/><div style="clear:both;">'+response[i][4]+'</div><div style="float:left;font-size:14px;clear:both;"><i class="pe-7s-clock pe-lg"></i> Expires in 6 days</div></div></div>'+
+        '<div class="col-20"></div>'+
+        '<div class="col-80"><div class="messages-date" style="float:left;margin:0;padding:0;"><a href="#" onclick="getBusiness(\''+ response[i][1]  +'\',\''+ response[i][16]  +'\');" style="height:100px;z-index:100;float:left;margin:0 auto;border:0;background-color:transparent;margin-top:20px;" class="button"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=30&height=30" style="border-radius:50%;"/></a><span>Smilesavers</span></div><div style="background-color:#e5e5ea;padding:10px;padding-bottom:30px;border-radius:10px;margin-top:20px;"><div id="dealtitle" style="float:left;font-weight:500;">'+ response[i][3] + ' fklasjdl ksadjskld jsakldjs akld the best in the world</div><br/><div style="clear:both;">'+response[i][4]+'</div><div style="float:left;font-size:14px;clear:both;"><i class="pe-7s-clock pe-lg"></i> Expires in 6 days</div></div></div>'+
 '</div>'+
 
      '<div id="commentlist"></div>'+
@@ -361,7 +360,7 @@ starblue +
 
 
 '</div>'+
-'<div class="swipeout-actions-left"><a href="#" class="swipeout-delete swipeout-overswipe" style="background-color:#3b5998;"  onclick="likeButton(\''+ response[i][2]  +'\',\''+ response[i][6]  +'\',\''+ response[i][1]  +'\',\''+ response[i][21]  +'\',\''+ short_title  +'\',\''+ response[i][16]  +'\',\''+ response[i][10]  +'\',\''+ response[i][11]  +'\')"></a></div><div class="swipeout-actions-right" style="z-index:100000"><a href="#" onclick="closeButton(\''+ response[i][2]  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a></div></li>');}
+'<div class="swipeout-actions-left"><a href="#" class="swipeout-delete swipeout-overswipe" style="background-color:#3b5998;"  onclick="likeButton(\''+ response[i][2]  +'\',\''+ response[i][6]  +'\',\''+ response[i][1]  +'\',\''+ response[i][21]  +'\',\''+ short_title  +'\',\''+ response[i][16]  +'\',\''+ response[i][10]  +'\',\''+ response[i][11]  +'\')"></a></div><div class="swipeout-actions-right" style="z-index:100000"><a href="#" onclick="closeButton(\''+ response[i][2]  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;"></a></div></li>');}
 }
 
 
