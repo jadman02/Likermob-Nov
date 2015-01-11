@@ -23,9 +23,6 @@ $$('.badge-like').text(existingEntries.length);
 
  $$( '.statusbar-overlay' ).css( 'background-size', '100% ' + windowheight + '%');
 
-$$('.swipeout').on('swipeout', function (e) {
-  alert('Item opened on: ' + e.detail.progress + '%');
-});    
 
 var previousScrollPosition = 0;
 $$('.pull-to-refresh-content').on('scroll', function (e) {
