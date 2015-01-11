@@ -360,7 +360,7 @@ starblue +
 
 
 '</div>'+
-'<div class="swipeout-actions-left" style="background-image: url(\'http://www.smilesavers.net.au/images/like2.png\');"><a href="#" class="swipeout-delete swipeout-overswipe" style="background-color:transparent;"  onclick="likeButton(\''+ response[i][2]  +'\',\''+ response[i][6]  +'\',\''+ response[i][1]  +'\',\''+ response[i][21]  +'\',\''+ short_title  +'\',\''+ response[i][16]  +'\',\''+ response[i][10]  +'\',\''+ response[i][11]  +'\')"><i class="pe-7s-like2 pe-2x"></i></a></div><div class="swipeout-actions-right" style="z-index:100000"><a href="#" onclick="closeButton(\''+ response[i][2]  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a></div></li>');}
+'<div class="swipeout-actions-left"><a href="#" class="swipeout-delete swipeout-overswipe" style="background-color:transparent;background-image: url(\'http://www.smilesavers.net.au/images/like2.png\');"  onclick="likeButton(\''+ response[i][2]  +'\',\''+ response[i][6]  +'\',\''+ response[i][1]  +'\',\''+ response[i][21]  +'\',\''+ short_title  +'\',\''+ response[i][16]  +'\',\''+ response[i][10]  +'\',\''+ response[i][11]  +'\')"><i class="pe-7s-like2 pe-2x"></i></a></div><div class="swipeout-actions-right" style="z-index:100000"><a href="#" onclick="closeButton(\''+ response[i][2]  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a></div></li>');}
 }
 
 
