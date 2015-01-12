@@ -324,8 +324,7 @@ starblue +
 '</div>'+
 '<div class="swipeout-content">'+
 
-    '<a href="#" class="button" style="color:white;position:absolute;top:50%;margin-top:-25px;width:50px;height:80px;left:-25px;border-radius:50%;z-index:11111111111;border-color:#3b5998;background-color:#3b5998;"><i class="pe-7s-like2 pe-2x" style="margin-top:5px;margin-left:10px;"></i></a> '+
-'<a href="#" class="button" style="color:white;position:absolute;top:50%;margin-top:-25px;width:50px;height:80px;border-radius:50%;right:-25px;z-index:11111111111;border-color:#ff8000;background-color:#ff8000"><i class="pe-7s-like2 pe-2x pe-rotate-180" style="margin-top:5px;margin-right:10px;"></i></a> '+            
+
    '<div class="content-block" id="content-block" style="margin-top:-1px;clear:both;">'+
      ' <div class="content-block-inner" style="height:100%;background-color:hsla(0, 0%, 100%, 0.8);padding-bottom:20px;">'+
 
