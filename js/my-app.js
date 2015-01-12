@@ -49,11 +49,7 @@ $$('.pull-to-refresh-content').on('scroll', function (e) {
 
 
 
-$$('.swipeout').on('swipeout', function (e) {
-  
 
-  alert('Item opened on: ' + e.detail.progress + '%');
-});  
 
 
 
