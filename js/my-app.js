@@ -26,7 +26,9 @@ $$('.badge-like').text(existingEntries.length);
  $$( '.statusbar-overlay' ).css( 'background-size', '100% ' + windowheight + '%');
 
 $$('.swipeout').on('swipeout', function (e) {
-  alert('Item opened on: ' + e.detail.progress + '%');
+  
+  if (e.detail.progress > 0) {alert('yo');}
+ // alert('Item opened on: ' + e.detail.progress + '%');
 });  
 
 var previousScrollPosition = 0;
