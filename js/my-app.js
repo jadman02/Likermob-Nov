@@ -10,6 +10,10 @@ var myApp = new Framework7({
 // Export selectors engine
 var $$ = Dom7;
 
+$$('.swipeout').on('swipeout', function (e) {
+  alert('Item opened on: ' + e.detail.progress + '%');
+});  
+
 myApp.onPageBeforeInit('index', function (page) {
 
 var uid = localStorage.getItem("uid");
