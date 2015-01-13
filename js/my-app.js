@@ -313,7 +313,13 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 '<div class="imagediv">'+
 
 
-'<div style="min-height:40px;background-color:hsla(0, 0%, 0%, 0.7);margin:0 auto;text-align:center;color:white;"><div style="width:250px;margin:0 auto;">Like our new range of washing products for 10% off '+ response[i][3] + '. They are the best in the world'+
+'<div style="min-height:40px;background-color:hsla(0, 0%, 0%, 0.7);margin:0 auto;text-align:center;color:white;"><div style="width:250px;margin:0 auto;">Like our new range of washing products for 10% off '+
+
+'<div class="row">'+
+        '<div class="col-20"><a href="#" onclick="getBusiness(\''+ response[i][1]  +'\',\''+ response[i][16]  +'\');" style="height:100px;z-index:100;float:left;margin:0 auto;border:0;background-color:transparent;margin-top:20px;" class="button"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=30&height=30" style="border-radius:50%;"/></a></div>'+
+        '<div class="col-80"><div class="messages-date" style="float:left;margin:0;padding:0;"><span>Smilesavers</span></div><div style="background-color:#e5e5ea;padding:10px;padding-bottom:30px;border-radius:10px;margin-top:20px;"><div id="dealtitle" style="float:left;font-weight:500;">Like to save 10% on cleaning products - use codeword: '+ response[i][3] + '</div><br/><div style="clear:both;">'+response[i][4]+'</div><div style="float:left;font-size:14px;clear:both;"><i class="pe-7s-clock pe-lg"></i> Expires in 6 days</div></div></div>'+
+'</div>'+
+
 '</div></div>'+ 
 
 
@@ -325,19 +331,19 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 //
 //onclick="popUp(\''+ response[i][3]  +'\',\''+ singlequote  +'\',\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')"
 '</div>'+
-'<div class="swipeout-content" style="background-color:hsla(0, 0%, 100%, 0.8);">'+
+'<div class="swipeout-content">'+
 
     
 
-   '<div class="content-block" id="content-block" style="margin-top:-1px;clear:both;">'+
+   '<div class="content-block" id="content-block" style="margin-top:-1px;clear:both;background-color:hsla(0, 0%, 100%, 0.8);">'+
      ' <div class="content-block-inner" style="height:100%;padding-bottom:20px;">'+
 
 
 '<div class="messages-date">Sunday, Feb 3 <span>11:58</span></div>'+ 
 
 '<div class="row">'+
-        '<div class="col-20"><a href="#" onclick="getBusiness(\''+ response[i][1]  +'\',\''+ response[i][16]  +'\');" style="height:100px;z-index:100;float:left;margin:0 auto;border:0;background-color:transparent;margin-top:20px;" class="button"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=30&height=30" style="border-radius:50%;"/></a></div>'+
-        '<div class="col-80"><div class="messages-date" style="float:left;margin:0;padding:0;"><span>Smilesavers</span></div><div style="background-color:#e5e5ea;padding:10px;padding-bottom:30px;border-radius:10px;margin-top:20px;"><div id="dealtitle" style="float:left;font-weight:500;">'+ response[i][3] + ' fklasjdl ksadjskld jsakldjs akld the best in the world</div><br/><div style="clear:both;">'+response[i][4]+'</div><div style="float:left;font-size:14px;clear:both;"><i class="pe-7s-clock pe-lg"></i> Expires in 6 days</div></div></div>'+
+        '<div class="col-20"><a href="#" style="height:100px;z-index:100;float:left;margin:0 auto;border:0;background-color:transparent;margin-top:20px;" class="button"><img src="http://graph.facebook.com/'+uid+'/picture?width=30&height=30" style="border-radius:50%;"/></a></div>'+
+        '<div class="col-80"><div class="messages-date" style="float:left;margin:0;padding:0;"><span>Jarrod Dean</span></div><div style="background-color:#e5e5ea;padding:10px;padding-bottom:30px;border-radius:10px;margin-top:20px;"><textarea id="commentinput" placeholder="Add Comment" style="float:left;border-color:#333;"></textarea></div></div>'+
 '</div>'+
 
      '<div id="commentlist"></div>'+
