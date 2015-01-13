@@ -10,7 +10,9 @@ var myApp = new Framework7({
 // Export selectors engine
 var $$ = Dom7;
 
-
+$$('.swipeout').on('deleted', function () {
+  myApp.alert('Item removed');
+}); 
 
 myApp.onPageBeforeInit('index', function (page) {
 
@@ -25,7 +27,9 @@ $$('.badge-like').text(existingEntries.length);
 
  $$( '.statusbar-overlay' ).css( 'background-size', '100% ' + windowheight + '%');
 
-
+$$('.swipeout').on('deleted', function () {
+  myApp.alert('Item removed');
+}); 
 
 var previousScrollPosition = 0;
 $$('.pull-to-refresh-content').on('scroll', function (e) {
