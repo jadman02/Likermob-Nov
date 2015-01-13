@@ -325,19 +325,11 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 //
 //onclick="popUp(\''+ response[i][3]  +'\',\''+ singlequote  +'\',\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')"
 '</div>'+
-'<div class="swipeout-content" id="content-block" style="background-color:hsla(0, 0%, 100%, 0.8);">'+
+'<div class="swipeout-content" style="background-color:hsla(0, 0%, 100%, 0.8);">'+
 
-    '<div class="content-block-title">Deal</div>'+
-    '<div class="content-block inset">'+
-       ' <p>Donec et nulla auctor massa pharetra adipiscing ut sit amet sem. Suspendisse molestie velit vitae mattis tincidunt. Ut sit amet quam mollis, vulputate turpis vel, sagittis felis. </p>'+
-    '</div>'+
     
-     '<div class="content-block-title">Terms</div>'+
-    '<div class="content-block inset">'+
-       ' <p>Donec et nulla auctor massa pharetra adipiscing ut sit amet sem. Suspendisse molestie velit vitae mattis tincidunt. Ut sit amet quam mollis, vulputate turpis vel, sagittis felis. </p>'+
-    '</div>'+
 
-   '<div class="content-block" style="margin-top:-1px;clear:both;">'+
+   '<div class="content-block" id="content-block" style="margin-top:-1px;clear:both;">'+
      ' <div class="content-block-inner" style="height:100%;padding-bottom:20px;">'+
 
 
