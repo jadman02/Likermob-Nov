@@ -313,7 +313,7 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 '<div class="imagediv">'+
 
 
-'<div style="min-height:40px;background-color:hsla(0, 0%, 0%, 0.7);margin:0 auto;text-align:center;color:white;"><div style="width:250px;margin:0 auto;">'+ response[i][3] + ' fklasjdl ksadjskld jsakldjs akld the best in the world'+
+'<div style="min-height:40px;background-color:hsla(0, 0%, 0%, 0.7);margin:0 auto;text-align:center;color:white;"><div style="width:250px;margin:0 auto;">Like our new range of washing products for 10% off '+ response[i][3] + '. They are the best in the world'+
 '</div></div>'+ 
 
 
@@ -325,11 +325,20 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 //
 //onclick="popUp(\''+ response[i][3]  +'\',\''+ singlequote  +'\',\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')"
 '</div>'+
-'<div class="swipeout-content">'+
+'<div class="swipeout-content" style="background-color:hsla(0, 0%, 100%, 0.8);">'+
 
+    '<div class="content-block-title">Deal</div>'+
+    '<div class="content-block inset">'+
+       ' <p>Donec et nulla auctor massa pharetra adipiscing ut sit amet sem. Suspendisse molestie velit vitae mattis tincidunt. Ut sit amet quam mollis, vulputate turpis vel, sagittis felis. </p>'+
+    '</div>'+
+    
+     '<div class="content-block-title">Terms</div>'+
+    '<div class="content-block inset">'+
+       ' <p>Donec et nulla auctor massa pharetra adipiscing ut sit amet sem. Suspendisse molestie velit vitae mattis tincidunt. Ut sit amet quam mollis, vulputate turpis vel, sagittis felis. </p>'+
+    '</div>'+
 
    '<div class="content-block" id="content-block" style="margin-top:-1px;clear:both;">'+
-     ' <div class="content-block-inner" style="height:100%;background-color:hsla(0, 0%, 100%, 0.8);padding-bottom:20px;">'+
+     ' <div class="content-block-inner" style="height:100%;padding-bottom:20px;">'+
 
 
 '<div class="messages-date">Sunday, Feb 3 <span>11:58</span></div>'+ 
