@@ -363,7 +363,7 @@ starblue +
 
 
 '</div>'+
-'<div class="swipeout-actions-left" style="width:20px;"><a href="#" class="swipeout-delete swipeout-overswipe" style="background-color:#3b5998;"  onclick="likeButton(\''+ response[i][2]  +'\',\''+ response[i][6]  +'\',\''+ response[i][1]  +'\',\''+ response[i][21]  +'\',\''+ short_title  +'\',\''+ response[i][16]  +'\',\''+ response[i][10]  +'\',\''+ response[i][11]  +'\')"></a></div><div class="swipeout-actions-right" style="z-index:100000"><a href="#" onclick="closeButton(\''+ response[i][2]  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;"></a></div></li>');}
+'<div class="swipeout-actions-left"><a href="#" class="swipeout-delete swipeout-overswipe" style="background-color:#3b5998;"  onclick="likeButton(\''+ response[i][2]  +'\',\''+ response[i][6]  +'\',\''+ response[i][1]  +'\',\''+ response[i][21]  +'\',\''+ short_title  +'\',\''+ response[i][16]  +'\',\''+ response[i][10]  +'\',\''+ response[i][11]  +'\')"></a></div><div class="swipeout-actions-right" style="z-index:100000"><a href="#" onclick="closeButton(\''+ response[i][2]  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;"></a></div></li>');}
 }
 
 
