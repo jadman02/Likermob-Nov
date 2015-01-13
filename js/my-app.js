@@ -2222,7 +2222,7 @@ function moveHomeimage(){
 
 	var resultheight = liHeight + height_image;
      $$( '.imagediv' ).css( 'padding-top', positionimage + 'px' );
-     $$( '#result' ).css( 'height', resultheight + 'px' );
+     //$$( '#result' ).css( 'height', resultheight + 'px' );
 
  };
 }
