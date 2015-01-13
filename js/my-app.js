@@ -313,13 +313,7 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 '<div class="imagediv">'+
 
 
-'<div style="height:40px;background-color:hsla(0, 0%, 0%, 0.7);margin:0 auto;text-align:center;"><div style="width:250px;margin:0 auto;">'+
-'<a href="#" onclick="loadMore(\''+ response[i][1]  +'\',\''+ homecontentimage  +'\',\''+ response[i][3]  +'\',\''+ uid +'\',\''+ response[i][2]  +'\');" style="z-index:100;float:right;margin-right:5px;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-more pe-2x" style="margin-left:-5px;margin-top:5px;"></i></a>'+
-staryellow +
-starblue +
-'<div id="starinsert"></div><a href="#" id="mapicon" onclick="getBusiness(\''+ response[i][1]  +'\',\''+ response[i][16]  +'\');" style="z-index:100;margin-right:5px;height:40px;width:40px;float:right;border:0;background-color:transparent;" class="button"><i class="pe-7s-map pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a>'+
-'<a href="#"  style="z-index:100;margin-right:5px;height:40px;width:40px;float:right;border:0;background-color:transparent;" class="button"><i class="pe-7s-camera pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a>'+
-'<a href="#"  style="z-index:100;margin-right:5px;height:40px;width:40px;float:right;border:0;background-color:transparent;" class="button"><i class="pe-7s-comment pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a>'+
+'<div style="min-height:40px;background-color:hsla(0, 0%, 0%, 0.7);margin:0 auto;text-align:center;color:white;"><div style="width:250px;margin:0 auto;">'+ response[i][3] + ' fklasjdl ksadjskld jsakldjs akld the best in the world'+
 '</div></div>'+ 
 
 
