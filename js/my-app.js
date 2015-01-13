@@ -318,9 +318,11 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 staryellow +
 starblue +
 '<div id="starinsert"></div><a href="#" id="mapicon" onclick="getBusiness(\''+ response[i][1]  +'\',\''+ response[i][16]  +'\');" style="z-index:100;margin-right:5px;height:40px;width:40px;float:right;border:0;background-color:transparent;" class="button"><i class="pe-7s-map pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a>'+
+'<a href="#"  style="z-index:100;margin-right:5px;height:40px;width:40px;float:right;border:0;background-color:transparent;" class="button"><i class="pe-7s-camera pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a>'+
+'<a href="#"  style="z-index:100;margin-right:5px;height:40px;width:40px;float:right;border:0;background-color:transparent;" class="button"><i class="pe-7s-comment pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a>'+
 '</div></div>'+ 
 
-    
+
 
 
     
