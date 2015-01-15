@@ -338,7 +338,7 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
         '<div class="col-80"><div class="messages-date" style="float:left;margin:0;padding:0;"><span>Smilesavers</span></div><div style="background-color:white;padding:10px;padding-bottom:30px;border-radius:10px;margin-top:20px;"><div id="dealtitle" style="float:left;font-weight:500;">Like to save 10% on cleaning products - use codeword: '+ response[i][3] + '</div><br/><div style="clear:both;">'+response[i][4]+'</div><div style="float:left;font-size:14px;clear:both;"><i class="pe-7s-clock pe-lg"></i> Expires in 6 days</div></div></div>'+
 '</div>'+
 
-'<div style="float:right;margin-top:15px;" class="messages-date"><i class="pe-7s-like2"></i>'+ response[i][17] + '</div>'+
+
 
 
 
@@ -346,6 +346,7 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 '<div class="row">'+
 '<a href="#" id="commentloader" class="button hide" style="border:0;height:40px;width:40px;margin:0 auto;background-color:transparent;margin-top:20px;"><i class="pe-7s-refresh pe-spin pe-2x"></i></a>'+
 '<a href="#" id="chatloader" onclick="getComments();" style="z-index:100;height:40px;width:40px;margin:0 auto;border-radius:50%;background-color:transparent;margin-top:20px;" class="button"><i class="pe-7s-chat pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a></div>'+  
+'<a href="#" id="chatloader" onclick="getComments();" style="z-index:100;height:40px;width:40px;margin:0 auto;border-radius:50%;background-color:transparent;margin-top:20px;" class="button"><i class="pe-7s-comment pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a></div>'+  
 
 '</div>'+  
         
