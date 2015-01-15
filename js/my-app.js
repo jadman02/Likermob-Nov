@@ -38,6 +38,7 @@ $$('.pull-to-refresh-content').on('scroll', function (e) {
     var pageScroll = pageContent.scrollTop;
   var positionpageScroll = (pageScroll * -1) / (Math.exp(pageScroll) + 2);
   var background_size = (pageScroll * -1) + 100;
+   if ($$('#content-block').scrollTop < 0) {alert('less than 0');}
    if (pageScroll < 0) {
         $$( '.homecontent' ).css( 'background-position',positionpageScroll + '% 0%');
         $$( '.homecontent' ).css( 'background-size', background_size + '%');
