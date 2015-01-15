@@ -92,7 +92,11 @@
 
         
       }
-
+#hometoolbar {background: #074d55; 
+        background: -moz-radial-gradient(center, ellipse cover, #ff8000 0%, #70646F 100%); /* FF3.6+ */
+        background: -webkit-gradient(radial, right bottom, 0px, left top, 100%, color-stop(0%,#ff8000), color-stop(100%,#70646F));
+        background: -webkit-radial-gradient(right bottom, ellipse cover, #ff8000 0%, #70646F 100%);
+        background: radial-gradient(ellipse at right bottom, #ff8000 0%, #70646F 100% );}
             .statusbar-overlay {
 background-color:transparent;
 
@@ -249,10 +253,10 @@ background-color:transparent;
             <!-- Scrollable page content -->
             
             <div class="toolbar messagebar" data-max-height="500" id="hometoolbar" style="border-top:0;background-color:transparent;border-right:3px solid #ff8000;border-left:3px solid #3b5998;">
-  <a href="#" class="button" style="width:50px;top:0%;margin-top:-40px;float:left;color:white;z-index:11111111111;border:0;background-color:#3b5998;"><i class="pe-7s-like2 pe-2x" style="width:30px;margin:0 auto;"></i></a>
-  <a href="#" class="button" style="width:50px;top:0%;margin-top:-40px;float:right;color:white;z-index:11111111111;border:0;background-color:#ff8000"><i class="pe-7s-like2 pe-2x pe-rotate-180" style="width:30px;margin:0 auto;"></i></a>
+  <a href="#" class="button" style="width:50px;height:50px;top:0%;margin-top:-40px;border-radius:50%;margin-left:10px;float:left;color:white;z-index:11111111111;border:0;background-color:#3b5998;"><i class="pe-7s-like2 pe-2x" style="width:30px;margin:0 auto;"></i></a>
+  <a href="#" class="button" style="width:50px;height:50px;top:0%;margin-top:-40px;border-radius:50%;margin-right:10px;float:right;color:white;z-index:11111111111;border:0;background-color:#ff8000"><i class="pe-7s-like2 pe-2x pe-rotate-180" style="width:30px;margin:0 auto;"></i></a>
   <div class="toolbar-inner" style="background-color:hsla(0, 0%, 100%, 0.8);">
-   <i class="pe-7s-camera pe-lg"></i><textarea id="commentinput" placeholder="Add Comment" style="border-color:#333;"></textarea>
+   <i class="pe-7s-camera pe-lg" style="margin-right:15px;"></i><textarea id="commentinput" placeholder="Add Comment" style="border-color:#333;"></textarea>
   </div>
 </div>   
 
