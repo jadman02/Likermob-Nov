@@ -335,21 +335,20 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 '<div class="messages-date">Sunday, Feb 3 <span>11:58</span></div>'+ 
 
 '<div class="row">'+
-        '<div class="col-25" style="background-color:hsla(0, 0%, 100%, 0.8);"><a href="#" onclick="getBusiness(\''+ response[i][1]  +'\',\''+ response[i][16]  +'\');" style="height:50px;z-index:100;margin:0 auto;border:0;background-color:transparent;border-bottom:1px solid #007aff" class="button"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=30&height=30" style="border-radius:50%;margin-top:10px;"/></a>'+staryellow +starblue +'<a href="#" id="mapicon" onclick="getBusiness(\''+ response[i][1]  +'\',\''+ response[i][16]  +'\');" style="z-index:100;margin:0 auto;clear:both;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-map pe-2x" style="margin-top:5px;"></i></a><a href="#" onclick="loadMore(\''+ response[i][1]  +'\',\''+ homecontentimage  +'\',\''+ response[i][3]  +'\',\''+ uid +'\',\''+ response[i][2]  +'\');" style="z-index:100;margin:0 auto;clear:both;height:40px;width:40px;border:0;background-color:transparent;clear:both;" class="button"><i class="pe-7s-comment pe-2x" style="margin-top:5px;"></i></a><a href="#" onclick="loadMore(\''+ response[i][1]  +'\',\''+ homecontentimage  +'\',\''+ response[i][3]  +'\',\''+ uid +'\',\''+ response[i][2]  +'\');" style="z-index:100;margin:0 auto;clear:both;height:40px;width:40px;border:0;background-color:transparent;clear:both;" class="button"><i class="pe-7s-more pe-2x" style="margin-top:5px;"></i></a></div>'+
+        '<div class="col-25" style="background-color:hsla(0, 0%, 100%, 0.8);"><a href="#" onclick="getBusiness(\''+ response[i][1]  +'\',\''+ response[i][16]  +'\');" style="height:50px;z-index:100;margin:0 auto;border:0;background-color:transparent;border-bottom:1px solid #007aff" class="button"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=30&height=30" style="border-radius:50%;margin-top:10px;"/></a>'+staryellow +starblue +'<a href="#" onclick="loadMore(\''+ response[i][1]  +'\',\''+ homecontentimage  +'\',\''+ response[i][3]  +'\',\''+ uid +'\',\''+ response[i][2]  +'\');" style="z-index:100;margin:0 auto;clear:both;height:40px;width:40px;border:0;background-color:transparent;clear:both;" class="button"><i class="pe-7s-more pe-2x" style="margin-top:5px;"></i></a></div>'+
         '<div class="col-75"><div class="messages-date" style="float:left;margin:0;padding:0;"><span>Smilesavers</span></div><div style="padding:10px;padding-bottom:30px;border-radius:10px;margin-top:20px;"><div id="dealtitle" style="float:left;font-weight:500;">Like to save 10% on cleaning products - use codeword: '+ response[i][3] + '</div><br/><div style="clear:both;">'+response[i][4]+'</div><div style="float:left;font-size:14px;clear:both;"><i class="pe-7s-clock pe-lg"></i> Expires in 6 days</div></div></div>'+
 '</div>'+
 
 
 
 
-
-     '<div id="commentlist"></div>'+
+'<div id="commentlist"></div>'+
 '<div class="row">'+
 '<a href="#" id="commentloader" class="button hide" style="border:0;height:40px;width:40px;margin:0 auto;background-color:transparent;margin-top:20px;"><i class="pe-7s-refresh pe-spin pe-2x"></i></a>'+
-'<a href="#" id="chatloader" onclick="getComments();" style="z-index:100;height:40px;width:40px;margin:0 auto;border-radius:50%;background-color:transparent;margin-top:20px;" class="button"><i class="pe-7s-chat pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a></div>'+  
-'<a href="#" id="chatloader" onclick="getComments();" style="z-index:100;height:40px;width:40px;margin:0 auto;border-radius:50%;background-color:transparent;margin-top:20px;" class="button"><i class="pe-7s-comment pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a></div>'+  
+'<div style="width:80px;margin:0 auto;"><a href="#" id="chatloader" onclick="getComments();" style="z-index:100;height:40px;width:40px;float:left;border-radius:50%;background-color:transparent;margin-top:20px;" class="button"><i class="pe-7s-chat pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a>'+
+'<a href="#" id="chatloader" onclick="getComments();" style="z-index:100;height:40px;width:40px;float:left;border-radius:50%;background-color:transparent;margin-top:20px;" class="button"><i class="pe-7s-comment pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a></div></div>'+  
 
-'</div>'+  
+'</div>'+    
         
 
 
