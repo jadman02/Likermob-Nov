@@ -2945,4 +2945,4 @@ function shareDeal(page_id,url,title){
 
 function favOn(){$$( "#whitehomestar" ).hide();$$( "#yellowhomestar" ).show();$$( '#yellowhomestar' ).css( 'padding-top', '15px');}
 function favOff(){$$( "#whitehomestar" ).show();$$( "#yellowhomestar" ).hide();$$( '#whitehomestar' ).css( 'padding-top', '15px');}
-function showCommentToolbar(){alert('yo');$$('#commentinput').focus();$$('#likebar').hide();}
+function showCommentToolbar(){$$('#likebar').hide();$$('#commentinput').focus();}
