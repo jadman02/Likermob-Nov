@@ -92,11 +92,15 @@
 
         
       }
-#hometoolbar {background: #074d55; 
-        background: -moz-radial-gradient(center, ellipse cover, #ff8000 0%, #70646F 100%); /* FF3.6+ */
-        background: -webkit-gradient(radial, right bottom, 0px, left top, 100%, color-stop(0%,#ff8000), color-stop(100%,#70646F));
-        background: -webkit-radial-gradient(right bottom, ellipse cover, #ff8000 0%, #70646F 100%);
-        background: radial-gradient(ellipse at right bottom, #ff8000 0%, #70646F 100% );display:none;}
+#hometoolbar {background: #3b5998; /* Old browsers */
+background: -moz-linear-gradient(left,  #3b5998 0%, #ff8000 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,#3b5998), color-stop(100%,#ff8000)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(left,  #3b5998 0%,#ff8000 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left,  #3b5998 0%,#ff8000 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left,  #3b5998 0%,#ff8000 100%); /* IE10+ */
+background: linear-gradient(to right,  #3b5998 0%,#ff8000 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b5998', endColorstr='#ff8000',GradientType=1 ); /* IE6-9 */
+display:none;}
             .statusbar-overlay {
 background-color:transparent;
 
@@ -255,7 +259,7 @@ background-color:transparent;
 <div class="toolbar messagebar" data-max-height="500" id="hometoolbar" style="border-top:0;background-color:transparent;">
   
   <div class="toolbar-inner">
-   <i class="pe-7s-camera pe-lg" style="margin-right:15px;"></i><textarea id="commentinput" placeholder="Add Comment" style="border-color:#333;"></textarea> <span style="margin-left:15px;margin-right:15px;">Post</span><i class="pe-7s-close pe-lg" style="margin-right:15px;"></i>
+   <i class="pe-7s-close pe-lg" style="margin-right:15px;"></i><i class="pe-7s-camera pe-lg" style="margin-left:15px;margin-right:15px;"></i><textarea id="commentinput" placeholder="Add Comment" style="border-color:#333;"></textarea> <span style="margin-left:15px;margin-right:15px;">Post</span>
   </div>
 </div>  
 
@@ -343,7 +347,7 @@ background-color:transparent;
 
 
 <div class="toolbar" style="border:0;height:30px;" id="likebar">
-    <a href="#" onclick="showCommentToolbar()" style="border-color:white;z-index:100;position:absolute;left:50%;margin-left:-45px;margin-top:-20px;height:90px;width:90px;border-radius:50%;color:white;background-color:white;" class="button"><i class="pe-7s-comment pe-2x" style="width:30px;margin:0 auto;margin-top:10px;"></i></a>
+    <a href="#" onclick="showCommentToolbar()" style="border-color:white;z-index:100;position:absolute;left:50%;margin-left:-45px;margin-top:-20px;height:90px;width:90px;border-radius:50%;color:#c4c4c4;background-color:white;" class="button"><i class="pe-7s-comment pe-2x" style="width:30px;margin:0 auto;margin-top:10px;"></i></a>
     <div class="toolbar-inner" style="padding:0;">
   
         <a href="#" class="link" style="background-color:#3b5998;color:white;width:50%;"><i class="pe-7s-like2 pe-lg" style="width:30px;margin:0 auto;"></i></a>
