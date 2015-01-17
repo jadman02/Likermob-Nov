@@ -330,13 +330,13 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 
    '<div class="content-block" id="content-block" style="clear:both;">'+
      ' <div class="content-block-inner" style="height:100%;padding-bottom:20px;background-color:hsla(0, 0%, 100%, 0.8);">'+
-
+'<span class="badge" style="float:right;margin:0 auto;margin-left:5px;background-color:#ff8000;">'+ response[i][18]  +'</span><span class="badge" style="float:right;margin:0 auto;background-color:#3b5998;">'+ response[i][17]  +'</span>'+
 
 '<div class="messages-date">Sunday, Feb 3 <span>11:58</span></div>'+ 
 
 '<div class="row">'+
         '<div class="col-25" style="margin-top:-90px;"><div style="background-color:#c4c4c4;border-radius:10px;"><a href="#" onclick="getBusiness(\''+ response[i][1]  +'\',\''+ response[i][16]  +'\');" style="height:50px;z-index:100;margin:0 auto;border:0;background-color:transparent;" class="button"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=30&height=30" style="border-radius:50%;margin-top:10px;"/></a>'+staryellow +starblue +'<a href="#" id="mapicon" onclick="getBusiness(\''+ response[i][1]  +'\',\''+ response[i][16]  +'\');" style="z-index:100;margin:0 auto;clear:both;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-map pe-2x" style="margin-top:5px;"></i></a><a href="#" onclick="loadMore(\''+ response[i][1]  +'\',\''+ homecontentimage  +'\',\''+ response[i][3]  +'\',\''+ uid +'\',\''+ response[i][2]  +'\');" style="z-index:100;margin:0 auto;clear:both;height:40px;width:40px;border:0;background-color:transparent;clear:both;" class="button"><i class="pe-7s-more pe-2x" style="margin-top:5px;"></i></a></div> </div>'+
-        '<div class="col-75"><span class="badge" style="float:right;margin:0 auto;margin-left:5px;background-color:#ff8000;">'+ response[i][18]  +'</span><span class="badge" style="float:right;margin:0 auto;background-color:#3b5998;">'+ response[i][17]  +'</span><div class="messages-date" style="float:left;margin:0;padding:0;"><span>Smilesavers</span></div><div style="padding:10px;padding-bottom:30px;border-radius:10px;margin-top:20px;"><div id="dealtitle" style="float:left;font-weight:500;">Like to save 10% on cleaning products - use codeword: '+ response[i][3] + '</div><br/><div style="clear:both;">'+response[i][4]+'</div><div style="float:left;font-size:14px;clear:both;"><i class="pe-7s-clock pe-lg"></i> Expires in 6 days</div></div></div>'+
+        '<div class="col-75"><div class="messages-date" style="float:left;margin:0;padding:0;"><span>Smilesavers</span></div><div style="padding:10px;padding-bottom:30px;border-radius:10px;margin-top:20px;"><div id="dealtitle" style="float:left;font-weight:500;">Like to save 10% on cleaning products - use codeword: '+ response[i][3] + '</div><br/><div style="clear:both;">'+response[i][4]+'</div><div style="float:left;font-size:14px;clear:both;"><i class="pe-7s-clock pe-lg"></i> Expires in 6 days</div></div></div>'+
 '</div>'+
 
 
