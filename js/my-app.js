@@ -2946,4 +2946,14 @@ function shareDeal(page_id,url,title){
 function favOn(){$$( "#whitehomestar" ).hide();$$( "#yellowhomestar" ).show();$$( '#yellowhomestar' ).css( 'padding-top', '15px');}
 function favOff(){$$( "#whitehomestar" ).show();$$( "#yellowhomestar" ).hide();$$( '#whitehomestar' ).css( 'padding-top', '15px');}
 function showCommentToolbar(){$$('#likebar').hide();$$('#hometoolbar').show();$$('#commentinput').focus();}
-function hideCommentToolbar(){$$('#likebar').show();$$('#hometoolbar').hide();$$('#commentinput').blur();}
+function hideCommentToolbar(){
+
+var value = $$("#commentinput").val();
+
+if (value) {
+    myApp.confirm(value, 'Post To Facebook', function () {
+        myApp.alert('You clicked Ok button');
+    });
+}
+
+	$$('#likebar').show();$$('#hometoolbar').hide();$$('#commentinput').blur();}
