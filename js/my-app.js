@@ -311,7 +311,7 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 
 
 
-'<div class="imagediv">'+
+'<div class="imagediv" value="'+response[i][2]+'">'+
 '</div>'+ 
 
 
@@ -2946,14 +2946,15 @@ function shareDeal(page_id,url,title){
 function favOn(){$$( "#whitehomestar" ).hide();$$( "#yellowhomestar" ).show();$$( '#yellowhomestar' ).css( 'padding-top', '15px');}
 function favOff(){$$( "#whitehomestar" ).show();$$( "#yellowhomestar" ).hide();$$( '#whitehomestar' ).css( 'padding-top', '15px');}
 function showCommentToolbar(){$$('#likebar').hide();$$('#hometoolbar').show();$$('#commentinput').focus();}
-function hideCommentToolbar(){
+function hideCommentToolbar(){$$('#likebar').show();$$('#hometoolbar').hide();$$('#commentinput').blur();postComment();}
 
+function postComment(){
+	
 var value = $$("#commentinput").val();
+var post_id = $$('.image_div').eq(0).val();
 
-if (value) {
-    myApp.confirm(value, 'Post To Facebook', function () {
-        myApp.alert('You clicked Ok button');
-    });
+alert(post_id);
+ 
+
+	
 }
-
-	$$('#likebar').show();$$('#hometoolbar').hide();$$('#commentinput').blur();}
