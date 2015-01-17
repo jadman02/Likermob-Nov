@@ -2946,7 +2946,7 @@ function shareDeal(page_id,url,title){
 function favOn(){$$( "#whitehomestar" ).hide();$$( "#yellowhomestar" ).show();$$( '#yellowhomestar' ).css( 'padding-top', '15px');}
 function favOff(){$$( "#whitehomestar" ).show();$$( "#yellowhomestar" ).hide();$$( '#whitehomestar' ).css( 'padding-top', '15px');}
 function showCommentToolbar(){$$('#likebar').hide();$$('#hometoolbar').show();$$('#commentinput').focus();}
-function hideCommentToolbar(){postComment();$$('#likebar').show();$$('#hometoolbar').hide();$$('#commentinput').blur();}
+function hideCommentToolbar(){$$('#likebar').show();$$('#hometoolbar').hide();$$('#commentinput').blur();}
 
 function postComment(){
 	
@@ -2955,42 +2955,7 @@ var post_id = $$('.post_id_value').eq(0).val();
 var uid = localStorage.getItem("uid");
 
 if (value) {
-    
-
-
-
-  myApp.modal({
-    title:  'Post To Facebook',
-    text: '<div class="row">'+
-        '<div class="col-25"><a href="#" style="height:50px;z-index:100;margin:0 auto;border:0;background-color:transparent;" class="button"><img src="http://graph.facebook.com/'+uid+'/picture?width=30&height=30" style="border-radius:50%;margin-top:10px;border-bottom:1px solid #007aff"/></a></div>'+
-        '<div class="col-75"><div class="messages-date" style="float:left;margin:0;padding:0;"><span>Smilesavers</span></div><div style="padding:10px;padding-bottom:30px;border-radius:10px;margin-top:20px;background-color:white;">'+value+'</div></div>'+
-'</div>',
-    buttons: [
-      {
-        text: 'Cancel'
-      },
-      {
-        text: 'Edit',
-        onClick: function() {
-          showCommentToolbar();
-        }
-      },
-      {
-        text: 'Post',
-        bold: true,
-        onClick: function() {
-          comment(post_id,value);
-        }
-      },
-    ]
-  })
-
-	
-	
+   comment(post_id,value); 
 }
     
-
- 
-
-	
 }
