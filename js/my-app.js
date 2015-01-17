@@ -311,10 +311,10 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 
 
 
-'<div class="imagediv" value="'+response[i][2]+'">'+
+'<div class="imagediv">'+
 '</div>'+ 
 
-
+'<input type="hidden" value="'+response[i][2]+'" class="post_id_value">'+
 
 
     
@@ -2951,7 +2951,7 @@ function hideCommentToolbar(){$$('#likebar').show();$$('#hometoolbar').hide();$$
 function postComment(){
 	
 var value = $$("#commentinput").val();
-var post_id = $$('.image_div').eq(0).val();
+var post_id = $$('.post_id_value').eq(0).val();
 
 alert(post_id);
  
