@@ -344,7 +344,7 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 
 
 '<div id="commentlist"></div>'+
-'<div class="row">'+
+'<div class="row" style="margin-bottom:10px;">'+
 '<a href="#" id="commentloader" class="button hide" style="border:0;height:40px;width:40px;margin:0 auto;background-color:transparent;margin-top:20px;"><i class="pe-7s-refresh pe-spin pe-2x"></i></a>'+
 '<a href="#" id="chatloader" onclick="getComments();" style="z-index:100;height:40px;width:40px;margin:0 auto;border-radius:50%;background-color:transparent;margin-top:20px;" class="button"><i class="pe-7s-chat pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a></div>'+  
 
