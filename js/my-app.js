@@ -18,6 +18,9 @@ myApp.onPageBeforeInit('index', function (page) {
 
 var uid = localStorage.getItem("uid");
 
+var position = localStorage.getItem("position");
+$$('#fulladdressf').attr("placeholder",position);
+
 document.getElementById("profilepic").innerHTML = '<img src="http://graph.facebook.com/' + uid + '/picture?type=normal" style="margin:0 auto;text-align:center;width:80px;border-radius:50%;"/>';
 
     functionEmpty('a',0,2,0);
@@ -1934,6 +1937,7 @@ function openSearchHome() {
 
   var heightslider = $$(window).height() - 64;
   var heightrange = $$(window).height() - 170;
+
 
 $$("#result li").remove();
 $$( ".business" ).remove();
