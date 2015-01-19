@@ -28,6 +28,8 @@ var name3 = localStorage.getItem("name3");
 var formatted_address = localStorage.getItem("formatted_address");
 $$('#fulladdressf').attr("placeholder",formatted_address);
 
+alert('search1:' + search1);
+
 if (search1){
 $$( '#resultd' ).append('<li style="font-size:14px;padding-left:0px;padding-right:0px;margin-left:0px;margin-right:0px;background-color:transparent;"><a href="#" onclick="getBusiness('+ search1  +');saveSearchTerm('+ search1  +');" style="margin:0;"><div class="item-content" style="margin:0;"><div class="item-media"><img src="http://graph.facebook.com/'+  search1  +'/picture?width=20&height=20" style="height:20px;width:20px;"/></div><div class="item-inner"><div class="item-title">' +  name1 + '</div></div></div></a></li>');
 }
@@ -2994,5 +2996,7 @@ var name3 = localStorage.getItem("name3");
 if (search1) {localStorage.setItem("search1", page_id);localStorage.setItem("name1", name);localStorage.setItem("search2", search1);localStorage.setItem("name2", name1);}
 else if (search2) {localStorage.setItem("search1", page_id);localStorage.setItem("name1", name);localStorage.setItem("search2", search1);localStorage.setItem("name2", name1);localStorage.setItem("search3", search2);localStorage.setItem("name3", name2);}
 else {localStorage.setItem("search1", page_id);localStorage.setItem("name1", name);}
+
+alert('search1:' + localStorage.getItem("search1"));
 
 }
