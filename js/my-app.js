@@ -16,30 +16,24 @@ $$('.swipeout').on('deleted', function () {
 
 myApp.onPageBeforeInit('index', function (page) {
 
-
-
 var uid = localStorage.getItem("uid");
 var search1 = localStorage.getItem("search1");
 var search2 = localStorage.getItem("search2");
 var search3 = localStorage.getItem("search3");
-var name1 = localStorage.getItem("name1");
-var name2 = localStorage.getItem("name2");
-var name3 = localStorage.getItem("name3");
+
 var formatted_address = localStorage.getItem("formatted_address");
 $$('#fulladdressf').attr("placeholder",formatted_address);
 
-alert('search1:' + search1);
-
 if (search1){
-$$( '#resultd' ).append('<li style="font-size:14px;padding-left:0px;padding-right:0px;margin-left:0px;margin-right:0px;background-color:transparent;"><a href="#" onclick="getBusiness('+ search1  +');saveSearchTerm('+ search1  +');" style="margin:0;"><div class="item-content" style="margin:0;"><div class="item-media"><img src="http://graph.facebook.com/'+  search1  +'/picture?width=20&height=20" style="height:20px;width:20px;"/></div><div class="item-inner"><div class="item-title">' +  name1 + '</div></div></div></a></li>');
+$$( '#resultd' ).append('<li style="font-size:14px;padding-left:0px;padding-right:0px;margin-left:0px;margin-right:0px;background-color:transparent;"><a href="#" onclick="getBusiness('+ search1  +');saveSearchTerm('+ search1  +');" style="margin:0;"><div class="item-content" style="margin:0;"><div class="item-media"><img src="http://graph.facebook.com/'+ response[i][1]  +'/picture?width=20&height=20" style="height:20px;width:20px;"/></div><div class="item-inner"><div class="item-title">' +  response[i][0] + '</div></div></div></a></li>');
 }
 
 if (search2){
-$$( '#resultd' ).append('<li style="font-size:14px;padding-left:0px;padding-right:0px;margin-left:0px;margin-right:0px;background-color:transparent;"><a href="#" onclick="getBusiness('+ search2  +');saveSearchTerm('+ search2  +');" style="margin:0;"><div class="item-content" style="margin:0;"><div class="item-media"><img src="http://graph.facebook.com/'+  search2  +'/picture?width=20&height=20" style="height:20px;width:20px;"/></div><div class="item-inner"><div class="item-title">' +  name2 + '</div></div></div></a></li>');
+$$( '#resultd' ).append('<li style="font-size:14px;padding-left:0px;padding-right:0px;margin-left:0px;margin-right:0px;background-color:transparent;"><a href="#" onclick="getBusiness('+ search2  +');saveSearchTerm('+ search2  +');" style="margin:0;"><div class="item-content" style="margin:0;"><div class="item-media"><img src="http://graph.facebook.com/'+ response[i][1]  +'/picture?width=20&height=20" style="height:20px;width:20px;"/></div><div class="item-inner"><div class="item-title">' +  response[i][0] + '</div></div></div></a></li>');
 }
 
 if (search3){
-$$( '#resultd' ).append('<li style="font-size:14px;padding-left:0px;padding-right:0px;margin-left:0px;margin-right:0px;background-color:transparent;"><a href="#" onclick="getBusiness('+ search3  +');saveSearchTerm('+ search3  +');" style="margin:0;"><div class="item-content" style="margin:0;"><div class="item-media"><img src="http://graph.facebook.com/'+  search3  +'/picture?width=20&height=20" style="height:20px;width:20px;"/></div><div class="item-inner"><div class="item-title">' +  name3 + '</div></div></div></a></li>');
+$$( '#resultd' ).append('<li style="font-size:14px;padding-left:0px;padding-right:0px;margin-left:0px;margin-right:0px;background-color:transparent;"><a href="#" onclick="getBusiness('+ search3  +');saveSearchTerm('+ search3  +');" style="margin:0;"><div class="item-content" style="margin:0;"><div class="item-media"><img src="http://graph.facebook.com/'+ response[i][1]  +'/picture?width=20&height=20" style="height:20px;width:20px;"/></div><div class="item-inner"><div class="item-title">' +  response[i][0] + '</div></div></div></a></li>');
 }
 document.getElementById("profilepic").innerHTML = '<img src="http://graph.facebook.com/' + uid + '/picture?type=normal" style="margin:0 auto;text-align:center;width:80px;border-radius:50%;"/>';
 
@@ -2533,7 +2527,7 @@ for (i = 0; i < 5; i++)
 	
 
 	
-$$( '#resultd' ).append('<li style="font-size:14px;padding-left:0px;padding-right:0px;margin-left:0px;margin-right:0px;background-color:transparent;"><a href="#" onclick="getBusiness('+ response[i][1]  +');saveSearchTerm('+ response[i][1]  +',' +  response[i][0] + ');" style="margin:0;"><div class="item-content" style="margin:0;"><div class="item-media"><img src="http://graph.facebook.com/'+ response[i][1]  +'/picture?width=20&height=20" style="height:20px;width:20px;"/></div><div class="item-inner"><div class="item-title">' +  response[i][0] + '</div></div></div></a></li>');
+$$( '#resultd' ).append('<li style="font-size:14px;padding-left:0px;padding-right:0px;margin-left:0px;margin-right:0px;background-color:transparent;"><a href="#" onclick="getBusiness('+ response[i][1]  +');saveSearchTerm('+ response[i][1]  +');" style="margin:0;"><div class="item-content" style="margin:0;"><div class="item-media"><img src="http://graph.facebook.com/'+ response[i][1]  +'/picture?width=20&height=20" style="height:20px;width:20px;"/></div><div class="item-inner"><div class="item-title">' +  response[i][0] + '</div></div></div></a></li>');
 }
 });    
     
@@ -2984,21 +2978,14 @@ if (value) {
     
 }
 
-function saveSearchTerm(page_id,name){
-alert('yo1');
-var search1 = localStorage.getItem("search1");
-var search2 = localStorage.getItem("search2");
-var search3 = localStorage.getItem("search3");
-var name1 = localStorage.getItem("name1");
-var name2 = localStorage.getItem("name2");
-var name3 = localStorage.getItem("name3");
+function saveSearchTerm(page_id){
 
-if (search1) {localStorage.setItem("search1", page_id);localStorage.setItem("name1", name);localStorage.setItem("search2", search1);localStorage.setItem("name2", name1);}
-alert('yo2');
-else if (search2) {localStorage.setItem("search1", page_id);localStorage.setItem("name1", name);localStorage.setItem("search2", search1);localStorage.setItem("name2", name1);localStorage.setItem("search3", search2);localStorage.setItem("name3", name2);}
-alert('yo3');
-else {localStorage.setItem("search1", page_id);localStorage.setItem("name1", name);}
-alert('yo4');
-alert('search1:' + localStorage.getItem("search1"));
+var search1 = localStorage.getItem("search1", "find");
+var search2 = localStorage.getItem("search2", "find");
+var search3 = localStorage.getItem("search3", "find");
+
+if (search1) {localStorage.setItem("search1", page_id);localStorage.setItem("search2", search1);}
+else if (search2) {localStorage.setItem("search1", page_id);localStorage.setItem("search2", search1);localStorage.setItem("search3", search2);}
+else {localStorage.setItem("search1", page_id);}
 
 }
