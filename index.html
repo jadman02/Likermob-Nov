@@ -172,18 +172,24 @@ background-color:transparent;
     </div>
   </div>
 
-
-
+<div class="tabs">
+    <!-- Tab 1, active by default -->
+    <div id="tab1" class="tab active">
+      <div class="content-block">
 <form class="searchbar" style="border:0;background-color:transparent;">
 <div class="searchbar-input">
 <input type="search" style="float:left;" placeholder="Search business" onkeyup="nameDb();" id="dbnames">
 <a href="#" id="dbnamesclear" onclick="clearInput();" style="display:none;float:left;margin-left:-25px;margin-top:3px;color:hsl(0, 0%, 70%);"><i class="pe-7s-close-circle pe-lg"></i></a></div>
 </form>
 
-<div class="list-block" style="background-color:transparent;margin-top:10px;"><ul id="resultd" class="theme-white" style="background-color:transparent;color:white;border:none;padding:0px;margin:0px;"></ul>
+<div class="list-block" style="background-color:transparent;margin-top:10px;"><ul id="resultd" class="theme-white" style="background-color:transparent;color:white;border:none;padding:0px;margin:0px;"></ul></div>
 
-
-
+      </div>
+    </div>
+    <!-- Tab 2 -->
+    <div id="tab2" class="tab">
+      <div class="content-block">
+<div class="list-block" style="background-color:transparent;margin-top:10px;">
 <ul>
 <li>
       <label class="label-checkbox item-content">
@@ -271,9 +277,11 @@ background-color:transparent;
     </li>
     
 </ul></div>
-
-
-
+      </div>
+    </div>
+    <!-- Tab 3 -->
+    <div id="tab3" class="tab">
+      <div class="content-block">
 <div class="list-block">
   <ul style="background-color:transparent;">
     <li>
@@ -348,6 +356,19 @@ background-color:transparent;
     </ul>
     
     </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
       
       
 
