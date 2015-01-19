@@ -18,8 +18,9 @@ myApp.onPageBeforeInit('index', function (page) {
 
 var uid = localStorage.getItem("uid");
 
-var position = localStorage.getItem("position");
-$$('#fulladdressf').attr("placeholder",position);
+var formatted_address = localStorage.getItem("formatted_address");
+
+$$('#fulladdressf').attr("placeholder",formatted_address);
 
 document.getElementById("profilepic").innerHTML = '<img src="http://graph.facebook.com/' + uid + '/picture?type=normal" style="margin:0 auto;text-align:center;width:80px;border-radius:50%;"/>';
 
@@ -666,7 +667,7 @@ $$("#resultf li").remove();
 
 localStorage.setItem("latitude", response.result.geometry.location.lat);
 localStorage.setItem("longitude", response.result.geometry.location.lng);
-localStorage.setItem("position", response.result.formatted_address);
+localStorage.setItem("formatted_address", response.result.formatted_address);
 functionEmpty();
 
 
@@ -2513,7 +2514,7 @@ for (i = 0; i < 5; i++)
 	
 
 	
-$$( '#resultd' ).append('<li style="font-size:14px;padding-left:0px;padding-right:0px;margin-left:0px;margin-right:0px;background-color:transparent;"><a href="#" onclick="getBusiness('+ response[i][1]  +')" style="margin:0;"><div class="item-content" style="margin:0;"><div class="item-media"><img src="http://graph.facebook.com/'+ response[i][1]  +'/picture?width=20&height=20" style="height:20px;width:20px;"/></div><div class="item-inner"><div class="item-title">' +  response[i][0] + '</div></div></div></a></li>');
+$$( '#resultd' ).append('<li style="font-size:14px;padding-left:0px;padding-right:0px;margin-left:0px;margin-right:0px;background-color:transparent;"><a href="#" onclick="getBusiness('+ response[i][1]  +');saveSearchTerm('+ response[i][1]  +');" style="margin:0;"><div class="item-content" style="margin:0;"><div class="item-media"><img src="http://graph.facebook.com/'+ response[i][1]  +'/picture?width=20&height=20" style="height:20px;width:20px;"/></div><div class="item-inner"><div class="item-title">' +  response[i][0] + '</div></div></div></a></li>');
 }
 });    
     
@@ -2962,4 +2963,16 @@ if (value) {
    comment(post_id,value); 
 }
     
+}
+
+function saveSearchTerm(page_id){
+
+var search1 = localStorage.getItem("search1", "find");
+var search2 = localStorage.getItem("search2", "find");
+var search3 = localStorage.getItem("search3", "find");
+
+if (search1) {localStorage.setItem("search1", page_id);localStorage.setItem("search2", search1);}
+else if (search2) {localStorage.setItem("search1", page_id);localStorage.setItem("search2", search1);localStorage.setItem("search3", search2);}
+else {localStorage.setItem("search1", page_id);}
+
 }
