@@ -2985,7 +2985,7 @@ if (value) {
 }
 
 function saveSearchTerm(page_id,name){
-
+alert('yo1');
 var search1 = localStorage.getItem("search1");
 var search2 = localStorage.getItem("search2");
 var search3 = localStorage.getItem("search3");
@@ -2994,9 +2994,11 @@ var name2 = localStorage.getItem("name2");
 var name3 = localStorage.getItem("name3");
 
 if (search1) {localStorage.setItem("search1", page_id);localStorage.setItem("name1", name);localStorage.setItem("search2", search1);localStorage.setItem("name2", name1);}
+alert('yo2');
 else if (search2) {localStorage.setItem("search1", page_id);localStorage.setItem("name1", name);localStorage.setItem("search2", search1);localStorage.setItem("name2", name1);localStorage.setItem("search3", search2);localStorage.setItem("name3", name2);}
+alert('yo3');
 else {localStorage.setItem("search1", page_id);localStorage.setItem("name1", name);}
-
+alert('yo4');
 alert('search1:' + localStorage.getItem("search1"));
 
 }
