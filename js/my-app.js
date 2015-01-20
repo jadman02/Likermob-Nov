@@ -21,10 +21,6 @@ var search1 = localStorage.getItem("search1");
 var search2 = localStorage.getItem("search2");
 var search3 = localStorage.getItem("search3");
 
-localStorage.removeItem("search1");
-localStorage.removeItem("search2");
-localStorage.removeItem("search3");
-
 var formatted_address = localStorage.getItem("formatted_address");
 $$('#fulladdressf').attr("placeholder",formatted_address);
 
