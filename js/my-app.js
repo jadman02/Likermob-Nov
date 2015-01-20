@@ -23,6 +23,11 @@ var search3 = localStorage.getItem("search3");
 var search4 = localStorage.getItem("search4");
 var search5 = localStorage.getItem("search5");
 
+alert(search1);
+alert(search2);
+alert(search3);
+alert(search4);
+
 var formatted_address = localStorage.getItem("formatted_address");
 $$('#fulladdressf').attr("placeholder",formatted_address);
 
