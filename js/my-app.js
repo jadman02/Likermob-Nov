@@ -2984,8 +2984,19 @@ var search1 = localStorage.getItem("search1");
 var search2 = localStorage.getItem("search2");
 var search3 = localStorage.getItem("search3");
 
-if (search1) {localStorage.setItem("search1", page_id);localStorage.setItem("search2", search1);}
-else if (search2) {localStorage.setItem("search1", page_id);localStorage.setItem("search2", search1);localStorage.setItem("search3", search2);}
-else {localStorage.setItem("search1", page_id);}
+localStorage.setItem("search1", page_id);
+localStorage.setItem("search2", search1);
+localStorage.setItem("search3", search2);
+
+alert(localStorage.getItem("search1"));
+alert(localStorage.getItem("search2"));
+alert(localStorage.getItem("search3"));
+
+//if (!search1) {localStorage.setItem("search1", page_id);}
+//else if (search1) {localStorage.setItem("search1", page_id);localStorage.setItem("search2", search1);}
+//else if (search2) {localStorage.setItem("search1", page_id);localStorage.setItem("search2", search1);localStorage.setItem("search3", search2);}
+
+
+
 
 }
