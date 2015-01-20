@@ -31,22 +31,22 @@ alert(search4);
 var formatted_address = localStorage.getItem("formatted_address");
 $$('#fulladdressf').attr("placeholder",formatted_address);
 
-if (search1 !==null){
+if (search1){
 $$( '#resultd' ).append('<li style="font-size:14px;padding-left:0px;padding-right:0px;margin-left:0px;margin-right:0px;background-color:transparent;"><a href="#" onclick="getBusiness('+ search1  +');saveSearchTerm('+ search1  +');" style="margin:0;"><div class="item-content" style="margin:0;"><div class="item-media"><img src="http://graph.facebook.com/'+ search1  +'/picture?width=20&height=20" style="height:20px;width:20px;"/></div><div class="item-inner"><div class="item-title">' +  search1 + '</div></div></div></a></li>');
 }
 
-if (search2 !==null){
+if (search2){
 $$( '#resultd' ).append('<li style="font-size:14px;padding-left:0px;padding-right:0px;margin-left:0px;margin-right:0px;background-color:transparent;"><a href="#" onclick="getBusiness('+ search2  +');saveSearchTerm('+ search2  +');" style="margin:0;"><div class="item-content" style="margin:0;"><div class="item-media"><img src="http://graph.facebook.com/'+ search2  +'/picture?width=20&height=20" style="height:20px;width:20px;"/></div><div class="item-inner"><div class="item-title">' +  search2 + '</div></div></div></a></li>');
 }
 
-if (search3 !==null){
+if (search3){
 $$( '#resultd' ).append('<li style="font-size:14px;padding-left:0px;padding-right:0px;margin-left:0px;margin-right:0px;background-color:transparent;"><a href="#" onclick="getBusiness('+ search3  +');saveSearchTerm('+ search3  +');" style="margin:0;"><div class="item-content" style="margin:0;"><div class="item-media"><img src="http://graph.facebook.com/'+ search3  +'/picture?width=20&height=20" style="height:20px;width:20px;"/></div><div class="item-inner"><div class="item-title">' +  search3 + '</div></div></div></a></li>');
 }
-if (search4 !==null){
+if (search4){
 $$( '#resultd' ).append('<li style="font-size:14px;padding-left:0px;padding-right:0px;margin-left:0px;margin-right:0px;background-color:transparent;"><a href="#" onclick="getBusiness('+ search4  +');saveSearchTerm('+ search4  +');" style="margin:0;"><div class="item-content" style="margin:0;"><div class="item-media"><img src="http://graph.facebook.com/'+ search4  +'/picture?width=20&height=20" style="height:20px;width:20px;"/></div><div class="item-inner"><div class="item-title">' +  search4 + '</div></div></div></a></li>');
 }
 
-if (search5 !==null){
+if (search5){
 $$( '#resultd' ).append('<li style="font-size:14px;padding-left:0px;padding-right:0px;margin-left:0px;margin-right:0px;background-color:transparent;"><a href="#" onclick="getBusiness('+ search5  +');saveSearchTerm('+ search5  +');" style="margin:0;"><div class="item-content" style="margin:0;"><div class="item-media"><img src="http://graph.facebook.com/'+ search5  +'/picture?width=20&height=20" style="height:20px;width:20px;"/></div><div class="item-inner"><div class="item-title">' +  search5 + '</div></div></div></a></li>');
 }
 document.getElementById("profilepic").innerHTML = '<img src="http://graph.facebook.com/' + uid + '/picture?type=normal" style="margin:0 auto;text-align:center;width:80px;border-radius:50%;"/>';
