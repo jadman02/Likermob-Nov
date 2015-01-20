@@ -26,11 +26,15 @@ var search3 = localStorage.getItem("search3");
 var search4 = localStorage.getItem("search4");
 var search5 = localStorage.getItem("search5");
 
+alert(search1);
+
 var name1 = localStorage.getItem("name1");
 var name2 = localStorage.getItem("name2");
 var name3 = localStorage.getItem("name3");
 var name4 = localStorage.getItem("name4");
 var name5 = localStorage.getItem("name5");
+
+alert(name1);
 
 var formatted_address = localStorage.getItem("formatted_address");
 $$('#fulladdressf').attr("placeholder",formatted_address);
