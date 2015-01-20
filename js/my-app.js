@@ -16,7 +16,7 @@ $$('.swipeout').on('deleted', function () {
 
 myApp.onPageBeforeInit('index', function (page) {
 
-localStorage.removeItem("search1");
+
 
 
 var uid = localStorage.getItem("uid");
