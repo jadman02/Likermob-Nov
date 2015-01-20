@@ -20,6 +20,8 @@ var uid = localStorage.getItem("uid");
 var search1 = localStorage.getItem("search1");
 var search2 = localStorage.getItem("search2");
 var search3 = localStorage.getItem("search3");
+var search4 = localStorage.getItem("search4");
+var search5 = localStorage.getItem("search5");
 
 localStorage.removeItem("search1");
 localStorage.removeItem("search2");
