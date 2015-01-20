@@ -26,15 +26,7 @@ var search3 = localStorage.getItem("search3");
 var search4 = localStorage.getItem("search4");
 var search5 = localStorage.getItem("search5");
 
-alert(search1);
 
-var name1 = localStorage.getItem("name1");
-var name2 = localStorage.getItem("name2");
-var name3 = localStorage.getItem("name3");
-var name4 = localStorage.getItem("name4");
-var name5 = localStorage.getItem("name5");
-
-alert(name1);
 
 var formatted_address = localStorage.getItem("formatted_address");
 $$('#fulladdressf').attr("placeholder",formatted_address);
@@ -3000,7 +2992,7 @@ if (value) {
     
 }
 
-function saveSearchTerm(page_id,name){
+function saveSearchTerm(page_id){
 
 var search1 = localStorage.getItem("search1");
 var search2 = localStorage.getItem("search2");
@@ -3008,11 +3000,7 @@ var search3 = localStorage.getItem("search3");
 var search4 = localStorage.getItem("search4");
 var search5 = localStorage.getItem("search5");
 
-var name1 = localStorage.getItem("name1");
-var name2 = localStorage.getItem("name2");
-var name3 = localStorage.getItem("name3");
-var name4 = localStorage.getItem("name4");
-var name5 = localStorage.getItem("name5");
+
 
 localStorage.setItem("search1", page_id);
 localStorage.setItem("search2", search1);
@@ -3020,11 +3008,7 @@ localStorage.setItem("search3", search2);
 localStorage.setItem("search4", search3);
 localStorage.setItem("search5", search4);
 
-localStorage.setItem("name1", name);
-localStorage.setItem("name2", name1);
-localStorage.setItem("name3", name2);
-localStorage.setItem("name4", name3);
-localStorage.setItem("name5", name4);
+
 
 //if (!search1) {localStorage.setItem("search1", page_id);}
 //else if (search1) {localStorage.setItem("search1", page_id);localStorage.setItem("search2", search1);}
