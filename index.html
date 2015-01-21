@@ -478,23 +478,22 @@ background-color:transparent;
     <!-- Tab 3 -->
     <div id="tab3" class="tab">
 
-<div class="list-block">
+<form class="searchbar" style="border:0;background-color:transparent;">
+<div class="searchbar-input">
+<input type="text" onkeyup="searchPlaces('set');" placeholder="" id="fulladdressf">
+<a href="#" id="resultfclear" onclick="clearInput();" style="display:none;float:left;margin-left:-25px;margin-top:3px;color:hsl(0, 0%, 70%);"><i class="pe-7s-close-circle pe-lg"></i></a></div>
+</form>
+  
   <label class="label-switch" style="float:right;">
     <input type="checkbox">
     <div class="checkbox"></div>
   </label>
   <i class="pe-7s-signal pe-2x" style="float:right;"></i>
+
+
+<div class="list-block">
+
   <ul style="background-color:transparent;">
-    <li>
-      <div class="item-content">
-        <div class="item-media"><i class="pe-7s-map-marker pe-2x"></i></div>
-        <div class="item-inner">
-          <div class="item-input">
-            <input type="text" onkeyup="searchPlaces('set');" placeholder="" id="fulladdressf">
-          </div>
-        </div>
-      </div>
-    </li>
        <div id="resultf"></div>
         <li>
       <div class="item-content">
