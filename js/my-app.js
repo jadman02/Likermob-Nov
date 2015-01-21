@@ -2103,7 +2103,7 @@ function searchPlaces(id){
 	
 var searchvalue;
 var commentvalue;
-alert('commentinput');
+
 if (id=='comment'){
 	
 commentvalue = document.getElementById('commentinput').value;
