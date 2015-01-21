@@ -24,7 +24,11 @@ var search3 = localStorage.getItem("search3");
 var search4 = localStorage.getItem("search4");
 var search5 = localStorage.getItem("search5");
 
-
+var name1 = localStorage.getItem("name1");
+var name2 = localStorage.getItem("name2");
+var name3 = localStorage.getItem("name3");
+var name4 = localStorage.getItem("name4");
+var name5 = localStorage.getItem("name5");
 
 var formatted_address_placeholder = localStorage.getItem("formatted_address");
 if (formatted_address_placeholder != 'null'){$$('#fulladdressf').attr("placeholder",formatted_address_placeholder);}
