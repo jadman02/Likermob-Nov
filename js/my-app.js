@@ -27,7 +27,7 @@ var search5 = localStorage.getItem("search5");
 
 
 var formatted_address_placeholder = localStorage.getItem("formatted_address");
-if (formatted_address_placeholder.length > 5){$$('#fulladdressf').attr("placeholder",formatted_address);}
+if (formatted_address_placeholder){$$('#fulladdressf').attr("placeholder",formatted_address);}
 
 if (search1){
 $$( '#resultd' ).append('<li style="font-size:14px;padding-left:0px;padding-right:0px;margin-left:0px;margin-right:0px;background-color:transparent;"><a href="#" onclick="getBusiness('+ search1  +');" style="margin:0;"><div class="item-content" style="margin:0;"><div class="item-media"><img src="http://graph.facebook.com/'+ search1  +'/picture?width=20&height=20" style="height:20px;width:20px;"/></div><div class="item-inner"><div class="item-title">' +  search1 + '</div></div></div></a></li>');
