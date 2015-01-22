@@ -259,6 +259,7 @@ if (document.getElementById('local_cat').checked) {category_list.push("local");}
 if (document.getElementById('service_cat').checked) {category_list.push("service");}
 if (document.getElementById('sport_cat').checked) {category_list.push("sport");}
 
+if (category_list == 'food,ent,night,local,service,sport') {category_list = 'all'}
 
 alert(category_list);
 
