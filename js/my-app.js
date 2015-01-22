@@ -252,12 +252,12 @@ var sort = document.getElementById("sortselect").value;
 
 var category_list = [];
 
-if (document.getElementById('food_cat').checked) {category_list.push('food');}
-if (document.getElementById('ent_cat').checked) {category_list.push('ent');}
-if (document.getElementById('night_cat').checked) {category_list.push('night');}
-if (document.getElementById('local_cat').checked) {category_list.push('local');}
-if (document.getElementById('service_cat').checked) {category_list.push('service');}
-if (document.getElementById('sport_cat').checked) {category_lis.push('sport');}
+if (document.getElementById('food_cat').checked) {category_list.push("food");}
+if (document.getElementById('ent_cat').checked) {category_list.push("ent");}
+if (document.getElementById('night_cat').checked) {category_list.push("night");}
+if (document.getElementById('local_cat').checked) {category_list.push("local");}
+if (document.getElementById('service_cat').checked) {category_list.push("service");}
+if (document.getElementById('sport_cat').checked) {category_list.push("sport");}
 
 
 alert(category_list);
