@@ -266,7 +266,7 @@ alert(category_list);
 if (typeof start === 'undefined') {$$("#result li").remove();start = 0;}
 if (typeof finish === 'undefined') {$$("#result li").remove();finish = 2;}
 
-if (pages_list=='a') {domain = "jsonp";data_send = "user_id=" + uid + "&latitude=" + latitude + "&longitude=" + longitude + "&sort=" + sort + "&category=" + category_list;}
+if (pages_list=='a') {domain = "jsonp";data_send = "user_id=" + uid + "&latitude=" + latitude + "&longitude=" + longitude + "&sort=" + sort + "&category_list=" + category_list;}
 
 if (pages_list=='b') {$$("#result li").remove();
 var existingEntries = JSON.parse(localStorage.getItem("allEntries"));
