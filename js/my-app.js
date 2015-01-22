@@ -250,6 +250,8 @@ var fav_id_list = [];
 
 var sort = document.getElementById("sortselect").value;
 
+alert(sort);
+
 if (document.getElementById('food_cat').checked) {var food = 'yes';}
 else {var food = 'no';}
 if (document.getElementById('ent_cat').checked) {var ent = 'yes';}
@@ -262,6 +264,13 @@ if (document.getElementById('service_cat').checked) {var service = 'yes';}
 else {var service = 'no';}
 if (document.getElementById('sport_cat').checked) {var sport = 'yes';}
 else {var sport = 'no';}
+
+alert(food);
+alert(ent);
+alert(night);
+alert(local);
+alert(service);
+alert(sport);
 
 if (typeof start === 'undefined') {$$("#result li").remove();start = 0;}
 if (typeof finish === 'undefined') {$$("#result li").remove();finish = 2;}
