@@ -2129,7 +2129,7 @@ for (i = 0; i < 10; i++)
 	
 
 	
-$$( '#resultf' ).append('<li style="font-size:14px;padding-left:0px;padding-right:0px;margin-left:0px;margin-right:0px;background-color:transparent;" class="close-popup"><a href="#" onclick="savePosition(\''+ response.predictions[i].place_id  +'\')" style="margin:0;"><div class="item-content" style="margin:0;"><div class="item-inner" style="border:0;margin-left:0px;padding-left:0px;color:white;"><div class="item-title">' + response.predictions[i].description + '</div></div></div></a></li>');
+$$( '#resultf' ).append('<li style="font-size:14px;padding-left:0px;padding-right:0px;margin-left:0px;margin-right:0px;background-color:transparent;" class="close-popup"><a href="#" onclick="savePosition(\''+ response.predictions[i].place_id  +'\')" style="margin:0;"><div class="item-content" style="margin:0;"><div class="item-media"><i class="pe-7s-map-marker pe-lg" style="color:white;"></i></div><div class="item-inner" style="border:0;margin-left:0px;padding-left:0px;color:white;"><div class="item-title">' + response.predictions[i].description + '</div></div></div></a></li>');
 }
 });
 	
