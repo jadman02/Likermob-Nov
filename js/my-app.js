@@ -699,7 +699,7 @@ localStorage.setItem("latitude", response.result.geometry.location.lat);
 localStorage.setItem("longitude", response.result.geometry.location.lng);
 localStorage.setItem("formatted_address", response.result.formatted_address);
 var formatted_address_placeholder = localStorage.getItem("formatted_address");
-if (formatted_address_placeholder != 'null'){$$('#fulladdressf').attr("placeholder",formatted_address_placeholder);}
+if (formatted_address_placeholder != 'null'){$$('#fulladdressf').attr("placeholder",formatted_address_placeholder);document.getElementById("fulladdressf").value = formatted_address_placeholder;}
 functionEmpty();
 
 
