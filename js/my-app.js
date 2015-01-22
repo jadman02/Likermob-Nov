@@ -250,32 +250,22 @@ var fav_id_list = [];
 
 var sort = document.getElementById("sortselect").value;
 
-alert(sort);
+var category_list = [];
 
-if (document.getElementById('food_cat').checked) {var food = 'yes';}
-else {var food = 'no';}
-if (document.getElementById('ent_cat').checked) {var ent = 'yes';}
-else {var ent = 'no';}
-if (document.getElementById('night_cat').checked) {var night = 'yes';}
-else {var night = 'no';}
-if (document.getElementById('local_cat').checked) {var local = 'yes';}
-else {var local = 'no';}
-if (document.getElementById('service_cat').checked) {var service = 'yes';}
-else {var service = 'no';}
-if (document.getElementById('sport_cat').checked) {var sport = 'yes';}
-else {var sport = 'no';}
+if (document.getElementById('food_cat').checked) {category_list.push('food');}
+if (document.getElementById('ent_cat').checked) {category_list.push('ent');}
+if (document.getElementById('night_cat').checked) {category_list.push('night');}
+if (document.getElementById('local_cat').checked) {category_list.push('local');}
+if (document.getElementById('service_cat').checked) {category_list.push('service');}
+if (document.getElementById('sport_cat').checked) {category_lis.push('sport');}
 
-alert(food);
-alert(ent);
-alert(night);
-alert(local);
-alert(service);
-alert(sport);
+
+alert(category_list);
 
 if (typeof start === 'undefined') {$$("#result li").remove();start = 0;}
 if (typeof finish === 'undefined') {$$("#result li").remove();finish = 2;}
 
-if (pages_list=='a') {domain = "jsonp";data_send = "user_id=" + uid + "&latitude=" + latitude + "&longitude=" + longitude;}
+if (pages_list=='a') {domain = "jsonp";data_send = "user_id=" + uid + "&latitude=" + latitude + "&longitude=" + longitude + "&sort=" + sort + "&category=" + category_list;}
 
 if (pages_list=='b') {$$("#result li").remove();
 var existingEntries = JSON.parse(localStorage.getItem("allEntries"));
