@@ -248,7 +248,20 @@ var longitude = localStorage.getItem("longitude");
 var post_id_list = [];
 var fav_id_list = [];
 
+var sort = document.getElementById("sortselect").value;
 
+if (document.getElementById('food_cat').checked) {var food = 'yes';}
+else {var food = 'no';}
+if (document.getElementById('ent_cat').checked) {var ent = 'yes';}
+else {var ent = 'no';}
+if (document.getElementById('night_cat').checked) {var night = 'yes';}
+else {var night = 'no';}
+if (document.getElementById('local_cat').checked) {var local = 'yes';}
+else {var local = 'no';}
+if (document.getElementById('service_cat').checked) {var service = 'yes';}
+else {var service = 'no';}
+if (document.getElementById('sport_cat').checked) {var sport = 'yes';}
+else {var sport = 'no';}
 
 if (typeof start === 'undefined') {$$("#result li").remove();start = 0;}
 if (typeof finish === 'undefined') {$$("#result li").remove();finish = 2;}
