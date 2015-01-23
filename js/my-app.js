@@ -261,7 +261,7 @@ if (document.getElementById('sport_cat').checked) {category_list.push("sport");}
 
 if (category_list == 'food,ent,night,local,service,sport') {category_list = 'all'}
 
-alert(category_list);
+
 
 if (typeof start === 'undefined') {$$("#result li").remove();start = 0;}
 if (typeof finish === 'undefined') {$$("#result li").remove();finish = 2;}
