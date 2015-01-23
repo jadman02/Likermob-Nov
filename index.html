@@ -129,24 +129,25 @@ background-color:transparent;
         <div class="col-100" style="padding:20px;"><div id="profilepic"></div></div>
       </div>
 
-<div class="row" style="border-bottom: 1px solid #ccc;">
-        <div class="col-50 close-panel" style="padding:20px;"><i class="pe-7s-home pe-2x"></i><br/>Find Deals</div>
-        <div class="col-50 close-panel" onclick="likeList()" style="padding:20px;"><i class="pe-7s-like2 pe-2x"></i><br/>My Deals</div>
+      <div class="row" style="border-bottom: 1px solid #ccc;">
+        <div class="col-100" style="padding:20px;" onclick="pages()"><i class="pe-7s-home pe-2x"></i> Find Deals</div>
       </div>
       <div class="row" style="border-bottom: 1px solid #ccc;">
-        <div class="col-50 close-panel" onclick="favourites()"  style="padding:20px;"><i class="pe-7s-star pe-2x"></i><br/>Favourites</div>
-        <div class="col-50 close-panel" style="padding:20px;" data-panel="right" class="open-panel"><i class="pe-7s-search pe-2x"></i><br/>Search</div>
+        <div class="col-100" style="padding:20px;" onclick="pages()"><i class="pe-7s-like2 pe-2x"></i> My Deals</div>
       </div>
       <div class="row" style="border-bottom: 1px solid #ccc;">
-        <div class="col-50 close-panel" onclick="pages()"  style="padding:20px;"><i class="pe-7s-plus pe-2x"></i><br/>Add Deal</div>
-        <div class="col-50 close-panel"  style="padding:20px;" data-panel="right" class="open-panel"><i class="pe-7s-tools pe-2x"></i><br/>Manage Deals</div>
+        <a href="#" onclick="favourites()" class="close-panel"><div class="col-100" style="padding:20px;"><i class="pe-7s-star pe-2x"></i> Favourite List</div></a>
       </div>
       <div class="row" style="border-bottom: 1px solid #ccc;">
-        <div class="col-50" style="padding:20px;"><a href="mailto:jadman02@hotmail.com" class="active external"></a><i class="pe-7s-mail pe-2x"></i><br/>Contact</a></div>
+        <div class="col-50" style="padding:20px;" onclick="pages()"><i class="pe-7s-plus pe-2x"></i><br/>Add Deal</div>
+       <a href="location.html"> <div class="col-50" style="padding:20px;"><i class="pe-7s-photo-gallery pe-2x"></i><br/>Manage Deals</div></a>
+      </div>
+      <div class="row" style="border-bottom: 1px solid #ccc;">
+        <div class="col-50" style="padding:20px;" onclick="pages()"><i class="pe-7s-mail pe-2x"></i><br/>Contact</div>
         <div class="col-50" style="padding:20px;"><i class="pe-7s-share pe-2x"></i><br/>Share</div>
       </div>
       <div class="row">
-        <div class="col-50" style="padding:20px;"><i class="pe-7s-config pe-2x"></i><br/>Settings</div>
+        <div class="col-50" style="padding:20px;" onclick="pages()"><i class="pe-7s-config pe-2x"></i><br/>Settings</div>
         <div class="col-50" style="padding:20px;"><i class="pe-7s-video pe-2x"></i><br/>Help</div>
       </div>
       </div>
@@ -159,7 +160,7 @@ background-color:transparent;
   <div class="panel panel-right panel-reveal" style="background-color:hsla(0, 0%, 100%, 0.1);">
 
 
- <div class="content-block" style="margin:0; padding:5px;padding-right:10px;padding-left:10px;">
+ <div class="content-block" style="margin:0; padding:5px;">
     <!-- Buttons row as tabs controller -->
     <div class="buttons-row">
       <!-- Link to 1st tab, active -->
@@ -291,7 +292,7 @@ background-color:transparent;
         </div>
       </label>
     </li>
-    <div style="border-top:1px solid #c4c4c4;margin-left:20px;"></div>
+    <div style="border-top:1px solid #c4c4c4;margin-left:10px;"></div>
     <li>
       <div class="item-content">
         <div class="item-media"><i class="pe-7s-filter pe-2x"></i></div>
@@ -438,11 +439,10 @@ background-color:transparent;
 <ul id="result" style="overflow:hidden;background-color:transparent;border-right:3px solid #ff8000;border-left:3px solid #3b5998;"></ul></div>
 <div style="text-align:center;margin:0 auto;width:100%;color:#ff8000" id="loader-container">
         <span class="preloader" style="width:31px; height:31px"></span>
-        <i class="pe-7s-refresh pe-spin pe-5x"></i>
+        LOADING
         </div>
 <p class="buttons-row">
 <div id="tempImg" style="visibility:hidden"></div>
-
 <a href="#" class="button" onclick="favouritesPage()">favouritesPage()</a>
 <a href="#" class="button" onclick="mylikes()">mylikes()</a>
 <a href="#" class="button" onclick="clearEntries()">Clear Entries</a>
@@ -453,6 +453,7 @@ background-color:transparent;
 
 
 <a href="#" class="button button-big button-fill load_more" style="margin:10px;display:none;"> More</a>
+
 </p>
 
 
