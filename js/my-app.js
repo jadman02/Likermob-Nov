@@ -2687,7 +2687,7 @@ allEntries = [];localStorage.setItem("allEntries", JSON.stringify(allEntries));a
 function favourites(){
 	
 	// HTML Content of new page:
-var newPageContentfav = 
+var newPageContent = 
 '<div class="navbar">'+
     '<div class="navbar-inner" style="background-color:#f7f7f8;">'+
         '<div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>'+
@@ -2714,8 +2714,7 @@ var newPageContentfav =
                       '</div>';
  
 //Load new content as new page
-mainView.router.loadContent(newPageContentfav);
-alert('finished');
+mainView.router.loadContent(newPageContent);
 var favEntries = JSON.parse(localStorage.getItem("favEntries"));
 var itemlist = [];
 var datetoday = new Date();
