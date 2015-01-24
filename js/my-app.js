@@ -2927,7 +2927,9 @@ var starblue = '<i class="pe-7s-star pe-lg" onclick="favList(\''+ page_id  +'\',
 if(favEntries.length > 0){for (j = 0; j < favEntries.length; j++) {if (favEntries[j].page_id == page_id){staryellow = '<i class="pe-7s-star pe-lg" onclick="removefavList(\''+  page_id  +'\',\''+ post_id  +'\')" id="yellow_'+ post_id +'" style="border:20px solid transparent;color:#ffcc00;margin-top:-10px;"></i>';starblue = '<i class="pe-7s-star pe-lg hide" onclick="favList(\''+ page_id  +'\',\''+ post_id  +'\',\''+ name  +'\')" id="blue_'+ post_id +'" style="border:20px solid transparent;margin-top:-10px;"></i>';}}}
 
  var popupHTML = '<div class="popup">'+
-                    '<div class="content-block modal-block">'+
+
+'<div class="list-block media-list" style="margin-top:0px;"><ul style="background-color:transparent"><li style="background-color:hsla(0, 0%, 100%, 0.8);"><div class="item-content"><div class="item-media"><a href="#" class="back link"><i class="icon icon-back"></i></a></div><div class="item-inner"><div class="item-title-row"><div class="item-title"><img src="http://graph.facebook.com/'+page_id+'/picture?width=20&height=20" style="border-radius:50%;width:20px;margin-top:5px;margin-right:5px;"/><span style="padding-top:-10px;">Smilesavers</span></div><div class="item-after">'+ staryellow + starblue +'</div></div></div></div></li></ul></div>'+
+'<div class="content-block modal-block">'+
 '<div class="row" style="clear:both;">'+
         '<div class="col-25" style="margin-top:-90px;"><div style="background-color:#c4c4c4;border-radius:10px;"><a href="#" onclick="getBusiness(\''+ page_id  +'\',\''+ photo  +'\');" style="height:50px;z-index:100;margin:0 auto;border:0;background-color:transparent;" class="button"><img src="http://graph.facebook.com/'+page_id+'/picture?width=30&height=30" style="border-radius:50%;margin-top:10px;"/></a>'+staryellow +starblue +'<a href="#" id="mapicon" onclick="getBusiness(\''+ page_id  +'\',\''+ photo  +'\');" style="z-index:100;margin:0 auto;clear:both;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-map pe-2x" style="margin-top:5px;"></i></a><a href="#" onclick="" style="z-index:100;margin:0 auto;clear:both;height:40px;width:40px;border:0;background-color:transparent;clear:both;" class="button"><i class="pe-7s-more pe-2x" style="margin-top:5px;"></i></a></div> </div>'+
         '<div class="col-75"><div class="messages-date" style="clear:both;float:left;margin:0;padding:0;"><span>Smilesavers</span></div><div style="padding:10px;padding-bottom:30px;border-radius:10px;margin-top:5px;"><div id="dealtitle" style="float:left;font-weight:500;">Like to save 10% on cleaning products - use codeword: title</div><br/><div style="clear:both;">description</div><div style="float:left;font-size:14px;clear:both;"><i class="pe-7s-clock pe-lg"></i> Expires in 6 days</div></div></div>'+
@@ -2939,7 +2941,7 @@ myApp.popup(popupHTML);
 
 
 var img = new Image();
-     img.src = $$( '.popup' ).css('background-image').replace(/url\(|\)$|"/ig, '');
+     img.src = $$( '.modal-block' ).css('background-image').replace(/url\(|\)$|"/ig, '');
      img.onload = function () {
      	
 	var height_image = ((img.height/img.width) * 270) -41;
