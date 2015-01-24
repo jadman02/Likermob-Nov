@@ -3082,3 +3082,27 @@ myApp.modal({
 
 	
 }
+
+function videoHelp(){
+	
+myApp.modal({
+    title:  'How Likermob Works',
+    text: '<iframe width="560" height="315" src="//www.youtube.com/embed/4SNyPrGnT9U" frameborder="0" allowfullscreen></iframe>',
+   buttons: [
+      {
+        text: 'Cancel',
+        onClick: function() {
+          myApp.closeModal();
+        }
+      },
+      {
+        text: 'Share',
+        onClick: function() {
+alert('need to addshare fnction');
+        }
+      },
+    ]
+  })	
+	
+	
+}
