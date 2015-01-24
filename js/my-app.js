@@ -2689,7 +2689,7 @@ function favourites(){
 	// HTML Content of new page:
 var newPageContent = 
 '<div class="navbar">'+
-    '<div class="navbar-inner" style="background-color:transparent;">'+
+    '<div class="navbar-inner" style="background-color:#f7f7f8;">'+
         '<div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>'+
         '<div class="center">Favourites</div>'+
         '<div class="right"><i class="pe-7s-refresh pe-lg"></i></div>'+
@@ -2798,7 +2798,7 @@ function likeList(){
 	// HTML Content of new page:
 var newPageContent = 
 '<div class="navbar">'+
-    '<div class="navbar-inner">'+
+    '<div class="navbar-inner" style="background-color:#f7f7f8;">'+
         '<div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>'+
         '<div class="center">My Deals</div>'+
         '<div class="right"><a href="#" class="button link" style="border:0;color:#ccc;"><i class="pe-7s-clock pe-lg"></i></a></div>'+
