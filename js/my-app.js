@@ -2970,6 +2970,10 @@ $$( '.modal-block' ).css( 'background-image', 'url(\''+ url  +'\')');
 $$( '.modal-block' ).css( 'background-size', '100%');
 $$( '.modal-block' ).css( 'background-repeat', 'no-repeat');
 
+var windowheight = $$(window).height();
+
+$$( '.modal' ).css( 'height', windowheight + 'px');
+
 var img = new Image();
      img.src = $$( '.modal-block' ).css('background-image').replace(/url\(|\)$|"/ig, '');
      img.onload = function () {
