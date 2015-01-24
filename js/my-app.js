@@ -2932,11 +2932,9 @@ myApp.modal({
      
      
      '</div></div></div>',
-    
-    
-    aterText:'yo',
+    afterText:'yo',
     buttons: [
-{text: '<i class="pe-7s-close pe-lg"></i>', onClick: function() {myApp.closeModal();}},},
+{text: '<i class="pe-7s-close pe-lg"></i>', onClick: function() {myApp.closeModal();}},
     ]
   });
 
