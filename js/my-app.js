@@ -16,7 +16,7 @@ $$('.swipeout').on('deleted', function () {
 
 myApp.onPageBeforeInit('index', function (page) {
 
-statusBarClear();
+
 
 var uid = localStorage.getItem("uid");
 
@@ -99,6 +99,10 @@ $$('.pull-to-refresh-content').on('scroll', function (e) {
 
 myApp.onPageBeforeRemove('add_deal', function (page) {
 $$( ".business" ).remove();
+});
+
+myApp.onPageBeforeRemove('deal-page', function (page) {
+statusBarClear();
 });
 
 
