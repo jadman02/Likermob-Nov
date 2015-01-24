@@ -1511,6 +1511,10 @@ infowindow.open(map,marker);
 
 function popUp(title,description,page_id,post_id){
 
+title = 'title this';
+description = 'testing this';
+page_id = '573184906025652';
+post_id = '573184906025652_1';
 
 var user_name = localStorage.getItem('user_name');
 var uid = localStorage.getItem('uid');
