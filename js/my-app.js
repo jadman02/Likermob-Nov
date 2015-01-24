@@ -2927,7 +2927,7 @@ var starblue = '<i class="pe-7s-star pe-lg" onclick="favList(\''+ page_id  +'\',
 if(favEntries.length > 0){for (j = 0; j < favEntries.length; j++) {if (favEntries[j].page_id == page_id){staryellow = '<i class="pe-7s-star pe-lg" onclick="removefavList(\''+  page_id  +'\',\''+ post_id  +'\')" id="yellow_'+ post_id +'" style="border:20px solid transparent;color:#ffcc00;margin-top:-10px;"></i>';starblue = '<i class="pe-7s-star pe-lg hide" onclick="favList(\''+ page_id  +'\',\''+ post_id  +'\',\''+ name  +'\')" id="blue_'+ post_id +'" style="border:20px solid transparent;margin-top:-10px;"></i>';}}}
 
 myApp.modal({
-    title: '<img src="http://graph.facebook.com/'+page_id+'/picture?width=30&height=30" style="border-radius:50%;max-width:30px;"/><div class="messages-date" style="margin:0;padding:0;"><span>Smilesavers</span></div>',
+    
      text: '<div class="content-block modal-block" style="padding:0;margin:0;max-height:300px;overflow: scroll;overflow-x:hidden;"><div class="content-block-inner" style="background-color:transparent;"><div class="modal_inner" style="background-color:hsla(0, 0%, 100%, 0.8);">'+
      '<div style="padding-top:10px;" class="messages-date">Sunday, Feb 3 <span>11:58</span></div>'+ 
 '<div class="row">'+
