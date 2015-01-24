@@ -2919,33 +2919,27 @@ function removelikelList(post_id,page_id,photo,name){
 
 var uid = localStorage.getItem("uid");
 var url = 'http://smilesavers.net.au/images/compressed/'+page_id+'_'+photo+'.jpg';
-var favEntries = JSON.parse(localStorage.getItem("favEntries"));
-if(favEntries == null) favEntries = [];
-var staryellow = '<i class="pe-7s-star pe-lg hide" onclick="removefavList(\''+ page_id  +'\',\''+ post_id  +'\')" id="yellow_'+ post_id +'" style="border:20px solid transparent;margin-top:-10px;color:#ffcc00;"></i>';
-var starblue = '<i class="pe-7s-star pe-lg" onclick="favList(\''+ page_id  +'\',\''+ post_id  +'\',\''+ name  +'\')" id="blue_'+ post_id +'" style="border:20px solid transparent;margin-top:-10px;"></i>';
-
-if(favEntries.length > 0){for (j = 0; j < favEntries.length; j++) {if (favEntries[j].page_id == page_id){staryellow = '<i class="pe-7s-star pe-lg" onclick="removefavList(\''+  page_id  +'\',\''+ post_id  +'\')" id="yellow_'+ post_id +'" style="border:20px solid transparent;color:#ffcc00;margin-top:-10px;"></i>';starblue = '<i class="pe-7s-star pe-lg hide" onclick="favList(\''+ page_id  +'\',\''+ post_id  +'\',\''+ name  +'\')" id="blue_'+ post_id +'" style="border:20px solid transparent;margin-top:-10px;"></i>';}}}
 
 myApp.modal({
     title: '<img src="http://graph.facebook.com/'+page_id+'/picture?width=30&height=30" style="border-radius:50%;max-width:30px;"/><div class="messages-date" style="margin:0;padding:0;"><span>Smilesavers</span></div>',
      text: '<div class="content-block modal-block" style="padding:0;margin:0;max-height:300px;overflow: scroll;overflow-x:hidden;"><div class="content-block-inner" style="background-color:transparent;"><div class="modal_inner" style="background-color:hsla(0, 0%, 100%, 0.8);">'+
-     '<div style="padding-top:10px;" class="messages-date">Sunday, Feb 3 <span>11:58</span></div>'+ 
 '<div class="row">'+
-        '<div style="background-color:#e5e5ea;padding:10px;border-radius:10px;margin:10px;margin-top:0px;text-align:left;"><div id="dealtitle" style="float:left;font-weight:500;"><div id="titlediv"></div></div><br/><div style="clear:both;"><div id="descriptiondiv"></div></div></div>'+
+        '<div style="background-color:#e5e5ea;padding:10px;width:100%;margin:10px;margin-top:0px;text-align:left;"><div id="dealtitle" style="float:left;font-weight:500;"><div id="titlediv"></div></div><br/><div style="clear:both;"><div id="descriptiondiv"></div></div></div>'+
 '</div>'+
 
 '<div class="row">'+
-        '<div style="background-color:#e5e5ea;padding:10px;border-radius:10px;margin:10px;text-align:left;"><div id="dealtitle" style="float:left;font-weight:500;">Expiry</div><br/><div style="float:left;font-size:14px;clear:both;"><i class="pe-7s-clock pe-lg"></i> Expires in 6 days</div></div>'+
+        '<div style="background-color:#e5e5ea;padding:10px;width:100%;margin:10px;text-align:left;"><div id="dealtitle" style="float:left;font-weight:500;">Expiry</div><br/><div style="float:left;font-size:14px;clear:both;"><i class="pe-7s-clock pe-lg"></i> Expires in 6 days</div></div>'+
 '</div>'+
 '<div class="row">'+
-        '<div style="background-color:#e5e5ea;padding:10px;border-radius:10px;margin:10px;text-align:left;"><div id="dealtitle" style="float:left;font-weight:500;">Terms</div><br/><span style="clear:both;"><div id="termsdiv"></div></span></div>'+
+        '<div style="background-color:#e5e5ea;padding:10px;width:100%;margin:10px;text-align:left;"><div id="dealtitle" style="float:left;font-weight:500;">Terms</div><br/><span style="clear:both;"><div id="termsdiv"></div></span></div>'+
 '</div>'+
      '<div class="row">'+
-        '<div style="background-color:#e5e5ea;padding:10px;border-radius:10px;margin:10px;"><div id="dealtitle" style="float:left;font-weight:500;">Share on Facebook</div><div class="list-block" style="margin-top:20px;margin-bottom:10px;background-color:transparent;"><ul style="background-color:transparent;border:0;"><li><div class="item-content"><div class="item-media"><img src="http://graph.facebook.com/'+ uid +'/picture?width=40&height=40" style="margin-top:-90px;border-radius:50%;max-width:40px;"></div><div class="item-inner"><div class="item-input"><textarea id="dealbox1" placeholder="What do you think?" style="font-size:14px;background-color:white;margin-top:10px;margin-bottom:10px;border-radius:5px;"></textarea><div id="postdiv"></div></div></div></div></li></ul</div></div>'+
+        '<div style="background-color:#e5e5ea;padding:10px;margin:10px;"><div id="dealtitle" style="float:left;font-weight:500;">Share on Facebook</div><div class="list-block" style="margin-top:20px;margin-bottom:10px;background-color:transparent;"><ul style="background-color:transparent;border:0;"><li><div class="item-content"><div class="item-media"><img src="http://graph.facebook.com/'+ uid +'/picture?width=40&height=40" style="margin-top:-90px;border-radius:50%;max-width:40px;"></div><div class="item-inner"><div class="item-input"><textarea id="dealbox1" placeholder="What do you think?" style="font-size:14px;background-color:white;margin-top:10px;margin-bottom:10px;border-radius:5px;"></textarea><div id="postdiv"></div></div></div></div></li></ul</div></div>'+
 '</div>'+
      
      
      '</div></div></div>',
+    afterText:'<div class="toolbar messagebar" data-max-height="200" id="hometoolbar" style="border-top:0;"><div class="toolbar-inner"><i class="pe-7s-camera pe-lg" style="margin-right:15px;"></i><textarea id="commentinput" placeholder="Add Comment" onblur="hideCommentToolbar()" style="border:0;max-height:200px;"></textarea> <span style="margin-left:10px;margin-right:10px;" onclick="hideCommentToolbar();postComment();">Post</span></div></div>',
     buttons: [
       {
         text: '<i class="pe-7s-close pe-lg"></i>',
@@ -2953,12 +2947,15 @@ myApp.modal({
           myApp.closeModal();
         }
       },
-            {
-        text: staryellow + starblue,
-        close:false
-      },
       {
         text: '<i class="pe-7s-map pe-lg"></i>',
+        onClick: function() {
+        	getBusiness(page_id,name);
+        }
+      },
+      {
+        text: '<i class="pe-7s-more pe-lg"></i>',
+        close:false,
         onClick: function() {
         	getBusiness(page_id,name);
         }
