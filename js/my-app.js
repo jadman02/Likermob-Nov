@@ -3088,11 +3088,12 @@ function videoHelp(){
 var myPhotoBrowserPopupDark = myApp.photoBrowser({
     photos : [
         {
-            html: '<iframe src="http://www.youtube.com/embed/lmc21V-zBq0?list=PLpj0FBQgLGEr3mtZ5BTwtmSwF1dkPrPRM" frameborder="0" allowfullscreen></iframe>',
-            caption: 'Woodkid - Run Boy Run (Official HD Video)'
+            html: '<iframe src="http://https://www.youtube.com/watch?v=4SNyPrGnT9U?rel=0&autplay=1" frameborder="0" allowfullscreen></iframe>',
+            caption: 'How Likermob Works'
         },
     ],
     theme: 'dark',
+    navbarTemplate:'yo',
     type: 'standalone'
 });
 
