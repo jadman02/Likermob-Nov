@@ -2715,6 +2715,7 @@ var newPageContentfav =
  
 //Load new content as new page
 mainView.router.loadContent(newPageContentfav);
+alert('finished');
 var favEntries = JSON.parse(localStorage.getItem("favEntries"));
 var itemlist = [];
 var datetoday = new Date();
@@ -2790,7 +2791,7 @@ var windowsize = $$(window).width();
 $$( '.virtual-inner' ).css( 'width', innersize+'px');
 $$( '.virtual-list ul' ).css( 'border', '0');
 $$( '.virtual-content' ).css( 'width', windowsize + 'px');
-alert('finished');	
+	
 }
 
 function likeList(){
