@@ -3053,16 +3053,16 @@ function statusBarWhite(){$$( '.statusbar-overlay' ).css( 'background-color', '#
 function statusBarClear(){$$( '.statusbar-overlay' ).css( 'background-color', 'transparent');$$('#likebar').show();}
 function shareLikermob(){
 
-myApp.modal({
-    var uid = localStorage.getItem("uid");
+var uid = localStorage.getItem("uid");
     var title="";
-    var page_id=""
+    var page_id="";
     var url = "http://www.smilesavers.net.au/images/cover.png";
-    
+
+myApp.modal({
     title: 'Share on Facebook',
     text: '<div class="content-block" style="padding:0;margin:0;max-height:200px;overflow: scroll;overflow-x:hidden;"><div class="content-block-inner" style="background-color:transparent;"><img style="margin-top:10px;width:50%;" src="http://www.smilesavers.net.au/images/cover.png"/></div></div>',
-     afterText:  '<div class="list-block" style="margin-top:10px;margin-bottom:10px;"><ul><li><div class="item-content"><div class="item-media"><img src="http://graph.facebook.com/'+ uid +'/picture?type=small"></div><div class="item-inner"><div class="item-input"><textarea id="dealbox" placeholder="What do you think about Likermob?"></textarea></div></div></div></li></ul</div>',
-    buttons: [
+     afterText:  '<div class="list-block" style="margin-top:10px;margin-bottom:10px;"><ul><li><div class="item-content"><div class="item-media"><img src="http://graph.facebook.com/'+ uid +'/picture?type=small"></div><div class="item-inner"><div class="item-input"><textarea id="dealbox1" placeholder="What do you think about Likermob?"></textarea></div></div></div></li></ul</div>',
+   buttons: [
       {
         text: 'Cancel',
         onClick: function() {
@@ -3072,11 +3072,13 @@ myApp.modal({
       {
         text: 'Share',
         onClick: function() {
-          var value = $$("#dealbox").val();
+          var value = $$("#dealbox1").val();
           share(value,page_id,url,title);
         }
       },
     ]
-  });	
+  })
+
+
 	
 }
