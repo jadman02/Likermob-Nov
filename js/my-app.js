@@ -375,7 +375,7 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 
    '<div class="content-block" id="content-block" style="clear:both;">'+
      ' <div class="content-block-inner" style="height:100%;padding-bottom:20px;background-color:hsla(0, 0%, 100%, 0.8);">'+
-'<span class="badge" style="clear:both;float:right;margin:0 auto;margin-left:5px;background-color:#ff8000;">'+ response[i][18]  +'</span><span class="badge" style="float:right;margin:0 auto;background-color:#3b5998;">'+ response[i][17]  +'</span>'+
+'<span class="badge" style="clear:both;float:right;margin:0 auto;margin-left:5px;background-color:#ff8000;"><i class="pe-7s-like2 pe-rotate-180"></i>'+ response[i][18]  +'</span><span class="badge" style="float:right;margin:0 auto;background-color:#3b5998;"><i class="pe-7s-like2"></i>'+ response[i][17]  +'</span>'+
 '<div class="messages-date" style="clear:both;">Sunday, Feb 3 <span>11:58</span></div>'+
 
 
