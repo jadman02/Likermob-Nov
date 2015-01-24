@@ -3008,6 +3008,8 @@ if (value) {
     
 }
 
+
+
 function saveSearchTerm(page_id,name){
 
 var search1 = localStorage.getItem("search1");
@@ -3036,4 +3038,10 @@ localStorage.setItem("search5", search4);
 
 
 
+}
+
+function likeHomeButton(){
+alert('yo');
+$$('.swipeout-actions-left').eq(0).trigger( 'click' );	
+	
 }
