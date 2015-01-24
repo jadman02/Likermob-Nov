@@ -3054,6 +3054,7 @@ function statusBarClear(){$$( '.statusbar-overlay' ).css( 'background-color', 't
 function shareLikermob(){
 
 myApp.modal({
+    var uid = localStorage.getItem("uid");
     var title="";
     var url = "http://www.smilesavers.net.au/images/cover.png";
     
