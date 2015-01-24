@@ -3088,7 +3088,7 @@ function videoHelp(){
 var myPhotoBrowserPopupDark = myApp.photoBrowser({
     photos : [
         {
-            html: '<iframe id="video" src="http://www.youtube.com/embed/4SNyPrGnT9U" frameborder="0" allowfullscreen></iframe>',
+            html: '<iframe src="http://www.youtube.com/embed/4SNyPrGnT9U?autoplay=1" frameborder="0" allowfullscreen></iframe>',
             caption: 'How Likermob Works'
         },
     ],
@@ -3097,6 +3097,5 @@ var myPhotoBrowserPopupDark = myApp.photoBrowser({
 });
 
     myPhotoBrowserPopupDark.open();
-$$("#video")[0].src += "&autoplay=1";
-    ev.preventDefault();
+
 }
