@@ -640,8 +640,8 @@ function removelikeList(post_id,page_id,photo,name,title,expiry){
 
 $$( '#deals-here' ).append( '<li class="virtual-content swipeout virtual_'+ post_id  +' likelix hide" style="background-color:hsla(0, 0%, 100%, 0.9);border-left:3px solid #3b5998;margin-top:5px;margin-bottom:5px;">' +
                   '<div class="swipeout-content item-content">'+
-                  '<div class="item-media" onclick="removelikelList(\''+ post_id  +'\',\''+ page_id  +'\',\''+ photo  +'\',\''+ name  +'\')" style="padding:5px;"><img src="http://smilesavers.net.au/images/compressed/'+page_id+'_'+photo+'.jpg" style="width:40px;max-height:40px;overflow:hidden;"/></div>' +
-                  '<div class="item-inner virtual-inner" onclick="removelikelList(\''+ post_id  +'\',\''+ page_id  +'\',\''+ photo  +'\',\''+ name  +'\')">' +
+                  '<div class="item-media" onclick="removelikelList(\''+ post_id  +'\',\''+ page_id  +'\',\''+ photo  +'\',\''+ name  +'\',1)" style="padding:5px;"><img src="http://smilesavers.net.au/images/compressed/'+page_id+'_'+photo+'.jpg" style="width:40px;max-height:40px;overflow:hidden;"/></div>' +
+                  '<div class="item-inner virtual-inner" onclick="removelikelList(\''+ post_id  +'\',\''+ page_id  +'\',\''+ photo  +'\',\''+ name  +'\',1)">' +
                      '<div class="item-title-row">'+
                          '<div class="item-title"><img src="http://graph.facebook.com/'+page_id+'/picture?width=15&height=15" style="border-radius:50%;max-width:15px;margin-right:10px;"/>'+ title +'</div>' +
                         '<div class="item-after"><i class="pe-7s-angle-right pe-lg" style="color:#3b5998;"></i></div>'+
@@ -653,7 +653,7 @@ $$( '#deals-here' ).append( '<li class="virtual-content swipeout virtual_'+ post
 
  '<div class="swipeout-actions-left left_'+ post_id  +'">' +
         '<a href="#" onclick="removelikeList(\''+ post_id  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#3b5998;"><i class="pe-7s-like2 pe-2x"></i></a>' +
-        '<a href="#" onclick="removelikelList(\''+ post_id  +'\',\''+ page_id  +'\',\''+ photo  +'\',\''+ name  +'\')"><i class="pe-7s-plus pe-2x"></i></a>' +
+        '<a href="#" onclick="removelikelList(\''+ post_id  +'\',\''+ page_id  +'\',\''+ photo  +'\',\''+ name  +'\',2)"><i class="pe-7s-plus pe-2x"></i></a>' +
       '</div>' +
 
 
@@ -864,8 +864,8 @@ var existingEntries = JSON.parse(localStorage.getItem("allEntries"));
 $$('.badge-like').text(existingEntries.length);
 $$( '#like-deals-here' ).append( '<li class="virtual-content swipeout likeli hide" style="background-color:hsla(0, 0%, 100%, 0.9);border-right:3px solid #ff8000;margin-top:5px;margin-bottom:5px;">' +
                   '<div class="swipeout-content item-content">'+
-                  '<div class="item-media" onclick="removelikelList(\''+ post_id  +'\',\''+page_id +'\',\''+ photo  +'\',\''+ name  +'\')" style="padding:5px;"><img src="http://smilesavers.net.au/images/compressed/'+page_id +'_'+photo +'.jpg" style="width:40px;max-height:40px;overflow:hidden;"/></div>' +
-                  '<div class="item-inner virtual-inner" onclick="removelikelList(\''+ post_id  +'\',\''+page_id +'\',\''+ photo  +'\',\''+ name  +'\')">' +
+                  '<div class="item-media" onclick="removelikelList(\''+ post_id  +'\',\''+page_id +'\',\''+ photo  +'\',\''+ name  +'\',2)" style="padding:5px;"><img src="http://smilesavers.net.au/images/compressed/'+page_id +'_'+photo +'.jpg" style="width:40px;max-height:40px;overflow:hidden;"/></div>' +
+                  '<div class="item-inner virtual-inner" onclick="removelikelList(\''+ post_id  +'\',\''+page_id +'\',\''+ photo  +'\',\''+ name  +'\',2)">' +
                      '<div class="item-title-row">'+
                          '<div class="item-title"><img src="http://graph.facebook.com/'+page_id+'/picture?width=15&height=15" style="border-radius:50%;max-width:15px;margin-right:10px;"/>'+ title +'</div>' +
                         '<div class="item-after"><i class="pe-7s-angle-left pe-lg" style="color:#ff8000;"></i></div>'+
@@ -875,7 +875,7 @@ $$( '#like-deals-here' ).append( '<li class="virtual-content swipeout likeli hid
                   '</div>' +
                '</div>'+
                            '<div class="swipeout-actions-right">' +
-        '<a href="#" onclick="removelikelList(\''+ post_id  +'\',\''+page_id +'\',\''+ photo  +'\',\''+ name  +'\')"><i class="pe-7s-plus pe-2x"></i></a>' +
+        '<a href="#" onclick="removelikelList(\''+ post_id  +'\',\''+page_id +'\',\''+ photo  +'\',\''+ name  +'\',2)"><i class="pe-7s-plus pe-2x"></i></a>' +
         '<a href="#" onclick="removelikeList(\''+ post_id  +'\',\''+page_id +'\',\''+ photo  +'\',\''+ name  +'\',\''+ title  +'\',\''+ expiry  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a>' +
       '</div>' +
  '</li>');
@@ -1308,8 +1308,8 @@ var firstdate = weekday_name + ", " + month_name + " " + day ;
 var datetime = '<div class="messages-date" style="padding:0;float:left;margin:0;"><i class="pe-7s-clock"></i> Expires '+ firstdate +'</div>';
 $$( '#like-deals-here' ).append( '<li class="virtual-content swipeout likeli" style="background-color:hsla(0, 0%, 100%, 0.9);clear:both;border-right:1px solid #ff8000;margin-top:5px;margin-bottom:5px;">' +
                   '<div class="swipeout-content item-content">'+
-                  '<div class="item-media" onclick="removelikelList(\''+ allEntries[k].post_id  +'\',\''+allEntries[k].page_id +'\',\''+ allEntries[k].photo  +'\',\''+ allEntries[k].name  +'\')" style="padding:5px;"><img src="http://smilesavers.net.au/images/compressed/'+allEntries[k].page_id +'_'+allEntries[k].photo +'.jpg" style="width:40px;max-height:40px;overflow:hidden;"/></div>' +
-                  '<div class="item-inner virtual-inner" onclick="removelikelList(\''+ allEntries[k].post_id  +'\',\''+allEntries[k].page_id +'\',\''+ allEntries[k].photo  +'\',\''+ allEntries[k].name  +'\')">' +
+                  '<div class="item-media" onclick="removelikelList(\''+ allEntries[k].post_id  +'\',\''+allEntries[k].page_id +'\',\''+ allEntries[k].photo  +'\',\''+ allEntries[k].name  +'\',2)" style="padding:5px;"><img src="http://smilesavers.net.au/images/compressed/'+allEntries[k].page_id +'_'+allEntries[k].photo +'.jpg" style="width:40px;max-height:40px;overflow:hidden;"/></div>' +
+                  '<div class="item-inner virtual-inner" onclick="removelikelList(\''+ allEntries[k].post_id  +'\',\''+allEntries[k].page_id +'\',\''+ allEntries[k].photo  +'\',\''+ allEntries[k].name  +'\',2)">' +
                      '<div class="item-title-row">'+
                          '<div class="item-title"><img src="http://graph.facebook.com/'+allEntries[k].page_id+'/picture?width=15&height=15" style="border-radius:50%;max-width:15px;margin-right:10px;"/>'+ allEntries[k].title +'</div>' +
                         '<div class="item-after"><i class="pe-7s-angle-left pe-lg" style="color:#ff8000;"></i></div>'+
@@ -1319,7 +1319,7 @@ $$( '#like-deals-here' ).append( '<li class="virtual-content swipeout likeli" st
                   '</div>' +
                '</div>'+
                            '<div class="swipeout-actions-right">' +
-        '<a href="#" onclick="removelikelList(\''+ allEntries[k].post_id  +'\',\''+allEntries[k].page_id +'\',\''+ allEntries[k].photo  +'\',\''+ allEntries[k].name  +'\')"><i class="pe-7s-plus pe-2x"></i></a>' +
+        '<a href="#" onclick="removelikelList(\''+ allEntries[k].post_id  +'\',\''+allEntries[k].page_id +'\',\''+ allEntries[k].photo  +'\',\''+ allEntries[k].name  +'\',2)"><i class="pe-7s-plus pe-2x"></i></a>' +
         '<a href="#" onclick="removelikeList(\''+ allEntries[k].post_id  +'\',\''+allEntries[k].page_id +'\',\''+ allEntries[k].photo  +'\',\''+ allEntries[k].name  +'\',\''+ allEntries[k].title  +'\',\''+ allEntries[k].expiry  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a>' +
       '</div>' +
  '</li>');
@@ -1391,8 +1391,8 @@ totaldeals ++;
  
     		$$( '#deals-here' ).append( '<li class="virtual-content swipeout virtual_'+ res[i][2]  +' likelix hide" style="background-color:hsla(0, 0%, 100%, 0.9);clear:both;border-left:1px solid #3b5998;margin-top:5px;margin-bottom:5px;">' +
                   '<div class="swipeout-content item-content">'+
-                  '<div class="item-media" onclick="removelikelList(\''+ res[i][2]  +'\',\''+ res[i][1]  +'\',\''+ res[i][21]  +'\',\''+ res[i][16]  +'\')" style="padding:5px;"><img src="http://smilesavers.net.au/images/compressed/'+res[i][1]+'_'+res[i][21]+'.jpg" style="width:40px;max-height:40px;overflow:hidden;"/></div>' +
-                  '<div class="item-inner virtual-inner" onclick="removelikelList(\''+ res[i][2]  +'\',\''+ res[i][1] +'\',\''+ res[i][21]  +'\',\''+ res[i][16]  +'\')">' +
+                  '<div class="item-media" onclick="removelikelList(\''+ res[i][2]  +'\',\''+ res[i][1]  +'\',\''+ res[i][21]  +'\',\''+ res[i][16]  +'\',2)" style="padding:5px;"><img src="http://smilesavers.net.au/images/compressed/'+res[i][1]+'_'+res[i][21]+'.jpg" style="width:40px;max-height:40px;overflow:hidden;"/></div>' +
+                  '<div class="item-inner virtual-inner" onclick="removelikelList(\''+ res[i][2]  +'\',\''+ res[i][1] +'\',\''+ res[i][21]  +'\',\''+ res[i][16]  +'\',2)">' +
                      '<div class="item-title-row">'+
                          '<div class="item-title"><img src="http://graph.facebook.com/'+res[i][1]+'/picture?width=15&height=15" style="border-radius:50%;max-width:15px;margin-right:10px;"/>'+ res[i][3] +'</div>' +
                         '<div class="item-after"><i class="pe-7s-angle-right pe-lg" style="color:#3b5998;"></i></div>'+
@@ -1404,7 +1404,7 @@ totaldeals ++;
 
  '<div class="swipeout-actions-left left_'+ res[i][2]  +'">' +
         '<a href="#" onclick="addEntry(\''+ res[i][2]  +'\',\''+ res[i][6]  +'\',\''+ res[i][1]  +'\',\''+ res[i][21]  +'\',\''+ res[i][3]  +'\',\''+ res[i][16]  +'\',\''+ res[i][10]  +'\',\''+ res[i][11]  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#3b5998;"><i class="pe-7s-like2 pe-2x"></i></a>' +
-        '<a href="#" onclick="removelikelList(\''+ res[i][2]  +'\',\''+ res[i][1]  +'\',\''+ res[i][21]  +'\',\''+ res[i][16]  +'\')"><i class="pe-7s-plus pe-2x"></i></a>' +
+        '<a href="#" onclick="removelikelList(\''+ res[i][2]  +'\',\''+ res[i][1]  +'\',\''+ res[i][21]  +'\',\''+ res[i][16]  +'\',2)"><i class="pe-7s-plus pe-2x"></i></a>' +
       '</div>' +
 
 
@@ -2892,8 +2892,8 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
     renderItem: function (index, item) {
         return '<li class="virtual-content swipeout" style="border-right:3px solid #ff8000;margin-top:5px;margin-bottom:5px;">' +
                   '<div class="swipeout-content item-content">'+
-                  '<div class="item-media" onclick="removelikelList(\''+ item.post_id  +'\',\''+ item.page_id  +'\',\''+ item.photo  +'\',\''+ item.name  +'\')" style="padding:5px;"><img src="http://smilesavers.net.au/images/compressed/'+item.page_id+'_'+item.photo+'.jpg" style="width:40px;max-height:40px;overflow:hidden;"/></div>' +
-                  '<div class="item-inner virtual-inner" onclick="removelikelList(\''+ item.post_id  +'\',\''+ item.page_id  +'\',\''+ item.photo  +'\',\''+ item.name  +'\')">' +
+                  '<div class="item-media" onclick="removelikelList(\''+ item.post_id  +'\',\''+ item.page_id  +'\',\''+ item.photo  +'\',\''+ item.name  +'\',1)" style="padding:5px;"><img src="http://smilesavers.net.au/images/compressed/'+item.page_id+'_'+item.photo+'.jpg" style="width:40px;max-height:40px;overflow:hidden;"/></div>' +
+                  '<div class="item-inner virtual-inner" onclick="removelikelList(\''+ item.post_id  +'\',\''+ item.page_id  +'\',\''+ item.photo  +'\',\''+ item.name  +'\',1)">' +
                      '<div class="item-title-row">'+
                          '<div class="item-title"><img src="http://graph.facebook.com/'+item.page_id+'/picture?width=15&height=15" style="border-radius:50%;max-width:15px;margin-right:10px;"/>'+ item.title +'</div>' +
                         '<div class="item-after"><i class="pe-7s-angle-left pe-lg" style="color:#ff8000;"></i></div>'+
@@ -2905,7 +2905,7 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
                '<div class="swipeout-actions-right">' +
 
 
-        '<a href="#" onclick="removelikelList(\''+ item.post_id  +'\',\''+ item.page_id  +'\',\''+ item.photo  +'\',\''+ item.name  +'\')"><i class="pe-7s-plus pe-2x"></i></a>' +
+        '<a href="#" onclick="removelikelList(\''+ item.post_id  +'\',\''+ item.page_id  +'\',\''+ item.photo  +'\',\''+ item.name  +'\',1)"><i class="pe-7s-plus pe-2x"></i></a>' +
         '<a href="#" onclick="getBusiness(\''+ item.page_id  +'\',\''+ item.name  +'\');"><i class="pe-7s-map pe-2x"></i></a>' +
         '<a href="#" onclick="removelikeList(\''+ item.post_id  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a>' +
       '</div>' +
@@ -2914,8 +2914,10 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
 });  
 }
 
-function removelikelList(post_id,page_id,photo,name){
+function removelikelList(post_id,page_id,photo,name,type){
 
+if type=='1' {var buttony = "{text: '<i class=\"pe-7s-close pe-lg\"></i>', onClick: function() {myApp.closeModal();}},{text: '<i class=\"pe-7s-map pe-lg\"></i>',onClick: function() {getBusiness(page_id,name);}},";}
+if type=='2'{var buttony = "{text: '<i class=\"pe-7s-close pe-lg\"></i>', onClick: function() {myApp.closeModal();}},";}
 
 var uid = localStorage.getItem("uid");
 var url = 'http://smilesavers.net.au/images/compressed/'+page_id+'_'+photo+'.jpg';
@@ -2925,26 +2927,15 @@ myApp.modal({
      text: '<div class="content-block modal-block" style="padding:0;margin:0;max-height:300px;overflow: scroll;overflow-x:hidden;"><div class="content-block-inner" style="background-color:transparent;"><div class="modal_inner" style="background-color:white;">'+
 '<div class="row">'+
         '<div style="background-color:transparent;padding:10px;width:100%;margin-top:0px;text-align:left;"><div id="dealtitle" style="float:left;font-weight:500;"><div id="titlediv"></div></div><br/><div style="clear:both;"><div id="descriptiondiv"></div></div></div>'+
-        '<div style="background-color:transparent;padding:10px;width:100%;text-align:left;"><div id="dealtitle" style="float:left;font-weight:500;">Expiry</div><br/><div style="float:left;font-size:14px;clear:both;"><i class="pe-7s-clock pe-lg"></i> Expires in 6 days</div></div>'+
-        '<div style="background-color:transparent;padding:10px;width:100%;text-align:left;"><div id="dealtitle" style="float:left;font-weight:500;">Terms</div><br/><span style="clear:both;"><div id="termsdiv"></div></span></div>'+
-        '<div style="background-color:transparent;padding:10px;"><div id="dealtitle" style="float:left;font-weight:500;">Share on Facebook</div><div class="list-block" style="margin-top:20px;margin-bottom:10px;background-color:transparent;"><ul style="background-color:transparent;border:0;"><li><div class="item-content"><div class="item-inner"><div class="item-input"><textarea id="dealbox1" placeholder="What do you think?" style="font-size:14px;background-color:white;margin-top:10px;margin-bottom:10px;border:1px solid #666;border-radius:5px;"></textarea><div id="postdiv"></div></div></div></div></li></ul</div></div>'+
+        '<div style="background-color:transparent;padding:10px;width:100%;text-align:left;"><div style="float:left;font-weight:500;">Expiry</div><br/><div style="float:left;font-size:14px;clear:both;"><i class="pe-7s-clock pe-lg"></i> Expires in 6 days</div></div>'+
+        '<div style="background-color:transparent;padding:10px;width:100%;text-align:left;"><div style="float:left;font-weight:500;">Terms</div><br/><span style="clear:both;"><div id="termsdiv"></div></span></div>'+
+        '<div style="background-color:transparent;padding:10px;"><div style="float:left;font-weight:500;">Share on Facebook</div><div class="list-block" style="margin-top:20px;margin-bottom:10px;background-color:transparent;"><ul style="background-color:transparent;border:0;"><li><div class="item-content"><div class="item-inner" style="padding:0;margin:0;"><div class="item-input"><textarea id="dealbox1" placeholder="What do you think?" style="font-size:14px;background-color:white;margin-top:10px;margin-bottom:10px;border:1px solid #666;border-radius:5px;"></textarea><div id="postdiv"></div></div></div></div></li></ul</div></div>'+
 '</div>'+
      
      
      '</div></div></div>',
     buttons: [
-      {
-        text: '<i class="pe-7s-close pe-lg"></i>',
-        onClick: function() {
-          myApp.closeModal();
-        }
-      },
-      {
-        text: '<i class="pe-7s-map pe-lg"></i>',
-        onClick: function() {
-        	getBusiness(page_id,name);
-        }
-      },
+buttony
     ]
   });
 
