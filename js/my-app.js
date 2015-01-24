@@ -3087,10 +3087,10 @@ function videoHelp(){
 	
 myApp.modal({
     title:  'How Likermob Works',
-    text: '<iframe width="560" height="315" src="http://www.youtube.com/embed/4SNyPrGnT9U" frameborder="0" allowfullscreen></iframe>',
+    text: '<iframe width="250" height="315" src="http://www.youtube.com/embed/4SNyPrGnT9U" frameborder="0" allowfullscreen></iframe>',
    buttons: [
       {
-        text: 'Cancel',
+        text: 'Close',
         onClick: function() {
           myApp.closeModal();
         }
