@@ -2687,7 +2687,7 @@ allEntries = [];localStorage.setItem("allEntries", JSON.stringify(allEntries));a
 function favourites(){
 	
 	// HTML Content of new page:
-var newPageContent = 
+var newPageContentfav = 
 '<div class="navbar">'+
     '<div class="navbar-inner" style="background-color:#f7f7f8;">'+
         '<div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>'+
@@ -2714,7 +2714,7 @@ var newPageContent =
                       '</div>';
  
 //Load new content as new page
-mainView.router.loadContent(newPageContent);
+mainView.router.loadContent(newPageContentfav);
 var favEntries = JSON.parse(localStorage.getItem("favEntries"));
 var itemlist = [];
 var datetoday = new Date();
@@ -2790,7 +2790,7 @@ var windowsize = $$(window).width();
 $$( '.virtual-inner' ).css( 'width', innersize+'px');
 $$( '.virtual-list ul' ).css( 'border', '0');
 $$( '.virtual-content' ).css( 'width', windowsize + 'px');
-	
+alert('finished');	
 }
 
 function likeList(){
