@@ -2467,7 +2467,6 @@ html.ios .popup-overlay.modal-overlay-visible {
   margin-left: -160px;
   margin-top: 20px;
   height:100%;
-  top: 50%;
   text-align: center;
   opacity: 0;
   -webkit-transform: translate3d(0, 0, 0) scale(1.185);
