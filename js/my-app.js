@@ -2933,7 +2933,7 @@ myApp.modal({
      
      '</div></div></div>',
     buttons: [
-{text: '<i class=\"pe-7s-close pe-lg\"></i>', onClick: function() {myApp.closeModal();}},{text: '<i class=\"pe-7s-map pe-lg\"></i>',onClick: function() {getBusiness(page_id,name);}},
+{text: '<i class="pe-7s-close pe-lg"></i>', onClick: function() {myApp.closeModal();}},{text: '<i class="pe-7s-map pe-lg"></i>',onClick: function() {getBusiness(page_id,name);}},
     ]
   });
 
