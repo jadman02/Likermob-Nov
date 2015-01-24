@@ -2682,7 +2682,7 @@ function favourites(){
 	// HTML Content of new page:
 var newPageContent = 
 '<div class="navbar">'+
-    '<div class="navbar-inner">'+
+    '<div class="navbar-inner" style="background-color:transparent;">'+
         '<div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>'+
         '<div class="center">Favourites</div>'+
         '<div class="right"><i class="pe-7s-refresh pe-lg"></i></div>'+
