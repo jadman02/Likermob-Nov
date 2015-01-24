@@ -412,7 +412,7 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 
 
 '</div>'+
-'<div class="swipeout-actions-left" style="width:50%;z-index:10;"><a href="#" class="swipeout-delete swipeout-overswipe" style="background-color:#3b5998;width:100%;"  onclick="likeButton(\''+ response[i][2]  +'\',\''+ response[i][6]  +'\',\''+ response[i][1]  +'\',\''+ response[i][21]  +'\',\''+ short_title  +'\',\''+ response[i][16]  +'\',\''+ response[i][10]  +'\',\''+ response[i][11]  +'\')"><div class="leftclickme"></div></a></div><div class="swipeout-actions-right" style="width:50%;z-index:10;"><a href="#" onclick="closeButton(\''+ response[i][2]  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;width:100%;"></a></div></li>');}
+'<div class="swipeout-actions-left" style="width:50%;z-index:10;"><a href="#" class="swipeout-delete swipeout-overswipe" style="background-color:#3b5998;width:100%;"  onclick="likeButton(\''+ response[i][2]  +'\',\''+ response[i][6]  +'\',\''+ response[i][1]  +'\',\''+ response[i][21]  +'\',\''+ short_title  +'\',\''+ response[i][16]  +'\',\''+ response[i][10]  +'\',\''+ response[i][11]  +'\')"><div class="leftclickme"></div></a></div><div class="swipeout-actions-right" style="width:50%;z-index:10;"><a href="#" onclick="closeButton(\''+ response[i][2]  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;width:100%;"><div class="rightclickme"></div></a></div></li>');}
 }
 
 
@@ -3040,6 +3040,6 @@ localStorage.setItem("search5", search4);
 
 }
 
-
-
+function homeLikeButton(){$$('.leftclickme').eq(0).click();}
+function homeCloseButton(){$$('.rightclickme').eq(0).click();}
 function statusBar(){}
