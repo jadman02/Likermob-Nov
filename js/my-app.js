@@ -3042,6 +3042,8 @@ localStorage.setItem("search5", search4);
 
 function likeHomeButton(){
 alert('yo');
-$$('.leftclickme').eq(0).trigger( 'click' );	
+$$('.leftclickme').eq(0).click();	
 	
 }
+
+function statusBar(){}
