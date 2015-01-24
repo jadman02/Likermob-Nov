@@ -2916,7 +2916,7 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
 
 function removelikelList(post_id,page_id,photo,name,type){
 
-
+alert(type);
 var uid = localStorage.getItem("uid");
 var url = 'http://smilesavers.net.au/images/compressed/'+page_id+'_'+photo+'.jpg';
 
