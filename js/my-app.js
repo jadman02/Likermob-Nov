@@ -3085,24 +3085,17 @@ myApp.modal({
 
 function videoHelp(){
 	
-myApp.modal({
-    title:  'How Likermob Works',
-    text: '<iframe width="250" height="315" src="http://www.youtube.com/embed/4SNyPrGnT9U?rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>',
-   buttons: [
-      {
-        text: 'Close',
-        onClick: function() {
-          myApp.closeModal();
-        }
-      },
-      {
-        text: 'Share',
-        onClick: function() {
-alert('need to addshare fnction');
-        }
-      },
-    ]
-  })	
-	
-	
+var myPhotoBrowserPopupDark = myApp.photoBrowser({
+    photos : [
+        {
+            html: '<iframe src="//www.youtube.com/embed/lmc21V-zBq0?list=PLpj0FBQgLGEr3mtZ5BTwtmSwF1dkPrPRM" frameborder="0" allowfullscreen></iframe>',
+            caption: 'Woodkid - Run Boy Run (Official HD Video)'
+        },
+    ],
+    theme: 'dark',
+    type: 'standalone'
+});
+
+    myPhotoBrowserPopupDark.open();
+
 }
