@@ -2792,7 +2792,7 @@ function likeList(){
 var newPageContent = 
 '<div class="navbar">'+
     '<div class="navbar-inner">'+
-        '<div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>'+
+        '<div class="left"><a href="#" class="back link" onclick="$$(\'#likebar\').show();statusBarClear();"><i class="icon icon-back"></i><span>Back</span></a></div>'+
         '<div class="center">My Deals</div>'+
         '<div class="right"><a href="#" class="button link" style="border:0;color:#ccc;"><i class="pe-7s-clock pe-lg"></i></a></div>'+
     '</div>'+
@@ -3042,4 +3042,5 @@ localStorage.setItem("search5", search4);
 
 function homeLikeButton(){$$('.leftclickme').eq(0).click();}
 function homeCloseButton(){$$('.rightclickme').eq(0).click();}
-function statusBar(){}
+function statusBarWhite(){$$( '.statusbar-overlay' ).css( 'background-color', '#f7f7f8');}
+function statusBarClear(){$$( '.statusbar-overlay' ).css( 'background-color', 'transparent');}
