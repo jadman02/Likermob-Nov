@@ -2972,7 +2972,7 @@ $$( '.modal-block' ).css( 'background-repeat', 'no-repeat');
 
 var windowheight = $$(window).height();
 
-$$( '.modal' ).css( 'height', windowheight + 'px');
+$$( '.modal-inner' ).css( 'height', windowheight + 'px');
 
 var img = new Image();
      img.src = $$( '.modal-block' ).css('background-image').replace(/url\(|\)$|"/ig, '');
