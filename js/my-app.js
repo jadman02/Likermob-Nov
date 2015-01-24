@@ -2927,7 +2927,7 @@ var starblue = '<i class="pe-7s-star pe-lg" onclick="favList(\''+ page_id  +'\',
 if(favEntries.length > 0){for (j = 0; j < favEntries.length; j++) {if (favEntries[j].page_id == page_id){staryellow = '<i class="pe-7s-star pe-lg" onclick="removefavList(\''+  page_id  +'\',\''+ post_id  +'\')" id="yellow_'+ post_id +'" style="border:20px solid transparent;color:#ffcc00;margin-top:-10px;"></i>';starblue = '<i class="pe-7s-star pe-lg hide" onclick="favList(\''+ page_id  +'\',\''+ post_id  +'\',\''+ name  +'\')" id="blue_'+ post_id +'" style="border:20px solid transparent;margin-top:-10px;"></i>';}}}
 
 myApp.modal({
-    title: '<i class="pe-7s-close pe-lg" style="float:left;" onclick="myApp.closeModal();"></i><img src="http://graph.facebook.com/'+page_id+'/picture?width=30&height=30" style="border-radius:50%;max-width:30px;"/><i class="pe-7s-map pe-lg" onclick="getBusiness(page_id,name);" style="float:right;"></i>',
+    title: '<img src="http://graph.facebook.com/'+page_id+'/picture?width=30&height=30" style="border-radius:50%;max-width:30px;"/><div class="messages-date" style="margin:0;padding:0;"><span>Smilesavers</span></div>',
      text: '<div class="content-block modal-block" style="padding:0;margin:0;max-height:300px;overflow: scroll;overflow-x:hidden;"><div class="content-block-inner" style="background-color:transparent;"><div class="modal_inner" style="background-color:hsla(0, 0%, 100%, 0.8);">'+
      '<div style="padding-top:10px;" class="messages-date">Sunday, Feb 3 <span>11:58</span></div>'+ 
 '<div class="row">'+
@@ -2946,11 +2946,33 @@ myApp.modal({
      
      
      '</div></div></div>',
+    buttons: [
+      {
+        text: '<i class="pe-7s-close pe-lg"></i>',
+        onClick: function() {
+          myApp.closeModal();
+        }
+      },
+            {
+        text: staryellow + starblue,
+        close:false
+      },
+      {
+        text: '<i class="pe-7s-map pe-lg"></i>',
+        onClick: function() {
+        	getBusiness(page_id,name);
+        }
+      },
+    ]
   });
 
 $$( '.modal-block' ).css( 'background-image', 'url(\''+ url  +'\')');
 $$( '.modal-block' ).css( 'background-size', '100%');
 $$( '.modal-block' ).css( 'background-repeat', 'no-repeat');
+
+var windowheight = $$(window).height();
+
+$$( '.modal' ).css( 'height', windowheight + 'px');
 
 var img = new Image();
      img.src = $$( '.modal-block' ).css('background-image').replace(/url\(|\)$|"/ig, '');
