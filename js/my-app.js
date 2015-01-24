@@ -2929,7 +2929,7 @@ if(favEntries.length > 0){for (j = 0; j < favEntries.length; j++) {if (favEntrie
 myApp.modal({
    
    
-        <li>
+        
    
      text: '<div class="list-block media-list modal-block" style="max-height:300px;overflow: scroll;overflow-x:hidden;"><ul style="background-color:transparent;"><div class="modal_inner" style="background-color:hsla(0, 0%, 100%, 0.8);"><li>'+
 '<div class="row" style="clear:both;">'+
