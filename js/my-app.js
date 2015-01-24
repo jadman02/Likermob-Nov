@@ -16,6 +16,8 @@ $$('.swipeout').on('deleted', function () {
 
 myApp.onPageBeforeInit('index', function (page) {
 
+statusBarClear();
+
 var uid = localStorage.getItem("uid");
 
 var search1 = localStorage.getItem("search1");
@@ -2792,7 +2794,7 @@ function likeList(){
 var newPageContent = 
 '<div class="navbar">'+
     '<div class="navbar-inner">'+
-        '<div class="left"><a href="#" class="back link" onclick="statusBarClear();"><i class="icon icon-back"></i><span>Back</span></a></div>'+
+        '<div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>'+
         '<div class="center">My Deals</div>'+
         '<div class="right"><a href="#" class="button link" style="border:0;color:#ccc;"><i class="pe-7s-clock pe-lg"></i></a></div>'+
     '</div>'+
