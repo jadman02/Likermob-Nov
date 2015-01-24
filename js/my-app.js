@@ -2939,7 +2939,7 @@ myApp.modal({
      
      
      '</div></div></div>',
-    afterText:'<i class="pe-7s-camera pe-lg" style="margin-right:15px;"></i><textarea id="commentinput" placeholder="Add Comment" onblur="hideCommentToolbar()" style="border:0;max-height:200px;"></textarea> <span style="margin-left:10px;margin-right:10px;" onclick="hideCommentToolbar();postComment();">Post</span>',
+    afterText:'<div class="messagebar" data-max-height="200" style="border-top:0;"><i class="pe-7s-camera pe-lg" style="margin-right:15px;"></i><textarea id="commentinput" placeholder="Add Comment" onblur="hideCommentToolbar()" style="border:0;max-height:200px;"></textarea> <span style="margin-left:10px;margin-right:10px;" onclick="hideCommentToolbar();postComment();">Post</span></div>',
     buttons: [
       {
         text: '<i class="pe-7s-close pe-lg"></i>',
