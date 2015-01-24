@@ -2935,7 +2935,7 @@ myApp.modal({
      
      '</div></div></div>',
     buttons: [
-buttony +
++ buttony +
     ]
   });
 
