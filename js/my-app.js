@@ -3088,12 +3088,11 @@ function videoHelp(){
 var myPhotoBrowserPopupDark = myApp.photoBrowser({
     photos : [
         {
-            html: '<iframe src="https://www.youtube.com/watch?v=4SNyPrGnT9U?rel=0autoplay=1" frameborder="0" allowfullscreen></iframe>',
+            html: '<iframe src="https://www.youtube.com/watch?v=4SNyPrGnT9U?rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>',
             caption: 'How Likermob Works'
         },
     ],
     theme: 'dark',
-    navbarTemplate:'yo',
     type: 'standalone'
 });
 
