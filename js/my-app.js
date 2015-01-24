@@ -2916,8 +2916,6 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
 
 function removelikelList(post_id,page_id,photo,name,type){
 
-if type=='1' {var buttony = "{text: '<i class=\"pe-7s-close pe-lg\"></i>', onClick: function() {myApp.closeModal();}},{text: '<i class=\"pe-7s-map pe-lg\"></i>',onClick: function() {getBusiness(page_id,name);}},";}
-if type=='2'{var buttony = "{text: '<i class=\"pe-7s-close pe-lg\"></i>', onClick: function() {myApp.closeModal();}},";}
 
 var uid = localStorage.getItem("uid");
 var url = 'http://smilesavers.net.au/images/compressed/'+page_id+'_'+photo+'.jpg';
@@ -2935,7 +2933,7 @@ myApp.modal({
      
      '</div></div></div>',
     buttons: [
-+ buttony +
+{text: '<i class=\"pe-7s-close pe-lg\"></i>', onClick: function() {myApp.closeModal();}},{text: '<i class=\"pe-7s-map pe-lg\"></i>',onClick: function() {getBusiness(page_id,name);}},
     ]
   });
 
