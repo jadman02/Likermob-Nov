@@ -2926,72 +2926,28 @@ var starblue = '<i class="pe-7s-star pe-lg" onclick="favList(\''+ page_id  +'\',
 
 if(favEntries.length > 0){for (j = 0; j < favEntries.length; j++) {if (favEntries[j].page_id == page_id){staryellow = '<i class="pe-7s-star pe-lg" onclick="removefavList(\''+  page_id  +'\',\''+ post_id  +'\')" id="yellow_'+ post_id +'" style="border:20px solid transparent;color:#ffcc00;margin-top:-10px;"></i>';starblue = '<i class="pe-7s-star pe-lg hide" onclick="favList(\''+ page_id  +'\',\''+ post_id  +'\',\''+ name  +'\')" id="blue_'+ post_id +'" style="border:20px solid transparent;margin-top:-10px;"></i>';}}}
 
-myApp.modal({
-    
-     text: '<div class="content-block modal-block" style="padding:0;margin:0;max-height:300px;overflow: scroll;overflow-x:hidden;"><div class="content-block-inner" style="background-color:transparent;"><div class="modal_inner" style="background-color:hsla(0, 0%, 100%, 0.8);">'+
-     '<div style="padding-top:10px;" class="messages-date">Sunday, Feb 3 <span>11:58</span></div>'+ 
-'<div class="row">'+
-        '<div style="background-color:#e5e5ea;padding:10px;border-radius:10px;margin:10px;margin-top:0px;text-align:left;"><div id="dealtitle" style="float:left;font-weight:500;"><div id="titlediv"></div></div><br/><div style="clear:both;"><div id="descriptiondiv"></div></div></div>'+
+ var popupHTML = '<div class="popup">'+
+                    '<div class="content-block modal-block">'+
+'<div class="row" style="clear:both;">'+
+        '<div class="col-25" style="margin-top:-90px;"><div style="background-color:#c4c4c4;border-radius:10px;"><a href="#" onclick="getBusiness(\''+ response[i][1]  +'\',\''+ response[i][16]  +'\');" style="height:50px;z-index:100;margin:0 auto;border:0;background-color:transparent;" class="button"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=30&height=30" style="border-radius:50%;margin-top:10px;"/></a>'+staryellow +starblue +'<a href="#" id="mapicon" onclick="getBusiness(\''+ response[i][1]  +'\',\''+ response[i][16]  +'\');" style="z-index:100;margin:0 auto;clear:both;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-map pe-2x" style="margin-top:5px;"></i></a><a href="#" onclick="loadMore(\''+ response[i][1]  +'\',\''+ homecontentimage  +'\',\''+ response[i][3]  +'\',\''+ uid +'\',\''+ response[i][2]  +'\');" style="z-index:100;margin:0 auto;clear:both;height:40px;width:40px;border:0;background-color:transparent;clear:both;" class="button"><i class="pe-7s-more pe-2x" style="margin-top:5px;"></i></a></div> </div>'+
+        '<div class="col-75"><div class="messages-date" style="clear:both;float:left;margin:0;padding:0;"><span>Smilesavers</span></div><div style="padding:10px;padding-bottom:30px;border-radius:10px;margin-top:5px;"><div id="dealtitle" style="float:left;font-weight:500;">Like to save 10% on cleaning products - use codeword: '+ response[i][3] + '</div><br/><div style="clear:both;">'+response[i][4]+'</div><div style="float:left;font-size:14px;clear:both;"><i class="pe-7s-clock pe-lg"></i> Expires in 6 days</div></div></div>'+
 '</div>'+
+                    '</div>'+
+                  '</div>'
+myApp.popup(popupHTML);
 
-'<div class="row">'+
-        '<div style="background-color:#e5e5ea;padding:10px;border-radius:10px;margin:10px;text-align:left;"><div id="dealtitle" style="float:left;font-weight:500;">Expiry</div><br/><div style="float:left;font-size:14px;clear:both;"><i class="pe-7s-clock pe-lg"></i> Expires in 6 days</div></div>'+
-'</div>'+
-'<div class="row">'+
-        '<div style="background-color:#e5e5ea;padding:10px;border-radius:10px;margin:10px;text-align:left;"><div id="dealtitle" style="float:left;font-weight:500;">Terms</div><br/><span style="clear:both;"><div id="termsdiv"></div></span></div>'+
-'</div>'+
-     '<div class="row">'+
-        '<div style="background-color:#e5e5ea;padding:10px;border-radius:10px;margin:10px;"><div id="dealtitle" style="float:left;font-weight:500;">Share on Facebook</div><div class="list-block" style="margin-top:20px;margin-bottom:10px;background-color:transparent;"><ul style="background-color:transparent;border:0;"><li><div class="item-content"><div class="item-media"><img src="http://graph.facebook.com/'+ uid +'/picture?width=40&height=40" style="margin-top:-90px;border-radius:50%;max-width:40px;"></div><div class="item-inner"><div class="item-input"><textarea id="dealbox1" placeholder="What do you think?" style="font-size:14px;background-color:white;margin-top:10px;margin-bottom:10px;border-radius:5px;"></textarea><div id="postdiv"></div></div></div></div></li></ul</div></div>'+
-'</div>'+
-     
-     
-     '</div></div></div>',
-    buttons: [
-      {
-        text: '<i class="pe-7s-close pe-lg"></i>',
-        onClick: function() {
-          myApp.closeModal();
-        }
-      },
-            {
-        text: staryellow + starblue,
-        close:false
-      },
-      {
-        text: '<i class="pe-7s-map pe-lg"></i>',
-        onClick: function() {
-        	getBusiness(page_id,name);
-        }
-      },
-    ]
-  });
 
-$$( '.modal-block' ).css( 'background-image', 'url(\''+ url  +'\')');
-$$( '.modal-block' ).css( 'background-size', '100%');
-$$( '.modal-block' ).css( 'background-repeat', 'no-repeat');
-
-var windowheight = $$(window).height();
-
-$$( '.modal-inner' ).css( 'height', windowheight + 'px');
 
 var img = new Image();
-     img.src = $$( '.modal-block' ).css('background-image').replace(/url\(|\)$|"/ig, '');
+     img.src = $$( '.popup' ).css('background-image').replace(/url\(|\)$|"/ig, '');
      img.onload = function () {
      	
 	var height_image = ((img.height/img.width) * 270) -41;
 
-     $$( '.modal_inner' ).css( 'margin-top', height_image + 'px' );
+     $$( '.modal-block' ).css( 'margin-top', height_image + 'px' );
      }
 
-domain = "getdeal";data_send = "post_id=" + post_id;
-$$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', ''+ data_send +'',function(response){
-var title = response[0][3];var description = response[0][4];var terms = response[0][5];
-$$( '#titlediv' ).append(title);
-$$( '#descriptiondiv' ).append(description);
-$$( '#termsdiv' ).append(terms);
-$$( '#postdiv' ).append('<a href="#" class="button" onclick="shareDeal(\''+ page_id  +'\',\''+ url  +'\',\''+ title  +'\')">Post</a>');
-
-});	
+	
 	
 
 }
