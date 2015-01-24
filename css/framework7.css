@@ -2499,8 +2499,10 @@ html.ios .popup-overlay.modal-overlay-visible {
 .modal-inner {
   padding: 15px;
   padding-top:25px;
+  padding-bottom:0px;
   border-bottom: 1px solid #b5b5b5;
   background: #e8e8e8;
+  margin-bottom:20px;
 }
 .modal-title {
   font-weight: 500;
