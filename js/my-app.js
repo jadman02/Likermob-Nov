@@ -3056,6 +3056,7 @@ function shareLikermob(){
 myApp.modal({
     var uid = localStorage.getItem("uid");
     var title="";
+    var page_id=""
     var url = "http://www.smilesavers.net.au/images/cover.png";
     
     title: 'Share on Facebook',
