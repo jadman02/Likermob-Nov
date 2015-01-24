@@ -2932,8 +2932,11 @@ myApp.modal({
      
      
      '</div></div></div>',
+    
+    
+    aterText:'<div class="messagebar" data-max-height="200" style="border-top:0;"><textarea id="commentinput" placeholder="Add Comment" onblur="hideCommentToolbar()" style="border:0;max-height:200px;"></textarea> <span style="margin-left:10px;margin-right:10px;" onclick="hideCommentToolbar();postComment();">Post</span></div>',
     buttons: [
-{text: '<i class="pe-7s-close pe-lg"></i>', onClick: function() {myApp.closeModal();}},{text: '<i class="pe-7s-map pe-lg"></i>',onClick: function() {getBusiness(page_id,name);}},
+{text: '<i class="pe-7s-close pe-lg"></i>', onClick: function() {myApp.closeModal();}},},
     ]
   });
 
