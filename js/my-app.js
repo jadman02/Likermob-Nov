@@ -105,6 +105,9 @@ myApp.onPageBeforeRemove('deal-page', function (page) {
 statusBarClear();
 });
 
+myApp.onPageBeforeRemove('my-page', function (page) {
+statusBarClear();
+});
 
 myApp.onPageInit('register', function (page) {
 
@@ -130,9 +133,7 @@ $$( ".business" ).remove();
 
 });
 
-myApp.onPageInit('my-page', function (page) {
 
-});
 	
 myApp.onPageInit('location', function (page) {
 
