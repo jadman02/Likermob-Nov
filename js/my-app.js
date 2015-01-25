@@ -10,10 +10,6 @@ var myApp = new Framework7({
 // Export selectors engine
 var $$ = Dom7;
 
-$$('.swipeout').on('deleted', function () {
-  myApp.alert('Item removed');
-}); 
-
 myApp.onPageBeforeInit('index', function (page) {
 
 
@@ -388,7 +384,7 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 
 
 '<div class="row" style="clear:both;">'+
-        '<div class="col-25" style="margin-top:-90px;padding-right:5px;"><div style="background-color:#c4c4c4;border-radius:10px;"><a href="#" onclick="getBusiness(\''+ response[i][1]  +'\',\''+ response[i][16]  +'\');" style="height:50px;z-index:100;margin:0 auto;border:0;background-color:transparent;" class="button"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=30&height=30" style="border-radius:50%;margin-top:10px;"/></a>'+staryellow +starblue +'<a href="#" id="mapicon" onclick="getBusiness(\''+ response[i][1]  +'\',\''+ response[i][16]  +'\');" style="z-index:100;margin:0 auto;clear:both;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-map pe-2x" style="margin-top:5px;"></i></a><a href="#" onclick="loadMore(\''+ response[i][1]  +'\',\''+ homecontentimage  +'\',\''+ response[i][3]  +'\',\''+ uid +'\',\''+ response[i][2]  +'\');" style="z-index:100;margin:0 auto;clear:both;height:40px;width:40px;border:0;background-color:transparent;clear:both;" class="button"><i class="pe-7s-more pe-2x" style="margin-top:5px;"></i></a></div> </div>'+
+        '<div class="col-25" style="margin-top:-90px;padding-right:5px;"><div style="width:65px;background-color:#c4c4c4;border-radius:10px;margin:0 auto;"><a href="#" onclick="getBusiness(\''+ response[i][1]  +'\',\''+ response[i][16]  +'\');" style="height:50px;z-index:100;margin:0 auto;border:0;background-color:transparent;" class="button"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=30&height=30" style="border-radius:50%;margin-top:10px;"/></a>'+staryellow +starblue +'<a href="#" id="mapicon" onclick="getBusiness(\''+ response[i][1]  +'\',\''+ response[i][16]  +'\');" style="z-index:100;margin:0 auto;clear:both;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-map pe-2x" style="margin-top:5px;"></i></a><a href="#" onclick="loadMore(\''+ response[i][1]  +'\',\''+ homecontentimage  +'\',\''+ response[i][3]  +'\',\''+ uid +'\',\''+ response[i][2]  +'\');" style="z-index:100;margin:0 auto;clear:both;height:40px;width:40px;border:0;background-color:transparent;clear:both;" class="button"><i class="pe-7s-more pe-2x" style="margin-top:5px;"></i></a></div> </div>'+
         '<div class="col-75"><div class="messages-date" style="clear:both;float:left;margin:0;padding:0;"><span>Smilesavers</span></div><div style="padding:10px;padding-bottom:30px;border-radius:10px;margin-top:5px;"><div id="dealtitle" style="float:left;font-weight:500;">Like to save 10% on cleaning products - use codeword: '+ response[i][3] + '</div><br/><div style="clear:both;">'+response[i][4]+'</div><div style="float:left;font-size:14px;clear:both;"><i class="pe-7s-clock pe-lg"></i> Expires in 6 days</div></div></div>'+
 '</div>'+
 
@@ -2933,8 +2929,8 @@ myApp.modal({
      text: '<div class="content-block modal-block" style="padding:0;margin:0;height:350px;border:0;overflow: scroll;overflow-x:hidden;"><div class="content-block-inner" style="background-color:transparent;border:0;"><div id="likebuttons"><span class="badge" style="clear:both;float:right;margin-left:5px;margin-right:5px;background-color:#ff8000;"><i class="pe-7s-like2 pe-rotate-180" style="margin-right:2px;"></i><div id="dislikeround" style="float:right;"></div></span><span class="badge" style="float:right;background-color:#3b5998;"><i class="pe-7s-like2" style="margin-right:2px;"></i><div id="likeround" style="float:right;"></div></span></div><div class="modal_inner" style="background-color:white;">'+
 '<div class="row">'+
      '<div class="col-25" style="margin-top:-60px;"><div style="background-color:#c4c4c4;border-radius:10px;margin-left:10px;width:65px;"><a href="#" onclick="getBusiness(\''+ page_id  +'\',\''+ name  +'\');" style="height:50px;z-index:100;margin:0 auto;border:0;background-color:transparent;" class="button"><img src="http://graph.facebook.com/'+page_id+'/picture?width=30&height=30" style="border-radius:50%;margin-top:10px;"/></a>'+staryellow + starblue+mapbutton+'<div id="loadmorebutton"></div></div> </div>'+
-        '<div class="col-75" style="padding-left:10px;">'+
-       '<div class="messages-date" style="clear:both;float:left;margin:0;padding:0;"><span>Smilesavers</span></div>'+
+        '<div class="col-75" style="padding-left:15px;">'+
+       '<div class="messages-date" style="clear:both;float:left;margin:0;margin-left:10px;padding:0;"><span>Smilesavers</span></div>'+
         '<div style="clear:both;background-color:transparent;padding:10px;width:100%;margin-top:0px;text-align:left;"><div id="dealtitle" style="float:left;font-weight:500;"><div id="titlediv"></div></div><br/><div style="clear:both;"><div id="descriptiondiv"></div></div></div>'+
         '<div style="background-color:transparent;padding:10px;width:100%;text-align:left;"><div style="float:left;font-weight:500;">Expiry</div><br/><div style="float:left;font-size:14px;clear:both;"><i class="pe-7s-clock pe-lg"></i> Expires in 6 days</div></div>'+
         '<div style="background-color:transparent;padding:10px;width:100%;text-align:left;"><div style="float:left;font-weight:500;margin-top:20px;">Terms</div><br/><div style="clear:both;float:none;"><div id="termsdiv"></div></div></div>'+
@@ -2956,7 +2952,7 @@ var img = new Image();
      img.onload = function () {
      	
 	var height_image = ((img.height/img.width) * 270) -41;
-	var height_image1 = ((img.height/img.width) * 270)-60;
+	var height_image1 = ((img.height/img.width) * 270)-65;
 
      $$( '.modal_inner' ).css( 'margin-top', height_image + 'px' );
      $$( '#likebuttons' ).css( 'margin-top', height_image1 + 'px' );
