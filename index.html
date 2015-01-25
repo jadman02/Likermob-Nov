@@ -833,7 +833,111 @@ function like(post_id) {
 
 var click = 0;
 
-    function getComments() {
+    function getComments(type) {
+        
+        if (type='popup') {
+         $$( "#commentloader1" ).removeClass( "hide" );
+        $$( "#chatloader1" ).addClass( "hide" ); 	
+
+        var start;
+        var finish;
+        
+        
+        openFB.api({
+        path: '/174238599281322_824826047555904/comments?summary=1&',
+        success: function(response) {
+        $$( "#commentloader1" ).addClass( "hide" );
+        $$( "#chatloader1" ).removeClass( "hide" ); 
+        
+var last = response.summary.total_count;
+var cycles = Math.ceil(last / 5);
+if (click == 0) {start = 0; finish = 5;}
+else if (click == (cycles -1)) {start = click*5; finish = last-2;alert('reached');}
+else {start = click*5; finish = (click + 1) * 5;}
+
+
+        
+        
+        click ++;
+                
+
+
+        $$( '#commentlist1' ).append('<div style="width:100%"><a href="#" style="z-index:100;margin-right:5px;height:40px;width:40px;margin:0 auto;border-radius:50%;background-color:transparent;margin-top:20px;" class="button disabled"><i class="pe-7s-chat pe-2x" style="margin-left:-2px;margin-top:5px;"></i></a></div>');        
+  
+                for (i = start; i < finish; i++) {
+
+var created_time = response.data[i].created_time;
+var year_c = created_time.substring(0, 4);
+var month_c = created_time.substring(5, 7);
+var day_c = created_time.substring(8, 10);
+var time_c = created_time.substring(11, 19);
+
+
+var date = new Date(month_c + "/" + day_c + "/" + year_c + " " + time_c); // some mock date
+var milliseconds = date.getTime(); 
+
+var datetoday = new Date();
+var offset = datetoday.getTimezoneOffset() * 60;
+
+var unix = Math.round(milliseconds) + offset;
+
+var d = new Date(unix);
+var month = new Array(12);
+month[0] = "Jan";
+month[1] = "Feb";
+month[2] = "Mar";
+month[3] = "Apr";
+month[4] = "May";
+month[5] = "Jun";
+month[6] = "Jul";
+month[7] = "Aug";
+month[8] = "Sep";
+month[9] = "Oct";
+month[10] = "Nov";
+month[11] = "Dec";
+
+var day_name = new Array(7);
+day_name[0] = "Sunday";
+day_name[1] = "Monday";
+day_name[2] = "Tuesday";
+day_name[3] = "Wednesday";
+day_name[4] = "Thursday";
+day_name[5] = "Friday";
+day_name[6] = "Saturday";
+
+var month_name = month[d.getUTCMonth()];
+var weekday_name = day_name[d.getUTCDay()];
+var day = d.getUTCDate();
+var year = d.getUTCFullYear();
+var hours = d.getUTCHours();
+var minutes = d.getUTCMinutes();
+if (minutes < 10) {minutes = minutes + "0"} 
+
+var firstdate = weekday_name + ", " + month_name + " " + day ;
+var seconddate = hours + ":" + minutes;             
+            
+
+
+
+
+
+
+
+
+
+                $$( '#commentlist1' ).append('<div class="messages-date">'+ firstdate +'<span> '+ seconddate +'</span></div><div class="row"><div class="col-20" style="height:60px;"><a href="#" style="z-index:100;float:left;margin:0 auto;border:0;background-color:transparent;margin-top:20px;height:60px;" class="button"><img src="http://graph.facebook.com/'+response.data[i].from.id+'/picture?width=30&height=30" style="border-radius:50%;"/></a></div><div class="col-80"><div class="messages-date" style="float:left;margin:0;padding:0;"><span>'+ response.data[i].from.name +'</span></div><div style="background-color:#e5e5ea;padding:10px;border-radius:10px;margin-top:20px;"><div style="clear:both;">'+response.data[i].message+'</div><div style="float:right;margin-top:15px;" class="messages-date"><i class="pe-7s-like2"></i>'+response.data[i].like_count+'</div></div></div></div>');
+          	
+ 
+              	
+                }
+                
+            },
+        error: function() {alert('error not posted on facebook');}
+        	
+        });
+        	
+        	
+        }
         
         $$( "#commentloader" ).removeClass( "hide" );
         $$( "#chatloader" ).addClass( "hide" ); 
