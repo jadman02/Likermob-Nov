@@ -67,7 +67,7 @@ var app = {
   createPayment: function() {
     // for simplicity use predefined amount
     var paymentDetails = new PayPalPaymentDetails("0.01", "0.00", "0.00");
-    var payment = new PayPalPayment("0.01", "USD", "Save Deal", "Sale",
+    var payment = new PayPalPayment("0.01", "AUD", "Save Deal", "Sale",
       paymentDetails);
     return payment;
   },
