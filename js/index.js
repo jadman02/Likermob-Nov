@@ -1,198 +1,121 @@
 /*
- index.js
- Copyright 2014 AppFeel. All rights reserved.
- http://www.appfeel.com
- 
- AdMobAds Cordova Plugin (com.admob.google)
- 
- Permission is hereby granted, free of charge, to any person obtaining a copy
- of this software and associated documentation files (the "Software"), to
- deal in the Software without restriction, including without limitation the
- rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
- sell copies of the Software, and to permit persons to whom the Software is
- furnished to do so, subject to the following conditions:
- 
- The above copyright notice and this permission notice shall be included in
- all copies or substantial portions of the Software.
- 
- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
- SOFTWARE.
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
  */
-
 var app = {
-  // global vars
-  autoShowInterstitial: false,
-  progressDialog: document.getElementById("progressDialog"),
-  spinner: document.getElementById("spinner"),
-  weinre: {
-    enabled: false,
-    ip: '', // ex. http://192.168.1.13
-    port: '', // ex. 9090
-    targetApp: '' // ex. see weinre docs
-  },
-  
   // Application Constructor
-  initialize: function () {
-    if (( /(ipad|iphone|ipod|android)/i.test(navigator.userAgent) )) {
-      document.addEventListener('deviceready', this.onDeviceReady, false);
-    } else {
-      app.onDeviceReady();
-    }
-  },
-  // Must be called when deviceready is fired so AdMobAds plugin will be ready
-  initAds: function () {
-    var isAndroid = (/(android)/i.test(navigator.userAgent));
-    var adPublisherIds = {
-      ios : {
-        banner: 'ca-app-pub-8440343014846849/7078073011',
-        interstitial: 'ca-app-pub-8440343014846849/8554806210'
-      },
-      android : {
-        banner: 'ca-app-pub-8440343014846849/6338199818',
-        interstitial: 'ca-app-pub-8440343014846849/9791193812'
-      }
-    };
-
-    var admobid;
-    if (isAndroid) {
-      admobid = adPublisherIds.android;
-    } else {
-      admobid = adPublisherIds.ios;
-    }
-
-    admob.setOptions({
-      publisherId: admobid.banner,
-      interstitialAdId: admobid.interstitial,
-      bannerAtTop: true, // set to true, to put banner at top
-      overlap: false, // set to true, to allow banner overlap webview
-      offsetStatusBar: true, // set to true to avoid ios7 status bar overlap
-      isTesting: true, // receiving test ads (do not test with real ads as your account will be banned)
-      autoShowBanner: true, // auto show banners ad when loaded
-      autoShowInterstitial: false // auto show interstitials ad when loaded
-    });
+  initialize: function() {
+    this.bindEvents();
   },
   // Bind Event Listeners
-  bindAdEvents: function () {
-    document.addEventListener("orientationchange", this.onOrientationChange, false);
-    document.addEventListener(admob.events.onAdLoaded, this.onAdLoaded, false);
-    document.addEventListener(admob.events.onAdFailedToLoad, this.onAdFailedToLoad, false);
-    document.addEventListener(admob.events.onAdOpened, function (e) {}, false);
-    document.addEventListener(admob.events.onAdClosed, function (e) {}, false);
-    document.addEventListener(admob.events.onAdLeftApplication, function (e) {}, false);
-    document.addEventListener(admob.events.onInAppPurchaseRequested, function (e) {}, false);
+  //
+  // Bind any events that are required on startup. Common events are:
+  // 'load', 'deviceready', 'offline', and 'online'.
+  bindEvents: function() {
+    document.addEventListener('deviceready', this.onDeviceReady, false);
   },
-  
-  // -----------------------------------
-  // Events.
-  // The scope of 'this' is the event.
-  // -----------------------------------
-  onOrientationChange: function () {
-    app.onResize();
+  // deviceready Event Handler
+  //
+  // The scope of 'this' is the event. In order to call the 'receivedEvent'
+  // function, we must explicity call 'app.receivedEvent(...);'
+  onDeviceReady: function() {
+    app.receivedEvent('deviceready');
   },
-  onDeviceReady: function () {
-    var weinre,
-        weinreUrl;
-    
-    document.removeEventListener('deviceready', app.onDeviceReady, false);
-    
-    if (app.weinre.enabled) {
-      console.log('Loading weinre...');
-      weinre = document.createElement('script');
-      weinreUrl = app.weinre.ip + ":" + app.weinre.port;
-      weinreUrl += '/target/target-script-min.js';
-      weinreUrl += '#' + app.weinre.targetApp;
-      weinre.setAttribute('src', weinreUrl);
-      document.head.appendChild(weinre);
-    }
-    
-    if (admob) {
-      console.log('Binding ad events...');
-      app.bindAdEvents();
-      console.log('Initializing ads...');
-      app.initAds();
-    } else {
-      alert('AdMobAds plugin not ready');
-    }
+  // Update DOM on a Received Event
+  receivedEvent: function(id) {
+    var parentElement = document.getElementById(id);
+    var listeningElement = parentElement.querySelector('.listening');
+    var receivedElement = parentElement.querySelector('.received');
+
+    listeningElement.setAttribute('style', 'display:none;');
+    receivedElement.setAttribute('style', 'display:block;');
+
+    console.log('Received Event: ' + id);
+
+    // start to initialize PayPalMobile library
+    app.initPaymentUI();
   },
-  onAdLoaded: function (e) {
-    app.showProgress(false);
-    if (e.adType === admob.AD_TYPE.INTERSTITIAL) {
-      if (app.autoShowInterstitial) {
-        admob.showInterstitialAd();
-      } else {
-        alert("Interstitial is available. Click on 'Show Interstitial' to show it.");
-      }
-    }
+  initPaymentUI: function() {
+    var clientIDs = {
+      "PayPalEnvironmentProduction": "YOUR_PRODUCTION_CLIENT_ID",
+      "PayPalEnvironmentSandbox": "YOUR_SANDBOX_CLIENT_ID"
+    };
+    PayPalMobile.init(clientIDs, app.onPayPalMobileInit);
+
   },
-  onAdFailedToLoad: function(e) {
-    app.showProgress(false);
-    alert("Could not load ad: " + JSON.stringify(e));
+  onSuccesfulPayment: function(payment) {
+    console.log("payment success: " + JSON.stringify(payment, null, 4));
   },
-  onResize: function () {
-    var msg = 'Web view size: ' + window.innerWidth + ' x ' + window.innerHeight;
-    document.getElementById('sizeinfo').innerHTML = msg;
+  onAuthorizationCallback: function(authorization) {
+    console.log("authorization: " + JSON.stringify(authorization, null, 4));
   },
-  
-  // -----------------------------------
-  // App buttons functionality
-  // -----------------------------------
-  startBannerAds: function () {
-    app.showProgress(true);
-    admob.createBannerView(function (){}, function (e) {
-      alert(JSON.stringify(e));
+  createPayment: function() {
+    // for simplicity use predefined amount
+    var paymentDetails = new PayPalPaymentDetails("50.00", "0.00", "0.00");
+    var payment = new PayPalPayment("50.00", "USD", "Awesome Sauce", "Sale",
+      paymentDetails);
+    return payment;
+  },
+  configuration: function() {
+    // for more options see `paypal-mobile-js-helper.js`
+    var config = new PayPalConfiguration({
+      merchantName: "My test shop",
+      merchantPrivacyPolicyURL: "https://mytestshop.com/policy",
+      merchantUserAgreementURL: "https://mytestshop.com/agreement"
     });
+    return config;
   },
-  removeBannerAds: function () {
-    app.showProgress(false);
-    admob.destroyBannerView();
+  onPrepareRender: function() {
+    // buttons defined in index.html
+    //  <button id="buyNowBtn"> Buy Now !</button>
+    //  <button id="buyInFutureBtn"> Pay in Future !</button>
+    //  <button id="profileSharingBtn"> ProfileSharing !</button>
+    var buyNowBtn = document.getElementById("buyNowBtn");
+    var buyInFutureBtn = document.getElementById("buyInFutureBtn");
+    var profileSharingBtn = document.getElementById("profileSharingBtn");
+
+    buyNowBtn.onclick = function(e) {
+      // single payment
+      PayPalMobile.renderSinglePaymentUI(app.createPayment(), app.onSuccesfulPayment,
+        app.onUserCanceled);
+    };
+
+    buyInFutureBtn.onclick = function(e) {
+      // future payment
+      PayPalMobile.renderFuturePaymentUI(app.onAuthorizationCallback, app
+        .onUserCanceled);
+    };
+
+    profileSharingBtn.onclick = function(e) {
+      // profile sharing
+      PayPalMobile.renderProfileSharingUI(["profile", "email", "phone",
+        "address", "futurepayments", "paypalattributes"
+      ], app.onAuthorizationCallback, app.onUserCanceled);
+    };
   },
-  showBannerAds: function () {
-    app.showProgress(false);
-    admob.showBannerAd(true, function (){}, function (e) {
-      alert(JSON.stringify(e));
-    });
+  onPayPalMobileInit: function() {
+    // must be called
+    // use PayPalEnvironmentNoNetwork mode to get look and feel of the flow
+    PayPalMobile.prepareToRender("PayPalEnvironmentNoNetwork", app.configuration(),
+      app.onPrepareRender);
   },
-  hideBannerAds: function () {
-    app.showProgress(false);
-    admob.showBannerAd(false);
-  },
-  requestInterstitial: function (autoshow) {
-    app.showProgress(true);
-    app.autoShowInterstitial = autoshow;
-    admob.requestInterstitialAd(function (){}, function (e) {
-      alert(JSON.stringify(e));
-    });
-  },
-  showInterstitial: function() {
-    app.showProgress(false);
-    admob.showInterstitialAd(function (){}, function (e) {
-      alert(JSON.stringify(e));
-    });
-  },
-  showProgress: function(show) {
-    if (show) {
-      addClass(app.spinner, "animated");
-      removeClass(app.progressDialog, "hidden");
-    } else {
-      addClass(app.progressDialog, "hidden");
-      removeClass(app.spinner, "animated");
-    }
+  onUserCanceled: function(result) {
+    console.log(result);
   }
 };
 
-function removeClass(elem, cls) {
-  var str;
-  do {
-    str = " " + elem.className + " ";
-    elem.className = str.replace(" " + cls + " ", " ").replace(/^\s+|\s+$/g, "");
-  } while (str.match(cls));
-}
-
-function addClass(elem, cls) {
-  elem.className += (" " + cls);
-}
+app.initialize();
