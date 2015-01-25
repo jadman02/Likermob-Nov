@@ -849,6 +849,8 @@ function clearClickz(){var click1 = 0;}
         success: function(response) {
         $$( "#commentloader1" ).addClass( "hide" );
         $$( "#chatloader1" ).removeClass( "hide" ); 
+
+alert(click1);
        
 var last = response.summary.total_count;
 var cycles = Math.ceil(last / 5);
