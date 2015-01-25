@@ -10,12 +10,12 @@ var myApp = new Framework7({
 // Export selectors engine
 var $$ = Dom7;
 
-
+alert('2');
 
 myApp.onPageBeforeInit('index', function (page) {
 
 
-
+alert('3');
 
 var uid = localStorage.getItem("uid");
 
@@ -156,6 +156,8 @@ document.getElementById("amount").innerHTML = radius;
  
 //And now we initialize app
 myApp.init();
+
+alert('4');
 
 var mainView = myApp.addView('.view-main', {
     // Because we use fixed-through navbar we can enable dynamic navbar
