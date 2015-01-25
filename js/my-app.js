@@ -15,7 +15,6 @@ var $$ = Dom7;
 myApp.onPageBeforeInit('index', function (page) {
 
 
-/*
 var uid = localStorage.getItem("uid");
 
 var search1 = localStorage.getItem("search1");
@@ -53,7 +52,7 @@ $$( '#resultd' ).append('<li style="font-size:14px;padding-left:0px;padding-righ
 }
 
 document.getElementById("profilepic").innerHTML = '<img src="http://graph.facebook.com/' + uid + '/picture?type=normal" style="margin:0 auto;text-align:center;width:80px;border-radius:50%;"/>';
-*/
+
     functionEmpty('a',0,2,0);
 var existingEntries = JSON.parse(localStorage.getItem("allEntries"));
 var windowheight = $$(window).height();
