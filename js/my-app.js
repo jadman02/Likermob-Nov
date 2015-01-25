@@ -10,14 +10,7 @@ var myApp = new Framework7({
 // Export selectors engine
 var $$ = Dom7;
 
-var register = localStorage.getItem('register');
-if (register) {alert('register localstorage');}
-else {
-alert('no register localstorage');
-// Load page from about.html file to main View:
-mainView.router.loadPage('register.html');
-alert('register not in localstorage');	
-}	
+	
 
 myApp.onPageBeforeInit('index', function (page) {
 
@@ -163,7 +156,14 @@ document.getElementById("amount").innerHTML = radius;
 //And now we initialize app
 myApp.init();
 
-
+var register = localStorage.getItem('register');
+if (register) {alert('register localstorage');}
+else {
+alert('no register localstorage');
+// Load page from about.html file to main View:
+mainView.router.loadPage('register.html');
+alert('register not in localstorage');	
+}
 
 
 // Pull to refresh content
