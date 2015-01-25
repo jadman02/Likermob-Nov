@@ -2947,7 +2947,7 @@ myApp.modal({
      
      '</div></div></div>',
     buttons: [
-{text: '<i class="pe-7s-close pe-lg"></i>', onClick: function() {myApp.closeModal();click1 = 0;}},
+{text: 'Redeem', onClick: function() {myApp.closeModal();click1 = 0;}},
     ]
   });
 
