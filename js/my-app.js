@@ -157,23 +157,6 @@ document.getElementById("amount").innerHTML = radius;
 //And now we initialize app
 myApp.init();
 
-
-
-// Pull to refresh content
-var ptrContent = $$('.pull-to-refresh-content');
- 
-// Add 'refresh' listener on it
-ptrContent.on('refresh', function (e) {
-    // Emulate 2s loading
-  //  setTimeout(function () {
-$$("#result li").remove();
-$$("#loader-container").show();
-    functionEmpty('a',0,2,0);
-        // When loading done, we need to reset it
-        myApp.pullToRefreshDone();
- //   }, 500);
-});
-
 var mainView = myApp.addView('.view-main', {
     // Because we use fixed-through navbar we can enable dynamic navbar
     dynamicNavbar: true
@@ -192,6 +175,20 @@ alert('register not in localstorage');
 }	
 	
 
+// Pull to refresh content
+var ptrContent = $$('.pull-to-refresh-content');
+ 
+// Add 'refresh' listener on it
+ptrContent.on('refresh', function (e) {
+    // Emulate 2s loading
+  //  setTimeout(function () {
+$$("#result li").remove();
+$$("#loader-container").show();
+    functionEmpty('a',0,2,0);
+        // When loading done, we need to reset it
+        myApp.pullToRefreshDone();
+ //   }, 500);
+});
 
 
 
