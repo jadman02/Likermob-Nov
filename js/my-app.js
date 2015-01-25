@@ -2635,7 +2635,7 @@ function loadMore(page_id,url,title,uid,post_id){
             color: 'red',
             onClick: function () {
 myApp.modal({
-    title: 'Report ',
+    title: '<span style="padding-top:10px;">Report</span>',
     text: '<div class="content-block" style="padding:0;margin:0;max-height:200px;overflow: scroll;overflow-x:hidden;"><div class="content-block-inner" style="background-color:transparent;">'+
     '<div class="list-block" style="margin-top:10px;margin-bottom:0px;"><ul>'+
 '<li><label class="label-checkbox item-content"><input type="checkbox" id="fake-checkbox" name="fake-checkbox" value="fake"><div class="item-media"><i class="icon icon-form-checkbox"></i></div><div class="item-inner"><div class="item-title">Fake / Deceptive</div></div></label></li>'+
@@ -2932,7 +2932,7 @@ myApp.modal({
   
      text: '<div class="content-block modal-block" style="padding:0;margin:0;height:350px;border:0;overflow: scroll;overflow-x:hidden;"><div class="content-block-inner" style="background-color:transparent;border:0;"><div class="modal_inner" style="background-color:white;">'+
 '<div class="row">'+
-     '<div class="col-25"><div style="background-color:#c4c4c4;border-radius:10px;margin-left:10px;"><a href="#" onclick="getBusiness(\''+ page_id  +'\',\''+ name  +'\');" style="height:50px;z-index:100;margin:0 auto;border:0;background-color:transparent;" class="button"><img src="http://graph.facebook.com/'+page_id+'/picture?width=30&height=30" style="border-radius:50%;margin-top:10px;"/></a>'+staryellow + starblue+mapbutton+'<div id="loadmorebutton"></div></div> </div>'+
+     '<div class="col-25" style="margin-top:-90px;"><div style="background-color:#c4c4c4;border-radius:10px;margin-left:10px;"><a href="#" onclick="getBusiness(\''+ page_id  +'\',\''+ name  +'\');" style="height:50px;z-index:100;margin:0 auto;border:0;background-color:transparent;" class="button"><img src="http://graph.facebook.com/'+page_id+'/picture?width=30&height=30" style="border-radius:50%;margin-top:10px;"/></a>'+staryellow + starblue+mapbutton+'<div id="loadmorebutton"></div></div> </div>'+
         '<div class="col-75">'+
 
     
@@ -3041,7 +3041,7 @@ var uid = localStorage.getItem("uid");
     var url = "http://www.smilesavers.net.au/images/cover.png";
 
 myApp.modal({
-    title: 'Share on Facebook',
+    title: '<span style="padding-top:10px;">Share on Facebook</span>',
     text: '<div class="content-block" style="padding:0;margin:0;max-height:200px;overflow: scroll;overflow-x:hidden;"><div class="content-block-inner" style="background-color:transparent;"><img style="margin-top:10px;width:50%;" src="http://www.smilesavers.net.au/images/cover.png"/></div></div>',
      afterText:  '<div class="list-block" style="margin-top:10px;margin-bottom:10px;"><ul><li><div class="item-content"><div class="item-media"><img src="http://graph.facebook.com/'+ uid +'/picture?type=small"></div><div class="item-inner"><div class="item-input"><textarea id="dealbox1" placeholder="What do you think about Likermob?"></textarea></div></div></div></li></ul</div>',
    buttons: [
