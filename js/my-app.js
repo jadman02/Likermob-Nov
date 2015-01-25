@@ -2930,7 +2930,7 @@ if(favEntries.length > 0){for (j = 0; j < favEntries.length; j++) {if (favEntrie
 
 myApp.modal({
   
-     text: '<div class="content-block modal-block" style="padding:0;margin:0;height:350px;border:0;overflow: scroll;overflow-x:hidden;"><div class="content-block-inner" style="background-color:transparent;border:0;"><span class="badge" style="clear:both;float:right;margin-left:5px;background-color:#ff8000;"><i class="pe-7s-like2 pe-rotate-180" style="margin-right:2px;"></i>88</span><span class="badge" style="float:right;background-color:#3b5998;"><i class="pe-7s-like2" style="margin-right:2px;"></i>9</span><div class="modal_inner" style="background-color:white;">'+
+     text: '<div class="content-block modal-block" style="padding:0;margin:0;height:350px;border:0;overflow: scroll;overflow-x:hidden;"><div class="content-block-inner" style="background-color:transparent;border:0;"><div id="likebuttons"><span class="badge" style="clear:both;float:right;margin-left:5px;background-color:#ff8000;"><i class="pe-7s-like2 pe-rotate-180" style="margin-right:2px;"></i><div id="dislikeround"></div></span><span class="badge" style="float:right;background-color:#3b5998;"><i class="pe-7s-like2" style="margin-right:2px;"></i><div id="likeround"></div></span></div><div class="modal_inner" style="background-color:white;">'+
 '<div class="row">'+
      '<div class="col-25" style="margin-top:-60px;"><div style="background-color:#c4c4c4;border-radius:10px;margin-left:10px;"><a href="#" onclick="getBusiness(\''+ page_id  +'\',\''+ name  +'\');" style="height:50px;z-index:100;margin:0 auto;border:0;background-color:transparent;" class="button"><img src="http://graph.facebook.com/'+page_id+'/picture?width=30&height=30" style="border-radius:50%;margin-top:10px;"/></a>'+staryellow + starblue+mapbutton+'<div id="loadmorebutton"></div></div> </div>'+
         '<div class="col-75">'+
@@ -2958,15 +2958,18 @@ var img = new Image();
 	var height_image = ((img.height/img.width) * 270) -41;
 
      $$( '.modal_inner' ).css( 'margin-top', height_image + 'px' );
+     $$( '#likebuttons' ).css( 'margin-top', height_image + 'px' );
      }
 
 domain = "getdeal";data_send = "post_id=" + post_id;
 $$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', ''+ data_send +'',function(response){
-var title = response[0][3];var description = response[0][4];var terms = response[0][5];var title = response[0][5];
+var title = response[0][3];var description = response[0][4];var terms = response[0][5];var title = response[0][5];var like = response[0][17];var dislike = response[0][18];
 $$( '#titlediv' ).append(title);
 $$( '#descriptiondiv' ).append(description);
 $$( '#termsdiv' ).append(terms);
 $$( '#loadmorebutton' ).append('<a href="#" onclick="loadMore(\''+ page_id  +'\',\''+ url  +'\',\''+ title  +'\',\''+ uid +'\',\''+ post_id  +'\');" style="z-index:100;margin:0 auto;clear:both;height:40px;width:40px;padding-left:-5px;border:0;background-color:transparent;clear:both;" class="button"><i class="pe-7s-more pe-2x" style="margin-top:5px;"></i></a>');
+$$( '#likeround' ).append(like);
+$$( '#dislikeround' ).append(dislike);
 
 });	
 	
