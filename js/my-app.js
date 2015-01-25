@@ -2947,7 +2947,7 @@ myApp.modal({
      
      '</div></div></div>',
     buttons: [
-{text: '<i class="pe-7s-close pe-lg"></i>', onClick: function() {myApp.closeModal();}},
+{text: '<i class="pe-7s-close pe-lg"></i>', onClick: function() {myApp.closeModal();var click = 0;}},
     ]
   });
 
