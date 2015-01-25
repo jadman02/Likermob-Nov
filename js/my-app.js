@@ -175,20 +175,7 @@ alert('register not in localstorage');
 }	
 	
 
-// Pull to refresh content
-var ptrContent = $$('.pull-to-refresh-content');
- 
-// Add 'refresh' listener on it
-ptrContent.on('refresh', function (e) {
-    // Emulate 2s loading
-  //  setTimeout(function () {
-$$("#result li").remove();
-$$("#loader-container").show();
-    functionEmpty('a',0,2,0);
-        // When loading done, we need to reset it
-        myApp.pullToRefreshDone();
- //   }, 500);
-});
+
 
 
 
