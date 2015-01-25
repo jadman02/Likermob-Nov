@@ -2962,7 +2962,7 @@ var img = new Image();
 
 domain = "getdeal";data_send = "post_id=" + post_id;
 $$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', ''+ data_send +'',function(response){
-var title = response[0][3];var description = response[0][4];var terms = response[0][5];
+var title = response[0][3];var description = response[0][4];var terms = response[0][5];var title = response[0][5];
 $$( '#titlediv' ).append(title);
 $$( '#descriptiondiv' ).append(description);
 $$( '#termsdiv' ).append(terms);
