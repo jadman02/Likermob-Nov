@@ -10,10 +10,15 @@ var myApp = new Framework7({
 // Export selectors engine
 var $$ = Dom7;
 
+myApp.onPageBeforeRemove('index', function (page) {
+statusBarWhite();
+});
+
+
 myApp.onPageBeforeInit('index', function (page) {
 
 
-
+statusBarClear();
 var uid = localStorage.getItem("uid");
 
 var search1 = localStorage.getItem("search1");
