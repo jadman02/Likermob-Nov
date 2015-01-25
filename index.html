@@ -852,7 +852,7 @@ var last = response.summary.total_count;
 var cycles = Math.ceil(last / 5);
 if (click == 0) {start = 0; finish = 5;}
 else if (click == (cycles -1)) {start = click*5; finish = last-2;$$("#chatloader1").attr("disabled", "disabled");}
-else if (click > (cycles -1)) {var click = 0;start = 0; finish = 5;}
+else if ((click == cycles) && (click > 0) ) {var click = 0;start = 0; finish = 5;}
 else {start = click*5; finish = (click + 1) * 5;}
 
 
