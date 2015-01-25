@@ -159,7 +159,7 @@ document.getElementById("amount").innerHTML = radius;
  
 //And now we initialize app
 myApp.init();
-app.initialize();
+
 
 // Pull to refresh content
 var ptrContent = $$('.pull-to-refresh-content');
