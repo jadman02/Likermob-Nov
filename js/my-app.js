@@ -156,14 +156,7 @@ document.getElementById("amount").innerHTML = radius;
 //And now we initialize app
 myApp.init();
 
-var register = localStorage.getItem('register');
-if (register) {alert('register localstorage');}
-else {
-alert('no register localstorage');
-// Load page from about.html file to main View:
-mainView.router.loadPage('register.html');
-alert('register not in localstorage');	
-}
+
 
 
 // Pull to refresh content
@@ -188,7 +181,14 @@ var mainView = myApp.addView('.view-main', {
     dynamicNavbar: true
 });
 
-
+var register = localStorage.getItem('register');
+if (register) {alert('register localstorage');}
+else {
+alert('no register localstorage');
+// Load page from about.html file to main View:
+mainView.router.loadPage('register.html');
+alert('register not in localstorage');	
+}
 
 
 
