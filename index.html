@@ -841,14 +841,15 @@ function getCommentz(){
 
         var start;
         var finish;
-        
+
+function clearClickz(){var click1 = 0;}        
         
         openFB.api({
         path: '/174238599281322_824826047555904/comments?summary=1&',
         success: function(response) {
         $$( "#commentloader1" ).addClass( "hide" );
         $$( "#chatloader1" ).removeClass( "hide" ); 
-alert(click1);        
+       
 var last = response.summary.total_count;
 var cycles = Math.ceil(last / 5);
 if (click1 == 0) {start = 0; finish = 5;}
