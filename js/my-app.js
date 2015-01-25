@@ -2972,7 +2972,7 @@ $$( '#titlediv' ).append(title);
 $$( '#descriptiondiv' ).append(description);
 $$( '#termsdiv' ).append(terms);
 $$( '#postdiv' ).append('<a href="#" class="button" onclick="shareDeal(\''+ page_id  +'\',\''+ url  +'\',\''+ title  +'\')">Post</a>');
-$$( '#loadmorebutton' ).append('<a href="#" onclick="loadMore(\''+ page_id  +'\',\''+ url  +'\',\''+ title  +'\',\''+ uid +'\',\''+ post_id  +'\');" style="z-index:100;margin:0 auto;clear:both;height:40px;width:40px;border:0;background-color:transparent;clear:both;" class="button"><i class="pe-7s-more pe-2x" style="margin-top:5px;"></i></a>');
+//$$( '#loadmorebutton' ).append('<a href="#" onclick="loadMore(\''+ page_id  +'\',\''+ url  +'\',\''+ title  +'\',\''+ uid +'\',\''+ post_id  +'\');" style="z-index:100;margin:0 auto;clear:both;height:40px;width:40px;border:0;background-color:transparent;clear:both;" class="button"><i class="pe-7s-more pe-2x" style="margin-top:5px;"></i></a>');
 });	
 	
 
