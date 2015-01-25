@@ -10,12 +10,12 @@ var myApp = new Framework7({
 // Export selectors engine
 var $$ = Dom7;
 
-alert('1');
+
 
 myApp.onPageBeforeInit('index', function (page) {
 
 
-alert('2');
+
 
 var uid = localStorage.getItem("uid");
 
@@ -151,7 +151,7 @@ document.getElementById("amount").innerHTML = radius;
 	
 });	
 
-alert('3');
+
 
  
 //And now we initialize app
@@ -159,7 +159,20 @@ myApp.init();
 
 
 
-alert('4');
+// Pull to refresh content
+var ptrContent = $$('.pull-to-refresh-content');
+ 
+// Add 'refresh' listener on it
+ptrContent.on('refresh', function (e) {
+    // Emulate 2s loading
+  //  setTimeout(function () {
+$$("#result li").remove();
+$$("#loader-container").show();
+    functionEmpty('a',0,2,0);
+        // When loading done, we need to reset it
+        myApp.pullToRefreshDone();
+ //   }, 500);
+});
 
 var mainView = myApp.addView('.view-main', {
     // Because we use fixed-through navbar we can enable dynamic navbar
