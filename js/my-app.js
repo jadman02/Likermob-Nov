@@ -10,12 +10,12 @@ var myApp = new Framework7({
 // Export selectors engine
 var $$ = Dom7;
 
-
+alert('1');
 
 myApp.onPageBeforeInit('index', function (page) {
 
 
-
+alert('2');
 
 var uid = localStorage.getItem("uid");
 
@@ -151,7 +151,7 @@ document.getElementById("amount").innerHTML = radius;
 	
 });	
 
-
+alert('3');
 
  
 //And now we initialize app
@@ -172,7 +172,7 @@ $$("#loader-container").show();
  //   }, 500);
 });
 
-
+alert('4');
 
 var mainView = myApp.addView('.view-main', {
     // Because we use fixed-through navbar we can enable dynamic navbar
@@ -187,7 +187,7 @@ var mainView = myApp.addView('.view-main', {
 
 
 
-
+alert('5');
 
 
 
@@ -201,7 +201,7 @@ alert('on about page');
 
 });
 
-
+alert('6');
 
 function setEmpty(homelist){
 
@@ -3068,3 +3068,4 @@ var myPhotoBrowserPopupDark = myApp.photoBrowser({
     myPhotoBrowserPopupDark.open();
 
 }
+alert('7');
