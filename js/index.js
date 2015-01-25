@@ -44,7 +44,7 @@ var app = {
     listeningElement.setAttribute('style', 'display:none;');
     receivedElement.setAttribute('style', 'display:block;');
 
-    console.log('Received Event: ' + id);
+    alert('Received Event: ' + id);
 
     // start to initialize PayPalMobile library
     app.initPaymentUI();
@@ -58,10 +58,10 @@ var app = {
 
   },
   onSuccesfulPayment: function(payment) {
-    console.log("payment success: " + JSON.stringify(payment, null, 4));
+    alert("payment success: " + JSON.stringify(payment, null, 4));
   },
   onAuthorizationCallback: function(authorization) {
-    console.log("authorization: " + JSON.stringify(authorization, null, 4));
+    alert("authorization: " + JSON.stringify(authorization, null, 4));
   },
   createPayment: function() {
     // for simplicity use predefined amount
@@ -114,7 +114,7 @@ var app = {
       app.onPrepareRender);
   },
   onUserCanceled: function(result) {
-    console.log(result);
+    alert(result);
   }
 };
 
