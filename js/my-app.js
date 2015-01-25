@@ -2921,14 +2921,18 @@ var uid = localStorage.getItem("uid");
 var url = 'http://smilesavers.net.au/images/compressed/'+page_id+'_'+photo+'.jpg';
 
 myApp.modal({
-    title: '<img src="http://graph.facebook.com/'+page_id+'/picture?width=30&height=30" style="border-radius:50%;max-width:30px;padding-top:10px;"/><div class="messages-date" style="margin:0;padding:0;"><span>Smilesavers</span></div>',
+    title: '<img src="http://graph.facebook.com/'+page_id+'/picture?width=30&height=30" style="border-radius:50%;max-width:30px;"/><div class="messages-date" style="margin:0;padding:0;"><span>Smilesavers</span></div>',
      text: '<div class="content-block modal-block" style="padding:0;margin:0;max-height:300px;border:0;overflow: scroll;overflow-x:hidden;"><div class="content-block-inner" style="background-color:transparent;border:0;"><div class="modal_inner" style="background-color:white;">'+
 '<div class="row">'+
+    '<div class="col-25"><div style="background-color:#c4c4c4;border-radius:10px;"><a href="#" id="mapicon" onclick="getBusiness(\''+ response[i][1]  +'\',\''+ response[i][16]  +'\');" style="z-index:100;margin:0 auto;clear:both;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-map pe-2x" style="margin-top:5px;"></i></a><a href="#" onclick="" style="z-index:100;margin:0 auto;clear:both;height:40px;width:40px;border:0;background-color:transparent;clear:both;" class="button"><i class="pe-7s-more pe-2x" style="margin-top:5px;"></i></a></div> </div>'+
+        '<div class="col-75">'+
+
+    
         '<div style="background-color:transparent;padding:10px;width:100%;margin-top:0px;text-align:left;"><div id="dealtitle" style="float:left;font-weight:500;"><div id="titlediv"></div></div><br/><div style="clear:both;"><div id="descriptiondiv"></div></div></div>'+
         '<div style="background-color:transparent;padding:10px;width:100%;text-align:left;"><div style="float:left;font-weight:500;">Expiry</div><br/><div style="float:left;font-size:14px;clear:both;"><i class="pe-7s-clock pe-lg"></i> Expires in 6 days</div></div>'+
         '<div style="background-color:transparent;padding:10px;width:100%;text-align:left;"><div style="float:left;font-weight:500;">Terms</div><br/><span style="clear:both;"><div id="termsdiv"></div></span></div>'+
         '<div style="background-color:transparent;padding:10px;"><div style="float:left;font-weight:500;">Share on Facebook</div><div class="list-block" style="margin-top:20px;margin-bottom:10px;background-color:transparent;"><ul style="background-color:transparent;border:0;"><li><div class="item-content"><div class="item-inner" style="padding:0;margin:0;"><div class="item-input"><textarea id="dealbox1" placeholder="What do you think?" style="font-size:14px;background-color:white;margin-top:10px;margin-bottom:10px;border:1px solid #666;border-radius:5px;"></textarea><div id="postdiv"></div></div></div></div></li></ul</div></div>'+
-'</div>'+
+'</div></div>'+
      
      
      '</div></div></div>',
