@@ -833,10 +833,9 @@ function like(post_id) {
 
 var click = 0;
 
-    function getComments(type) {
-        
-        if (type='popup') {
-         $$( "#commentloader1" ).removeClass( "hide" );
+function getCommentz(){
+	
+ $$( "#commentloader1" ).removeClass( "hide" );
         $$( "#chatloader1" ).addClass( "hide" ); 	
 
         var start;
@@ -935,9 +934,13 @@ var seconddate = hours + ":" + minutes;
         error: function() {alert('error not posted on facebook');}
         	
         });
-        	
-        	
-        }
+        
+	
+}
+
+    function getComments() {
+        
+
         
         $$( "#commentloader" ).removeClass( "hide" );
         $$( "#chatloader" ).addClass( "hide" ); 
