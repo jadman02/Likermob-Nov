@@ -1,3 +1,15 @@
+// Wait for Cordova to load
+    //
+   document.addEventListener("deviceready", onDeviceReady, false);
+
+    // Cordova is ready
+    //
+    function onDeviceReady() {
+        navigator.geolocation.getCurrentPosition(onSuccess, onError);
+       
+       
+    }
+
     // onSuccess Geolocation
     //
     function onSuccess(position) {
