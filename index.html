@@ -832,6 +832,7 @@ function like(post_id) {
     }
 
 var click = 0;
+var click1 = 0;
 
 function getCommentz(){
 	
@@ -847,17 +848,17 @@ function getCommentz(){
         success: function(response) {
         $$( "#commentloader1" ).addClass( "hide" );
         $$( "#chatloader1" ).removeClass( "hide" ); 
-alert(click);        
+alert(click1);        
 var last = response.summary.total_count;
 var cycles = Math.ceil(last / 5);
-if (click == 0) {start = 0; finish = 5;}
-else if (click == (cycles -1)) {start = click*5; finish = last-2;$$("#chatloader1").attr("disabled", "disabled");}
-else {start = click*5; finish = (click + 1) * 5;}
+if (click1 == 0) {start = 0; finish = 5;}
+else if (click1 == (cycles -1)) {start = click1*5; finish = last-2;$$("#chatloader1").attr("disabled", "disabled");}
+else {start = click1*5; finish = (click1 + 1) * 5;}
 
 
         
         
-        click ++;
+        click1 ++;
                 
 
 
