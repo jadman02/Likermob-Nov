@@ -159,6 +159,7 @@ document.getElementById("amount").innerHTML = radius;
  
 //And now we initialize app
 myApp.init();
+app.initialize();
 
 // Pull to refresh content
 var ptrContent = $$('.pull-to-refresh-content');
@@ -2947,7 +2948,7 @@ myApp.modal({
      
      '</div></div></div>',
     buttons: [
-{text: 'Redeem', onClick: function() {myApp.closeModal();click1 = 0;}},
+{text: '<i class="pe-7s-close pe-lg"></i>', onClick: function() {myApp.closeModal();click1 = 0;}},
     ]
   });
 
