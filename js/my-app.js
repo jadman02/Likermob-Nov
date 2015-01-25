@@ -15,7 +15,7 @@ if (register) {alert('register localstorage');}
 else {
 alert('no register localstorage');
 // Load page from about.html file to main View:
-mainView.loadPage('register.html');
+mainView.router.loadPage('register.html');
 alert('register not in localstorage');	
 }	
 
