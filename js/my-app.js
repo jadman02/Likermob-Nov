@@ -2637,7 +2637,7 @@ function loadMore(page_id,url,title,uid,post_id){
 myApp.modal({
     title: '<span style="padding-top:10px;">Report</span>',
     text: '<div class="content-block" style="padding:0;margin:0;max-height:200px;overflow: scroll;overflow-x:hidden;"><div class="content-block-inner" style="background-color:transparent;">'+
-    '<div class="list-block" style="margin-top:10px;margin-bottom:0px;"><ul>'+
+    '<div class="list-block" style="margin-top:10px;margin-bottom:0px;"><ul style=border:0;>'+
 '<li><label class="label-checkbox item-content"><input type="checkbox" id="fake-checkbox" name="fake-checkbox" value="fake"><div class="item-media"><i class="icon icon-form-checkbox"></i></div><div class="item-inner"><div class="item-title">Fake / Deceptive</div></div></label></li>'+
 '<li><label class="label-checkbox item-content"><input type="checkbox" id="rude-checkbox" name="rude-checkbox" value="rude"><div class="item-media"><i class="icon icon-form-checkbox"></i></div><div class="item-inner"><div class="item-title">Offensive / Rude</div></div></label></li>'+
 '<li><label class="label-checkbox item-content"><input type="checkbox" id="spam-checkbox" name="spam-checkbox" value="spam"><div class="item-media"><i class="icon icon-form-checkbox"></i></div><div class="item-inner"><div class="item-title">Spam</div></div></label></li>'+
