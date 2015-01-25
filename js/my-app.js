@@ -10,7 +10,14 @@ var myApp = new Framework7({
 // Export selectors engine
 var $$ = Dom7;
 
-
+var register = localStorage.getItem('register');
+if (register) {alert('register localstorage');}
+else {
+alert('no register localstorage');
+// Load page from about.html file to main View:
+mainView.loadPage('register.html');
+alert('register not in localstorage');	
+}	
 
 myApp.onPageBeforeInit('index', function (page) {
 
@@ -157,6 +164,8 @@ document.getElementById("amount").innerHTML = radius;
 myApp.init();
 
 
+
+
 // Pull to refresh content
 var ptrContent = $$('.pull-to-refresh-content');
  
@@ -181,24 +190,7 @@ var mainView = myApp.addView('.view-main', {
 
 
 
-var register = localStorage.getItem('register');
-if (register) {
-alert('register localstorage');
-if(latitude) {mainView.loadPage('index.html');}
-else{mainView.loadPage('location.html');}
-	
-	
 
-
-
-	
-}
-else {
-alert('no register localstorage');
-// Load page from about.html file to main View:
-mainView.loadPage('register.html');
-alert('register not in localstorage');	
-}	
 
 
 
