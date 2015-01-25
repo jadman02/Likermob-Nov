@@ -26,7 +26,6 @@
 <param name="URL_SCHEME" value="likermob" />
 </gap:plugin>
 <gap:plugin name="com.paypal.cordova.mobilesdk" source="plugins.cordova.io" />
-<gap:plugin name="com.rjfun.cordova.plugin.paypalmpl" source="plugins.cordova.io" />
 <preference name="orientation" value="portrait" />
 <preference name="DisallowOverscroll" value="true" />
 <feature name="InAppPurchase">
