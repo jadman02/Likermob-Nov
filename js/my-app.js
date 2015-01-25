@@ -2924,7 +2924,7 @@ myApp.modal({
     title: '<img src="http://graph.facebook.com/'+page_id+'/picture?width=30&height=30" style="border-radius:50%;max-width:30px;"/><div class="messages-date" style="margin:0;padding:0;"><span>Smilesavers</span></div>',
      text: '<div class="content-block modal-block" style="padding:0;margin:0;max-height:300px;border:0;overflow: scroll;overflow-x:hidden;"><div class="content-block-inner" style="background-color:transparent;border:0;"><div class="modal_inner" style="background-color:white;">'+
 '<div class="row">'+
-    '<div class="col-25"><div style="background-color:#c4c4c4;border-radius:10px;"><a href="#" id="mapicon" onclick="getBusiness(\''+ response[i][1]  +'\',\''+ response[i][16]  +'\');" style="z-index:100;margin:0 auto;clear:both;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-map pe-2x" style="margin-top:5px;"></i></a><a href="#" onclick="" style="z-index:100;margin:0 auto;clear:both;height:40px;width:40px;border:0;background-color:transparent;clear:both;" class="button"><i class="pe-7s-more pe-2x" style="margin-top:5px;"></i></a></div> </div>'+
+    '<div class="col-25"><div style="background-color:#c4c4c4;border-radius:10px;"><a href="#" id="mapicon" onclick="getBusiness(\''+ page_id  +'\',\''+ name  +'\');" style="z-index:100;margin:0 auto;clear:both;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-map pe-2x" style="margin-top:5px;"></i></a><a href="#" onclick="" style="z-index:100;margin:0 auto;clear:both;height:40px;width:40px;border:0;background-color:transparent;clear:both;" class="button"><i class="pe-7s-more pe-2x" style="margin-top:5px;"></i></a></div> </div>'+
         '<div class="col-75">'+
 
     
