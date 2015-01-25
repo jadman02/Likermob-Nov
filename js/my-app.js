@@ -15,7 +15,7 @@ var $$ = Dom7;
 myApp.onPageBeforeInit('index', function (page) {
 
 
-
+/*
 var uid = localStorage.getItem("uid");
 
 var search1 = localStorage.getItem("search1");
@@ -53,7 +53,7 @@ $$( '#resultd' ).append('<li style="font-size:14px;padding-left:0px;padding-righ
 }
 
 document.getElementById("profilepic").innerHTML = '<img src="http://graph.facebook.com/' + uid + '/picture?type=normal" style="margin:0 auto;text-align:center;width:80px;border-radius:50%;"/>';
-
+*/
     functionEmpty('a',0,2,0);
 var existingEntries = JSON.parse(localStorage.getItem("allEntries"));
 var windowheight = $$(window).height();
@@ -61,9 +61,6 @@ $$('.badge-like').text(existingEntries.length);
 
  $$( '.statusbar-overlay' ).css( 'background-size', '100% ' + windowheight + '%');
 
-$$('.swipeout').on('deleted', function () {
-  myApp.alert('Item removed');
-}); 
 
 var previousScrollPosition = 0;
 $$('.pull-to-refresh-content').on('scroll', function (e) {
@@ -187,7 +184,7 @@ var mainView = myApp.addView('.view-main', {
 
 var register = localStorage.getItem('register');
 if (register) {
-//alert('register localstorage');
+alert('register localstorage');
 if(latitude) {mainView.loadPage('index.html');}
 else{mainView.loadPage('location.html');}
 	
@@ -198,7 +195,7 @@ else{mainView.loadPage('location.html');}
 	
 }
 else {
-
+alert('no register localstorage');
 // Load page from about.html file to main View:
 mainView.loadPage('register.html');
 alert('register not in localstorage');	
