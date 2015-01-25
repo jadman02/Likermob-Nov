@@ -2930,8 +2930,7 @@ if(favEntries.length > 0){for (j = 0; j < favEntries.length; j++) {if (favEntrie
 
 myApp.modal({
   
-     text: '<span class="badge" style="clear:both;float:right;margin-left:5px;background-color:#ff8000;"><i class="pe-7s-like2 pe-rotate-180" style="margin-right:2px;"></i>88</span><span class="badge" style="float:right;background-color:#3b5998;"><i class="pe-7s-like2" style="margin-right:2px;"></i>9</span><div class="content-block modal-block" style="padding:0;margin:0;height:350px;border:0;overflow: scroll;overflow-x:hidden;"><div class="content-block-inner" style="background-color:transparent;border:0;"><div class="modal_inner" style="background-color:white;">'+
-
+     text: '<div class="content-block modal-block" style="padding:0;margin:0;height:350px;border:0;overflow: scroll;overflow-x:hidden;"><div class="content-block-inner" style="background-color:transparent;border:0;"><span class="badge" style="clear:both;float:right;margin-left:5px;background-color:#ff8000;"><i class="pe-7s-like2 pe-rotate-180" style="margin-right:2px;"></i>88</span><span class="badge" style="float:right;background-color:#3b5998;"><i class="pe-7s-like2" style="margin-right:2px;"></i>9</span><div class="modal_inner" style="background-color:white;">'+
 '<div class="row">'+
      '<div class="col-25" style="margin-top:-60px;"><div style="background-color:#c4c4c4;border-radius:10px;width:50px;margin:0 auto;"><a href="#" onclick="getBusiness(\''+ page_id  +'\',\''+ name  +'\');" style="height:50px;z-index:100;margin:0 auto;border:0;background-color:transparent;" class="button"><img src="http://graph.facebook.com/'+page_id+'/picture?width=30&height=30" style="border-radius:50%;margin-top:10px;"/></a>'+staryellow + starblue+mapbutton+'<div id="loadmorebutton"></div></div> </div>'+
         '<div class="col-75">'+
