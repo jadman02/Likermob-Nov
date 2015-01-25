@@ -10,9 +10,10 @@ var myApp = new Framework7({
 // Export selectors engine
 var $$ = Dom7;
 
-	
+
 
 myApp.onPageBeforeInit('index', function (page) {
+
 
 
 var uid = localStorage.getItem("uid");
@@ -60,6 +61,9 @@ $$('.badge-like').text(existingEntries.length);
 
  $$( '.statusbar-overlay' ).css( 'background-size', '100% ' + windowheight + '%');
 
+$$('.swipeout').on('deleted', function () {
+  myApp.alert('Item removed');
+}); 
 
 var previousScrollPosition = 0;
 $$('.pull-to-refresh-content').on('scroll', function (e) {
@@ -156,9 +160,6 @@ document.getElementById("amount").innerHTML = radius;
 //And now we initialize app
 myApp.init();
 
-
-
-
 // Pull to refresh content
 var ptrContent = $$('.pull-to-refresh-content');
  
@@ -181,16 +182,18 @@ var mainView = myApp.addView('.view-main', {
     dynamicNavbar: true
 });
 
+
+
 var register = localStorage.getItem('register');
-if (register) {alert('register localstorage');}
+if (register) {
+alert('register localstorage');
+}
 else {
-alert('no register localstorage');
+
 // Load page from about.html file to main View:
 mainView.router.loadPage('register.html');
 alert('register not in localstorage');	
-}
-
-
+}	
 
 
 
@@ -2936,7 +2939,7 @@ myApp.modal({
      
      '</div></div></div>',
     buttons: [
-{text: '<span id="buyNowBtn" style="width:100%;height:100%;">Redeem</span>', onClick: function() {myApp.closeModal();click1 = 0;}},
+{text: 'Redeem', onClick: function() {myApp.closeModal();click1 = 0;}},
     ]
   });
 
