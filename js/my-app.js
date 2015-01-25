@@ -2932,13 +2932,13 @@ myApp.modal({
   
      text: '<div class="content-block modal-block" style="padding:0;margin:0;height:350px;border:0;overflow: scroll;overflow-x:hidden;"><div class="content-block-inner" style="background-color:transparent;border:0;"><div class="modal_inner" style="background-color:white;">'+
 '<div class="row">'+
-     '<div class="col-25" style="margin-top:-90px;"><div style="background-color:#c4c4c4;border-radius:10px;margin-left:10px;"><a href="#" onclick="getBusiness(\''+ page_id  +'\',\''+ name  +'\');" style="height:50px;z-index:100;margin:0 auto;border:0;background-color:transparent;" class="button"><img src="http://graph.facebook.com/'+page_id+'/picture?width=30&height=30" style="border-radius:50%;margin-top:10px;"/></a>'+staryellow + starblue+mapbutton+'<div id="loadmorebutton"></div></div> </div>'+
+     '<div class="col-25" style="margin-top:-60px;"><div style="background-color:#c4c4c4;border-radius:10px;margin-left:10px;margin-right:-10px;"><a href="#" onclick="getBusiness(\''+ page_id  +'\',\''+ name  +'\');" style="height:50px;z-index:100;margin:0 auto;border:0;background-color:transparent;" class="button"><img src="http://graph.facebook.com/'+page_id+'/picture?width=30&height=30" style="border-radius:50%;margin-top:10px;"/></a>'+staryellow + starblue+mapbutton+'<div id="loadmorebutton"></div></div> </div>'+
         '<div class="col-75">'+
 
     
         '<div style="background-color:transparent;padding:10px;width:100%;margin-top:0px;text-align:left;"><div id="dealtitle" style="float:left;font-weight:500;"><div id="titlediv"></div></div><br/><div style="clear:both;"><div id="descriptiondiv"></div></div></div>'+
         '<div style="background-color:transparent;padding:10px;width:100%;text-align:left;"><div style="float:left;font-weight:500;">Expiry</div><br/><div style="float:left;font-size:14px;clear:both;"><i class="pe-7s-clock pe-lg"></i> Expires in 6 days</div></div>'+
-        '<div style="background-color:transparent;padding:10px;width:100%;text-align:left;"><div style="float:left;font-weight:500;margin-top:10px;">Terms</div><br/><span style="clear:both;"><div id="termsdiv"></div></span></div>'+
+        '<div style="background-color:transparent;padding:10px;width:100%;text-align:left;"><div style="float:left;font-weight:500;margin-top:10px;">Terms</div><br/><span style="clear:both;float:none;"><div id="termsdiv"></div></span></div>'+
 '</div></div>'+
      
      
