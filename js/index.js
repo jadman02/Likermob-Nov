@@ -52,7 +52,7 @@ var app = {
   },
   initPaymentUI: function() {
     var clientIDs = {
-      "PayPalEnvironmentProduction": "YOUR_PRODUCTION_CLIENT_ID",
+      "PayPalEnvironmentProduction": "AVqEHhAgcXuN1s2VzWR_zD1x05Gk8OlYfKvLuEjAXjOB82QFWl_I7ah5xVFt",
       "PayPalEnvironmentSandbox": "AXqKOBDgzkHonJKdFZxm9c7uAq-Kkp_Id_9pisISi6R5-Qum876wU8AktkLW"
     };
     PayPalMobile.init(clientIDs, app.onPayPalMobileInit);
@@ -111,7 +111,7 @@ var app = {
   onPayPalMobileInit: function() {
     // must be called
     // use PayPalEnvironmentNoNetwork mode to get look and feel of the flow
-    PayPalMobile.prepareToRender("PayPalEnvironmentSandbox", app.configuration(),
+    PayPalMobile.prepareToRender("PayPalEnvironmentProduction", app.configuration(),
       app.onPrepareRender);
   },
   onUserCanceled: function(result) {
