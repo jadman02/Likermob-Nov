@@ -2932,7 +2932,6 @@ myApp.modal({
      
      
      '</div></div></div>',
-    afterText:'yo',
     buttons: [
 {text: '<i class="pe-7s-close pe-lg"></i>', onClick: function() {myApp.closeModal();}},
     ]
