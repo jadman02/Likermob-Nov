@@ -2919,12 +2919,19 @@ function removelikelList(post_id,page_id,photo,name,type){
 alert(type);
 var uid = localStorage.getItem("uid");
 var url = 'http://smilesavers.net.au/images/compressed/'+page_id+'_'+photo+'.jpg';
+var favEntries = JSON.parse(localStorage.getItem("favEntries"));
+if(favEntries == null) favEntries = [];
+var staryellow = '<i class="pe-7s-star pe-lg hide" onclick="removefavList(\''+ page_id  +'\',\''+ post_id  +'\')" id="yellow_'+ post_id +'" style="border:20px solid transparent;margin-top:-10px;color:#ffcc00;"></i>';
+var starblue = '<i class="pe-7s-star pe-lg" onclick="favList(\''+ page_id  +'\',\''+ post_id  +'\',\''+ name  +'\')" id="blue_'+ post_id +'" style="border:20px solid transparent;margin-top:-10px;"></i>';
+
+if(favEntries.length > 0){for (j = 0; j < favEntries.length; j++) {if (favEntries[j].page_id == page_id){staryellow = '<i class="pe-7s-star pe-lg" onclick="removefavList(\''+  page_id  +'\',\''+ post_id  +'\')" id="yellow_'+ post_id +'" style="border:20px solid transparent;color:#ffcc00;margin-top:-10px;"></i>';starblue = '<i class="pe-7s-star pe-lg hide" onclick="favList(\''+ page_id  +'\',\''+ post_id  +'\',\''+ name  +'\')" id="blue_'+ post_id +'" style="border:20px solid transparent;margin-top:-10px;"></i>';}}}
+
 
 myApp.modal({
-    title: '<img src="http://graph.facebook.com/'+page_id+'/picture?width=30&height=30" style="border-radius:50%;max-width:30px;"/><div class="messages-date" style="margin:0;padding:0;"><span>Smilesavers</span></div>',
+  
      text: '<div class="content-block modal-block" style="padding:0;margin:0;max-height:300px;border:0;overflow: scroll;overflow-x:hidden;"><div class="content-block-inner" style="background-color:transparent;border:0;"><div class="modal_inner" style="background-color:white;">'+
 '<div class="row">'+
-    '<div class="col-25"><div style="background-color:#c4c4c4;border-radius:10px;"><a href="#" id="mapicon" onclick="getBusiness(\''+ page_id  +'\',\''+ name  +'\');" style="z-index:100;margin:0 auto;clear:both;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-map pe-2x" style="margin-top:5px;"></i></a><a href="#" onclick="" style="z-index:100;margin:0 auto;clear:both;height:40px;width:40px;border:0;background-color:transparent;clear:both;" class="button"><i class="pe-7s-more pe-2x" style="margin-top:5px;"></i></a></div> </div>'+
+    '<div class="col-25"><div style="background-color:#c4c4c4;border-radius:10px;"><a href="#" onclick="getBusiness(\''+ response[i][1]  +'\',\''+ response[i][16]  +'\');" style="height:50px;z-index:100;margin:0 auto;border:0;background-color:transparent;" class="button"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=30&height=30" style="border-radius:50%;margin-top:10px;"/></a>'+staryellow + starblue+'<a href="#" id="mapicon" onclick="getBusiness(\''+ page_id  +'\',\''+ name  +'\');" style="z-index:100;margin:0 auto;clear:both;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-map pe-2x" style="margin-top:5px;"></i></a><a href="#" onclick="" style="z-index:100;margin:0 auto;clear:both;height:40px;width:40px;border:0;background-color:transparent;clear:both;" class="button"><i class="pe-7s-more pe-2x" style="margin-top:5px;"></i></a></div> </div>'+
         '<div class="col-75">'+
 
     
