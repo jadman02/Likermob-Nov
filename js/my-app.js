@@ -172,8 +172,8 @@ var mainView = myApp.addView('.view-main', {
 
 
 	
-var register = localStorage.getItem('register');
-if (register) {
+var auth_token = localStorage.getItem('auth_token');
+if (auth_token) {
 alert('register localstorage');
 }
 else {
@@ -3068,4 +3068,4 @@ var myPhotoBrowserPopupDark = myApp.photoBrowser({
     myPhotoBrowserPopupDark.open();
 
 }
-alert('7');
+
