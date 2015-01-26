@@ -25,6 +25,7 @@ else {
 // Load page from about.html file to main View:
 statusBarWhite();
 mainView.router.loadPage('register.html');
+window.plugins.AdMob.showAd(false);
 alert('register not in localstorage');	
 }
 
