@@ -23,9 +23,9 @@ alert('register localstorage');
 else {
 
 // Load page from about.html file to main View:
-statusBarWhite();
 mainView.router.loadPage('register.html');
 alert('register not in localstorage');	
+$$('#likebar').hide();
 }
 
 
