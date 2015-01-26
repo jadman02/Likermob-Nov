@@ -169,7 +169,7 @@ var mainView = myApp.addView('.view-main', {
 });
 
 
-mainView.router.loadPage('register.html');
+
 	
 
 
