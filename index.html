@@ -820,10 +820,12 @@ var modal = myApp.modal({
     }
 
     function mylikes() {
+        alert('mylikes')
         var page_id = [];
         openFB.api({
             path: '/me/likes',
             success: function(response) {
+                alert('mylikes got through')
                 for (i = 0; i < response.data.length; i++){page_id.push(response.data[i].id + "_" + response.data[i].name);}
             favList(page_id);
             
