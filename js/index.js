@@ -46,7 +46,6 @@ var app = {
     receivedElement.setAttribute('style', 'display:block;');
 
     alert('Received Event: ' + id);
-    mainView.router.loadPage('register.html');
 
     // start to initialize PayPalMobile library
     app.initPaymentUI();
