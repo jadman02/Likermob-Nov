@@ -227,7 +227,7 @@
                 </div>
             </div>
         </li>
-        <li>
+        <li onclick="logout();">
             <div class="item-content">
                 <div class="item-media">
                     <i class="pe-7s-key pe-lg"></i>
@@ -645,7 +645,6 @@
                         alert('Facebook login succeeded, got access token: ' + response.authResponse.token);
 						document.getElementById('status').innerHTML = 'user is logged';
 						localStorage.setItem("auth_token", response.authResponse.token);
-						localStorage.setItem("register", "register");
 						//mainView.loadPage('location.html');
 						 openFB.api({
             path: '/me',
@@ -1214,7 +1213,9 @@ function getMyPages(){
     }
 
     function errorHandler(error) {
-        alert(error.message);
+       alert('Sorry you need to be logged in for that! Error:' + error.message);
+     login();
+
     }
 
 </script>    
