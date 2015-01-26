@@ -1209,13 +1209,15 @@ function getMyPages(){
                 function() {
                     alert('Logout successful');
                     mainView.router.loadPage('register.html');
+                    statusBarWhite();window.plugins.AdMob.showAd(false);
+                    localStorage.removeItem("auth_token");
                 },
                 errorHandler);
     }
 
     function errorHandler(error) {
        alert('Sorry you need to be logged in for that! Error:' + error.message);
-     login();
+     
 
     }
 
