@@ -875,7 +875,7 @@ document.getElementById("after-liked2").value = likecount;
 function favList(page_id,post_id,name) {
 alert('favList()');
 if (post_id == '9') {$$( '#blue_b' ).hide();$$( '#yellow_b' ).show();}
-if (typeof post_id === 'undefined') {$$( '.starcon_' + page_id ).css( 'color', '#ffcc00');}
+if (typeof post_id == '8') {$$( '.starcon_' + page_id ).css( 'color', '#ffcc00');}
 var d = new Date();
     var timestamp = d.getTime();
 var favEntries = JSON.parse(localStorage.getItem("favEntries"));
@@ -2832,7 +2832,7 @@ var myList = myApp.virtualList('.list-block.virtual-list', {
                   '<div class="item-inner virtual-inner">' +
                      '<div class="item-title-row">'+
                          '<div class="item-title">' + item.name + '</div>' +
-                        '<div class="item-after" onclick="favList('+item.page_id+')"><i class="pe-7s-star pe-lg starcon_'+item.page_id+'" style="color:#666;"></i></div>'+
+                        '<div class="item-after" onclick="favList('+item.page_id+',8)"><i class="pe-7s-star pe-lg starcon_'+item.page_id+'" style="color:#666;"></i></div>'+
                     '</div>'+
                   '</div>' +
                '</li>';
