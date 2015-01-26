@@ -178,6 +178,7 @@ else {
 
 // Load page from about.html file to main View:
 mainView.router.loadPage('register.html');
+statusBarWhite();
 alert('register not in localstorage');	
 }
 	
