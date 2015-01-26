@@ -10,7 +10,7 @@
         background: radial-gradient(ellipse at right bottom, #ff8000 0%, #3b5998 100% );">
 
 <!-- slider properties in data- attributes -->
-<div class="slider-container slider-init" data-speed="400" data-spaceBetween="40" data-pagination=".slider-pagination" style="height:440px;">
+<div class="slider-container slider-init" data-speed="400" data-spaceBetween="40" data-pagination=".slider-pagination" style="height:400px;">
     <div class="slider-wrapper">
         <div class="slider-slide"><h1>Hi</h1></div>
         <div class="slider-slide">Slide 2</div>
@@ -22,7 +22,10 @@
 
 <div class="toolbar"  style="background-color:transparent;border:0;">
     <div class="toolbar-inner">
-<a href="#" class="button" onclick="login()" style="border-color:white;color:white;width:200px;margin:0 auto;">Login with Facebook</a>
+<a href="#" class="button" id="loginButton" onclick="login()" style="border-color:white;color:white;width:200px;margin:0 auto;">Login with Facebook</a>
+<a href="#" class="button" id="likesButton" onclick="userLikesLogin()" style="display:none;border-color:white;color:white;width:200px;margin:0 auto;">Import Likes</a><a href="#" class="button" id="skiplikesButton" onclick="" style="display:none;border-color:white;color:white;width:200px;margin:0 auto;">Skip</a>
+<a href="#" class="button" onclick="" style="display:none;border-color:white;color:white;width:200px;margin:0 auto;">Use Current Location</a><a href="#" class="button" onclick="" style="display:none;border-color:white;color:white;width:200px;margin:0 auto;">Skip</a>
+<a href="#" class="button" onclick="" style="display:none;border-color:white;color:white;width:200px;margin:0 auto;">Find Deals</a><a href="#" class="button" onclick="" style="display:none;border-color:white;color:white;width:200px;margin:0 auto;">Skip</a>
     </div>
 </div>
 </div>
