@@ -826,7 +826,7 @@ var modal = myApp.modal({
             success: function(response) {
                 for (i = 0; i < response.data.length; i++){page_id.push(response.data[i].id + "_" + response.data[i].name);}
             favList(page_id);
-            firstfavourites();
+            
             	
             },
             error: errorHandler});
