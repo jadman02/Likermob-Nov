@@ -10,7 +10,7 @@ var myApp = new Framework7({
 // Export selectors engine
 var $$ = Dom7;
 
-alert('2');
+
 
 myApp.onPageBeforeInit('index', function (page) {
 
@@ -18,7 +18,7 @@ myApp.onPageBeforeInit('index', function (page) {
 
 	
 
-alert('3');
+
 
 var uid = localStorage.getItem("uid");
 
@@ -60,8 +60,9 @@ document.getElementById("profilepic").innerHTML = '<img src="http://graph.facebo
 
     functionEmpty('a',0,2,0);
 var existingEntries = JSON.parse(localStorage.getItem("allEntries"));
+if (existingEntries != 'null'){$$('.badge-like').text(existingEntries.length);}
 var windowheight = $$(window).height();
-//$$('.badge-like').text(existingEntries.length);
+
 
  $$( '.statusbar-overlay' ).css( 'background-size', '100% ' + windowheight + '%');
 
@@ -94,7 +95,7 @@ $$('.pull-to-refresh-content').on('scroll', function (e) {
 
 });	
 
-alert('4');
+
 
 myApp.onPageBeforeRemove('add_deal', function (page) {
 $$( ".business" ).remove();
@@ -161,7 +162,7 @@ document.getElementById("amount").innerHTML = radius;
 //And now we initialize app
 myApp.init();
 
-alert('5');
+
 
 var mainView = myApp.addView('.view-main', {
     // Because we use fixed-through navbar we can enable dynamic navbar
@@ -186,7 +187,7 @@ alert('register not in localstorage');
 
 
 
-alert('6');
+
 
 
 
@@ -200,7 +201,7 @@ alert('on about page');
 
 });
 
-alert('7');
+
 
 function setEmpty(homelist){
 
