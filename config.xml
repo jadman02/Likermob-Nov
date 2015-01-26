@@ -27,6 +27,7 @@
 </gap:plugin>
 <gap:plugin name="com.paypal.cordova.mobilesdk" source="plugins.cordova.io" />
 <gap:plugin name="com.blackpositive.cordova.plugin.admob" source="plugins.cordova.io" />
+<gap:plugin name="com.paypal.mpl-ios" source="plugins.cordova.io" />
 <preference name="orientation" value="portrait" />
 <preference name="DisallowOverscroll" value="true" />
 <feature name="InAppPurchase">
