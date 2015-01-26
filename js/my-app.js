@@ -882,7 +882,7 @@ var favEntries = JSON.parse(localStorage.getItem("favEntries"));
 if(favEntries == null) favEntries = [];
 
 if (page_id instanceof Array){
-
+alert(page_id);
 	for (i = 0; i < page_id.length; i++){
 		var page_name = page_id[i].split('_')[1];
 		var page_ide = page_id[i].split('_')[0];
