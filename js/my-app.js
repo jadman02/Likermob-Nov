@@ -873,7 +873,7 @@ document.getElementById("after-liked2").value = likecount;
 }
 
 function favList(page_id,post_id,name) {
-alert('favList()');
+
 if (post_id == '9') {$$( '#blue_b' ).hide();$$( '#yellow_b' ).show();}
 if (post_id == '8') {$$( '.starcon_' + page_id ).css( 'color', '#ffcc00');}
 var d = new Date();
@@ -882,7 +882,7 @@ var favEntries = JSON.parse(localStorage.getItem("favEntries"));
 if(favEntries == null) favEntries = [];
 
 if (page_id instanceof Array){
-alert('page_id favList()');
+
 	for (i = 0; i < page_id.length; i++){
 		var page_name = page_id[i].split('_')[1];
 		var page_ide = page_id[i].split('_')[0];
@@ -900,7 +900,7 @@ alert('page_id favList()');
   
 	}
 alert(localStorage.getItem("favEntries"));	
-firstfavourites();
+//firstfavourites();
 }
 else {
 
@@ -918,7 +918,7 @@ $$( '#blue_' + post_id ).addClass( 'hide' );
     favEntries.push(faventry);
     localStorage.setItem("favEntries", JSON.stringify(favEntries));
 
-  //alert(localStorage.getItem("favEntries"));	
+  alert(localStorage.getItem("favEntries"));	
 	
 }
 
