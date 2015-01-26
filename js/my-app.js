@@ -61,7 +61,7 @@ document.getElementById("profilepic").innerHTML = '<img src="http://graph.facebo
     functionEmpty('a',0,2,0);
 var existingEntries = JSON.parse(localStorage.getItem("allEntries"));
 var windowheight = $$(window).height();
-$$('.badge-like').text(existingEntries.length);
+//$$('.badge-like').text(existingEntries.length);
 
  $$( '.statusbar-overlay' ).css( 'background-size', '100% ' + windowheight + '%');
 
@@ -171,7 +171,16 @@ var mainView = myApp.addView('.view-main', {
 
 
 	
+var register = localStorage.getItem('register');
+if (register) {
+alert('register localstorage');
+}
+else {
 
+// Load page from about.html file to main View:
+mainView.router.loadPage('register.html');
+alert('register not in localstorage');	
+}
 
 
 
