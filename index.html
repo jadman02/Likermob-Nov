@@ -227,7 +227,7 @@
                 </div>
             </div>
         </li>
-        <li onclick="logout()">
+        <li>
             <div class="item-content">
                 <div class="item-media">
                     <i class="pe-7s-key pe-lg"></i>
@@ -564,7 +564,6 @@
     </div>
 
 
-<a href="#" class="button" onclick="accessToken()">accessToken()</a>
 <a href="#" class="button" onclick="favouritesPage()">favouritesPage()</a>
 <a href="#" class="button" onclick="mylikes()">mylikes()</a>
 <a href="#" class="button" onclick="clearEntries()">Clear Entries</a>
@@ -640,13 +639,13 @@
       openFB.init({appId: '129670517205110', tokenStore: window.localStorage});
 
     function login() {
-        alert('login');
         openFB.login(
                 function(response) {
                     if(response.status === 'connected') {
                         alert('Facebook login succeeded, got access token: ' + response.authResponse.token);
 						document.getElementById('status').innerHTML = 'user is logged';
 						localStorage.setItem("auth_token", response.authResponse.token);
+						localStorage.setItem("register", "register");
 						//mainView.loadPage('location.html');
 						 openFB.api({
             path: '/me',
@@ -839,21 +838,6 @@ function like(post_id) {
         
         
         
-        
-    }
-    
-        function accessToken() {
-        
-        var auth_token = localStorage.getItem("auth_token");
-        
-        openFB.api({
-        path: '/debug_token?input_token=' + auth_token,
-        success: function(response) {
-               alert('expires at: ' + response.data.expires_at + 'is valid ' + response.data.is_valid + 'issued_at ' + response.data.issued_at + 'scopes ' + response.data.scopes );
-            },
-        error: function() {alert('error not posted on facebook');}
-        	
-        });
         
     }
     
@@ -1225,16 +1209,12 @@ function getMyPages(){
         openFB.logout(
                 function() {
                     alert('Logout successful');
-                    //mainView.router.loadPage('register.html');
                 },
                 errorHandler);
     }
 
     function errorHandler(error) {
-        alert('Sorry you need to be logged in for that! Error:' error.message);
-        login();
-        
-        
+        alert(error.message);
     }
 
 </script>    
