@@ -14,6 +14,16 @@ alert('2');
 
 myApp.onPageBeforeInit('index', function (page) {
 
+var register = localStorage.getItem('register');
+if (register) {
+alert('register localstorage');
+}
+else {
+
+// Load page from about.html file to main View:
+mainView.router.loadPage('register.html');
+alert('register not in localstorage');	
+}	
 
 alert('3');
 
@@ -165,16 +175,7 @@ var mainView = myApp.addView('.view-main', {
 });
 
 
-var register = localStorage.getItem('register');
-if (register) {
-alert('register localstorage');
-}
-else {
 
-// Load page from about.html file to main View:
-mainView.router.loadPage('register.html');
-alert('register not in localstorage');	
-}	
 	
 
 
