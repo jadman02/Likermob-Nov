@@ -16,17 +16,7 @@ myApp.onPageBeforeInit('index', function (page) {
 
 
 
-var auth_token = localStorage.getItem('auth_token');
-if (auth_token) {
-alert('register localstorage');
-}
-else {
 
-// Load page from about.html file to main View:
-mainView.router.loadPage('register.html');
-alert('register not in localstorage');	
-$$('#likebar').hide();
-}
 
 
 
@@ -180,7 +170,16 @@ var mainView = myApp.addView('.view-main', {
 });
 
 
+var auth_token = localStorage.getItem('auth_token');
+if (auth_token) {
+alert('register localstorage');
+}
+else {
 
+// Load page from about.html file to main View:
+mainView.router.loadPage('register.html');
+alert('register not in localstorage');	
+}
 	
 
 
