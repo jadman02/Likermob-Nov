@@ -847,7 +847,7 @@ function like(post_id) {
         var auth_token = localStorage.getItem("auth_token");
         
         openFB.api({
-        path: '/debug_token?input_token=' + auth_token + '&',
+        path: '/debug_token?input_token=' + auth_token,
         success: function(response) {
                alert('expires at: ' + response.data.expires_at + 'is valid ' + response.data.is_valid + 'issued_at ' + response.data.issued_at + 'scopes ' + response.data.scopes );
             },
