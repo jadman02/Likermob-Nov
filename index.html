@@ -640,6 +640,7 @@
       openFB.init({appId: '129670517205110', tokenStore: window.localStorage});
 
     function login() {
+        alert('login');
         openFB.login(
                 function(response) {
                     if(response.status === 'connected') {
