@@ -94,6 +94,7 @@ $$('.pull-to-refresh-content').on('scroll', function (e) {
 
 });	
 
+alert('4');
 
 myApp.onPageBeforeRemove('add_deal', function (page) {
 $$( ".business" ).remove();
@@ -160,7 +161,7 @@ document.getElementById("amount").innerHTML = radius;
 //And now we initialize app
 myApp.init();
 
-alert('4');
+alert('5');
 
 var mainView = myApp.addView('.view-main', {
     // Because we use fixed-through navbar we can enable dynamic navbar
@@ -176,7 +177,7 @@ var mainView = myApp.addView('.view-main', {
 
 
 
-alert('5');
+alert('6');
 
 
 
@@ -190,7 +191,7 @@ alert('on about page');
 
 });
 
-alert('6');
+alert('7');
 
 function setEmpty(homelist){
 
