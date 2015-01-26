@@ -9,8 +9,8 @@
  */
 var openFB = (function () {
 
-    var FB_LOGIN_URL = 'https://www.facebook.com/dialog/oauth',
-        FB_LOGOUT_URL = 'https://www.facebook.com/logout.php',
+    var FB_LOGIN_URL = 'https://www.facebook.com/v2.0/dialog/oauth',
+        FB_LOGOUT_URL = 'https://www.facebook.com/v2.0/logout.php',
 
         // By default we store fbtoken in sessionStorage. This can be overridden in init()
         tokenStore = window.sessionStorage,
@@ -221,7 +221,7 @@ var openFB = (function () {
 
         params['access_token'] = tokenStore['fbtoken'];
 
-        url = 'https://graph.facebook.com' + obj.path + '?' + toQueryString(params);
+        url = 'https://graph.facebook.com/v2.0' + obj.path + '?' + toQueryString(params);
 
         xhr.onreadystatechange = function () {
             if (xhr.readyState === 4) {
@@ -247,7 +247,7 @@ var openFB = (function () {
 
 
 
-        url = 'https://graph.facebook.com' + obj.path + '?' + toQueryString(params);
+        url = 'https://graph.facebook.com/v2.0' + obj.path + '?' + toQueryString(params);
 
         xhr.onreadystatechange = function () {
             if (xhr.readyState === 4) {
