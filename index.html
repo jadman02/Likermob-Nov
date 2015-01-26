@@ -646,7 +646,6 @@
                         alert('Facebook login succeeded, got access token: ' + response.authResponse.token);
 						document.getElementById('status').innerHTML = 'user is logged';
 						localStorage.setItem("auth_token", response.authResponse.token);
-						localStorage.setItem("register", "register");
 						//mainView.loadPage('location.html');
 						 openFB.api({
             path: '/me',
@@ -1225,6 +1224,7 @@ function getMyPages(){
         openFB.logout(
                 function() {
                     alert('Logout successful');
+                    //mainView.router.loadPage('register.html');
                 },
                 errorHandler);
     }
