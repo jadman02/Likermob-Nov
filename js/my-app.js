@@ -14,7 +14,7 @@ alert('2');
 
 myApp.onPageBeforeInit('index', function (page) {
 
-mainView.router.loadPage('register.html');
+
 
 	
 
@@ -169,7 +169,7 @@ var mainView = myApp.addView('.view-main', {
 });
 
 
-
+mainView.router.loadPage('register.html');
 	
 
 
