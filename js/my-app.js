@@ -874,6 +874,7 @@ document.getElementById("after-liked2").value = likecount;
 
 function favList(page_id,post_id,name) {
 if (post_id == '9') {$$( '#blue_b' ).hide();$$( '#yellow_b' ).show();}
+if (typeof post_id === 'undefined') {$$( '.starcon_' + page_id ).css( 'color', '#ffcc00');}
 var d = new Date();
     var timestamp = d.getTime();
 var favEntries = JSON.parse(localStorage.getItem("favEntries"));
@@ -2770,6 +2771,78 @@ $$( '.virtual-inner' ).css( 'width', innersize+'px');
 $$( '.virtual-list ul' ).css( 'border', '0');
 $$( '.virtual-content' ).css( 'width', windowsize + 'px');
 	
+}
+
+function firstfavourites(){
+	
+	// HTML Content of new page:
+var newPageContent = 
+'<div class="navbar">'+
+    '<div class="navbar-inner" style="background-color:#f7f7f8;">'+
+        '<div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>'+
+        '<div class="center">Favourites</div>'+
+        '<div class="right"><i class="pe-7s-refresh pe-lg"></i></div>'+
+    '</div>'+
+'</div>'+
+'<div class="page" data-page="my-page" style="background-color:white;">' +
+'<form class="searchbar" style="margin-top:-10px;" data-search-list=".list-block-search" data-search-in=".item-title" data-searchbar-found=".searchbar-found" data-searchbar-not-found=".searchbar-not-found">'+
+        '<div class="searchbar-input">'+
+            '<input type="search" placeholder="Search">'+
+            '<a href="#" class="searchbar-clear"></a>'+
+        '</div>'+
+        '<a href="#" class="searchbar-cancel">Cancel</a>'+
+    '</form>'+
+    
+    '<div class="searchbar-overlay"></div>'+
+                        '<div class="page-content">' +
+                        '<div class="content-block searchbar-not-found">'+
+      '<div class="content-block-inner">Nothing found</div>'+
+    '</div>'+
+'<div class="list-block virtual-list list-block-search searchbar-found media-list" style="margin-top:0px;"></div>'+
+                        '</div>' +
+                      '</div>';
+ 
+//Load new content as new page
+mainView.router.loadContent(newPageContent);
+var favEntries = JSON.parse(localStorage.getItem("favEntries"));
+var itemlist = [];
+
+for (i = 0; i < favEntries.length; i++) {
+	var lowercase = favEntries[i].name.toLowerCase();
+	
+
+	itemlist.push({page_id:favEntries[i].page_id,lowercased:lowercase,name:favEntries[i].name});}
+var myList = myApp.virtualList('.list-block.virtual-list', {
+    // Array with items data
+    items: itemlist,
+    searchAll: function (query, items) {
+        var foundItems = [];
+        for (var i = 0; i < items.length; i++) {
+            // Check if title contains query string
+            if (items[i].name.indexOf(query.trim()) >= 0 || items[i].lowercased.indexOf(query.trim()) >= 0) foundItems.push(i);
+        }
+        // Return array with indexes of matched items
+        return foundItems; 
+    },
+    // Custom render function to render item's HTML
+    renderItem: function (index, item) {
+        return '<li class="item-content virtual-content" onclick="getBusiness('+item.page_id+')">' +
+                  '<div class="item-media"><img src="http://graph.facebook.com/'+item.page_id+'/picture?width=30&height=30" style="border-radius:50%;max-width:30px;margin-right:10px;"/></div>' +
+                  '<div class="item-inner virtual-inner">' +
+                     '<div class="item-title-row">'+
+                         '<div class="item-title">' + item.name + '</div>' +
+                        '<div class="item-after" onclick="favList('+item.page_id+')"><i class="pe-7s-star pe-lg starcon_'+item.page_id+'" style="color:#666;"></i></div>'+
+                    '</div>'+
+                  '</div>' +
+               '</li>';
+    }
+});  
+var innersize = $$(window).width() - 50;
+var windowsize = $$(window).width();
+$$( '.virtual-inner' ).css( 'width', innersize+'px');
+$$( '.virtual-list ul' ).css( 'border', '0');
+$$( '.virtual-content' ).css( 'width', windowsize + 'px');
+clearEntries();	
 }
 
 function likeList(){
