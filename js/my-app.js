@@ -875,7 +875,7 @@ document.getElementById("after-liked2").value = likecount;
 function favList(page_id,post_id,name) {
 alert('favList()');
 if (post_id == '9') {$$( '#blue_b' ).hide();$$( '#yellow_b' ).show();}
-if (typeof post_id == '8') {$$( '.starcon_' + page_id ).css( 'color', '#ffcc00');}
+if (post_id == '8') {$$( '.starcon_' + page_id ).css( 'color', '#ffcc00');}
 var d = new Date();
     var timestamp = d.getTime();
 var favEntries = JSON.parse(localStorage.getItem("favEntries"));
