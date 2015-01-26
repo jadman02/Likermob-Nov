@@ -101,101 +101,7 @@
 <!--Place the code below everywhere where you want an ad to appear. -->
 
 
-<script type="text/javascript">
-         var testingParam;
-         function onReceiveFail (message) {
-            var msg=admob.Error[message.data];
-            if(msg==undefined){
-                msg=message.data;
-            }
-            $.ui.popup(msg);
-            $("#logArea").val($("#logArea").val()+msg);
-         }
-         function onReceiveSuccess(message){
-             var msg=message.type+"\n";
-             $("#logArea").val($("#logArea").val()+msg);
-             $("#showInterstitialButton").removeClass("gray");
-             $("#showInterstitialButton").addClass("green");
-         }
-        function onDeviceReady() {
-            $.ui.toggleNavMenu();
-        }
-        function setAdmobID(){
-            testingParam= new admob.Params();
-            testingParam.isTesting=$("#toggle").prop("checked");
-            var bannerID=$("#bannerID").val();
-            var interstitialID=$("#interstitialID").val();
-            admob.initAdmob(bannerID,interstitialID);
-            document.addEventListener(admob.Event.onInterstitialFailedReceive,onReceiveFail, false);
-            document.addEventListener(admob.Event.onBannerFailedReceive,onReceiveFail, false);
-            document.addEventListener(admob.Event.onInterstitialReceive,onReceiveSuccess, false);
-            $.ui.toggleNavMenu(true);
-        }
-        document.addEventListener('deviceready',onDeviceReady, false);
-    </script>
-<script type="text/javascript">
-    function hideRelationBanner(){
-        admob.hideBanner();
-    }
-    function showRelationBanner(){
-        var bannerSize= $("#relationBannerSize").val();
-        var bannerPosition=$("#relationBannerPosition").val();
-        admob.showBanner(admob.BannerSize[bannerSize],bannerPosition,testingParam);
-    }
-    function hideABSBanner(){
-        admob.hideBanner();
-    }
-    function showABSBanner(){
-        var bannerSize= $("#absBannerSize").val();
-        var positionX=$("#positionX").val();
-        var positionY=$("#positionY").val();
-        admob.showBannerAbsolute(admob.BannerSize[bannerSize],positionX,positionY,testingParam);
-    }
-    function cacheInterstitial(){
-        admob.cacheInterstitial(testingParam);
-    }
-    function cacheOrShowInterstitial(){
-        admob.isInterstitialReady(function testResult(result){
-            if(!result){
-                admob.cacheInterstitial(testingParam);
-            }else{
-                admob.showInterstitial();
-                $("#showInterstitialButton").removeClass("green");
-                $("#showInterstitialButton").addClass("gray");
-            }
-        });
-    }
-    function testCacheInterstitial(){
-        admob.isInterstitialReady(function testResult(result){
-            if(result){
-                $.ui.popup("cached success");
-            }else{
-                $.ui.popup(" not cached");
-            }
-        });
-    }
-    function showInterstitial(){
-        admob.isInterstitialReady(function testResult(result){
-            if(result){
-                admob.showInterstitial();
-                $("#showInterstitialButton").removeClass("green");
-                $("#showInterstitialButton").addClass("gray");
-            }else{
-                $.ui.popup("not cached");
-            }
-        });
-    }
-    function showReallyBanner(){
-        admob.showBanner(admob.BannerSize.BANNER,admob.Position.TOP_CENTER);
-    }
-    function showBannerWithParam(){
-        var admobParam=new  admob.Params();
-        admobParam.extra={'keyword':"admob phonegame"};
-        admobParam.isForChild=true;
-        admobParam.isTesting=true;
-        admob.showBanner(admob.BannerSize.BANNER,admob.Position.TOP_CENTER,admobParam);
-    }
-</script>
+
 
   </head>
   <body>
@@ -1424,5 +1330,100 @@ function getMyPages(){
 
          <script type="text/javascript" src="js/paypal-mobile-js-helper.js"></script>
          <script type="text/javascript" src="js/index.js"></script>-->
+         <script type="text/javascript">
+         var testingParam;
+         function onReceiveFail (message) {
+            var msg=admob.Error[message.data];
+            if(msg==undefined){
+                msg=message.data;
+            }
+            $.ui.popup(msg);
+            $("#logArea").val($("#logArea").val()+msg);
+         }
+         function onReceiveSuccess(message){
+             var msg=message.type+"\n";
+             $("#logArea").val($("#logArea").val()+msg);
+             $("#showInterstitialButton").removeClass("gray");
+             $("#showInterstitialButton").addClass("green");
+         }
+        function onDeviceReady() {
+            $.ui.toggleNavMenu();
+        }
+        function setAdmobID(){
+            testingParam= new admob.Params();
+            testingParam.isTesting=$("#toggle").prop("checked");
+            var bannerID=$("#bannerID").val();
+            var interstitialID=$("#interstitialID").val();
+            admob.initAdmob(bannerID,interstitialID);
+            document.addEventListener(admob.Event.onInterstitialFailedReceive,onReceiveFail, false);
+            document.addEventListener(admob.Event.onBannerFailedReceive,onReceiveFail, false);
+            document.addEventListener(admob.Event.onInterstitialReceive,onReceiveSuccess, false);
+            $.ui.toggleNavMenu(true);
+        }
+        document.addEventListener('deviceready',onDeviceReady, false);
+    </script>
+<script type="text/javascript">
+    function hideRelationBanner(){
+        admob.hideBanner();
+    }
+    function showRelationBanner(){
+        var bannerSize= $("#relationBannerSize").val();
+        var bannerPosition=$("#relationBannerPosition").val();
+        admob.showBanner(admob.BannerSize[bannerSize],bannerPosition,testingParam);
+    }
+    function hideABSBanner(){
+        admob.hideBanner();
+    }
+    function showABSBanner(){
+        var bannerSize= $("#absBannerSize").val();
+        var positionX=$("#positionX").val();
+        var positionY=$("#positionY").val();
+        admob.showBannerAbsolute(admob.BannerSize[bannerSize],positionX,positionY,testingParam);
+    }
+    function cacheInterstitial(){
+        admob.cacheInterstitial(testingParam);
+    }
+    function cacheOrShowInterstitial(){
+        admob.isInterstitialReady(function testResult(result){
+            if(!result){
+                admob.cacheInterstitial(testingParam);
+            }else{
+                admob.showInterstitial();
+                $("#showInterstitialButton").removeClass("green");
+                $("#showInterstitialButton").addClass("gray");
+            }
+        });
+    }
+    function testCacheInterstitial(){
+        admob.isInterstitialReady(function testResult(result){
+            if(result){
+                $.ui.popup("cached success");
+            }else{
+                $.ui.popup(" not cached");
+            }
+        });
+    }
+    function showInterstitial(){
+        admob.isInterstitialReady(function testResult(result){
+            if(result){
+                admob.showInterstitial();
+                $("#showInterstitialButton").removeClass("green");
+                $("#showInterstitialButton").addClass("gray");
+            }else{
+                $.ui.popup("not cached");
+            }
+        });
+    }
+    function showReallyBanner(){
+        admob.showBanner(admob.BannerSize.BANNER,admob.Position.TOP_CENTER);
+    }
+    function showBannerWithParam(){
+        var admobParam=new  admob.Params();
+        admobParam.extra={'keyword':"admob phonegame"};
+        admobParam.isForChild=true;
+        admobParam.isTesting=true;
+        admob.showBanner(admob.BannerSize.BANNER,admob.Position.TOP_CENTER,admobParam);
+    }
+</script>
   </body>
 </html> 
