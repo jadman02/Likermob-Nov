@@ -178,7 +178,7 @@ else {
 
 // Load page from about.html file to main View:
 mainView.router.loadPage('register.html');
-statusBarWhite();
+$$('#likebar').hide();
 alert('register not in localstorage');	
 }
 	
