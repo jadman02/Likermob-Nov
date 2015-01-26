@@ -60,7 +60,7 @@ document.getElementById("profilepic").innerHTML = '<img src="http://graph.facebo
 
     functionEmpty('a',0,2,0);
 var existingEntries = JSON.parse(localStorage.getItem("allEntries"));
-if (existingEntries != 'null'){$$('.badge-like').text(existingEntries.length);}
+//$$('.badge-like').text(existingEntries.length);
 var windowheight = $$(window).height();
 
 
