@@ -695,7 +695,6 @@ pages();
     }
 
 function userLikesLogin() {
-	alert('user_likes login');
         openFB.login(
                 function(response) {
                     if(response.status === 'connected') {
@@ -827,7 +826,6 @@ var modal = myApp.modal({
                 alert('mylikes got through')
                 for (i = 0; i < response.data.length; i++){page_id.push(response.data[i].id + "_" + response.data[i].name);}
             favList(page_id);
-            alert(page_id);
             	
             },
             error: errorHandler});
