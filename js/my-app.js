@@ -14,12 +14,6 @@ var $$ = Dom7;
 
 myApp.onPageBeforeInit('index', function (page) {
 
-
-
-
-
-
-
 var uid = localStorage.getItem("uid");
 
 var search1 = localStorage.getItem("search1");
@@ -169,18 +163,13 @@ var mainView = myApp.addView('.view-main', {
     dynamicNavbar: true
 });
 
-
-var auth_token = localStorage.getItem('auth_token');
-if (auth_token) {
-alert('register localstorage');
-}
-else {
-
-// Load page from about.html file to main View:
+var register = localStorage.getItem('register');
+alert(register);
+if (register=="notlogged" || register=="null") {
 mainView.router.loadPage('register.html');
 $$('#likebar').hide();
-alert('register not in localstorage');	
 }
+
 	
 
 
