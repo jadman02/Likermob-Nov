@@ -2775,13 +2775,14 @@ $$( '.virtual-content' ).css( 'width', windowsize + 'px');
 
 function firstfavourites(){
 mainView.showNavbar();
+$$( '#locationButton' ).show();
+$$( '#likesButton' ).hide();
+$$( '#skiplikesButton' ).hide());
 	// HTML Content of new page:
 var newPageContent = 
 '<div class="navbar">'+
     '<div class="navbar-inner" style="background-color:#f7f7f8;">'+
-        '<div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>'+
         '<div class="center">Select your Favourites</div>'+
-        '<div class="right"><i class="pe-7s-refresh pe-lg"></i></div>'+
     '</div>'+
 '</div>'+
 '<div class="page" data-page="my-page" style="background-color:white;">' +
@@ -2802,10 +2803,11 @@ var newPageContent =
                         '</div>' +
                       '<div class="toolbar"  style="background-color:transparent;border:0;">'+
     '<div class="toolbar-inner">'+
-'<a href="#" class="button" style="width:200px;margin:0 auto;">Close</a>'+
+'<a href="#" class="button back" style="width:200px;margin:0 auto;">Done</a>'+
     '</div>'+
 '</div>'+
                       '</div>';
+ 
  
 //Load new content as new page
 mainView.router.loadContent(newPageContent);
