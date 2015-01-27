@@ -2768,7 +2768,38 @@ $$( '#locationButton' ).show();
 $$( '#likesButton' ).hide();
 $$( '#skiplikesButton' ).hide();
 $$( '#choosefavList' ).show();
-
+var newPageContent = 
+'<div class="navbar">'+
+    '<div class="navbar-inner" style="background-color:#f7f7f8;">'+
+        '<div class="center">Select your Favourites</div>'+
+    '</div>'+
+'</div>'+
+'<div class="page" data-page="my-page" style="background-color:white;">' +
+'<form class="searchbar" style="margin-top:-10px;" data-search-list=".list-block-search" data-search-in=".item-title" data-searchbar-found=".searchbar-found" data-searchbar-not-found=".searchbar-not-found">'+
+        '<div class="searchbar-input">'+
+            '<input type="search" placeholder="Search">'+
+            '<a href="#" class="searchbar-clear"></a>'+
+        '</div>'+
+        '<a href="#" class="searchbar-cancel">Cancel</a>'+
+    '</form>'+
+    
+    '<div class="searchbar-overlay"></div>'+
+                        '<div class="page-content">' +
+                        '<div class="content-block searchbar-not-found">'+
+      '<div class="content-block-inner">Nothing found</div>'+
+    '</div>'+
+'<div class="list-block virtual-list list-block-search searchbar-found media-list" style="margin-top:0px;"></div>'+
+                        '</div>' +
+                      '<div class="toolbar"  style="background-color:transparent;border:0;">'+
+    '<div class="toolbar-inner">'+
+'<a href="#" class="button back" style="width:200px;margin:0 auto;">Done</a>'+
+    '</div>'+
+'</div>'+
+                      '</div>';
+ 
+ 
+//Load new content as new page
+mainView.router.loadContent(newPageContent);
 var favEntries = JSON.parse(localStorage.getItem("favEntries"));
 var itemlist = [];
 
