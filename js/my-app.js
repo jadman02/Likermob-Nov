@@ -2780,7 +2780,7 @@ var newPageContent =
 '<div class="navbar">'+
     '<div class="navbar-inner" style="background-color:#f7f7f8;">'+
         '<div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>'+
-        '<div class="center">Favourites</div>'+
+        '<div class="center">Select your Favourites</div>'+
         '<div class="right"><i class="pe-7s-refresh pe-lg"></i></div>'+
     '</div>'+
 '</div>'+
