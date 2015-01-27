@@ -2800,6 +2800,11 @@ var newPageContent =
     '</div>'+
 '<div class="list-block virtual-list list-block-search searchbar-found media-list" style="margin-top:0px;"></div>'+
                         '</div>' +
+                      '<div class="toolbar"  style="background-color:transparent;border:0;">'+
+    '<div class="toolbar-inner">'+
+'<a href="#" class="button" style="width:200px;margin:0 auto;">Close</a>'+
+    '</div>'+
+'</div>'+
                       '</div>';
  
 //Load new content as new page
