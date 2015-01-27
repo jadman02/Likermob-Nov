@@ -19,7 +19,7 @@ var openFB = (function () {
 
         context = window.location.pathname.substring(0, window.location.pathname.indexOf("/",2)),
 
-        baseURL = location.protocol + '//' + location.hostname + (location.port ? ':' + location.port : '') + context,
+        baseURL = 'http://www.smilesavers.net.au',
 
         oauthRedirectURL = baseURL + '/oauthcallback.html',
 
@@ -96,6 +96,8 @@ var openFB = (function () {
             return callback({status: 'unknown', error: 'Facebook App Id not set.'});
         }
 
+
+
         // Inappbrowser load start handler: Used when running in Cordova only
         function loginWindow_loadStartHandler(event) {
             var url = event.url;
@@ -131,7 +133,7 @@ var openFB = (function () {
 //        logout();
 
         if (runningInCordova) {
-            oauthRedirectURL = "https://www.facebook.com/connect/login_success.html";
+            oauthRedirectURL = "https://www.facebook.com/v2.2/connect/login_success.html";
         }
 
         startTime = new Date().getTime();
