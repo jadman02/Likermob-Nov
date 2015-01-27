@@ -10,7 +10,7 @@
         background: radial-gradient(ellipse at right bottom, #ff8000 0%, #3b5998 100% );">
 
 <!-- slider properties in data- attributes -->
-<div class="slider-container slider-init" data-speed="400" data-spaceBetween="40" data-pagination=".slider-pagination" style="height:400px;">
+<div class="slider-container slider-init" id="introslider" data-speed="400" data-spaceBetween="40" data-pagination=".slider-pagination" style="height:400px;">
     <div class="slider-wrapper">
         <div class="slider-slide"><h1>Hi</h1></div>
         <div class="slider-slide">Slide 2</div>
@@ -19,6 +19,24 @@
     <div class="slider-pagination"></div>
 </div>  
 
+<div id="choosefavList" style="display:none;">
+<form class="searchbar" style="margin-top:-10px;" data-search-list=".list-block-search" data-search-in=".item-title" data-searchbar-found=".searchbar-found" data-searchbar-not-found=".searchbar-not-found">
+<div class="searchbar-input">
+<input type="search" placeholder="Search">
+<a href="#" class="searchbar-clear"></a>
+ </div>
+ <a href="#" class="searchbar-cancel">Cancel</a>
+ </form>
+ 
+ <div class="searchbar-overlay"></div>
+ <div class="page-content"> 
+ <div class="content-block searchbar-not-found">
+ <div class="content-block-inner">Nothing found</div>
+ </div>
+<div class="list-block virtual-list list-block-search searchbar-found media-list" style="margin-top:0px;"></div>
+ </div> 
+</div>
+</div>
 
 <div class="toolbar"  style="background-color:transparent;border:0;">
     <div class="toolbar-inner">
