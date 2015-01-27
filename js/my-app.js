@@ -165,7 +165,7 @@ var mainView = myApp.addView('.view-main', {
 
 var register = localStorage.getItem('register');
 alert(register);
-if (register=="notlogged" || register=="null") {
+if (register=="notlogged" || register== null) {
 mainView.router.loadPage('register.html');
 $$('#likebar').hide();
 }
