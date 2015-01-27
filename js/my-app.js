@@ -897,7 +897,7 @@ if (page_id instanceof Array){
 
   
 	}
-alert(localStorage.getItem("favEntries"));	
+//alert(localStorage.getItem("favEntries"));	
 firstfavourites();
 }
 else {
@@ -2774,7 +2774,7 @@ $$( '.virtual-content' ).css( 'width', windowsize + 'px');
 }
 
 function firstfavourites(){
-	alert('first favourites');
+mainView.showNavbar();
 	// HTML Content of new page:
 var newPageContent = 
 '<div class="navbar">'+
