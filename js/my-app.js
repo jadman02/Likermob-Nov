@@ -2777,7 +2777,7 @@ function firstfavourites(){
 mainView.showNavbar();
 $$( '#locationButton' ).show();
 $$( '#likesButton' ).hide();
-$$( '#skiplikesButton' ).hide());
+$$( '#skiplikesButton' ).hide();
 	// HTML Content of new page:
 var newPageContent = 
 '<div class="navbar">'+
