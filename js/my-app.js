@@ -898,7 +898,7 @@ if (page_id instanceof Array){
   
 	}
 alert(localStorage.getItem("favEntries"));	
-//firstfavourites();
+firstfavourites();
 }
 else {
 
