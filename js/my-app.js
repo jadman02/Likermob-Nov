@@ -2792,7 +2792,7 @@ var newPageContent =
                         '</div>' +
                       '<div class="toolbar"  style="background-color:transparent;border:0;">'+
     '<div class="toolbar-inner">'+
-'<a href="#" class="button back" style="width:200px;margin:0 auto;">Done</a>'+
+'<a href="#" class="button back" style="width:200px;margin:0 auto;" onclick="favouritesdone()">Done</a>'+
     '</div>'+
 '</div>'+
                       '</div>';
@@ -3139,3 +3139,16 @@ var myPhotoBrowserPopupDark = myApp.photoBrowser({
 
 }
 
+function favouritesdone(){
+$$('#likebar').hide();
+$$( '#locationButton' ).show();
+$$("#likesButton").hide();
+$$("#skiplikesButton").hide();
+}
+
+function logindone(){
+$$("#likesButton").show();
+$$("#skiplikesButton").show();
+$$("#loginButton").hide();
+$$("#introslider").hide();
+}
