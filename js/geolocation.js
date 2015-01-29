@@ -16,7 +16,7 @@ alert(timeGPS);
 localStorage.setItem("formatted_address", timeGPS);
 var formatted_address_placeholder = localStorage.getItem("formatted_address");
 if (formatted_address_placeholder != 'null'){$$('#fulladdressf').attr("placeholder",formatted_address_placeholder);document.getElementById("fulladdressf").value = formatted_address_placeholder;}
-if (origin =='setup'){mainView.router.loadPage('index.html');}
+if (origin =='9'){mainView.router.loadPage('index.html');}
     
         
     }
