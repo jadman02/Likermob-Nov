@@ -6,19 +6,15 @@ function getmyLocation(){
     // onSuccess Geolocation
     //
     function onSuccess(position) {
-alert('success');
-alert(position.coords.latitude);
-alert(position.coords.longitude);
-alert(position.timestamp);
 
-//localStorage.setItem("latitude", position.coords.latitude);
-//localStorage.setItem("longitude", position.coords.longitude);
-//var datetoday1 = new Date();
-//var offset1 = datetoday1.getTimezoneOffset() * 60;
-//var timeGPS = position.timestamp + offset1;
-//alert(timeGPS);
 
-//currentdate.getHours() + ':' + currentdate.getSeconds(); + '(' + currentdate.getDate() + '/' + (currentdate.getMonth()+1)  + '/' + currentdate.getFullYear() + ')';
+localStorage.setItem("latitude", position.coords.latitude);
+localStorage.setItem("longitude", position.coords.longitude);
+var datetoday1 = new Date();
+var offset1 = datetoday1.getTimezoneOffset() * 60;
+var currentdate = position.timestamp + offset1;
+
+var timeGPS = currentdate.getHours() + ':' + currentdate.getSeconds(); + '(' + currentdate.getDate() + '/' + (currentdate.getMonth()+1)  + '/' + currentdate.getFullYear() + ')';
 localStorage.setItem("formatted_address", timeGPS);
 $$('#fulladdressf').attr("placeholder",formatted_address_placeholder);document.getElementById("fulladdressf").value = formatted_address_placeholder;
 mainView.router.loadPage('index.html');
