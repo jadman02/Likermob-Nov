@@ -14,10 +14,11 @@ var datetoday1 = new Date();
 var offset1 = datetoday1.getTimezoneOffset() * 60;
 var currentdate = position.timestamp + offset1;
 alert(currentdate);
+mainView.router.loadPage('index.html');
 var timeGPS = currentdate.getHours() + ':' + currentdate.getSeconds() + '(' + currentdate.getDate() + '/' + (currentdate.getMonth()+1)  + '/' + currentdate.getFullYear() + ')';
 alert(timeGPS);
 $$('#fulladdressf').attr("placeholder",timeGPS);document.getElementById("fulladdressf").value = timeGPS;
-mainView.router.loadPage('index.html');
+
         
     }
 
