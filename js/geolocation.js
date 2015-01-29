@@ -6,6 +6,7 @@ function getmyLocation(){
     // onSuccess Geolocation
     //
     function onSuccess(position) {
+alert('success');
 alert(position.coords.latitude);
 alert(position.coords.longitude);
 alert(position.timestamp);
