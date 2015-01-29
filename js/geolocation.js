@@ -1,4 +1,4 @@
-function getmyLocation(){
+function getmyLocation(origin){
    navigator.geolocation.getCurrentPosition(onSuccess, onError); 
     
 }
@@ -6,26 +6,18 @@ function getmyLocation(){
     // onSuccess Geolocation
     //
     function onSuccess(position) {
-        var element = document.getElementById('geolocation');
-        element.innerHTML = 'Latitude: '           +               + '<br />' +
-                            'Longitude: '          +              + '<br />' +
-                            'Altitude: '           + position.coords.altitude              + '<br />' +
-                            'Accuracy: '           + position.coords.accuracy              + '<br />' +
-                            'Altitude Accuracy: '  + position.coords.altitudeAccuracy      + '<br />' +
-                            'Heading: '            + position.coords.heading               + '<br />' +
-                            'Speed: '              + position.coords.speed                 + '<br />' +
-                            'Timestamp: '          +                                             + '<br />';
 localStorage.setItem("latitude", position.coords.latitude);
 localStorage.setItem("longitude", position.coords.longitude);
-var offset = datetoday.getTimezoneOffset() * 60;
-var timeGPS = position.timestamp + offset;
+var datetoday1 = new Date();
+var offset1 = datetoday1.getTimezoneOffset() * 60;
+var timeGPS = position.timestamp + offset1;
 alert(timeGPS);
 //currentdate.getHours() + ':' + currentdate.getSeconds(); + '(' + currentdate.getDate() + '/' + (currentdate.getMonth()+1)  + '/' + currentdate.getFullYear() + ')';
 localStorage.setItem("formatted_address", timeGPS);
 var formatted_address_placeholder = localStorage.getItem("formatted_address");
 if (formatted_address_placeholder != 'null'){$$('#fulladdressf').attr("placeholder",formatted_address_placeholder);document.getElementById("fulladdressf").value = formatted_address_placeholder;}
-functionEmpty();
-    mainView.router.loadPage('index.html');
+if (origin =='setup'){mainView.router.loadPage('index.html');}
+    
         
     }
 
