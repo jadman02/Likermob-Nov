@@ -16,8 +16,7 @@ var currentdate = position.timestamp + offset1;
 
 var timeGPS = currentdate.getHours() + ':' + currentdate.getSeconds() + '(' + currentdate.getDate() + '/' + (currentdate.getMonth()+1)  + '/' + currentdate.getFullYear() + ')';
 alert(timeGPS);
-localStorage.setItem("formatted_address", timeGPS);
-$$('#fulladdressf').attr("placeholder",formatted_address_placeholder);document.getElementById("fulladdressf").value = formatted_address_placeholder;
+$$('#fulladdressf').attr("placeholder",timeGPS);document.getElementById("fulladdressf").value = timeGPS;
 mainView.router.loadPage('index.html');
         
     }
