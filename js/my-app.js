@@ -103,6 +103,11 @@ myApp.onPageBeforeRemove('my-page', function (page) {
 statusBarClear();
 });
 
+myApp.onPageBeforeRemove('register', function (page) {
+$$( ".remove-page" ).remove();
+});
+
+
 myApp.onPageInit('register', function (page) {
 
 alert('on register page');
