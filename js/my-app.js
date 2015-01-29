@@ -3140,6 +3140,7 @@ var myPhotoBrowserPopupDark = myApp.photoBrowser({
 }
 
 function favouritesdone(){
+alert('favouritesdone');
 $$('#likebar').hide();
 $$( '#locationButton' ).show();
 $$("#likesButton").hide();
