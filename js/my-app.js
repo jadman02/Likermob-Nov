@@ -3135,7 +3135,7 @@ $$("#introslider").hide();
 }
 
 function registerFunction(){
-
+alert('yo');
 var newPageContent = 
 '<div class="page no-swipeback remove-page" data-page="register" style=" background: #074d55; background: -moz-radial-gradient(center, ellipse cover, #ff8000 0%, #3b5998 100%); /* FF3.6+ */background: -webkit-gradient(radial, right bottom, 0px, left top, 100%, color-stop(0%,#ff8000), color-stop(100%,#3b5998));background: -webkit-radial-gradient(right bottom, ellipse cover, #ff8000 0%, #3b5998 100%);background: radial-gradient(ellipse at right bottom, #ff8000 0%, #3b5998 100% );">'+
 
