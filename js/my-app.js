@@ -4,6 +4,7 @@ var myApp = new Framework7({
     sortable: false,
     swipeBackPageAnimateShadow: false,
     swipeBackPageAnimateOpacity: false,
+    uniqueHistory : true,
   init: false //Disable App's automatica initialization
 });
 
@@ -3132,39 +3133,4 @@ $$("#likesButton").show();
 $$("#skiplikesButton").show();
 $$("#loginButton").hide();
 $$("#introslider").hide();
-}
-
-function registerFunction(){
-alert('yo');
-var newPageContent = 
-'<div class="page no-swipeback remove-page" data-page="register" style=" background: #074d55; background: -moz-radial-gradient(center, ellipse cover, #ff8000 0%, #3b5998 100%); /* FF3.6+ */background: -webkit-gradient(radial, right bottom, 0px, left top, 100%, color-stop(0%,#ff8000), color-stop(100%,#3b5998));background: -webkit-radial-gradient(right bottom, ellipse cover, #ff8000 0%, #3b5998 100%);background: radial-gradient(ellipse at right bottom, #ff8000 0%, #3b5998 100% );">'+
-
-
-'<div class="slider-container slider-init" id="introslider" data-speed="400" data-spaceBetween="40" data-pagination=".slider-pagination" style="height:60%">'+
-    '<div class="slider-wrapper">'+
-        '<div class="slider-slide"><h1>G\'day and welcome to Likermob! Swipe to save on things you like.</h1></div>'+
-        '<div class="slider-slide">Make deals for your customers on the fly. Just take a photo, create a deal and post to Facebook.</div>'+
-        '<div class="slider-slide">Save deals you like so you can use them later .</div>'+
-    '</div>'+
-    '<div class="slider-pagination"></div>'+
-'</div>'+
-
-
-'<div class="toolbar"  style="background-color:transparent;height:40%;">'+
-    '<div class="toolbar-inner">'+
-'<a href="#" class="button" id="loginButton" onclick="login()" style="border-color:white;color:white;width:200px;margin:0 auto;">Login with Facebook</a>'+
-'<a href="#" class="button" id="likesButton" onclick="userLikesLogin()" style="display:none;border-color:white;color:white;width:200px;margin:0 auto;">Import Likes</a><a href="#" class="button" id="skiplikesButton" onclick="" style="display:none;border-color:white;color:white;width:200px;margin:0 auto;">Skip</a>'+
-'<a href="#" class="button" id="locationButton" onclick="getmyLocation()" style="display:none;border-color:white;color:white;width:200px;margin:0 auto;">Use Current Location</a><a href="#" class="button" id="skiplocationButton" onclick="" style="display:none;border-color:white;color:white;width:200px;margin:0 auto;">Skip</a>'+
-'<a href="#" class="button" onclick="" style="display:none;border-color:white;color:white;width:200px;margin:0 auto;">Find Deals</a><a href="#" class="button" onclick="" style="display:none;border-color:white;color:white;width:200px;margin:0 auto;">Skip</a>'+
-    '</div>'+
-'</div>'+
-'</div>';
- 
-//Load new content as new page
-mainView.router.loadContent(newPageContent);	
-
-
-
-
-	
 }
