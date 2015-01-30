@@ -1210,7 +1210,7 @@ function getMyPages(){
     function logout() {
         openFB.logout(
                 function() {
-                    registerFunction();
+                    mainView.router.loadPage('index.html');
                     $$('#likebar').hide();
                     window.plugins.AdMob.showAd(false);
                     localStorage.setItem("register", "notlogged");
