@@ -169,7 +169,7 @@ var mainView = myApp.addView('.view-main', {
     dynamicNavbar: true
 });
 
-var registerView = myApp.addView('.registerr-view');
+var registerView = myApp.addView('.register-view');
 
 var register = localStorage.getItem('register');
 alert(register);
