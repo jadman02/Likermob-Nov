@@ -417,8 +417,6 @@
     <!-- Views -->
     <div class="views" style="background-color:transparent;">
       <!-- Your main view, should have "view-main" class -->
-      <div class="view view-register navbar-through">
-      </div>
       <div class="view view-main" style="background-color:transparent;">
         <!-- Top Navbar-->
         <div class="navbar" style="border:0;background-color:transparent;height:35px;" >
@@ -1212,7 +1210,7 @@ function getMyPages(){
     function logout() {
         openFB.logout(
                 function() {
-                    registerView.router.loadPage('register.html');
+                    mainView.router.loadPage('register.html');
                     $$('#likebar').hide();
                     window.plugins.AdMob.showAd(false);
                     localStorage.setItem("register", "notlogged");
