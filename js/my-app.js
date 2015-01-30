@@ -169,12 +169,10 @@ var mainView = myApp.addView('.view-main', {
     dynamicNavbar: true
 });
 
-var registerView = myApp.addView('.register-view');
-
 var register = localStorage.getItem('register');
 alert(register);
 if (register=="notlogged" || register== null) {
-registerView.router.loadPage('register.html');
+mainView.router.loadPage('register.html');
 $$('#likebar').hide();
 }
 
