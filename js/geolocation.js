@@ -42,7 +42,7 @@ var day = d.getUTCDate();
 var year = d.getUTCFullYear();
 var hours = d.getUTCHours();
 var minutes = d.getUTCMinutes();
-mainView.router.loadPage('index.html');
+mainView.router.back();
 var timeGPS = 'GPS ('+ hours + ':' + minutes + ',' + weekday_name  + ' ' + day  + ' ' + month_name + ')';
 alert(timeGPS);
 $$('#fulladdressf').attr("placeholder",timeGPS);document.getElementById("fulladdressf").value = timeGPS;
