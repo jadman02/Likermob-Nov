@@ -3158,8 +3158,7 @@ var newPageContent =
 '<a href="#" class="button" onclick="" style="display:none;border-color:white;color:white;width:200px;margin:0 auto;">Find Deals</a><a href="#" class="button" onclick="" style="display:none;border-color:white;color:white;width:200px;margin:0 auto;">Skip</a>'+
     '</div>'+
 '</div>'+
-'</div>'+
-;
+'</div>';
  
 //Load new content as new page
 mainView.router.loadContent(newPageContent);	
