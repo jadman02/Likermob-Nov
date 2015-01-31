@@ -169,6 +169,11 @@ var mainView = myApp.addView('.view-main', {
     dynamicNavbar: true
 });
 
+var leftView = myApp.addView('.view-left', {
+    // Because we use fixed-through navbar we can enable dynamic navbar
+    dynamicNavbar: true
+});
+
 var register = localStorage.getItem('register');
 alert(register);
 if (register=="notlogged" || register== null) {
