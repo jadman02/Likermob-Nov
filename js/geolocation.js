@@ -14,6 +14,8 @@ var datetoday1 = new Date();
 var offset1 = datetoday1.getTimezoneOffset() * 60;
 var currentdate = position.timestamp + offset1;
 var month = new Array(12);
+var short_lat = position.coords.latitude.toFixed(2);
+var short_lng = position.coords.longitude.toFixed(2);
 month[0] = "Jan";
 month[1] = "Feb";
 month[2] = "Mar";
@@ -43,9 +45,8 @@ var year = d.getUTCFullYear();
 var hours = d.getUTCHours();
 var minutes = d.getUTCMinutes();
 mainView.router.back();
-var timeGPS = 'GPS ('+ hours + ':' + minutes + ',' + weekday_name  + ' ' + day  + ' ' + month_name + ')';
-alert(timeGPS);
-$$('#fulladdressf').attr("placeholder",timeGPS);document.getElementById("fulladdressf").value = timeGPS;
+var timeGPS = short_lat + ',' + short_lng + ' ('+ hours + ':' + minutes + ', ' + weekday_name  + ' ' + day  + ' ' + month_name + ')';
+$$('#fulladdressf').attr("placeholder",timeGPS);
 
         
     }
