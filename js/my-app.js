@@ -3121,16 +3121,19 @@ var myPhotoBrowserPopupDark = myApp.photoBrowser({
 }
 
 function favouritesdone(){
-alert('favouritesdone');
 $$('#likebar').hide();
 $$( '#locationButton' ).show();
+$$( '#skiplocationButton' ).show();
 $$("#likesButton").hide();
 $$("#skiplikesButton").hide();
 }
+
+
 
 function logindone(){
 $$("#likesButton").show();
 $$("#skiplikesButton").show();
 $$("#loginButton").hide();
 $$("#introslider").hide();
+$$('#likebar').hide();
 }
