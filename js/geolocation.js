@@ -10,11 +10,12 @@ function getmyLocation(){
 
 localStorage.setItem("latitude", position.coords.latitude);
 localStorage.setItem("longitude", position.coords.longitude);
-/*
 var datetoday1 = new Date();
 var offset1 = datetoday1.getTimezoneOffset() * 60;
 var currentdate = position.timestamp + offset1;
 var month = new Array(12);
+var short_lat = position.coords.latitude.toFixed(1);
+var short_lng = position.coords.longitude.toFixed(1);
 month[0] = "Jan";
 month[1] = "Feb";
 month[2] = "Mar";
@@ -43,10 +44,8 @@ var day = d.getUTCDate();
 var year = d.getUTCFullYear();
 var hours = d.getUTCHours();
 var minutes = d.getUTCMinutes();
-*/
 mainView.router.back();
-//+ ' ('+ hours + ':' + minutes + ', ' + weekday_name  + ' ' + day  + ' ' + month_name + ')'
-var timeGPS = position.coords.latitude + ',' + position.coords.longitude;
+var timeGPS = short_lat + ',' + short_lng + ' ('+ hours + ':' + minutes + ', ' + weekday_name  + ' ' + day  + ' ' + month_name + ')';
 $$('#fulladdressf').attr("placeholder",timeGPS);
 
         
@@ -58,4 +57,3 @@ $$('#fulladdressf').attr("placeholder",timeGPS);
         alert('code: '    + error.code    + '\n' +
                 'message: ' + error.message + '\n');
     }
-
