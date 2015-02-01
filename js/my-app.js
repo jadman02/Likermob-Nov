@@ -90,7 +90,7 @@ $$('.pull-to-refresh-content').on('scroll', function (e) {
 
 
 
-   initApp();
+   
 
 
 });	
@@ -458,7 +458,7 @@ moveHomeimage();
 // $$('.page-content').scrollTop($$('.full').offset().top - 44, 300);
 
 
-
+initApp();
 
 });
 
