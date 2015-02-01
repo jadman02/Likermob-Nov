@@ -90,11 +90,7 @@ $$('.pull-to-refresh-content').on('scroll', function (e) {
 
 
 
-    function initApp() {
-        initAd();
-        // display the banner at startup
-        window.plugins.AdMob.createBannerView();
-    }
+   onDocLoad();
 
 
 });	
