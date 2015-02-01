@@ -15,7 +15,7 @@ localStorage.setItem("latitude", position.coords.latitude);
 localStorage.setItem("longitude", position.coords.longitude);
 
 var datetoday1 = new Date();
-var offset1 = datetoday1.getTimezoneOffset() * 600;
+var offset1 = datetoday1.getTimezoneOffset() * 60;
 var currentdate = position.timestamp + offset1;
 var month = new Array(12);
 var short_lat = position.coords.latitude.toFixed(1);
@@ -62,7 +62,7 @@ localStorage.setItem("latitude", position.coords.latitude);
 localStorage.setItem("longitude", position.coords.longitude);
 
 var datetoday1 = new Date();
-var offset1 = datetoday1.getTimezoneOffset() * 60;
+var offset1 = datetoday1.getTimezoneOffset() * 600;
 var currentdate1 = position.timestamp + offset1;
 alert('timestamp:'+position.timestamp);
 alert('adjusted time:'+currentdate1);
