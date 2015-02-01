@@ -59,11 +59,11 @@ $$('#fulladdressf').attr("placeholder",timeGPS);
 
 localStorage.setItem("latitude", position.coords.latitude);
 localStorage.setItem("longitude", position.coords.longitude);
-alert(position.timestamp);
+alert('timestamp:'+position.timestamp);
 var datetoday1 = new Date();
 var offset1 = datetoday1.getTimezoneOffset() * 60;
 var currentdate = position.timestamp + offset1;
-alert(currentdate);
+alert('adjusted time:'+currentdate);
 var month = new Array(12);
 var short_lat = position.coords.latitude.toFixed(1);
 var short_lng = position.coords.longitude.toFixed(1);
