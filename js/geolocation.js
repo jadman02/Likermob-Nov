@@ -42,6 +42,7 @@ day_name[4] = "Thursday";
 day_name[5] = "Friday";
 day_name[6] = "Saturday";
 var d = new Date(currentdate);
+alert(offset1);
 var month_name = month[d.getUTCMonth()];
 var weekday_name = day_name[d.getUTCDay()];
 var day = d.getUTCDate();
