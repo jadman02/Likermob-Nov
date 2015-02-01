@@ -60,10 +60,12 @@ $$('#fulladdressf').attr("placeholder",timeGPS);
 
 localStorage.setItem("latitude", position.coords.latitude);
 localStorage.setItem("longitude", position.coords.longitude);
-var timestamp = position.timestamp.substring(0, 10);
+var timestampy = position.timestamp.substring(0, 10);
+alert(timestampy);
 var datetoday1 = new Date();
 var offset1 = datetoday1.getTimezoneOffset() * 60;
-var currentdate1 = timestamp + offset1;
+var currentdate1 = timestampy + offset1;
+alert(currentdate1);
 var month = new Array(12);
 var short_lat = position.coords.latitude.toFixed(2);
 var short_lng = position.coords.longitude.toFixed(2);
