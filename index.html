@@ -1251,7 +1251,7 @@ function getMyPages(){
         if(( /(ipad|iphone|ipod|android|windows phone)/i.test(navigator.userAgent) )) {
             document.addEventListener('deviceready', initApp, false);
         } else {
-            setTimeout(function(){ initApp(); }, 3000);
+            initApp();
             
         }
     }
