@@ -65,11 +65,11 @@ localStorage.setItem("formatted_address_time", position.coords.longitude);
 $$.getJSON('https://maps.googleapis.com/maps/api/geocode/json?latlng='+ position.coords.latitude +','+ position.coords.longitude +'&key=AIzaSyAssayN33K28DkBxPB8iWOM0NG2-sCNHEk', function(response){
 
 
-localStorage.setItem("formatted_address", response.results[0].address_components[0].sublocality);
+//localStorage.setItem("formatted_address", response.results[0].address_components[0].sublocality);
 //$$('#fulladdressf').attr("placeholder",response.results[0].address_components[0].sublocality);
 $$('#formatted_address_time').val('Updated 2/2/15');
 
-var town = extractFromAdress(response.result.address_components, "locality");
+var town = extractFromAdress(response.results[0].address_components[0], "locality");
 alert(town);
 
 });  
