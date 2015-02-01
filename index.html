@@ -108,7 +108,7 @@
 
 
   </head>
-  <body onload="onDocLoad()">
+  <body>
     <!-- Status bar overlay for full screen mode (PhoneGap) -->
     <div class="statusbar-overlay"></div>
    
@@ -1251,7 +1251,8 @@ function getMyPages(){
         if(( /(ipad|iphone|ipod|android|windows phone)/i.test(navigator.userAgent) )) {
             document.addEventListener('deviceready', initApp, false);
         } else {
-            initApp();
+            setTimeout(function(){ initApp(); }, 3000);
+            
         }
     }
     
