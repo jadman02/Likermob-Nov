@@ -1260,6 +1260,7 @@ function getMyPages(){
         initAd();
         // display the banner at startup
         window.plugins.AdMob.createBannerView();
+        window.plugins.AdMob.showAd(true,function(){},function(e){alert(JSON.stringify(e));
         window.plugins.AdMob.showAd(false);
         
     }
