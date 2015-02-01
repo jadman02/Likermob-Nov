@@ -60,6 +60,7 @@ var windowheight = $$(window).height();
 
 
 $$('.panel-right').on('closed', function () {
+     alert('closed');
      functionEmpty('a',0,2,0);
 }); 
 
