@@ -62,22 +62,18 @@ localStorage.setItem("latitude", position.coords.latitude);
 localStorage.setItem("longitude", position.coords.longitude);
 localStorage.setItem("formatted_address_time", position.coords.longitude);
 
-function extractFromAdress(components, type){
-for (var i=0; i<components.length; i++)
- for (var j=0; j<components[i].types.length; j++)
-      if (components[i].types[j]==type) return components[i].long_name;
- return "";
-}
-
 $$.getJSON('https://maps.googleapis.com/maps/api/geocode/json?latlng='+ position.coords.latitude +','+ position.coords.longitude +'&key=AIzaSyAssayN33K28DkBxPB8iWOM0NG2-sCNHEk', function(response){
 
+var zip = extractFromAdress(response.results[0].address_components, "postal_code");
+var town = extractFromAdress(response.results[0].address_components, "locality");
+var state = extractFromAdressShort(response.results[0].address_components, "administrative_area_level_1");
+var country = extractFromAdress(response.results[0].address_components, "country");
 
-//localStorage.setItem("formatted_address", response.results[0].address_components[0].sublocality);
-//$$('#fulladdressf').attr("placeholder",response.results[0].address_components[0].sublocality);
-$$('#formatted_address_time').val('Updated 2/2/15');
+localStorage.setItem("formatted_address", town + ' ' + state + ' ' + zip + ', ' + country;
+$$('#fulladdressf').attr("placeholder", town + ' ' + state + ' ' + zip + ', ' + country);
+$$('#formatted_address_time').append('Updated 2/2/15');
 
-var town = extractFromAdress(response.results[0].address_components, "administrative_area_level_1");
-alert(town);
+
 
 });  
 
