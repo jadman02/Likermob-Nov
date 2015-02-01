@@ -2217,6 +2217,7 @@ function moveCover(){
 }
 
 function moveHomeimage(){
+	onDocLoad();
 	var img = new Image();
      img.src = $$( '.homecontent' ).css('background-image').replace(/url\(|\)$|"/ig, '');
      img.onload = function () {
