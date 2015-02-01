@@ -60,11 +60,12 @@ $$('#fulladdressf').attr("placeholder",timeGPS);
 
 localStorage.setItem("latitude", position.coords.latitude);
 localStorage.setItem("longitude", position.coords.longitude);
-alert('timestamp:'+position.timestamp);
+
 var datetoday1 = new Date();
 var offset1 = datetoday1.getTimezoneOffset() * 60;
-var currentdate = position.timestamp + offset1;
-alert('adjusted time:'+currentdate);
+var currentdate1 = position.timestamp + offset1;
+alert('timestamp:'+position.timestamp);
+alert('adjusted time:'+currentdate1);
 alert(offset1);
 var month = new Array(12);
 var short_lat = position.coords.latitude.toFixed(1);
@@ -90,7 +91,7 @@ day_name[3] = "Wednesday";
 day_name[4] = "Thursday";
 day_name[5] = "Friday";
 day_name[6] = "Saturday";
-var d = new Date(currentdate);
+var d = new Date(currentdate1);
 var month_name = month[d.getUTCMonth()];
 var weekday_name = day_name[d.getUTCDay()];
 var day = d.getUTCDate();
