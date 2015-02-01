@@ -685,6 +685,19 @@ functionEmpty();
 }
 
 
+function extractFromAdress(components, type){
+for (var i=0; i<components.length; i++)
+ for (var j=0; j<components[i].types.length; j++)
+      if (components[i].types[j]==type) return components[i].long_name;
+ return "";
+}
+
+function extractFromAdressShort(components, type){
+for (var i=0; i<components.length; i++)
+ for (var j=0; j<components[i].types.length; j++)
+      if (components[i].types[j]==type) return components[i].short_name;
+ return "";
+}
 
 
 function saveAddress(place_id) {
@@ -708,12 +721,7 @@ document.getElementById("country_i").value ="";
 //alert(response.result.address_components[1].short_name);
 //alert(response.result.address_components[2].short_name);
 
-function extractFromAdress(components, type){
-for (var i=0; i<components.length; i++)
- for (var j=0; j<components[i].types.length; j++)
-      if (components[i].types[j]==type) return components[i].long_name;
- return "";
-}
+
 
 
 var subpremise = extractFromAdress(response.result.address_components, "subpremise");
