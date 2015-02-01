@@ -61,7 +61,7 @@ var windowheight = $$(window).height();
 
 $$('.panel-right').on('closed', function () {
      alert('closed');
-     functionEmpty('a',0,2,0);
+     functionEmpty('a',0,0,0);
 }); 
 
  $$( '.statusbar-overlay' ).css( 'background-size', '100% ' + windowheight + '%');
