@@ -63,6 +63,7 @@ localStorage.setItem("longitude", position.coords.longitude);
 var datetoday1 = new Date();
 var offset1 = datetoday1.getTimezoneOffset() * 60000;
 var currentdate1 = position.timestamp + offset1;
+alert(currentdate1);
 var month = new Array(12);
 var short_lat = position.coords.latitude.toFixed(2);
 var short_lng = position.coords.longitude.toFixed(2);
