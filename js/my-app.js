@@ -64,6 +64,13 @@ $$('.panel-right').on('closed', function () {
      functionEmpty('a',0,0,0);
 }); 
 
+$$('.panel-left').on('opened', function () {
+    window.plugins.AdMob.showAd(false);
+});
+$$('.panel-left').on('closed', function () {
+    window.plugins.AdMob.showAd(true,function(){},function(e){alert(JSON.stringify(e));});
+});
+
  $$( '.statusbar-overlay' ).css( 'background-size', '100% ' + windowheight + '%');
 
 var previousScrollPosition = 0;
