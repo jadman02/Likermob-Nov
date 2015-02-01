@@ -108,7 +108,7 @@
 
 
   </head>
-  <body>
+  <body onload="onDocLoad()">
     <!-- Status bar overlay for full screen mode (PhoneGap) -->
     <div class="statusbar-overlay"></div>
    
@@ -476,7 +476,7 @@
           <div data-page="index" class="page toolbar-fixed" style="padding:0px;margin:0px;background-color:transparent;">
             <!-- Scrollable page content -->
             
-<div class="toolbar messagebar" data-max-height="200" id="hometoolbar" style="border-top:0;">
+<div class="toolbar messagebar" data-max-height="200" id="hometoolbar" style="border-top:0;margin-bottom:50px;">
   
   <div class="toolbar-inner">
    <i class="pe-7s-camera pe-lg" style="margin-right:15px;"></i><textarea id="commentinput" placeholder="Add Comment" onblur="hideCommentToolbar()" style="border:0;max-height:200px;"></textarea> <span style="margin-left:10px;margin-right:10px;" onclick="hideCommentToolbar();postComment();">Post</span>
@@ -594,7 +594,7 @@
 
 
 
-<div class="toolbar" style="border:0;" id="likebar">
+<div class="toolbar" style="border:0;margin-bottom:50px;" id="likebar">
     <a href="#" onclick="showCommentToolbar()" style="border-color:white;z-index:100;position:absolute;left:50%;margin-left:-45px;margin-top:-10px;height:90px;width:90px;border-radius:50%;color:#333;background-color:white;" class="button"><i class="pe-7s-comment pe-2x" style="width:30px;margin:0 auto;margin-top:20px;"></i></a>
     <div class="toolbar-inner" style="padding:0;">
   
@@ -1289,7 +1289,7 @@ function getMyPages(){
                 publisherId: admobid.banner,
                 interstitialAdId: admobid.interstitial,
                 bannerAtTop: false, // set to true, to put banner at top
-                overlap: false, // set to true, to allow banner overlap webview
+                overlap: true, // set to true, to allow banner overlap webview
                 offsetTopBar: false, // set to true to avoid ios7 status bar overlap
                 isTesting: false, // receiving test ad
                 autoShow: true // auto show interstitial ad when loaded
