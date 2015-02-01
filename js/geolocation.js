@@ -83,8 +83,12 @@ var town = extractFromAdress(response.results[0].address_components, "locality")
 var state = extractFromAdressShort(response.results[0].address_components, "administrative_area_level_1");
 var country = extractFromAdress(response.results[0].address_components, "country");
 
-localStorage.setItem("formatted_address", town + ' ' + state + ' ' + zip + ', ' + country;
-$$('#fulladdressf').attr("placeholder", town + ' ' + state + ' ' + zip + ', ' + country);
+alert(town + ' ' + state + ' ' + zip + ', ' + country);
+
+//var formatted_address_placeholder = ;
+
+//localStorage.setItem("formatted_address", ;
+//$$('#fulladdressf').attr("placeholder", town + ' ' + state + ' ' + zip + ', ' + country);
 $$('#formatted_address_time').append('Updated 2/2/15');
 
 
