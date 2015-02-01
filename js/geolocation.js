@@ -64,10 +64,10 @@ localStorage.setItem("longitude", position.coords.longitude);
 $$.getJSON('https://maps.googleapis.com/maps/api/geocode/json?latlng='+ position.coords.latitude +','+ position.coords.longitude +'&key=AIzaSyAssayN33K28DkBxPB8iWOM0NG2-sCNHEk', function(response){
 
 
+alert(response.results[0].formatted_address);
 
-
-localStorage.setItem("formatted_address", response.results.formatted_address);
-$$('#fulladdressf').attr("placeholder",response.results.formatted_address);
+localStorage.setItem("formatted_address", response.results[0].formatted_address);
+$$('#fulladdressf').attr("placeholder",response.results[0].formatted_address);
 
 
 });  
