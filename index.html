@@ -108,7 +108,7 @@
 
 
   </head>
-  <body onload="onDocLoad()" onresize="onResize()">
+  <body>
     <!-- Status bar overlay for full screen mode (PhoneGap) -->
     <div class="statusbar-overlay"></div>
    
@@ -1255,6 +1255,11 @@ function getMyPages(){
         }
     }
     
+ function initApp() {
+        initAd();
+        // display the banner at startup
+        window.plugins.AdMob.createBannerView();
+    }
 
     function initAd(){
         if ( window.plugins && window.plugins.AdMob ) {
@@ -1306,10 +1311,7 @@ function getMyPages(){
         document.addEventListener('onPresentInterstitialAd', function(){ });
         document.addEventListener('onDismissInterstitialAd', function(){ });
     }
-    function onResize() {
-        var msg = 'web view: ' + window.innerWidth + ' x ' + window.innerHeight;
-        document.getElementById('sizeinfo').innerHTML = msg;
-    }
+
     </script>
 
   </body>
