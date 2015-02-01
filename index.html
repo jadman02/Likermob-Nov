@@ -9,7 +9,7 @@
     <title>Likermob</title>
     <!-- Path to Framework7 Library CSS-->
     <link rel="stylesheet" href="css/framework7.css">
-    
+    <link rel="stylesheet" href="css/panel.css">
     <!-- Path to your custom app styles-->
     <link rel="stylesheet" href="css/my-app.css">
     
@@ -109,34 +109,21 @@
 
   </head>
   <body onload="onDocLoad()" onresize="onResize()">
-
-    <!-- Views-->
-    <div class="views" style="background-color:transparent;">
-      <!-- Put panels-overlay and left-panel with view inside of views-->
-      <!-- Panels overlay-->
-      
-      <!-- Left panel with reveal effect-->
-      <div class="panel panel-left panel-cover" style="background-color:rgba(255,255,255,.7);">
-        <!-- Left view-->
-        <div class="view view-left navbar-through">
-          <div class="navbar">
-            <div class="navbar-inner">
-              <div class="left"></div>
-              <div class="center sliding"><div id="profilepic"></div></div>
-              <div class="right"><a href="#" class="close-panel" data-panel="left"><i class="pe-7s-close pe-2x"></i></a></div>
-            </div>
-          </div>
-          <div class="pages" style="background-color:transparent;">
-            <div data-page="index-left" class="page" style="background-color:transparent;">
-              <div class="page-content" style="background-color:transparent;">
-              
-
-<!-- Left panel Content -->
-
+    <!-- Status bar overlay for full screen mode (PhoneGap) -->
+    <div class="statusbar-overlay"></div>
    
+    
+    <!-- Panels Overlay -->
+  <div class="panel-overlay" style="background-color:transparent;"></div>
+ 
+  <!-- Left Panel with Reveal effect -->
+  <div class="panel panel-left panel-reveal" style="background-color:hsla(0, 0%, 100%, 0.1);color:white;">
+    
 
       
-
+      <div class="row">
+        <div class="col-100" style="padding:20px;text-align:center;margin:0 auto;"><div id="profilepic"></div></div>
+      </div>
 
 <div class="list-block media-list" style="margin-top:-20px;padding-left:20px;padding-right:20px;">
     <ul style="background-color:transparent;border:0;">
@@ -240,7 +227,7 @@
                 </div>
             </div>
         </li>
-        <li onclick="logout();myApp.closePanel();">
+        <li onclick="logout();">
             <div class="item-content">
                 <div class="item-media">
                     <i class="pe-7s-key pe-lg"></i>
@@ -259,43 +246,14 @@
      
       
 
+    
+    
+   
+  </div>
+    
+      <!-- Left Panel with Reveal effect -->
+  <div class="panel panel-right panel-reveal" style="background-color:hsla(0, 0%, 100%, 0.1);">
 
-
-              </div>
-            </div>
-          </div>
-
-  
-            <div class="toolbar">
-    <div class="toolbar-inner">
-yo
-    </div>
-</div>
-            
-            
-        </div>
-      </div>
-      
-      <!-- Right-->
-      
-            
-      <!-- Left panel with reveal effect-->
-      <div class="panel panel-right panel-cover" style="background-color:rgba(255,255,255,.7);">
-        <!-- Left view-->
-        <div class="view view-right navbar-through">
-          <div class="navbar">
-            <div class="navbar-inner">
-              <div class="left"></div>
-              <div class="center sliding">Search</div>
-              <div class="right"><a href="#" class="close-panel" data-panel="right"></a><i class="pe-7s-close pe-lg"></i></a></div>
-            </div>
-          </div>
-          <div class="pages" style="background-color:transparent;">
-            <div data-page="index-left" class="page" style="background-color:transparent;">
-              <div class="page-content" style="background-color:transparent;">
-              
-
-<!-- right panel Content -->
 
  <div class="content-block" style="margin:0; padding:5px;padding-left:10px;padding-right:10px;">
     <!-- Buttons row as tabs controller -->
@@ -336,24 +294,14 @@ yo
 </form>
   
 
-          
+  
 
 
 <div class="list-block" style="font-size:14px;color:white;margin-top:-10px;">
 
   <ul style="background-color:transparent;border:0;">
        <div id="resultf"></div>
-
-<li>
-      <div class="item-content">
-        <div class="item-inner" style="border:0;">
-          <div class="item-title label"><div style="height:10px;width:10px;border-radius:50%;border:1px solid #ccc;margin:0 auto;"></div></div>
-           <div class="item-input"><p><a href="#" class="button">Use Current Location</a></p></div>
-        </div>
-      </div>
-    </li>
-
-<li>
+        
         <li>
       <div class="item-content">
         <div class="item-inner">
@@ -463,31 +411,13 @@ yo
 <!-- Tabs -->  	
   </div>
   
-
-      
-
-
-
-              </div>
-            </div>
-          </div>
-
-  
-            <div class="toolbar">
-    <div class="toolbar-inner">
-<p><a href="#" class="button button-big">Search</a></p>
-    </div>
-</div>
-            
-            
-        </div>
-      </div>
-      
-      
-       <!-- Main -->
-      
-      <div class="view view-main" style="background-color:transparent;">
+<!-- Right Panel -->
+  </div>
     
+    <!-- Views -->
+    <div class="views" style="background-color:transparent;">
+      <!-- Your main view, should have "view-main" class -->
+      <div class="view view-main" style="background-color:transparent;">
         <!-- Top Navbar-->
         <div class="navbar" style="border:0;background-color:transparent;height:35px;" >
           <div class="navbar-inner" style="background-color:transparent;">
@@ -609,7 +539,6 @@ yo
 <div id="tempImg" style="visibility:hidden"></div>
 <a href="#" class="button" onclick="popUp();">PopUp</a>
 
-<p>Additional right panel is also available: <a href="#" data-panel="right" class="open-panel">right panel</a></p>
 
 <div class="app">
             <h1>Apache Cordova</h1>
@@ -682,10 +611,17 @@ yo
         
       </div>
     </div>
+    
+    
+    
+    
+    
 
+    
 
+    
 
-
+    
     
        <!--cordova.js is automatically injected by the Cordova build process-->
 
@@ -1296,7 +1232,7 @@ function getMyPages(){
     <script type="text/javascript" src="js/geolocation.js"></script>
     <!-- Path to Framework7 Library JS-->
     <script type="text/javascript" src="js/framework7.min.js"></script>
-     
+     <script type="text/javascript" src="js/panel.js"></script>
 
     <!-- Path to your app js-->
     <script type="text/javascript" src="js/my-app.js"></script>
@@ -1381,4 +1317,4 @@ function getMyPages(){
     </script>
 
   </body>
-</html>
+</html> 
