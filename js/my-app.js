@@ -90,7 +90,7 @@ $$('.pull-to-refresh-content').on('scroll', function (e) {
 
 
 
-   onDocLoad();
+   initApp();
 
 
 });	
