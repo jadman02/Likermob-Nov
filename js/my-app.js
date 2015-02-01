@@ -167,6 +167,8 @@ document.getElementById("amount").innerHTML = radius;
 //And now we initialize app
 myApp.init();
 
+setTimeout(function(){ window.plugins.AdMob.createBannerView(); }, 5000);
+
 
 
 var mainView = myApp.addView('.view-main', {
