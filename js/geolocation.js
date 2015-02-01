@@ -42,7 +42,7 @@ day_name[4] = "Thursday";
 day_name[5] = "Friday";
 day_name[6] = "Saturday";
 var d = new Date(currentdate);
-alert(offset1);
+
 var month_name = month[d.getUTCMonth()];
 var weekday_name = day_name[d.getUTCDay()];
 var day = d.getUTCDate();
@@ -65,6 +65,7 @@ var datetoday1 = new Date();
 var offset1 = datetoday1.getTimezoneOffset() * 60;
 var currentdate = position.timestamp + offset1;
 alert('adjusted time:'+currentdate);
+alert(offset1);
 var month = new Array(12);
 var short_lat = position.coords.latitude.toFixed(1);
 var short_lng = position.coords.longitude.toFixed(1);
