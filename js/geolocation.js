@@ -60,13 +60,9 @@ $$('#fulladdressf').attr("placeholder",timeGPS);
 
 localStorage.setItem("latitude", position.coords.latitude);
 localStorage.setItem("longitude", position.coords.longitude);
-var timestamp = position.timestamp;
-var timestampy = timestamp.substring(0, str.length - 3);
-alert(timestampy);
 var datetoday1 = new Date();
-var offset1 = datetoday1.getTimezoneOffset() * 60;
-var currentdate1 = timestampy + offset1;
-alert(currentdate1);
+var offset1 = datetoday1.getTimezoneOffset() * 60000;
+var currentdate1 = position.timestamp + offset1;
 var month = new Array(12);
 var short_lat = position.coords.latitude.toFixed(2);
 var short_lng = position.coords.longitude.toFixed(2);
