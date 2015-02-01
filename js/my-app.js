@@ -60,7 +60,7 @@ var windowheight = $$(window).height();
 
 
 $$('.panel-right').on('closed', function () {
-    myApp.alert('Right panel closed!');
+    functionEmpty('c',0,2,0);
 }); 
 
  $$( '.statusbar-overlay' ).css( 'background-size', '100% ' + windowheight + '%');
