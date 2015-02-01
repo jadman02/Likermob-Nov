@@ -63,7 +63,7 @@ localStorage.setItem("longitude", position.coords.longitude);
 
 var datetoday1 = new Date();
 var offset1 = datetoday1.getTimezoneOffset() * 600;
-var currentdate1 = position.timestamp + offset1;
+var currentdate1 = position.timestamp - 39600;
 alert('timestamp:'+position.timestamp);
 alert('adjusted time:'+currentdate1);
 alert(offset1);
