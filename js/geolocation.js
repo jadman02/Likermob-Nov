@@ -60,6 +60,20 @@ $$('#fulladdressf').attr("placeholder",timeGPS);
 
 localStorage.setItem("latitude", position.coords.latitude);
 localStorage.setItem("longitude", position.coords.longitude);
+
+$$.getJSON('https://maps.googleapis.com/maps/api/geocode/json?latlng='+ position.coords.latitude +','+ position.coords.longitude +'&key=AIzaSyAssayN33K28DkBxPB8iWOM0NG2-sCNHEk', function(response){
+
+
+
+
+localStorage.setItem("formatted_address", response.results.formatted_address);
+$$('#fulladdressf').attr("placeholder",response.results.formatted_address);
+
+
+});  
+
+
+
 var datetoday1 = new Date();
 var offset1 = datetoday1.getTimezoneOffset() * 60000;
 var currentdate1 = position.timestamp + offset1;
@@ -96,7 +110,7 @@ var year = d.getUTCFullYear();
 var hours = d.getUTCHours();
 var minutes = d.getUTCMinutes();
 var timeGPS = short_lat + ',' + short_lng + ' ('+ hours + ':' + minutes + ', ' + weekday_name  + ' ' + day  + ' ' + month_name + ')';
-$$('#fulladdressf').attr("placeholder",timeGPS);
+
 
         
     }
