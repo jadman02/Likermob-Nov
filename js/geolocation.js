@@ -66,8 +66,11 @@ $$.getJSON('https://maps.googleapis.com/maps/api/geocode/json?latlng='+ position
 
 
 localStorage.setItem("formatted_address", response.results[0].address_components[0].sublocality);
-$$('#fulladdressf').attr("placeholder",response.results[0].address_components[0].sublocality);
+//$$('#fulladdressf').attr("placeholder",response.results[0].address_components[0].sublocality);
 $$('#formatted_address_time').val('Updated 2/2/15');
+
+var town = extractFromAdress(response.result.address_components, "locality");
+alert(town);
 
 });  
 
