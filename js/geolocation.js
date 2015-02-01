@@ -60,16 +60,13 @@ $$('#fulladdressf').attr("placeholder",timeGPS);
 
 localStorage.setItem("latitude", position.coords.latitude);
 localStorage.setItem("longitude", position.coords.longitude);
-
+var timestamp = position.timestamp.substring(0, 10);
 var datetoday1 = new Date();
-var offset1 = datetoday1.getTimezoneOffset() * 600;
-var currentdate1 = position.timestamp - 39600;
-alert('timestamp:'+position.timestamp);
-alert('adjusted time:'+currentdate1);
-alert(offset1);
+var offset1 = datetoday1.getTimezoneOffset() * 60;
+var currentdate1 = timestamp + offset1;
 var month = new Array(12);
-var short_lat = position.coords.latitude.toFixed(1);
-var short_lng = position.coords.longitude.toFixed(1);
+var short_lat = position.coords.latitude.toFixed(2);
+var short_lng = position.coords.longitude.toFixed(2);
 month[0] = "Jan";
 month[1] = "Feb";
 month[2] = "Mar";
