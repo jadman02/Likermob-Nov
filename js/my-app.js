@@ -59,6 +59,10 @@ var existingEntries = JSON.parse(localStorage.getItem("allEntries"));
 var windowheight = $$(window).height();
 
 
+$$('.panel-right').on('closed', function () {
+    myApp.alert('Right panel closed!');
+}); 
+
  $$( '.statusbar-overlay' ).css( 'background-size', '100% ' + windowheight + '%');
 
 var previousScrollPosition = 0;
