@@ -78,6 +78,7 @@ $$('#fulladdressf').attr("placeholder", formatted_address_placeholder);
 $$('#fulladdressf').val(formatted_address_placeholder);
 $$('#resultfclear').show();
 $$( "#updatelocation" ).addClass( "active" );
+$$( '#updatelocation' ).css( 'border-color', 'transparent');
 
 });  
 
