@@ -55,7 +55,7 @@
      .show {display:block;}
 
 .transparent {background-color:hsla(0, 0%, 100%, 0.8);}
-
+.blue-slider {background-color:white;color:#007aff;}
 .slider-slide-business {
   background: #fff;
   box-sizing: border-box;
@@ -259,9 +259,9 @@
     <!-- Buttons row as tabs controller -->
     <div class="buttons-row">
       <!-- Link to 1st tab, active -->
-      <a href="#tab1" class="tab-link active button" style="color:white;"><i class="pe-7s-search pe-lg"></i></a>
-      <a href="#tab2" class="tab-link button" style="color:white;"><i class="pe-7s-map-marker pe-2x"></i></a>
-      <a href="#tab3" class="tab-link button" style="color:white;"><i class="pe-7s-check pe-2x"></i></a>
+      <a href="#tab1" class="blue-slider tab-link active button"><i class="pe-7s-search pe-lg"></i></a>
+      <a href="#tab2" class="blue-slider tab-link button"><i class="pe-7s-map-marker pe-lg"></i></a>
+      <a href="#tab3" class="blue-slider tab-link button"><i class="pe-7s-check pe-lg"></i></a>
     </div>
  </div>
 
@@ -306,7 +306,7 @@
       <div class="item-content">
         <div class="item-inner">
           <div class="item-input">
-             <p><a href="#" class="button disabled" onclick="updatemyLocation()" id="updatelocation" style="background-color:white;">Get Current Location</a></p>
+             <p><a href="#" class="button" onclick="updatemyLocation()" id="updatelocation" style="background-color:white;display:none;">Get Current Location</a></p>
           </div>
         </div>
       </div>
