@@ -661,6 +661,7 @@ $$.getJSON('https://maps.googleapis.com/maps/api/place/details/json?placeid='+ p
 $$("#resultf li").remove();
 
 $$( "#updatelocation" ).removeClass( "active" );
+$$( '#updatelocation' ).css( 'border-color', 'white');
 localStorage.setItem("latitude", response.result.geometry.location.lat);
 localStorage.setItem("longitude", response.result.geometry.location.lng);
 localStorage.setItem("formatted_address", response.result.formatted_address);
