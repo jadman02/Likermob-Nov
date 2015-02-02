@@ -76,6 +76,7 @@ var formatted_address_placeholder = town + ' ' + state + ' ' + zip + ', ' + coun
 localStorage.setItem("formatted_address", formatted_address_placeholder);
 $$('#fulladdressf').attr("placeholder", formatted_address_placeholder);
 $$('#fulladdressf').val(formatted_address_placeholder);
+$$('#resultfclear').show();
 
 
 });  
