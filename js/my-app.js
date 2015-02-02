@@ -167,7 +167,7 @@ document.getElementById("amount").innerHTML = radius;
 //And now we initialize app
 myApp.init();
 
-$$("#updatelocation").removeAttr("disabled", "disabled");
+
 
 setTimeout(function(){ window.plugins.AdMob.createBannerView();}, 5000);
 
@@ -187,16 +187,6 @@ $$('#likebar').hide();
 }
 
 	
-
-
-
-
-
-
-
-
-
-
 
 // Callbacks to run specific code for specific pages, for example for About page:
 
