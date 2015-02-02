@@ -257,7 +257,7 @@
 
  <div class="content-block" style="margin:0; padding:5px;padding-left:10px;padding-right:10px;">
     <!-- Buttons row as tabs controller -->
-    <div class="buttons-row" class="theme-white">
+    <div class="buttons-row" style="background-color:white;">
       <!-- Link to 1st tab, active -->
       <a href="#tab1" class="tab-link active button"><i class="pe-7s-search pe-lg"></i></a>
       <a href="#tab2" class="tab-link button"><i class="pe-7s-map-marker pe-2x"></i></a>
@@ -306,7 +306,7 @@
       <div class="item-content">
         <div class="item-inner">
           <div class="item-input">
-             <p><a href="#" class="button disabled" onclick="updatemyLocation()" id="updatelocation">Get Current Location</a></p>
+             <p><a href="#" class="button disabled" onclick="updatemyLocation()" id="updatelocation" style="background-color:white;">Get Current Location</a></p>
           </div>
         </div>
       </div>
@@ -1270,7 +1270,7 @@ function getMyPages(){
             document.addEventListener('deviceready', initApp, false);
         } else {
             initApp();
-            $$("#updatelocation").removeAttr("disabled", "disabled");
+            
             
         }
     }
