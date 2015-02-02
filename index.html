@@ -1271,6 +1271,7 @@ function getMyPages(){
             document.addEventListener('deviceready', initApp, false);
         } else {
             initApp();
+            $$("#updatelocation").removeAttr("disabled", "disabled");
             
         }
     }
