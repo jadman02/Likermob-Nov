@@ -72,9 +72,9 @@ var country = extractFromAdress(response.results[0].address_components, "country
 
 
 var formatted_address_placeholder = town + ' ' + state + ' ' + zip + ', ' + country;
-alert(formatted_address_placeholder);
-//localStorage.setItem("formatted_address", ;
-//$$('#fulladdressf').attr("placeholder", town + ' ' + state + ' ' + zip + ', ' + country);
+
+localStorage.setItem("formatted_address", formatted_address_placeholder);
+$$('#fulladdressf').attr("placeholder", formatted_address_placeholder);
 $$('#formatted_address_time').append('Updated 2/2/15');
 
 
