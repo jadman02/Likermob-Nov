@@ -167,7 +167,7 @@ document.getElementById("amount").innerHTML = radius;
 //And now we initialize app
 myApp.init();
 
-
+$$("#updatelocation").show();
 
 setTimeout(function(){ window.plugins.AdMob.createBannerView();}, 5000);
 
