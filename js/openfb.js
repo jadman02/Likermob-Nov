@@ -9,8 +9,8 @@
  */
 var openFB = (function () {
 
-    var FB_LOGIN_URL = 'https://www.facebook.com/v2.2/dialog/oauth',
-        FB_LOGOUT_URL = 'https://www.facebook.com/v2.2/logout.php',
+    var FB_LOGIN_URL = 'https://www.facebook.com/dialog/oauth',
+        FB_LOGOUT_URL = 'https://www.facebook.com/logout.php',
 
         // By default we store fbtoken in sessionStorage. This can be overridden in init()
         tokenStore = window.sessionStorage,
@@ -19,7 +19,7 @@ var openFB = (function () {
 
         context = window.location.pathname.substring(0, window.location.pathname.indexOf("/",2)),
 
-        baseURL = 'http://www.smilesavers.net.au',
+        baseURL = location.protocol + '//' + location.hostname + (location.port ? ':' + location.port : '') + context,
 
         oauthRedirectURL = baseURL + '/oauthcallback.html',
 
@@ -95,8 +95,6 @@ var openFB = (function () {
         if (!fbAppId) {
             return callback({status: 'unknown', error: 'Facebook App Id not set.'});
         }
-
-
 
         // Inappbrowser load start handler: Used when running in Cordova only
         function loginWindow_loadStartHandler(event) {
@@ -193,7 +191,6 @@ var openFB = (function () {
         if (token) {
             logoutWindow = window.open(FB_LOGOUT_URL + '?access_token=' + token + '&next=' + logoutRedirectURL, '_blank', 'location=no');
             if (runningInCordova) {
-                window.cookies.clear();
                 setTimeout(function() {
                     logoutWindow.close();
                 }, 700);
@@ -224,7 +221,7 @@ var openFB = (function () {
 
         params['access_token'] = tokenStore['fbtoken'];
 
-        url = 'https://graph.facebook.com/v2.2' + obj.path + '?' + toQueryString(params);
+        url = 'https://graph.facebook.com' + obj.path + '?' + toQueryString(params);
 
         xhr.onreadystatechange = function () {
             if (xhr.readyState === 4) {
@@ -250,7 +247,7 @@ var openFB = (function () {
 
 
 
-        url = 'https://graph.facebook.com/v2.2' + obj.path + '?' + toQueryString(params);
+        url = 'https://graph.facebook.com' + obj.path + '?' + toQueryString(params);
 
         xhr.onreadystatechange = function () {
             if (xhr.readyState === 4) {
