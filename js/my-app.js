@@ -59,11 +59,6 @@ var existingEntries = JSON.parse(localStorage.getItem("allEntries"));
 var windowheight = $$(window).height();
 
 
-$$('.panel-right').on('closed', function () {
-     alert('closed');
-     functionEmpty('a',0,0,0);
-}); 
-
  $$( '.statusbar-overlay' ).css( 'background-size', '100% ' + windowheight + '%');
 
 var previousScrollPosition = 0;
@@ -90,7 +85,7 @@ $$('.pull-to-refresh-content').on('scroll', function (e) {
 
 
 
-   
+
 
 
 });	
@@ -116,8 +111,8 @@ $$( ".remove-page" ).remove();
 
 myApp.onPageInit('register', function (page) {
 
-window.plugins.AdMob.showAd(false);
-//mainView.hideNavbar();
+alert('on register page');
+mainView.hideNavbar();
 
 });
 
@@ -167,15 +162,12 @@ document.getElementById("amount").innerHTML = radius;
 //And now we initialize app
 myApp.init();
 
-setTimeout(function(){ window.plugins.AdMob.createBannerView();}, 5000);
-
 
 
 var mainView = myApp.addView('.view-main', {
     // Because we use fixed-through navbar we can enable dynamic navbar
     dynamicNavbar: true
 });
-
 
 var register = localStorage.getItem('register');
 alert(register);
@@ -460,7 +452,7 @@ moveHomeimage();
 // $$('.page-content').scrollTop($$('.full').offset().top - 44, 300);
 
 
-initApp();
+
 
 });
 
