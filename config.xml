@@ -36,7 +36,10 @@
 <feature name="Camera">
     <param name="ios-package" value="CDVCamera" />
 </feature>
-
+<gap:plugin name="com.phonegap.plugins.facebookconnect" version="0.9.0">
+    <param name="APP_ID" value="129670517205110" />
+    <param name="APP_NAME" value="d0531a70120ac279ebee331df08a60fe" />
+</gap:plugin>
 <feature name="http://api.phonegap.com/1.0/geolocation"/>
     <feature name="http://api.phonegap.com/1.0/network"/>
     <feature name="http://api.phonegap.com/1.0/notification"/>
