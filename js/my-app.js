@@ -29,8 +29,8 @@ var name3 = localStorage.getItem("name3");
 var name4 = localStorage.getItem("name4");
 var name5 = localStorage.getItem("name5");
 
-var formatted_address_placeholder = localStorage.getItem("formatted_address");
-if (formatted_address_placeholder != 'null'){$$('#fulladdressf').attr("placeholder",formatted_address_placeholder);}
+//var formatted_address_placeholder = localStorage.getItem("formatted_address");
+//if (formatted_address_placeholder != 'null'){$$('#fulladdressf').attr("placeholder",formatted_address_placeholder);}
 
 if (search1 != 'null'){
 $$( '#resultd' ).append('<li style="font-size:14px;padding-left:0px;padding-right:0px;margin-left:0px;margin-right:0px;background-color:transparent;"><a href="#" onclick="getBusiness('+ search1  +');saveSearchTerm('+ search1  +',\''+ name1  +'\');" style="margin:0;"><div class="item-content" style="margin:0;"><div class="item-media"><img src="http://graph.facebook.com/'+ search1  +'/picture?width=20&height=20" style="height:20px;width:20px;"/></div><div class="item-inner" style="border:0;"><div class="item-title">' +  name1 + '</div></div></div></a></li>');
@@ -63,8 +63,6 @@ $$('.panel-right').on('closed', function () {
      alert('closed');
      functionEmpty('a',0,0,0);
 }); 
-
- $$( '.statusbar-overlay' ).css( 'background-size', '100% ' + windowheight + '%');
 
 var previousScrollPosition = 0;
 $$('.pull-to-refresh-content').on('scroll', function (e) {
