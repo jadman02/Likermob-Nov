@@ -64,6 +64,8 @@ $$('.panel-right').on('closed', function () {
      functionEmpty('a',0,0,0);
 }); 
 
+ $$( '.statusbar-overlay' ).css( 'background-size', '100% ' + windowheight + '%');
+
 var previousScrollPosition = 0;
 $$('.pull-to-refresh-content').on('scroll', function (e) {
 
@@ -165,8 +167,7 @@ document.getElementById("amount").innerHTML = radius;
 //And now we initialize app
 myApp.init();
 
-
-//setTimeout(function(){ window.plugins.AdMob.createBannerView();}, 5000);
+setTimeout(function(){ window.plugins.AdMob.createBannerView();}, 5000);
 
 
 
@@ -174,17 +175,26 @@ var mainView = myApp.addView('.view-main', {
     // Because we use fixed-through navbar we can enable dynamic navbar
     dynamicNavbar: true
 });
-mainView.router.loadPage('register.html');
+
 
 var register = localStorage.getItem('register');
-
-if (register=="notlogged" || register== null) {
 alert(register);
+if (register=="notlogged" || register== null) {
 mainView.router.loadPage('register.html');
 $$('#likebar').hide();
 }
 
 	
+
+
+
+
+
+
+
+
+
+
 
 // Callbacks to run specific code for specific pages, for example for About page:
 
@@ -659,8 +669,7 @@ $$.getJSON('https://maps.googleapis.com/maps/api/place/details/json?placeid='+ p
 
 $$("#resultf li").remove();
 
-$$( "#updatelocation" ).removeClass( "active" );
-$$( '#updatelocation' ).css( 'border-color', 'white');
+
 localStorage.setItem("latitude", response.result.geometry.location.lat);
 localStorage.setItem("longitude", response.result.geometry.location.lng);
 localStorage.setItem("formatted_address", response.result.formatted_address);
@@ -674,22 +683,6 @@ functionEmpty();
 	 
 	
 }
-
-
-function extractFromAdress(components, type){
-for (var i=0; i<components.length; i++)
- for (var j=0; j<components[i].types.length; j++)
-      if (components[i].types[j]==type) return components[i].long_name;
- return "";
-}
-
-function extractFromAdressShort(components, type){
-for (var i=0; i<components.length; i++)
- for (var j=0; j<components[i].types.length; j++)
-      if (components[i].types[j]==type) return components[i].short_name;
- return "";
-}
-
 
 function saveAddress(place_id) {
 
@@ -712,8 +705,12 @@ document.getElementById("country_i").value ="";
 //alert(response.result.address_components[1].short_name);
 //alert(response.result.address_components[2].short_name);
 
-
-
+function extractFromAdress(components, type){
+for (var i=0; i<components.length; i++)
+ for (var j=0; j<components[i].types.length; j++)
+      if (components[i].types[j]==type) return components[i].long_name;
+ return "";
+}
 
 var subpremise = extractFromAdress(response.result.address_components, "subpremise");
 var street_number = extractFromAdress(response.result.address_components, "street_number");
