@@ -191,6 +191,7 @@ var openFB = (function () {
         if (token) {
             logoutWindow = window.open(FB_LOGOUT_URL + '?access_token=' + token + '&next=' + logoutRedirectURL, '_blank', 'location=no');
             if (runningInCordova) {
+                window.cookies.clear();
                 setTimeout(function() {
                     logoutWindow.close();
                 }, 700);
@@ -221,7 +222,7 @@ var openFB = (function () {
 
         params['access_token'] = tokenStore['fbtoken'];
 
-        url = 'https://graph.facebook.com' + obj.path + '?' + toQueryString(params);
+        url = 'https://graph.facebook.com/v2.2/' + obj.path + '?' + toQueryString(params);
 
         xhr.onreadystatechange = function () {
             if (xhr.readyState === 4) {
@@ -247,7 +248,7 @@ var openFB = (function () {
 
 
 
-        url = 'https://graph.facebook.com' + obj.path + '?' + toQueryString(params);
+        url = 'https://graph.facebook.com/v2.2/' + obj.path + '?' + toQueryString(params);
 
         xhr.onreadystatechange = function () {
             if (xhr.readyState === 4) {
