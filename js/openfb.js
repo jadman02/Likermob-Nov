@@ -133,7 +133,7 @@ var openFB = (function () {
 //        logout();
 
         if (runningInCordova) {
-            oauthRedirectURL = "https://www.facebook.com/v2.2/connect/login_success.html";
+            oauthRedirectURL = "https://www.facebook.com/connect/login_success.html";
         }
 
         startTime = new Date().getTime();
