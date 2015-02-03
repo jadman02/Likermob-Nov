@@ -92,7 +92,7 @@
 
         
       }
-#hometoolbar{display:none;}
+#hometoolbar {display:none;}
 .statusbar-overlay {background-color:transparent;}
     div#fullpage { width:100%; height:100%; margin:0; padding:0; border:0px solid red; text-align:center; vertical-align:middle; }
             button { font-size: 22px;}
@@ -108,7 +108,7 @@
 
 
   </head>
-  <body>
+  <body onload="onDocLoad()" onresize="onResize()">
     <!-- Status bar overlay for full screen mode (PhoneGap) -->
     <div class="statusbar-overlay"></div>
    
@@ -294,7 +294,7 @@
 </form>
   
 
-  <p><a href="#" class="button" onclick="updatemyLocation()">Get Current Location</a></p>
+  
 
 
 <div class="list-block" style="font-size:14px;color:white;margin-top:-10px;">
@@ -489,7 +489,7 @@
 
      
             
-            <div class="page-content pull-to-refresh-content homecontent" style="background-color:transparent;padding:0px;margin:0px;margin-top:44px;">
+            <div class="page-content pull-to-refresh-content homecontent" style="background-color:transparent;padding:0px;margin:0px;margin-top:55px;">
 
 
 
@@ -595,7 +595,7 @@
 
 
 <div class="toolbar" style="border:0;" id="likebar">
-    <a href="#" onclick="showCommentToolbar()" style="border-color:white;z-index:100;position:absolute;left:50%;margin-left:-45px;margin-top:-10px;height:90px;width:90px;border-radius:50%;color:white;background-color:#c4c4c4;" class="button"><i class="pe-7s-comment pe-2x" style="width:30px;margin:0 auto;margin-top:20px;"></i></a>
+    <a href="#" onclick="showCommentToolbar()" style="border-color:white;z-index:100;position:absolute;left:50%;margin-left:-45px;margin-top:-10px;height:90px;width:90px;border-radius:50%;color:#333;background-color:white;" class="button"><i class="pe-7s-comment pe-2x" style="width:30px;margin:0 auto;margin-top:20px;"></i></a>
     <div class="toolbar-inner" style="padding:0;">
   
         <a href="#" class="link" ontouchstart="homeLikeButton()" style="background-color:#3b5998;color:white;width:50%;"><i class="pe-7s-like2 pe-lg" style="width:30px;margin:0 auto;"></i></a>
@@ -1252,17 +1252,14 @@ function getMyPages(){
             document.addEventListener('deviceready', initApp, false);
         } else {
             initApp();
-            
         }
     }
     
- function initApp() {
+    function initApp() {
         initAd();
         // display the banner at startup
-
-        
+       // window.plugins.AdMob.createBannerView();
     }
-
     function initAd(){
         if ( window.plugins && window.plugins.AdMob ) {
     	    var ad_units = {
@@ -1298,7 +1295,6 @@ function getMyPages(){
             });
             registerAdEvents();
             
-            
         } else {
             alert( 'admob plugin not ready' );
         }
@@ -1314,7 +1310,10 @@ function getMyPages(){
         document.addEventListener('onPresentInterstitialAd', function(){ });
         document.addEventListener('onDismissInterstitialAd', function(){ });
     }
-
+    function onResize() {
+        var msg = 'web view: ' + window.innerWidth + ' x ' + window.innerHeight;
+        document.getElementById('sizeinfo').innerHTML = msg;
+    }
     </script>
 
   </body>
