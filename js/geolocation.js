@@ -1,3 +1,20 @@
+document.addEventListener("deviceready", onDeviceReady, false);
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+var fbLoginSuccess = function (userData) {
+    alert("UserInfo: " + JSON.stringify(userData));
+}
+
+facebookConnectPlugin.login(["public_profile"],
+    fbLoginSuccess,
+    function (error) { alert("" + error) }
+);
+    }
+
+
+
 function getmyLocation(){
    navigator.geolocation.getCurrentPosition(onSuccess, onError); 
     
