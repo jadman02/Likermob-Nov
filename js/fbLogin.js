@@ -5,6 +5,7 @@ document.addEventListener("deviceready", onDeviceReady, false);
     function onDeviceReady() {
 var fbLoginSuccess = function (userData) {
     alert("UserInfo: " + JSON.stringify(userData));
+    localStorage.setItem("register", "logged");
 }
 
 facebookConnectPlugin.login(["public_profile","email"],
