@@ -2558,26 +2558,7 @@ function loadMore(page_id,url,title,uid,post_id,description){
         {
             text: 'Share Deal',
             onClick: function () {
-	myApp.modal({
-    title: 'Share on Facebook',
-    text: '<div class="content-block" style="padding:0;margin:0;max-height:200px;overflow: scroll;overflow-x:hidden;"><div class="content-block-inner" style="background-color:transparent;">' + title + ' ajkdaskjbsajkdbsakj dbsa kjdb sajk dbsajk dbsajkdbsajkdbs ajkd bsajkdbsajkdbsaj kdasbdkjasbd jsdbasjdb asjdbasjd bsajkdbasjkdba skjdba sk jdb asjkdbasjkdba sj kdbasjkd bsa<br/><img style="margin-top:10px;width:50%;" src="'+ url +'"/></div></div>',
-     afterText:  '<div class="list-block" style="margin-top:10px;margin-bottom:10px;"><ul><li><div class="item-content"><div class="item-media"><img src="http://graph.facebook.com/'+ uid +'/picture?type=small"></div><div class="item-inner"><div class="item-input"><textarea id="dealbox" placeholder="What do you think?"></textarea></div></div></div></li></ul</div>',
-    buttons: [
-      {
-        text: 'Cancel',
-        onClick: function() {
-          myApp.closeModal();
-        }
-      },
-      {
-        text: 'Share',
-        onClick: function() {
-          var value = $$("#dealbox").val();
-          
-        }
-      },
-    ]
-  });
+	sharePhoto(value,page_id,url,title,description);
             }
         },
         {
