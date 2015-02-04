@@ -2573,7 +2573,7 @@ function loadMore(page_id,url,title,uid,post_id,description){
         text: 'Share',
         onClick: function() {
           var value = $$("#dealbox").val();
-          sharePhoto(value,page_id,url,title,description);
+          
         }
       },
     ]
