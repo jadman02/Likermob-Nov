@@ -5,7 +5,15 @@ document.addEventListener("deviceready", onDeviceReady, false);
     function onDeviceReady() {
 var fbLoginSuccess = function (userData) {
     alert("UserInfo: " + JSON.stringify(userData));
-    localStorage.setItem("register", "logged");
+    facebookConnectPlugin.getAccessToken(function(token) {
+        alert("Token: " + token);
+    }, function(err) {
+        alert("Could not get access token: " + err);
+    });
+}
+//var fbLoginSuccess = function (userData) {
+//    alert("UserInfo: " + JSON.stringify(userData));
+ //   localStorage.setItem("register", "logged");
 }
 
 facebookConnectPlugin.login(["public_profile","email"],
@@ -28,4 +36,16 @@ facebookConnectPlugin.showDialog(
     function (response) { alert(JSON.stringify(response)) },
     function (response) { alert(JSON.stringify(response)) });
 
+}
+
+function logoutFacebook(){
+    facebookConnectPlugin.logout(fbLoginSuccess, function (error) { alert("" + error) })
+    
+}
+
+function fbLoginSuccess(){
+    
+    alert('logged you out');
+    
+    
 }
