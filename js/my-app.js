@@ -362,7 +362,7 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout full s_'+ respons
 
 
 '<div class="row" style="clear:both;">'+
-        '<div class="col-25" style="margin-top:-90px;padding-right:5px;"><div style="width:65px;background-color:#c4c4c4;border-radius:10px;margin:0 auto;"><a href="#" onclick="getBusiness(\''+ response[i][1]  +'\',\''+ response[i][16]  +'\');" style="height:50px;z-index:100;margin:0 auto;border:0;background-color:transparent;" class="button"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=30&height=30" style="border-radius:50%;margin-top:10px;"/></a>'+staryellow +starblue +'<a href="#" id="mapicon" onclick="getBusiness(\''+ response[i][1]  +'\',\''+ response[i][16]  +'\');statusBarWhite();" style="z-index:100;margin:0 auto;clear:both;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-map pe-2x" style="margin-top:5px;"></i></a><a href="#" onclick="loadMore(\''+ response[i][1]  +'\',\''+ homecontentimage  +'\',\''+ response[i][3]  +'\',\''+ uid +'\',\''+ response[i][2]  +'\');" style="z-index:100;margin:0 auto;clear:both;height:40px;width:40px;border:0;background-color:transparent;clear:both;" class="button"><i class="pe-7s-more pe-2x" style="margin-top:5px;"></i></a></div> </div>'+
+        '<div class="col-25" style="margin-top:-90px;padding-right:5px;"><div style="width:65px;background-color:#c4c4c4;border-radius:10px;margin:0 auto;"><a href="#" onclick="getBusiness(\''+ response[i][1]  +'\',\''+ response[i][16]  +'\');" style="height:50px;z-index:100;margin:0 auto;border:0;background-color:transparent;" class="button"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=30&height=30" style="border-radius:50%;margin-top:10px;"/></a>'+staryellow +starblue +'<a href="#" id="mapicon" onclick="getBusiness(\''+ response[i][1]  +'\',\''+ response[i][16]  +'\');statusBarWhite();" style="z-index:100;margin:0 auto;clear:both;height:40px;width:40px;border:0;background-color:transparent;" class="button"><i class="pe-7s-map pe-2x" style="margin-top:5px;"></i></a><a href="#" onclick="loadMore(\''+ response[i][1]  +'\',\''+ homecontentimage  +'\',\''+ response[i][3]  +'\',\''+ uid +'\',\''+ response[i][2]  +'\',\''+ response[i][4]  +'\');" style="z-index:100;margin:0 auto;clear:both;height:40px;width:40px;border:0;background-color:transparent;clear:both;" class="button"><i class="pe-7s-more pe-2x" style="margin-top:5px;"></i></a></div> </div>'+
         '<div class="col-75"><div class="messages-date" style="clear:both;float:left;margin:0;padding:0;"><span>Smilesavers</span></div><div style="padding:10px;padding-bottom:30px;border-radius:10px;margin-top:5px;"><div id="dealtitle" style="float:left;font-weight:500;">Like to save 10% on cleaning products - use codeword: '+ response[i][3] + '</div><br/><div style="clear:both;">'+response[i][4]+'</div><div style="float:left;font-size:14px;clear:both;"><i class="pe-7s-clock pe-lg"></i> Expires in 6 days</div></div></div>'+
 '</div>'+
 
@@ -2551,7 +2551,7 @@ function makeComment(){
 	$$('#commentinput').focus();
 }
 
-function loadMore(page_id,url,title,uid,post_id){
+function loadMore(page_id,url,title,uid,post_id,description){
 	
  var buttons = [
         
@@ -2573,7 +2573,7 @@ function loadMore(page_id,url,title,uid,post_id){
         text: 'Share',
         onClick: function() {
           var value = $$("#dealbox").val();
-          share(value,page_id,url,title);
+          sharePhoto(value,page_id,url,title,description);
         }
       },
     ]
@@ -3003,7 +3003,7 @@ var title = response[0][3];var description = response[0][4];var terms = response
 $$( '#titlediv' ).append(title);
 $$( '#descriptiondiv' ).append(description);
 $$( '#termsdiv' ).append(terms);
-$$( '#loadmorebutton' ).append('<a href="#" onclick="loadMore(\''+ page_id  +'\',\''+ url  +'\',\''+ title  +'\',\''+ uid +'\',\''+ post_id  +'\');" style="z-index:100;margin:0 auto;clear:both;height:40px;width:40px;padding-left:-5px;border:0;background-color:transparent;clear:both;" class="button"><i class="pe-7s-more pe-2x" style="margin-top:5px;"></i></a>');
+$$( '#loadmorebutton' ).append('<a href="#" onclick="loadMore(\''+ page_id  +'\',\''+ url  +'\',\''+ title  +'\',\''+ uid +'\',\''+ post_id  +'\',\''+ description  +'\');" style="z-index:100;margin:0 auto;clear:both;height:40px;width:40px;padding-left:-5px;border:0;background-color:transparent;clear:both;" class="button"><i class="pe-7s-more pe-2x" style="margin-top:5px;"></i></a>');
 $$( '#likeround' ).append(like);
 $$( '#dislikeround' ).append(dislike);
 
@@ -3012,9 +3012,9 @@ $$( '#dislikeround' ).append(dislike);
 
 }
 
-function shareDeal(page_id,url,title){
+function shareDeal(page_id,url,title,description){
 	var value = $$("#dealbox1").val();
-          share(value,page_id,url,title);
+          sharePhoto(value,page_id,url,title,description);
 	
 }
 
@@ -3076,6 +3076,7 @@ function shareLikermob(){
 var uid = localStorage.getItem("uid");
     var title="";
     var page_id="";
+    var description="Share Likermob";
     var url = "http://www.smilesavers.net.au/images/cover.png";
 
 myApp.modal({
@@ -3093,7 +3094,7 @@ myApp.modal({
         text: 'Share',
         onClick: function() {
           var value = $$("#dealbox1").val();
-          share(value,page_id,url,title);
+          sharePhoto(value,page_id,url,title,description);
         }
       },
     ]
