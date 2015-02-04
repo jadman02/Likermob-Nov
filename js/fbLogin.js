@@ -2,18 +2,10 @@ document.addEventListener("deviceready", onDeviceReady, false);
 
     // device APIs are available
     //
-    function onDeviceReady() {
+     function onDeviceReady() {
 var fbLoginSuccess = function (userData) {
     alert("UserInfo: " + JSON.stringify(userData));
-    facebookConnectPlugin.getAccessToken(function(token) {
-        alert("Token: " + token);
-    }, function(err) {
-        alert("Could not get access token: " + err);
-    });
-}
-//var fbLoginSuccess = function (userData) {
-//    alert("UserInfo: " + JSON.stringify(userData));
- //   localStorage.setItem("register", "logged");
+    localStorage.setItem("register", "logged");
 }
 
 facebookConnectPlugin.login(["public_profile","email"],
