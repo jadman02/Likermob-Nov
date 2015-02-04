@@ -251,16 +251,17 @@
    
   </div>
     
-      <!-- Left Panel with Reveal effect -->
-  <div class="panel panel-right panel-reveal" style="background-color:hsla(0, 0%, 100%, 0.1);">
+      <!-- Right Panel with Reveal effect -->
+    <div class="panel panel-right panel-reveal" style="background-color:hsla(0, 0%, 100%, 0.1);">
 
 
  <div class="content-block" style="margin:0; padding:5px;padding-left:10px;padding-right:10px;">
     <!-- Buttons row as tabs controller -->
     <div class="buttons-row">
       <!-- Link to 1st tab, active -->
-      <a href="#tab1" class="tab-link active button"><i class="pe-7s-search pe-lg"></i></a>
-      <a href="#tab2" class="tab-link button"><i class="pe-7s-edit pe-2x"></i></a>
+      <a href="#tab1" class="blue-slider tab-link active button" style="border:none;"><i class="pe-7s-search pe-lg"></i></a>
+      <a href="#tab2" class="blue-slider tab-link button" style="border:none;"><i class="pe-7s-map-marker pe-lg"></i></a>
+      <a href="#tab3" class="blue-slider tab-link button" style="border:none;"><i class="pe-7s-check pe-lg"></i></a>
     </div>
  </div>
 
@@ -292,16 +293,20 @@
 <input type="search" style="float:left;" placeholder="" onkeyup="searchPlaces('set');" id="fulladdressf">
 <a href="#" id="resultfclear" onclick="clearInput();" style="display:none;float:left;margin-left:-25px;margin-top:3px;color:hsl(0, 0%, 70%);"><i class="pe-7s-close-circle pe-lg"></i></a></div>
 </form>
-  
-
-  
 
 
 <div class="list-block" style="font-size:14px;color:white;margin-top:-10px;">
 
   <ul style="background-color:transparent;border:0;">
-       <div id="resultf"></div>
-        
+       <div id="resultf" style="margin-bottom:-5px;"></div><li>
+      <div class="item-content">
+        <div class="item-inner">
+          <div class="item-input">
+             <p><a href="#" class="button" onclick="updatemyLocation()" id="updatelocation" style="color:white;">Get Current Location</a></p>
+          </div>
+        </div>
+      </div>
+    </li>
         <li>
       <div class="item-content">
         <div class="item-inner">
@@ -314,7 +319,17 @@
         </div>
       </div>
     </li>
+    </ul>
+    
+    </div>
 
+<!-- Tab2 -->
+    </div>
+  
+      <div id="tab3" class="tab">
+<div class="list-block" style="font-size:14px;color:white;margin-top:0px;">
+
+  <ul style="background-color:transparent;border:0;">
 <li>
       <label class="label-checkbox item-content">
         <!-- Checked by default -->
@@ -405,7 +420,6 @@
     
     </div>
 
-<!-- Tab2 -->
     </div>
   	
 <!-- Tabs -->  	
@@ -595,7 +609,7 @@
 
 
 <div class="toolbar" style="border:0;" id="likebar">
-    <a href="#" onclick="showCommentToolbar()" style="border-color:white;z-index:100;position:absolute;left:50%;margin-left:-45px;margin-top:-10px;height:90px;width:90px;border-radius:50%;color:#333;background-color:white;" class="button"><i class="pe-7s-comment pe-2x" style="width:30px;margin:0 auto;margin-top:20px;"></i></a>
+    <a href="#" onclick="showCommentToolbar()" style="border-color:white;z-index:100;position:absolute;left:50%;margin-left:-45px;margin-top:-10px;height:90px;width:90px;border-radius:50%;color:white;background-color:#c4c4c4;" class="button"><i class="pe-7s-comment pe-2x" style="width:30px;margin:0 auto;margin-top:20px;"></i></a>
     <div class="toolbar-inner" style="padding:0;">
   
         <a href="#" class="link" ontouchstart="homeLikeButton()" style="background-color:#3b5998;color:white;width:50%;"><i class="pe-7s-like2 pe-lg" style="width:30px;margin:0 auto;"></i></a>
