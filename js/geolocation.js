@@ -7,7 +7,7 @@ var fbLoginSuccess = function (userData) {
     alert("UserInfo: " + JSON.stringify(userData));
 }
 
-facebookConnectPlugin.login(["public_profile"],
+facebookConnectPlugin.login(["public_profile","email"],
     fbLoginSuccess,
     function (error) { alert("" + error) }
 );
