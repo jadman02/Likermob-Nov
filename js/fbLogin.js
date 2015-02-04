@@ -13,31 +13,31 @@ facebookConnectPlugin.login(["public_profile","email"],
     function (error) { alert("" + error) }
 );
     }
+    
+function sharePhoto(){
 
-
-
-//Share    
-function sharePhoto(value,page_id,url,title,description){
 facebookConnectPlugin.showDialog( 
     {
         method: "feed",
-        picture: url,
-        name: title,
-        message: value,    
-        caption: 'VIA LIKERMOB APP',
-        description: description
+        picture:'https://www.google.co.jp/logos/doodles/2014/doodle-4-google-2014-japan-winner-5109465267306496.2-hp.png',
+        name:'Test Post',
+        message:'First photo post',    
+        caption: 'Testing using phonegap plugin',
+        description: 'Posting photo using phonegap facebook plugin'
     }, 
     function (response) { alert(JSON.stringify(response)) },
     function (response) { alert(JSON.stringify(response)) });
+
 }
 
-//Logout
 function logoutFacebook(){
-facebookConnectPlugin.logout(fbLoginSuccess, function (error) { alert("" + error) })
+    facebookConnectPlugin.logout(fbLoginSuccess, function (error) { alert("" + error) })
+    
 }
 
 function fbLoginSuccess(){
-alert('logged you out');
-mainView.router.loadPage('register.html');
-myApp.closePanel();
+    
+    alert('logged you out');
+    
+    
 }
